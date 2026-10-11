@@ -1,0 +1,12 @@
+# OS cruft
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# editors
+.idea/
+.vscode/
+*.swp
+
+# the site has its own .gitignore for node_modules, .next and the
+# generated content/docs/ copies
