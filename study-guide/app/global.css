@@ -1,0 +1,290 @@
+@import 'tailwindcss';
+@import 'fumadocs-ui/css/neutral.css';
+@import 'fumadocs-ui/css/preset.css';
+
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
+  --color-fd-primary: hsl(243, 75%, 59%);
+  --color-fd-ring: hsl(243, 75%, 59%);
+}
+
+.dark {
+  --color-fd-background: hsl(230, 15%, 6%);
+  --color-fd-card: hsl(230, 14%, 9%);
+  --color-fd-popover: hsl(230, 14%, 9%);
+  --color-fd-muted: hsl(230, 12%, 13%);
+  --color-fd-secondary: hsl(230, 12%, 13%);
+  --color-fd-accent: hsl(235, 20%, 16%);
+  --color-fd-border: hsl(230, 12%, 17%);
+  --color-fd-foreground: hsl(225, 20%, 90%);
+  --color-fd-muted-foreground: hsl(225, 10%, 62%);
+  --color-fd-primary: hsl(239, 84%, 76%);
+  --color-fd-ring: hsl(239, 84%, 76%);
+}
+
+html {
+  scrollbar-gutter: stable;
+}
+
+html > body[data-scroll-locked] {
+  margin-right: 0px !important;
+  --removed-body-scroll-bar-size: 0px !important;
+}
+
+/* Long-form reading */
+.prose {
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.prose > :first-child {
+  margin-top: 0;
+}
+
+/* "PART A — ..." dividers (h1 inside the body; the notes already put a --- above each) */
+.prose h1 {
+  margin-top: 1rem;
+  font-size: 1.15rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-fd-primary);
+}
+
+.prose h2 {
+  margin-top: 2.75rem;
+}
+
+/* Zebra tables */
+.prose tbody tr:nth-child(even) {
+  background: color-mix(in oklab, var(--color-fd-muted) 60%, transparent);
+}
+
+/* ------------------------------------------------------------------ icons
+   Icons are coloured by MEANING, not by subject, so a topic keeps the same
+   hue everywhere it appears: "Network" is the same green in DBMS and CN.
+   lib/source.ts tags every sidebar/card icon with data-icon="<LucideName>".
+
+   The hue is declared on the icon's PARENT, via :has(> ...), so that both the
+   icon (by inheritance) and its container (a badge, a sidebar row) can read it.
+   Custom properties only inherit downward, so setting it on the svg itself
+   would leave the badge unable to tint. */
+[data-icon] {
+  color: var(--icon, var(--color-fd-muted-foreground));
+  transition:
+    transform 150ms ease,
+    color 150ms ease;
+}
+
+/* foundations and structure -- violet */
+:has(> [data-icon='Blocks']),
+:has(> [data-icon='Layers']),
+:has(> [data-icon='Box']),
+:has(> [data-icon='Boxes']) {
+  --icon: oklch(0.68 0.18 295);
+}
+
+/* linear structures -- sky */
+:has(> [data-icon='List']),
+:has(> [data-icon='Binary']) {
+  --icon: oklch(0.7 0.15 237);
+}
+
+/* sequences and the web -- cyan */
+:has(> [data-icon='Repeat']),
+:has(> [data-icon='Globe']) {
+  --icon: oklch(0.72 0.13 210);
+}
+
+/* graphs, networks, security -- emerald */
+:has(> [data-icon='Network']),
+:has(> [data-icon='Router']),
+:has(> [data-icon='ShieldCheck']) {
+  --icon: oklch(0.72 0.16 162);
+}
+
+/* algorithms -- indigo */
+:has(> [data-icon='Workflow']) {
+  --icon: oklch(0.66 0.17 275);
+}
+
+/* relationships and modelling -- fuchsia */
+:has(> [data-icon='Share2']) {
+  --icon: oklch(0.7 0.21 328);
+}
+
+/* concurrency -- orange */
+:has(> [data-icon='GitMerge']),
+:has(> [data-icon='Gauge']) {
+  --icon: oklch(0.72 0.17 48);
+}
+
+/* data and storage -- amber */
+:has(> [data-icon='Database']),
+:has(> [data-icon='HardDrive']),
+:has(> [data-icon='MemoryStick']) {
+  --icon: oklch(0.77 0.15 80);
+}
+
+/* processes and internals -- rose */
+:has(> [data-icon='Cpu']),
+:has(> [data-icon='Activity']) {
+  --icon: oklch(0.69 0.19 15);
+}
+
+/* SQL and the shell -- lime */
+:has(> [data-icon='Terminal']) {
+  --icon: oklch(0.76 0.17 125);
+}
+
+/* transport -- blue */
+:has(> [data-icon='ArrowLeftRight']) {
+  --icon: oklch(0.67 0.16 255);
+}
+
+/* design -- pink */
+:has(> [data-icon='Compass']),
+:has(> [data-icon='BuildingComplex']) {
+  --icon: oklch(0.72 0.17 350);
+}
+
+/* revision -- teal */
+:has(> [data-icon='ListChecks']) {
+  --icon: oklch(0.73 0.13 183);
+}
+
+/* Home-page subject badge: tints itself from the icon's own hue. */
+.subject-badge {
+  background: color-mix(in oklab, var(--icon, var(--color-fd-primary)) 14%, transparent);
+  border: 1px solid color-mix(in oklab, var(--icon, var(--color-fd-primary)) 28%, transparent);
+  transition:
+    background 200ms ease,
+    border-color 200ms ease;
+}
+.group:hover .subject-badge {
+  background: color-mix(in oklab, var(--icon, var(--color-fd-primary)) 24%, transparent);
+  border-color: color-mix(in oklab, var(--icon, var(--color-fd-primary)) 48%, transparent);
+}
+
+/* Interaction: the icon leans in when you hover its row. */
+a:hover > [data-icon],
+button:hover > [data-icon],
+a:hover [data-icon],
+button:hover [data-icon] {
+  transform: scale(1.18) rotate(-4deg);
+}
+
+/* Closed sidebar groups sit back a little so the open one stands out. */
+#nd-sidebar [data-icon] {
+  opacity: 0.85;
+}
+#nd-sidebar a:hover [data-icon],
+#nd-sidebar button:hover [data-icon],
+#nd-sidebar [data-state='open'] [data-icon] {
+  opacity: 1;
+}
+
+/* ------------------------------------------------- content: section roles
+   Every module uses the same vocabulary of section headings, and fumadocs
+   slugifies heading text into the id -- so "## Must remember" becomes
+   id="must-remember". That lets plain CSS colour each section by its ROLE
+   without touching the source notes or the MDX pipeline.
+
+   The point is scannability: once you know amber = memorise and rose = traps,
+   the shape of a module is legible before you read a word of it. Hues match
+   the icon palette above so the whole site shares one set of colours. */
+.prose :is(h2, h3)[id] {
+  --sect: var(--color-fd-primary);
+}
+
+/* orientation */
+.prose h2[id='why-this-module-matters'],
+.prose h2[id='why-this-module-exists'] {
+  --sect: oklch(0.7 0.15 237); /* sky */
+}
+/* memorise */
+.prose h2[id='must-remember'],
+.prose h2[id='must-remember-consolidated'],
+.prose h2[id='consolidation'] {
+  --sect: oklch(0.77 0.15 80); /* amber */
+}
+/* traps */
+.prose h2[id='common-wrong-answers'],
+.prose h2[id='common-mistakes-consolidated'] {
+  --sect: oklch(0.69 0.19 15); /* rose */
+}
+/* questions */
+.prose h2[id='interview-qa-bank'] {
+  --sect: oklch(0.66 0.17 275); /* indigo */
+}
+/* exercises */
+.prose h2[id='practice'],
+.prose h2[id='problem-set'] {
+  --sect: oklch(0.68 0.18 295); /* violet */
+}
+/* tick off */
+.prose h2[id='exit-checklist'] {
+  --sect: oklch(0.73 0.13 183); /* teal */
+}
+/* onward */
+.prose h2[id='next'] {
+  --sect: oklch(0.72 0.16 162); /* emerald */
+}
+/* comparisons */
+.prose h2[id='comparison-tables'] {
+  --sect: oklch(0.7 0.21 328); /* fuchsia */
+}
+
+.prose h2[id] {
+  padding-inline-start: 0.75rem;
+  border-inline-start: 3px solid var(--sect);
+  color: var(--sect);
+}
+
+.prose h3[id] {
+  color: color-mix(in oklab, var(--sect) 72%, var(--color-fd-foreground));
+}
+
+/* ------------------------------------------------- content: key statements
+   Each module states its organising principle in a blockquote. It is the
+   thesis of the whole file, so it gets the strongest treatment on the page. */
+.prose blockquote {
+  border-inline-start: 3px solid var(--color-fd-primary);
+  background: color-mix(in oklab, var(--color-fd-primary) 8%, transparent);
+  border-radius: 0 0.5rem 0.5rem 0;
+  padding: 0.85rem 1.1rem;
+  font-style: normal;
+}
+.prose blockquote strong {
+  color: color-mix(in oklab, var(--color-fd-primary) 55%, var(--color-fd-foreground));
+}
+
+/* Inline code: terms like TIME_WAIT and cwnd appear constantly in prose, so
+   they are tinted to stand out of the sentence without shouting. */
+.prose :not(pre) > code {
+  color: color-mix(in oklab, var(--color-fd-primary) 62%, var(--color-fd-foreground));
+  background: color-mix(in oklab, var(--color-fd-primary) 9%, var(--color-fd-muted));
+  border-color: color-mix(in oklab, var(--color-fd-primary) 18%, transparent);
+}
+
+/* Table headers, keeping the existing zebra rows underneath. */
+.prose thead tr {
+  background: color-mix(in oklab, var(--color-fd-primary) 10%, var(--color-fd-muted));
+}
+.prose th {
+  color: color-mix(in oklab, var(--color-fd-primary) 40%, var(--color-fd-foreground));
+}
+
+/* Bold is used heavily for key terms -- lift it off the body text, but do not
+   colour it: there is too much of it for colour to stay readable. */
+.prose strong {
+  color: var(--color-fd-foreground);
+  font-weight: 650;
+}
+
+/* Code blocks hold ASCII diagrams and verified program output, so ONLY the
+   frame is touched -- never the font, letter-spacing or line-height, which
+   would break the alignment every diagram in these notes depends on. */
+.prose pre {
+  border-inline-start: 3px solid color-mix(in oklab, var(--color-fd-primary) 35%, transparent);
+}
