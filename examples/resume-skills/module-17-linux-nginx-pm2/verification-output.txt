@@ -1,0 +1,55 @@
+PASS nginx/configuration_valid
+PASS linux/application_is_nonroot
+PASS linux/working_directory_explicit
+PASS linux/mode_600_denies_other_user
+PASS linux/directory_search_permission_required
+PASS linux/child_environment_is_snapshot
+PASS linux/app_not_reachable_via_container_ip
+PASS nginx/static_file_served
+PASS nginx/proxy_pass_with_uri_replaces_prefix
+PASS nginx/proxy_pass_without_uri_preserves_path
+PASS nginx/single_ingress_overwrites_forwarded_headers
+PASS nginx/small_request_body_reaches_app
+PASS nginx/body_limit_rejects_at_proxy
+PASS nginx/application_404_preserved
+PASS nginx/silent_upstream_returns_504
+PASS tls/fixture_certificate_explicitly_trusted
+PASS tls/terminated_tls_forwarded_as_https
+PASS tls/untrusted_self_signed_certificate_rejected
+PASS tls/private_key_restricted
+PASS pm2/two_distinct_cluster_workers
+PASS pm2/requests_reach_both_workers
+PASS pm2/worker_memory_is_independent
+PASS pm2/crashed_worker_replaced
+PASS pm2/restart_retains_environment_without_update
+PASS pm2/update_env_changes_new_workers
+PASS lifecycle/reload_replaces_all_workers
+PASS lifecycle/sampled_requests_succeed_during_reload
+PASS lifecycle/active_request_finishes_during_reload
+PASS lifecycle/finish_logged_before_worker_exit
+PASS lifecycle/normal_reload_has_no_forced_shutdown
+PASS nginx/invalid_candidate_rejected
+PASS nginx/live_config_survives_failed_validation
+PASS nginx/valid_reload_keeps_master_and_applies_config
+PASS nginx/request_id_and_upstream_timing_logged
+PASS pm2/save_records_application_list
+PASS nginx/stopped_application_returns_502
+PASS pm2/resurrect_restores_saved_processes
+{
+  "counts": {
+    "lifecycle": 5,
+    "linux": 6,
+    "nginx": 14,
+    "pm2": 8,
+    "tls": 4
+  },
+  "total": 37,
+  "versions": {
+    "node": "v22.23.3",
+    "pm2": "7.0.4",
+    "nginx": "nginx version: nginx/1.22.1",
+    "openssl": "OpenSSL 3.0.22 25 Aug 2026 (Library: OpenSSL 3.0.22 25 Aug 2026)",
+    "linux": "Linux 5.15.153.1-microsoft-standard-WSL2",
+    "debian": "12.15"
+  }
+}

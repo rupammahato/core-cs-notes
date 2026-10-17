@@ -1,0 +1,212 @@
+[
+  {
+    "id": "01-binding",
+    "title": "Mutation versus local rebinding",
+    "output": "['request', 'accepted'] ['request', 'accepted'] True\n5 4\n",
+    "group": "language",
+    "file": "snippets/01-binding.py"
+  },
+  {
+    "id": "02-copy",
+    "title": "Shallow and deep copies",
+    "output": "{'tags': ['backend', 'python']}\n{'tags': ['backend']}\nFalse False\n",
+    "group": "language",
+    "file": "snippets/02-copy.py"
+  },
+  {
+    "id": "03-tuple",
+    "title": "Tuple immutability and augmented assignment",
+    "output": "assignment rejected\n(['a', 'b'],)\nunhashable\n",
+    "group": "language",
+    "file": "snippets/03-tuple.py"
+  },
+  {
+    "id": "04-equality",
+    "title": "Identity and equality",
+    "output": "True False False\nTrue True False\n1\nthird\n",
+    "group": "language",
+    "file": "snippets/04-equality.py"
+  },
+  {
+    "id": "05-collections",
+    "title": "Collection operations and stable sort",
+    "output": "None [1, 2, 3]\n3 [1, 3]\na ['b']\n[('second', 1), ('first', 2), ('third', 2)]\n['api', 'db']\n",
+    "group": "language",
+    "file": "snippets/05-collections.py"
+  },
+  {
+    "id": "06-dict",
+    "title": "Hashability and insertion order",
+    "output": "['a', 'b']\n['b', 'a']\nrow\nlist key rejected\n",
+    "group": "language",
+    "file": "snippets/06-dict.py"
+  },
+  {
+    "id": "07-absence",
+    "title": "Missing, null and false values",
+    "output": "20\n0\nTrue\nTrue\nFalse True\n",
+    "group": "language",
+    "file": "snippets/07-absence.py"
+  },
+  {
+    "id": "08-defaults",
+    "title": "Default arguments persist across calls",
+    "output": "['a', 'b'] ['a', 'b'] True\n['a'] ['b']\n",
+    "group": "language",
+    "file": "snippets/08-defaults.py"
+  },
+  {
+    "id": "09-scope",
+    "title": "Local binding and nonlocal closure",
+    "output": "local read before binding\n1 2 10\n",
+    "group": "language",
+    "file": "snippets/09-scope.py"
+  },
+  {
+    "id": "10-closures",
+    "title": "Late-bound closures and explicit capture",
+    "output": "[2, 2, 2]\n[0, 1, 2]\n",
+    "group": "language",
+    "file": "snippets/10-closures.py"
+  },
+  {
+    "id": "11-arguments",
+    "title": "Positional-only and keyword-only arguments",
+    "output": "('orders', 5, ['trace'])\npositional-only argument required\nlimit must be keyword\n",
+    "group": "language",
+    "file": "snippets/11-arguments.py"
+  },
+  {
+    "id": "12-decorator",
+    "title": "Decorator wrapping and metadata",
+    "output": "5 total ['total']\n9\n",
+    "group": "language",
+    "file": "snippets/12-decorator.py"
+  },
+  {
+    "id": "13-iterator",
+    "title": "Iterable versus one-shot iterator",
+    "output": "True 1\n[2] []\n[1, 2] [1, 2]\nexhausted\n",
+    "group": "language",
+    "file": "snippets/13-iterator.py"
+  },
+  {
+    "id": "14-generator",
+    "title": "Lazy execution and explicit cleanup",
+    "output": "created\nstart\n10\ncleanup\n[]\n",
+    "group": "language",
+    "file": "snippets/14-generator.py"
+  },
+  {
+    "id": "15-comprehensions",
+    "title": "Eager lists and lazy generator expressions",
+    "output": "[0, 1, 4] [0, 1, 2]\n[]\n0 [0]\n5 [0, 1, 2]\n",
+    "group": "language",
+    "file": "snippets/15-comprehensions.py"
+  },
+  {
+    "id": "16-exceptions",
+    "title": "Exception translation preserves cause",
+    "output": "quantity must be an integer\nValueError\n",
+    "group": "language",
+    "file": "snippets/16-exceptions.py"
+  },
+  {
+    "id": "17-context",
+    "title": "Context cleanup on failure",
+    "output": "open\nhandle\nclose\npropagated\n",
+    "group": "language",
+    "file": "snippets/17-context.py"
+  },
+  {
+    "id": "18-finally",
+    "title": "Returning from finally hides an error",
+    "output": "masked\n",
+    "group": "language",
+    "file": "snippets/18-finally.py"
+  },
+  {
+    "id": "19-dataclass",
+    "title": "Factories and shallow frozen behavior",
+    "output": "['changed'] []\nrebinding rejected\n",
+    "group": "language",
+    "file": "snippets/19-dataclass.py"
+  },
+  {
+    "id": "20-classes",
+    "title": "Class attributes and bound methods",
+    "output": "['visible'] a False\nTrue\n",
+    "group": "language",
+    "file": "snippets/20-classes.py"
+  },
+  {
+    "id": "21-typing",
+    "title": "Annotations do not validate runtime inputs",
+    "output": "many\nTrue\nTrue\n",
+    "group": "language",
+    "file": "snippets/21-typing.py"
+  },
+  {
+    "id": "22-values",
+    "title": "Money, text bytes and aware timestamps",
+    "output": "False\nTrue\n2.68\n1 3 True\n2026-10-14T06:30:00+00:00\n{\"amount_paise\": 12500}\n",
+    "group": "language",
+    "file": "snippets/22-values.py"
+  },
+  {
+    "id": "23-imports",
+    "title": "Imports cache module objects and bind names",
+    "output": "module initialized\nTrue initial changed ['row']\n",
+    "group": "language",
+    "file": "snippets/23-imports.py"
+  },
+  {
+    "id": "24-gc",
+    "title": "Collect an unreachable reference cycle explicitly",
+    "output": "True\nTrue\n",
+    "group": "language",
+    "file": "snippets/24-gc.py"
+  },
+  {
+    "id": "25-async-lifecycle",
+    "title": "Coroutine creation, scheduling and blocking calls",
+    "output": "[]\n7 ['start', 'done']\n['blocking call returned', 'caller continued', 'tick']\nthread offload: True\n",
+    "group": "concurrency",
+    "file": "concurrency/25-async-lifecycle.py"
+  },
+  {
+    "id": "26-bounded-workers",
+    "title": "Bounded queue and fixed async worker count",
+    "output": "jobs: 8 peak: 3 queued: 3\n",
+    "group": "concurrency",
+    "file": "concurrency/26-bounded-workers.py"
+  },
+  {
+    "id": "27-taskgroup",
+    "title": "TaskGroup cancels siblings and waits for cleanup",
+    "output": "failures: 1\npeer cleaned: True\n",
+    "group": "concurrency",
+    "file": "concurrency/27-taskgroup.py"
+  },
+  {
+    "id": "28-timeout",
+    "title": "Timeout cancellation runs finally",
+    "output": "timed out\ncleaned: True\n",
+    "group": "concurrency",
+    "file": "concurrency/28-timeout.py"
+  },
+  {
+    "id": "29-threads",
+    "title": "GIL does not make a read-modify-write transaction",
+    "output": "unsynchronized: 1\nlocked: 2000\n",
+    "group": "concurrency",
+    "file": "concurrency/29-threads.py"
+  },
+  {
+    "id": "30-processes",
+    "title": "Explicit spawn, picklable worker and copied arguments",
+    "output": "method: spawn\nresults: [30, 204]\nparent: ['parent'] child: ['parent', 'child']\n",
+    "group": "concurrency",
+    "file": "concurrency/30-processes.py"
+  }
+]

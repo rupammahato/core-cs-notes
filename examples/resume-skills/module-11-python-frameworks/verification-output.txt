@@ -1,0 +1,89 @@
+PASS protocols: WSGI callable returns byte iterable and response metadata
+PASS protocols: ASGI callable receives chunk events and sends response events
+PASS protocols total: 2
+
+PASS validation: default integer parsing can coerce a numeric string
+PASS validation: strict valid integer boundaries accepted
+PASS validation: strict integer rejects numeric string
+PASS validation: strict integer rejects bool
+PASS validation: strict integer rejects integral float
+PASS validation: extra fields forbidden
+PASS validation: required fields and value bounds enforced
+PASS validation: model_construct deliberately bypasses validation
+PASS validation: strict JSON datetime rules differ from strict Python-object input
+PASS validation: output model can select public fields while ignoring extras
+PASS validation total: 10
+
+PASS http: flask: health is public
+PASS http: flask: missing credentials rejected
+PASS http: flask: unknown credential rejected
+PASS http: flask: 401 has Bearer challenge
+PASS http: flask: validated quote uses trusted price and public response
+PASS http: flask: cross-tenant product hidden
+PASS http: flask: beta sees its own product
+PASS http: flask: boolean quantity rejected
+PASS http: flask: string quantity rejected
+PASS http: flask: float quantity rejected
+PASS http: flask: zero quantity rejected
+PASS http: flask: over cap quantity rejected
+PASS http: flask: null quantity rejected
+PASS http: flask: unknown fields rejected
+PASS http: flask: missing field rejected
+PASS http: flask: malformed JSON rejected
+PASS http: flask: wrong media type rejected
+PASS http: flask: product response excludes internal cost
+PASS http: flask: unknown product returns 404
+PASS http: flask: query limit parsed and list tenant-filtered
+PASS http: flask: invalid query limit rejected
+PASS http: flask: 405 preserves Allow header
+PASS http: flask: unknown route returns 404
+PASS http: flask: metadata and request-resource lifecycle observed
+PASS http: flask: configured body limit rejects large JSON
+PASS http: fastapi: health is public
+PASS http: fastapi: missing credentials rejected
+PASS http: fastapi: unknown credential rejected
+PASS http: fastapi: 401 has Bearer challenge
+PASS http: fastapi: validated quote uses trusted price and public response
+PASS http: fastapi: cross-tenant product hidden
+PASS http: fastapi: beta sees its own product
+PASS http: fastapi: boolean quantity rejected
+PASS http: fastapi: string quantity rejected
+PASS http: fastapi: float quantity rejected
+PASS http: fastapi: zero quantity rejected
+PASS http: fastapi: over cap quantity rejected
+PASS http: fastapi: null quantity rejected
+PASS http: fastapi: unknown fields rejected
+PASS http: fastapi: missing field rejected
+PASS http: fastapi: malformed JSON rejected
+PASS http: fastapi: wrong media type rejected
+PASS http: fastapi: product response excludes internal cost
+PASS http: fastapi: unknown product returns 404
+PASS http: fastapi: query limit parsed and list tenant-filtered
+PASS http: fastapi: invalid query limit rejected
+PASS http: fastapi: 405 preserves Allow header
+PASS http: fastapi: unknown route returns 404
+PASS http: fastapi: metadata and request-resource lifecycle observed
+PASS http: fastapi: OpenAPI describes schema constraints and security
+PASS http: fastapi: documentation route responds
+PASS http: fastapi: custom validation handler excludes rejected input values
+PASS http total: 52
+
+PASS runtime: Flask request proxy requires a request context
+PASS runtime: Flask g is not persistent cross-request storage
+PASS runtime: Flask factory creates independent application state
+PASS runtime: Flask async bridge preserves context and cancels unfinished spawned task
+PASS runtime: FastAPI async route and async dependency run on loop thread
+PASS runtime: FastAPI def dependency is dispatched off loop
+PASS runtime: ordinary def helper called directly stays on caller thread
+PASS runtime: FastAPI def route is dispatched off loop
+PASS runtime: dependency cache is reused within a request and reset for next request
+PASS runtime: use_cache=False requests a separate dependency invocation
+PASS runtime: function-scoped yield resource closes before response body send
+PASS runtime: request-scoped cleanup follows body and background on pinned stack
+PASS runtime: invalid response model is a server error, not a client validation error
+PASS runtime: direct Response bypasses response-model field filtering
+PASS runtime: background failure occurs after a successful response was sent to transport
+PASS runtime: test dependency override can be restored and lifespan resource closes
+PASS runtime total: 16
+
+PASS total: 80

@@ -1,0 +1,340 @@
+{
+  "node": "v22.14.0",
+  "dependencies": {
+    "@opentelemetry/api": "1.9.1",
+    "@opentelemetry/core": "2.12.0",
+    "@opentelemetry/sdk-trace-base": "2.12.0",
+    "@opentelemetry/sdk-trace-node": "2.12.0"
+  },
+  "checks": [
+    {
+      "group": "statistics",
+      "name": "nearest_rank_reference_percentiles",
+      "passed": true
+    },
+    {
+      "group": "statistics",
+      "name": "percentile_does_not_mutate_input",
+      "passed": true
+    },
+    {
+      "group": "statistics",
+      "name": "empty_samples_have_no_latency_claim",
+      "passed": true
+    },
+    {
+      "group": "statistics",
+      "name": "invalid_measurement_samples_rejected",
+      "passed": true
+    },
+    {
+      "group": "statistics",
+      "name": "http_errors_and_timeouts_count_as_failures",
+      "passed": true
+    },
+    {
+      "group": "statistics",
+      "name": "attempted_and_successful_rates_differ",
+      "passed": true
+    },
+    {
+      "group": "statistics",
+      "name": "failure_latency_retained_in_distribution",
+      "passed": true
+    },
+    {
+      "group": "statistics",
+      "name": "slo_budget_reference_example",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "successful_response_contains_release_and_result",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "invalid_input_returns_400",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "unknown_route_returns_404",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "dependency_failure_returns_safe_503",
+      "passed": true
+    },
+    {
+      "group": "tracing",
+      "name": "three_real_sdk_spans_per_work_request",
+      "passed": true
+    },
+    {
+      "group": "tracing",
+      "name": "client_and_dependency_parent_relationships",
+      "passed": true
+    },
+    {
+      "group": "tracing",
+      "name": "root_context_and_distinct_span_ids",
+      "passed": true
+    },
+    {
+      "group": "tracing",
+      "name": "valid_w3c_parent_propagates",
+      "passed": true
+    },
+    {
+      "group": "tracing",
+      "name": "zero_trace_context_is_replaced",
+      "passed": true
+    },
+    {
+      "group": "tracing",
+      "name": "dependency_failure_marks_trace_error",
+      "passed": true
+    },
+    {
+      "group": "tracing",
+      "name": "concurrent_requests_keep_distinct_context",
+      "passed": true
+    },
+    {
+      "group": "logs",
+      "name": "response_log_and_trace_are_correlated",
+      "passed": true
+    },
+    {
+      "group": "logs",
+      "name": "allowlisted_log_fields_omit_credentials_and_query",
+      "passed": true
+    },
+    {
+      "group": "metrics",
+      "name": "bounded_route_status_labels",
+      "passed": true
+    },
+    {
+      "group": "metrics",
+      "name": "histogram_count_matches_counters",
+      "passed": true
+    },
+    {
+      "group": "metrics",
+      "name": "cumulative_buckets_are_monotone",
+      "passed": true
+    },
+    {
+      "group": "metrics",
+      "name": "active_work_returns_to_zero",
+      "passed": true
+    },
+    {
+      "group": "load",
+      "name": "measured_attempt_count_excludes_warmup",
+      "passed": true
+    },
+    {
+      "group": "load",
+      "name": "normal_samples_are_all_successful",
+      "passed": true
+    },
+    {
+      "group": "load",
+      "name": "reported_percentiles_derive_from_raw_samples",
+      "passed": true
+    },
+    {
+      "group": "load",
+      "name": "failure_run_has_zero_successful_throughput",
+      "passed": true
+    },
+    {
+      "group": "load",
+      "name": "client_deadlines_remain_in_failed_attempts",
+      "passed": true
+    }
+  ],
+  "total": 30,
+  "counts": {
+    "http": 4,
+    "load": 5,
+    "logs": 2,
+    "metrics": 4,
+    "statistics": 8,
+    "tracing": 7
+  },
+  "observations": {
+    "statistics": {
+      "known_sample_count": 100,
+      "known": {
+        "p50": 50,
+        "p95": 95,
+        "p99": 99
+      },
+      "synthetic_summary": {
+        "attempts": 4,
+        "successful": 2,
+        "failed": 2,
+        "error_ratio": 0.5,
+        "elapsed_seconds": 2,
+        "attempted_rps": 2,
+        "successful_rps": 1,
+        "mean_ms": 38.25,
+        "p50_ms": 2,
+        "p95_ms": 100,
+        "p99_ms": 100,
+        "percentile_method": "nearest rank across all completed attempts, including HTTP failures and client errors"
+      },
+      "synthetic_slo": {
+        "total": 1000,
+        "good": 995,
+        "bad": 5,
+        "target": 0.999,
+        "observed_good_ratio": 0.995,
+        "allowed_bad": 1,
+        "burn_rate": 5
+      }
+    },
+    "trace": [
+      {
+        "name": "dependency GET /compute",
+        "kind": 1,
+        "trace_id": "6446a797d81e0689e2338ebc7ab55481",
+        "span_id": "75925ff219cfe422",
+        "parent_span_id": "f1c6d4d27d3ce9ec",
+        "status": 0,
+        "attributes": {
+          "http.response.status_code": 200
+        },
+        "duration_ms": 13.1422
+      },
+      {
+        "name": "gateway HTTP dependency",
+        "kind": 2,
+        "trace_id": "6446a797d81e0689e2338ebc7ab55481",
+        "span_id": "f1c6d4d27d3ce9ec",
+        "parent_span_id": "5747ef75f8f5a859",
+        "status": 0,
+        "attributes": {
+          "http.response.status_code": 200
+        },
+        "duration_ms": 17.3572
+      },
+      {
+        "name": "gateway GET /work",
+        "kind": 1,
+        "trace_id": "6446a797d81e0689e2338ebc7ab55481",
+        "span_id": "5747ef75f8f5a859",
+        "parent_span_id": null,
+        "status": 0,
+        "attributes": {
+          "http.route": "/work",
+          "http.response.status_code": 200
+        },
+        "duration_ms": 18.1
+      }
+    ],
+    "log": {
+      "event": "request_complete",
+      "request_id": "0c47c565-8d36-4201-ab71-69efa03857b5",
+      "trace_id": "6446a797d81e0689e2338ebc7ab55481",
+      "route": "/work",
+      "status": 200,
+      "duration_ms": 18.873400000000004,
+      "release": "v1"
+    },
+    "metrics_before_load": {
+      "requests": {
+        "/work|2xx": 12,
+        "/work|4xx": 1,
+        "unmatched|4xx": 3,
+        "/work|5xx": 1
+      },
+      "active": 0,
+      "histogram": {
+        "count": 17,
+        "sum_seconds": 0.27249239999999986,
+        "cumulative_buckets": {
+          "1": 17,
+          "0.01": 6,
+          "0.05": 17,
+          "0.1": 17,
+          "0.5": 17,
+          "Inf": 17
+        }
+      }
+    },
+    "load": {
+      "normal": {
+        "configuration": {
+          "model": "closed: each slot starts again only after its previous attempt ends",
+          "requests": 60,
+          "concurrency": 4,
+          "warmup": 6,
+          "deadline_ms": 500,
+          "keepalive": false
+        },
+        "summary": {
+          "attempts": 60,
+          "successful": 60,
+          "failed": 0,
+          "error_ratio": 0,
+          "elapsed_seconds": 0.45,
+          "attempted_rps": 133.411,
+          "successful_rps": 133.411,
+          "mean_ms": 29.671,
+          "p50_ms": 30.574,
+          "p95_ms": 32.974,
+          "p99_ms": 33.105,
+          "percentile_method": "nearest rank across all completed attempts, including HTTP failures and client errors"
+        },
+        "local_process": {
+          "cpu_user_ms": 0,
+          "cpu_system_ms": 0,
+          "rss_end_bytes": 56262656,
+          "event_loop_samples": 28,
+          "event_loop_p99_ms": 22.855679,
+          "scope": "load generator and both fixture HTTP services share this Node process"
+        }
+      },
+      "errors": {
+        "attempts": 12,
+        "successful": 0,
+        "failed": 12,
+        "error_ratio": 1,
+        "elapsed_seconds": 0.043,
+        "attempted_rps": 282.319,
+        "successful_rps": 0,
+        "mean_ms": 10.369,
+        "p50_ms": 5.993,
+        "p95_ms": 15.736,
+        "p99_ms": 15.736,
+        "percentile_method": "nearest rank across all completed attempts, including HTTP failures and client errors"
+      },
+      "deadlines": {
+        "attempts": 4,
+        "successful": 0,
+        "failed": 4,
+        "error_ratio": 1,
+        "elapsed_seconds": 0.035,
+        "attempted_rps": 115.461,
+        "successful_rps": 0,
+        "mean_ms": 17.231,
+        "p50_ms": 15.166,
+        "p95_ms": 19.979,
+        "p99_ms": 19.979,
+        "percentile_method": "nearest rank across all completed attempts, including HTTP failures and client errors"
+      }
+    }
+  },
+  "cleanup": {
+    "loopback_ports_closed": {
+      "51670": true,
+      "51671": true
+    }
+  }
+}

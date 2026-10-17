@@ -1,0 +1,42 @@
+{
+  "module": 7,
+  "node": "v22.14.0",
+  "jose": "6.2.12",
+  "passed": 86,
+  "groups": {
+    "credentialSessionTokenCrypto": 38,
+    "realHttp": 32,
+    "oauthProtocolModel": 16
+  },
+  "questions": 30,
+  "practiceTasks": 10,
+  "controlledClock": true,
+  "notVerified": [
+    "browser cookie behavior",
+    "TLS and real provider login",
+    "full OIDC validation",
+    "distributed coordination",
+    "crash recovery",
+    "signing failure after refresh consumption",
+    "timing indistinguishability",
+    "JWKS and key rotation",
+    "load/performance",
+    "launcher signals"
+  ],
+  "siteBuild": {
+    "passed": true,
+    "next": "16.3.8",
+    "compiler": "webpack",
+    "staticPages": 83,
+    "typescriptPassed": true,
+    "fontResponses": "Existing cached local font fixture via NEXT_FONT_GOOGLE_MOCKED_RESPONSES"
+  },
+  "siteSmoke": {
+    "passed": true,
+    "routes": 11,
+    "searchScoped": true,
+    "chapterIndexed": true,
+    "temporaryListenerClosed": true,
+    "port3000Stopped": true
+  }
+}

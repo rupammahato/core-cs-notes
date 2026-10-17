@@ -1,0 +1,71 @@
+PASS core: application role is non-superuser and server configuration is recorded
+PASS core: adversarial text is bound as a value without executing SQL
+PASS core: Identifier composition selects a column while a bound value stays literal
+PASS core: numeric timestamptz and jsonb round-trip through real type adapters
+PASS core: jsonb containment executes on PostgreSQL
+PASS core: ordinary UNIQUE permits multiple null values by default
+PASS core: check constraint rejects negative stock
+PASS core: unique constraint rejects duplicate tenant SKU
+PASS core: not-null constraint rejects null SKU
+PASS core: composite foreign key rejects a product from another tenant
+PASS core: application role cannot create tables in migration-owned schema
+PASS core: table grants do not replace application tenant predicates
+PASS core: foreign key does not automatically add a referencing SKU index
+PASS core: ON CONFLICT updates the specified conflict target and RETURNING reports value
+PASS core: identity sequence allocation is not rolled back
+PASS core: savepoint rollback permits the outer transaction to continue
+PASS core: implicit SELECT transaction and failed state require deliberate rollback
+PASS core: SCRAM host authentication rejects incorrect fixture password
+PASS core: ordinary CREATE TABLE rolls back with its transaction
+PASS core total: 19
+
+PASS concurrency: ordinary SELECT does not read another transaction uncommitted write
+PASS concurrency: Read Committed successive statements see a newly committed value
+PASS concurrency: Repeatable Read keeps the transaction snapshot across statements
+PASS concurrency: FOR UPDATE really blocks a competing writer until transaction release
+PASS concurrency: NOWAIT rejects a held row lock with its SQLSTATE
+PASS concurrency: SKIP LOCKED chooses another available job row
+PASS concurrency: lock_timeout bounds waiting for a held row lock
+PASS concurrency: statement_timeout cancels a long statement and autocommit session recovers
+PASS concurrency: two overlapping Read Committed transactions can lose a stale absolute update
+PASS concurrency: SQL relative updates preserve both fixture decrements
+PASS concurrency: conditional predicate rejects a stale compare-and-set writer
+PASS concurrency: Repeatable Read permits the disjoint-row write-skew fixture
+PASS concurrency: Serializable failure retries the whole transaction and rechecks the invariant
+PASS concurrency: opposite lock ordering causes a real deadlock and one transaction abort
+PASS concurrency total: 14
+
+PASS pool: returning a lease permits reuse of the same database session
+PASS pool: two checked-out leases use two different PostgreSQL sessions
+PASS pool: pool capacity and acquisition deadline bound a third borrower
+PASS pool: failed transactional lease returns without committing its partial write
+PASS pool: ordinary pool return does not erase arbitrary session SET state
+PASS pool: SET LOCAL request state expires at its transaction boundary
+PASS pool: explicit reset callback clears the tested session setting
+PASS pool: closed pool rejects new acquisition
+PASS pool total: 8
+
+PASS plans: unindexed selective ordered fixture naturally scans and sorts
+PASS plans: composite index preserves the actual result rows
+PASS plans: planner naturally uses the composite index without a Sort node
+PASS plans: broad fixture still naturally chooses a sequential scan
+PASS plans: plain EXPLAIN does not execute the UPDATE
+PASS plans: EXPLAIN ANALYZE executes the UPDATE; explicit transaction rollback restores it
+PASS plans: CREATE INDEX CONCURRENTLY is rejected inside a transaction block
+PASS plans total: 7
+
+PASS service: trusted price stock reservation and outbox commit together
+PASS service: sequential replay returns the same reservation without another stock effect
+PASS service: same idempotency key with different payload is rejected
+PASS service: idempotency and inventory scope include the trusted tenant
+PASS service: invalid quantity types bounds and booleans are rejected before state changes
+PASS service: known composite foreign-key failure becomes unavailable and rolls back claim
+PASS service: insufficient stock rolls back the idempotency claim
+PASS service: failure after stock update rolls back stock reservation and outbox
+PASS service: competing last-unit requests cannot both reserve stock
+PASS service: concurrent duplicate key waits then replays one committed reservation
+PASS service: replay succeeds after stock is exhausted because claim precedes stock work
+PASS service: rolled-back unavailable key can later succeed after fixture restock
+PASS service total: 12
+
+PASS total: 60

@@ -1,0 +1,186 @@
+{
+  "node": "v22.14.0",
+  "mode": "ES module",
+  "cases": [
+    {
+      "id": "01-types",
+      "title": "Values, typeof and arrays",
+      "source": "console.log(typeof 7, typeof '7', typeof true);\nconsole.log(typeof undefined, typeof null, typeof NaN);\nconsole.log(typeof [], Array.isArray([]), typeof (() => {}));",
+      "output": "number string boolean\nundefined object number\nobject true function"
+    },
+    {
+      "id": "02-alias",
+      "title": "Primitive copies and object aliases",
+      "source": "let quantity = 2;\nlet copiedQuantity = quantity;\ncopiedQuantity = 5;\nconst original = { stock: 4 };\nconst alias = original;\nalias.stock = 1;\nconsole.log(quantity, copiedQuantity);\nconsole.log(original.stock, original === alias);",
+      "output": "2 5\n1 true"
+    },
+    {
+      "id": "03-arguments",
+      "title": "Mutation versus parameter rebinding",
+      "source": "function change(item, count) {\n  item.stock = 1;\n  item = { stock: 99 };\n  count = 99;\n}\nconst item = { stock: 4 };\nlet count = 2;\nchange(item, count);\nconsole.log(item.stock, count);",
+      "output": "1 2"
+    },
+    {
+      "id": "04-const",
+      "title": "Const fixes a binding, not its object",
+      "source": "const options = { retries: 2 };\noptions.retries = 3;\nconsole.log(options.retries);\ntry { options = { retries: 4 }; }\ncatch (error) { console.log(error.name); }",
+      "output": "3\nTypeError"
+    },
+    {
+      "id": "05-shallow",
+      "title": "Spread shares nested objects",
+      "source": "const original = { name: 'Asha', address: { city: 'Goa' } };\nconst copy = { ...original };\ncopy.name = 'Ravi';\ncopy.address.city = 'Pune';\nconsole.log(original.name, original.address.city);\nconsole.log(original === copy, original.address === copy.address);",
+      "output": "Asha Pune\nfalse true"
+    },
+    {
+      "id": "06-path-copy",
+      "title": "Copy the changed nested path",
+      "source": "const original = { name: 'Asha', address: { city: 'Goa' } };\nconst updated = { ...original, address: { ...original.address, city: 'Pune' } };\nconsole.log(original.address.city, updated.address.city);\nconsole.log(original.address === updated.address);",
+      "output": "Goa Pune\nfalse"
+    },
+    {
+      "id": "07-clone",
+      "title": "Structured clone and cycles",
+      "source": "const original = { address: { city: 'Goa' } };\noriginal.self = original;\nconst copy = structuredClone(original);\ncopy.address.city = 'Pune';\nconsole.log(original.address.city, copy.address.city);\nconsole.log(copy !== original, copy.self === copy);\ntry { structuredClone({ run() {} }); }\ncatch (error) { console.log(error.name); }",
+      "output": "Goa Pune\ntrue true\nDataCloneError"
+    },
+    {
+      "id": "08-numbers",
+      "title": "Floating point and integer boundaries",
+      "source": "console.log(0.1 + 0.2);\nconsole.log(0.1 + 0.2 === 0.3);\nconsole.log(Number.isSafeInteger(9007199254740991));\nconsole.log(Number.isSafeInteger(9007199254740992));\nconsole.log(25000 * 2);",
+      "output": "0.30000000000000004\nfalse\ntrue\nfalse\n50000"
+    },
+    {
+      "id": "09-equality",
+      "title": "Strict, loose and same-value equality",
+      "source": "console.log(0 == '0', 0 === '0');\nconsole.log(null == undefined, null === undefined);\nconsole.log(NaN === NaN, Object.is(NaN, NaN));\nconsole.log(0 === -0, Object.is(0, -0));\nconsole.log({} === {}, [NaN].includes(NaN), [NaN].indexOf(NaN));",
+      "output": "true false\ntrue false\nfalse true\ntrue false\nfalse true -1"
+    },
+    {
+      "id": "10-coercion",
+      "title": "Plus and explicit conversion",
+      "source": "console.log('5' + 1, '5' - 1);\nconsole.log(Number(''), Number('  '));\nconsole.log(Boolean('false'), Boolean([]), Boolean({}));\nconsole.log(Number.isNaN(Number('2x')), parseInt('2x', 10));",
+      "output": "51 4\n0 0\ntrue true true\ntrue 2"
+    },
+    {
+      "id": "11-defaults",
+      "title": "Nullish versus falsy defaults",
+      "source": "for (const value of [0, false, '', null, undefined]) {\n  console.log(JSON.stringify([value ?? 'fallback', value || 'fallback']));\n}",
+      "output": "[0,\"fallback\"]\n[false,\"fallback\"]\n[\"\",\"fallback\"]\n[\"fallback\",\"fallback\"]\n[\"fallback\",\"fallback\"]"
+    },
+    {
+      "id": "12-scope",
+      "title": "Function scope and block scope",
+      "source": "function inspect() {\n  var label = 'outer';\n  if (true) {\n    var label = 'inner';\n    let local = 'block';\n  }\n  console.log(label);\n  try { console.log(local); }\n  catch (error) { console.log(error.name); }\n}\ninspect();",
+      "output": "inner\nReferenceError"
+    },
+    {
+      "id": "13-hoisting",
+      "title": "Var initialization and the temporal dead zone",
+      "source": "console.log(count);\nvar count = 3;\ntry { console.log(typeof limit); }\ncatch (error) { console.log(error.name); }\nlet limit = 4;\nconsole.log(limit);",
+      "output": "undefined\nReferenceError\n4"
+    },
+    {
+      "id": "14-functions",
+      "title": "Declaration versus const function expression",
+      "source": "console.log(add(2, 3));\nfunction add(a, b) { return a + b; }\ntry { console.log(multiply(2, 3)); }\ncatch (error) { console.log(error.name); }\nconst multiply = (a, b) => a * b;\nconsole.log(multiply(2, 3));",
+      "output": "5\nReferenceError\n6"
+    },
+    {
+      "id": "15-closure-binding",
+      "title": "Closures retain access to bindings",
+      "source": "let token = 'old';\nconst readToken = () => token;\ntoken = 'new';\nconsole.log(readToken());",
+      "output": "new"
+    },
+    {
+      "id": "16-loop",
+      "title": "Var and let loop closures without timers",
+      "source": "const shared = [];\nconst separate = [];\nfor (var i = 0; i < 3; i++) shared.push(() => i);\nfor (let j = 0; j < 3; j++) separate.push(() => j);\nconsole.log(JSON.stringify(shared.map(read => read())));\nconsole.log(JSON.stringify(separate.map(read => read())));",
+      "output": "[3,3,3]\n[0,1,2]"
+    },
+    {
+      "id": "17-factory",
+      "title": "Independent closure state",
+      "source": "function makeCounter() {\n  let count = 0;\n  return () => ++count;\n}\nconst a = makeCounter();\nconst b = makeCounter();\nconsole.log(a(), a(), b(), a());",
+      "output": "1 2 1 3"
+    },
+    {
+      "id": "18-snapshot",
+      "title": "A captured binding versus an earlier computed value",
+      "source": "function makeReader() {\n  let count = 0;\n  const message = 'count=' + count;\n  return {\n    increment() { count++; },\n    current() { return count; },\n    snapshot() { return message; },\n  };\n}\nconst reader = makeReader();\nreader.increment();\nconsole.log(reader.current(), reader.snapshot());",
+      "output": "1 count=0"
+    },
+    {
+      "id": "19-this",
+      "title": "The call site supplies this",
+      "source": "function readName() { return this.name; }\nconst a = { name: 'Asha', readName };\nconst b = { name: 'Ravi', readName };\nconsole.log(a.readName(), b.readName());\nconst detached = a.readName;\ntry { detached(); }\ncatch (error) { console.log(error.name); }\nconsole.log(detached.call(b));\nconst bound = detached.bind(a);\nconsole.log(bound.call(b));",
+      "output": "Asha Ravi\nTypeError\nRavi\nAsha"
+    },
+    {
+      "id": "20-arrow",
+      "title": "An object literal does not create lexical this",
+      "source": "const user = { name: 'Asha', read: () => this };\nconsole.log(user.read() === undefined);\nconsole.log(user.read.call({ name: 'Ravi' }) === undefined);",
+      "output": "true\ntrue"
+    },
+    {
+      "id": "21-arrow-callback",
+      "title": "An arrow can retain an enclosing method's this",
+      "source": "const service = {\n  name: 'catalog',\n  makeReaders() {\n    return {\n      arrow: () => this.name,\n      regular: function () { return this.name; },\n    };\n  },\n};\nconst readers = service.makeReaders();\nconsole.log(readers.arrow());\nconsole.log(readers.regular.call({ name: 'worker' }));",
+      "output": "catalog\nworker"
+    },
+    {
+      "id": "22-prototype",
+      "title": "Lookup, shadowing and own properties",
+      "source": "const defaults = { retries: 2 };\nconst options = Object.create(defaults);\nconsole.log(options.retries, Object.hasOwn(options, 'retries'));\noptions.retries = 5;\nconsole.log(options.retries, defaults.retries);\ndelete options.retries;\nconsole.log(options.retries, 'retries' in options);\nconsole.log(Object.getPrototypeOf(options) === defaults);",
+      "output": "2 false\n5 2\n2 true\ntrue"
+    },
+    {
+      "id": "23-class",
+      "title": "Class methods and per-instance arrow fields",
+      "source": "class Counter {\n  count = 0;\n  increment() { return ++this.count; }\n  read = () => this.count;\n}\nconst a = new Counter();\nconst b = new Counter();\nconsole.log(Object.hasOwn(a, 'increment'), Object.hasOwn(a, 'read'));\nconsole.log(a.increment === b.increment, a.read === b.read);\na.increment();\nconst detachedRead = a.read;\nconsole.log(detachedRead());",
+      "output": "false true\ntrue false\n1"
+    },
+    {
+      "id": "24-destructure",
+      "title": "Defaults, rest and nested references",
+      "source": "const input = { limit: 0, cursor: null, meta: { source: 'web' } };\nconst { limit = 10, cursor = 'start', ...rest } = input;\nrest.meta.source = 'mobile';\nconsole.log(limit, cursor, input.meta.source);\nfunction sum(...values) { return values.reduce((total, value) => total + value, 0); }\nconsole.log(sum(1, 2, 3));",
+      "output": "0 null mobile\n6"
+    },
+    {
+      "id": "25-array",
+      "title": "Array transforms and sorting",
+      "source": "const values = [10, 2, 1];\nconsole.log(JSON.stringify([...values].sort()));\nconsole.log(JSON.stringify([...values].sort((a, b) => a - b)));\nconsole.log(JSON.stringify(values));\nconsole.log(JSON.stringify(values.filter(n => n > 1).map(n => n * 2)));\nconsole.log(values.reduce((total, n) => total + n, 0));\nconst same = values.sort((a, b) => a - b);\nconsole.log(same === values, JSON.stringify(values));",
+      "output": "[1,10,2]\n[1,2,10]\n[10,2,1]\n[20,4]\n13\ntrue [1,2,10]"
+    },
+    {
+      "id": "26-map",
+      "title": "Key identity and set membership",
+      "source": "const key = { id: 7 };\nconst cache = new Map([[key, 'hit']]);\nconsole.log(cache.get(key), cache.has({ id: 7 }));\nconsole.log(new Set([NaN, NaN, 0, -0]).size);\nconst byId = new Map([[7, 'number'], ['7', 'string']]);\nconsole.log(byId.size, byId.get(7), byId.get('7'));",
+      "output": "hit false\n2\n2 number string"
+    },
+    {
+      "id": "27-json",
+      "title": "JSON is not a universal object clone",
+      "source": "console.log(JSON.stringify({ missing: undefined, empty: null, bad: NaN, fn() {} }));\nconsole.log(JSON.stringify([undefined, NaN]));\ntry { JSON.stringify({ id: 1n }); }\ncatch (error) { console.log(error.name); }\nconst cyclic = {};\ncyclic.self = cyclic;\ntry { JSON.stringify(cyclic); }\ncatch (error) { console.log(error.name); }",
+      "output": "{\"empty\":null,\"bad\":null}\n[null,null]\nTypeError\nTypeError"
+    },
+    {
+      "id": "28-optional",
+      "title": "Optional access only guards nullish values",
+      "source": "const user = { profile: null };\nconsole.log(user.profile?.city ?? 'unknown');\nconsole.log({ count: 0 }.count ?? 10);\ntry { const item = { run: 3 }; item.run?.(); }\ncatch (error) { console.log(error.name); }\ntry { absentRoot?.name; }\ncatch (error) { console.log(error.name); }",
+      "output": "unknown\n0\nTypeError\nReferenceError"
+    },
+    {
+      "id": "29-boundary",
+      "title": "Parse a positive integer deliberately",
+      "source": "function parseQuantity(raw) {\n  if (typeof raw !== 'string' || !/^[1-9][0-9]*$/.test(raw)) return null;\n  const value = Number(raw);\n  return Number.isSafeInteger(value) ? value : null;\n}\nfor (const raw of ['2', '', '2x', '0', '-1', '1.5', '9007199254740993']) {\n  console.log(JSON.stringify(raw), parseQuantity(raw));\n}",
+      "output": "\"2\" 2\n\"\" null\n\"2x\" null\n\"0\" null\n\"-1\" null\n\"1.5\" null\n\"9007199254740993\" null"
+    },
+    {
+      "id": "30-field-order",
+      "title": "Spread order is a trust-boundary decision",
+      "source": "const verifiedTenant = 'tenant-A';\nconst input = { title: 'Report', tenantId: 'tenant-B', isAdmin: true };\nconst unsafe = { tenantId: verifiedTenant, ...input };\nconst ordered = { ...input, tenantId: verifiedTenant };\nconst allowed = { title: input.title, tenantId: verifiedTenant };\nconsole.log(unsafe.tenantId, ordered.tenantId);\nconsole.log(Object.hasOwn(ordered, 'isAdmin'), Object.hasOwn(allowed, 'isAdmin'));",
+      "output": "tenant-B tenant-A\ntrue false"
+    }
+  ]
+}

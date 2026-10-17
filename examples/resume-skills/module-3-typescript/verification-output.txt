@@ -1,0 +1,27 @@
+PASS 01-erasure - compiled and ran
+PASS 02-inference - compiled and ran
+PASS 03-argument - rejected: TS2345
+PASS 04-structural - compiled and ran
+PASS 05-excess - rejected: TS2353
+PASS 06-narrowing - compiled and ran
+PASS 07-unknown - rejected: TS18046
+PASS 08-any - compiled and ran
+PASS 09-assertion - compiled and ran
+PASS 10-null - rejected: TS18047
+PASS 11-optional - rejected: TS2375
+PASS 12-index - rejected: TS2532
+PASS 13-readonly - compiled and ran
+PASS 14-readonly-write - rejected: TS2540
+PASS 15-result - compiled and ran
+PASS 16-exhaustive - rejected: TS2345
+PASS 17-interface-alias - compiled and ran
+PASS 18-generics - compiled and ran
+PASS 19-generic-key - rejected: TS2345
+PASS 20-satisfies - compiled and ran
+PASS 21-utilities - compiled and ran
+PASS 22-functions - compiled and ran
+PASS 23-boundary - compiled and ran
+PASS 24-lying-guard - compiled and ran
+PASS 25-tuple - compiled and ran
+PASS 26-intersection - rejected: TS2322
+Verified 26 TypeScript cases; Version 7.0.2; Node v22.14.0

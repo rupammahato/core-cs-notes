@@ -1,0 +1,46 @@
+{
+  "group": "atomic",
+  "total": 6,
+  "checks": [
+    {
+      "name": "two stale read-modify-set decisions can overwrite a stock decrement",
+      "passed": true
+    },
+    {
+      "name": "independent concurrent increment operations preserve both decrements",
+      "passed": true
+    },
+    {
+      "name": "conditional single-document stock update permits one last-unit winner",
+      "passed": true
+    },
+    {
+      "name": "revision predicate rejects a stale optimistic writer",
+      "passed": true
+    },
+    {
+      "name": "one document update changes embedded state and counter together",
+      "passed": true
+    },
+    {
+      "name": "independent document writes do not roll back after an application failure",
+      "passed": true
+    }
+  ],
+  "observations": {
+    "stale_absolute_final": 8,
+    "relative_final": 7,
+    "last_unit": {
+      "modified_counts": [
+        0,
+        1
+      ],
+      "stock": 0
+    },
+    "without_transaction_balances": [
+      90,
+      100
+    ]
+  },
+  "scope": "Real writes and barrier-started concurrent requests; no claim of observed internal lock scheduling"
+}

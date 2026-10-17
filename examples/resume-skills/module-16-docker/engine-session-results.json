@@ -1,0 +1,7 @@
+{
+  "engine_initially_stopped": true,
+  "engine_started_for_this_module": true,
+  "containers_after_fixture_cleanup": [],
+  "engine_restored_stopped": true,
+  "public_base_images_and_build_cache_retained": true
+}

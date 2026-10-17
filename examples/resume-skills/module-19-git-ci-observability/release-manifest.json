@@ -1,0 +1,14 @@
+{
+  "revision": "28d1ef891abe9eccb6a500b58f848c999bb1da28",
+  "release": "v2",
+  "files": {
+    "app.mjs": "b3b5a26c1f330c5b35162472ca37ebdbddcb69ab9b9b43e22c2db31457bb8484",
+    "telemetry.mjs": "8f4f26568ada32cd968252b717e9cceda715f2feddfc0c2c9caff7eb1c6c2e8a",
+    "serve.mjs": "cf2fc2f67e37b3c8e99edd5b927afb766ef96b800c544e26529b49a49e239d91",
+    "load.mjs": "861406b3ca30eeee1635685f6bf2e4d693a199434219cc3f48743296a80eed52",
+    "statistics.mjs": "140a3ec7c0817267947b7f541f1998da353b35899d00982e9e6acae61ebfff29",
+    "contract.test.mjs": "dde49caedebc773a149e0ffcfef13fb56ea6098a1b74cbf8ef0f4e033de0f30b",
+    "package.json": "7e97de970c6be4c95059d3c51b4544a2efbe96462fd40b96941d8ae1db8758ca",
+    "package-lock.json": "a9ae23e9040482ab1118da00cec0bd9345da35f2fb06489a937dd61d936f089f"
+  }
+}

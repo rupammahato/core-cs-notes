@@ -1,0 +1,461 @@
+{
+  "runtime": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "packages": {
+    "Flask": "3.0.3",
+    "Werkzeug": "3.1.2",
+    "fastapi": "0.142.2",
+    "starlette": "1.7.0",
+    "pydantic": "2.13.5",
+    "pydantic-core": "2.46.5",
+    "uvicorn": "0.54.0",
+    "httpx": "0.28.1",
+    "anyio": "4.15.1",
+    "asgiref": "3.12.1"
+  },
+  "counts": {
+    "protocols": 2,
+    "validation": 10,
+    "http": 52,
+    "runtime": 16
+  },
+  "total": 80,
+  "groups": [
+    {
+      "group": "protocols",
+      "total": 2,
+      "checks": [
+        {
+          "name": "WSGI callable returns byte iterable and response metadata",
+          "passed": true
+        },
+        {
+          "name": "ASGI callable receives chunk events and sends response events",
+          "passed": true
+        }
+      ],
+      "observations": {
+        "wsgi": {
+          "status": "200 OK",
+          "body": {
+            "method": "GET",
+            "path": "/probe"
+          }
+        },
+        "asgi": {
+          "status": 200,
+          "body": {
+            "method": "POST",
+            "path": "/probe",
+            "bytes": 3
+          }
+        }
+      },
+      "transport": "In-process protocol calls; no network listener"
+    },
+    {
+      "group": "validation",
+      "total": 10,
+      "checks": [
+        {
+          "name": "default integer parsing can coerce a numeric string",
+          "passed": true
+        },
+        {
+          "name": "strict valid integer boundaries accepted",
+          "passed": true
+        },
+        {
+          "name": "strict integer rejects numeric string",
+          "passed": true
+        },
+        {
+          "name": "strict integer rejects bool",
+          "passed": true
+        },
+        {
+          "name": "strict integer rejects integral float",
+          "passed": true
+        },
+        {
+          "name": "extra fields forbidden",
+          "passed": true
+        },
+        {
+          "name": "required fields and value bounds enforced",
+          "passed": true
+        },
+        {
+          "name": "model_construct deliberately bypasses validation",
+          "passed": true
+        },
+        {
+          "name": "strict JSON datetime rules differ from strict Python-object input",
+          "passed": true
+        },
+        {
+          "name": "output model can select public fields while ignoring extras",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "group": "http",
+      "total": 52,
+      "checks": [
+        {
+          "name": "flask: health is public",
+          "passed": true
+        },
+        {
+          "name": "flask: missing credentials rejected",
+          "passed": true
+        },
+        {
+          "name": "flask: unknown credential rejected",
+          "passed": true
+        },
+        {
+          "name": "flask: 401 has Bearer challenge",
+          "passed": true
+        },
+        {
+          "name": "flask: validated quote uses trusted price and public response",
+          "passed": true
+        },
+        {
+          "name": "flask: cross-tenant product hidden",
+          "passed": true
+        },
+        {
+          "name": "flask: beta sees its own product",
+          "passed": true
+        },
+        {
+          "name": "flask: boolean quantity rejected",
+          "passed": true
+        },
+        {
+          "name": "flask: string quantity rejected",
+          "passed": true
+        },
+        {
+          "name": "flask: float quantity rejected",
+          "passed": true
+        },
+        {
+          "name": "flask: zero quantity rejected",
+          "passed": true
+        },
+        {
+          "name": "flask: over cap quantity rejected",
+          "passed": true
+        },
+        {
+          "name": "flask: null quantity rejected",
+          "passed": true
+        },
+        {
+          "name": "flask: unknown fields rejected",
+          "passed": true
+        },
+        {
+          "name": "flask: missing field rejected",
+          "passed": true
+        },
+        {
+          "name": "flask: malformed JSON rejected",
+          "passed": true
+        },
+        {
+          "name": "flask: wrong media type rejected",
+          "passed": true
+        },
+        {
+          "name": "flask: product response excludes internal cost",
+          "passed": true
+        },
+        {
+          "name": "flask: unknown product returns 404",
+          "passed": true
+        },
+        {
+          "name": "flask: query limit parsed and list tenant-filtered",
+          "passed": true
+        },
+        {
+          "name": "flask: invalid query limit rejected",
+          "passed": true
+        },
+        {
+          "name": "flask: 405 preserves Allow header",
+          "passed": true
+        },
+        {
+          "name": "flask: unknown route returns 404",
+          "passed": true
+        },
+        {
+          "name": "flask: metadata and request-resource lifecycle observed",
+          "passed": true
+        },
+        {
+          "name": "flask: configured body limit rejects large JSON",
+          "passed": true
+        },
+        {
+          "name": "fastapi: health is public",
+          "passed": true
+        },
+        {
+          "name": "fastapi: missing credentials rejected",
+          "passed": true
+        },
+        {
+          "name": "fastapi: unknown credential rejected",
+          "passed": true
+        },
+        {
+          "name": "fastapi: 401 has Bearer challenge",
+          "passed": true
+        },
+        {
+          "name": "fastapi: validated quote uses trusted price and public response",
+          "passed": true
+        },
+        {
+          "name": "fastapi: cross-tenant product hidden",
+          "passed": true
+        },
+        {
+          "name": "fastapi: beta sees its own product",
+          "passed": true
+        },
+        {
+          "name": "fastapi: boolean quantity rejected",
+          "passed": true
+        },
+        {
+          "name": "fastapi: string quantity rejected",
+          "passed": true
+        },
+        {
+          "name": "fastapi: float quantity rejected",
+          "passed": true
+        },
+        {
+          "name": "fastapi: zero quantity rejected",
+          "passed": true
+        },
+        {
+          "name": "fastapi: over cap quantity rejected",
+          "passed": true
+        },
+        {
+          "name": "fastapi: null quantity rejected",
+          "passed": true
+        },
+        {
+          "name": "fastapi: unknown fields rejected",
+          "passed": true
+        },
+        {
+          "name": "fastapi: missing field rejected",
+          "passed": true
+        },
+        {
+          "name": "fastapi: malformed JSON rejected",
+          "passed": true
+        },
+        {
+          "name": "fastapi: wrong media type rejected",
+          "passed": true
+        },
+        {
+          "name": "fastapi: product response excludes internal cost",
+          "passed": true
+        },
+        {
+          "name": "fastapi: unknown product returns 404",
+          "passed": true
+        },
+        {
+          "name": "fastapi: query limit parsed and list tenant-filtered",
+          "passed": true
+        },
+        {
+          "name": "fastapi: invalid query limit rejected",
+          "passed": true
+        },
+        {
+          "name": "fastapi: 405 preserves Allow header",
+          "passed": true
+        },
+        {
+          "name": "fastapi: unknown route returns 404",
+          "passed": true
+        },
+        {
+          "name": "fastapi: metadata and request-resource lifecycle observed",
+          "passed": true
+        },
+        {
+          "name": "fastapi: OpenAPI describes schema constraints and security",
+          "passed": true
+        },
+        {
+          "name": "fastapi: documentation route responds",
+          "passed": true
+        },
+        {
+          "name": "fastapi: custom validation handler excludes rejected input values",
+          "passed": true
+        }
+      ],
+      "observations": {
+        "flask_quote": {
+          "created_at": "2026-10-14T06:30:00Z",
+          "currency": "INR",
+          "product_id": "basic",
+          "quantity": 2,
+          "total_paise": 25000
+        },
+        "flask_trace": [
+          "before",
+          "lease-open",
+          "route",
+          "after",
+          "lease-close",
+          "teardown"
+        ],
+        "fastapi_quote": {
+          "product_id": "basic",
+          "quantity": 2,
+          "total_paise": 25000,
+          "currency": "INR",
+          "created_at": "2026-10-14T06:30:00Z"
+        },
+        "fastapi_trace": [
+          "before",
+          "lease-open",
+          "route",
+          "lease-close",
+          "after"
+        ],
+        "openapi_version": "3.1.0"
+      },
+      "ports": [
+        54232,
+        54259
+      ],
+      "listeners_closed": true,
+      "transports": "Real loopback HTTP: Werkzeug development WSGI and Uvicorn ASGI"
+    },
+    {
+      "group": "runtime",
+      "total": 16,
+      "checks": [
+        {
+          "name": "Flask request proxy requires a request context",
+          "passed": true
+        },
+        {
+          "name": "Flask g is not persistent cross-request storage",
+          "passed": true
+        },
+        {
+          "name": "Flask factory creates independent application state",
+          "passed": true
+        },
+        {
+          "name": "Flask async bridge preserves context and cancels unfinished spawned task",
+          "passed": true
+        },
+        {
+          "name": "FastAPI async route and async dependency run on loop thread",
+          "passed": true
+        },
+        {
+          "name": "FastAPI def dependency is dispatched off loop",
+          "passed": true
+        },
+        {
+          "name": "ordinary def helper called directly stays on caller thread",
+          "passed": true
+        },
+        {
+          "name": "FastAPI def route is dispatched off loop",
+          "passed": true
+        },
+        {
+          "name": "dependency cache is reused within a request and reset for next request",
+          "passed": true
+        },
+        {
+          "name": "use_cache=False requests a separate dependency invocation",
+          "passed": true
+        },
+        {
+          "name": "function-scoped yield resource closes before response body send",
+          "passed": true
+        },
+        {
+          "name": "request-scoped cleanup follows body and background on pinned stack",
+          "passed": true
+        },
+        {
+          "name": "invalid response model is a server error, not a client validation error",
+          "passed": true
+        },
+        {
+          "name": "direct Response bypasses response-model field filtering",
+          "passed": true
+        },
+        {
+          "name": "background failure occurs after a successful response was sent to transport",
+          "passed": true
+        },
+        {
+          "name": "test dependency override can be restored and lifespan resource closes",
+          "passed": true
+        }
+      ],
+      "observations": {
+        "flask_async": {
+          "context_available": true,
+          "different_thread": true
+        },
+        "flask_pending_task": [
+          "cancelled"
+        ],
+        "fastapi_dispatch": {
+          "route_on_loop": true,
+          "sync_dependency_off_loop": true,
+          "async_dependency_on_loop": true,
+          "ordinary_helper_on_loop": true
+        },
+        "function_scope": [
+          "enter",
+          "route",
+          "exit",
+          "body-send",
+          "background"
+        ],
+        "request_scope": [
+          "enter",
+          "route",
+          "body-send",
+          "background",
+          "exit"
+        ],
+        "background_failure_status_already_sent": 200
+      },
+      "transport": "In-process framework clients / ASGI send instrumentation; no sockets"
+    }
+  ],
+  "expected_warnings": [
+    {
+      "group": "runtime",
+      "stderr": "C:\\Development\\Placement\\examples\\resume-skills\\module-11-python-frameworks\\.venv\\Lib\\site-packages\\fastapi\\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.\n  from starlette.testclient import TestClient as TestClient  # noqa\n"
+    }
+  ]
+}

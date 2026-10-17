@@ -1,0 +1,275 @@
+{
+  "node": "v22.14.0",
+  "passed": 32,
+  "checks": [
+    {
+      "name": "missing session returns 401",
+      "passed": true,
+      "observed": {
+        "status": 401,
+        "code": "unauthenticated"
+      }
+    },
+    {
+      "name": "forged session rejected",
+      "passed": true,
+      "observed": {
+        "status": 401,
+        "code": "unauthenticated"
+      }
+    },
+    {
+      "name": "missing login Origin rejected",
+      "passed": true,
+      "observed": {
+        "status": 403,
+        "code": "origin_rejected"
+      }
+    },
+    {
+      "name": "untrusted login Origin rejected",
+      "passed": true,
+      "observed": {
+        "status": 403,
+        "code": "origin_rejected"
+      }
+    },
+    {
+      "name": "null login Origin rejected",
+      "passed": true,
+      "observed": {
+        "status": 403,
+        "code": "origin_rejected"
+      }
+    },
+    {
+      "name": "unsupported login format rejected",
+      "passed": true,
+      "observed": {
+        "status": 415,
+        "code": "unsupported_body_format"
+      }
+    },
+    {
+      "name": "malformed login JSON rejected",
+      "passed": true,
+      "observed": {
+        "status": 400,
+        "code": "invalid_json_object"
+      }
+    },
+    {
+      "name": "login body bound enforced",
+      "passed": true,
+      "observed": {
+        "status": 413,
+        "code": "body_too_large"
+      }
+    },
+    {
+      "name": "unknown login field rejected",
+      "passed": true,
+      "observed": {
+        "status": 400,
+        "code": "invalid_input"
+      }
+    },
+    {
+      "name": "oversize password rejected",
+      "passed": true,
+      "observed": {
+        "status": 400,
+        "code": "invalid_input"
+      }
+    },
+    {
+      "name": "wrong password and unknown account share public failure",
+      "passed": true,
+      "observed": {
+        "wrongPassword": 401,
+        "unknownAccount": 401,
+        "sameBody": true
+      }
+    },
+    {
+      "name": "login sets host-only secure HttpOnly SameSite cookie",
+      "passed": true,
+      "observed": {
+        "name": "__Host-sid",
+        "secure": true,
+        "httpOnly": true,
+        "sameSite": "Lax",
+        "domainAttribute": false
+      }
+    },
+    {
+      "name": "session credential resolves public user without password",
+      "passed": true,
+      "observed": {
+        "userId": "user-1",
+        "passwordExposed": false
+      }
+    },
+    {
+      "name": "duplicate named session cookies rejected",
+      "passed": true,
+      "observed": {
+        "status": 400,
+        "code": "ambiguous_cookie"
+      }
+    },
+    {
+      "name": "GET logout rejected with Allow",
+      "passed": true,
+      "observed": {
+        "status": 405,
+        "allow": "POST"
+      }
+    },
+    {
+      "name": "logout requires CSRF token",
+      "passed": true,
+      "observed": {
+        "status": 403,
+        "code": "csrf_rejected"
+      }
+    },
+    {
+      "name": "logout rejects cross-origin request despite correct CSRF",
+      "passed": true,
+      "observed": {
+        "status": 403,
+        "code": "origin_rejected"
+      }
+    },
+    {
+      "name": "re-login rotates cookie and invalidates prior session",
+      "passed": true,
+      "observed": {
+        "rotated": true,
+        "oldSessionValid": false,
+        "logout": 204,
+        "newSessionAfterLogoutValid": false
+      }
+    },
+    {
+      "name": "token login returns distinct access and refresh credentials",
+      "passed": true,
+      "observed": {
+        "accessParts": 3,
+        "refreshCharacters": 43,
+        "expiresInSeconds": 60
+      }
+    },
+    {
+      "name": "bearer request verifies user and challenge scheme",
+      "passed": true,
+      "observed": {
+        "valid": 200,
+        "missing": 401,
+        "challenge": "Bearer"
+      }
+    },
+    {
+      "name": "refresh credential cannot be used as access credential",
+      "passed": true,
+      "observed": {
+        "status": 401,
+        "code": "invalid_access_token"
+      }
+    },
+    {
+      "name": "access credential cannot be used as refresh credential",
+      "passed": true,
+      "observed": {
+        "status": 401,
+        "code": "invalid_refresh_token"
+      }
+    },
+    {
+      "name": "cookie alone does not authenticate bearer route",
+      "passed": true,
+      "observed": {
+        "status": 401,
+        "code": "invalid_access_token"
+      }
+    },
+    {
+      "name": "bearer alone does not authenticate session route",
+      "passed": true,
+      "observed": {
+        "status": 401,
+        "code": "unauthenticated"
+      }
+    },
+    {
+      "name": "ambiguous bearer value rejected",
+      "passed": true,
+      "observed": {
+        "status": 401,
+        "code": "invalid_access_token"
+      }
+    },
+    {
+      "name": "refresh endpoint rotates opaque credential",
+      "passed": true,
+      "observed": {
+        "successorDistinct": true,
+        "accessValid": true
+      }
+    },
+    {
+      "name": "refresh reuse rejects descendant but existing access remains valid",
+      "passed": true,
+      "observed": {
+        "reused": 401,
+        "descendant": 401,
+        "issuedAccess": 200
+      }
+    },
+    {
+      "name": "concurrent refresh has one winner then conservative family revocation",
+      "passed": true,
+      "observed": {
+        "statuses": [
+          200,
+          401
+        ],
+        "winnerSuccessorRevoked": true
+      }
+    },
+    {
+      "name": "token logout revokes refresh family without immediate access revocation",
+      "passed": true,
+      "observed": {
+        "logout": 204,
+        "refresh": 401,
+        "issuedAccess": 200
+      }
+    },
+    {
+      "name": "access expiry enforced on actual HTTP route",
+      "passed": true,
+      "observed": {
+        "status": 401,
+        "code": "invalid_access_token"
+      }
+    },
+    {
+      "name": "unknown route returns 404",
+      "passed": true,
+      "observed": {
+        "status": 404,
+        "code": "not_found"
+      }
+    },
+    {
+      "name": "query-based token transport rejected",
+      "passed": true,
+      "observed": {
+        "status": 400,
+        "code": "unexpected_query"
+      }
+    }
+  ]
+}

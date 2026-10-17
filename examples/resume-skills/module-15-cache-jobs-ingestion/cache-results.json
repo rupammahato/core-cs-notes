@@ -1,0 +1,63 @@
+{
+  "group": "cache",
+  "total": 10,
+  "checks": [
+    {
+      "name": "hit reuses a loaded value without another primary read",
+      "passed": true
+    },
+    {
+      "name": "manual monotonic clock expires at the exact configured boundary",
+      "passed": true
+    },
+    {
+      "name": "negative lookup uses its shorter independent TTL",
+      "passed": true
+    },
+    {
+      "name": "tenant and representation participate in cache identity",
+      "passed": true
+    },
+    {
+      "name": "invalid trusted scope including boolean tenant is rejected",
+      "passed": true
+    },
+    {
+      "name": "bounded entries evict the least recently used member",
+      "passed": true
+    },
+    {
+      "name": "caller and loader mutations cannot modify the saved value",
+      "passed": true
+    },
+    {
+      "name": "eight coordinated callers share one load with seven observed waiters",
+      "passed": true
+    },
+    {
+      "name": "failed load clears its flight and is not cached",
+      "passed": true
+    },
+    {
+      "name": "invalidation generation prevents a late old load from repopulating cache",
+      "passed": true
+    }
+  ],
+  "observations": {
+    "expiry": {
+      "deadline": 10,
+      "loads": 2
+    },
+    "single_flight": {
+      "callers": 8,
+      "loads": 1,
+      "waiting_followers": 7
+    },
+    "invalidation_race": {
+      "in_flight_response": 1,
+      "next_read": 2,
+      "old_value_repopulated": false
+    }
+  },
+  "scope": "Process-local algorithm with manual TTL clock and actual threads; no Redis/network test"
+}

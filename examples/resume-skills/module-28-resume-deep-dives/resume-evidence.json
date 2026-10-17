@@ -1,0 +1,131 @@
+{
+  "checked_date": "2026-10-16",
+  "pypdf": "6.20.1",
+  "sources": [
+    {
+      "file": "Rupam_Resume_Updated.pdf",
+      "sha256": "a22b4d64d808b865c40648dacba6ba429ded8796579c15a984475479e9ed7344",
+      "excerpts": [
+        {
+          "project_id": "neosophical",
+          "anchor": "Neosophical Labs",
+          "page": 1,
+          "text": "Neosophical Labs|Full Stack Developer Intern(Goa, India)May 2026 – Jul 2026\nObjective:Agentic marketing digests, SLA tracking and HMRC compliance work on a UK payroll bureau platform.\n•Shipped aTelegram botorchestrating Codex & Hermes agents for daily marketing digests across GA4, Google Ads & Meta Ads\n•Built a UK payroll bureauSLA enginefrom scratch: task state machine, working-day-aware nightly scan, tiered alerts & audit trail\n•Audited the payroll calculation engine against a 30-section BRD & HMRC rules, fixing 4 pro-rata, rounding & back-pay defects\n•Engineered aLangChain ingestion pipelinenormalising client Excel, XML & PDF client files into one unified relational schema",
+          "evidence_class": "resume-reported",
+          "original_code_or_metrics_reproduced": false
+        },
+        {
+          "project_id": "datsol",
+          "anchor": "Datsol Solutions",
+          "page": 1,
+          "text": "Datsol Solutions | Posterity Consulting|Full Stack Developer(Remote)Nov 2025 – May 2026\nObjective:Hiring assessment pipeline, org-hierarchy access control and external sheet sync on an internal HR performance platform.\n•Solely built thehiring module: a token-gated candidate portal with signed, expiring, revocable links & 3 scoped rate limiters\n•Built theBFS org-hierarchy resolverbehind every manager view, walking polymorphic escalation chains down to indirect reports\n•Fixed async crashwhere blank-timestamp rows hit a unique index, killing the batch; dual-key matching degrades it to an update\n•Hardened sheet ingestion against data loss: anchored naive timestamps to UTC, caught a spread silently dropping subdocuments",
+          "evidence_class": "resume-reported",
+          "original_code_or_metrics_reproduced": false
+        },
+        {
+          "project_id": "10x",
+          "anchor": "10X Analysts",
+          "page": 1,
+          "text": "10X Analysts|Backend Engineering Intern(Remote)May 2025 – Jul 2025\nObjective:RAG corpus APIs and the FastAPI/Next.js proxy layer of a multi-tenant LLM equity-research product.\n•Owned theknowledge-base APIsfor a pgvector RAG corpus, routing uploads to a Cloud Tasks worker for async embedding\n•Isolated each tenant’s corpus behind anowner/public/shared access modelgating both retrieval & per-user Neo4j graph reads\n•Rebuiltcross-origin session authacross 93 routes of a LlamaIndex/OpenAI API, deriving NextAuth’s HKDF key to decrypt JWEs\n•Designed theBFF proxy layerfronting the FastAPI service across 42 route handlers, keeping bearer tokens off the client bundle",
+          "evidence_class": "resume-reported",
+          "original_code_or_metrics_reproduced": false
+        },
+        {
+          "project_id": "zyke",
+          "anchor": "Zyke",
+          "page": 1,
+          "text": "Zyke | AI Social Media Content Platform|Founding Engineer(Remote)Oct 2024 – Jan 2025\n•Meteredper-request AI spendacross 7 LLM/image providers, modelling each scheme so every generation debits a USD balance\n•Built themoney pathend to end: Razorpay orders, HMAC webhook verification, replay-safe idempotency & atomic credit debits\n•Shipped a payments-live MVP in26 days as sole engineer(45 of 49 commits): a 26-endpoint Flask API and a Next.js 14 client",
+          "evidence_class": "resume-reported",
+          "original_code_or_metrics_reproduced": false
+        },
+        {
+          "project_id": "load-balancer",
+          "anchor": "Consistent Hashing Load Balancer",
+          "page": 1,
+          "text": "Consistent Hashing Load Balancer|Express.js, Node.js, http-proxy|/gl⌢beLiveJun 2026\n•Built aconsistent-hashing load balanceron Express with virtual nodes, deterministic routing & automatic backend failover\n•Held key remapping to19.66%on node failure, using binary-search ring lookup & continuous backend health monitoring\n•Benchmarked the ring under load at2,046 req/s, exposing debug APIs & routing configurable by IP, path or custom headers",
+          "evidence_class": "resume-reported",
+          "original_code_or_metrics_reproduced": false
+        },
+        {
+          "project_id": "megalith",
+          "anchor": "Megalith",
+          "page": 1,
+          "text": "Megalith 2025 – IIT Kharagpur Civil Engineering Fest|Next.js, TypeScript, MongoDB, JWT|/gl⌢beLiveNov 2024 – Mar 2025\n•Launched the official Next.js fest site:42.7% YoY user growth, 5K+ concurrent users at registration peaks, sub-2s page loads\n•BuiltJWT/bcrypt role-based authwith refresh-token rotation, running jose in Edge Middleware where Node crypto is unavailable\n•Built aRecharts admin dashboardon Mongo aggregations, automating Razorpay orders, pdf-lib certificates & Nodemailer mail",
+          "evidence_class": "resume-reported",
+          "original_code_or_metrics_reproduced": false
+        },
+        {
+          "project_id": "membition",
+          "anchor": "Membition",
+          "page": 1,
+          "text": "Membition – RAG Chatbot Platform for NGOs|Next.js, Flask, Pinecone, OpenAIAug 2024 – Sep 2024\n•Shipped a 3-servicemulti-tenant RAG platformisolating each nonprofit’s knowledge base behind a dedicated Pinecone index\n•Built thePDF ingestion pipeline: chunking, OpenAI embeddings, 3072-dim upserts, Pydantic validation & path-traversal checks\n•Constrained theRAG system promptwith 13 scope rules, refusing off-topic queries & declining medical, legal & financial advice",
+          "evidence_class": "resume-reported",
+          "original_code_or_metrics_reproduced": false
+        }
+      ]
+    },
+    {
+      "file": "Rupam_Resume_Product.pdf",
+      "sha256": "9befe4ae513f5ef6ce1797a8733f1ef727a68d5dfc076e857119a59d50b9ef8a",
+      "excerpts": [
+        {
+          "project_id": "neosophical",
+          "anchor": "Neosophical Labs",
+          "page": 1,
+          "text": "Neosophical Labs|Full Stack Developer Intern(Goa, India)May 2026 – Jul 2026\nObjective:Turned a UK payroll bureau’s compliance, reporting & marketing needs into workflows shipped from spec to release on a live platform.\n•Automated adaily Telegram marketing digest: AI agents summarise GA4, Google & Meta Ads by cohort,now steering ad spend\n•Converted bureauSLA requirementsinto a tracking system: task lifecycle, working-day deadlines, tiered escalation & audit trail\n•Audited the engine behindevery payslipagainst a 30-section BRD & HMRC rules, fixing 4 pro-rata, rounding & back-pay defects\n•Unifiedclient payroll dataarriving as Excel, XML & PDF files into one consistent relational schema via a LangChain pipeline",
+          "evidence_class": "resume-reported",
+          "original_code_or_metrics_reproduced": false
+        },
+        {
+          "project_id": "datsol",
+          "anchor": "Datsol Solutions",
+          "page": 1,
+          "text": "Datsol Solutions | Posterity Consulting|Full Stack Developer Intern(Remote)Nov 2025 – May 2026\nObjective:Sole owner of hiring, org-hierarchy access & MindMap analytics on a 360-feedback HR platform serving managers, HR teams & candidates.\n•Owned thehiring assessment flowend to end: candidate portal with secure, expiring & revocable invites plus abuse limits\n•Builtorg-hierarchy access controlacross13 routes in 4 modules, so managers track indirect reports as well as their direct team\n•Turned HR’s nestedExcel scoring formulasinto liveMindMap analytics: a 10-min OneDrive sync feeding an interactive treemap\n•Fixedsilent HR data lossin sheet sync: dropped batches, time-zone timestamp shifts & nested records vanishing unflagged",
+          "evidence_class": "resume-reported",
+          "original_code_or_metrics_reproduced": false
+        },
+        {
+          "project_id": "10x",
+          "anchor": "10X Analysts",
+          "page": 1,
+          "text": "10X Analysts|Backend Engineering Intern(Remote)May 2025 – Jul 2025\nObjective:Core platform work on a multi-tenant AI equity-research product: research knowledge base, per-client data privacy & unified sign-in.\n•Owned theknowledge-base APIsletting users upload research documents that are processed in the background for AI search\n•Designedowner / public / shared access tierskeeping each client’s research & knowledge graph private unless shared\n•Unified sign-in across the web app & AI service for all95 endpoints, with a proxy keeping API keys out of the browser",
+          "evidence_class": "resume-reported",
+          "original_code_or_metrics_reproduced": false
+        },
+        {
+          "project_id": "zyke",
+          "anchor": "Zyke",
+          "page": 1,
+          "text": "Zyke | AI Social Media Content Platform|Founding Engineer(Remote)Oct 2024 – Jan 2025\nObjective:Took an AI content-generation product from idea to a payments-live MVP, owning pricing, unit economics & onboarding end to end.\n•Shipped apayments-live MVP in 26 daysas sole engineer (45 of 49 commits), with Razorpay guards against double charging\n•Modelled7 AI providers’ pricinginto one per-post credit, holding unit cost to$0.05 a generationto protect margin\n•Cut a brand’sposting cycle to 4 minutes: 1 live trend became 3 ideas, 9 posts & 13 images; paid images ran only on on-brand ideas\n•Cutonboarding to a single URLby learning 4 brand voices from the website alone, so new users post on-brand with no setup form",
+          "evidence_class": "resume-reported",
+          "original_code_or_metrics_reproduced": false
+        },
+        {
+          "project_id": "load-balancer",
+          "anchor": "Consistent Hashing Load Balancer",
+          "page": 1,
+          "text": "Consistent Hashing Load Balancer|Self Project|/gl⌢beLiveMay 2026 – Jun 2026\n•Built a traffic router that keeps each user on the same server & reroutes them automatically after 3 failed health checks\n•Load-tested the ring: only19.66%of traffic remapped when a node dropped (vs∼80% naive) while sustaining2,046 requests/s\n•Benchmarked direct vs. proxied traffic to find a proxy bottleneck; one fix cut latency2,459→1.6 ms& errors3.7%→0",
+          "evidence_class": "resume-reported",
+          "original_code_or_metrics_reproduced": false
+        },
+        {
+          "project_id": "megalith",
+          "anchor": "Megalith",
+          "page": 1,
+          "text": "Megalith – IIT Kharagpur Civil Engineering Fest|Official Website & Operations|/gl⌢beLiveNov 2024 – Mar 2025\n•Launched the official fest website:42.7% YoY user growth, 5K+ concurrent users at registration peaks &99.2% uptime\n•Replaced manual ops withself-serve payments, auto-generated certificates & emails, plus a live admin dashboard for organisers",
+          "evidence_class": "resume-reported",
+          "original_code_or_metrics_reproduced": false
+        },
+        {
+          "project_id": "membition",
+          "anchor": "Membition",
+          "page": 1,
+          "text": "Membition – AI Chatbot Platform for NGOs|Multi-tenant SaaSAug 2024 – Sep 2024\n•Made setupself-serve: a 7-step intake form & one PDF turn into an NGO’s live chatbot in one request, no engineer needed\n•Kept each NGO’s dataisolated& answers on-topic via13 guardrail rulesthat decline medical, legal & financial advice",
+          "evidence_class": "resume-reported",
+          "original_code_or_metrics_reproduced": false
+        }
+      ]
+    }
+  ],
+  "scope": "User-provided resume text, not independent proof of production behavior, ownership, revenue or benchmark results. Contacts and education omitted."
+}

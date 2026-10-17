@@ -1,0 +1,6 @@
+PASS typed boundary compiles
+PASS unknown request body rejected TS18046
+PASS typed runtime accepts validated input
+PASS typed runtime rejects wrong value type
+PASS missing middleware detected at runtime
+Verified 5 TypeScript boundary checks; Version 7.0.2

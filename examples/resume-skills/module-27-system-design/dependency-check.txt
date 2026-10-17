@@ -1,0 +1,4 @@
+Runtime dependencies: Node.js built-in modules and local ES modules only; no third-party packages.
+Recorded executable: Node.js v22.14.0. No npm install or dependency download was needed.
+Python is used only for chapter assembly and existing site-validation orchestration.
+The example does not require Docker, Redis, a cloud account or a hosted load balancer.

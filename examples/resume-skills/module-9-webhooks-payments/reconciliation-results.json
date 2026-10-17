@@ -1,0 +1,54 @@
+{
+  "node": "v22.14.0",
+  "passed": 6,
+  "checks": [
+    {
+      "name": "provider lookup timeout leaves outcome unresolved and local balance unchanged",
+      "passed": true,
+      "observed": {
+        "knownPaymentFailure": false,
+        "ledgerRows": 0
+      }
+    },
+    {
+      "name": "account-bound lookup repairs missing captured webhook",
+      "passed": true,
+      "observed": {
+        "reason": "granted",
+        "credits": 100
+      }
+    },
+    {
+      "name": "repeated observation and later real webhook share business invariant",
+      "passed": true,
+      "observed": {
+        "ledgerRows": 1,
+        "credits": 100
+      }
+    },
+    {
+      "name": "wrong provider account rejected before persistence",
+      "passed": true,
+      "observed": {
+        "status": 502,
+        "code": "provider_account_mismatch"
+      }
+    },
+    {
+      "name": "wrong provider payment ID rejected before persistence",
+      "passed": true,
+      "observed": {
+        "status": 502,
+        "code": "provider_payment_mismatch"
+      }
+    },
+    {
+      "name": "unhandled provider state is unresolved rather than a grant",
+      "passed": true,
+      "observed": {
+        "outcome": "unresolved",
+        "ledgerRows": 1
+      }
+    }
+  ]
+}

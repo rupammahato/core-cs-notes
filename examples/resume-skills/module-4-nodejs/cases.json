@@ -1,0 +1,233 @@
+[
+  {
+    "id": "01-host",
+    "title": "Node supplies host capabilities around V8",
+    "source": "console.log(process.release.name, typeof process.pid);\nconsole.log('versions', Boolean(process.versions.v8), Boolean(process.versions.uv));\nconsole.log('DOM globals', typeof window, typeof document);",
+    "expected": [
+      "node number",
+      "versions true true",
+      "DOM globals undefined undefined"
+    ],
+    "mode": "module"
+  },
+  {
+    "id": "02-events",
+    "title": "EventEmitter listeners run synchronously",
+    "source": "import { EventEmitter } from 'node:events';\nconst bus = new EventEmitter();\nbus.on('job', () => console.log('listener'));\nconsole.log('before emit');\nconsole.log('had listener', bus.emit('job'));\nconsole.log('after emit');\nbus.once('done', () => console.log('once'));\nbus.emit('done');\nbus.emit('done');\ntry { bus.emit('error', new Error('unhandled event')); }\ncatch (error) { console.log('caught', error.message); }",
+    "expected": [
+      "before emit",
+      "listener",
+      "had listener true",
+      "after emit",
+      "once",
+      "caught unhandled event"
+    ],
+    "mode": "module"
+  },
+  {
+    "id": "03-commonjs",
+    "title": "CommonJS caches the exported object for this resolved file",
+    "source": "const first = require('./fixtures/counter.cjs');\nconst { count: snapshot } = first;\nconst second = require('./fixtures/counter.cjs');\nsecond.increment();\nconsole.log(first === second, first.count, snapshot);\nconsole.log(typeof module.exports, typeof require);",
+    "expected": [
+      "true 1 0",
+      "object function"
+    ],
+    "mode": "commonjs"
+  },
+  {
+    "id": "04-esm",
+    "title": "ES-module imports observe live bindings",
+    "source": "import { count, increment } from './fixtures/counter.mjs';\nconsole.log('before', count);\nincrement();\nconsole.log('after', count);\nconst first = await import('./fixtures/counter.mjs');\nconst second = await import('./fixtures/counter.mjs');\nconsole.log(first === second, typeof require);",
+    "expected": [
+      "before 0",
+      "after 1",
+      "true undefined"
+    ],
+    "mode": "module"
+  },
+  {
+    "id": "05-files",
+    "title": "A promise-based file read has a later result",
+    "source": "import { readFile } from 'node:fs/promises';\nimport { readFileSync } from 'node:fs';\nconst file = new URL('./fixtures/download.txt', import.meta.url);\nconst bytes = readFileSync(file); // Synchronous baseline.\nconsole.log('sync', Buffer.isBuffer(bytes), bytes.length);\nconst pending = readFile(file, 'utf8');\nconsole.log('submitted', typeof pending.then);\nconst text = await pending;\nconsole.log('async', text.startsWith('Node.js'), Buffer.byteLength(text));",
+    "expected": [
+      "sync true 79872",
+      "submitted function",
+      "async true 79872"
+    ],
+    "mode": "module"
+  },
+  {
+    "id": "06-io-order",
+    "title": "Ordering inside a file-I/O callback",
+    "source": "import { readFile } from 'node:fs';\nreadFile(new URL('./fixtures/download.txt', import.meta.url), error => {\n  if (error) throw error;\n  console.log('I/O callback');\n  setTimeout(() => console.log('timer'), 0);\n  setImmediate(() => console.log('immediate'));\n  process.nextTick(() => console.log('nextTick'));\n  Promise.resolve().then(() => console.log('promise'));\n  queueMicrotask(() => console.log('microtask'));\n});",
+    "expected": [
+      "I/O callback",
+      "nextTick",
+      "promise",
+      "microtask",
+      "immediate",
+      "timer"
+    ],
+    "mode": "module"
+  },
+  {
+    "id": "07-yield",
+    "title": "Host-level yielding lets other callbacks progress",
+    "source": "import { setImmediate as yieldToLoop } from 'node:timers/promises';\nsetImmediate(() => console.log('observer'));\nlet total = 0;\nfor (let chunk = 0; chunk < 3; chunk++) {\n  total += chunk;\n  console.log('chunk', chunk);\n  await yieldToLoop();\n}\nconsole.log('total', total);",
+    "expected": [
+      "chunk 0",
+      "observer",
+      "chunk 1",
+      "chunk 2",
+      "total 3"
+    ],
+    "mode": "module"
+  },
+  {
+    "id": "08-buffer",
+    "title": "Buffers are bytes; subarray shares storage",
+    "source": "const bytes = Buffer.from('é', 'utf8');\nconsole.log('string units', 'é'.length, 'bytes', bytes.length);\nconst original = Buffer.from([1, 2, 3]);\nconst view = original.subarray(0, 2);\nconst copy = Buffer.from(original);\nview[0] = 9;\nconsole.log(original[0], copy[0], Buffer.isBuffer(view));",
+    "expected": [
+      "string units 1 bytes 2",
+      "9 1 true"
+    ],
+    "mode": "module"
+  },
+  {
+    "id": "09-decoder",
+    "title": "UTF-8 characters can cross chunk boundaries",
+    "source": "import { StringDecoder } from 'node:string_decoder';\nconst bytes = Buffer.from('€', 'utf8');\nconst a = bytes.subarray(0, 1);\nconst b = bytes.subarray(1);\nconsole.log('naive matches', a.toString('utf8') + b.toString('utf8') === '€');\nconst decoder = new StringDecoder('utf8');\nconst text = decoder.write(a) + decoder.write(b) + decoder.end();\nconsole.log('decoder matches', text === '€');",
+    "expected": [
+      "naive matches false",
+      "decoder matches true"
+    ],
+    "mode": "module"
+  },
+  {
+    "id": "10-pipeline",
+    "title": "A pipeline connects chunk producers and consumers",
+    "source": "import { Readable, Transform, Writable } from 'node:stream';\nimport { pipeline } from 'node:stream/promises';\nconst chunks = [];\nconst upper = new Transform({\n  transform(chunk, encoding, callback) {\n    callback(null, chunk.toString('utf8').toUpperCase());\n  }\n});\nconst sink = new Writable({\n  write(chunk, encoding, callback) {\n    chunks.push(Buffer.from(chunk));\n    callback();\n  }\n});\nawait pipeline(Readable.from([Buffer.from('node '), Buffer.from('streams')]), upper, sink);\nconsole.log(Buffer.concat(chunks).toString('utf8'));",
+    "expected": [
+      "NODE STREAMS"
+    ],
+    "mode": "module"
+  },
+  {
+    "id": "11-backpressure",
+    "title": "A false write return asks the producer to pause",
+    "source": "import { Writable } from 'node:stream';\nimport { once } from 'node:events';\nimport { finished } from 'node:stream/promises';\nlet text = '';\nconst sink = new Writable({\n  highWaterMark: 3,\n  write(chunk, encoding, callback) {\n    setImmediate(() => { text += chunk.toString(); callback(); });\n  }\n});\nconsole.log('write returned', sink.write('abc'));\nawait once(sink, 'drain');\nconsole.log('buffered after drain', sink.writableLength);\nconst complete = finished(sink, { cleanup: true });\nsink.end('d');\nawait complete;\nconsole.log(text);",
+    "expected": [
+      "write returned false",
+      "buffered after drain 0",
+      "abcd"
+    ],
+    "mode": "module"
+  },
+  {
+    "id": "12-pipeline-error",
+    "title": "Pipeline rejects and destroys streams on a write failure",
+    "source": "import { Readable, Writable } from 'node:stream';\nimport { pipeline } from 'node:stream/promises';\nconst source = Readable.from([Buffer.from('a'), Buffer.from('b')]);\nconst sink = new Writable({\n  write(chunk, encoding, callback) {\n    callback(chunk.toString() === 'b' ? new Error('bad chunk') : null);\n  }\n});\ntry { await pipeline(source, sink); }\ncatch (error) { console.log(error.message); }\nconsole.log('destroyed', source.destroyed, sink.destroyed);",
+    "expected": [
+      "bad chunk",
+      "destroyed true true"
+    ],
+    "mode": "module"
+  },
+  {
+    "id": "13-compression",
+    "title": "A transform can change byte representation",
+    "source": "import { Readable, Writable } from 'node:stream';\nimport { pipeline } from 'node:stream/promises';\nimport { createGzip, gunzip } from 'node:zlib';\nimport { promisify } from 'node:util';\nconst original = Buffer.from('streamed content');\nconst output = [];\nawait pipeline(Readable.from([original]), createGzip(), new Writable({\n  write(chunk, encoding, callback) { output.push(Buffer.from(chunk)); callback(); }\n}));\nconst restored = await promisify(gunzip)(Buffer.concat(output));\nconsole.log('round trip', restored.equals(original));",
+    "expected": [
+      "round trip true"
+    ],
+    "mode": "module"
+  },
+  {
+    "id": "14-worker",
+    "title": "A worker executes JavaScript in another thread of this process",
+    "source": "import { Worker, isMainThread } from 'node:worker_threads';\nconst input = { count: 100000, tags: ['main'] };\nconst worker = new Worker(new URL('./fixtures/sum-worker.mjs', import.meta.url), {\n  workerData: input, execArgv: []\n});\nconst exited = new Promise(resolve => worker.once('exit', resolve));\nconst result = await new Promise((resolve, reject) => {\n  worker.once('message', resolve);\n  worker.once('error', reject);\n});\nconsole.log('sum', result.sum);\nconsole.log('threads', isMainThread, result.isMainThread, 'same PID', result.pid === process.pid);\nconsole.log('cloned tags', input.tags.length, result.tags.length);\nconsole.log('exit', await exited);",
+    "expected": [
+      "sum 4999950000",
+      "threads true false same PID true",
+      "cloned tags 1 2",
+      "exit 0"
+    ],
+    "mode": "module"
+  },
+  {
+    "id": "15-worker-error",
+    "title": "A worker failure has an explicit error and exit path",
+    "source": "import { Worker } from 'node:worker_threads';\nconst worker = new Worker(new URL('./fixtures/sum-worker.mjs', import.meta.url), {\n  workerData: { count: -1, tags: [] }, execArgv: []\n});\nconst exited = new Promise(resolve => worker.once('exit', resolve));\nconst error = await new Promise(resolve => worker.once('error', resolve));\nconsole.log(error.name, await exited);",
+    "expected": [
+      "RangeError 1"
+    ],
+    "mode": "module"
+  },
+  {
+    "id": "16-child",
+    "title": "A child process has a different process identity",
+    "source": "import { execFile } from 'node:child_process';\nimport { promisify } from 'node:util';\nconst childCode = 'console.log(process.pid !== Number(process.argv[1]))';\nconst { stdout, stderr } = await promisify(execFile)(\n  process.execPath, ['--input-type=module', '--eval', childCode, String(process.pid)],\n  { windowsHide: true, timeout: 2000 }\n);\nconsole.log('separate process', stdout.trim(), 'stderr bytes', stderr.length);",
+    "expected": [
+      "separate process true stderr bytes 0"
+    ],
+    "mode": "module"
+  },
+  {
+    "id": "17-config",
+    "title": "Environment variables need parsing and validation",
+    "source": "function parsePort(value) {\n  if (typeof value !== 'string' || !/^[1-9]\\d{0,4}$/.test(value)) {\n    throw new Error('port format');\n  }\n  const port = Number(value);\n  if (port > 65535) throw new Error('port range');\n  return port;\n}\nprocess.env.LEARNING_PORT = '3104';\nconsole.log(typeof process.env.LEARNING_PORT, parsePort(process.env.LEARNING_PORT));\nfor (const value of ['0', '70000', '31oops', undefined]) {\n  try { parsePort(value); }\n  catch (error) { console.log(error.message); }\n}",
+    "expected": [
+      "string 3104",
+      "port format",
+      "port range",
+      "port format",
+      "port format"
+    ],
+    "mode": "module"
+  },
+  {
+    "id": "18-liveness",
+    "title": "An unreferenced timer does not keep the process alive",
+    "source": "new Promise(() => {}); // No active operation owns this pending promise.\nsetTimeout(() => console.log('timer fired'), 10000).unref();\nconsole.log('main complete');",
+    "expected": [
+      "main complete"
+    ],
+    "mode": "module"
+  },
+  {
+    "id": "19-native-work",
+    "title": "A native asynchronous operation still returns through JavaScript",
+    "source": "import { pbkdf2 } from 'node:crypto';\nimport { promisify } from 'node:util';\nconsole.log('start');\n// Tiny iteration count for API tracing, not a password-storage policy.\nconst pending = promisify(pbkdf2)('demo', 'salt', 1, 16, 'sha256');\nconsole.log('submitted');\nconst key = await pending;\nconsole.log('result', Buffer.isBuffer(key), key.length);",
+    "expected": [
+      "start",
+      "submitted",
+      "result true 16"
+    ],
+    "mode": "module"
+  },
+  {
+    "id": "20-http",
+    "title": "The learning HTTP server passes its route and concurrency checks",
+    "source": "await import('./verify-server.mjs');",
+    "expected": [
+      "PASS HTTP health",
+      "PASS HTTP async-file-info",
+      "PASS HTTP streamed-download",
+      "PASS HTTP fixed-file-selection",
+      "PASS HTTP unknown-route",
+      "PASS HTTP method-and-allow",
+      "PASS HTTP draining-response",
+      "PASS HTTP two-requests-in-flight",
+      "PASS HTTP health-progresses-during-wait",
+      "PASS HTTP drain-stops-new-work",
+      "PASS HTTP in-flight-work-completes",
+      "PASS HTTP listener-closed",
+      "PASS HTTP missing-file-before-headers",
+      "PASS HTTP missing-file-async-read",
+      "PASS HTTP async-failure-mapped",
+      "PASS HTTP healthy-after-request-failure",
+      "Verified 16 HTTP checks"
+    ],
+    "mode": "module"
+  }
+]

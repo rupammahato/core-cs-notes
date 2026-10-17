@@ -1,0 +1,379 @@
+{
+  "module": 21,
+  "verified_date": "2026-10-15",
+  "node": "v22.14.0",
+  "dependencies": {
+    "next": "14.2.35",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "tailwindcss": "3.4.19",
+    "typescript": "5.9.3",
+    "playwright-core": "1.64.1"
+  },
+  "checks": [
+    {
+      "group": "build",
+      "name": "next14_production_build_and_types_pass",
+      "passed": true
+    },
+    {
+      "group": "build",
+      "name": "public_topic_paths_are_prebuilt",
+      "passed": true
+    },
+    {
+      "group": "build",
+      "name": "cookie_dashboard_is_not_prerendered",
+      "passed": true
+    },
+    {
+      "group": "build",
+      "name": "isr_manifest_has_one_second_revalidation",
+      "passed": true
+    },
+    {
+      "group": "rendering",
+      "name": "initial_html_contains_server_topics",
+      "passed": true
+    },
+    {
+      "group": "rendering",
+      "name": "client_component_has_initial_html_preview",
+      "passed": true
+    },
+    {
+      "group": "boundary",
+      "name": "private_marker_not_in_document_or_rsc_props",
+      "passed": true
+    },
+    {
+      "group": "boundary",
+      "name": "private_marker_absent_from_all_browser_javascript",
+      "passed": true
+    },
+    {
+      "group": "rendering",
+      "name": "prebuilt_topic_stamp_reused_across_requests",
+      "passed": true
+    },
+    {
+      "group": "routing",
+      "name": "unknown_prebuilt_topic_returns_404",
+      "passed": true
+    },
+    {
+      "group": "rendering",
+      "name": "request_cookie_changes_display_data",
+      "passed": true
+    },
+    {
+      "group": "rendering",
+      "name": "dynamic_render_stamp_changes_between_requests",
+      "passed": true
+    },
+    {
+      "group": "middleware",
+      "name": "dashboard_matcher_adds_response_header",
+      "passed": true
+    },
+    {
+      "group": "api",
+      "name": "route_handler_returns_valid_topic",
+      "passed": true
+    },
+    {
+      "group": "api",
+      "name": "route_handler_explicitly_disables_http_caching",
+      "passed": true
+    },
+    {
+      "group": "middleware",
+      "name": "api_outside_matcher_still_runs",
+      "passed": true
+    },
+    {
+      "group": "api",
+      "name": "route_handler_unknown_resource_is_404",
+      "passed": true
+    },
+    {
+      "group": "api",
+      "name": "route_handler_unsupported_method_is_405",
+      "passed": true
+    },
+    {
+      "group": "api",
+      "name": "app_post_parses_and_trims_valid_json",
+      "passed": true
+    },
+    {
+      "group": "api",
+      "name": "app_post_rejects_wrong_content_type",
+      "passed": true
+    },
+    {
+      "group": "api",
+      "name": "app_post_rejects_malformed_json",
+      "passed": true
+    },
+    {
+      "group": "api",
+      "name": "app_post_rejects_blank",
+      "passed": true
+    },
+    {
+      "group": "api",
+      "name": "app_post_rejects_wrong_type",
+      "passed": true
+    },
+    {
+      "group": "api",
+      "name": "app_post_rejects_extra_fields",
+      "passed": true
+    },
+    {
+      "group": "api",
+      "name": "app_post_rejects_oversized_field",
+      "passed": true
+    },
+    {
+      "group": "pages_api",
+      "name": "pages_handler_has_same_valid_contract",
+      "passed": true
+    },
+    {
+      "group": "pages_api",
+      "name": "pages_handler_returns_405_and_allow",
+      "passed": true
+    },
+    {
+      "group": "pages_api",
+      "name": "pages_handler_validates_runtime_body",
+      "passed": true
+    },
+    {
+      "group": "pages_api",
+      "name": "pages_parser_rejects_malformed_json",
+      "passed": true
+    },
+    {
+      "group": "pages_api",
+      "name": "pages_parser_enforces_configured_body_limit",
+      "passed": true
+    },
+    {
+      "group": "cache",
+      "name": "duplicate_gets_deduplicated_in_one_render",
+      "passed": true
+    },
+    {
+      "group": "cache",
+      "name": "force_cache_reuses_public_data_across_requests",
+      "passed": true
+    },
+    {
+      "group": "cache",
+      "name": "no_store_refetches_on_next_request",
+      "passed": true
+    },
+    {
+      "group": "cache",
+      "name": "invalidation_rejects_missing_fixture_key",
+      "passed": true
+    },
+    {
+      "group": "cache",
+      "name": "authorized_fixture_control_invalidates_tag",
+      "passed": true
+    },
+    {
+      "group": "cache",
+      "name": "next_visit_refetches_invalidated_tag",
+      "passed": true
+    },
+    {
+      "group": "cache",
+      "name": "isr_eventually_serves_revalidated_version",
+      "passed": true
+    },
+    {
+      "group": "hydration",
+      "name": "server_html_readable_without_javascript",
+      "passed": true
+    },
+    {
+      "group": "hydration",
+      "name": "html_preview_has_no_client_handler_without_js",
+      "passed": true
+    },
+    {
+      "group": "hydration",
+      "name": "hydrated_client_handler_updates_existing_screen",
+      "passed": true
+    },
+    {
+      "group": "browser_api",
+      "name": "client_island_calls_same_origin_route_handler",
+      "passed": true
+    },
+    {
+      "group": "browser_api",
+      "name": "client_island_renders_api_failure",
+      "passed": true
+    },
+    {
+      "group": "tailwind",
+      "name": "compiled_md_grid_has_two_desktop_columns",
+      "passed": true
+    },
+    {
+      "group": "tailwind",
+      "name": "base_grid_has_one_mobile_column",
+      "passed": true
+    },
+    {
+      "group": "tailwind",
+      "name": "mobile_document_has_no_horizontal_overflow",
+      "passed": true
+    },
+    {
+      "group": "routing",
+      "name": "link_navigation_keeps_browser_document",
+      "passed": true
+    },
+    {
+      "group": "routing",
+      "name": "shared_layout_preserves_client_state",
+      "passed": true
+    },
+    {
+      "group": "routing",
+      "name": "full_reload_resets_in_memory_layout_state",
+      "passed": true
+    },
+    {
+      "group": "streaming",
+      "name": "suspense_fallback_visible_before_origin_reply",
+      "passed": true
+    },
+    {
+      "group": "streaming",
+      "name": "resolved_server_chunk_replaces_fallback",
+      "passed": true
+    },
+    {
+      "group": "errors",
+      "name": "server_failure_reaches_segment_error_boundary",
+      "passed": true
+    },
+    {
+      "group": "boundary",
+      "name": "private_failure_details_not_rendered_in_production",
+      "passed": true
+    },
+    {
+      "group": "errors",
+      "name": "reset_recovers_after_origin_is_repaired",
+      "passed": true
+    },
+    {
+      "group": "browser",
+      "name": "no_uncaught_page_exceptions",
+      "passed": true
+    }
+  ],
+  "counts": {
+    "api": 11,
+    "boundary": 3,
+    "browser": 1,
+    "browser_api": 2,
+    "build": 4,
+    "cache": 7,
+    "errors": 2,
+    "hydration": 3,
+    "middleware": 2,
+    "pages_api": 5,
+    "rendering": 5,
+    "routing": 4,
+    "streaming": 2,
+    "tailwind": 3
+  },
+  "total": 54,
+  "observations": {
+    "build": {
+      "next": "14.2.35",
+      "prebuiltTopics": [
+        "/catalog/node",
+        "/catalog/react"
+      ],
+      "dashboardPrerendered": false,
+      "isrRevalidateSeconds": 1
+    },
+    "static": {
+      "first": "a1d478d3-2d33-4bbc-a16a-1974e2c23391",
+      "second": "a1d478d3-2d33-4bbc-a16a-1974e2c23391"
+    },
+    "dynamic": {
+      "labels": [
+        "Display label: Ada",
+        "Display label: Lin"
+      ],
+      "stampsDiffer": true
+    },
+    "cache": {
+      "first": {
+        "cachedA": 1,
+        "cachedB": 1,
+        "liveA": 1,
+        "liveB": 1
+      },
+      "afterOriginChange": {
+        "cachedA": 1,
+        "cachedB": 1,
+        "liveA": 2,
+        "liveB": 2
+      },
+      "afterTagInvalidation": {
+        "cachedA": 2,
+        "cachedB": 2,
+        "liveA": 2,
+        "liveB": 2
+      },
+      "originCalls": {
+        "cached": 2,
+        "live": 3
+      }
+    },
+    "isr": {
+      "versionsObserved": [
+        1,
+        3
+      ],
+      "finalVersion": 3,
+      "intervalSeconds": 1
+    },
+    "browser": {
+      "executable": "C:/Program Files/Google/Chrome/Application/chrome.exe",
+      "version": "155.0.8059.40",
+      "headless": true
+    },
+    "layout": {
+      "desktopColumns": "468px 468px",
+      "mobileColumns": "358px",
+      "widths": [
+        1360,
+        390
+      ]
+    },
+    "pageErrors": []
+  },
+  "scope": "Actual Next.js 14 production build/server, App and Pages APIs, same-origin browser DOM, controlled local origin, cache/tag/ISR, streaming, error recovery and compiled Tailwind 3. No hosted Edge/CDN, real login/database, Server Actions, production deployment or full accessibility/performance audit.",
+  "cleanup": {
+    "browser_closed": true,
+    "loopback_ports_closed": {
+      "64190": true,
+      "64191": true
+    },
+    "docker_started": false
+  }
+}

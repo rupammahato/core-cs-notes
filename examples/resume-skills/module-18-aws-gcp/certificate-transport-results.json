@@ -1,0 +1,9 @@
+{
+  "calls": 44,
+  "all_served_from_fixture": true,
+  "example": {
+    "url": "https://www.googleapis.com/oauth2/v1/certs",
+    "method": "GET",
+    "served_from": "in-memory fixture public key"
+  }
+}

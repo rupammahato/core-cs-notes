@@ -1,0 +1,23 @@
+{
+  "chapter": "resume-skills-handbook-part-30-module-28-resume-project-experience-deep-dives.md",
+  "words": 10168,
+  "lines": 947,
+  "interview_questions": 30,
+  "practice_tasks": 10,
+  "unchecked_learning_items": 12,
+  "projects": 7,
+  "source_fidelity": [
+    "sla.py",
+    "hierarchy.py",
+    "sheet_sync.py",
+    "costs.py"
+  ],
+  "result_fidelity": {
+    "hierarchy": true,
+    "sla": true,
+    "sheet": true,
+    "costs": true,
+    "metrics": true,
+    "versions": true
+  }
+}

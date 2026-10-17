@@ -1,0 +1,45 @@
+{
+  "module": 8,
+  "node": "v22.14.0",
+  "jose": "6.2.12",
+  "sqlite": "3.47.2",
+  "passed": 74,
+  "groups": {
+    "policyInput": 22,
+    "realHttp": 46,
+    "sqlite": 6
+  },
+  "questions": 30,
+  "practiceTasks": 10,
+  "controlledClock": true,
+  "controlledPermissionRaces": true,
+  "sqlWarning": "Expected experimental node:sqlite warning preserved separately",
+  "notVerified": [
+    "PostgreSQL/RLS",
+    "browser enforcement",
+    "durable distributed authorization/revocation",
+    "production eviction and counters",
+    "complex-file parsing/scanning",
+    "object storage",
+    "SSRF network defenses",
+    "durable audit",
+    "load/performance",
+    "launcher signals"
+  ],
+  "siteBuild": {
+    "passed": true,
+    "next": "16.3.8",
+    "compiler": "webpack",
+    "staticPages": 84,
+    "typescriptPassed": true,
+    "fontResponses": "Existing cached local font fixture via NEXT_FONT_GOOGLE_MOCKED_RESPONSES"
+  },
+  "siteSmoke": {
+    "passed": true,
+    "routes": 12,
+    "chapterIndexed": true,
+    "searchScoped": true,
+    "temporaryListenerClosed": true,
+    "port3000Stopped": true
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "port": 60676,
+  "routes": [
+    {
+      "route": "/",
+      "status": 200
+    },
+    {
+      "route": "/docs/resume-skills",
+      "status": 200
+    },
+    {
+      "route": "/docs/resume-skills/how-backend-works",
+      "status": 200
+    },
+    {
+      "route": "/docs/resume-skills/javascript-fundamentals",
+      "status": 200
+    },
+    {
+      "route": "/docs/resume-skills/asynchronous-javascript",
+      "status": 200
+    },
+    {
+      "route": "/docs/resume-skills/typescript-fundamentals",
+      "status": 200
+    },
+    {
+      "route": "/docs/resume-skills/nodejs",
+      "status": 200
+    },
+    {
+      "route": "/docs/resume-skills/express-backend-structure",
+      "status": 200
+    },
+    {
+      "route": "/docs/resume-skills/rest-apis-http",
+      "status": 200
+    },
+    {
+      "route": "/docs/resume-skills/authentication-sessions-jwt-oauth",
+      "status": 200
+    },
+    {
+      "route": "/docs/resume-skills/api-security-authorization-multi-tenancy",
+      "status": 200
+    },
+    {
+      "route": "/docs/resume-skills/webhooks-payments-reliable-integrations",
+      "status": 200
+    },
+    {
+      "route": "/docs/resume-skills/python-fundamentals",
+      "status": 200
+    },
+    {
+      "route": "/docs/dbms",
+      "status": 200
+    }
+  ],
+  "assertions": {
+    "title": true,
+    "q30": true,
+    "implementation": true,
+    "totalChecks": true,
+    "concurrency": true,
+    "architecture": true,
+    "nextFrameworks": true,
+    "group": true,
+    "roadmapLink": true,
+    "previousLink": true
+  },
+  "search": {
+    "status": 200,
+    "results": 24,
+    "chapterIndexed": true,
+    "scoped": true
+  },
+  "temporaryServerClosed": true,
+  "port3000Stopped": true,
+  "temporaryPortStopped": true
+}

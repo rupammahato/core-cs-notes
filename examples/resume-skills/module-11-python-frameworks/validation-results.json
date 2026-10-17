@@ -1,0 +1,46 @@
+{
+  "group": "validation",
+  "total": 10,
+  "checks": [
+    {
+      "name": "default integer parsing can coerce a numeric string",
+      "passed": true
+    },
+    {
+      "name": "strict valid integer boundaries accepted",
+      "passed": true
+    },
+    {
+      "name": "strict integer rejects numeric string",
+      "passed": true
+    },
+    {
+      "name": "strict integer rejects bool",
+      "passed": true
+    },
+    {
+      "name": "strict integer rejects integral float",
+      "passed": true
+    },
+    {
+      "name": "extra fields forbidden",
+      "passed": true
+    },
+    {
+      "name": "required fields and value bounds enforced",
+      "passed": true
+    },
+    {
+      "name": "model_construct deliberately bypasses validation",
+      "passed": true
+    },
+    {
+      "name": "strict JSON datetime rules differ from strict Python-object input",
+      "passed": true
+    },
+    {
+      "name": "output model can select public fields while ignoring extras",
+      "passed": true
+    }
+  ]
+}

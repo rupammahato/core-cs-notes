@@ -1,0 +1,88 @@
+{
+  "group": "queries",
+  "total": 12,
+  "checks": [
+    {
+      "name": "separate dotted array predicates can match different elements",
+      "passed": true
+    },
+    {
+      "name": "elemMatch requires the conditions to hold on the same element",
+      "passed": true
+    },
+    {
+      "name": "array membership query matches a scalar contained in tags",
+      "passed": true
+    },
+    {
+      "name": "projection limits returned fields without changing tenant scope",
+      "passed": true
+    },
+    {
+      "name": "mixed inclusion and exclusion projection is rejected except the id exception",
+      "passed": true
+    },
+    {
+      "name": "scoped aggregation unwinds items and groups actual quantity and revenue",
+      "passed": true
+    },
+    {
+      "name": "unwind duplicates order-level totals if summed at item granularity",
+      "passed": true
+    },
+    {
+      "name": "outer tenant match alone does not scope a foreign lookup",
+      "passed": true
+    },
+    {
+      "name": "lookup pipeline includes tenant and SKU on the foreign collection",
+      "passed": true
+    },
+    {
+      "name": "keyset pagination uses a stable id tie-breaker and preserves tenant filter",
+      "passed": true
+    },
+    {
+      "name": "newer insert between pages does not shift this keyset continuation",
+      "passed": true
+    },
+    {
+      "name": "dot update preserves siblings while assigning an embedded object replaces it",
+      "passed": true
+    }
+  ],
+  "observations": {
+    "dotted_array_ids": [
+      "cross",
+      "same"
+    ],
+    "elem_match_ids": [
+      "same"
+    ],
+    "dashboard": [
+      {
+        "_id": "A",
+        "quantity": 6,
+        "revenue_minor": 600
+      },
+      {
+        "_id": "B",
+        "quantity": 1,
+        "revenue_minor": 300
+      }
+    ],
+    "unwind_total_trap": {
+      "wrong": 1400,
+      "correct": 900
+    },
+    "cursor_ids": [
+      6,
+      5,
+      4,
+      3,
+      2,
+      1
+    ]
+  },
+  "scope": "Actual MongoDB array queries aggregation lookup and cursor pagination"
+}

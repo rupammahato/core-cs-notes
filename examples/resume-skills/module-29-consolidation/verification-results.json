@@ -1,0 +1,462 @@
+{
+  "module": 29,
+  "verified_date": "2026-10-16",
+  "node": "v22.14.0",
+  "python": "3.12.10",
+  "sqlite": "3.49.1",
+  "os": "Windows-11-10.0.26300-SP0",
+  "total": 43,
+  "counts": {
+    "runtime-output": 14,
+    "chapter-reference": 29
+  },
+  "runtime_kinds": {
+    "node-esm": 7,
+    "python": 4,
+    "sqlite": 3
+  },
+  "checks": [
+    {
+      "group": "runtime-output",
+      "name": "D01 Async function prefix",
+      "passed": true
+    },
+    {
+      "group": "runtime-output",
+      "name": "D02 ES-module microtask context",
+      "passed": true
+    },
+    {
+      "group": "runtime-output",
+      "name": "D03 Promise rejection and side effects",
+      "passed": true
+    },
+    {
+      "group": "runtime-output",
+      "name": "D04 Array of async results",
+      "passed": true
+    },
+    {
+      "group": "runtime-output",
+      "name": "D05 Nested alias after spread",
+      "passed": true
+    },
+    {
+      "group": "runtime-output",
+      "name": "D06 Parsed JSON is still untrusted",
+      "passed": true
+    },
+    {
+      "group": "runtime-output",
+      "name": "D07 Python shared default",
+      "passed": true
+    },
+    {
+      "group": "runtime-output",
+      "name": "D08 Timestamp meaning",
+      "passed": true
+    },
+    {
+      "group": "runtime-output",
+      "name": "D09 Decimal-string arithmetic",
+      "passed": true
+    },
+    {
+      "group": "runtime-output",
+      "name": "D10 Creating a Python coroutine",
+      "passed": true
+    },
+    {
+      "group": "runtime-output",
+      "name": "D11 COUNT rows versus values",
+      "passed": true
+    },
+    {
+      "group": "runtime-output",
+      "name": "D12 SQLite nullable uniqueness",
+      "passed": true
+    },
+    {
+      "group": "runtime-output",
+      "name": "D13 Rollback after a dependent failure",
+      "passed": true
+    },
+    {
+      "group": "runtime-output",
+      "name": "D14 Async predicate in synchronous filter",
+      "passed": true
+    },
+    {
+      "group": "chapter-reference",
+      "name": "M0 source/slug/title/hash",
+      "passed": true
+    },
+    {
+      "group": "chapter-reference",
+      "name": "M1 source/slug/title/hash",
+      "passed": true
+    },
+    {
+      "group": "chapter-reference",
+      "name": "M2 source/slug/title/hash",
+      "passed": true
+    },
+    {
+      "group": "chapter-reference",
+      "name": "M3 source/slug/title/hash",
+      "passed": true
+    },
+    {
+      "group": "chapter-reference",
+      "name": "M4 source/slug/title/hash",
+      "passed": true
+    },
+    {
+      "group": "chapter-reference",
+      "name": "M5 source/slug/title/hash",
+      "passed": true
+    },
+    {
+      "group": "chapter-reference",
+      "name": "M6 source/slug/title/hash",
+      "passed": true
+    },
+    {
+      "group": "chapter-reference",
+      "name": "M7 source/slug/title/hash",
+      "passed": true
+    },
+    {
+      "group": "chapter-reference",
+      "name": "M8 source/slug/title/hash",
+      "passed": true
+    },
+    {
+      "group": "chapter-reference",
+      "name": "M9 source/slug/title/hash",
+      "passed": true
+    },
+    {
+      "group": "chapter-reference",
+      "name": "M10 source/slug/title/hash",
+      "passed": true
+    },
+    {
+      "group": "chapter-reference",
+      "name": "M11 source/slug/title/hash",
+      "passed": true
+    },
+    {
+      "group": "chapter-reference",
+      "name": "M12 source/slug/title/hash",
+      "passed": true
+    },
+    {
+      "group": "chapter-reference",
+      "name": "M13 source/slug/title/hash",
+      "passed": true
+    },
+    {
+      "group": "chapter-reference",
+      "name": "M14 source/slug/title/hash",
+      "passed": true
+    },
+    {
+      "group": "chapter-reference",
+      "name": "M15 source/slug/title/hash",
+      "passed": true
+    },
+    {
+      "group": "chapter-reference",
+      "name": "M16 source/slug/title/hash",
+      "passed": true
+    },
+    {
+      "group": "chapter-reference",
+      "name": "M17 source/slug/title/hash",
+      "passed": true
+    },
+    {
+      "group": "chapter-reference",
+      "name": "M18 source/slug/title/hash",
+      "passed": true
+    },
+    {
+      "group": "chapter-reference",
+      "name": "M19 source/slug/title/hash",
+      "passed": true
+    },
+    {
+      "group": "chapter-reference",
+      "name": "M20 source/slug/title/hash",
+      "passed": true
+    },
+    {
+      "group": "chapter-reference",
+      "name": "M21 source/slug/title/hash",
+      "passed": true
+    },
+    {
+      "group": "chapter-reference",
+      "name": "M22 source/slug/title/hash",
+      "passed": true
+    },
+    {
+      "group": "chapter-reference",
+      "name": "M23 source/slug/title/hash",
+      "passed": true
+    },
+    {
+      "group": "chapter-reference",
+      "name": "M24 source/slug/title/hash",
+      "passed": true
+    },
+    {
+      "group": "chapter-reference",
+      "name": "M25 source/slug/title/hash",
+      "passed": true
+    },
+    {
+      "group": "chapter-reference",
+      "name": "M26 source/slug/title/hash",
+      "passed": true
+    },
+    {
+      "group": "chapter-reference",
+      "name": "M27 source/slug/title/hash",
+      "passed": true
+    },
+    {
+      "group": "chapter-reference",
+      "name": "M28 source/slug/title/hash",
+      "passed": true
+    }
+  ],
+  "observations": [
+    {
+      "id": "D01",
+      "kind": "node-esm",
+      "result": [
+        "before",
+        "inside",
+        "after",
+        42
+      ]
+    },
+    {
+      "id": "D02",
+      "kind": "node-esm",
+      "result": [
+        "sync",
+        "promise",
+        "microtask",
+        "nextTick"
+      ]
+    },
+    {
+      "id": "D03",
+      "kind": "node-esm",
+      "result": {
+        "error": "fail",
+        "effects": [
+          "first",
+          "third"
+        ]
+      }
+    },
+    {
+      "id": "D04",
+      "kind": "node-esm",
+      "result": {
+        "firstIsPromise": true,
+        "resolved": [
+          2,
+          4
+        ]
+      }
+    },
+    {
+      "id": "D05",
+      "kind": "node-esm",
+      "result": {
+        "originalRole": "admin",
+        "sameNestedObject": true
+      }
+    },
+    {
+      "id": "D06",
+      "kind": "node-esm",
+      "result": {
+        "role": "admin",
+        "limitType": "string",
+        "limitPlusOne": "101"
+      }
+    },
+    {
+      "id": "D07",
+      "kind": "python",
+      "result": {
+        "first": [
+          "a",
+          "b"
+        ],
+        "second": [
+          "a",
+          "b"
+        ],
+        "same": true
+      }
+    },
+    {
+      "id": "D08",
+      "kind": "python",
+      "result": {
+        "utc": "2026-10-16T04:30:00+00:00"
+      }
+    },
+    {
+      "id": "D09",
+      "kind": "python",
+      "result": {
+        "binary_float": "0.30000000000000004",
+        "decimal": "0.3"
+      }
+    },
+    {
+      "id": "D10",
+      "kind": "python",
+      "result": [
+        0,
+        "ran"
+      ]
+    },
+    {
+      "id": "D11",
+      "kind": "sqlite",
+      "result": {
+        "rows": 3,
+        "nonnull": 1,
+        "sum": 10
+      }
+    },
+    {
+      "id": "D12",
+      "kind": "sqlite",
+      "result": {
+        "rows": 3,
+        "null_rows": 2,
+        "duplicate_rejected": true
+      }
+    },
+    {
+      "id": "D13",
+      "kind": "sqlite",
+      "result": {
+        "balance_cents": 100,
+        "events": 1
+      }
+    },
+    {
+      "id": "D14",
+      "kind": "node-esm",
+      "result": [
+        1,
+        2,
+        3
+      ]
+    }
+  ],
+  "cleanup": {
+    "drill_processes": [
+      {
+        "drill": "D01",
+        "pid": 23612,
+        "exit_code": 0,
+        "exited": true
+      },
+      {
+        "drill": "D02",
+        "pid": 9452,
+        "exit_code": 0,
+        "exited": true
+      },
+      {
+        "drill": "D03",
+        "pid": 7276,
+        "exit_code": 0,
+        "exited": true
+      },
+      {
+        "drill": "D04",
+        "pid": 23128,
+        "exit_code": 0,
+        "exited": true
+      },
+      {
+        "drill": "D05",
+        "pid": 3184,
+        "exit_code": 0,
+        "exited": true
+      },
+      {
+        "drill": "D06",
+        "pid": 27988,
+        "exit_code": 0,
+        "exited": true
+      },
+      {
+        "drill": "D07",
+        "pid": 9576,
+        "exit_code": 0,
+        "exited": true
+      },
+      {
+        "drill": "D08",
+        "pid": 19988,
+        "exit_code": 0,
+        "exited": true
+      },
+      {
+        "drill": "D09",
+        "pid": 5652,
+        "exit_code": 0,
+        "exited": true
+      },
+      {
+        "drill": "D10",
+        "pid": 27600,
+        "exit_code": 0,
+        "exited": true
+      },
+      {
+        "drill": "D11",
+        "pid": 15196,
+        "exit_code": 0,
+        "exited": true
+      },
+      {
+        "drill": "D12",
+        "pid": 8596,
+        "exit_code": 0,
+        "exited": true
+      },
+      {
+        "drill": "D13",
+        "pid": 24592,
+        "exit_code": 0,
+        "exited": true
+      },
+      {
+        "drill": "D14",
+        "pid": 30128,
+        "exit_code": 0,
+        "exited": true
+      }
+    ],
+    "all_drill_processes_exited": true,
+    "sqlite_storage": "in-memory connections explicitly closed inside three SQL drills",
+    "persistent_listener_started": false,
+    "external_services_called": false
+  },
+  "scope": "Fourteen new isolated language/SQLite output drills and 29 canonical teaching-chapter reference audits. Debug cards, mock interviews, schedules and self-test answers are editorial learning material, not executed production cases or a scored user assessment. Earlier service/database/browser/provider fixtures were not rerun."
+}

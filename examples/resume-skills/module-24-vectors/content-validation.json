@@ -1,0 +1,22 @@
+{
+  "chapter": "resume-skills-handbook-part-26-module-24-embeddings-pinecone-pgvector.md",
+  "words": 9672,
+  "lines": 1127,
+  "interview_questions": 30,
+  "practice_tasks": 10,
+  "unchecked_learning_items": 12,
+  "source_fidelity": {
+    "vectors.py": true,
+    "schema.sql": true,
+    "store.py": true,
+    "pinecone_contract.py": true
+  },
+  "result_fidelity": {
+    "math": true,
+    "retrieval": true,
+    "lifecycle": true,
+    "ann": true,
+    "pinecone_contract": true,
+    "versions": true
+  }
+}

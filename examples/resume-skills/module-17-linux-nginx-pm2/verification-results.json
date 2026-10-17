@@ -1,0 +1,421 @@
+{
+  "run_id": "m17-464b9a7473",
+  "verified_date": "2026-10-14",
+  "checks": [
+    {
+      "group": "nginx",
+      "name": "configuration_valid",
+      "passed": true
+    },
+    {
+      "group": "linux",
+      "name": "application_is_nonroot",
+      "passed": true,
+      "evidence": 1000
+    },
+    {
+      "group": "linux",
+      "name": "working_directory_explicit",
+      "passed": true,
+      "evidence": "/opt/fixture"
+    },
+    {
+      "group": "linux",
+      "name": "mode_600_denies_other_user",
+      "passed": true
+    },
+    {
+      "group": "linux",
+      "name": "directory_search_permission_required",
+      "passed": true
+    },
+    {
+      "group": "linux",
+      "name": "child_environment_is_snapshot",
+      "passed": true
+    },
+    {
+      "group": "linux",
+      "name": "app_not_reachable_via_container_ip",
+      "passed": true,
+      "evidence": {
+        "container_ip": "172.17.0.2",
+        "connect_code": 111
+      }
+    },
+    {
+      "group": "nginx",
+      "name": "static_file_served",
+      "passed": true
+    },
+    {
+      "group": "nginx",
+      "name": "proxy_pass_with_uri_replaces_prefix",
+      "passed": true
+    },
+    {
+      "group": "nginx",
+      "name": "proxy_pass_without_uri_preserves_path",
+      "passed": true
+    },
+    {
+      "group": "nginx",
+      "name": "single_ingress_overwrites_forwarded_headers",
+      "passed": true
+    },
+    {
+      "group": "nginx",
+      "name": "small_request_body_reaches_app",
+      "passed": true
+    },
+    {
+      "group": "nginx",
+      "name": "body_limit_rejects_at_proxy",
+      "passed": true
+    },
+    {
+      "group": "nginx",
+      "name": "application_404_preserved",
+      "passed": true
+    },
+    {
+      "group": "nginx",
+      "name": "silent_upstream_returns_504",
+      "passed": true
+    },
+    {
+      "group": "tls",
+      "name": "fixture_certificate_explicitly_trusted",
+      "passed": true
+    },
+    {
+      "group": "tls",
+      "name": "terminated_tls_forwarded_as_https",
+      "passed": true
+    },
+    {
+      "group": "tls",
+      "name": "untrusted_self_signed_certificate_rejected",
+      "passed": true
+    },
+    {
+      "group": "tls",
+      "name": "private_key_restricted",
+      "passed": true
+    },
+    {
+      "group": "pm2",
+      "name": "two_distinct_cluster_workers",
+      "passed": true,
+      "evidence": [
+        46,
+        58
+      ]
+    },
+    {
+      "group": "pm2",
+      "name": "requests_reach_both_workers",
+      "passed": true,
+      "evidence": [
+        46,
+        58
+      ]
+    },
+    {
+      "group": "pm2",
+      "name": "worker_memory_is_independent",
+      "passed": true,
+      "evidence": {
+        "46": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "58": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      }
+    },
+    {
+      "group": "pm2",
+      "name": "crashed_worker_replaced",
+      "passed": true,
+      "evidence": {
+        "killed": 46,
+        "replacement_pids": [
+          58,
+          152
+        ]
+      }
+    },
+    {
+      "group": "pm2",
+      "name": "restart_retains_environment_without_update",
+      "passed": true,
+      "evidence": [
+        "v1"
+      ]
+    },
+    {
+      "group": "pm2",
+      "name": "update_env_changes_new_workers",
+      "passed": true,
+      "evidence": [
+        "v2"
+      ]
+    },
+    {
+      "group": "lifecycle",
+      "name": "reload_replaces_all_workers",
+      "passed": true
+    },
+    {
+      "group": "lifecycle",
+      "name": "sampled_requests_succeed_during_reload",
+      "passed": true,
+      "evidence": {
+        "samples": 34,
+        "statuses": [
+          200
+        ]
+      }
+    },
+    {
+      "group": "lifecycle",
+      "name": "active_request_finishes_during_reload",
+      "passed": true
+    },
+    {
+      "group": "lifecycle",
+      "name": "finish_logged_before_worker_exit",
+      "passed": true,
+      "evidence": {
+        "old_pid": 220,
+        "finish_index": 175,
+        "shutdown_index": 176
+      }
+    },
+    {
+      "group": "lifecycle",
+      "name": "normal_reload_has_no_forced_shutdown",
+      "passed": true
+    },
+    {
+      "group": "nginx",
+      "name": "invalid_candidate_rejected",
+      "passed": true
+    },
+    {
+      "group": "nginx",
+      "name": "live_config_survives_failed_validation",
+      "passed": true
+    },
+    {
+      "group": "nginx",
+      "name": "valid_reload_keeps_master_and_applies_config",
+      "passed": true
+    },
+    {
+      "group": "nginx",
+      "name": "request_id_and_upstream_timing_logged",
+      "passed": true
+    },
+    {
+      "group": "pm2",
+      "name": "save_records_application_list",
+      "passed": true
+    },
+    {
+      "group": "nginx",
+      "name": "stopped_application_returns_502",
+      "passed": true
+    },
+    {
+      "group": "pm2",
+      "name": "resurrect_restores_saved_processes",
+      "passed": true
+    },
+    {
+      "group": "host",
+      "name": "only_proxy_ports_published_on_loopback",
+      "passed": true,
+      "evidence": {
+        "8080/tcp": [
+          {
+            "HostIp": "127.0.0.1",
+            "HostPort": "57246"
+          }
+        ],
+        "8443/tcp": [
+          {
+            "HostIp": "127.0.0.1",
+            "HostPort": "57247"
+          }
+        ]
+      }
+    },
+    {
+      "group": "host",
+      "name": "actual_http_through_published_proxy",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "group": "host",
+      "name": "actual_tls_through_published_proxy",
+      "passed": true,
+      "evidence": {
+        "host": "127.0.0.1",
+        "forwarded_for": "172.17.0.1",
+        "forwarded_proto": "https",
+        "request_id": "af35ff62cef4dac87b79e746cf54459a"
+      }
+    }
+  ],
+  "counts": {
+    "host": 3,
+    "lifecycle": 5,
+    "linux": 6,
+    "nginx": 14,
+    "pm2": 8,
+    "tls": 4
+  },
+  "total": 40,
+  "observations": {
+    "versions": {
+      "node": "v22.23.3",
+      "pm2": "7.0.4",
+      "nginx": "nginx version: nginx/1.22.1",
+      "openssl": "OpenSSL 3.0.22 25 Aug 2026 (Library: OpenSSL 3.0.22 25 Aug 2026)",
+      "linux": "Linux 5.15.153.1-microsoft-standard-WSL2",
+      "debian": "12.15"
+    },
+    "first_echo": {
+      "pid": 58,
+      "uid": 1000,
+      "cwd": "/opt/fixture",
+      "release": "v1",
+      "url": "/echo",
+      "remote": "127.0.0.1",
+      "headers": {
+        "host": "127.0.0.1",
+        "forwarded_for": "127.0.0.1",
+        "forwarded_proto": "http",
+        "request_id": "724d80c98c96f52fc713d980648b0765"
+      }
+    },
+    "loopback": {
+      "container_ip": "172.17.0.2",
+      "connect_code": 111
+    },
+    "uri_rewrite": {
+      "strip": "/echo?x=1",
+      "preserve": "/keep/echo?x=1"
+    },
+    "forwarded_headers": {
+      "host": "127.0.0.1",
+      "forwarded_for": "127.0.0.1",
+      "forwarded_proto": "http",
+      "request_id": "fde061e6f26033302bf335d576285401"
+    },
+    "initial_workers": [
+      46,
+      58
+    ],
+    "worker_counters": {
+      "46": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "58": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "reload": {
+      "before": [
+        220,
+        233
+      ],
+      "after": [
+        265,
+        278
+      ],
+      "sample_statuses": [
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200
+      ],
+      "drained_request": {
+        "pid": 220,
+        "release": "v2",
+        "delayed_ms": 1600
+      }
+    },
+    "process_table": "  PID  PPID USER     COMMAND\n    1     0 root     /sbin/docker-init -- docker-entrypoint.sh sleep infinity\n    7     1 root     sleep infinity\n    9     0 root     python3 /opt/fixture/verify_linux.py\n   34     1 node     PM2 v7.0.4: God Daemon (/run/m17/pm2)\n   84     1 root     nginx: master process nginx -c /run/m17/nginx.conf\n  303    84 www-data nginx: worker process\n  342    34 node     node /opt/fixture/app.cjs\n  343    34 node     node /opt/fixture/app.cjs\n  384     9 root     ps -eo pid,ppid,user,args\n",
+    "sockets": "State  Recv-Q Send-Q Local Address:Port Peer Address:PortProcess                       \nLISTEN 0      511          0.0.0.0:8080      0.0.0.0:*    users:((\"nginx\",pid=84,fd=5))\nLISTEN 0      511          0.0.0.0:8443      0.0.0.0:*    users:((\"nginx\",pid=84,fd=6))\nLISTEN 0      511        127.0.0.1:9000      0.0.0.0:*                                 \n"
+  },
+  "docker": {
+    "client": "29.8.2",
+    "engine": "29.8.2",
+    "base_image": "node@sha256:c3de60bf2f9dd0ac6370e6117950ff62d6e339527e7472301c9c78a017978392",
+    "published_ports": [
+      57246,
+      57247
+    ]
+  },
+  "scope": "Real Linux Nginx and PM2 inside an owned Docker network namespace. No systemd boot, public DNS/CA, cloud deployment or load benchmark.",
+  "cleanup": {
+    "container_removed": true,
+    "owned_image_removed": true,
+    "scratch_removed": true,
+    "ports_closed": {
+      "57246": true,
+      "57247": true
+    },
+    "public_base_image_and_build_cache_retained": true
+  }
+}

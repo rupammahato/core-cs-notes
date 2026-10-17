@@ -1,0 +1,635 @@
+{
+  "module": 25,
+  "verified_date": "2026-10-15",
+  "python": "3.12.10",
+  "os": "Windows-11-10.0.26300-SP0",
+  "sqlite": "3.49.1",
+  "dependencies": {
+    "langchain": "1.4.6",
+    "langchain-core": "1.6.10",
+    "langgraph": "1.2.15",
+    "langgraph-checkpoint": "4.3.0",
+    "langgraph-checkpoint-sqlite": "3.1.2",
+    "llama-index-core": "0.14.25",
+    "pydantic": "2.14.1"
+  },
+  "counts": {
+    "langchain": 14,
+    "retry_budget": 4,
+    "agent": 10,
+    "graph_state": 7,
+    "persistence": 11,
+    "approval": 8,
+    "recovery": 7,
+    "freshness": 5,
+    "llamaindex": 18,
+    "offline": 3,
+    "cleanup": 2
+  },
+  "total": 89,
+  "checks": [
+    {
+      "group": "langchain",
+      "name": "LCEL returns the declared Pydantic output",
+      "passed": true
+    },
+    {
+      "group": "langchain",
+      "name": "accepted citation belongs to retrieved evidence",
+      "passed": true
+    },
+    {
+      "group": "langchain",
+      "name": "local model callbacks record start/end",
+      "passed": true
+    },
+    {
+      "group": "langchain",
+      "name": "prompt produces system and human messages",
+      "passed": true
+    },
+    {
+      "group": "langchain",
+      "name": "malformed JSON rejected by real output parser",
+      "passed": true
+    },
+    {
+      "group": "langchain",
+      "name": "schema extra field rejected",
+      "passed": true
+    },
+    {
+      "group": "langchain",
+      "name": "schema-valid unknown citation rejected by application",
+      "passed": true
+    },
+    {
+      "group": "langchain",
+      "name": "no-evidence branch stops before fake model",
+      "passed": true
+    },
+    {
+      "group": "langchain",
+      "name": "no-evidence branch made zero model calls",
+      "passed": true
+    },
+    {
+      "group": "langchain",
+      "name": "read permission denied before model call",
+      "passed": true
+    },
+    {
+      "group": "langchain",
+      "name": "real batch returns ordered typed outputs",
+      "passed": true
+    },
+    {
+      "group": "langchain",
+      "name": "real ainvoke agrees with synchronous answer",
+      "passed": true
+    },
+    {
+      "group": "langchain",
+      "name": "real abatch returns both answers",
+      "passed": true
+    },
+    {
+      "group": "langchain",
+      "name": "fake chat model streams through string parser",
+      "passed": true
+    },
+    {
+      "group": "retry_budget",
+      "name": "bounded runnable retry succeeds on second attempt",
+      "passed": true
+    },
+    {
+      "group": "retry_budget",
+      "name": "authorization denial is not a transient retry",
+      "passed": true
+    },
+    {
+      "group": "retry_budget",
+      "name": "nonretryable call executed only once",
+      "passed": true
+    },
+    {
+      "group": "agent",
+      "name": "tool schema exposes topic and limit",
+      "passed": true
+    },
+    {
+      "group": "agent",
+      "name": "tool runtime identity is hidden from model schema",
+      "passed": true
+    },
+    {
+      "group": "agent",
+      "name": "create_agent actually runs a tool call",
+      "passed": true
+    },
+    {
+      "group": "agent",
+      "name": "tool response retains matching call ID",
+      "passed": true
+    },
+    {
+      "group": "agent",
+      "name": "tool injects authenticated alpha context",
+      "passed": true
+    },
+    {
+      "group": "agent",
+      "name": "scripted second model turn produces final reply",
+      "passed": true
+    },
+    {
+      "group": "agent",
+      "name": "same agent tool routes beta to beta evidence",
+      "passed": true
+    },
+    {
+      "group": "agent",
+      "name": "tool implementation enforces runtime permission",
+      "passed": true
+    },
+    {
+      "group": "agent",
+      "name": "tool implementation rejects oversized limit",
+      "passed": true
+    },
+    {
+      "group": "agent",
+      "name": "unknown tool is represented as an error observation",
+      "passed": true
+    },
+    {
+      "group": "retry_budget",
+      "name": "nonterminating scripted agent hits graph recursion limit",
+      "passed": true
+    },
+    {
+      "group": "graph_state",
+      "name": "parallel writes without reducer rejected",
+      "passed": true
+    },
+    {
+      "group": "graph_state",
+      "name": "reducer accumulates parallel updates",
+      "passed": true
+    },
+    {
+      "group": "graph_state",
+      "name": "empty additive update does not erase accumulated values",
+      "passed": true
+    },
+    {
+      "group": "graph_state",
+      "name": "default reducer replaces scalar value",
+      "passed": true
+    },
+    {
+      "group": "graph_state",
+      "name": "message reducer replaces matching ID rather than appending duplicate",
+      "passed": true
+    },
+    {
+      "group": "graph_state",
+      "name": "same in-memory saver can inspect stored state",
+      "passed": true
+    },
+    {
+      "group": "graph_state",
+      "name": "new in-memory saver has no previous state",
+      "passed": true
+    },
+    {
+      "group": "persistence",
+      "name": "fresh worker pauses at actual interrupt",
+      "passed": true
+    },
+    {
+      "group": "persistence",
+      "name": "draft checkpoint has expected deterministic node trace",
+      "passed": true
+    },
+    {
+      "group": "persistence",
+      "name": "review has not committed a result",
+      "passed": true
+    },
+    {
+      "group": "persistence",
+      "name": "file checkpointer created persistent tables",
+      "passed": true
+    },
+    {
+      "group": "persistence",
+      "name": "fresh worker resumes saved state",
+      "passed": true
+    },
+    {
+      "group": "persistence",
+      "name": "resume uses a different OS process",
+      "passed": true
+    },
+    {
+      "group": "persistence",
+      "name": "checkpoint ID advances across resume",
+      "passed": true
+    },
+    {
+      "group": "persistence",
+      "name": "successful graph reaches END",
+      "passed": true
+    },
+    {
+      "group": "persistence",
+      "name": "review pre-interrupt instrumentation reran",
+      "passed": true
+    },
+    {
+      "group": "persistence",
+      "name": "completed node updates appear once in graph event state",
+      "passed": true
+    },
+    {
+      "group": "persistence",
+      "name": "canonical result is saved exactly once locally",
+      "passed": true
+    },
+    {
+      "group": "approval",
+      "name": "completed job rejects another approval replay at entry boundary",
+      "passed": true
+    },
+    {
+      "group": "approval",
+      "name": "cross-tenant resume denied before checkpoint read",
+      "passed": true
+    },
+    {
+      "group": "approval",
+      "name": "same-tenant wrong owner denied",
+      "passed": true
+    },
+    {
+      "group": "approval",
+      "name": "negative review routes to END",
+      "passed": true
+    },
+    {
+      "group": "approval",
+      "name": "negative review creates no canonical result",
+      "passed": true
+    },
+    {
+      "group": "approval",
+      "name": "approval bound to another draft is rejected",
+      "passed": true
+    },
+    {
+      "group": "approval",
+      "name": "strict boolean review schema rejects string yes",
+      "passed": true
+    },
+    {
+      "group": "approval",
+      "name": "permission revocation while paused denies resume",
+      "passed": true
+    },
+    {
+      "group": "recovery",
+      "name": "injected post-commit failure propagates",
+      "passed": true
+    },
+    {
+      "group": "recovery",
+      "name": "canonical result survived missing graph completion checkpoint",
+      "passed": true
+    },
+    {
+      "group": "recovery",
+      "name": "new worker retries pending commit node",
+      "passed": true
+    },
+    {
+      "group": "recovery",
+      "name": "commit node attempted twice",
+      "passed": true
+    },
+    {
+      "group": "recovery",
+      "name": "idempotent local result prevents duplicate row",
+      "passed": true
+    },
+    {
+      "group": "recovery",
+      "name": "completed graph includes one committed node update",
+      "passed": true
+    },
+    {
+      "group": "recovery",
+      "name": "idempotency-key reuse with a different answer is rejected",
+      "passed": true
+    },
+    {
+      "group": "freshness",
+      "name": "source revision change while paused blocks commitment",
+      "passed": true
+    },
+    {
+      "group": "freshness",
+      "name": "stale source creates no result",
+      "passed": true
+    },
+    {
+      "group": "freshness",
+      "name": "source deletion while paused blocks commitment",
+      "passed": true
+    },
+    {
+      "group": "freshness",
+      "name": "deleted source creates no result",
+      "passed": true
+    },
+    {
+      "group": "freshness",
+      "name": "no evidence routes directly to END without review",
+      "passed": true
+    },
+    {
+      "group": "llamaindex",
+      "name": "real ingestion pipeline produces one node per short source",
+      "passed": true
+    },
+    {
+      "group": "llamaindex",
+      "name": "node IDs deterministic by source and ordinal",
+      "passed": true
+    },
+    {
+      "group": "llamaindex",
+      "name": "source document relationships preserved",
+      "passed": true
+    },
+    {
+      "group": "llamaindex",
+      "name": "pipeline populates three feature coordinates",
+      "passed": true
+    },
+    {
+      "group": "llamaindex",
+      "name": "tenant metadata retained for filtering",
+      "passed": true
+    },
+    {
+      "group": "llamaindex",
+      "name": "tenant metadata excluded from embedding text",
+      "passed": true
+    },
+    {
+      "group": "llamaindex",
+      "name": "tenant metadata excluded from LLM text",
+      "passed": true
+    },
+    {
+      "group": "llamaindex",
+      "name": "metadata-filtered vector retriever returns alpha only",
+      "passed": true
+    },
+    {
+      "group": "llamaindex",
+      "name": "feature cosine ranks session above index",
+      "passed": true
+    },
+    {
+      "group": "llamaindex",
+      "name": "beta retrieval excludes alpha nodes",
+      "passed": true
+    },
+    {
+      "group": "llamaindex",
+      "name": "retriever factory rejects missing read permission",
+      "passed": true
+    },
+    {
+      "group": "llamaindex",
+      "name": "query engine executes explicit MockLLM synthesis",
+      "passed": true
+    },
+    {
+      "group": "llamaindex",
+      "name": "similarity postprocessor keeps only matching source",
+      "passed": true
+    },
+    {
+      "group": "llamaindex",
+      "name": "persist/reload preserves IDs and scores",
+      "passed": true
+    },
+    {
+      "group": "llamaindex",
+      "name": "delete_ref_doc removes source vectors",
+      "passed": true
+    },
+    {
+      "group": "llamaindex",
+      "name": "source deletion leaves another tenant intact",
+      "passed": true
+    },
+    {
+      "group": "llamaindex",
+      "name": "real sentence splitter produces multiple bounded word chunks",
+      "passed": true
+    },
+    {
+      "group": "llamaindex",
+      "name": "long chunks retain source document relationship",
+      "passed": true
+    },
+    {
+      "group": "offline",
+      "name": "parent fixture made zero external socket attempts",
+      "passed": true
+    },
+    {
+      "group": "offline",
+      "name": "all fresh graph workers made zero external socket attempts",
+      "passed": true
+    },
+    {
+      "group": "offline",
+      "name": "all owned worker processes exited",
+      "passed": true
+    },
+    {
+      "group": "cleanup",
+      "name": "temporary application/checkpoint/index data removed",
+      "passed": true
+    },
+    {
+      "group": "cleanup",
+      "name": "fixture starts no persistent listener",
+      "passed": true
+    }
+  ],
+  "observations": {
+    "langchain": {
+      "answer": {
+        "answer": "Session records keep login state on the server.",
+        "citations": [
+          "alpha-session"
+        ]
+      },
+      "callbacks": [
+        {
+          "event": "model_start",
+          "message_count": 2
+        },
+        {
+          "event": "model_end"
+        }
+      ],
+      "batch_outputs": 2,
+      "async_outputs": 2,
+      "stream_joined": "local-stream",
+      "transient_attempts": 2,
+      "denied_attempts": 1
+    },
+    "agent": {
+      "tool_schema_properties": [
+        "limit",
+        "topic"
+      ],
+      "message_types": [
+        "human",
+        "ai",
+        "tool",
+        "ai"
+      ],
+      "tool_calls": 1,
+      "tool_result": [
+        {
+          "id": "alpha-session",
+          "tenant": "alpha",
+          "revision": 1,
+          "text": "Session records keep login state on the server. A cookie carries a session identifier."
+        }
+      ],
+      "final_reply": "Scripted final reply: [{\"id\": \"alpha-session\", \"tenant\": \"alpha\", \"revision\": 1, \"text\": \"Session records keep login state on the server. A cookie carries a session identifier.\"}]",
+      "loop_limit_error": "GraphRecursionError"
+    },
+    "graph_state": {
+      "parallel_events": [
+        "a",
+        "b"
+      ],
+      "final_status": "done",
+      "empty_update_cleared_events": false,
+      "message_replacement_count": 1,
+      "fresh_memory_snapshot": {}
+    },
+    "persistence": {
+      "start_status": "awaiting_review",
+      "start_next": [
+        "review"
+      ],
+      "start_events": [
+        "retrieve",
+        "draft"
+      ],
+      "resume_status": "committed",
+      "resume_events": [
+        "retrieve",
+        "draft",
+        "review",
+        "commit"
+      ],
+      "different_processes": true,
+      "review_attempts": 2,
+      "result_rows": 1,
+      "checkpoint_changed": true
+    },
+    "approval": {
+      "cross_tenant_error": "PermissionError",
+      "wrong_user_error": "PermissionError",
+      "negative_decision_status": "rejected",
+      "wrong_hash_error": "ValueError",
+      "wrong_boolean_error": "ValidationError",
+      "revoked_error": "PermissionError",
+      "stale_revision_status": "stale_source",
+      "deleted_source_status": "stale_source"
+    },
+    "recovery": {
+      "first_resume_error": "RuntimeError",
+      "result_survived_before_checkpoint": true,
+      "recovered_status": "committed",
+      "commit_attempts": 2,
+      "canonical_result_rows": 1,
+      "completed_commit_updates": 1,
+      "external_service_claim": false
+    },
+    "llamaindex": {
+      "node_ids": [
+        "alpha-session:c0",
+        "alpha-index:c0",
+        "beta-session:c0"
+      ],
+      "feature_vectors": [
+        [
+          2.01,
+          0.01,
+          0.01
+        ],
+        [
+          0.01,
+          2.01,
+          0.01
+        ],
+        [
+          1.01,
+          0.01,
+          1.01
+        ]
+      ],
+      "alpha_results": [
+        {
+          "id": "alpha-session:c0",
+          "score": 0.999976
+        },
+        {
+          "id": "alpha-index:c0",
+          "score": 0.014924
+        }
+      ],
+      "beta_results": [
+        "beta-session:c0"
+      ],
+      "mock_answer": "text text text",
+      "query_source_ids": [
+        "alpha-session"
+      ],
+      "restored_result_ids": [
+        "alpha-session:c0",
+        "alpha-index:c0"
+      ],
+      "after_delete_ids": [
+        "alpha-index:c0"
+      ],
+      "long_chunk_word_counts": [
+        64,
+        64,
+        38
+      ],
+      "embedding_scope": "Handwritten three-feature word counts; no learned model"
+    }
+  },
+  "cleanup": {
+    "loopback_ports_closed": [],
+    "persistent_listener_started": false,
+    "temporary_directory_removed": true,
+    "worker_processes_exited": 21
+  },
+  "scope": "Actual LangChain/LangGraph/LlamaIndex offline runtimes. Fake/scripted chat, extractive graph draft and handwritten feature embeddings; no learned inference, provider/hosted tracing, HTTP service, Docker or production durability benchmark."
+}

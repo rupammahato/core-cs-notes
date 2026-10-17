@@ -1,0 +1,8 @@
+{
+  "browser_closed": true,
+  "loopback_ports_closed": {
+    "64190": true,
+    "64191": true
+  },
+  "docker_started": false
+}

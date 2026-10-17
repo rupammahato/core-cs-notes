@@ -1,0 +1,17 @@
+PASS 01-order - next advances the stack but does not return from the caller
+PASS 02-end - A response without next stops ordinary stack traversal
+PASS 03-next-route - next route skips the remaining callbacks of this route
+PASS 04-error-mode - next error skips ordinary middleware and reaches an error handler
+PASS 05-mounted-path - Mounted routers expose distinct URL views
+PASS 06-query - Repeated query keys need a deliberate input policy
+PASS 07-parser-order - A parser registered after a completed route cannot populate that route's body
+PASS 08-parser-not-validator - JSON parsing accepts shapes and values the application may reject
+PASS 09-async-five - Express 5 forwards a returned async-handler rejection
+PASS 10-callback-error - A later callback must explicitly forward its error
+PASS 11-head-and-notfound - HEAD can use GET; a missing route is not an error-handler event
+PASS 12-path-five - Express 5 string paths use named wildcards and braces
+PASS 13-merge-params - Nested router parameters require an explicit inheritance choice
+PASS 14-next-not-await - next is not an asynchronous join
+PASS 15-raw-body - Raw parsing preserves bytes; prior JSON parsing does not restore them
+PASS 16-api - The layered API passes its HTTP and boundary checks
+Verified 16 snippets in their recorded module modes; Node v22.14.0

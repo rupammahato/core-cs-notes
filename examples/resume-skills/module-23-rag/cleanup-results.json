@@ -1,0 +1,7 @@
+{
+  "temporary_databases_removed": true,
+  "loopback_ports_closed": {
+    "64195": true
+  },
+  "docker_started": false
+}

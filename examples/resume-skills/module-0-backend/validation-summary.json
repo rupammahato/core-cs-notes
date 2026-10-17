@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-13",
+  "node": "v22.14.0",
+  "backend": {
+    "cases": 13,
+    "passed": true,
+    "output": "verification-output.txt"
+  },
+  "site": {
+    "sync": "passed: 71 source chapters",
+    "normalBuild": "blocked by external Google Fonts downloads",
+    "offlineBuild": "passed: webpack + temporary NEXT_FONT_GOOGLE_MOCKED_RESPONSES using cached original font files",
+    "typeScript": "passed within offline build",
+    "staticPages": 76,
+    "httpChecks": [
+      "/",
+      "/docs/resume-skills",
+      "/docs/resume-skills/how-backend-works",
+      "/docs/dbms/sql-querying"
+    ],
+    "search": {
+      "tag": "resume-skills",
+      "query": "authoritative",
+      "results": 9,
+      "passed": true
+    }
+  },
+  "sourceFontConfigurationChanged": false
+}

@@ -1,0 +1,574 @@
+{
+  "node": "v22.14.0",
+  "passed": 68,
+  "checks": [
+    {
+      "name": "empty collection",
+      "passed": true,
+      "observed": {
+        "items": [],
+        "next": null
+      }
+    },
+    {
+      "name": "missing media type",
+      "passed": true,
+      "observed": {
+        "status": 415,
+        "code": "unsupported_media_type"
+      }
+    },
+    {
+      "name": "unsupported media type",
+      "passed": true,
+      "observed": {
+        "status": 415,
+        "code": "unsupported_media_type"
+      }
+    },
+    {
+      "name": "unsupported charset",
+      "passed": true,
+      "observed": {
+        "status": 415,
+        "code": "unsupported_media_type"
+      }
+    },
+    {
+      "name": "compressed input rejected",
+      "passed": true,
+      "observed": {
+        "status": 415,
+        "code": "unsupported_encoding"
+      }
+    },
+    {
+      "name": "malformed JSON",
+      "passed": true,
+      "observed": {
+        "status": 400,
+        "code": "invalid_json"
+      }
+    },
+    {
+      "name": "invalid UTF-8",
+      "passed": true,
+      "observed": {
+        "status": 400,
+        "code": "invalid_json"
+      }
+    },
+    {
+      "name": "oversize body",
+      "passed": true,
+      "observed": {
+        "status": 413,
+        "code": "body_too_large"
+      }
+    },
+    {
+      "name": "array is not a task",
+      "passed": true,
+      "observed": {
+        "status": 422,
+        "code": "invalid_task"
+      }
+    },
+    {
+      "name": "null is not a task",
+      "passed": true,
+      "observed": {
+        "status": 422,
+        "code": "invalid_task"
+      }
+    },
+    {
+      "name": "unknown field rejected",
+      "passed": true,
+      "observed": {
+        "status": 422,
+        "code": "unknown_field"
+      }
+    },
+    {
+      "name": "blank title rejected",
+      "passed": true,
+      "observed": {
+        "status": 422,
+        "code": "invalid_title"
+      }
+    },
+    {
+      "name": "boolean string rejected",
+      "passed": true,
+      "observed": {
+        "status": 422,
+        "code": "invalid_completed"
+      }
+    },
+    {
+      "name": "creation requires key",
+      "passed": true,
+      "observed": {
+        "status": 400,
+        "code": "invalid_key"
+      }
+    },
+    {
+      "name": "key format checked",
+      "passed": true,
+      "observed": {
+        "status": 400,
+        "code": "invalid_key"
+      }
+    },
+    {
+      "name": "create returns resource location and strong validator",
+      "passed": true,
+      "observed": {
+        "status": 201,
+        "location": "/v1/tasks/1",
+        "task": {
+          "id": 1,
+          "title": "Learn HTTP",
+          "completed": false
+        }
+      }
+    },
+    {
+      "name": "normalized same-key retry replays original creation",
+      "passed": true,
+      "observed": {
+        "id": 1,
+        "replayed": true,
+        "total": 1
+      }
+    },
+    {
+      "name": "key reused with different input conflicts",
+      "passed": true,
+      "observed": {
+        "status": 409,
+        "code": "key_conflict"
+      }
+    },
+    {
+      "name": "GET identifies stored resource and cache policy",
+      "passed": true,
+      "observed": {
+        "id": 1,
+        "cache": "private, no-cache"
+      }
+    },
+    {
+      "name": "HEAD has same validator and no body",
+      "passed": true,
+      "observed": {
+        "status": 200,
+        "bytes": 0
+      }
+    },
+    {
+      "name": "weak If-None-Match matches among a tag list",
+      "passed": true,
+      "observed": {
+        "status": 304,
+        "bytes": 0
+      }
+    },
+    {
+      "name": "If-None-Match star matches existing item",
+      "passed": true,
+      "observed": 304
+    },
+    {
+      "name": "nonmatching validator returns representation",
+      "passed": true,
+      "observed": 200
+    },
+    {
+      "name": "malformed validator rejected",
+      "passed": true,
+      "observed": {
+        "status": 400,
+        "code": "invalid_condition"
+      }
+    },
+    {
+      "name": "update without precondition rejected",
+      "passed": true,
+      "observed": {
+        "status": 428,
+        "code": "condition_required"
+      }
+    },
+    {
+      "name": "weak If-Match cannot protect a write",
+      "passed": true,
+      "observed": {
+        "status": 412,
+        "code": "stale_version"
+      }
+    },
+    {
+      "name": "PUT requires complete writable representation",
+      "passed": true,
+      "observed": {
+        "status": 422,
+        "code": "invalid_completed"
+      }
+    },
+    {
+      "name": "PATCH rejects empty document",
+      "passed": true,
+      "observed": {
+        "status": 422,
+        "code": "empty_patch"
+      }
+    },
+    {
+      "name": "PATCH null is invalid in this custom format",
+      "passed": true,
+      "observed": {
+        "status": 422,
+        "code": "invalid_title"
+      }
+    },
+    {
+      "name": "PATCH keeps omitted fields and changes validator",
+      "passed": true,
+      "observed": {
+        "id": 1,
+        "title": "Learn HTTP",
+        "completed": true
+      }
+    },
+    {
+      "name": "stale editor cannot overwrite newer state",
+      "passed": true,
+      "observed": {
+        "status": 412,
+        "completed": true
+      }
+    },
+    {
+      "name": "replay retains original POST result after later edit",
+      "passed": true,
+      "observed": {
+        "replayCompleted": false,
+        "currentCompleted": true
+      }
+    },
+    {
+      "name": "PUT replaces writable state",
+      "passed": true,
+      "observed": {
+        "id": 1,
+        "title": "Replacement",
+        "completed": false
+      }
+    },
+    {
+      "name": "same PUT state keeps content-derived validator",
+      "passed": true,
+      "observed": {
+        "status": 200,
+        "sameValidatorOnGet": true
+      }
+    },
+    {
+      "name": "normalized PUT omits response validators; GET supplies current tag",
+      "passed": true,
+      "observed": {
+        "title": "Replacement",
+        "putValidator": null,
+        "getValidatorPresent": true
+      }
+    },
+    {
+      "name": "DELETE removes once and returns no body",
+      "passed": true,
+      "observed": {
+        "status": 204,
+        "bytes": 0
+      }
+    },
+    {
+      "name": "repeated DELETE returns 404 with same final absence",
+      "passed": true,
+      "observed": {
+        "status": 404,
+        "code": "not_found"
+      }
+    },
+    {
+      "name": "OPTIONS advertises methods and patch format",
+      "passed": true,
+      "observed": {
+        "allow": "GET, HEAD, PUT, PATCH, DELETE, OPTIONS",
+        "patch": "application/json"
+      }
+    },
+    {
+      "name": "405 includes Allow",
+      "passed": true,
+      "observed": {
+        "status": 405,
+        "code": "method_not_allowed"
+      }
+    },
+    {
+      "name": "unknown route is 404",
+      "passed": true,
+      "observed": {
+        "status": 404,
+        "code": "not_found"
+      }
+    },
+    {
+      "name": "invalid identifier is 400",
+      "passed": true,
+      "observed": {
+        "status": 400,
+        "code": "invalid_id"
+      }
+    },
+    {
+      "name": "malformed percent encoding is 400",
+      "passed": true,
+      "observed": {
+        "status": 400,
+        "code": "invalid_path"
+      }
+    },
+    {
+      "name": "unknown item query rejected",
+      "passed": true,
+      "observed": {
+        "status": 400,
+        "code": "invalid_query"
+      }
+    },
+    {
+      "name": "query rejects limit=0",
+      "passed": true,
+      "observed": {
+        "status": 400,
+        "code": "invalid_limit"
+      }
+    },
+    {
+      "name": "query rejects limit=100",
+      "passed": true,
+      "observed": {
+        "status": 400,
+        "code": "invalid_limit"
+      }
+    },
+    {
+      "name": "query rejects completed=yes",
+      "passed": true,
+      "observed": {
+        "status": 400,
+        "code": "invalid_filter"
+      }
+    },
+    {
+      "name": "query rejects order=random",
+      "passed": true,
+      "observed": {
+        "status": 400,
+        "code": "invalid_order"
+      }
+    },
+    {
+      "name": "query rejects limit=1&limit=2",
+      "passed": true,
+      "observed": {
+        "status": 400,
+        "code": "invalid_query"
+      }
+    },
+    {
+      "name": "query rejects extra=1",
+      "passed": true,
+      "observed": {
+        "status": 400,
+        "code": "invalid_query"
+      }
+    },
+    {
+      "name": "query rejects cursor=not-a-cursor",
+      "passed": true,
+      "observed": {
+        "status": 400,
+        "code": "invalid_cursor"
+      }
+    },
+    {
+      "name": "first page has bounded items and next link",
+      "passed": true,
+      "observed": {
+        "ids": [
+          1,
+          2
+        ],
+        "hasNext": true
+      }
+    },
+    {
+      "name": "keyset continuation survives deletion before cursor",
+      "passed": true,
+      "observed": {
+        "ids": [
+          3,
+          4
+        ]
+      }
+    },
+    {
+      "name": "keyset walk sees later insertion without duplicating earlier IDs",
+      "passed": true,
+      "observed": {
+        "ids": [
+          5,
+          6
+        ],
+        "snapshot": false
+      }
+    },
+    {
+      "name": "filter and descending order compose",
+      "passed": true,
+      "observed": {
+        "first": [
+          4
+        ],
+        "next": [
+          2
+        ]
+      }
+    },
+    {
+      "name": "cursor cannot switch ordering",
+      "passed": true,
+      "observed": {
+        "status": 400,
+        "code": "invalid_cursor"
+      }
+    },
+    {
+      "name": "cursor cannot switch filter",
+      "passed": true,
+      "observed": {
+        "status": 400,
+        "code": "invalid_cursor"
+      }
+    },
+    {
+      "name": "two concurrent editors produce one winner and one 412",
+      "passed": true,
+      "observed": {
+        "statuses": [
+          200,
+          412
+        ],
+        "storedMatchesWinner": true
+      }
+    },
+    {
+      "name": "write checks current state after a slow request body finishes",
+      "passed": true,
+      "observed": {
+        "fast": 200,
+        "slow": 412,
+        "title": "Fast editor"
+      }
+    },
+    {
+      "name": "different input conflicts while same-key operation is pending",
+      "passed": true,
+      "observed": {
+        "status": 409,
+        "code": "key_conflict"
+      }
+    },
+    {
+      "name": "unrelated GET progresses while creation is pending",
+      "passed": true,
+      "observed": {
+        "items": 0
+      }
+    },
+    {
+      "name": "overlapping same-key requests share one operation",
+      "passed": true,
+      "observed": {
+        "statuses": [
+          201,
+          201
+        ],
+        "creations": 1,
+        "total": 1
+      }
+    },
+    {
+      "name": "retained key deduplicates before expiry",
+      "passed": true,
+      "observed": {
+        "id": 1,
+        "atMs": 59999
+      }
+    },
+    {
+      "name": "expired key can create again",
+      "passed": true,
+      "observed": {
+        "id": 2,
+        "atMs": 60000,
+        "total": 2
+      }
+    },
+    {
+      "name": "unexpected failure returns private problem and permits retry",
+      "passed": true,
+      "observed": {
+        "first": 500,
+        "retry": 201,
+        "attempts": 2,
+        "total": 1
+      }
+    },
+    {
+      "name": "fixed-window budget allows two requests",
+      "passed": true,
+      "observed": {
+        "remaining": [
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "name": "exhausted budget returns 429 and rounded-up Retry-After",
+      "passed": true,
+      "observed": {
+        "status": 429,
+        "retryAfterSeconds": 2
+      }
+    },
+    {
+      "name": "rate limiting one route does not block task reads",
+      "passed": true,
+      "observed": 200
+    },
+    {
+      "name": "next fixed window resets budget",
+      "passed": true,
+      "observed": {
+        "atMs": 10000,
+        "remaining": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+PASS HMAC SHA256 matches RFC 4231 known vector: "b0344c61d8db38535ca8afceaf0bf12b881dc200c9833da726e9376c2e32cff7"
+PASS verification preserves raw whitespace and rejects reserialization: {"exactBytesAccepted":true,"reserializedRejected":true}
+PASS old secret works only while explicitly configured: {"status":401,"code":"invalid_signature"}
+PASS acceptance is inbox commit rather than credit completion: {"state":"pending","credits":0,"inboxRows":1}
+PASS worker commits credit, paid order, receipt and outbox together: {"credits":100,"ledgerRows":1,"order":"paid","receipt":"processed","outboxRows":1}
+PASS same event replay returns duplicate without a second effect: {"duplicate":true,"credits":100,"outboxRows":1}
+PASS new delivery ID for same signed payment cannot grant twice: {"receiptRows":2,"ledgerRows":1,"credits":100}
+PASS captured then authorized or failed cannot downgrade capture/order: {"payment":"captured","order":"paid","credits":100}
+PASS second captured payment for funded order enters review: {"reason":"order_already_funded","credits":100}
+PASS failed attempt does not close order to a later successful attempt: {"failedAttemptCredits":0,"finalOrder":"paid","credits":100}
+PASS wrong amount quarantined without credit: {"state":"review","reason":"amount_or_currency_mismatch","credits":0}
+PASS wrong currency quarantined without credit: {"state":"review","reason":"amount_or_currency_mismatch","credits":0}
+PASS unknown order quarantined without credit: {"state":"review","reason":"unknown_order","credits":0}
+PASS other tenant order through alpha endpoint quarantined without credit: {"state":"review","reason":"unknown_order","credits":0}
+PASS payload notes cannot choose tenant or number of credits: {"alphaCredits":100,"betaCredits":0}
+PASS payment identity cannot be rebound to a different order: {"reason":"payment_identity_conflict","credits":100}
+PASS same provider event ID is scoped to configured endpoint: {"alphaCredits":100,"betaCredits":100}
+PASS same endpoint event ID with changed bytes conflicts: {"status":409,"code":"event_id_conflict"}
+PASS injected failure after ledger insert rolls back every business effect: {"credits":0,"ledgerRows":0,"outboxRows":0,"receipt":"pending"}
+PASS retry after rollback grants once: {"credits":100,"ledgerRows":1}
+PASS outbox retry after accepted send can repeat delivery but not idempotent sink effect: {"deliveryAttempts":2,"sinkEffects":1,"outbox":"sent"}
+Verified 21 core checks.
+PASS HTTP rejects wrong signature before inbox effects: {"status":401,"code":"invalid_signature"}
+PASS HTTP rejects missing signature before inbox effects: {"status":401,"code":"invalid_signature"}
+PASS HTTP rejects malformed signature before inbox effects: {"status":401,"code":"invalid_signature"}
+PASS HTTP rejects missing event ID before inbox effects: {"status":400,"code":"invalid_event_id"}
+PASS HTTP rejects oversize event ID before inbox effects: {"status":400,"code":"invalid_event_id"}
+PASS HTTP rejects unsupported type before inbox effects: {"status":415,"code":"unsupported_body_format"}
+PASS HTTP rejects compressed content before inbox effects: {"status":415,"code":"unsupported_body_format"}
+PASS HTTP rejects oversize body before inbox effects: {"status":413,"code":"body_too_large"}
+PASS HTTP rejects signed malformed JSON before inbox effects: {"status":400,"code":"invalid_json"}
+PASS HTTP rejects signed invalid UTF-8 before inbox effects: {"status":400,"code":"invalid_json"}
+PASS HTTP rejects wrong account before inbox effects: {"status":403,"code":"account_mismatch"}
+PASS HTTP rejects missing payment fields before inbox effects: {"status":400,"code":"invalid_payment"}
+PASS HTTP rejects wrong status for event before inbox effects: {"status":400,"code":"invalid_payment"}
+PASS HTTP rejects unknown route before inbox effects: {"status":404,"code":"not_found"}
+PASS HTTP method policy includes Allow: {"status":405,"allow":"POST"}
+PASS signature checked before parsing invalid bytes: {"status":401}
+PASS raw formatting change breaks otherwise equivalent JSON signature: {"status":401}
+PASS acknowledgment follows inbox commit but precedes worker effect: {"ack":202,"inboxAtAck":1,"ledgerAtAck":0,"ledgerAfterWorker":1}
+PASS overlapping same-delivery requests retain one inbox row and one grant: {"responses":[202,202],"deliveryRows":1,"totalLedgerRows":1}
+PASS same raw payload under changed unsigned delivery header is business-idempotent: {"status":202,"ledgerRows":1,"alphaCredits":100}
+PASS configured old secret permits delayed retry: {"status":202,"ledgerRows":1}
+PASS endpoint secret cannot authenticate another configured account: {"status":401}
+PASS tenant header cannot reroute trusted provider-order mapping: {"alphaCredits":100,"betaCredited":false}
+PASS unsupported signed event is durably ignored without granting: {"ack":202,"state":"ignored","ledgerRows":1}
+PASS failed inbox persistence returns 503 and retry can accept: {"first":503,"retry":202,"inboxRows":1}
+PASS post-commit acknowledgment failure leaves retryable durable acceptance: {"first":503,"retry":202,"duplicate":true,"ledgerRows":1}
+Verified 26 http checks.
+All temporary HTTP listeners closed.
+PASS provider lookup timeout leaves outcome unresolved and local balance unchanged: {"knownPaymentFailure":false,"ledgerRows":0}
+PASS account-bound lookup repairs missing captured webhook: {"reason":"granted","credits":100}
+PASS repeated observation and later real webhook share business invariant: {"ledgerRows":1,"credits":100}
+PASS wrong provider account rejected before persistence: {"status":502,"code":"provider_account_mismatch"}
+PASS wrong provider payment ID rejected before persistence: {"status":502,"code":"provider_payment_mismatch"}
+PASS unhandled provider state is unresolved rather than a grant: {"outcome":"unresolved","ledgerRows":1}
+Verified 6 reconciliation checks.
+PASS inbox persists across close and reopen before any worker: {"pendingSurvived":true,"afterWorkerCredits":100}
+PASS process exit before effect commit recovers pending receipt with zero partial credit: {"workerExit":77,"beforeRetryLedgerRows":0,"receipt":"pending","afterRetryCredits":100}
+PASS process exit after commit preserves one grant and one outbox row: {"workerExit":77,"receipt":"processed","ledgerRows":1,"outboxRows":1,"afterRetryCredits":100}
+PASS two ready independent worker processes commit a single grant: {"workerProcesses":2,"grants":1,"ledgerRows":1,"outboxRows":1,"credits":100}
+Verified 4 recovery checks.
+Verified 57 checks across core, real HTTP, reconciliation fixtures and file/process recovery.
+Expected experimental node:sqlite warnings preserved separately.

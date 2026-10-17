@@ -1,0 +1,110 @@
+{
+  "group": "core",
+  "total": 19,
+  "checks": [
+    {
+      "name": "application role is non-superuser and server configuration is recorded",
+      "passed": true
+    },
+    {
+      "name": "adversarial text is bound as a value without executing SQL",
+      "passed": true
+    },
+    {
+      "name": "Identifier composition selects a column while a bound value stays literal",
+      "passed": true
+    },
+    {
+      "name": "numeric timestamptz and jsonb round-trip through real type adapters",
+      "passed": true
+    },
+    {
+      "name": "jsonb containment executes on PostgreSQL",
+      "passed": true
+    },
+    {
+      "name": "ordinary UNIQUE permits multiple null values by default",
+      "passed": true
+    },
+    {
+      "name": "check constraint rejects negative stock",
+      "passed": true
+    },
+    {
+      "name": "unique constraint rejects duplicate tenant SKU",
+      "passed": true
+    },
+    {
+      "name": "not-null constraint rejects null SKU",
+      "passed": true
+    },
+    {
+      "name": "composite foreign key rejects a product from another tenant",
+      "passed": true
+    },
+    {
+      "name": "application role cannot create tables in migration-owned schema",
+      "passed": true
+    },
+    {
+      "name": "table grants do not replace application tenant predicates",
+      "passed": true
+    },
+    {
+      "name": "foreign key does not automatically add a referencing SKU index",
+      "passed": true
+    },
+    {
+      "name": "ON CONFLICT updates the specified conflict target and RETURNING reports value",
+      "passed": true
+    },
+    {
+      "name": "identity sequence allocation is not rolled back",
+      "passed": true
+    },
+    {
+      "name": "savepoint rollback permits the outer transaction to continue",
+      "passed": true
+    },
+    {
+      "name": "implicit SELECT transaction and failed state require deliberate rollback",
+      "passed": true
+    },
+    {
+      "name": "SCRAM host authentication rejects incorrect fixture password",
+      "passed": true
+    },
+    {
+      "name": "ordinary CREATE TABLE rolls back with its transaction",
+      "passed": true
+    }
+  ],
+  "observations": {
+    "server": {
+      "server_version": "18.4",
+      "default_transaction_isolation": "read committed",
+      "fsync": "on",
+      "synchronous_commit": "on",
+      "ssl": "off"
+    },
+    "typed_values": {
+      "amount": "125.50",
+      "timestamp": "2026-10-14T06:30:00+00:00",
+      "metadata": {
+        "tags": [
+          "api"
+        ],
+        "tenant": "alpha"
+      }
+    },
+    "role_is_not_tenant_filter": true,
+    "reservation_indexes": [
+      "CREATE UNIQUE INDEX reservations_pkey ON lesson.reservations USING btree (id)",
+      "CREATE UNIQUE INDEX reservation_request_unique ON lesson.reservations USING btree (tenant_id, request_key)"
+    ],
+    "sequence_gap": {
+      "rolled_back_id": 1,
+      "next_id": 2
+    }
+  }
+}

@@ -1,0 +1,327 @@
+{
+  "group": "plans",
+  "total": 7,
+  "checks": [
+    {
+      "name": "unindexed selective ordered fixture naturally scans and sorts",
+      "passed": true
+    },
+    {
+      "name": "composite index preserves the actual result rows",
+      "passed": true
+    },
+    {
+      "name": "planner naturally uses the composite index without a Sort node",
+      "passed": true
+    },
+    {
+      "name": "broad fixture still naturally chooses a sequential scan",
+      "passed": true
+    },
+    {
+      "name": "plain EXPLAIN does not execute the UPDATE",
+      "passed": true
+    },
+    {
+      "name": "EXPLAIN ANALYZE executes the UPDATE; explicit transaction rollback restores it",
+      "passed": true
+    },
+    {
+      "name": "CREATE INDEX CONCURRENTLY is rejected inside a transaction block",
+      "passed": true
+    }
+  ],
+  "observations": {
+    "fixture_rows": 50000,
+    "matching_rows": 100,
+    "result_limit": 20,
+    "before": [
+      {
+        "Node Type": "Limit",
+        "Plan Rows": 20,
+        "Actual Rows": 20.0,
+        "Actual Loops": 1,
+        "Shared Hit Blocks": 1713,
+        "Shared Read Blocks": 0
+      },
+      {
+        "Node Type": "Sort",
+        "Plan Rows": 104,
+        "Actual Rows": 20.0,
+        "Actual Loops": 1,
+        "Shared Hit Blocks": 1713,
+        "Shared Read Blocks": 0
+      },
+      {
+        "Node Type": "Seq Scan",
+        "Plan Rows": 104,
+        "Actual Rows": 100.0,
+        "Actual Loops": 1,
+        "Rows Removed by Filter": 49900,
+        "Shared Hit Blocks": 1713,
+        "Shared Read Blocks": 0
+      }
+    ],
+    "after": [
+      {
+        "Node Type": "Limit",
+        "Plan Rows": 20,
+        "Actual Rows": 20.0,
+        "Actual Loops": 1,
+        "Shared Hit Blocks": 23,
+        "Shared Read Blocks": 3
+      },
+      {
+        "Node Type": "Index Scan",
+        "Index Name": "events_lookup",
+        "Plan Rows": 97,
+        "Actual Rows": 20.0,
+        "Actual Loops": 1,
+        "Shared Hit Blocks": 23,
+        "Shared Read Blocks": 3
+      }
+    ],
+    "broad": [
+      {
+        "Node Type": "Seq Scan",
+        "Plan Rows": 40102,
+        "Actual Rows": 40000.0,
+        "Actual Loops": 1,
+        "Rows Removed by Filter": 10000,
+        "Shared Hit Blocks": 1713,
+        "Shared Read Blocks": 0
+      }
+    ],
+    "raw_before": {
+      "Plan": {
+        "Node Type": "Limit",
+        "Parallel Aware": false,
+        "Async Capable": false,
+        "Startup Cost": 2465.77,
+        "Total Cost": 2465.82,
+        "Plan Rows": 20,
+        "Plan Width": 224,
+        "Actual Startup Time": 2.736,
+        "Actual Total Time": 2.739,
+        "Actual Rows": 20.0,
+        "Actual Loops": 1,
+        "Disabled": false,
+        "Shared Hit Blocks": 1713,
+        "Shared Read Blocks": 0,
+        "Shared Dirtied Blocks": 0,
+        "Shared Written Blocks": 0,
+        "Local Hit Blocks": 0,
+        "Local Read Blocks": 0,
+        "Local Dirtied Blocks": 0,
+        "Local Written Blocks": 0,
+        "Temp Read Blocks": 0,
+        "Temp Written Blocks": 0,
+        "Plans": [
+          {
+            "Node Type": "Sort",
+            "Parent Relationship": "Outer",
+            "Parallel Aware": false,
+            "Async Capable": false,
+            "Startup Cost": 2465.77,
+            "Total Cost": 2466.03,
+            "Plan Rows": 104,
+            "Plan Width": 224,
+            "Actual Startup Time": 2.735,
+            "Actual Total Time": 2.736,
+            "Actual Rows": 20.0,
+            "Actual Loops": 1,
+            "Disabled": false,
+            "Sort Key": [
+              "created_at DESC",
+              "id DESC"
+            ],
+            "Sort Method": "top-N heapsort",
+            "Sort Space Used": 35,
+            "Sort Space Type": "Memory",
+            "Shared Hit Blocks": 1713,
+            "Shared Read Blocks": 0,
+            "Shared Dirtied Blocks": 0,
+            "Shared Written Blocks": 0,
+            "Local Hit Blocks": 0,
+            "Local Read Blocks": 0,
+            "Local Dirtied Blocks": 0,
+            "Local Written Blocks": 0,
+            "Temp Read Blocks": 0,
+            "Temp Written Blocks": 0,
+            "Plans": [
+              {
+                "Node Type": "Seq Scan",
+                "Parent Relationship": "Outer",
+                "Parallel Aware": false,
+                "Async Capable": false,
+                "Relation Name": "events",
+                "Alias": "events",
+                "Startup Cost": 0.0,
+                "Total Cost": 2463.0,
+                "Plan Rows": 104,
+                "Plan Width": 224,
+                "Actual Startup Time": 0.015,
+                "Actual Total Time": 2.699,
+                "Actual Rows": 100.0,
+                "Actual Loops": 1,
+                "Disabled": false,
+                "Filter": "((tenant_id = '7'::smallint) AND (status = 'open'::text))",
+                "Rows Removed by Filter": 49900,
+                "Shared Hit Blocks": 1713,
+                "Shared Read Blocks": 0,
+                "Shared Dirtied Blocks": 0,
+                "Shared Written Blocks": 0,
+                "Local Hit Blocks": 0,
+                "Local Read Blocks": 0,
+                "Local Dirtied Blocks": 0,
+                "Local Written Blocks": 0,
+                "Temp Read Blocks": 0,
+                "Temp Written Blocks": 0
+              }
+            ]
+          }
+        ]
+      },
+      "Planning": {
+        "Shared Hit Blocks": 65,
+        "Shared Read Blocks": 0,
+        "Shared Dirtied Blocks": 0,
+        "Shared Written Blocks": 0,
+        "Local Hit Blocks": 0,
+        "Local Read Blocks": 0,
+        "Local Dirtied Blocks": 0,
+        "Local Written Blocks": 0,
+        "Temp Read Blocks": 0,
+        "Temp Written Blocks": 0
+      },
+      "Planning Time": 1.236,
+      "Triggers": [],
+      "Execution Time": 2.758
+    },
+    "raw_after": {
+      "Plan": {
+        "Node Type": "Limit",
+        "Parallel Aware": false,
+        "Async Capable": false,
+        "Startup Cost": 0.41,
+        "Total Cost": 79.98,
+        "Plan Rows": 20,
+        "Plan Width": 224,
+        "Actual Startup Time": 0.047,
+        "Actual Total Time": 0.061,
+        "Actual Rows": 20.0,
+        "Actual Loops": 1,
+        "Disabled": false,
+        "Shared Hit Blocks": 23,
+        "Shared Read Blocks": 3,
+        "Shared Dirtied Blocks": 0,
+        "Shared Written Blocks": 0,
+        "Local Hit Blocks": 0,
+        "Local Read Blocks": 0,
+        "Local Dirtied Blocks": 0,
+        "Local Written Blocks": 0,
+        "Temp Read Blocks": 0,
+        "Temp Written Blocks": 0,
+        "Plans": [
+          {
+            "Node Type": "Index Scan",
+            "Parent Relationship": "Outer",
+            "Parallel Aware": false,
+            "Async Capable": false,
+            "Scan Direction": "Forward",
+            "Index Name": "events_lookup",
+            "Relation Name": "events",
+            "Alias": "events",
+            "Startup Cost": 0.41,
+            "Total Cost": 386.29,
+            "Plan Rows": 97,
+            "Plan Width": 224,
+            "Actual Startup Time": 0.046,
+            "Actual Total Time": 0.059,
+            "Actual Rows": 20.0,
+            "Actual Loops": 1,
+            "Disabled": false,
+            "Index Cond": "((tenant_id = '7'::smallint) AND (status = 'open'::text))",
+            "Rows Removed by Index Recheck": 0,
+            "Index Searches": 1,
+            "Shared Hit Blocks": 23,
+            "Shared Read Blocks": 3,
+            "Shared Dirtied Blocks": 0,
+            "Shared Written Blocks": 0,
+            "Local Hit Blocks": 0,
+            "Local Read Blocks": 0,
+            "Local Dirtied Blocks": 0,
+            "Local Written Blocks": 0,
+            "Temp Read Blocks": 0,
+            "Temp Written Blocks": 0
+          }
+        ]
+      },
+      "Planning": {
+        "Shared Hit Blocks": 26,
+        "Shared Read Blocks": 1,
+        "Shared Dirtied Blocks": 0,
+        "Shared Written Blocks": 0,
+        "Local Hit Blocks": 0,
+        "Local Read Blocks": 0,
+        "Local Dirtied Blocks": 0,
+        "Local Written Blocks": 0,
+        "Temp Read Blocks": 0,
+        "Temp Written Blocks": 0
+      },
+      "Planning Time": 0.173,
+      "Triggers": [],
+      "Execution Time": 0.07
+    },
+    "raw_broad": {
+      "Plan": {
+        "Node Type": "Seq Scan",
+        "Parallel Aware": false,
+        "Async Capable": false,
+        "Relation Name": "events",
+        "Alias": "events",
+        "Startup Cost": 0.0,
+        "Total Cost": 2338.0,
+        "Plan Rows": 40102,
+        "Plan Width": 234,
+        "Actual Startup Time": 0.021,
+        "Actual Total Time": 3.667,
+        "Actual Rows": 40000.0,
+        "Actual Loops": 1,
+        "Disabled": false,
+        "Filter": "(status = 'closed'::text)",
+        "Rows Removed by Filter": 10000,
+        "Shared Hit Blocks": 1713,
+        "Shared Read Blocks": 0,
+        "Shared Dirtied Blocks": 0,
+        "Shared Written Blocks": 0,
+        "Local Hit Blocks": 0,
+        "Local Read Blocks": 0,
+        "Local Dirtied Blocks": 0,
+        "Local Written Blocks": 0,
+        "Temp Read Blocks": 0,
+        "Temp Written Blocks": 0
+      },
+      "Planning": {
+        "Shared Hit Blocks": 0,
+        "Shared Read Blocks": 0,
+        "Shared Dirtied Blocks": 0,
+        "Shared Written Blocks": 0,
+        "Local Hit Blocks": 0,
+        "Local Read Blocks": 0,
+        "Local Dirtied Blocks": 0,
+        "Local Written Blocks": 0,
+        "Temp Read Blocks": 0,
+        "Temp Written Blocks": 0
+      },
+      "Planning Time": 0.027,
+      "Triggers": [],
+      "Execution Time": 4.549
+    },
+    "planner_settings": {
+      "enable_seqscan": "on",
+      "max_parallel_workers_per_gather": 0
+    }
+  },
+  "scope": "Actual PostgreSQL plans on a 50000-row fixture; counts/plans, not a benchmark"
+}

@@ -1,0 +1,30 @@
+{
+  "checked_date": "2026-10-16",
+  "method": "Read-only pypdf extraction of both user-provided PDFs; project bullets reviewed. No original project code or benchmark logs reviewed for this chapter.",
+  "sources": [
+    {
+      "file": "Rupam_Resume_Updated.pdf",
+      "sha256": "a22b4d64d808b865c40648dacba6ba429ded8796579c15a984475479e9ed7344",
+      "reported_metrics": {
+        "remapping_percent": 19.66,
+        "requests_per_second": 2046
+      },
+      "independently_reproduced_original_project": false
+    },
+    {
+      "file": "Rupam_Resume_Product.pdf",
+      "sha256": "9befe4ae513f5ef6ce1797a8733f1ef727a68d5dfc076e857119a59d50b9ef8a",
+      "reported_metrics": {
+        "remapping_percent": 19.66,
+        "requests_per_second": 2046,
+        "failed_checks_before_rerouting": 3,
+        "proxy_latency_ms_reported_before": 2459,
+        "proxy_latency_ms_reported_after": 1.6,
+        "error_percent_reported_before": 3.7,
+        "error_percent_reported_after": 0
+      },
+      "independently_reproduced_original_project": false
+    }
+  ],
+  "scope": "Reported user-resume claims only. Separate learning fixture measured 19.83% equal-key removal movement; it is not a reproduction of the original benchmark and does not validate the reported latency cause."
+}

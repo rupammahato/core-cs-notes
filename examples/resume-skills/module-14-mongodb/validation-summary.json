@@ -1,0 +1,125 @@
+{
+  "module": 14,
+  "title": "MongoDB in a Backend",
+  "verified_date": "2026-10-14",
+  "runtime": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "server_version": "7.0.28",
+  "packages": {
+    "pymongo": "4.10.1",
+    "dnspython": "2.8.0"
+  },
+  "database_checks": {
+    "counts": {
+      "core": 17,
+      "queries": 12,
+      "indexes": 10,
+      "atomic": 6,
+      "transactions": 15,
+      "pool": 5
+    },
+    "total": 65,
+    "all_passed": true
+  },
+  "isolation": {
+    "port": 56698,
+    "existing_service_touched": false,
+    "authentication": "disabled for owned loopback fixture",
+    "tls": false,
+    "replica_set_members": 1,
+    "server_version": "7.0.28",
+    "owned_dbpath_verified": true,
+    "writable_primary": true,
+    "storage_engine": "wiredTiger",
+    "graceful_shutdown": true,
+    "listener_stopped": true,
+    "temporary_cluster_removed": true
+  },
+  "existing_service_observed": {
+    "Name": "MongoDB",
+    "Status": 4
+  },
+  "content": {
+    "questions": 30,
+    "practice_tasks": 10,
+    "unchecked_learning_items": 12,
+    "exact_embedded_sources": {
+      "catalog.py": true,
+      "purchase.py": true,
+      "db.py": true,
+      "queries.py": true,
+      "pagination.py": true,
+      "verify_atomic.py": true,
+      "verify_indexes.py": true
+    },
+    "recorded_json_fidelity": {
+      "core": true,
+      "atomic": true,
+      "transactions": true,
+      "queries": true,
+      "pool": true,
+      "indexes": true
+    }
+  },
+  "website": {
+    "build_passed": true,
+    "static_pages": 90,
+    "font_validation": "Cached Google font responses supplied through build environment; source font configuration unchanged",
+    "routes_checked": 18,
+    "all_routes_200": true,
+    "assertions": {
+      "title": true,
+      "q30": true,
+      "implementation": true,
+      "totalChecks": true,
+      "databaseEvidence": true,
+      "architecture": true,
+      "nextCaching": true,
+      "group": true,
+      "roadmapLink": true,
+      "previousLink": true
+    },
+    "search": {
+      "status": 200,
+      "results": 24,
+      "chapterIndexed": true,
+      "scoped": true
+    },
+    "temporary_server_closed": true
+  },
+  "ports_stopped": {
+    "3000": true,
+    "54632": true,
+    "56698": true
+  },
+  "git_diff_check_passed": true,
+  "trailing_whitespace_files": [],
+  "core_handbooks": [
+    {
+      "subject": "DSA Notes",
+      "files": 17,
+      "lines": 17589
+    },
+    {
+      "subject": "OOP Notes",
+      "files": 13,
+      "lines": 8806
+    },
+    {
+      "subject": "OS Notes",
+      "files": 13,
+      "lines": 6341
+    },
+    {
+      "subject": "DBMS Notes",
+      "files": 13,
+      "lines": 9613
+    },
+    {
+      "subject": "CN Notes",
+      "files": 13,
+      "lines": 9322
+    }
+  ],
+  "next_module": "M15: Caching, Background Jobs and Data Ingestion",
+  "scope": "Real local MongoDB single-member replica-set engine/driver checks; no HTTP/authentication/remote TLS, failover, sharding, load benchmark, TTL deletion, external delivery or crash/backup recovery test"
+}

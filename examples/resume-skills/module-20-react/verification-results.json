@@ -1,0 +1,424 @@
+{
+  "module": 20,
+  "verified_date": "2026-10-15",
+  "node": "v22.14.0",
+  "dependencies": {
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "tools": {
+    "esbuild": "0.28.2",
+    "playwright-core": "1.64.1"
+  },
+  "checks": [
+    {
+      "group": "accessibility",
+      "name": "document_language_and_main_landmark",
+      "passed": true
+    },
+    {
+      "group": "state",
+      "name": "three_snapshot_replacements_increment_once",
+      "passed": true
+    },
+    {
+      "group": "state",
+      "name": "setter_does_not_rewrite_current_handler_snapshot",
+      "passed": true
+    },
+    {
+      "group": "state",
+      "name": "three_pure_updaters_increment_three_times",
+      "passed": true
+    },
+    {
+      "group": "state",
+      "name": "stored_closure_keeps_its_render_snapshot",
+      "passed": true
+    },
+    {
+      "group": "state",
+      "name": "ref_mutation_does_not_publish_ui_state",
+      "passed": true
+    },
+    {
+      "group": "state",
+      "name": "event_can_read_and_publish_current_ref",
+      "passed": true
+    },
+    {
+      "group": "state",
+      "name": "immutable_update_changes_rendered_nested_value",
+      "passed": true
+    },
+    {
+      "group": "state",
+      "name": "previous_object_and_nested_identity_remain_distinct",
+      "passed": true
+    },
+    {
+      "group": "identity",
+      "name": "stable_key_keeps_draft_with_logical_item",
+      "passed": true
+    },
+    {
+      "group": "identity",
+      "name": "stable_reorder_reuses_the_input_dom_node",
+      "passed": true
+    },
+    {
+      "group": "identity",
+      "name": "index_counterexample_misassigns_draft_after_reorder",
+      "passed": true
+    },
+    {
+      "group": "identity",
+      "name": "same_type_position_key_preserves_editor_state",
+      "passed": true
+    },
+    {
+      "group": "identity",
+      "name": "new_key_resets_editor_state",
+      "passed": true
+    },
+    {
+      "group": "identity",
+      "name": "previously_unmounted_key_does_not_cache_old_state",
+      "passed": true
+    },
+    {
+      "group": "effects",
+      "name": "ordinary_mount_has_one_active_subscription",
+      "passed": true
+    },
+    {
+      "group": "effects",
+      "name": "unchanged_dependency_does_not_reconnect",
+      "passed": true
+    },
+    {
+      "group": "effects",
+      "name": "changed_dependency_cleans_old_before_new_setup",
+      "passed": true
+    },
+    {
+      "group": "effects",
+      "name": "conditional_unmount_releases_external_resource",
+      "passed": true
+    },
+    {
+      "group": "effects",
+      "name": "remount_creates_one_new_subscription",
+      "passed": true
+    },
+    {
+      "group": "forms",
+      "name": "blank_trimmed_value_has_visible_error",
+      "passed": true
+    },
+    {
+      "group": "accessibility",
+      "name": "invalid_input_links_its_error",
+      "passed": true
+    },
+    {
+      "group": "forms",
+      "name": "controlled_field_reflects_typed_value",
+      "passed": true
+    },
+    {
+      "group": "forms",
+      "name": "enter_submits_trimmed_value_without_navigation",
+      "passed": true
+    },
+    {
+      "group": "forms",
+      "name": "successful_submit_clears_invalid_state",
+      "passed": true
+    },
+    {
+      "group": "forms",
+      "name": "derived_filter_and_sibling_count_agree",
+      "passed": true
+    },
+    {
+      "group": "forms",
+      "name": "controlled_checkbox_combines_with_filter",
+      "passed": true
+    },
+    {
+      "group": "accessibility",
+      "name": "ref_focus_reaches_named_input",
+      "passed": true
+    },
+    {
+      "group": "accessibility",
+      "name": "native_button_supports_keyboard_activation",
+      "passed": true
+    },
+    {
+      "group": "sharing",
+      "name": "provider_update_reaches_context_consumer",
+      "passed": true
+    },
+    {
+      "group": "sharing",
+      "name": "memo_skips_child_commit_for_unchanged_props_in_this_run",
+      "passed": true
+    },
+    {
+      "group": "sharing",
+      "name": "changed_prop_updates_memo_child_and_derived_value",
+      "passed": true
+    },
+    {
+      "group": "sharing",
+      "name": "stable_callback_requests_parent_state_update",
+      "passed": true
+    },
+    {
+      "group": "api",
+      "name": "idle_ui_does_not_fetch_before_query",
+      "passed": true
+    },
+    {
+      "group": "api",
+      "name": "held_request_displays_loading_and_busy_state",
+      "passed": true
+    },
+    {
+      "group": "api",
+      "name": "successful_http_response_renders_items",
+      "passed": true
+    },
+    {
+      "group": "api",
+      "name": "query_change_aborts_old_browser_fetch",
+      "passed": true
+    },
+    {
+      "group": "api",
+      "name": "empty_success_has_distinct_ui",
+      "passed": true
+    },
+    {
+      "group": "api",
+      "name": "http_503_is_checked_and_rendered_as_error",
+      "passed": true
+    },
+    {
+      "group": "api",
+      "name": "retry_uses_current_query_and_recovers",
+      "passed": true
+    },
+    {
+      "group": "api",
+      "name": "invalid_success_payload_fails_runtime_contract",
+      "passed": true
+    },
+    {
+      "group": "api",
+      "name": "api_text_is_rendered_as_text_not_raw_html",
+      "passed": true
+    },
+    {
+      "group": "api",
+      "name": "unmount_aborts_pending_request_and_removes_view",
+      "passed": true
+    },
+    {
+      "group": "api",
+      "name": "inactive_result_is_ignored_even_when_transport_does_not_abort",
+      "passed": true
+    },
+    {
+      "group": "strict",
+      "name": "development_root_strict_mode_probes_setup_cleanup_setup",
+      "passed": true
+    },
+    {
+      "group": "strict",
+      "name": "development_probe_leaves_one_active_resource",
+      "passed": true
+    },
+    {
+      "group": "strict",
+      "name": "production_build_has_no_extra_development_effect_probe",
+      "passed": true
+    },
+    {
+      "group": "accessibility",
+      "name": "narrow_viewport_has_no_horizontal_overflow",
+      "passed": true
+    },
+    {
+      "group": "effects",
+      "name": "root_unmount_releases_subscription_and_dom",
+      "passed": true
+    },
+    {
+      "group": "browser",
+      "name": "no_uncaught_react_or_application_exceptions",
+      "passed": true
+    }
+  ],
+  "counts": {
+    "accessibility": 5,
+    "api": 11,
+    "browser": 1,
+    "effects": 6,
+    "forms": 6,
+    "identity": 6,
+    "sharing": 4,
+    "state": 8,
+    "strict": 3
+  },
+  "total": 50,
+  "observations": {
+    "browser": {
+      "version": "155.0.8059.40",
+      "executable": "C:/Program Files/Google/Chrome/Application/chrome.exe",
+      "headless": true
+    },
+    "snapshot": {
+      "type": "snapshot",
+      "before": 0,
+      "afterInHandler": 0
+    },
+    "immutable": {
+      "type": "immutable-update",
+      "previousTheme": "light",
+      "sameObject": false,
+      "sameNested": false
+    },
+    "indexCounterexample": {
+      "alpha": "Beta",
+      "beta": "Alpha edited"
+    },
+    "effectTransition": [
+      {
+        "type": "subscription-setup",
+        "topic": "react"
+      },
+      {
+        "type": "subscription-cleanup",
+        "topic": "react"
+      },
+      {
+        "type": "subscription-setup",
+        "topic": "node"
+      }
+    ],
+    "race": {
+      "newer_visible": [
+        "Fast result"
+      ],
+      "events": [
+        {
+          "type": "request-start",
+          "query": "slow"
+        },
+        {
+          "type": "request-cleanup",
+          "query": "slow"
+        },
+        {
+          "type": "request-start",
+          "query": "fast"
+        },
+        {
+          "type": "request-success",
+          "query": "fast"
+        },
+        {
+          "type": "ignored-result",
+          "query": "slow"
+        }
+      ]
+    },
+    "strict": {
+      "development": [
+        {
+          "type": "subscription-setup",
+          "topic": "react"
+        },
+        {
+          "type": "subscription-cleanup",
+          "topic": "react"
+        },
+        {
+          "type": "subscription-setup",
+          "topic": "react"
+        }
+      ],
+      "production": [
+        {
+          "type": "subscription-setup",
+          "topic": "react"
+        }
+      ]
+    },
+    "api": {
+      "requests": [
+        {
+          "query": "slow"
+        },
+        {
+          "query": "node"
+        },
+        {
+          "query": "empty"
+        },
+        {
+          "query": "error"
+        },
+        {
+          "query": "error"
+        },
+        {
+          "query": "malformed"
+        },
+        {
+          "query": "html"
+        },
+        {
+          "query": "slow"
+        },
+        {
+          "query": "slow"
+        },
+        {
+          "query": "fast"
+        }
+      ],
+      "server_events": [
+        {
+          "event": "slow-held"
+        },
+        {
+          "event": "client-disconnected",
+          "query": "slow"
+        },
+        {
+          "event": "slow-held"
+        },
+        {
+          "event": "client-disconnected",
+          "query": "slow"
+        },
+        {
+          "event": "slow-held"
+        }
+      ]
+    },
+    "pageErrors": []
+  },
+  "cleanup": {
+    "browser_closed": true,
+    "loopback_ports_closed": {
+      "58417": true
+    },
+    "docker_started": false
+  },
+  "scope": "Actual headless installed Chrome, development/production React bundles, browser DOM/keyboard and same-origin local HTTP. No screen-reader audit, framework SSR/hydration, real authentication/backend or performance benchmark."
+}

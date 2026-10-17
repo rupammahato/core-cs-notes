@@ -1,0 +1,22 @@
+PASS HMAC SHA256 matches RFC 4231 known vector: "b0344c61d8db38535ca8afceaf0bf12b881dc200c9833da726e9376c2e32cff7"
+PASS verification preserves raw whitespace and rejects reserialization: {"exactBytesAccepted":true,"reserializedRejected":true}
+PASS old secret works only while explicitly configured: {"status":401,"code":"invalid_signature"}
+PASS acceptance is inbox commit rather than credit completion: {"state":"pending","credits":0,"inboxRows":1}
+PASS worker commits credit, paid order, receipt and outbox together: {"credits":100,"ledgerRows":1,"order":"paid","receipt":"processed","outboxRows":1}
+PASS same event replay returns duplicate without a second effect: {"duplicate":true,"credits":100,"outboxRows":1}
+PASS new delivery ID for same signed payment cannot grant twice: {"receiptRows":2,"ledgerRows":1,"credits":100}
+PASS captured then authorized or failed cannot downgrade capture/order: {"payment":"captured","order":"paid","credits":100}
+PASS second captured payment for funded order enters review: {"reason":"order_already_funded","credits":100}
+PASS failed attempt does not close order to a later successful attempt: {"failedAttemptCredits":0,"finalOrder":"paid","credits":100}
+PASS wrong amount quarantined without credit: {"state":"review","reason":"amount_or_currency_mismatch","credits":0}
+PASS wrong currency quarantined without credit: {"state":"review","reason":"amount_or_currency_mismatch","credits":0}
+PASS unknown order quarantined without credit: {"state":"review","reason":"unknown_order","credits":0}
+PASS other tenant order through alpha endpoint quarantined without credit: {"state":"review","reason":"unknown_order","credits":0}
+PASS payload notes cannot choose tenant or number of credits: {"alphaCredits":100,"betaCredits":0}
+PASS payment identity cannot be rebound to a different order: {"reason":"payment_identity_conflict","credits":100}
+PASS same provider event ID is scoped to configured endpoint: {"alphaCredits":100,"betaCredits":100}
+PASS same endpoint event ID with changed bytes conflicts: {"status":409,"code":"event_id_conflict"}
+PASS injected failure after ledger insert rolls back every business effect: {"credits":0,"ledgerRows":0,"outboxRows":0,"receipt":"pending"}
+PASS retry after rollback grants once: {"credits":100,"ledgerRows":1}
+PASS outbox retry after accepted send can repeat delivery but not idempotent sink effect: {"deliveryAttempts":2,"sinkEffects":1,"outbox":"sent"}
+Verified 21 core checks.

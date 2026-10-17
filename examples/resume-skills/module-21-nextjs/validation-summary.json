@@ -1,0 +1,206 @@
+{
+  "module": 21,
+  "title": "Next.js, API Routes and Tailwind",
+  "verified_date": "2026-10-15",
+  "node": "v22.14.0",
+  "dependencies": {
+    "next": "14.2.35",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "tailwindcss": "3.4.19",
+    "typescript": "5.9.3",
+    "playwright-core": "1.64.1"
+  },
+  "browser": {
+    "executable": "C:/Program Files/Google/Chrome/Application/chrome.exe",
+    "version": "155.0.8059.40",
+    "headless": true
+  },
+  "checks": {
+    "counts": {
+      "api": 11,
+      "boundary": 3,
+      "browser": 1,
+      "browser_api": 2,
+      "build": 4,
+      "cache": 7,
+      "errors": 2,
+      "hydration": 3,
+      "middleware": 2,
+      "pages_api": 5,
+      "rendering": 5,
+      "routing": 4,
+      "streaming": 2,
+      "tailwind": 3
+    },
+    "total": 54,
+    "all_passed": true
+  },
+  "cleanup": {
+    "browser_closed": true,
+    "loopback_ports_closed": {
+      "64190": true,
+      "64191": true
+    },
+    "docker_started": false
+  },
+  "content": {
+    "chapter": "resume-skills-handbook-part-23-module-21-nextjs-api-routes-tailwind.md",
+    "words": 8267,
+    "lines": 1053,
+    "questions": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30
+    ],
+    "practice_tasks": 10,
+    "unchecked_learning_items": 12,
+    "source_fidelity": {
+      "app/dashboard/layout.tsx": true,
+      "components/Counter.tsx": true,
+      "lib/topics.ts": true,
+      "app/catalog/[slug]/page.tsx": true,
+      "app/dashboard/page.tsx": true,
+      "app/api/topics/[slug]/route.ts": true,
+      "lib/contract.ts": true,
+      "app/api/echo/route.ts": true,
+      "pages/api/legacy-echo.ts": true,
+      "components/TopicLookup.tsx": true,
+      "app/cache/page.tsx": true,
+      "app/api/revalidate/route.ts": true,
+      "app/isr/page.tsx": true,
+      "app/stream/page.tsx": true,
+      "app/broken/error.tsx": true,
+      "middleware.ts": true,
+      "tailwind.config.cjs": true,
+      "postcss.config.cjs": true,
+      "app/globals.css": true
+    },
+    "counts": {
+      "api": 11,
+      "boundary": 3,
+      "browser": 1,
+      "browser_api": 2,
+      "build": 4,
+      "cache": 7,
+      "errors": 2,
+      "hydration": 3,
+      "middleware": 2,
+      "pages_api": 5,
+      "rendering": 5,
+      "routing": 4,
+      "streaming": 2,
+      "tailwind": 3
+    },
+    "total": 54,
+    "desktop_and_mobile_screenshots_inspected": true,
+    "result_fidelity": {
+      "build": true,
+      "cache": true,
+      "isr": true,
+      "layout": true,
+      "versions": true
+    }
+  },
+  "dependency_audit": {
+    "info": 0,
+    "low": 0,
+    "moderate": 2,
+    "high": 6,
+    "critical": 1,
+    "total": 9
+  },
+  "website": {
+    "build_passed": true,
+    "static_pages": 97,
+    "routes_checked": 25,
+    "all_routes_200": true,
+    "assertions": {
+      "title": true,
+      "q30": true,
+      "implementation": true,
+      "totalChecks": true,
+      "cacheEvidence": true,
+      "buildEvidence": true,
+      "architecture": true,
+      "versionBoundary": true,
+      "auditBoundary": true,
+      "nextModule": true,
+      "group": true,
+      "roadmapLink": true,
+      "previousLink": true
+    },
+    "search": {
+      "status": 200,
+      "results": 18,
+      "chapterIndexed": true,
+      "scoped": true
+    },
+    "temporary_server_closed": true,
+    "cached_font_fixture_used": true
+  },
+  "ports_stopped": {
+    "3000": true,
+    "64136": true,
+    "64190": true,
+    "64191": true
+  },
+  "git_diff_check_passed": true,
+  "trailing_whitespace_files": [],
+  "core_handbooks": [
+    {
+      "subject": "DSA Notes",
+      "files": 17,
+      "lines": 17589
+    },
+    {
+      "subject": "OOP Notes",
+      "files": 13,
+      "lines": 8806
+    },
+    {
+      "subject": "OS Notes",
+      "files": 13,
+      "lines": 6341
+    },
+    {
+      "subject": "DBMS Notes",
+      "files": 13,
+      "lines": 9613
+    },
+    {
+      "subject": "CN Notes",
+      "files": 13,
+      "lines": 9322
+    }
+  ],
+  "next_module": "M22: LLM and AI API Fundamentals",
+  "scope": "Actual Next.js 14 production build/server, App and Pages APIs, same-origin browser DOM, controlled local origin, cache/tag/ISR, streaming, error recovery and compiled Tailwind 3. No hosted Edge/CDN, real login/database, Server Actions, production deployment or full accessibility/performance audit."
+}

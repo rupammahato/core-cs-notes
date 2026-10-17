@@ -1,0 +1,11 @@
+{
+  "first_load_failed": "MinGW 32-bit pseudo relocation; rebuilt with -mcmodel=large",
+  "isolated_failed_cluster_port": 61386,
+  "port_closed": true,
+  "data_directory_removed": true,
+  "system_service_touched": false,
+  "failed_cross_compiler_attempts": 2,
+  "failed_test_clusters_removed": true,
+  "delivered_runtime": "conda-forge PostgreSQL 16.15 / pgvector 0.8.6",
+  "failed_build_files_removed": true
+}

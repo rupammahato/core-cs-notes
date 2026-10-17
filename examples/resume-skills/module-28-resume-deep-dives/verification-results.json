@@ -1,0 +1,544 @@
+{
+  "module": 28,
+  "verified_date": "2026-10-16",
+  "python": "3.12.10",
+  "sqlite": "3.49.1",
+  "os": "Windows-11-10.0.26300-SP0",
+  "total": 81,
+  "counts": {
+    "hierarchy": 12,
+    "sla": 21,
+    "sheet": 18,
+    "costs": 12,
+    "metrics": 5,
+    "evidence": 13
+  },
+  "checks": [
+    {
+      "group": "hierarchy",
+      "name": "Breadth-first order with indirect report",
+      "passed": true
+    },
+    {
+      "group": "hierarchy",
+      "name": "Cycle does not re-add root",
+      "passed": true
+    },
+    {
+      "group": "hierarchy",
+      "name": "Diamond does not duplicate shared report",
+      "passed": true
+    },
+    {
+      "group": "hierarchy",
+      "name": "Leaf has no reports",
+      "passed": true
+    },
+    {
+      "group": "hierarchy",
+      "name": "Duplicate relation does not duplicate report",
+      "passed": true
+    },
+    {
+      "group": "hierarchy",
+      "name": "Cross-tenant root rejected",
+      "passed": true
+    },
+    {
+      "group": "hierarchy",
+      "name": "Unknown root rejected",
+      "passed": true
+    },
+    {
+      "group": "hierarchy",
+      "name": "Cross-tenant intermediate edge rejected",
+      "passed": true
+    },
+    {
+      "group": "hierarchy",
+      "name": "Missing referenced person rejected",
+      "passed": true
+    },
+    {
+      "group": "hierarchy",
+      "name": "Unknown polymorphic type rejected",
+      "passed": true
+    },
+    {
+      "group": "hierarchy",
+      "name": "Traversal overflow returns no partial policy set",
+      "passed": true
+    },
+    {
+      "group": "hierarchy",
+      "name": "Invalid traversal bound rejected",
+      "passed": true
+    },
+    {
+      "group": "sla",
+      "name": "Zero working days keeps start",
+      "passed": true
+    },
+    {
+      "group": "sla",
+      "name": "Weekend skipped",
+      "passed": true
+    },
+    {
+      "group": "sla",
+      "name": "Explicit holiday skipped",
+      "passed": true
+    },
+    {
+      "group": "sla",
+      "name": "Negative working-day count rejected",
+      "passed": true
+    },
+    {
+      "group": "sla",
+      "name": "Datetime cannot silently replace business date",
+      "passed": true
+    },
+    {
+      "group": "sla",
+      "name": "Before deadline emits no alerts",
+      "passed": true
+    },
+    {
+      "group": "sla",
+      "name": "Due day emits no overdue alerts",
+      "passed": true
+    },
+    {
+      "group": "sla",
+      "name": "First late scan queues per-tenant tier-one rows",
+      "passed": true
+    },
+    {
+      "group": "sla",
+      "name": "Repeated scan creates no duplicate tier",
+      "passed": true
+    },
+    {
+      "group": "sla",
+      "name": "Completed task excluded",
+      "passed": true
+    },
+    {
+      "group": "sla",
+      "name": "Fresh connection retains dedupe state",
+      "passed": true
+    },
+    {
+      "group": "sla",
+      "name": "Later tier independently queues once",
+      "passed": true
+    },
+    {
+      "group": "sla",
+      "name": "Valid transition advances version",
+      "passed": true
+    },
+    {
+      "group": "sla",
+      "name": "Stale expected version rejected",
+      "passed": true
+    },
+    {
+      "group": "sla",
+      "name": "Unsupported state reversal rejected",
+      "passed": true
+    },
+    {
+      "group": "sla",
+      "name": "Foreign-tenant task not found",
+      "passed": true
+    },
+    {
+      "group": "sla",
+      "name": "Audit constraint failure rejects transaction",
+      "passed": true
+    },
+    {
+      "group": "sla",
+      "name": "Failed audit insert rolls back task update",
+      "passed": true
+    },
+    {
+      "group": "sla",
+      "name": "Successful terminal transition audited",
+      "passed": true
+    },
+    {
+      "group": "sla",
+      "name": "Next scan does not create more alerts for done task",
+      "passed": true
+    },
+    {
+      "group": "sla",
+      "name": "Scan refuses implicit datetime policy",
+      "passed": true
+    },
+    {
+      "group": "sheet",
+      "name": "Blank timestamp normalizes to null",
+      "passed": true
+    },
+    {
+      "group": "sheet",
+      "name": "Explicit offset converts to UTC",
+      "passed": true
+    },
+    {
+      "group": "sheet",
+      "name": "Naive timestamp rejected without source policy",
+      "passed": true
+    },
+    {
+      "group": "sheet",
+      "name": "Explicit naive-source offset applied",
+      "passed": true
+    },
+    {
+      "group": "sheet",
+      "name": "Malformed timestamp rejected",
+      "passed": true
+    },
+    {
+      "group": "sheet",
+      "name": "Blank-timestamp stable ID updates one row",
+      "passed": true
+    },
+    {
+      "group": "sheet",
+      "name": "Nested omitted score survives patch",
+      "passed": true
+    },
+    {
+      "group": "sheet",
+      "name": "Omitted child collection survives patch",
+      "passed": true
+    },
+    {
+      "group": "sheet",
+      "name": "Array replacement is explicit policy",
+      "passed": true
+    },
+    {
+      "group": "sheet",
+      "name": "Null is stored rather than implicit deletion",
+      "passed": true
+    },
+    {
+      "group": "sheet",
+      "name": "Equal external IDs isolated by tenant",
+      "passed": true
+    },
+    {
+      "group": "sheet",
+      "name": "Equal external IDs isolated by source",
+      "passed": true
+    },
+    {
+      "group": "sheet",
+      "name": "Missing stable identity rejected",
+      "passed": true
+    },
+    {
+      "group": "sheet",
+      "name": "Conflicting timestamp identity fails closed",
+      "passed": true
+    },
+    {
+      "group": "sheet",
+      "name": "Blank patch timestamp preserves previous timestamp",
+      "passed": true
+    },
+    {
+      "group": "sheet",
+      "name": "Invalid later batch row rejects whole transaction",
+      "passed": true
+    },
+    {
+      "group": "sheet",
+      "name": "Earlier row change rolled back with batch",
+      "passed": true
+    },
+    {
+      "group": "sheet",
+      "name": "Missing tenant rejected",
+      "passed": true
+    },
+    {
+      "group": "costs",
+      "name": "Input-token unit denominator applied",
+      "passed": true
+    },
+    {
+      "group": "costs",
+      "name": "Output-token rate remains separate",
+      "passed": true
+    },
+    {
+      "group": "costs",
+      "name": "Per-image charge uses per-image units",
+      "passed": true
+    },
+    {
+      "group": "costs",
+      "name": "Mixed unit lines sum to synthetic total",
+      "passed": true
+    },
+    {
+      "group": "costs",
+      "name": "Settlement rounds at declared microdollar precision",
+      "passed": true
+    },
+    {
+      "group": "costs",
+      "name": "Binary float rate rejected",
+      "passed": true
+    },
+    {
+      "group": "costs",
+      "name": "Negative usage rejected",
+      "passed": true
+    },
+    {
+      "group": "costs",
+      "name": "Zero denominator rejected",
+      "passed": true
+    },
+    {
+      "group": "costs",
+      "name": "Nonfinite decimal rejected",
+      "passed": true
+    },
+    {
+      "group": "costs",
+      "name": "Malformed decimal rejected",
+      "passed": true
+    },
+    {
+      "group": "costs",
+      "name": "Zero usage has zero cost",
+      "passed": true
+    },
+    {
+      "group": "costs",
+      "name": "Round total rather than each tiny line",
+      "passed": true
+    },
+    {
+      "group": "metrics",
+      "name": "Synthetic growth example equals reported percentage only arithmetically",
+      "passed": true
+    },
+    {
+      "group": "metrics",
+      "name": "Decrease has negative growth",
+      "passed": true
+    },
+    {
+      "group": "metrics",
+      "name": "Zero baseline cannot produce percent growth",
+      "passed": true
+    },
+    {
+      "group": "metrics",
+      "name": "Nonfinite baseline rejected",
+      "passed": true
+    },
+    {
+      "group": "metrics",
+      "name": "45 of 49 commit ratio does not equal work fraction",
+      "passed": true
+    },
+    {
+      "group": "evidence",
+      "name": "Rupam_Resume_Updated.pdf checksum matches user PDF",
+      "passed": true
+    },
+    {
+      "group": "evidence",
+      "name": "Rupam_Resume_Updated.pdf contains seven distinct projects",
+      "passed": true
+    },
+    {
+      "group": "evidence",
+      "name": "Rupam_Resume_Updated.pdf keeps reported scope explicit",
+      "passed": true
+    },
+    {
+      "group": "evidence",
+      "name": "Rupam_Resume_Product.pdf checksum matches user PDF",
+      "passed": true
+    },
+    {
+      "group": "evidence",
+      "name": "Rupam_Resume_Product.pdf contains seven distinct projects",
+      "passed": true
+    },
+    {
+      "group": "evidence",
+      "name": "Rupam_Resume_Product.pdf keeps reported scope explicit",
+      "passed": true
+    },
+    {
+      "group": "evidence",
+      "name": "neosophical has both resume excerpts",
+      "passed": true
+    },
+    {
+      "group": "evidence",
+      "name": "datsol has both resume excerpts",
+      "passed": true
+    },
+    {
+      "group": "evidence",
+      "name": "10x has both resume excerpts",
+      "passed": true
+    },
+    {
+      "group": "evidence",
+      "name": "zyke has both resume excerpts",
+      "passed": true
+    },
+    {
+      "group": "evidence",
+      "name": "load-balancer has both resume excerpts",
+      "passed": true
+    },
+    {
+      "group": "evidence",
+      "name": "megalith has both resume excerpts",
+      "passed": true
+    },
+    {
+      "group": "evidence",
+      "name": "membition has both resume excerpts",
+      "passed": true
+    }
+  ],
+  "observations": {
+    "hierarchy": {
+      "manager": "m",
+      "tenant": "alpha",
+      "breadth_first_reports": [
+        "a",
+        "b",
+        "c"
+      ],
+      "cross_tenant_edge": "rejected",
+      "scope": "Hand-authored graph; line and escalation are illustrative allowed relations, not recovered project semantics."
+    },
+    "sla": {
+      "working_day_example": {
+        "start": "2026-10-16",
+        "days": 2,
+        "explicit_holiday": "2026-10-20",
+        "due": "2026-10-21"
+      },
+      "alerts": [
+        [
+          "alpha",
+          "t1",
+          1,
+          "2026-10-21",
+          "pending"
+        ],
+        [
+          "alpha",
+          "t1",
+          2,
+          "2026-10-23",
+          "pending"
+        ],
+        [
+          "beta",
+          "t1",
+          1,
+          "2026-10-21",
+          "pending"
+        ],
+        [
+          "beta",
+          "t1",
+          2,
+          "2026-10-23",
+          "pending"
+        ]
+      ],
+      "final_alpha_task": [
+        "done",
+        2
+      ],
+      "scope": "Real SQLite transactions and reopen persistence. Toy calendar/date and tier policy; no real bureau rules, timezone scheduling or external alert delivery."
+    },
+    "sheet": {
+      "utc_offset_example": "2026-10-16T04:30:00+00:00",
+      "alpha_sheet1": {
+        "external_id": "r1",
+        "observed_at": "2026-10-16T04:30:00+00:00",
+        "payload": {
+          "children": [
+            {
+              "id": "c1"
+            }
+          ],
+          "name": "two",
+          "scores": {
+            "a": 3,
+            "b": 2
+          }
+        }
+      },
+      "rows_across_tenants_and_sources": 3,
+      "scope": "Real SQLite batch rollback and scoped external-ID upserts. Partial unique nonblank timestamp is a toy source contract; no original MongoDB/OneDrive sync was reproduced."
+    },
+    "costs": {
+      "synthetic_lines": [
+        {
+          "kind": "input_tokens",
+          "usage": "1200",
+          "usd_per_million": "2"
+        },
+        {
+          "kind": "output_tokens",
+          "usage": "300",
+          "usd_per_million": "8"
+        },
+        {
+          "kind": "images",
+          "usage": "2",
+          "usd_per_image": "0.04"
+        }
+      ],
+      "estimate": {
+        "unrounded_usd": "0.0848",
+        "settled_usd": "0.084800",
+        "scope": "Synthetic usage arithmetic; no provider call, billing reconciliation or ledger debit."
+      },
+      "scope": "Invented teaching prices, not live provider rates or the resume USD 0.05 claim."
+    },
+    "metrics": {
+      "synthetic_growth": {
+        "before": 10000,
+        "after": 14270,
+        "percent": "42.700"
+      },
+      "reported_commit_ratio": {
+        "numerator": 45,
+        "denominator": 49,
+        "percent_arithmetic": "91.83673469387755102040816327"
+      },
+      "scope": "Growth counts are invented examples, not Megalith analytics. Commit-count ratio is arithmetic over a reported claim, not independent Git evidence or effort attribution."
+    }
+  },
+  "cleanup": {
+    "temporary_directory_removed": true,
+    "sqlite_connections_closed": true,
+    "persistent_listener_started": false
+  },
+  "scope": "Original teaching models over hand-authored inputs and real local SQLite transactions; resume catalogue fidelity. No original employer/project code, production metrics, provider calls or payroll compliance reproduced."
+}

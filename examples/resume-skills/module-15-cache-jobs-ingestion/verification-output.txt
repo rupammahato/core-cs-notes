@@ -1,0 +1,63 @@
+PASS cache: hit reuses a loaded value without another primary read
+PASS cache: manual monotonic clock expires at the exact configured boundary
+PASS cache: negative lookup uses its shorter independent TTL
+PASS cache: tenant and representation participate in cache identity
+PASS cache: invalid trusted scope including boolean tenant is rejected
+PASS cache: bounded entries evict the least recently used member
+PASS cache: caller and loader mutations cannot modify the saved value
+PASS cache: eight coordinated callers share one load with seven observed waiters
+PASS cache: failed load clears its flight and is not cached
+PASS cache: invalidation generation prevents a late old load from repopulating cache
+
+PASS jobs: tenant operation key deduplicates producer requests durably
+PASS jobs: same producer key with changed payload is rejected
+PASS jobs: another tenant has an independent operation identity
+PASS jobs: boolean amount is rejected before enqueue
+PASS jobs: future scheduled work is ineligible until its due time
+PASS jobs: separate concurrent SQLite connections give one active job owner
+PASS jobs: expired lease rotates ownership and rejects old completion and failure
+PASS jobs: local business effect and job completion commit once together
+PASS jobs: failure between effect and done rolls both back then permits lease recovery
+PASS jobs: transient failure schedules capped backoff instead of immediate retry
+PASS jobs: permanent failure becomes terminal without an endless retry
+PASS jobs: abandoned leases eventually reach the configured attempt limit
+PASS jobs: committed job state and effect are visible through a new connection
+
+PASS formats: UTF-8 BOM and quoted comma parse with aware UTC timestamp normalization
+PASS formats: CSV header mismatch is rejected
+PASS formats: invalid UTF-8 is rejected
+PASS formats: missing CSV column is rejected
+PASS formats: fractional minor-unit amount is rejected
+PASS formats: negative minor-unit amount is rejected
+PASS formats: naive source timestamp is rejected
+PASS formats: duplicate source identity within one file is rejected
+PASS formats: row count beyond configured limit is rejected
+PASS formats: raw byte budget is checked before parsing
+PASS formats: XML maps its explicit record fields into the same normalized model
+PASS formats: DTD and entity-bearing XML is rejected by defusedxml
+PASS formats: unexpected XML root is rejected
+PASS formats: real XLSX integer cells normalize to the CSV record model
+PASS formats: XLSX formula cell is rejected instead of trusting cached results
+PASS formats: unexpected extra worksheet is rejected
+PASS formats: compressed workbook expansion budget is checked before workbook loading
+PASS formats: macro project content is rejected
+PASS formats: real generated text PDF is parsed by pypdf
+PASS formats: image-or-blank PDF with no text requires OCR or review
+PASS formats: encrypted PDF is rejected without attempting password recovery
+PASS formats: PDF page budget rejects a six-page fixture
+PASS formats: spreadsheet export escapes formula-shaped text according to the fixture policy
+
+PASS ingestion: batch import commits all source records and complete checkpoint
+PASS ingestion: same immutable file replay does not duplicate records
+PASS ingestion: same import key with changed source bytes is rejected
+PASS ingestion: identical external source IDs remain independent across tenants
+PASS ingestion: higher source version updates the existing scoped record
+PASS ingestion: out-of-order older source version cannot overwrite newer data
+PASS ingestion: same source version with changed content fails without advancing checkpoint
+PASS ingestion: failure within a batch rolls back records and checkpoint together
+PASS ingestion: restart resumes from durable checkpoint after a committed batch
+PASS ingestion: concurrent same-file importers reload checkpoint inside the serialized transaction
+PASS ingestion: whole-file validation rejects bad input before database mutation
+PASS ingestion: invalid batch size and boolean tenant fail early
+
+PASS total: 58

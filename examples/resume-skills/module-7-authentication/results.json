@@ -1,0 +1,19 @@
+{
+  "node": "v22.14.0",
+  "jose": "6.2.12",
+  "passed": 86,
+  "groups": [
+    {
+      "group": "crypto",
+      "passed": 38
+    },
+    {
+      "group": "http",
+      "passed": 32
+    },
+    {
+      "group": "oauth",
+      "passed": 16
+    }
+  ]
+}

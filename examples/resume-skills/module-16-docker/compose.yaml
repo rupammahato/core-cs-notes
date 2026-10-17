@@ -1,0 +1,57 @@
+services:
+  db:
+    image: ${POSTGRES_IMAGE:-postgres:18-alpine}
+    environment:
+      POSTGRES_USER: fixture_owner
+      POSTGRES_DB: placement
+      POSTGRES_PASSWORD_FILE: /run/secrets/db_password
+    secrets:
+      - db_password
+    volumes:
+      - pgdata:/var/lib/postgresql
+      - ./bootstrap.sql:/docker-entrypoint-initdb.d/bootstrap.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U fixture_owner -d placement"]
+      interval: 1s
+      timeout: 3s
+      retries: 30
+    networks: [appnet]
+  api:
+    image: ${API_IMAGE:?Set API_IMAGE to your lesson image tag}
+    build:
+      context: .
+      args:
+        PYTHON_IMAGE: ${PYTHON_IMAGE:-python:3.12-slim}
+    environment:
+      DB_HOST: db
+      DB_NAME: placement
+      DB_USER: fixture_app
+      DB_PASSWORD_FILE: /run/secrets/db_password
+      APP_MESSAGE: ${APP_MESSAGE:-docker-lesson}
+    secrets:
+      - db_password
+    ports:
+      - target: 8080
+        published: "0"
+        host_ip: 127.0.0.1
+        protocol: tcp
+    depends_on:
+      db:
+        condition: service_healthy
+    init: true
+    read_only: true
+    tmpfs: [/tmp]
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    mem_limit: 256m
+    cpus: 0.5
+    pids_limit: 64
+    stop_grace_period: 10s
+    networks: [appnet]
+volumes:
+  pgdata:
+networks:
+  appnet:
+secrets:
+  db_password:
+    file: ./secrets/db_password.txt

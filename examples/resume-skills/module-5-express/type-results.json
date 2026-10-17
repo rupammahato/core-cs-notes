@@ -1,0 +1,34 @@
+{
+  "compilerVersion": "Version 7.0.2",
+  "node": "v22.14.0",
+  "diagnosticCodes": [
+    18046
+  ],
+  "diagnostics": "typed/unsafe.ts(4,17): error TS18046: 'request.body' is of type 'unknown'.",
+  "acceptedSource": "import express, { type RequestHandler } from 'express';\n\ntype QuoteInput = { productId: number; quantity: number };\ntype Reply = { input: QuoteInput } | { error: string };\ntype Locals = { quoteInput?: QuoteInput };\ntype Handler = RequestHandler<Record<string, string>, Reply, unknown, Record<string, unknown>, Locals>;\n\nfunction isRecord(value: unknown): value is Record<string, unknown> {\n  return typeof value === 'object' && value !== null && !Array.isArray(value);\n}\n\nexport const validate: Handler = (request, response, next) => {\n  const body = request.body; // unknown, not an already-trusted DTO.\n  if (!isRecord(body) ||\n      Object.keys(body).some(key => key !== 'productId' && key !== 'quantity')) {\n    response.status(400).json({ error: 'invalid_body' });\n    return;\n  }\n  const { productId, quantity } = body;\n  if (typeof productId !== 'number' || !Number.isSafeInteger(productId) || productId < 1 ||\n      typeof quantity !== 'number' || !Number.isSafeInteger(quantity) ||\n      quantity < 1 || quantity > 10) {\n    response.status(400).json({ error: 'invalid_values' });\n    return;\n  }\n  response.locals.quoteInput = { productId, quantity };\n  next();\n};\n\nexport const respond: Handler = (request, response) => {\n  const input = response.locals.quoteInput;\n  if (!input) {\n    response.status(500).json({ error: 'validation_missing' });\n    return;\n  }\n  response.json({ input });\n};\n\nexport function createTypedApp() {\n  const app = express();\n  app.post('/typed', express.json({ limit: '1kb' }), validate, respond);\n  return app;\n}\n",
+  "rejectedSource": "import type { RequestHandler } from 'express';\n\nconst unsafe: RequestHandler<Record<string, string>, unknown, unknown> = (request, response) => {\n  response.json(request.body.quantity);\n};\n",
+  "emittedJavaScript": "import express from 'express';\nfunction isRecord(value) {\n    return typeof value === 'object' && value !== null && !Array.isArray(value);\n}\nexport const validate = (request, response, next) => {\n    const body = request.body; // unknown, not an already-trusted DTO.\n    if (!isRecord(body) ||\n        Object.keys(body).some(key => key !== 'productId' && key !== 'quantity')) {\n        response.status(400).json({ error: 'invalid_body' });\n        return;\n    }\n    const { productId, quantity } = body;\n    if (typeof productId !== 'number' || !Number.isSafeInteger(productId) || productId < 1 ||\n        typeof quantity !== 'number' || !Number.isSafeInteger(quantity) ||\n        quantity < 1 || quantity > 10) {\n        response.status(400).json({ error: 'invalid_values' });\n        return;\n    }\n    response.locals.quoteInput = { productId, quantity };\n    next();\n};\nexport const respond = (request, response) => {\n    const input = response.locals.quoteInput;\n    if (!input) {\n        response.status(500).json({ error: 'validation_missing' });\n        return;\n    }\n    response.json({ input });\n};\nexport function createTypedApp() {\n    const app = express();\n    app.post('/typed', express.json({ limit: '1kb' }), validate, respond);\n    return app;\n}\n",
+  "runtime": {
+    "valid": {
+      "status": 200,
+      "body": {
+        "input": {
+          "productId": 7,
+          "quantity": 2
+        }
+      }
+    },
+    "invalid": {
+      "status": 400,
+      "body": {
+        "error": "invalid_values"
+      }
+    },
+    "missingMiddleware": {
+      "status": 500,
+      "body": {
+        "error": "validation_missing"
+      }
+    }
+  }
+}

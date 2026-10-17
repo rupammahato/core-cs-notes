@@ -1,0 +1,378 @@
+{
+  "module": 18,
+  "verified_date": "2026-10-14",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "os": "Windows",
+  "versions": {
+    "google-auth": "2.62.0",
+    "google-cloud-tasks": "2.26.0",
+    "cryptography": "50.0.2",
+    "requests": "2.34.2"
+  },
+  "checks": [
+    {
+      "group": "sdk",
+      "name": "protobuf_body_roundtrip",
+      "passed": true
+    },
+    {
+      "group": "sdk",
+      "name": "json_wire_body_is_base64_once",
+      "passed": true
+    },
+    {
+      "group": "sdk",
+      "name": "stable_task_name_for_same_job",
+      "passed": true
+    },
+    {
+      "group": "sdk",
+      "name": "tenant_scoped_task_names",
+      "passed": true
+    },
+    {
+      "group": "sdk",
+      "name": "explicit_audience_and_identity",
+      "passed": true
+    },
+    {
+      "group": "sdk",
+      "name": "post_and_dispatch_deadline",
+      "passed": true
+    },
+    {
+      "group": "sdk",
+      "name": "insecure_target_rejected",
+      "passed": true
+    },
+    {
+      "group": "sdk",
+      "name": "query_audience_rejected_by_worker_contract",
+      "passed": true
+    },
+    {
+      "group": "sdk",
+      "name": "bounded_payload_contract",
+      "passed": true
+    },
+    {
+      "group": "auth",
+      "name": "valid_signed_fixture_identity",
+      "passed": true
+    },
+    {
+      "group": "auth",
+      "name": "untrusted_signature_rejected",
+      "passed": true
+    },
+    {
+      "group": "auth",
+      "name": "tampered_payload_rejected",
+      "passed": true
+    },
+    {
+      "group": "auth",
+      "name": "wrong_audience_rejected",
+      "passed": true
+    },
+    {
+      "group": "auth",
+      "name": "wrong_issuer_rejected",
+      "passed": true
+    },
+    {
+      "group": "auth",
+      "name": "expired_rejected",
+      "passed": true
+    },
+    {
+      "group": "auth",
+      "name": "future_issued_at_rejected",
+      "passed": true
+    },
+    {
+      "group": "auth",
+      "name": "unauthorized_service_account_rejected",
+      "passed": true
+    },
+    {
+      "group": "auth",
+      "name": "unverified_email_rejected",
+      "passed": true
+    },
+    {
+      "group": "auth",
+      "name": "unknown_key_id_rejected",
+      "passed": true
+    },
+    {
+      "group": "auth",
+      "name": "missing_iat_rejected",
+      "passed": true
+    },
+    {
+      "group": "auth",
+      "name": "missing_bearer_rejected",
+      "passed": true
+    },
+    {
+      "group": "auth",
+      "name": "unsigned_algorithm_rejected",
+      "passed": true
+    },
+    {
+      "group": "auth",
+      "name": "malformed_token_rejected",
+      "passed": true
+    },
+    {
+      "group": "worker",
+      "name": "spoofed_task_headers_do_not_authenticate",
+      "passed": true
+    },
+    {
+      "group": "worker",
+      "name": "signed_wrong_caller_forbidden",
+      "passed": true
+    },
+    {
+      "group": "worker",
+      "name": "first_delivery_commits_before_success",
+      "passed": true
+    },
+    {
+      "group": "worker",
+      "name": "same_job_replays_without_extra_effect",
+      "passed": true
+    },
+    {
+      "group": "worker",
+      "name": "changed_payload_conflicts",
+      "passed": true
+    },
+    {
+      "group": "worker",
+      "name": "wrong_tenant_cannot_select_job",
+      "passed": true
+    },
+    {
+      "group": "worker",
+      "name": "unknown_job_rejected",
+      "passed": true
+    },
+    {
+      "group": "worker",
+      "name": "malformed_json_rejected",
+      "passed": true
+    },
+    {
+      "group": "worker",
+      "name": "unexpected_fields_rejected",
+      "passed": true
+    },
+    {
+      "group": "worker",
+      "name": "oversized_body_rejected",
+      "passed": true
+    },
+    {
+      "group": "worker",
+      "name": "wrong_method_rejected",
+      "passed": true
+    },
+    {
+      "group": "worker",
+      "name": "precommit_failure_retry_applies_once",
+      "passed": true
+    },
+    {
+      "group": "worker",
+      "name": "postcommit_failed_ack_retry_replays",
+      "passed": true
+    },
+    {
+      "group": "worker",
+      "name": "concurrent_duplicates_have_one_effect",
+      "passed": true,
+      "evidence": {
+        "201": 1,
+        "200": 15
+      }
+    },
+    {
+      "group": "worker",
+      "name": "same_job_id_distinct_tenant_is_separate",
+      "passed": true
+    },
+    {
+      "group": "worker",
+      "name": "recreated_http_worker_replays_persisted_result",
+      "passed": true
+    },
+    {
+      "group": "cache",
+      "name": "anonymous_hit_skips_real_origin",
+      "passed": true
+    },
+    {
+      "group": "cache",
+      "name": "query_variant_is_separate",
+      "passed": true
+    },
+    {
+      "group": "cache",
+      "name": "vary_header_variant_is_separate",
+      "passed": true
+    },
+    {
+      "group": "cache",
+      "name": "authorization_bypasses_shared_cache",
+      "passed": true
+    },
+    {
+      "group": "cache",
+      "name": "cookie_request_bypasses_shared_cache",
+      "passed": true
+    },
+    {
+      "group": "cache",
+      "name": "unlisted_route_bypasses_cache",
+      "passed": true
+    },
+    {
+      "group": "cache",
+      "name": "unlisted_query_bypasses_cache",
+      "passed": true
+    },
+    {
+      "group": "cache",
+      "name": "no_store_response_not_stored",
+      "passed": true
+    },
+    {
+      "group": "cache",
+      "name": "private_response_not_stored",
+      "passed": true
+    },
+    {
+      "group": "cache",
+      "name": "set_cookie_response_not_stored",
+      "passed": true
+    },
+    {
+      "group": "cache",
+      "name": "error_response_not_stored",
+      "passed": true
+    },
+    {
+      "group": "cache",
+      "name": "unmodeled_vary_response_not_stored",
+      "passed": true
+    },
+    {
+      "group": "cache",
+      "name": "ttl_bounds_stale_version",
+      "passed": true
+    },
+    {
+      "group": "cache",
+      "name": "local_invalidation_fetches_new_version",
+      "passed": true
+    }
+  ],
+  "total": 53,
+  "counts": {
+    "auth": 14,
+    "cache": 14,
+    "sdk": 9,
+    "worker": 16
+  },
+  "observations": {
+    "sdk": {
+      "task_name": "projects/placement-fixture/locations/us-central1/queues/ingestion/tasks/5e2a2208f9534574f27f70d8bfd5f9c92e459d5338b807c1e984ee122dc70c88",
+      "audience": "https://worker.example.test/tasks/import",
+      "body": {
+        "job_id": "job-1",
+        "tenant_id": "tenant-a",
+        "value": "hello"
+      },
+      "wire_bytes": 453,
+      "api_called": false
+    },
+    "authentication": {
+      "signature": "RS256",
+      "trusted_key_source": "in-memory generated fixture public key",
+      "google_token_issued": false,
+      "google_certificates_fetched": false,
+      "expected_caller": "task-invoker@placement-fixture.iam.gserviceaccount.com"
+    },
+    "delivery": {
+      "first": 201,
+      "replay": 200,
+      "before_commit_attempts": [
+        503,
+        201
+      ],
+      "after_commit_attempts": [
+        503,
+        200
+      ],
+      "concurrent_status_counts": {
+        "201": 1,
+        "200": 15
+      },
+      "effects": [
+        [
+          "tenant-a",
+          "job-1",
+          "hello"
+        ],
+        [
+          "tenant-a",
+          "job-after",
+          "after"
+        ],
+        [
+          "tenant-a",
+          "job-before",
+          "before"
+        ],
+        [
+          "tenant-a",
+          "job-concurrent",
+          "concurrent"
+        ],
+        [
+          "tenant-b",
+          "job-1",
+          "other-tenant"
+        ]
+      ],
+      "recreated_worker_status": 200
+    },
+    "cache": {
+      "first_state": "MISS",
+      "second_state": "HIT",
+      "same_origin_call": true,
+      "stale_version": "v1",
+      "after_expiry": "v2",
+      "after_local_invalidation": "v3",
+      "origin_calls": 18,
+      "clock": "injected monotonic time; expiry advanced 31 seconds"
+    }
+  },
+  "cleanup": {
+    "loopback_ports_closed": {
+      "55451": true,
+      "55485": true,
+      "55487": true,
+      "55488": true
+    },
+    "server_threads_stopped": true,
+    "scratch_database_and_directory_removed": true,
+    "generated_private_keys_written_to_disk": false,
+    "cloud_resources_created": false,
+    "docker_started": false
+  },
+  "scope": "Offline official SDK serialization and Google-auth verification against generated local trust; actual loopback HTTP and SQLite. No AWS/GCP API, live Google-issued identity, real CDN/ALB, queue delivery or cloud resources."
+}

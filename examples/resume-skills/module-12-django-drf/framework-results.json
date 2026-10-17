@@ -1,0 +1,58 @@
+{
+  "group": "framework",
+  "total": 9,
+  "checks": [
+    {
+      "name": "initial model migration is applied with no pending migration plan",
+      "passed": true
+    },
+    {
+      "name": "router maps URL names and HTTP actions to the ViewSet",
+      "passed": true
+    },
+    {
+      "name": "Django middleware wraps a resolved view and adds response metadata",
+      "passed": true
+    },
+    {
+      "name": "real authentication path rejects anonymous API access",
+      "passed": true
+    },
+    {
+      "name": "SessionAuthentication rejects unsafe authenticated requests without CSRF and accepts valid token",
+      "passed": true
+    },
+    {
+      "name": "inactive credential subject rejected",
+      "passed": true
+    },
+    {
+      "name": "fixture token does not bypass current database membership",
+      "passed": true
+    },
+    {
+      "name": "default serializer can coerce values and ignore unknown/read-only input",
+      "passed": true
+    },
+    {
+      "name": "M2M foreign keys permit cross-tenant link but API prefetch filters its disclosure",
+      "passed": true
+    }
+  ],
+  "observations": {
+    "middleware_trace": [
+      "middleware-in",
+      "view-resolved",
+      "middleware-out"
+    ],
+    "session_csrf": {
+      "missing_token": 403,
+      "valid_token": 200
+    },
+    "default_serializer": {
+      "numeric_title_coerced": "123",
+      "unknown_and_readonly_ignored": true
+    }
+  },
+  "transport": "In-process Django/DRF clients; session/CSRF uses force_login fixture"
+}

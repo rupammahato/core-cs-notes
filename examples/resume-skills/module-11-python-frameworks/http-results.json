@@ -1,0 +1,252 @@
+{
+  "group": "http",
+  "total": 52,
+  "checks": [
+    {
+      "name": "flask: health is public",
+      "passed": true
+    },
+    {
+      "name": "flask: missing credentials rejected",
+      "passed": true
+    },
+    {
+      "name": "flask: unknown credential rejected",
+      "passed": true
+    },
+    {
+      "name": "flask: 401 has Bearer challenge",
+      "passed": true
+    },
+    {
+      "name": "flask: validated quote uses trusted price and public response",
+      "passed": true
+    },
+    {
+      "name": "flask: cross-tenant product hidden",
+      "passed": true
+    },
+    {
+      "name": "flask: beta sees its own product",
+      "passed": true
+    },
+    {
+      "name": "flask: boolean quantity rejected",
+      "passed": true
+    },
+    {
+      "name": "flask: string quantity rejected",
+      "passed": true
+    },
+    {
+      "name": "flask: float quantity rejected",
+      "passed": true
+    },
+    {
+      "name": "flask: zero quantity rejected",
+      "passed": true
+    },
+    {
+      "name": "flask: over cap quantity rejected",
+      "passed": true
+    },
+    {
+      "name": "flask: null quantity rejected",
+      "passed": true
+    },
+    {
+      "name": "flask: unknown fields rejected",
+      "passed": true
+    },
+    {
+      "name": "flask: missing field rejected",
+      "passed": true
+    },
+    {
+      "name": "flask: malformed JSON rejected",
+      "passed": true
+    },
+    {
+      "name": "flask: wrong media type rejected",
+      "passed": true
+    },
+    {
+      "name": "flask: product response excludes internal cost",
+      "passed": true
+    },
+    {
+      "name": "flask: unknown product returns 404",
+      "passed": true
+    },
+    {
+      "name": "flask: query limit parsed and list tenant-filtered",
+      "passed": true
+    },
+    {
+      "name": "flask: invalid query limit rejected",
+      "passed": true
+    },
+    {
+      "name": "flask: 405 preserves Allow header",
+      "passed": true
+    },
+    {
+      "name": "flask: unknown route returns 404",
+      "passed": true
+    },
+    {
+      "name": "flask: metadata and request-resource lifecycle observed",
+      "passed": true
+    },
+    {
+      "name": "flask: configured body limit rejects large JSON",
+      "passed": true
+    },
+    {
+      "name": "fastapi: health is public",
+      "passed": true
+    },
+    {
+      "name": "fastapi: missing credentials rejected",
+      "passed": true
+    },
+    {
+      "name": "fastapi: unknown credential rejected",
+      "passed": true
+    },
+    {
+      "name": "fastapi: 401 has Bearer challenge",
+      "passed": true
+    },
+    {
+      "name": "fastapi: validated quote uses trusted price and public response",
+      "passed": true
+    },
+    {
+      "name": "fastapi: cross-tenant product hidden",
+      "passed": true
+    },
+    {
+      "name": "fastapi: beta sees its own product",
+      "passed": true
+    },
+    {
+      "name": "fastapi: boolean quantity rejected",
+      "passed": true
+    },
+    {
+      "name": "fastapi: string quantity rejected",
+      "passed": true
+    },
+    {
+      "name": "fastapi: float quantity rejected",
+      "passed": true
+    },
+    {
+      "name": "fastapi: zero quantity rejected",
+      "passed": true
+    },
+    {
+      "name": "fastapi: over cap quantity rejected",
+      "passed": true
+    },
+    {
+      "name": "fastapi: null quantity rejected",
+      "passed": true
+    },
+    {
+      "name": "fastapi: unknown fields rejected",
+      "passed": true
+    },
+    {
+      "name": "fastapi: missing field rejected",
+      "passed": true
+    },
+    {
+      "name": "fastapi: malformed JSON rejected",
+      "passed": true
+    },
+    {
+      "name": "fastapi: wrong media type rejected",
+      "passed": true
+    },
+    {
+      "name": "fastapi: product response excludes internal cost",
+      "passed": true
+    },
+    {
+      "name": "fastapi: unknown product returns 404",
+      "passed": true
+    },
+    {
+      "name": "fastapi: query limit parsed and list tenant-filtered",
+      "passed": true
+    },
+    {
+      "name": "fastapi: invalid query limit rejected",
+      "passed": true
+    },
+    {
+      "name": "fastapi: 405 preserves Allow header",
+      "passed": true
+    },
+    {
+      "name": "fastapi: unknown route returns 404",
+      "passed": true
+    },
+    {
+      "name": "fastapi: metadata and request-resource lifecycle observed",
+      "passed": true
+    },
+    {
+      "name": "fastapi: OpenAPI describes schema constraints and security",
+      "passed": true
+    },
+    {
+      "name": "fastapi: documentation route responds",
+      "passed": true
+    },
+    {
+      "name": "fastapi: custom validation handler excludes rejected input values",
+      "passed": true
+    }
+  ],
+  "observations": {
+    "flask_quote": {
+      "created_at": "2026-10-14T06:30:00Z",
+      "currency": "INR",
+      "product_id": "basic",
+      "quantity": 2,
+      "total_paise": 25000
+    },
+    "flask_trace": [
+      "before",
+      "lease-open",
+      "route",
+      "after",
+      "lease-close",
+      "teardown"
+    ],
+    "fastapi_quote": {
+      "product_id": "basic",
+      "quantity": 2,
+      "total_paise": 25000,
+      "currency": "INR",
+      "created_at": "2026-10-14T06:30:00Z"
+    },
+    "fastapi_trace": [
+      "before",
+      "lease-open",
+      "route",
+      "lease-close",
+      "after"
+    ],
+    "openapi_version": "3.1.0"
+  },
+  "ports": [
+    54232,
+    54259
+  ],
+  "listeners_closed": true,
+  "transports": "Real loopback HTTP: Werkzeug development WSGI and Uvicorn ASGI"
+}

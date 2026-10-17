@@ -1,0 +1,331 @@
+{
+  "runtime": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "sqlite_version": "3.49.1",
+  "packages": {
+    "openpyxl": "3.1.5",
+    "et-xmlfile": "2.0.0",
+    "defusedxml": "0.7.1",
+    "pypdf": "6.19.0"
+  },
+  "counts": {
+    "cache": 10,
+    "jobs": 13,
+    "formats": 23,
+    "ingestion": 12
+  },
+  "total": 58,
+  "groups": [
+    {
+      "group": "cache",
+      "total": 10,
+      "checks": [
+        {
+          "name": "hit reuses a loaded value without another primary read",
+          "passed": true
+        },
+        {
+          "name": "manual monotonic clock expires at the exact configured boundary",
+          "passed": true
+        },
+        {
+          "name": "negative lookup uses its shorter independent TTL",
+          "passed": true
+        },
+        {
+          "name": "tenant and representation participate in cache identity",
+          "passed": true
+        },
+        {
+          "name": "invalid trusted scope including boolean tenant is rejected",
+          "passed": true
+        },
+        {
+          "name": "bounded entries evict the least recently used member",
+          "passed": true
+        },
+        {
+          "name": "caller and loader mutations cannot modify the saved value",
+          "passed": true
+        },
+        {
+          "name": "eight coordinated callers share one load with seven observed waiters",
+          "passed": true
+        },
+        {
+          "name": "failed load clears its flight and is not cached",
+          "passed": true
+        },
+        {
+          "name": "invalidation generation prevents a late old load from repopulating cache",
+          "passed": true
+        }
+      ],
+      "observations": {
+        "expiry": {
+          "deadline": 10,
+          "loads": 2
+        },
+        "single_flight": {
+          "callers": 8,
+          "loads": 1,
+          "waiting_followers": 7
+        },
+        "invalidation_race": {
+          "in_flight_response": 1,
+          "next_read": 2,
+          "old_value_repopulated": false
+        }
+      },
+      "scope": "Process-local algorithm with manual TTL clock and actual threads; no Redis/network test"
+    },
+    {
+      "group": "jobs",
+      "total": 13,
+      "checks": [
+        {
+          "name": "tenant operation key deduplicates producer requests durably",
+          "passed": true
+        },
+        {
+          "name": "same producer key with changed payload is rejected",
+          "passed": true
+        },
+        {
+          "name": "another tenant has an independent operation identity",
+          "passed": true
+        },
+        {
+          "name": "boolean amount is rejected before enqueue",
+          "passed": true
+        },
+        {
+          "name": "future scheduled work is ineligible until its due time",
+          "passed": true
+        },
+        {
+          "name": "separate concurrent SQLite connections give one active job owner",
+          "passed": true
+        },
+        {
+          "name": "expired lease rotates ownership and rejects old completion and failure",
+          "passed": true
+        },
+        {
+          "name": "local business effect and job completion commit once together",
+          "passed": true
+        },
+        {
+          "name": "failure between effect and done rolls both back then permits lease recovery",
+          "passed": true
+        },
+        {
+          "name": "transient failure schedules capped backoff instead of immediate retry",
+          "passed": true
+        },
+        {
+          "name": "permanent failure becomes terminal without an endless retry",
+          "passed": true
+        },
+        {
+          "name": "abandoned leases eventually reach the configured attempt limit",
+          "passed": true
+        },
+        {
+          "name": "committed job state and effect are visible through a new connection",
+          "passed": true
+        }
+      ],
+      "observations": {
+        "concurrent_claims": {
+          "callers": 2,
+          "owners": 1
+        },
+        "lease_fencing": {
+          "reclaimed_attempt": 2,
+          "stale_owner_rejected": true
+        },
+        "backoff": [
+          2,
+          4,
+          8,
+          8
+        ],
+        "exhausted_attempts": 3
+      },
+      "scope": "Real file-backed SQLite transactions and concurrent connections; logical lease clock, no managed queue or power-loss test"
+    },
+    {
+      "group": "formats",
+      "total": 23,
+      "checks": [
+        {
+          "name": "UTF-8 BOM and quoted comma parse with aware UTC timestamp normalization",
+          "passed": true
+        },
+        {
+          "name": "CSV header mismatch is rejected",
+          "passed": true
+        },
+        {
+          "name": "invalid UTF-8 is rejected",
+          "passed": true
+        },
+        {
+          "name": "missing CSV column is rejected",
+          "passed": true
+        },
+        {
+          "name": "fractional minor-unit amount is rejected",
+          "passed": true
+        },
+        {
+          "name": "negative minor-unit amount is rejected",
+          "passed": true
+        },
+        {
+          "name": "naive source timestamp is rejected",
+          "passed": true
+        },
+        {
+          "name": "duplicate source identity within one file is rejected",
+          "passed": true
+        },
+        {
+          "name": "row count beyond configured limit is rejected",
+          "passed": true
+        },
+        {
+          "name": "raw byte budget is checked before parsing",
+          "passed": true
+        },
+        {
+          "name": "XML maps its explicit record fields into the same normalized model",
+          "passed": true
+        },
+        {
+          "name": "DTD and entity-bearing XML is rejected by defusedxml",
+          "passed": true
+        },
+        {
+          "name": "unexpected XML root is rejected",
+          "passed": true
+        },
+        {
+          "name": "real XLSX integer cells normalize to the CSV record model",
+          "passed": true
+        },
+        {
+          "name": "XLSX formula cell is rejected instead of trusting cached results",
+          "passed": true
+        },
+        {
+          "name": "unexpected extra worksheet is rejected",
+          "passed": true
+        },
+        {
+          "name": "compressed workbook expansion budget is checked before workbook loading",
+          "passed": true
+        },
+        {
+          "name": "macro project content is rejected",
+          "passed": true
+        },
+        {
+          "name": "real generated text PDF is parsed by pypdf",
+          "passed": true
+        },
+        {
+          "name": "image-or-blank PDF with no text requires OCR or review",
+          "passed": true
+        },
+        {
+          "name": "encrypted PDF is rejected without attempting password recovery",
+          "passed": true
+        },
+        {
+          "name": "PDF page budget rejects a six-page fixture",
+          "passed": true
+        },
+        {
+          "name": "spreadsheet export escapes formula-shaped text according to the fixture policy",
+          "passed": true
+        }
+      ],
+      "observations": {
+        "normalized_source_time": "2026-10-14T06:30:00+00:00",
+        "pdf_text": "fixture invoice"
+      },
+      "scope": "Actual CSV XML XLSX and PDF libraries on generated bytes; bounded examples, not a hostile-parser sandbox or OCR engine"
+    },
+    {
+      "group": "ingestion",
+      "total": 12,
+      "checks": [
+        {
+          "name": "batch import commits all source records and complete checkpoint",
+          "passed": true
+        },
+        {
+          "name": "same immutable file replay does not duplicate records",
+          "passed": true
+        },
+        {
+          "name": "same import key with changed source bytes is rejected",
+          "passed": true
+        },
+        {
+          "name": "identical external source IDs remain independent across tenants",
+          "passed": true
+        },
+        {
+          "name": "higher source version updates the existing scoped record",
+          "passed": true
+        },
+        {
+          "name": "out-of-order older source version cannot overwrite newer data",
+          "passed": true
+        },
+        {
+          "name": "same source version with changed content fails without advancing checkpoint",
+          "passed": true
+        },
+        {
+          "name": "failure within a batch rolls back records and checkpoint together",
+          "passed": true
+        },
+        {
+          "name": "restart resumes from durable checkpoint after a committed batch",
+          "passed": true
+        },
+        {
+          "name": "concurrent same-file importers reload checkpoint inside the serialized transaction",
+          "passed": true
+        },
+        {
+          "name": "whole-file validation rejects bad input before database mutation",
+          "passed": true
+        },
+        {
+          "name": "invalid batch size and boolean tenant fail early",
+          "passed": true
+        }
+      ],
+      "observations": {
+        "resume": {
+          "committed_checkpoint_before_restart": 2,
+          "final_checkpoint": 3,
+          "final_records": 3
+        },
+        "concurrent_restart": {
+          "callers": 2,
+          "imports": 1,
+          "records": 3
+        }
+      },
+      "scope": "Real SQLite conditional upserts checkpoints rollback and concurrent connections; injected application interruptions, not machine-crash recovery"
+    }
+  ],
+  "temporary_directory_removed": true,
+  "persistent_listener_started": false,
+  "scope": "Local cache algorithm, SQLite job/import engine, real parser libraries; no Redis or Cloud Tasks service"
+}

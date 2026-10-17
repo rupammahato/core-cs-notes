@@ -1,0 +1,622 @@
+{
+  "module": 26,
+  "verified_date": "2026-10-16",
+  "python": "3.12.10",
+  "os": "Windows-11-10.0.26300-SP0",
+  "neo4j": "2026.09.0",
+  "edition": "community",
+  "cypher": "5",
+  "java": "openjdk version \"21.0.12.1\" 2026-08-18 LTS",
+  "dependencies": {
+    "neo4j": "6.4.1"
+  },
+  "counts": {
+    "engine": 2,
+    "model": 5,
+    "cypher": 11,
+    "constraints": 3,
+    "merge": 6,
+    "traversal": 7,
+    "authorization": 8,
+    "bounds": 7,
+    "transactions": 5,
+    "concurrency": 4,
+    "plans": 3,
+    "delete": 4,
+    "retrieval": 7,
+    "cleanup": 4
+  },
+  "total": 76,
+  "checks": [
+    {
+      "group": "engine",
+      "name": "actual Community engine is the pinned version",
+      "passed": true
+    },
+    {
+      "group": "engine",
+      "name": "server advertises Cypher 5 for executed queries",
+      "passed": true
+    },
+    {
+      "group": "model",
+      "name": "fixture has eight tenant-scoped concepts",
+      "passed": true
+    },
+    {
+      "group": "model",
+      "name": "fixture has two documents",
+      "passed": true
+    },
+    {
+      "group": "model",
+      "name": "typed directed prerequisite edges are stored",
+      "passed": true
+    },
+    {
+      "group": "model",
+      "name": "composite identity permits same ID in different tenants",
+      "passed": true
+    },
+    {
+      "group": "model",
+      "name": "labels and properties are returned as declared",
+      "passed": true
+    },
+    {
+      "group": "cypher",
+      "name": "outgoing pattern follows declared direction",
+      "passed": true
+    },
+    {
+      "group": "cypher",
+      "name": "incoming pattern returns the reverse perspective",
+      "passed": true
+    },
+    {
+      "group": "cypher",
+      "name": "OPTIONAL MATCH keeps unmatched node with null neighbor",
+      "passed": true
+    },
+    {
+      "group": "cypher",
+      "name": "count star and count nullable expression differ",
+      "passed": true
+    },
+    {
+      "group": "cypher",
+      "name": "missing property yields null",
+      "passed": true
+    },
+    {
+      "group": "cypher",
+      "name": "IS NULL handles missing property",
+      "passed": true
+    },
+    {
+      "group": "cypher",
+      "name": "equality with null is not true",
+      "passed": true
+    },
+    {
+      "group": "cypher",
+      "name": "WITH aggregates and filters intermediate rows",
+      "passed": true
+    },
+    {
+      "group": "cypher",
+      "name": "UNWIND expands a parameterized list",
+      "passed": true
+    },
+    {
+      "group": "cypher",
+      "name": "parameterized malicious text remains a literal value",
+      "passed": true
+    },
+    {
+      "group": "cypher",
+      "name": "parameterized injection attempt leaves graph unchanged",
+      "passed": true
+    },
+    {
+      "group": "constraints",
+      "name": "duplicate composite identity rejected by engine",
+      "passed": true
+    },
+    {
+      "group": "constraints",
+      "name": "both identity constraints exist",
+      "passed": true
+    },
+    {
+      "group": "merge",
+      "name": "identity-only MERGE updates mutable title",
+      "passed": true
+    },
+    {
+      "group": "merge",
+      "name": "repeat upsert does not duplicate node",
+      "passed": true
+    },
+    {
+      "group": "merge",
+      "name": "ON CREATE property is retained on later match",
+      "passed": true
+    },
+    {
+      "group": "merge",
+      "name": "MERGE with mutable title in identity pattern conflicts with uniqueness",
+      "passed": true
+    },
+    {
+      "group": "merge",
+      "name": "CREATE repeats patterns without a constraint",
+      "passed": true
+    },
+    {
+      "group": "merge",
+      "name": "bound-endpoint relationship MERGE is idempotent sequentially",
+      "passed": true
+    },
+    {
+      "group": "constraints",
+      "name": "uniqueness does not require missing property existence",
+      "passed": true
+    },
+    {
+      "group": "traversal",
+      "name": "one-hop traversal returns direct prerequisites",
+      "passed": true
+    },
+    {
+      "group": "traversal",
+      "name": "bounded multihop traversal reaches transactions",
+      "passed": true
+    },
+    {
+      "group": "traversal",
+      "name": "minimum hop aggregation deduplicates shared neighbor",
+      "passed": true
+    },
+    {
+      "group": "traversal",
+      "name": "bounded cyclic graph excludes the root",
+      "passed": true
+    },
+    {
+      "group": "traversal",
+      "name": "multiple paths to one node remain separate before aggregation",
+      "passed": true
+    },
+    {
+      "group": "traversal",
+      "name": "missing root returns an empty result",
+      "passed": true
+    },
+    {
+      "group": "traversal",
+      "name": "application result cap is applied",
+      "passed": true
+    },
+    {
+      "group": "authorization",
+      "name": "alpha root query contains no beta concept",
+      "passed": true
+    },
+    {
+      "group": "authorization",
+      "name": "endpoint-only scope demonstrates cross-tenant intermediate path",
+      "passed": true
+    },
+    {
+      "group": "authorization",
+      "name": "every-node path scope rejects beta intermediate",
+      "passed": true
+    },
+    {
+      "group": "authorization",
+      "name": "every-relationship scope rejects invalid edge tenant",
+      "passed": true
+    },
+    {
+      "group": "authorization",
+      "name": "beta same root ID cannot traverse alpha graph",
+      "passed": true
+    },
+    {
+      "group": "authorization",
+      "name": "missing read permission denied",
+      "passed": true
+    },
+    {
+      "group": "authorization",
+      "name": "unknown trusted tenant denied",
+      "passed": true
+    },
+    {
+      "group": "authorization",
+      "name": "read-only application principal cannot write",
+      "passed": true
+    },
+    {
+      "group": "bounds",
+      "name": "unbounded requested depth rejected",
+      "passed": true
+    },
+    {
+      "group": "bounds",
+      "name": "negative requested depth rejected",
+      "passed": true
+    },
+    {
+      "group": "bounds",
+      "name": "boolean depth rejected",
+      "passed": true
+    },
+    {
+      "group": "bounds",
+      "name": "float depth rejected before query construction",
+      "passed": true
+    },
+    {
+      "group": "bounds",
+      "name": "string depth rejected before query construction",
+      "passed": true
+    },
+    {
+      "group": "bounds",
+      "name": "oversized result request rejected",
+      "passed": true
+    },
+    {
+      "group": "bounds",
+      "name": "identifier injection rejected by service boundary",
+      "passed": true
+    },
+    {
+      "group": "transactions",
+      "name": "explicit rollback removes uncommitted node",
+      "passed": true
+    },
+    {
+      "group": "transactions",
+      "name": "managed callback failure propagated",
+      "passed": true
+    },
+    {
+      "group": "transactions",
+      "name": "managed transaction rolled back prior write",
+      "passed": true
+    },
+    {
+      "group": "transactions",
+      "name": "constraint failure aborts whole transaction",
+      "passed": true
+    },
+    {
+      "group": "transactions",
+      "name": "earlier write absent after constraint failure",
+      "passed": true
+    },
+    {
+      "group": "concurrency",
+      "name": "all concurrent managed upserts complete",
+      "passed": true
+    },
+    {
+      "group": "concurrency",
+      "name": "uniqueness holds across concurrent upserts",
+      "passed": true
+    },
+    {
+      "group": "concurrency",
+      "name": "all concurrent property increments finish",
+      "passed": true
+    },
+    {
+      "group": "concurrency",
+      "name": "direct dependent-property update preserves all increments",
+      "passed": true
+    },
+    {
+      "group": "plans",
+      "name": "identity lookup uses unique index seek",
+      "passed": true
+    },
+    {
+      "group": "plans",
+      "name": "PROFILE executes the identity lookup",
+      "passed": true
+    },
+    {
+      "group": "plans",
+      "name": "EXPLAIN does not execute the write",
+      "passed": true
+    },
+    {
+      "group": "delete",
+      "name": "query counters record actual node and relationship creation",
+      "passed": true
+    },
+    {
+      "group": "delete",
+      "name": "DELETE of attached node rejected",
+      "passed": true
+    },
+    {
+      "group": "delete",
+      "name": "DETACH DELETE removes node and attached relationship",
+      "passed": true
+    },
+    {
+      "group": "delete",
+      "name": "detaching parent leaves neighbor node intact",
+      "passed": true
+    },
+    {
+      "group": "retrieval",
+      "name": "graph evidence resolves current alpha source",
+      "passed": true
+    },
+    {
+      "group": "retrieval",
+      "name": "same document ID remains isolated for beta",
+      "passed": true
+    },
+    {
+      "group": "retrieval",
+      "name": "alpha cannot resolve beta secret concept",
+      "passed": true
+    },
+    {
+      "group": "retrieval",
+      "name": "stale EXPLAINS revision excluded after source edit",
+      "passed": true
+    },
+    {
+      "group": "retrieval",
+      "name": "current relationship generation resolves updated source",
+      "passed": true
+    },
+    {
+      "group": "retrieval",
+      "name": "source tombstone immediately excludes local graph evidence",
+      "passed": true
+    },
+    {
+      "group": "retrieval",
+      "name": "alpha deletion leaves beta evidence available",
+      "passed": true
+    },
+    {
+      "group": "cleanup",
+      "name": "owned Java process exits cleanly",
+      "passed": true
+    },
+    {
+      "group": "cleanup",
+      "name": "owned Bolt port closes",
+      "passed": true
+    },
+    {
+      "group": "cleanup",
+      "name": "temporary Neo4j database removed",
+      "passed": true
+    },
+    {
+      "group": "cleanup",
+      "name": "installed services untouched",
+      "passed": true
+    }
+  ],
+  "observations": {
+    "cypher": {
+      "outgoing_backend": [
+        {
+          "id": "database"
+        },
+        {
+          "id": "http"
+        },
+        {
+          "id": "network"
+        }
+      ],
+      "incoming_backend": [
+        {
+          "id": "framework"
+        }
+      ],
+      "optional_network": [
+        {
+          "id": "network",
+          "neighbor": null
+        }
+      ],
+      "optional_counts": [
+        {
+          "rows": 1,
+          "neighbors": 0
+        }
+      ],
+      "concepts_by_tenant": [
+        {
+          "tenant": "alpha",
+          "concepts": 6
+        },
+        {
+          "tenant": "beta",
+          "concepts": 2
+        }
+      ],
+      "injection_matched_rows": 0
+    },
+    "merge": {
+      "first_upsert": {
+        "id": "new-topic",
+        "title": "First title"
+      },
+      "second_upsert": {
+        "id": "new-topic",
+        "title": "Updated title"
+      },
+      "upsert_node_count": 1,
+      "unconstrained_create_count": 2,
+      "sequential_relationship_merge_count": 1,
+      "constraints": [
+        {
+          "name": "concept_identity",
+          "type": "UNIQUENESS"
+        },
+        {
+          "name": "document_identity",
+          "type": "UNIQUENESS"
+        }
+      ],
+      "missing_id_nodes_accepted_then_removed": 2
+    },
+    "traversal": {
+      "depth_1": [
+        {
+          "id": "database",
+          "title": "Databases",
+          "hops": 1
+        },
+        {
+          "id": "http",
+          "title": "HTTP",
+          "hops": 1
+        },
+        {
+          "id": "network",
+          "title": "Networking",
+          "hops": 1
+        }
+      ],
+      "depth_3": [
+        {
+          "id": "database",
+          "title": "Databases",
+          "hops": 1
+        },
+        {
+          "id": "http",
+          "title": "HTTP",
+          "hops": 1
+        },
+        {
+          "id": "network",
+          "title": "Networking",
+          "hops": 1
+        },
+        {
+          "id": "transactions",
+          "title": "Transactions",
+          "hops": 2
+        }
+      ],
+      "database_cycle_results": [
+        {
+          "id": "transactions",
+          "title": "Transactions",
+          "hops": 1
+        }
+      ],
+      "raw_paths_to_network": [
+        {
+          "hops": 1
+        },
+        {
+          "hops": 2
+        }
+      ],
+      "endpoint_only_http_results": [
+        {
+          "id": "network"
+        },
+        {
+          "id": "transactions"
+        }
+      ],
+      "fully_scoped_http_results": [
+        {
+          "id": "network",
+          "title": "Networking",
+          "hops": 1
+        }
+      ],
+      "depth_cap": 3,
+      "result_cap": 20,
+      "query_timeout_seconds": 2
+    },
+    "transactions": {
+      "explicit_rollback_visible_rows": 0,
+      "callback_rollback_visible_rows": 0,
+      "constraint_rollback_visible_rows": 0,
+      "concurrent_upsert_calls": 8,
+      "concurrent_identity_nodes": 1,
+      "increment_calls": 20,
+      "final_counter": 20,
+      "workers": 4,
+      "retry_occurrence_measured": false
+    },
+    "plans": {
+      "identity_explain_operators": [
+        "ProduceResults@neo4j",
+        "Projection@neo4j",
+        "NodeUniqueIndexSeek@neo4j"
+      ],
+      "identity_profile_operators": [
+        "ProduceResults@neo4j",
+        "Projection@neo4j",
+        "NodeUniqueIndexSeek@neo4j"
+      ],
+      "profile_returned_rows": [
+        {
+          "title": "HTTP"
+        }
+      ],
+      "explain_created_nodes": 0,
+      "detach_deleted_nodes": 1,
+      "detach_deleted_relationships": 1,
+      "timing_benchmark_claim": false
+    },
+    "retrieval": {
+      "initial_alpha_evidence": [
+        {
+          "document": "notes",
+          "revision": 1,
+          "text": "Transactions group changes atomically."
+        }
+      ],
+      "updated_alpha_evidence": [
+        {
+          "document": "notes",
+          "revision": 2,
+          "text": "Updated transaction explanation."
+        }
+      ],
+      "stale_revision_results": [],
+      "deleted_alpha_results": [],
+      "beta_evidence_remaining": 1,
+      "extraction_scope": "Hand-authored concept links and source text; no entity-extraction model or answer generation"
+    }
+  },
+  "cleanup": {
+    "port": 61151,
+    "loopback_ports_closed": [
+      61151
+    ],
+    "system_services_touched": false,
+    "authentication": "disabled only for isolated loopback fixture",
+    "tls": "disabled for local Bolt",
+    "heap_mib": 256,
+    "page_cache_mib": 64,
+    "java": "openjdk version \"21.0.12.1\" 2026-08-18 LTS",
+    "process_exit_code": 0,
+    "console_log": "M26_READY C:\\Users\\Win11\\AppData\\Local\\Temp\\placement-m26-7cko315x\\database\n",
+    "listener_stopped": true,
+    "temporary_directory_removed": true
+  },
+  "scope": "Actual embedded Neo4j Community engine over loopback Bolt, official Python driver and synthetic graph. Application tenant checks only; DB auth/TLS disabled locally. No Aura/Enterprise RBAC/APOC/GDS/learned extraction/model inference/production performance test."
+}

@@ -1,0 +1,118 @@
+{
+  "node": "v22.14.0",
+  "passed": 16,
+  "checks": [
+    {
+      "name": "PKCE S256 matches RFC 7636 Appendix B vector",
+      "passed": true,
+      "observed": "E9Melhoa2OwvFrEMTJguCHaoeK1t8URWbuGJSstw-cM"
+    },
+    {
+      "name": "PKCE rejects short verifier",
+      "passed": true,
+      "observed": {
+        "rejected": "invalid_verifier"
+      }
+    },
+    {
+      "name": "authorization request carries challenge rather than verifier",
+      "passed": true,
+      "observed": {
+        "method": "S256",
+        "verifierInAuthorizationRequest": false
+      }
+    },
+    {
+      "name": "unregistered redirect rejected",
+      "passed": true,
+      "observed": {
+        "rejected": "invalid_authorization_request"
+      }
+    },
+    {
+      "name": "wrong client rejected during authorization",
+      "passed": true,
+      "observed": {
+        "rejected": "invalid_authorization_request"
+      }
+    },
+    {
+      "name": "plain challenge method rejected by model policy",
+      "passed": true,
+      "observed": {
+        "rejected": "invalid_authorization_request"
+      }
+    },
+    {
+      "name": "unknown state rejected",
+      "passed": true,
+      "observed": {
+        "rejected": "invalid_state"
+      }
+    },
+    {
+      "name": "callback bound to initiating browser session",
+      "passed": true,
+      "observed": {
+        "rejected": "invalid_state"
+      }
+    },
+    {
+      "name": "valid callback consumes state once",
+      "passed": true,
+      "observed": {
+        "rejected": "invalid_state"
+      }
+    },
+    {
+      "name": "intercepted code without correct verifier rejected",
+      "passed": true,
+      "observed": {
+        "rejected": "invalid_grant"
+      }
+    },
+    {
+      "name": "token exchange requires same redirect URI",
+      "passed": true,
+      "observed": {
+        "rejected": "invalid_grant"
+      }
+    },
+    {
+      "name": "token exchange requires same client ID",
+      "passed": true,
+      "observed": {
+        "rejected": "invalid_grant"
+      }
+    },
+    {
+      "name": "valid code and verifier produce modeled delegation",
+      "passed": true,
+      "observed": {
+        "delegatedSubject": "provider-user-1",
+        "scope": "tasks:read"
+      }
+    },
+    {
+      "name": "authorization code cannot be exchanged twice",
+      "passed": true,
+      "observed": {
+        "rejected": "invalid_grant"
+      }
+    },
+    {
+      "name": "authorization code expiry enforced",
+      "passed": true,
+      "observed": {
+        "rejected": "invalid_grant"
+      }
+    },
+    {
+      "name": "browser transaction expiry enforced",
+      "passed": true,
+      "observed": {
+        "rejected": "invalid_state"
+      }
+    }
+  ]
+}

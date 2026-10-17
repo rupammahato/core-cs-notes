@@ -1,0 +1,9 @@
+Looking in links: c:/Development/Placement/examples/resume-skills/module-12-django-drf/.wheelhouse
+Processing c:\development\placement\examples\resume-skills\module-12-django-drf\.wheelhouse\django-5.1.3-py3-none-any.whl (from -r C:/Development/Placement/examples/resume-skills/module-12-django-drf/requirements.txt (line 1))
+Processing c:\development\placement\examples\resume-skills\module-12-django-drf\.wheelhouse\djangorestframework-3.15.2-py3-none-any.whl (from -r C:/Development/Placement/examples/resume-skills/module-12-django-drf/requirements.txt (line 2))
+Processing c:\development\placement\examples\resume-skills\module-12-django-drf\.wheelhouse\asgiref-3.12.1-py3-none-any.whl (from Django==5.1.3->-r C:/Development/Placement/examples/resume-skills/module-12-django-drf/requirements.txt (line 1))
+Processing c:\development\placement\examples\resume-skills\module-12-django-drf\.wheelhouse\sqlparse-0.5.5-py3-none-any.whl (from Django==5.1.3->-r C:/Development/Placement/examples/resume-skills/module-12-django-drf/requirements.txt (line 1))
+Processing c:\development\placement\examples\resume-skills\module-12-django-drf\.wheelhouse\tzdata-2026.4-py3-none-any.whl (from Django==5.1.3->-r C:/Development/Placement/examples/resume-skills/module-12-django-drf/requirements.txt (line 1))
+Installing collected packages: tzdata, sqlparse, asgiref, Django, djangorestframework
+Successfully installed Django-5.1.3 asgiref-3.12.1 djangorestframework-3.15.2 sqlparse-0.5.5 tzdata-2026.4
+

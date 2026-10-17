@@ -1,0 +1,103 @@
+{
+  "group": "transactions",
+  "total": 15,
+  "checks": [
+    {
+      "name": "multi-document transaction commits the complete transfer",
+      "passed": true
+    },
+    {
+      "name": "transaction exception rolls back its partial transfer",
+      "passed": true
+    },
+    {
+      "name": "snapshot transaction retains its read view after another session commits",
+      "passed": true
+    },
+    {
+      "name": "real transient write conflict causes callback retry and fresh reads",
+      "passed": true
+    },
+    {
+      "name": "purchase commits trusted price snapshot stock order and outbox together",
+      "passed": true
+    },
+    {
+      "name": "same-key replay returns original result without repeating stock or outbox",
+      "passed": true
+    },
+    {
+      "name": "same key with changed quantity is a conflict",
+      "passed": true
+    },
+    {
+      "name": "same key and SKU in another tenant form an independent operation",
+      "passed": true
+    },
+    {
+      "name": "invalid quantity shapes and bounds fail before writes",
+      "passed": true
+    },
+    {
+      "name": "unavailable stock rolls back the unique pending gate",
+      "passed": true
+    },
+    {
+      "name": "failure after decrement rolls back stock order and outbox",
+      "passed": true
+    },
+    {
+      "name": "barrier-started distinct-key purchases cannot both consume the last unit",
+      "passed": true
+    },
+    {
+      "name": "barrier-started duplicate purchases create one order and one replay",
+      "passed": true
+    },
+    {
+      "name": "committed replay still succeeds when stock is zero",
+      "passed": true
+    },
+    {
+      "name": "rolled-back unavailable key can succeed after later restock",
+      "passed": true
+    }
+  ],
+  "observations": {
+    "snapshot_reads": [
+      100,
+      100
+    ],
+    "real_transaction_retry": {
+      "read_values": [
+        0,
+        1
+      ],
+      "failures": [
+        {
+          "code": 112,
+          "transient": true
+        }
+      ],
+      "final_value": 2
+    },
+    "purchase": {
+      "total_minor": 25000,
+      "currency": "INR",
+      "replayed": false
+    },
+    "last_unit_race": {
+      "stock": 0,
+      "orders": 1,
+      "outbox": 1,
+      "outcome": "one reserved and one unavailable"
+    },
+    "same_key_race": {
+      "stock": 0,
+      "orders": 1,
+      "outbox": 1,
+      "outcome": "one new and one replay"
+    }
+  },
+  "scope": "Real single-member replica-set transactions and concurrent service calls; no failover or HTTP/provider delivery"
+}

@@ -1,0 +1,184 @@
+{
+  "module": 20,
+  "title": "React Fundamentals",
+  "verified_date": "2026-10-15",
+  "node": "v22.14.0",
+  "dependencies": {
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "tools": {
+    "esbuild": "0.28.2",
+    "playwright-core": "1.64.1"
+  },
+  "browser": {
+    "version": "155.0.8059.40",
+    "executable": "C:/Program Files/Google/Chrome/Application/chrome.exe",
+    "headless": true
+  },
+  "checks": {
+    "counts": {
+      "accessibility": 5,
+      "api": 11,
+      "browser": 1,
+      "effects": 6,
+      "forms": 6,
+      "identity": 6,
+      "sharing": 4,
+      "state": 8,
+      "strict": 3
+    },
+    "total": 50,
+    "all_passed": true
+  },
+  "cleanup": {
+    "browser_closed": true,
+    "loopback_ports_closed": {
+      "58417": true
+    },
+    "docker_started": false
+  },
+  "content": {
+    "chapter": "resume-skills-handbook-part-22-module-20-react-fundamentals.md",
+    "words": 8123,
+    "lines": 931,
+    "questions": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30
+    ],
+    "practice_tasks": 10,
+    "unchecked_learning_items": 12,
+    "source_fidelity": {
+      "StateLab.jsx": true,
+      "IdentityLab.jsx": true,
+      "EffectsLab.jsx": true,
+      "FormsLab.jsx": true,
+      "ContextLab.jsx": true,
+      "TopicsPanel.jsx": true,
+      "useTopics.js": true
+    },
+    "counts": {
+      "accessibility": 5,
+      "api": 11,
+      "browser": 1,
+      "effects": 6,
+      "forms": 6,
+      "identity": 6,
+      "sharing": 4,
+      "state": 8,
+      "strict": 3
+    },
+    "total": 50,
+    "embedded_observations": [
+      "VERSIONS",
+      "SNAPSHOT",
+      "IMMUTABLE",
+      "INDEX_KEYS",
+      "EFFECTS",
+      "STRICT",
+      "RACE"
+    ],
+    "desktop_and_mobile_screenshots_inspected": true,
+    "result_fidelity": {
+      "snapshot": true,
+      "immutable": true,
+      "indexCounterexample": true,
+      "effectTransition": true,
+      "strict": true,
+      "race": true,
+      "versions": true
+    }
+  },
+  "website": {
+    "build_passed": true,
+    "static_pages": 96,
+    "routes_checked": 24,
+    "all_routes_200": true,
+    "assertions": {
+      "title": true,
+      "q30": true,
+      "implementation": true,
+      "totalChecks": true,
+      "snapshotEvidence": true,
+      "raceEvidence": true,
+      "architecture": true,
+      "strictBoundary": true,
+      "nextModule": true,
+      "group": true,
+      "roadmapLink": true,
+      "previousLink": true
+    },
+    "search": {
+      "status": 200,
+      "results": 31,
+      "chapterIndexed": true,
+      "scoped": true
+    },
+    "temporary_server_closed": true,
+    "cached_font_fixture_used": true
+  },
+  "ports_stopped": {
+    "3000": true,
+    "64224": true,
+    "58417": true
+  },
+  "git_diff_check_passed": true,
+  "trailing_whitespace_files": [],
+  "core_handbooks": [
+    {
+      "subject": "DSA Notes",
+      "files": 17,
+      "lines": 17589
+    },
+    {
+      "subject": "OOP Notes",
+      "files": 13,
+      "lines": 8806
+    },
+    {
+      "subject": "OS Notes",
+      "files": 13,
+      "lines": 6341
+    },
+    {
+      "subject": "DBMS Notes",
+      "files": 13,
+      "lines": 9613
+    },
+    {
+      "subject": "CN Notes",
+      "files": 13,
+      "lines": 9322
+    }
+  ],
+  "next_module": "M21: Next.js, API Routes and Tailwind",
+  "scope": "Actual headless installed Chrome, development/production React bundles, browser DOM/keyboard and same-origin local HTTP. No screen-reader audit, framework SSR/hydration, real authentication/backend or performance benchmark."
+}

@@ -1,0 +1,348 @@
+{
+  "runtime": {
+    "version": "3.13.15 (tags/v3.13.15:4061bc4, Aug  5 2026, 13:05:39) [MSC v.1944 64 bit (AMD64)]",
+    "implementation": "cpython",
+    "executable": "C:\\Users\\Win11\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+    "gil_disabled_build": 0,
+    "gil_enabled": true
+  },
+  "counts": {
+    "language": 24,
+    "concurrency": 6,
+    "domain": 14
+  },
+  "total": 44,
+  "results": [
+    {
+      "id": "01-binding",
+      "title": "Mutation versus local rebinding",
+      "group": "language",
+      "file": "snippets/01-binding.py",
+      "passed": true,
+      "stdout": "['request', 'accepted'] ['request', 'accepted'] True\n5 4\n"
+    },
+    {
+      "id": "02-copy",
+      "title": "Shallow and deep copies",
+      "group": "language",
+      "file": "snippets/02-copy.py",
+      "passed": true,
+      "stdout": "{'tags': ['backend', 'python']}\n{'tags': ['backend']}\nFalse False\n"
+    },
+    {
+      "id": "03-tuple",
+      "title": "Tuple immutability and augmented assignment",
+      "group": "language",
+      "file": "snippets/03-tuple.py",
+      "passed": true,
+      "stdout": "assignment rejected\n(['a', 'b'],)\nunhashable\n"
+    },
+    {
+      "id": "04-equality",
+      "title": "Identity and equality",
+      "group": "language",
+      "file": "snippets/04-equality.py",
+      "passed": true,
+      "stdout": "True False False\nTrue True False\n1\nthird\n"
+    },
+    {
+      "id": "05-collections",
+      "title": "Collection operations and stable sort",
+      "group": "language",
+      "file": "snippets/05-collections.py",
+      "passed": true,
+      "stdout": "None [1, 2, 3]\n3 [1, 3]\na ['b']\n[('second', 1), ('first', 2), ('third', 2)]\n['api', 'db']\n"
+    },
+    {
+      "id": "06-dict",
+      "title": "Hashability and insertion order",
+      "group": "language",
+      "file": "snippets/06-dict.py",
+      "passed": true,
+      "stdout": "['a', 'b']\n['b', 'a']\nrow\nlist key rejected\n"
+    },
+    {
+      "id": "07-absence",
+      "title": "Missing, null and false values",
+      "group": "language",
+      "file": "snippets/07-absence.py",
+      "passed": true,
+      "stdout": "20\n0\nTrue\nTrue\nFalse True\n"
+    },
+    {
+      "id": "08-defaults",
+      "title": "Default arguments persist across calls",
+      "group": "language",
+      "file": "snippets/08-defaults.py",
+      "passed": true,
+      "stdout": "['a', 'b'] ['a', 'b'] True\n['a'] ['b']\n"
+    },
+    {
+      "id": "09-scope",
+      "title": "Local binding and nonlocal closure",
+      "group": "language",
+      "file": "snippets/09-scope.py",
+      "passed": true,
+      "stdout": "local read before binding\n1 2 10\n"
+    },
+    {
+      "id": "10-closures",
+      "title": "Late-bound closures and explicit capture",
+      "group": "language",
+      "file": "snippets/10-closures.py",
+      "passed": true,
+      "stdout": "[2, 2, 2]\n[0, 1, 2]\n"
+    },
+    {
+      "id": "11-arguments",
+      "title": "Positional-only and keyword-only arguments",
+      "group": "language",
+      "file": "snippets/11-arguments.py",
+      "passed": true,
+      "stdout": "('orders', 5, ['trace'])\npositional-only argument required\nlimit must be keyword\n"
+    },
+    {
+      "id": "12-decorator",
+      "title": "Decorator wrapping and metadata",
+      "group": "language",
+      "file": "snippets/12-decorator.py",
+      "passed": true,
+      "stdout": "5 total ['total']\n9\n"
+    },
+    {
+      "id": "13-iterator",
+      "title": "Iterable versus one-shot iterator",
+      "group": "language",
+      "file": "snippets/13-iterator.py",
+      "passed": true,
+      "stdout": "True 1\n[2] []\n[1, 2] [1, 2]\nexhausted\n"
+    },
+    {
+      "id": "14-generator",
+      "title": "Lazy execution and explicit cleanup",
+      "group": "language",
+      "file": "snippets/14-generator.py",
+      "passed": true,
+      "stdout": "created\nstart\n10\ncleanup\n[]\n"
+    },
+    {
+      "id": "15-comprehensions",
+      "title": "Eager lists and lazy generator expressions",
+      "group": "language",
+      "file": "snippets/15-comprehensions.py",
+      "passed": true,
+      "stdout": "[0, 1, 4] [0, 1, 2]\n[]\n0 [0]\n5 [0, 1, 2]\n"
+    },
+    {
+      "id": "16-exceptions",
+      "title": "Exception translation preserves cause",
+      "group": "language",
+      "file": "snippets/16-exceptions.py",
+      "passed": true,
+      "stdout": "quantity must be an integer\nValueError\n"
+    },
+    {
+      "id": "17-context",
+      "title": "Context cleanup on failure",
+      "group": "language",
+      "file": "snippets/17-context.py",
+      "passed": true,
+      "stdout": "open\nhandle\nclose\npropagated\n"
+    },
+    {
+      "id": "18-finally",
+      "title": "Returning from finally hides an error",
+      "group": "language",
+      "file": "snippets/18-finally.py",
+      "passed": true,
+      "stdout": "masked\n"
+    },
+    {
+      "id": "19-dataclass",
+      "title": "Factories and shallow frozen behavior",
+      "group": "language",
+      "file": "snippets/19-dataclass.py",
+      "passed": true,
+      "stdout": "['changed'] []\nrebinding rejected\n"
+    },
+    {
+      "id": "20-classes",
+      "title": "Class attributes and bound methods",
+      "group": "language",
+      "file": "snippets/20-classes.py",
+      "passed": true,
+      "stdout": "['visible'] a False\nTrue\n"
+    },
+    {
+      "id": "21-typing",
+      "title": "Annotations do not validate runtime inputs",
+      "group": "language",
+      "file": "snippets/21-typing.py",
+      "passed": true,
+      "stdout": "many\nTrue\nTrue\n"
+    },
+    {
+      "id": "22-values",
+      "title": "Money, text bytes and aware timestamps",
+      "group": "language",
+      "file": "snippets/22-values.py",
+      "passed": true,
+      "stdout": "False\nTrue\n2.68\n1 3 True\n2026-10-14T06:30:00+00:00\n{\"amount_paise\": 12500}\n"
+    },
+    {
+      "id": "23-imports",
+      "title": "Imports cache module objects and bind names",
+      "group": "language",
+      "file": "snippets/23-imports.py",
+      "passed": true,
+      "stdout": "module initialized\nTrue initial changed ['row']\n"
+    },
+    {
+      "id": "24-gc",
+      "title": "Collect an unreachable reference cycle explicitly",
+      "group": "language",
+      "file": "snippets/24-gc.py",
+      "passed": true,
+      "stdout": "True\nTrue\n"
+    },
+    {
+      "id": "25-async-lifecycle",
+      "title": "Coroutine creation, scheduling and blocking calls",
+      "group": "concurrency",
+      "file": "concurrency/25-async-lifecycle.py",
+      "passed": true,
+      "stdout": "[]\n7 ['start', 'done']\n['blocking call returned', 'caller continued', 'tick']\nthread offload: True\n"
+    },
+    {
+      "id": "26-bounded-workers",
+      "title": "Bounded queue and fixed async worker count",
+      "group": "concurrency",
+      "file": "concurrency/26-bounded-workers.py",
+      "passed": true,
+      "stdout": "jobs: 8 peak: 3 queued: 3\n"
+    },
+    {
+      "id": "27-taskgroup",
+      "title": "TaskGroup cancels siblings and waits for cleanup",
+      "group": "concurrency",
+      "file": "concurrency/27-taskgroup.py",
+      "passed": true,
+      "stdout": "failures: 1\npeer cleaned: True\n"
+    },
+    {
+      "id": "28-timeout",
+      "title": "Timeout cancellation runs finally",
+      "group": "concurrency",
+      "file": "concurrency/28-timeout.py",
+      "passed": true,
+      "stdout": "timed out\ncleaned: True\n"
+    },
+    {
+      "id": "29-threads",
+      "title": "GIL does not make a read-modify-write transaction",
+      "group": "concurrency",
+      "file": "concurrency/29-threads.py",
+      "passed": true,
+      "stdout": "unsynchronized: 1\nlocked: 2000\n"
+    },
+    {
+      "id": "30-processes",
+      "title": "Explicit spawn, picklable worker and copied arguments",
+      "group": "concurrency",
+      "file": "concurrency/30-processes.py",
+      "passed": true,
+      "stdout": "method: spawn\nresults: [30, 204]\nparent: ['parent'] child: ['parent', 'child']\n"
+    },
+    {
+      "id": "domain-1",
+      "group": "domain",
+      "name": "trusted price and validated quantity determine total",
+      "passed": true
+    },
+    {
+      "id": "domain-2",
+      "group": "domain",
+      "name": "public projection excludes internal fields and normalizes UTC",
+      "passed": true
+    },
+    {
+      "id": "domain-3",
+      "group": "domain",
+      "name": "string quantity rejected",
+      "passed": true
+    },
+    {
+      "id": "domain-4",
+      "group": "domain",
+      "name": "boolean quantity rejected despite bool subclassing int",
+      "passed": true
+    },
+    {
+      "id": "domain-5",
+      "group": "domain",
+      "name": "zero negative float null and non-finite quantities rejected",
+      "passed": true
+    },
+    {
+      "id": "domain-6",
+      "group": "domain",
+      "name": "quantity cap enforced",
+      "passed": true
+    },
+    {
+      "id": "domain-7",
+      "group": "domain",
+      "name": "missing fields invalid identifier and non-object bodies rejected",
+      "passed": true
+    },
+    {
+      "id": "domain-8",
+      "group": "domain",
+      "name": "client price and tenant injection rejected",
+      "passed": true
+    },
+    {
+      "id": "domain-9",
+      "group": "domain",
+      "name": "tenant catalog boundary enforced",
+      "passed": true
+    },
+    {
+      "id": "domain-10",
+      "group": "domain",
+      "name": "malformed JSON rejected with cause preserved",
+      "passed": true
+    },
+    {
+      "id": "domain-11",
+      "group": "domain",
+      "name": "duplicate JSON keys rejected",
+      "passed": true
+    },
+    {
+      "id": "domain-12",
+      "group": "domain",
+      "name": "invalid UTF-8 rejected",
+      "passed": true
+    },
+    {
+      "id": "domain-13",
+      "group": "domain",
+      "name": "body byte limit enforced before parsing",
+      "passed": true
+    },
+    {
+      "id": "domain-14",
+      "group": "domain",
+      "name": "naive internal clock rejected",
+      "passed": true
+    }
+  ],
+  "public_response": {
+    "created_at": "2026-10-14T06:30:00+00:00",
+    "currency": "INR",
+    "product_id": "basic",
+    "quantity": 2,
+    "total_paise": 25000
+  }
+}

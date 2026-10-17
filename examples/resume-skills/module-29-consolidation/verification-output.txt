@@ -1,0 +1,147 @@
+﻿{
+  "checks": 43,
+  "counts": {
+    "runtime-output": 14,
+    "chapter-reference": 29
+  },
+  "runtime_kinds": {
+    "node-esm": 7,
+    "python": 4,
+    "sqlite": 3
+  },
+  "observations": [
+    {
+      "id": "D01",
+      "kind": "node-esm",
+      "result": [
+        "before",
+        "inside",
+        "after",
+        42
+      ]
+    },
+    {
+      "id": "D02",
+      "kind": "node-esm",
+      "result": [
+        "sync",
+        "promise",
+        "microtask",
+        "nextTick"
+      ]
+    },
+    {
+      "id": "D03",
+      "kind": "node-esm",
+      "result": {
+        "error": "fail",
+        "effects": [
+          "first",
+          "third"
+        ]
+      }
+    },
+    {
+      "id": "D04",
+      "kind": "node-esm",
+      "result": {
+        "firstIsPromise": true,
+        "resolved": [
+          2,
+          4
+        ]
+      }
+    },
+    {
+      "id": "D05",
+      "kind": "node-esm",
+      "result": {
+        "originalRole": "admin",
+        "sameNestedObject": true
+      }
+    },
+    {
+      "id": "D06",
+      "kind": "node-esm",
+      "result": {
+        "role": "admin",
+        "limitType": "string",
+        "limitPlusOne": "101"
+      }
+    },
+    {
+      "id": "D07",
+      "kind": "python",
+      "result": {
+        "first": [
+          "a",
+          "b"
+        ],
+        "second": [
+          "a",
+          "b"
+        ],
+        "same": true
+      }
+    },
+    {
+      "id": "D08",
+      "kind": "python",
+      "result": {
+        "utc": "2026-10-16T04:30:00+00:00"
+      }
+    },
+    {
+      "id": "D09",
+      "kind": "python",
+      "result": {
+        "binary_float": "0.30000000000000004",
+        "decimal": "0.3"
+      }
+    },
+    {
+      "id": "D10",
+      "kind": "python",
+      "result": [
+        0,
+        "ran"
+      ]
+    },
+    {
+      "id": "D11",
+      "kind": "sqlite",
+      "result": {
+        "rows": 3,
+        "nonnull": 1,
+        "sum": 10
+      }
+    },
+    {
+      "id": "D12",
+      "kind": "sqlite",
+      "result": {
+        "rows": 3,
+        "null_rows": 2,
+        "duplicate_rejected": true
+      }
+    },
+    {
+      "id": "D13",
+      "kind": "sqlite",
+      "result": {
+        "balance_cents": 100,
+        "events": 1
+      }
+    },
+    {
+      "id": "D14",
+      "kind": "node-esm",
+      "result": [
+        1,
+        2,
+        3
+      ]
+    }
+  ],
+  "all_drill_processes_exited": true
+}

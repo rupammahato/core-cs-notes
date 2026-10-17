@@ -1,0 +1,180 @@
+{
+  "group": "http",
+  "total": 38,
+  "checks": [
+    {
+      "name": "public Django health view responds",
+      "passed": true
+    },
+    {
+      "name": "anonymous list rejected",
+      "passed": true
+    },
+    {
+      "name": "unknown token rejected",
+      "passed": true
+    },
+    {
+      "name": "401 retains authentication challenge",
+      "passed": true
+    },
+    {
+      "name": "list is tenant-scoped ordered and paginated",
+      "passed": true
+    },
+    {
+      "name": "second page has stable next records",
+      "passed": true
+    },
+    {
+      "name": "page-size request is capped",
+      "passed": true
+    },
+    {
+      "name": "invalid page returns 404",
+      "passed": true
+    },
+    {
+      "name": "cross-tenant detail hidden",
+      "passed": true
+    },
+    {
+      "name": "viewer can read tenant tasks",
+      "passed": true
+    },
+    {
+      "name": "viewer cannot create and produces no database row",
+      "passed": true
+    },
+    {
+      "name": "same-tenant peer cannot modify another owner task",
+      "passed": true
+    },
+    {
+      "name": "same-tenant peer cannot delete another owner task",
+      "passed": true
+    },
+    {
+      "name": "read policy permits same-tenant peer detail",
+      "passed": true
+    },
+    {
+      "name": "owner may update allowed field",
+      "passed": true
+    },
+    {
+      "name": "related project assignment is tenant-scoped",
+      "passed": true
+    },
+    {
+      "name": "client cannot assign owner",
+      "passed": true
+    },
+    {
+      "name": "client cannot directly set status",
+      "passed": true
+    },
+    {
+      "name": "client cannot directly set revision",
+      "passed": true
+    },
+    {
+      "name": "unknown field rejected",
+      "passed": true
+    },
+    {
+      "name": "missing title rejected",
+      "passed": true
+    },
+    {
+      "name": "blank title rejected",
+      "passed": true
+    },
+    {
+      "name": "oversized title rejected by serializer",
+      "passed": true
+    },
+    {
+      "name": "malformed JSON rejected",
+      "passed": true
+    },
+    {
+      "name": "unsupported media rejected",
+      "passed": true
+    },
+    {
+      "name": "database uniqueness conflict maps to 400 without extra row",
+      "passed": true
+    },
+    {
+      "name": "create binds owner server-side and returns public schema",
+      "passed": true
+    },
+    {
+      "name": "partial update retains required relation",
+      "passed": true
+    },
+    {
+      "name": "full update requires project",
+      "passed": true
+    },
+    {
+      "name": "custom action commits status revision and audit",
+      "passed": true
+    },
+    {
+      "name": "sequential action retry does not duplicate effect",
+      "passed": true
+    },
+    {
+      "name": "custom action applies owner permission",
+      "passed": true
+    },
+    {
+      "name": "custom action hides other tenant object",
+      "passed": true
+    },
+    {
+      "name": "action rejects unexpected input before changing state",
+      "passed": true
+    },
+    {
+      "name": "owner deletion returns 204 and removes row",
+      "passed": true
+    },
+    {
+      "name": "method rejection preserves Allow",
+      "passed": true
+    },
+    {
+      "name": "unknown URL returns 404",
+      "passed": true
+    },
+    {
+      "name": "middleware response headers survive DRF dispatch",
+      "passed": true
+    }
+  ],
+  "observations": {
+    "list_shape": {
+      "count": 6,
+      "first_page_ids": [
+        1,
+        2
+      ]
+    },
+    "first_completion": {
+      "changed": true,
+      "status": "done",
+      "revision": 1
+    },
+    "repeated_completion": {
+      "changed": false,
+      "status": "done",
+      "revision": 1
+    }
+  },
+  "port": 57570,
+  "listener_closed": true,
+  "transport": "Real loopback HTTP against Django development/test WSGI server; sequential requests"
+}

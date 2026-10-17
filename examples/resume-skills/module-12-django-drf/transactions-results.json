@@ -1,0 +1,74 @@
+{
+  "group": "transactions",
+  "total": 14,
+  "checks": [
+    {
+      "name": "conditional completion and audit insert commit together",
+      "passed": true
+    },
+    {
+      "name": "sequential completion retry does not repeat revision audit or callback",
+      "passed": true
+    },
+    {
+      "name": "injected failure after SQL update rolls back status revision and audit",
+      "passed": true
+    },
+    {
+      "name": "service transition filters tenant and owner",
+      "passed": true
+    },
+    {
+      "name": "on_commit runs after the outer transaction commits",
+      "passed": true
+    },
+    {
+      "name": "rolled-back on_commit callbacks are discarded",
+      "passed": true
+    },
+    {
+      "name": "nested atomic savepoint rolls back inner work while outer work continues",
+      "passed": true
+    },
+    {
+      "name": "database rejects invalid task status",
+      "passed": true
+    },
+    {
+      "name": "database rejects negative revision",
+      "passed": true
+    },
+    {
+      "name": "database rejects duplicate project task title",
+      "passed": true
+    },
+    {
+      "name": "database rejects duplicate task event kind",
+      "passed": true
+    },
+    {
+      "name": "SQL F update does not refresh an already-loaded Python object",
+      "passed": true
+    },
+    {
+      "name": "database rollback does not rewind Python model attributes",
+      "passed": true
+    },
+    {
+      "name": "on_commit failure cannot undo the already-committed business transaction",
+      "passed": true
+    }
+  ],
+  "observations": {
+    "on_commit_timing": [
+      "inside: no callback",
+      "after commit: callback"
+    ],
+    "callback_failure": {
+      "database_committed": true,
+      "callback_failed": true
+    }
+  },
+  "backend": "sqlite",
+  "scope": "SQLite transactions and sequential retries; no PostgreSQL row-lock or competing-writer test"
+}

@@ -1,0 +1,39 @@
+PASS same password receives independent random salts: {"saltsDiffer":true,"derivedValuesDiffer":true}
+PASS correct password verifies: true
+PASS wrong password fails: false
+PASS password whitespace is not silently trimmed: false
+PASS oversize password rejected before derivation: {"rejected":"Unsupported password input."}
+PASS invalid stored hash format rejected: {"rejected":"Invalid stored credential."}
+PASS signed JWT has three parts and readable untrusted claims: {"parts":3,"decodedSubject":"user-1","containsPassword":false}
+PASS signature and expected claims permit valid access: {"subject":"user-1"}
+PASS payload tampering is rejected even though decoding succeeds: {"rejected":"invalid_access_token"}
+PASS wrong issuer rejected: {"rejected":"invalid_access_token"}
+PASS wrong audience rejected: {"rejected":"invalid_access_token"}
+PASS expired token rejected: {"rejected":"invalid_access_token"}
+PASS not-yet-valid token rejected: {"rejected":"invalid_access_token"}
+PASS missing expiry rejected: {"rejected":"invalid_access_token"}
+PASS missing subject rejected: {"rejected":"invalid_access_token"}
+PASS future issued-at rejected: {"rejected":"invalid_access_token"}
+PASS oversize lifetime rejected: {"rejected":"invalid_access_token"}
+PASS wrong token purpose rejected: {"rejected":"invalid_access_token"}
+PASS unexpected key ID rejected: {"rejected":"invalid_access_token"}
+PASS wrong signing key rejected: {"rejected":"invalid_access_token"}
+PASS unsecured alg none rejected: {"rejected":"invalid_access_token"}
+PASS HS256 rejected by RS256 allowlist: {"rejected":"invalid_access_token"}
+PASS access valid immediately before expiry: {"atMs":1059999,"valid":true}
+PASS access invalid exactly at expiry: {"rejected":"invalid_access_token"}
+PASS re-login replaces previous session credential: {"previousValid":false,"currentValid":true}
+PASS accepted session activity renews idle clock: {"elapsedMs":29999}
+PASS idle timeout rejects at boundary: {"rejected":"session_expired"}
+PASS absolute timeout survives continued activity: {"rejected":"session_expired"}
+PASS wrong CSRF token leaves session usable: {"rejected":"csrf_rejected","sessionStillValid":true}
+PASS logout revokes server-side session: {"rejected":"unauthenticated"}
+PASS refresh rotation issues a distinct successor: {"distinct":true,"subject":"user-1"}
+PASS reuse of consumed refresh revokes family: {"reuseRejected":true,"successorRejected":true}
+PASS unknown refresh does not revoke unrelated family: {"unrelatedFamilyValid":true}
+PASS refresh family expires at fixed absolute boundary: {"rejected":"invalid_refresh_token"}
+PASS JWE has five parts and decrypts with expected algorithms: {"parts":5,"decryptedNote":"private-demo-value"}
+PASS JWE rejects wrong decryption key: {"rejected":true}
+PASS JWE still enforces expiry: {"rejected":true}
+PASS HKDF context separates derived keys: {"sameContextSameKey":true,"changedContextDifferentKey":true,"bytes":32}
+Verified 38 crypto checks.

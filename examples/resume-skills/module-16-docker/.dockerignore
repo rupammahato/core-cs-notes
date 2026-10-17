@@ -1,0 +1,12 @@
+.git
+.venv
+.env
+secrets
+.run-*
+__pycache__
+*-results.json
+*-output.txt
+*-validation.json
+validation-summary.json
+README.md
+*.tmp.py

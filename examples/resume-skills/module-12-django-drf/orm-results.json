@@ -1,0 +1,85 @@
+{
+  "group": "orm",
+  "total": 15,
+  "checks": [
+    {
+      "name": "QuerySet construction/filter/slice are lazy until iteration",
+      "passed": true
+    },
+    {
+      "name": "evaluated QuerySet reuses its own result cache",
+      "passed": true
+    },
+    {
+      "name": "all clone performs a fresh query despite original cache",
+      "passed": true
+    },
+    {
+      "name": "count and exists execute their own queries on fresh QuerySets",
+      "passed": true
+    },
+    {
+      "name": "iterator bypasses normal result cache on repeated passes",
+      "passed": true
+    },
+    {
+      "name": "select_related removes measured FK N+1 while preserving values",
+      "passed": true
+    },
+    {
+      "name": "prefetch_related removes measured M2M N+1 using two queries",
+      "passed": true
+    },
+    {
+      "name": "serializer relation traversal stays within measured query budget",
+      "passed": true
+    },
+    {
+      "name": "annotate aggregation runs in SQL",
+      "passed": true
+    },
+    {
+      "name": "values explicitly projects dictionary fields",
+      "passed": true
+    },
+    {
+      "name": "Q expressions compose OR filters",
+      "passed": true
+    },
+    {
+      "name": "ORM lookup keeps adversarial text in bound parameters",
+      "passed": true
+    },
+    {
+      "name": "only can introduce extra queries when deferred fields are read",
+      "passed": true
+    },
+    {
+      "name": "save does not automatically call full_clean; SQLite accepts oversized varchar",
+      "passed": true
+    },
+    {
+      "name": "SQLite select_for_update is not a row-lock test",
+      "passed": true
+    }
+  ],
+  "observations": {
+    "single_valued_relations": {
+      "rows": 6,
+      "naive_queries": 13,
+      "select_related_queries": 1
+    },
+    "many_to_many": {
+      "rows": 6,
+      "naive_queries": 7,
+      "prefetch_queries": 2
+    },
+    "optimized_serializer_queries": 2,
+    "deferred_title_queries": 7,
+    "sqlite_select_for_update": {
+      "supported": false,
+      "for_update_emitted": false
+    }
+  },
+  "backend": "sqlite"
+}

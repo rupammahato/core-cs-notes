@@ -1,0 +1,7 @@
+Looking in links: c:\Development\Placement\examples\resume-skills\module-15-cache-jobs-ingestion\.wheelhouse
+Processing c:\development\placement\examples\resume-skills\module-15-cache-jobs-ingestion\.wheelhouse\openpyxl-3.1.5-py2.py3-none-any.whl (from -r C:\Development\Placement\examples\resume-skills\module-15-cache-jobs-ingestion\requirements.lock.txt (line 1))
+Processing c:\development\placement\examples\resume-skills\module-15-cache-jobs-ingestion\.wheelhouse\et_xmlfile-2.0.0-py3-none-any.whl (from -r C:\Development\Placement\examples\resume-skills\module-15-cache-jobs-ingestion\requirements.lock.txt (line 2))
+Processing c:\development\placement\examples\resume-skills\module-15-cache-jobs-ingestion\.wheelhouse\defusedxml-0.7.1-py2.py3-none-any.whl (from -r C:\Development\Placement\examples\resume-skills\module-15-cache-jobs-ingestion\requirements.lock.txt (line 3))
+Processing c:\development\placement\examples\resume-skills\module-15-cache-jobs-ingestion\.wheelhouse\pypdf-6.19.0-py3-none-any.whl (from -r C:\Development\Placement\examples\resume-skills\module-15-cache-jobs-ingestion\requirements.lock.txt (line 4))
+Installing collected packages: pypdf, et_xmlfile, defusedxml, openpyxl
+Successfully installed defusedxml-0.7.1 et_xmlfile-2.0.0 openpyxl-3.1.5 pypdf-6.19.0

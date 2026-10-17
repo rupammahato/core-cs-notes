@@ -1,0 +1,7 @@
+PASS composite identity distinguishes same ID across tenants: {"alpha1":"Alpha private","beta1":"Beta shared"}
+PASS unsafe concatenation leaks rows in isolated training database: {"rows":4,"includesOtherTenant":true}
+PASS bound value remains data rather than injected SQL: {"rows":0}
+PASS parameterization alone does not add tenant authorization: {"rows":2,"distinctTenants":["alpha","beta"]}
+PASS composite foreign key rejects cross-tenant parent: {"rejected":true,"rowsRemain":4}
+PASS allowed sort mapping rejects identifier injection: {"rejectedSort":true,"allowedSortIds":[1,2]}
+Verified 6 sql checks.

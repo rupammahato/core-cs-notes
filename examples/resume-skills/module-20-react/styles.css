@@ -1,0 +1,21 @@
+:root { font-family: system-ui, sans-serif; color: #172b3a; background: #f4f7fa; line-height: 1.5; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+main { max-width: 1120px; margin: auto; padding: 32px 24px 48px; }
+header { margin-bottom: 26px; }
+h1 { font-size: 2rem; margin: 0 0 8px; }
+h2 { font-size: 1.1rem; margin: 0 0 16px; }
+.eyebrow { color: #34618c; font-weight: 650; margin: 0 0 6px; }
+.grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+section { background: white; border: 1px solid #d7e1eb; border-radius: 10px; padding: 22px; }
+label { display: block; margin-top: 10px; font-weight: 550; }
+input:not([type=checkbox]), select { width: 100%; padding: 8px 10px; border: 1px solid #8297ac; border-radius: 5px; font: inherit; }
+input[type=checkbox] { margin-right: 8px; }
+button { background: #edf3fa; border: 1px solid #7997b5; border-radius: 5px; color: #133b60; padding: 7px 10px; margin: 8px 6px 4px 0; font: inherit; cursor: pointer; }
+button:focus-visible, input:focus-visible, select:focus-visible { outline: 3px solid #367ac1; outline-offset: 3px; }
+output { font-weight: 700; }
+ul { padding-left: 20px; }
+li { margin-bottom: 8px; }
+[role=alert] { color: #a71d31; }
+hr { border: 0; border-top: 1px solid #d7e1eb; margin: 18px 0; }
+@media (max-width: 720px) { .grid { grid-template-columns: 1fr; } main { padding: 22px 16px; } }

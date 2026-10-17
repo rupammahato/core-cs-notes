@@ -1,0 +1,10 @@
+{
+  "container_removed": true,
+  "owned_image_removed": true,
+  "scratch_removed": true,
+  "ports_closed": {
+    "57246": true,
+    "57247": true
+  },
+  "public_base_image_and_build_cache_retained": true
+}

@@ -1,0 +1,23 @@
+{
+  "chapter": "resume-skills-handbook-part-28-module-26-neo4j-graph-backed-applications.md",
+  "words": 7971,
+  "lines": 968,
+  "interview_questions": 30,
+  "practice_tasks": 10,
+  "unchecked_learning_items": 12,
+  "source_fidelity": {
+    "schema.cypher": true,
+    "fixtures.py": true,
+    "service.py": true,
+    "LocalGraphServer.java": true
+  },
+  "result_fidelity": {
+    "cypher": true,
+    "merge": true,
+    "traversal": true,
+    "transactions": true,
+    "plans": true,
+    "retrieval": true,
+    "versions": true
+  }
+}

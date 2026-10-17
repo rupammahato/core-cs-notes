@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .action { @apply rounded border border-blue-700 bg-blue-700 px-4 py-2 text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700; }
+  .card { @apply min-w-0 rounded-xl border border-slate-300 bg-white p-6 shadow-sm; }
+}

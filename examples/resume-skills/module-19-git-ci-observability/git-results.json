@@ -1,0 +1,1244 @@
+{
+  "checks": [
+    {
+      "group": "git",
+      "name": "head_index_worktree_are_distinct",
+      "passed": true,
+      "evidence": {
+        "head": "base",
+        "index": "staged",
+        "working": "working"
+      }
+    },
+    {
+      "group": "git",
+      "name": "unstage_preserves_working_file",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "group": "git",
+      "name": "restore_worktree_uses_index",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "group": "git",
+      "name": "merge_records_two_parent_histories",
+      "passed": true,
+      "evidence": [
+        "cc0f1a6c28d6642165918ada26d2169783e92745",
+        "1247cb57a94320fea6daaa759a32cb26bb9fb51f"
+      ]
+    },
+    {
+      "group": "git",
+      "name": "conflict_stops_merge_with_unmerged_index",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "group": "git",
+      "name": "abort_restores_premerge_head_and_file",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "group": "git",
+      "name": "resolved_merge_has_two_parents",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "group": "git",
+      "name": "rebase_replays_to_a_new_commit",
+      "passed": true,
+      "evidence": {
+        "old": "ccea9dcb72ca1f6f6d22a233a3b8a76b956fdac6",
+        "new": "c39640cf02d94d22ad7454b0b482d87b7a8a4d95"
+      }
+    },
+    {
+      "group": "git",
+      "name": "rebase_preserves_the_example_patch",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "group": "git",
+      "name": "revert_adds_inverse_without_erasing_target",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "group": "git",
+      "name": "fetch_updates_tracking_ref_without_moving_head",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "group": "git",
+      "name": "fast_forward_moves_to_existing_commit",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "group": "git",
+      "name": "ff_only_refuses_diverged_history",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "group": "git",
+      "name": "source_snapshot_matches_release_files",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "group": "git",
+      "name": "release_tag_identifies_a_commit",
+      "passed": true,
+      "evidence": null
+    }
+  ],
+  "total": 15,
+  "observations": {
+    "staging": {
+      "head": "base",
+      "index": "staged",
+      "working": "working"
+    },
+    "merge_parents": [
+      "cc0f1a6c28d6642165918ada26d2169783e92745",
+      "1247cb57a94320fea6daaa759a32cb26bb9fb51f"
+    ],
+    "rebase": {
+      "before": "ccea9dcb72ca1f6f6d22a233a3b8a76b956fdac6",
+      "after": "c39640cf02d94d22ad7454b0b482d87b7a8a4d95",
+      "new_parent": "8736d1a5686e0bd5c803508239d8d55c55e3b2b3"
+    },
+    "revert": {
+      "target": "8661ff66b5782b68690e40ddbd4a5b9c24955dbd",
+      "inverse": "406a161dc7e1b78e6f44a745702cbe75c4d206b6"
+    },
+    "fetch": {
+      "before_peer_head": "8736d1a5686e0bd5c803508239d8d55c55e3b2b3",
+      "remote_head": "be6a4cba77016d0457de1755dd8898cab5b958f4"
+    },
+    "release_revision": "28d1ef891abe9eccb6a500b58f848c999bb1da28",
+    "graph": "* 28d1ef8 (HEAD -> main, tag: fixture-v1) Snapshot the actual teaching release sources\n* ad013b0 (origin/main) Main diverges too\n* be6a4cb New published fixture commit\n| * 406a161 (topic) Revert \"Feature to revert\"\n| * 8661ff6 Feature to revert\n| * c39640c Topic before rebase\n|/  \n* 8736d1a Advance main before rebase\n*   03c1692 Resolve conflict deliberately\n|\\  \n| * 28e44db (conflict-side) Side edits same line\n* | 66c8db1 Main edits same line\n|/  \n*   8abda42 Merge independent work\n|\\  \n| * 1247cb5 (feature) Feature\n* | cc0f1a6 Main independently advances\n|/  \n* baca3a9 Base snapshot\n"
+  },
+  "commands": [
+    {
+      "args": [
+        "init",
+        "-b",
+        "main"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "Initialized empty Git repository in C:/Development/Placement/examples/resume-skills/module-19-git-ci-observability/.run-pzf5al82/git-work/.git/\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "add",
+        "."
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "commit",
+        "-m",
+        "Base snapshot"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "[main (root-commit) baca3a9] Base snapshot\n 1 file changed, 1 insertion(+)\n create mode 100644 state.txt\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "rev-parse",
+        "HEAD"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "baca3a94364771d9c998376230fca107984abd6c\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "add",
+        "state.txt"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "show",
+        "HEAD:state.txt"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "base\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "show",
+        ":state.txt"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "staged\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "restore",
+        "--staged",
+        "state.txt"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "show",
+        ":state.txt"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "base\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "restore",
+        "state.txt"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "switch",
+        "-c",
+        "feature"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "",
+      "stderr": "Switched to a new branch 'feature'\n"
+    },
+    {
+      "args": [
+        "add",
+        "."
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "commit",
+        "-m",
+        "Feature"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "[feature 1247cb5] Feature\n 1 file changed, 1 insertion(+)\n create mode 100644 feature.txt\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "rev-parse",
+        "HEAD"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "1247cb57a94320fea6daaa759a32cb26bb9fb51f\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "switch",
+        "main"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "",
+      "stderr": "Switched to branch 'main'\n"
+    },
+    {
+      "args": [
+        "add",
+        "."
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "commit",
+        "-m",
+        "Main independently advances"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "[main cc0f1a6] Main independently advances\n 1 file changed, 1 insertion(+)\n create mode 100644 main.txt\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "rev-parse",
+        "HEAD"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "cc0f1a6c28d6642165918ada26d2169783e92745\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "merge",
+        "--no-ff",
+        "feature",
+        "-m",
+        "Merge independent work"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "Merge made by the 'ort' strategy.\n feature.txt | 1 +\n 1 file changed, 1 insertion(+)\n create mode 100644 feature.txt\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "show",
+        "-s",
+        "--format=%P",
+        "HEAD"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "cc0f1a6c28d6642165918ada26d2169783e92745 1247cb57a94320fea6daaa759a32cb26bb9fb51f\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "switch",
+        "-c",
+        "conflict-side"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "",
+      "stderr": "Switched to a new branch 'conflict-side'\n"
+    },
+    {
+      "args": [
+        "add",
+        "."
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "commit",
+        "-m",
+        "Side edits same line"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "[conflict-side 28e44db] Side edits same line\n 1 file changed, 1 insertion(+), 1 deletion(-)\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "rev-parse",
+        "HEAD"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "28e44db647f3b6525bb152cc8b93d5ae8f09dd5b\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "switch",
+        "main"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "",
+      "stderr": "Switched to branch 'main'\n"
+    },
+    {
+      "args": [
+        "add",
+        "."
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "commit",
+        "-m",
+        "Main edits same line"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "[main 66c8db1] Main edits same line\n 1 file changed, 1 insertion(+), 1 deletion(-)\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "rev-parse",
+        "HEAD"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "66c8db10d524f980998ca8f904b5c70b7ef25aa6\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "merge",
+        "conflict-side"
+      ],
+      "repo": "git-work",
+      "code": 1,
+      "stdout": "Auto-merging state.txt\nCONFLICT (content): Merge conflict in state.txt\nAutomatic merge failed; fix conflicts and then commit the result.\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "ls-files",
+        "-u"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "100644 db5ca3d5e3eaae11d0c33912c27fac0a7e76c587 1\tstate.txt\n100644 c1d93e10d3860ebf82d9979b1805d09f10b4c1c6 2\tstate.txt\n100644 867237cb26a26d0beefa0fdb6da0e0ee59b233e4 3\tstate.txt\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "merge",
+        "--abort"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "rev-parse",
+        "HEAD"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "66c8db10d524f980998ca8f904b5c70b7ef25aa6\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "merge",
+        "conflict-side"
+      ],
+      "repo": "git-work",
+      "code": 1,
+      "stdout": "Auto-merging state.txt\nCONFLICT (content): Merge conflict in state.txt\nAutomatic merge failed; fix conflicts and then commit the result.\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "add",
+        "."
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "commit",
+        "-m",
+        "Resolve conflict deliberately"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "[main 03c1692] Resolve conflict deliberately\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "rev-parse",
+        "HEAD"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "03c1692d32698402dac6184973d24d43048a71c7\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "show",
+        "-s",
+        "--format=%P",
+        "HEAD"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "66c8db10d524f980998ca8f904b5c70b7ef25aa6 28e44db647f3b6525bb152cc8b93d5ae8f09dd5b\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "ls-files",
+        "-u"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "switch",
+        "-c",
+        "topic"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "",
+      "stderr": "Switched to a new branch 'topic'\n"
+    },
+    {
+      "args": [
+        "add",
+        "."
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "commit",
+        "-m",
+        "Topic before rebase"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "[topic ccea9dc] Topic before rebase\n 1 file changed, 1 insertion(+)\n create mode 100644 topic.txt\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "rev-parse",
+        "HEAD"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "ccea9dcb72ca1f6f6d22a233a3b8a76b956fdac6\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "diff",
+        "ccea9dcb72ca1f6f6d22a233a3b8a76b956fdac6^",
+        "ccea9dcb72ca1f6f6d22a233a3b8a76b956fdac6",
+        "--",
+        "topic.txt"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "diff --git a/topic.txt b/topic.txt\nnew file mode 100644\nindex 0000000..49d9321\n--- /dev/null\n+++ b/topic.txt\n@@ -0,0 +1 @@\n+topic-patch\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "switch",
+        "main"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "",
+      "stderr": "Switched to branch 'main'\n"
+    },
+    {
+      "args": [
+        "add",
+        "."
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "commit",
+        "-m",
+        "Advance main before rebase"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "[main 8736d1a] Advance main before rebase\n 1 file changed, 1 insertion(+)\n create mode 100644 advance.txt\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "rev-parse",
+        "HEAD"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "8736d1a5686e0bd5c803508239d8d55c55e3b2b3\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "switch",
+        "topic"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "",
+      "stderr": "Switched to branch 'topic'\n"
+    },
+    {
+      "args": [
+        "rebase",
+        "main"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "",
+      "stderr": "Rebasing (1/1)\nSuccessfully rebased and updated refs/heads/topic.\n"
+    },
+    {
+      "args": [
+        "rev-parse",
+        "HEAD"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "c39640cf02d94d22ad7454b0b482d87b7a8a4d95\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "show",
+        "-s",
+        "--format=%P",
+        "HEAD"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "8736d1a5686e0bd5c803508239d8d55c55e3b2b3\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "diff",
+        "c39640cf02d94d22ad7454b0b482d87b7a8a4d95^",
+        "c39640cf02d94d22ad7454b0b482d87b7a8a4d95",
+        "--",
+        "topic.txt"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "diff --git a/topic.txt b/topic.txt\nnew file mode 100644\nindex 0000000..49d9321\n--- /dev/null\n+++ b/topic.txt\n@@ -0,0 +1 @@\n+topic-patch\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "add",
+        "."
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "commit",
+        "-m",
+        "Feature to revert"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "[topic 8661ff6] Feature to revert\n 1 file changed, 1 insertion(+)\n create mode 100644 revert-me.txt\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "rev-parse",
+        "HEAD"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "8661ff66b5782b68690e40ddbd4a5b9c24955dbd\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "revert",
+        "--no-edit",
+        "8661ff66b5782b68690e40ddbd4a5b9c24955dbd"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "[topic 406a161] Revert \"Feature to revert\"\n Date: Wed Oct 14 12:00:00 2026 +0000\n 1 file changed, 1 deletion(-)\n delete mode 100644 revert-me.txt\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "rev-parse",
+        "HEAD"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "406a161dc7e1b78e6f44a745702cbe75c4d206b6\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "merge-base",
+        "--is-ancestor",
+        "8661ff66b5782b68690e40ddbd4a5b9c24955dbd",
+        "HEAD"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "switch",
+        "main"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "",
+      "stderr": "Switched to branch 'main'\n"
+    },
+    {
+      "args": [
+        "init",
+        "--bare",
+        "-b",
+        "main",
+        "C:\\Development\\Placement\\examples\\resume-skills\\module-19-git-ci-observability\\.run-pzf5al82\\remote.git"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "Initialized empty Git repository in C:/Development/Placement/examples/resume-skills/module-19-git-ci-observability/.run-pzf5al82/remote.git/\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "remote",
+        "add",
+        "origin",
+        "C:\\Development\\Placement\\examples\\resume-skills\\module-19-git-ci-observability\\.run-pzf5al82\\remote.git"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "push",
+        "-u",
+        "origin",
+        "main"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "branch 'main' set up to track 'origin/main'.\n",
+      "stderr": "To C:\\Development\\Placement\\examples\\resume-skills\\module-19-git-ci-observability\\.run-pzf5al82\\remote.git\n * [new branch]      main -> main\n"
+    },
+    {
+      "args": [
+        "clone",
+        "C:\\Development\\Placement\\examples\\resume-skills\\module-19-git-ci-observability\\.run-pzf5al82\\remote.git",
+        "C:\\Development\\Placement\\examples\\resume-skills\\module-19-git-ci-observability\\.run-pzf5al82\\git-peer"
+      ],
+      "repo": ".run-pzf5al82",
+      "code": 0,
+      "stdout": "",
+      "stderr": "Cloning into 'C:\\Development\\Placement\\examples\\resume-skills\\module-19-git-ci-observability\\.run-pzf5al82\\git-peer'...\ndone.\n"
+    },
+    {
+      "args": [
+        "rev-parse",
+        "HEAD"
+      ],
+      "repo": "git-peer",
+      "code": 0,
+      "stdout": "8736d1a5686e0bd5c803508239d8d55c55e3b2b3\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "add",
+        "."
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "commit",
+        "-m",
+        "New published fixture commit"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "[main be6a4cb] New published fixture commit\n 1 file changed, 1 insertion(+)\n create mode 100644 remote-change.txt\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "rev-parse",
+        "HEAD"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "be6a4cba77016d0457de1755dd8898cab5b958f4\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "push",
+        "origin",
+        "main"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "",
+      "stderr": "To C:\\Development\\Placement\\examples\\resume-skills\\module-19-git-ci-observability\\.run-pzf5al82\\remote.git\n   8736d1a..be6a4cb  main -> main\n"
+    },
+    {
+      "args": [
+        "fetch",
+        "origin"
+      ],
+      "repo": "git-peer",
+      "code": 0,
+      "stdout": "",
+      "stderr": "From C:\\Development\\Placement\\examples\\resume-skills\\module-19-git-ci-observability\\.run-pzf5al82\\remote\n   8736d1a..be6a4cb  main       -> origin/main\n"
+    },
+    {
+      "args": [
+        "rev-parse",
+        "HEAD"
+      ],
+      "repo": "git-peer",
+      "code": 0,
+      "stdout": "8736d1a5686e0bd5c803508239d8d55c55e3b2b3\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "rev-parse",
+        "origin/main"
+      ],
+      "repo": "git-peer",
+      "code": 0,
+      "stdout": "be6a4cba77016d0457de1755dd8898cab5b958f4\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "merge",
+        "--ff-only",
+        "origin/main"
+      ],
+      "repo": "git-peer",
+      "code": 0,
+      "stdout": "Updating 8736d1a..be6a4cb\nFast-forward\n remote-change.txt | 1 +\n 1 file changed, 1 insertion(+)\n create mode 100644 remote-change.txt\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "rev-parse",
+        "HEAD"
+      ],
+      "repo": "git-peer",
+      "code": 0,
+      "stdout": "be6a4cba77016d0457de1755dd8898cab5b958f4\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "add",
+        "."
+      ],
+      "repo": "git-peer",
+      "code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "commit",
+        "-m",
+        "Peer diverges"
+      ],
+      "repo": "git-peer",
+      "code": 0,
+      "stdout": "[main 8505997] Peer diverges\n 1 file changed, 1 insertion(+)\n create mode 100644 peer-only.txt\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "rev-parse",
+        "HEAD"
+      ],
+      "repo": "git-peer",
+      "code": 0,
+      "stdout": "85059975e582fbeb657047d65eb778b5ce604b1d\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "add",
+        "."
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "commit",
+        "-m",
+        "Main diverges too"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "[main ad013b0] Main diverges too\n 1 file changed, 1 insertion(+)\n create mode 100644 remote-only.txt\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "rev-parse",
+        "HEAD"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "ad013b0e232cc02787a3b1fd8002ae48304ed40b\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "push",
+        "origin",
+        "main"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "",
+      "stderr": "To C:\\Development\\Placement\\examples\\resume-skills\\module-19-git-ci-observability\\.run-pzf5al82\\remote.git\n   be6a4cb..ad013b0  main -> main\n"
+    },
+    {
+      "args": [
+        "fetch",
+        "origin"
+      ],
+      "repo": "git-peer",
+      "code": 0,
+      "stdout": "",
+      "stderr": "From C:\\Development\\Placement\\examples\\resume-skills\\module-19-git-ci-observability\\.run-pzf5al82\\remote\n   be6a4cb..ad013b0  main       -> origin/main\n"
+    },
+    {
+      "args": [
+        "merge",
+        "--ff-only",
+        "origin/main"
+      ],
+      "repo": "git-peer",
+      "code": 128,
+      "stdout": "",
+      "stderr": "hint: Diverging branches can't be fast-forwarded, you need to either:\nhint:\nhint: \tgit merge --no-ff\nhint:\nhint: or:\nhint:\nhint: \tgit rebase\nhint:\nhint: Disable this message with \"git config set advice.diverging false\"\nfatal: Not possible to fast-forward, aborting.\n"
+    },
+    {
+      "args": [
+        "rev-parse",
+        "HEAD"
+      ],
+      "repo": "git-peer",
+      "code": 0,
+      "stdout": "85059975e582fbeb657047d65eb778b5ce604b1d\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "add",
+        "."
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "commit",
+        "-m",
+        "Snapshot the actual teaching release sources"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "[main 28d1ef8] Snapshot the actual teaching release sources\n 8 files changed, 377 insertions(+)\n create mode 100644 service/app.mjs\n create mode 100644 service/contract.test.mjs\n create mode 100644 service/load.mjs\n create mode 100644 service/package-lock.json\n create mode 100644 service/package.json\n create mode 100644 service/serve.mjs\n create mode 100644 service/statistics.mjs\n create mode 100644 service/telemetry.mjs\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "rev-parse",
+        "HEAD"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "28d1ef891abe9eccb6a500b58f848c999bb1da28\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "rev-parse",
+        "HEAD:service/app.mjs"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "e50244b0c7ff1acfbc32440006b17c52729d2a99\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "hash-object",
+        "C:\\Development\\Placement\\examples\\resume-skills\\module-19-git-ci-observability\\app.mjs"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "e50244b0c7ff1acfbc32440006b17c52729d2a99\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "rev-parse",
+        "HEAD:service/telemetry.mjs"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "045390fe655f6a04003b51d4841c9f234a994990\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "hash-object",
+        "C:\\Development\\Placement\\examples\\resume-skills\\module-19-git-ci-observability\\telemetry.mjs"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "045390fe655f6a04003b51d4841c9f234a994990\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "rev-parse",
+        "HEAD:service/serve.mjs"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "403e0ad579303c5d054d1f26ce2852582f28f373\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "hash-object",
+        "C:\\Development\\Placement\\examples\\resume-skills\\module-19-git-ci-observability\\serve.mjs"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "403e0ad579303c5d054d1f26ce2852582f28f373\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "rev-parse",
+        "HEAD:service/load.mjs"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "9c49eb5b1566ca00bfe21ba25a9026877676b457\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "hash-object",
+        "C:\\Development\\Placement\\examples\\resume-skills\\module-19-git-ci-observability\\load.mjs"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "9c49eb5b1566ca00bfe21ba25a9026877676b457\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "rev-parse",
+        "HEAD:service/statistics.mjs"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "563f80fe197c086048bb34a3264fee7f701a95a7\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "hash-object",
+        "C:\\Development\\Placement\\examples\\resume-skills\\module-19-git-ci-observability\\statistics.mjs"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "563f80fe197c086048bb34a3264fee7f701a95a7\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "rev-parse",
+        "HEAD:service/contract.test.mjs"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "1fb02f59df01816156d560429ab41beead32ceb5\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "hash-object",
+        "C:\\Development\\Placement\\examples\\resume-skills\\module-19-git-ci-observability\\contract.test.mjs"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "1fb02f59df01816156d560429ab41beead32ceb5\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "rev-parse",
+        "HEAD:service/package.json"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "4fadc38532367e301ccb4d6011646970aad83087\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "hash-object",
+        "C:\\Development\\Placement\\examples\\resume-skills\\module-19-git-ci-observability\\package.json"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "4fadc38532367e301ccb4d6011646970aad83087\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "rev-parse",
+        "HEAD:service/package-lock.json"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "2d42dc4bbd9c26ee7ee928660e84dc2867402618\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "hash-object",
+        "C:\\Development\\Placement\\examples\\resume-skills\\module-19-git-ci-observability\\package-lock.json"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "2d42dc4bbd9c26ee7ee928660e84dc2867402618\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "tag",
+        "fixture-v1"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "rev-parse",
+        "fixture-v1"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "28d1ef891abe9eccb6a500b58f848c999bb1da28\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "rev-parse",
+        "HEAD"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "28d1ef891abe9eccb6a500b58f848c999bb1da28\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "log",
+        "--all",
+        "--graph",
+        "--oneline",
+        "--decorate"
+      ],
+      "repo": "git-work",
+      "code": 0,
+      "stdout": "* 28d1ef8 (HEAD -> main, tag: fixture-v1) Snapshot the actual teaching release sources\n* ad013b0 (origin/main) Main diverges too\n* be6a4cb New published fixture commit\n| * 406a161 (topic) Revert \"Feature to revert\"\n| * 8661ff6 Feature to revert\n| * c39640c Topic before rebase\n|/  \n* 8736d1a Advance main before rebase\n*   03c1692 Resolve conflict deliberately\n|\\  \n| * 28e44db (conflict-side) Side edits same line\n* | 66c8db1 Main edits same line\n|/  \n*   8abda42 Merge independent work\n|\\  \n| * 1247cb5 (feature) Feature\n* | cc0f1a6 Main independently advances\n|/  \n* baca3a9 Base snapshot\n",
+      "stderr": ""
+    }
+  ]
+}

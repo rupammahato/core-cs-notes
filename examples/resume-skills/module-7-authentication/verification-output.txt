@@ -1,0 +1,91 @@
+PASS same password receives independent random salts: {"saltsDiffer":true,"derivedValuesDiffer":true}
+PASS correct password verifies: true
+PASS wrong password fails: false
+PASS password whitespace is not silently trimmed: false
+PASS oversize password rejected before derivation: {"rejected":"Unsupported password input."}
+PASS invalid stored hash format rejected: {"rejected":"Invalid stored credential."}
+PASS signed JWT has three parts and readable untrusted claims: {"parts":3,"decodedSubject":"user-1","containsPassword":false}
+PASS signature and expected claims permit valid access: {"subject":"user-1"}
+PASS payload tampering is rejected even though decoding succeeds: {"rejected":"invalid_access_token"}
+PASS wrong issuer rejected: {"rejected":"invalid_access_token"}
+PASS wrong audience rejected: {"rejected":"invalid_access_token"}
+PASS expired token rejected: {"rejected":"invalid_access_token"}
+PASS not-yet-valid token rejected: {"rejected":"invalid_access_token"}
+PASS missing expiry rejected: {"rejected":"invalid_access_token"}
+PASS missing subject rejected: {"rejected":"invalid_access_token"}
+PASS future issued-at rejected: {"rejected":"invalid_access_token"}
+PASS oversize lifetime rejected: {"rejected":"invalid_access_token"}
+PASS wrong token purpose rejected: {"rejected":"invalid_access_token"}
+PASS unexpected key ID rejected: {"rejected":"invalid_access_token"}
+PASS wrong signing key rejected: {"rejected":"invalid_access_token"}
+PASS unsecured alg none rejected: {"rejected":"invalid_access_token"}
+PASS HS256 rejected by RS256 allowlist: {"rejected":"invalid_access_token"}
+PASS access valid immediately before expiry: {"atMs":1059999,"valid":true}
+PASS access invalid exactly at expiry: {"rejected":"invalid_access_token"}
+PASS re-login replaces previous session credential: {"previousValid":false,"currentValid":true}
+PASS accepted session activity renews idle clock: {"elapsedMs":29999}
+PASS idle timeout rejects at boundary: {"rejected":"session_expired"}
+PASS absolute timeout survives continued activity: {"rejected":"session_expired"}
+PASS wrong CSRF token leaves session usable: {"rejected":"csrf_rejected","sessionStillValid":true}
+PASS logout revokes server-side session: {"rejected":"unauthenticated"}
+PASS refresh rotation issues a distinct successor: {"distinct":true,"subject":"user-1"}
+PASS reuse of consumed refresh revokes family: {"reuseRejected":true,"successorRejected":true}
+PASS unknown refresh does not revoke unrelated family: {"unrelatedFamilyValid":true}
+PASS refresh family expires at fixed absolute boundary: {"rejected":"invalid_refresh_token"}
+PASS JWE has five parts and decrypts with expected algorithms: {"parts":5,"decryptedNote":"private-demo-value"}
+PASS JWE rejects wrong decryption key: {"rejected":true}
+PASS JWE still enforces expiry: {"rejected":true}
+PASS HKDF context separates derived keys: {"sameContextSameKey":true,"changedContextDifferentKey":true,"bytes":32}
+Verified 38 crypto checks.
+PASS missing session returns 401: {"status":401,"code":"unauthenticated"}
+PASS forged session rejected: {"status":401,"code":"unauthenticated"}
+PASS missing login Origin rejected: {"status":403,"code":"origin_rejected"}
+PASS untrusted login Origin rejected: {"status":403,"code":"origin_rejected"}
+PASS null login Origin rejected: {"status":403,"code":"origin_rejected"}
+PASS unsupported login format rejected: {"status":415,"code":"unsupported_body_format"}
+PASS malformed login JSON rejected: {"status":400,"code":"invalid_json_object"}
+PASS login body bound enforced: {"status":413,"code":"body_too_large"}
+PASS unknown login field rejected: {"status":400,"code":"invalid_input"}
+PASS oversize password rejected: {"status":400,"code":"invalid_input"}
+PASS wrong password and unknown account share public failure: {"wrongPassword":401,"unknownAccount":401,"sameBody":true}
+PASS login sets host-only secure HttpOnly SameSite cookie: {"name":"__Host-sid","secure":true,"httpOnly":true,"sameSite":"Lax","domainAttribute":false}
+PASS session credential resolves public user without password: {"userId":"user-1","passwordExposed":false}
+PASS duplicate named session cookies rejected: {"status":400,"code":"ambiguous_cookie"}
+PASS GET logout rejected with Allow: {"status":405,"allow":"POST"}
+PASS logout requires CSRF token: {"status":403,"code":"csrf_rejected"}
+PASS logout rejects cross-origin request despite correct CSRF: {"status":403,"code":"origin_rejected"}
+PASS re-login rotates cookie and invalidates prior session: {"rotated":true,"oldSessionValid":false,"logout":204,"newSessionAfterLogoutValid":false}
+PASS token login returns distinct access and refresh credentials: {"accessParts":3,"refreshCharacters":43,"expiresInSeconds":60}
+PASS bearer request verifies user and challenge scheme: {"valid":200,"missing":401,"challenge":"Bearer"}
+PASS refresh credential cannot be used as access credential: {"status":401,"code":"invalid_access_token"}
+PASS access credential cannot be used as refresh credential: {"status":401,"code":"invalid_refresh_token"}
+PASS cookie alone does not authenticate bearer route: {"status":401,"code":"invalid_access_token"}
+PASS bearer alone does not authenticate session route: {"status":401,"code":"unauthenticated"}
+PASS ambiguous bearer value rejected: {"status":401,"code":"invalid_access_token"}
+PASS refresh endpoint rotates opaque credential: {"successorDistinct":true,"accessValid":true}
+PASS refresh reuse rejects descendant but existing access remains valid: {"reused":401,"descendant":401,"issuedAccess":200}
+PASS concurrent refresh has one winner then conservative family revocation: {"statuses":[200,401],"winnerSuccessorRevoked":true}
+PASS token logout revokes refresh family without immediate access revocation: {"logout":204,"refresh":401,"issuedAccess":200}
+PASS access expiry enforced on actual HTTP route: {"status":401,"code":"invalid_access_token"}
+PASS unknown route returns 404: {"status":404,"code":"not_found"}
+PASS query-based token transport rejected: {"status":400,"code":"unexpected_query"}
+Verified 32 http checks.
+All temporary HTTP listeners closed.
+PASS PKCE S256 matches RFC 7636 Appendix B vector: "E9Melhoa2OwvFrEMTJguCHaoeK1t8URWbuGJSstw-cM"
+PASS PKCE rejects short verifier: {"rejected":"invalid_verifier"}
+PASS authorization request carries challenge rather than verifier: {"method":"S256","verifierInAuthorizationRequest":false}
+PASS unregistered redirect rejected: {"rejected":"invalid_authorization_request"}
+PASS wrong client rejected during authorization: {"rejected":"invalid_authorization_request"}
+PASS plain challenge method rejected by model policy: {"rejected":"invalid_authorization_request"}
+PASS unknown state rejected: {"rejected":"invalid_state"}
+PASS callback bound to initiating browser session: {"rejected":"invalid_state"}
+PASS valid callback consumes state once: {"rejected":"invalid_state"}
+PASS intercepted code without correct verifier rejected: {"rejected":"invalid_grant"}
+PASS token exchange requires same redirect URI: {"rejected":"invalid_grant"}
+PASS token exchange requires same client ID: {"rejected":"invalid_grant"}
+PASS valid code and verifier produce modeled delegation: {"delegatedSubject":"provider-user-1","scope":"tasks:read"}
+PASS authorization code cannot be exchanged twice: {"rejected":"invalid_grant"}
+PASS authorization code expiry enforced: {"rejected":"invalid_grant"}
+PASS browser transaction expiry enforced: {"rejected":"invalid_state"}
+Verified 16 oauth checks.
+Verified 86 checks across password/session/JWT/JWE, HTTP and OAuth model groups.

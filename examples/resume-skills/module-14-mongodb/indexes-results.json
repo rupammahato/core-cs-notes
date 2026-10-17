@@ -1,0 +1,784 @@
+{
+  "group": "indexes",
+  "total": 10,
+  "checks": [
+    {
+      "name": "unindexed selective ordered query naturally scans and sorts",
+      "passed": true
+    },
+    {
+      "name": "compound index preserves the actual selected documents",
+      "passed": true
+    },
+    {
+      "name": "natural compound index plan avoids a blocking sort",
+      "passed": true
+    },
+    {
+      "name": "selective indexed query examines fewer documents in the fixture",
+      "passed": true
+    },
+    {
+      "name": "covered indexed projection returns rows without fetching documents",
+      "passed": true
+    },
+    {
+      "name": "broad query naturally uses collection scan despite the selective-query index",
+      "passed": true
+    },
+    {
+      "name": "array index is multikey and supports a selective member query",
+      "passed": true
+    },
+    {
+      "name": "compound multikey index rejects independent parallel array fields",
+      "passed": true
+    },
+    {
+      "name": "unique multikey index constrains separate documents not repeated array entries within one",
+      "passed": true
+    },
+    {
+      "name": "partial unique index permits excluded missing values and rejects duplicate indexed email",
+      "passed": true
+    }
+  ],
+  "observations": {
+    "fixture_rows": 30000,
+    "matching_rows": 60,
+    "before": {
+      "stages": [
+        "COLLSCAN",
+        "SORT"
+      ],
+      "returned": 20,
+      "keys_examined": 0,
+      "documents_examined": 30000
+    },
+    "after": {
+      "stages": [
+        "FETCH",
+        "IXSCAN",
+        "LIMIT"
+      ],
+      "returned": 20,
+      "keys_examined": 20,
+      "documents_examined": 20
+    },
+    "covered": {
+      "stages": [
+        "IXSCAN",
+        "LIMIT",
+        "PROJECTION_COVERED"
+      ],
+      "returned": 20,
+      "keys_examined": 20,
+      "documents_examined": 0
+    },
+    "broad": {
+      "stages": [
+        "COLLSCAN"
+      ],
+      "returned": 24000,
+      "keys_examined": 0,
+      "documents_examined": 30000
+    },
+    "raw_before": {
+      "explainVersion": "1",
+      "queryPlanner": {
+        "namespace": "m14_indexes.events",
+        "indexFilterSet": false,
+        "parsedQuery": {
+          "$and": [
+            {
+              "status": {
+                "$eq": "open"
+              }
+            },
+            {
+              "tenant_id": {
+                "$eq": 7
+              }
+            }
+          ]
+        },
+        "queryHash": "390FF0EF",
+        "planCacheKey": "390FF0EF",
+        "optimizationTimeMillis": 0,
+        "maxIndexedOrSolutionsReached": false,
+        "maxIndexedAndSolutionsReached": false,
+        "maxScansToExplodeReached": false,
+        "winningPlan": {
+          "stage": "SORT",
+          "sortPattern": {
+            "created_at": -1,
+            "_id": -1
+          },
+          "memLimit": 104857600,
+          "limitAmount": 20,
+          "type": "simple",
+          "inputStage": {
+            "stage": "COLLSCAN",
+            "filter": {
+              "$and": [
+                {
+                  "status": {
+                    "$eq": "open"
+                  }
+                },
+                {
+                  "tenant_id": {
+                    "$eq": 7
+                  }
+                }
+              ]
+            },
+            "direction": "forward"
+          }
+        },
+        "rejectedPlans": []
+      },
+      "executionStats": {
+        "executionSuccess": true,
+        "nReturned": 20,
+        "executionTimeMillis": 12,
+        "totalKeysExamined": 0,
+        "totalDocsExamined": 30000,
+        "executionStages": {
+          "stage": "SORT",
+          "nReturned": 20,
+          "executionTimeMillisEstimate": 0,
+          "works": 30022,
+          "advanced": 20,
+          "needTime": 30001,
+          "needYield": 0,
+          "saveState": 30,
+          "restoreState": 30,
+          "isEOF": 1,
+          "sortPattern": {
+            "created_at": -1,
+            "_id": -1
+          },
+          "memLimit": 104857600,
+          "limitAmount": 20,
+          "type": "simple",
+          "totalDataSizeSorted": 7680,
+          "usedDisk": false,
+          "spills": 0,
+          "spilledDataStorageSize": 0,
+          "inputStage": {
+            "stage": "COLLSCAN",
+            "filter": {
+              "$and": [
+                {
+                  "status": {
+                    "$eq": "open"
+                  }
+                },
+                {
+                  "tenant_id": {
+                    "$eq": 7
+                  }
+                }
+              ]
+            },
+            "nReturned": 60,
+            "executionTimeMillisEstimate": 0,
+            "works": 30001,
+            "advanced": 60,
+            "needTime": 29940,
+            "needYield": 0,
+            "saveState": 30,
+            "restoreState": 30,
+            "isEOF": 1,
+            "direction": "forward",
+            "docsExamined": 30000
+          }
+        }
+      },
+      "command": {
+        "find": "events",
+        "filter": {
+          "tenant_id": 7,
+          "status": "open"
+        },
+        "sort": {
+          "created_at": -1,
+          "_id": -1
+        },
+        "limit": 20,
+        "$db": "m14_indexes"
+      },
+      "serverInfo": {
+        "host": "LAPTOP-35GIEML2",
+        "port": 56698,
+        "version": "7.0.28",
+        "gitVersion": "cfc346c59d2cc3dbc903507fc642e22e3097f362"
+      },
+      "serverParameters": {
+        "internalQueryFacetBufferSizeBytes": 104857600,
+        "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+        "internalLookupStageIntermediateDocumentMaxSizeBytes": 104857600,
+        "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+        "internalQueryMaxBlockingSortMemoryUsageBytes": 104857600,
+        "internalQueryProhibitBlockingMergeOnMongoS": 0,
+        "internalQueryMaxAddToSetBytes": 104857600,
+        "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600,
+        "internalQueryFrameworkControl": "forceClassicEngine"
+      },
+      "ok": 1.0,
+      "$clusterTime": {
+        "clusterTime": {
+          "$timestamp": {
+            "t": 1791966578,
+            "i": 30001
+          }
+        },
+        "signature": {
+          "hash": {
+            "$binary": {
+              "base64": "AAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+              "subType": "00"
+            }
+          },
+          "keyId": 0
+        }
+      },
+      "operationTime": {
+        "$timestamp": {
+          "t": 1791966578,
+          "i": 30001
+        }
+      }
+    },
+    "raw_after": {
+      "explainVersion": "1",
+      "queryPlanner": {
+        "namespace": "m14_indexes.events",
+        "indexFilterSet": false,
+        "parsedQuery": {
+          "$and": [
+            {
+              "status": {
+                "$eq": "open"
+              }
+            },
+            {
+              "tenant_id": {
+                "$eq": 7
+              }
+            }
+          ]
+        },
+        "queryHash": "390FF0EF",
+        "planCacheKey": "8031E241",
+        "optimizationTimeMillis": 0,
+        "maxIndexedOrSolutionsReached": false,
+        "maxIndexedAndSolutionsReached": false,
+        "maxScansToExplodeReached": false,
+        "winningPlan": {
+          "stage": "LIMIT",
+          "limitAmount": 20,
+          "inputStage": {
+            "stage": "FETCH",
+            "inputStage": {
+              "stage": "IXSCAN",
+              "keyPattern": {
+                "tenant_id": 1,
+                "status": 1,
+                "created_at": -1,
+                "_id": -1
+              },
+              "indexName": "tenant_status_latest",
+              "isMultiKey": false,
+              "multiKeyPaths": {
+                "tenant_id": [],
+                "status": [],
+                "created_at": [],
+                "_id": []
+              },
+              "isUnique": false,
+              "isSparse": false,
+              "isPartial": false,
+              "indexVersion": 2,
+              "direction": "forward",
+              "indexBounds": {
+                "tenant_id": [
+                  "[7, 7]"
+                ],
+                "status": [
+                  "[\"open\", \"open\"]"
+                ],
+                "created_at": [
+                  "[MaxKey, MinKey]"
+                ],
+                "_id": [
+                  "[MaxKey, MinKey]"
+                ]
+              }
+            }
+          }
+        },
+        "rejectedPlans": []
+      },
+      "executionStats": {
+        "executionSuccess": true,
+        "nReturned": 20,
+        "executionTimeMillis": 4,
+        "totalKeysExamined": 20,
+        "totalDocsExamined": 20,
+        "executionStages": {
+          "stage": "LIMIT",
+          "nReturned": 20,
+          "executionTimeMillisEstimate": 0,
+          "works": 21,
+          "advanced": 20,
+          "needTime": 0,
+          "needYield": 0,
+          "saveState": 0,
+          "restoreState": 0,
+          "isEOF": 1,
+          "limitAmount": 20,
+          "inputStage": {
+            "stage": "FETCH",
+            "nReturned": 20,
+            "executionTimeMillisEstimate": 0,
+            "works": 20,
+            "advanced": 20,
+            "needTime": 0,
+            "needYield": 0,
+            "saveState": 0,
+            "restoreState": 0,
+            "isEOF": 0,
+            "docsExamined": 20,
+            "alreadyHasObj": 0,
+            "inputStage": {
+              "stage": "IXSCAN",
+              "nReturned": 20,
+              "executionTimeMillisEstimate": 0,
+              "works": 20,
+              "advanced": 20,
+              "needTime": 0,
+              "needYield": 0,
+              "saveState": 0,
+              "restoreState": 0,
+              "isEOF": 0,
+              "keyPattern": {
+                "tenant_id": 1,
+                "status": 1,
+                "created_at": -1,
+                "_id": -1
+              },
+              "indexName": "tenant_status_latest",
+              "isMultiKey": false,
+              "multiKeyPaths": {
+                "tenant_id": [],
+                "status": [],
+                "created_at": [],
+                "_id": []
+              },
+              "isUnique": false,
+              "isSparse": false,
+              "isPartial": false,
+              "indexVersion": 2,
+              "direction": "forward",
+              "indexBounds": {
+                "tenant_id": [
+                  "[7, 7]"
+                ],
+                "status": [
+                  "[\"open\", \"open\"]"
+                ],
+                "created_at": [
+                  "[MaxKey, MinKey]"
+                ],
+                "_id": [
+                  "[MaxKey, MinKey]"
+                ]
+              },
+              "keysExamined": 20,
+              "seeks": 1,
+              "dupsTested": 0,
+              "dupsDropped": 0
+            }
+          }
+        }
+      },
+      "command": {
+        "find": "events",
+        "filter": {
+          "tenant_id": 7,
+          "status": "open"
+        },
+        "sort": {
+          "created_at": -1,
+          "_id": -1
+        },
+        "limit": 20,
+        "$db": "m14_indexes"
+      },
+      "serverInfo": {
+        "host": "LAPTOP-35GIEML2",
+        "port": 56698,
+        "version": "7.0.28",
+        "gitVersion": "cfc346c59d2cc3dbc903507fc642e22e3097f362"
+      },
+      "serverParameters": {
+        "internalQueryFacetBufferSizeBytes": 104857600,
+        "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+        "internalLookupStageIntermediateDocumentMaxSizeBytes": 104857600,
+        "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+        "internalQueryMaxBlockingSortMemoryUsageBytes": 104857600,
+        "internalQueryProhibitBlockingMergeOnMongoS": 0,
+        "internalQueryMaxAddToSetBytes": 104857600,
+        "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600,
+        "internalQueryFrameworkControl": "forceClassicEngine"
+      },
+      "ok": 1.0,
+      "$clusterTime": {
+        "clusterTime": {
+          "$timestamp": {
+            "t": 1791966578,
+            "i": 30006
+          }
+        },
+        "signature": {
+          "hash": {
+            "$binary": {
+              "base64": "AAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+              "subType": "00"
+            }
+          },
+          "keyId": 0
+        }
+      },
+      "operationTime": {
+        "$timestamp": {
+          "t": 1791966578,
+          "i": 30006
+        }
+      }
+    },
+    "raw_covered": {
+      "explainVersion": "1",
+      "queryPlanner": {
+        "namespace": "m14_indexes.events",
+        "indexFilterSet": false,
+        "parsedQuery": {
+          "$and": [
+            {
+              "status": {
+                "$eq": "open"
+              }
+            },
+            {
+              "tenant_id": {
+                "$eq": 7
+              }
+            }
+          ]
+        },
+        "queryHash": "A210AC8D",
+        "planCacheKey": "2CF4A225",
+        "optimizationTimeMillis": 0,
+        "maxIndexedOrSolutionsReached": false,
+        "maxIndexedAndSolutionsReached": false,
+        "maxScansToExplodeReached": false,
+        "winningPlan": {
+          "stage": "LIMIT",
+          "limitAmount": 20,
+          "inputStage": {
+            "stage": "PROJECTION_COVERED",
+            "transformBy": {
+              "_id": 1,
+              "created_at": 1
+            },
+            "inputStage": {
+              "stage": "IXSCAN",
+              "keyPattern": {
+                "tenant_id": 1,
+                "status": 1,
+                "created_at": -1,
+                "_id": -1
+              },
+              "indexName": "tenant_status_latest",
+              "isMultiKey": false,
+              "multiKeyPaths": {
+                "tenant_id": [],
+                "status": [],
+                "created_at": [],
+                "_id": []
+              },
+              "isUnique": false,
+              "isSparse": false,
+              "isPartial": false,
+              "indexVersion": 2,
+              "direction": "forward",
+              "indexBounds": {
+                "tenant_id": [
+                  "[7, 7]"
+                ],
+                "status": [
+                  "[\"open\", \"open\"]"
+                ],
+                "created_at": [
+                  "[MaxKey, MinKey]"
+                ],
+                "_id": [
+                  "[MaxKey, MinKey]"
+                ]
+              }
+            }
+          }
+        },
+        "rejectedPlans": []
+      },
+      "executionStats": {
+        "executionSuccess": true,
+        "nReturned": 20,
+        "executionTimeMillis": 0,
+        "totalKeysExamined": 20,
+        "totalDocsExamined": 0,
+        "executionStages": {
+          "stage": "LIMIT",
+          "nReturned": 20,
+          "executionTimeMillisEstimate": 0,
+          "works": 21,
+          "advanced": 20,
+          "needTime": 0,
+          "needYield": 0,
+          "saveState": 0,
+          "restoreState": 0,
+          "isEOF": 1,
+          "limitAmount": 20,
+          "inputStage": {
+            "stage": "PROJECTION_COVERED",
+            "nReturned": 20,
+            "executionTimeMillisEstimate": 0,
+            "works": 20,
+            "advanced": 20,
+            "needTime": 0,
+            "needYield": 0,
+            "saveState": 0,
+            "restoreState": 0,
+            "isEOF": 0,
+            "transformBy": {
+              "_id": 1,
+              "created_at": 1
+            },
+            "inputStage": {
+              "stage": "IXSCAN",
+              "nReturned": 20,
+              "executionTimeMillisEstimate": 0,
+              "works": 20,
+              "advanced": 20,
+              "needTime": 0,
+              "needYield": 0,
+              "saveState": 0,
+              "restoreState": 0,
+              "isEOF": 0,
+              "keyPattern": {
+                "tenant_id": 1,
+                "status": 1,
+                "created_at": -1,
+                "_id": -1
+              },
+              "indexName": "tenant_status_latest",
+              "isMultiKey": false,
+              "multiKeyPaths": {
+                "tenant_id": [],
+                "status": [],
+                "created_at": [],
+                "_id": []
+              },
+              "isUnique": false,
+              "isSparse": false,
+              "isPartial": false,
+              "indexVersion": 2,
+              "direction": "forward",
+              "indexBounds": {
+                "tenant_id": [
+                  "[7, 7]"
+                ],
+                "status": [
+                  "[\"open\", \"open\"]"
+                ],
+                "created_at": [
+                  "[MaxKey, MinKey]"
+                ],
+                "_id": [
+                  "[MaxKey, MinKey]"
+                ]
+              },
+              "keysExamined": 20,
+              "seeks": 1,
+              "dupsTested": 0,
+              "dupsDropped": 0
+            }
+          }
+        }
+      },
+      "command": {
+        "find": "events",
+        "filter": {
+          "tenant_id": 7,
+          "status": "open"
+        },
+        "sort": {
+          "created_at": -1,
+          "_id": -1
+        },
+        "limit": 20,
+        "projection": {
+          "_id": 1,
+          "created_at": 1
+        },
+        "$db": "m14_indexes"
+      },
+      "serverInfo": {
+        "host": "LAPTOP-35GIEML2",
+        "port": 56698,
+        "version": "7.0.28",
+        "gitVersion": "cfc346c59d2cc3dbc903507fc642e22e3097f362"
+      },
+      "serverParameters": {
+        "internalQueryFacetBufferSizeBytes": 104857600,
+        "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+        "internalLookupStageIntermediateDocumentMaxSizeBytes": 104857600,
+        "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+        "internalQueryMaxBlockingSortMemoryUsageBytes": 104857600,
+        "internalQueryProhibitBlockingMergeOnMongoS": 0,
+        "internalQueryMaxAddToSetBytes": 104857600,
+        "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600,
+        "internalQueryFrameworkControl": "forceClassicEngine"
+      },
+      "ok": 1.0,
+      "$clusterTime": {
+        "clusterTime": {
+          "$timestamp": {
+            "t": 1791966578,
+            "i": 30006
+          }
+        },
+        "signature": {
+          "hash": {
+            "$binary": {
+              "base64": "AAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+              "subType": "00"
+            }
+          },
+          "keyId": 0
+        }
+      },
+      "operationTime": {
+        "$timestamp": {
+          "t": 1791966578,
+          "i": 30006
+        }
+      }
+    },
+    "raw_broad": {
+      "explainVersion": "1",
+      "queryPlanner": {
+        "namespace": "m14_indexes.events",
+        "indexFilterSet": false,
+        "parsedQuery": {
+          "status": {
+            "$eq": "closed"
+          }
+        },
+        "queryHash": "4B6FAB47",
+        "planCacheKey": "65D76290",
+        "optimizationTimeMillis": 0,
+        "maxIndexedOrSolutionsReached": false,
+        "maxIndexedAndSolutionsReached": false,
+        "maxScansToExplodeReached": false,
+        "winningPlan": {
+          "stage": "COLLSCAN",
+          "filter": {
+            "status": {
+              "$eq": "closed"
+            }
+          },
+          "direction": "forward"
+        },
+        "rejectedPlans": []
+      },
+      "executionStats": {
+        "executionSuccess": true,
+        "nReturned": 24000,
+        "executionTimeMillis": 10,
+        "totalKeysExamined": 0,
+        "totalDocsExamined": 30000,
+        "executionStages": {
+          "stage": "COLLSCAN",
+          "filter": {
+            "status": {
+              "$eq": "closed"
+            }
+          },
+          "nReturned": 24000,
+          "executionTimeMillisEstimate": 0,
+          "works": 30001,
+          "advanced": 24000,
+          "needTime": 6000,
+          "needYield": 0,
+          "saveState": 30,
+          "restoreState": 30,
+          "isEOF": 1,
+          "direction": "forward",
+          "docsExamined": 30000
+        }
+      },
+      "command": {
+        "find": "events",
+        "filter": {
+          "status": "closed"
+        },
+        "$db": "m14_indexes"
+      },
+      "serverInfo": {
+        "host": "LAPTOP-35GIEML2",
+        "port": 56698,
+        "version": "7.0.28",
+        "gitVersion": "cfc346c59d2cc3dbc903507fc642e22e3097f362"
+      },
+      "serverParameters": {
+        "internalQueryFacetBufferSizeBytes": 104857600,
+        "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+        "internalLookupStageIntermediateDocumentMaxSizeBytes": 104857600,
+        "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+        "internalQueryMaxBlockingSortMemoryUsageBytes": 104857600,
+        "internalQueryProhibitBlockingMergeOnMongoS": 0,
+        "internalQueryMaxAddToSetBytes": 104857600,
+        "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600,
+        "internalQueryFrameworkControl": "forceClassicEngine"
+      },
+      "ok": 1.0,
+      "$clusterTime": {
+        "clusterTime": {
+          "$timestamp": {
+            "t": 1791966578,
+            "i": 30006
+          }
+        },
+        "signature": {
+          "hash": {
+            "$binary": {
+              "base64": "AAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+              "subType": "00"
+            }
+          },
+          "keyId": 0
+        }
+      },
+      "operationTime": {
+        "$timestamp": {
+          "t": 1791966578,
+          "i": 30006
+        }
+      }
+    }
+  },
+  "scope": "Actual unhinted query plans on 30000 rows plus multikey/partial constraints; not a benchmark"
+}

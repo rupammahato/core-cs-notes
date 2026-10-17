@@ -1,0 +1,103 @@
+{
+  "module": "M4: Node.js — What It Is and How It Works",
+  "verifiedOn": "2026-10-13T15:57:29.664Z",
+  "runtime": "v22.14.0",
+  "executionModes": {
+    "module": 19,
+    "commonjs": 1
+  },
+  "runtimeCases": 20,
+  "httpChecks": 16,
+  "fixtureBytes": 79872,
+  "launcherSyntaxChecked": true,
+  "chapter": {
+    "sourceMatches": true,
+    "outputsMatch": true,
+    "serverMatches": true,
+    "launcherMatches": true,
+    "workerMatches": true,
+    "interviewQuestions": 30,
+    "practiceExercises": 10,
+    "qaSequential": true,
+    "balancedCodeFences": true
+  },
+  "siteSync": {
+    "chapters": 75,
+    "resumeSkillsChapters": 6
+  },
+  "siteBuild": {
+    "passed": true,
+    "typeScript": true,
+    "staticPages": 80,
+    "fontSource": "Existing cached font files through Next Google Fonts mock-response hook; external font download unavailable; source configuration unchanged"
+  },
+  "httpRoutes": [
+    {
+      "route": "/",
+      "status": 200,
+      "bytes": 67007
+    },
+    {
+      "route": "/docs/resume-skills",
+      "status": 200,
+      "bytes": 198035
+    },
+    {
+      "route": "/docs/resume-skills/how-backend-works",
+      "status": 200,
+      "bytes": 487736
+    },
+    {
+      "route": "/docs/resume-skills/javascript-fundamentals",
+      "status": 200,
+      "bytes": 819710
+    },
+    {
+      "route": "/docs/resume-skills/asynchronous-javascript",
+      "status": 200,
+      "bytes": 950616
+    },
+    {
+      "route": "/docs/resume-skills/typescript-fundamentals",
+      "status": 200,
+      "bytes": 867684
+    },
+    {
+      "route": "/docs/resume-skills/nodejs",
+      "status": 200,
+      "bytes": 948790
+    },
+    {
+      "route": "/docs/dbms",
+      "status": 200,
+      "bytes": 243855
+    }
+  ],
+  "renderChecks": {
+    "lastQuestion": true,
+    "serverCode": true,
+    "workerCode": true,
+    "backpressure": true,
+    "httpChecks": true,
+    "nextModule": true,
+    "navFromM3": true
+  },
+  "search": {
+    "query": "backpressure",
+    "tag": "resume-skills",
+    "status": 200,
+    "count": 12,
+    "hasM4": true,
+    "subjectScoped": true
+  },
+  "server": {
+    "url": "http://localhost:3000",
+    "pid": 35452
+  },
+  "limitations": [
+    "Scheduling outputs apply to the recorded Node.js version/module/callback contexts.",
+    "HTTP checks are functional observations, not throughput/latency/memory benchmarks.",
+    "OS signal delivery, forced-shutdown deadline behavior and client aborts were not integration-tested.",
+    "The learning server is public loopback only, with a fixed stable file and no database/authentication/durable jobs."
+  ]
+}

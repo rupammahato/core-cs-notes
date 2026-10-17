@@ -1,0 +1,105 @@
+{
+  "group": "concurrency",
+  "total": 14,
+  "checks": [
+    {
+      "name": "ordinary SELECT does not read another transaction uncommitted write",
+      "passed": true
+    },
+    {
+      "name": "Read Committed successive statements see a newly committed value",
+      "passed": true
+    },
+    {
+      "name": "Repeatable Read keeps the transaction snapshot across statements",
+      "passed": true
+    },
+    {
+      "name": "FOR UPDATE really blocks a competing writer until transaction release",
+      "passed": true
+    },
+    {
+      "name": "NOWAIT rejects a held row lock with its SQLSTATE",
+      "passed": true
+    },
+    {
+      "name": "SKIP LOCKED chooses another available job row",
+      "passed": true
+    },
+    {
+      "name": "lock_timeout bounds waiting for a held row lock",
+      "passed": true
+    },
+    {
+      "name": "statement_timeout cancels a long statement and autocommit session recovers",
+      "passed": true
+    },
+    {
+      "name": "two overlapping Read Committed transactions can lose a stale absolute update",
+      "passed": true
+    },
+    {
+      "name": "SQL relative updates preserve both fixture decrements",
+      "passed": true
+    },
+    {
+      "name": "conditional predicate rejects a stale compare-and-set writer",
+      "passed": true
+    },
+    {
+      "name": "Repeatable Read permits the disjoint-row write-skew fixture",
+      "passed": true
+    },
+    {
+      "name": "Serializable failure retries the whole transaction and rechecks the invariant",
+      "passed": true
+    },
+    {
+      "name": "opposite lock ordering causes a real deadlock and one transaction abort",
+      "passed": true
+    }
+  ],
+  "observations": {
+    "read_committed": [
+      100,
+      200
+    ],
+    "repeatable_read": [
+      100,
+      100
+    ],
+    "row_lock": {
+      "wait_observed": true,
+      "plain_read_during_wait": 100,
+      "after_release": 101
+    },
+    "nowait_sqlstate": "55P03",
+    "skip_locked": {
+      "locked_id": 1,
+      "selected_id": 2
+    },
+    "stale_absolute_writes": {
+      "read_values": [
+        100,
+        100
+      ],
+      "final": 80
+    },
+    "relative_updates_final": 70,
+    "repeatable_read_write_skew_remaining": 0,
+    "serializable_retry": {
+      "attempts": 2,
+      "remaining_on_call": 1,
+      "final_change_allowed": false,
+      "retry_sqlstates": [
+        "40001"
+      ]
+    },
+    "deadlock": {
+      "aborted_sqlstate": "40P01",
+      "committed_updates": 1,
+      "victim_identity_not_assumed": true
+    }
+  },
+  "scope": "Real separate PostgreSQL sessions; coordinated snapshots and observed lock waits"
+}

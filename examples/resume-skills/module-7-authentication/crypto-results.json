@@ -1,0 +1,277 @@
+{
+  "node": "v22.14.0",
+  "passed": 38,
+  "checks": [
+    {
+      "name": "same password receives independent random salts",
+      "passed": true,
+      "observed": {
+        "saltsDiffer": true,
+        "derivedValuesDiffer": true
+      }
+    },
+    {
+      "name": "correct password verifies",
+      "passed": true,
+      "observed": true
+    },
+    {
+      "name": "wrong password fails",
+      "passed": true,
+      "observed": false
+    },
+    {
+      "name": "password whitespace is not silently trimmed",
+      "passed": true,
+      "observed": false
+    },
+    {
+      "name": "oversize password rejected before derivation",
+      "passed": true,
+      "observed": {
+        "rejected": "Unsupported password input."
+      }
+    },
+    {
+      "name": "invalid stored hash format rejected",
+      "passed": true,
+      "observed": {
+        "rejected": "Invalid stored credential."
+      }
+    },
+    {
+      "name": "signed JWT has three parts and readable untrusted claims",
+      "passed": true,
+      "observed": {
+        "parts": 3,
+        "decodedSubject": "user-1",
+        "containsPassword": false
+      }
+    },
+    {
+      "name": "signature and expected claims permit valid access",
+      "passed": true,
+      "observed": {
+        "subject": "user-1"
+      }
+    },
+    {
+      "name": "payload tampering is rejected even though decoding succeeds",
+      "passed": true,
+      "observed": {
+        "rejected": "invalid_access_token"
+      }
+    },
+    {
+      "name": "wrong issuer rejected",
+      "passed": true,
+      "observed": {
+        "rejected": "invalid_access_token"
+      }
+    },
+    {
+      "name": "wrong audience rejected",
+      "passed": true,
+      "observed": {
+        "rejected": "invalid_access_token"
+      }
+    },
+    {
+      "name": "expired token rejected",
+      "passed": true,
+      "observed": {
+        "rejected": "invalid_access_token"
+      }
+    },
+    {
+      "name": "not-yet-valid token rejected",
+      "passed": true,
+      "observed": {
+        "rejected": "invalid_access_token"
+      }
+    },
+    {
+      "name": "missing expiry rejected",
+      "passed": true,
+      "observed": {
+        "rejected": "invalid_access_token"
+      }
+    },
+    {
+      "name": "missing subject rejected",
+      "passed": true,
+      "observed": {
+        "rejected": "invalid_access_token"
+      }
+    },
+    {
+      "name": "future issued-at rejected",
+      "passed": true,
+      "observed": {
+        "rejected": "invalid_access_token"
+      }
+    },
+    {
+      "name": "oversize lifetime rejected",
+      "passed": true,
+      "observed": {
+        "rejected": "invalid_access_token"
+      }
+    },
+    {
+      "name": "wrong token purpose rejected",
+      "passed": true,
+      "observed": {
+        "rejected": "invalid_access_token"
+      }
+    },
+    {
+      "name": "unexpected key ID rejected",
+      "passed": true,
+      "observed": {
+        "rejected": "invalid_access_token"
+      }
+    },
+    {
+      "name": "wrong signing key rejected",
+      "passed": true,
+      "observed": {
+        "rejected": "invalid_access_token"
+      }
+    },
+    {
+      "name": "unsecured alg none rejected",
+      "passed": true,
+      "observed": {
+        "rejected": "invalid_access_token"
+      }
+    },
+    {
+      "name": "HS256 rejected by RS256 allowlist",
+      "passed": true,
+      "observed": {
+        "rejected": "invalid_access_token"
+      }
+    },
+    {
+      "name": "access valid immediately before expiry",
+      "passed": true,
+      "observed": {
+        "atMs": 1059999,
+        "valid": true
+      }
+    },
+    {
+      "name": "access invalid exactly at expiry",
+      "passed": true,
+      "observed": {
+        "rejected": "invalid_access_token"
+      }
+    },
+    {
+      "name": "re-login replaces previous session credential",
+      "passed": true,
+      "observed": {
+        "previousValid": false,
+        "currentValid": true
+      }
+    },
+    {
+      "name": "accepted session activity renews idle clock",
+      "passed": true,
+      "observed": {
+        "elapsedMs": 29999
+      }
+    },
+    {
+      "name": "idle timeout rejects at boundary",
+      "passed": true,
+      "observed": {
+        "rejected": "session_expired"
+      }
+    },
+    {
+      "name": "absolute timeout survives continued activity",
+      "passed": true,
+      "observed": {
+        "rejected": "session_expired"
+      }
+    },
+    {
+      "name": "wrong CSRF token leaves session usable",
+      "passed": true,
+      "observed": {
+        "rejected": "csrf_rejected",
+        "sessionStillValid": true
+      }
+    },
+    {
+      "name": "logout revokes server-side session",
+      "passed": true,
+      "observed": {
+        "rejected": "unauthenticated"
+      }
+    },
+    {
+      "name": "refresh rotation issues a distinct successor",
+      "passed": true,
+      "observed": {
+        "distinct": true,
+        "subject": "user-1"
+      }
+    },
+    {
+      "name": "reuse of consumed refresh revokes family",
+      "passed": true,
+      "observed": {
+        "reuseRejected": true,
+        "successorRejected": true
+      }
+    },
+    {
+      "name": "unknown refresh does not revoke unrelated family",
+      "passed": true,
+      "observed": {
+        "unrelatedFamilyValid": true
+      }
+    },
+    {
+      "name": "refresh family expires at fixed absolute boundary",
+      "passed": true,
+      "observed": {
+        "rejected": "invalid_refresh_token"
+      }
+    },
+    {
+      "name": "JWE has five parts and decrypts with expected algorithms",
+      "passed": true,
+      "observed": {
+        "parts": 5,
+        "decryptedNote": "private-demo-value"
+      }
+    },
+    {
+      "name": "JWE rejects wrong decryption key",
+      "passed": true,
+      "observed": {
+        "rejected": true
+      }
+    },
+    {
+      "name": "JWE still enforces expiry",
+      "passed": true,
+      "observed": {
+        "rejected": true
+      }
+    },
+    {
+      "name": "HKDF context separates derived keys",
+      "passed": true,
+      "observed": {
+        "sameContextSameKey": true,
+        "changedContextDifferentKey": true,
+        "bytes": 32
+      }
+    }
+  ]
+}

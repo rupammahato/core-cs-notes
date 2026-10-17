@@ -1,0 +1,119 @@
+{
+  "module": 28,
+  "title": "Resume Project and Experience Deep-Dives",
+  "verified_date": "2026-10-16",
+  "python": "3.12.10",
+  "sqlite": "3.49.1",
+  "pypdf": "6.20.1",
+  "os": "Windows-11-10.0.26300-SP0",
+  "checks": {
+    "counts": {
+      "hierarchy": 12,
+      "sla": 21,
+      "sheet": 18,
+      "costs": 12,
+      "metrics": 5,
+      "evidence": 13
+    },
+    "total": 81,
+    "all_passed": true
+  },
+  "cleanup": {
+    "temporary_directory_removed": true,
+    "sqlite_connections_closed": true,
+    "persistent_listener_started": false
+  },
+  "content": {
+    "chapter": "resume-skills-handbook-part-30-module-28-resume-project-experience-deep-dives.md",
+    "words": 10168,
+    "lines": 947,
+    "interview_questions": 30,
+    "practice_tasks": 10,
+    "unchecked_learning_items": 12,
+    "projects": 7,
+    "source_fidelity": [
+      "sla.py",
+      "hierarchy.py",
+      "sheet_sync.py",
+      "costs.py"
+    ],
+    "result_fidelity": {
+      "hierarchy": true,
+      "sla": true,
+      "sheet": true,
+      "costs": true,
+      "metrics": true,
+      "versions": true
+    }
+  },
+  "dependency_check": "Model verifier: Python standard library only (SQLite, Decimal, datetime, collections, hashing and temporary-file helpers).\nRecorded runtime: Python 3.12.10; SQLite version is recorded in verification-results.json.\nPDF extraction: pypdf 6.20.1 from the existing module-23-rag environment; no new installation/download.\nSite validation: existing local Node/Next.js/Fumadocs dependencies, with cached font fixture when available.\nNo Docker, cloud credentials, hosted provider/model/payment API or persistent model listener needed.",
+  "website": {
+    "build_passed": true,
+    "static_pages": 104,
+    "routes_checked": 32,
+    "all_routes_200": true,
+    "assertions": {
+      "title": true,
+      "q30": true,
+      "totalChecks": true,
+      "implementation": true,
+      "modelEvidence": true,
+      "provenance": true,
+      "projects": true,
+      "architecture": true,
+      "fixtureBoundary": true,
+      "nextModule": true,
+      "group": true,
+      "roadmapLink": true,
+      "previousLink": true
+    },
+    "search": {
+      "status": 200,
+      "results": 9,
+      "chapterIndexed": true,
+      "scoped": true
+    },
+    "temporary_server_closed": true,
+    "cached_font_fixture_used": true
+  },
+  "ports_stopped": {
+    "3000": true,
+    "58016": true
+  },
+  "git_diff_check_passed": true,
+  "trailing_whitespace_files": [],
+  "core_handbooks": [
+    {
+      "subject": "DSA Notes",
+      "files": 17,
+      "lines": 17589
+    },
+    {
+      "subject": "OOP Notes",
+      "files": 13,
+      "lines": 8806
+    },
+    {
+      "subject": "OS Notes",
+      "files": 13,
+      "lines": 6341
+    },
+    {
+      "subject": "DBMS Notes",
+      "files": 13,
+      "lines": 9613
+    },
+    {
+      "subject": "CN Notes",
+      "files": 13,
+      "lines": 9322
+    }
+  ],
+  "resume_handbook": {
+    "files": 30,
+    "lines": 35999,
+    "groups": 10
+  },
+  "next_module": "M29: Consolidation and interview drills",
+  "scope": "Original teaching models over hand-authored inputs and real local SQLite transactions; resume catalogue fidelity. No original employer/project code, production metrics, provider calls or payroll compliance reproduced."
+}

@@ -1,0 +1,76 @@
+{
+  "group": "jobs",
+  "total": 13,
+  "checks": [
+    {
+      "name": "tenant operation key deduplicates producer requests durably",
+      "passed": true
+    },
+    {
+      "name": "same producer key with changed payload is rejected",
+      "passed": true
+    },
+    {
+      "name": "another tenant has an independent operation identity",
+      "passed": true
+    },
+    {
+      "name": "boolean amount is rejected before enqueue",
+      "passed": true
+    },
+    {
+      "name": "future scheduled work is ineligible until its due time",
+      "passed": true
+    },
+    {
+      "name": "separate concurrent SQLite connections give one active job owner",
+      "passed": true
+    },
+    {
+      "name": "expired lease rotates ownership and rejects old completion and failure",
+      "passed": true
+    },
+    {
+      "name": "local business effect and job completion commit once together",
+      "passed": true
+    },
+    {
+      "name": "failure between effect and done rolls both back then permits lease recovery",
+      "passed": true
+    },
+    {
+      "name": "transient failure schedules capped backoff instead of immediate retry",
+      "passed": true
+    },
+    {
+      "name": "permanent failure becomes terminal without an endless retry",
+      "passed": true
+    },
+    {
+      "name": "abandoned leases eventually reach the configured attempt limit",
+      "passed": true
+    },
+    {
+      "name": "committed job state and effect are visible through a new connection",
+      "passed": true
+    }
+  ],
+  "observations": {
+    "concurrent_claims": {
+      "callers": 2,
+      "owners": 1
+    },
+    "lease_fencing": {
+      "reclaimed_attempt": 2,
+      "stale_owner_rejected": true
+    },
+    "backoff": [
+      2,
+      4,
+      8,
+      8
+    ],
+    "exhausted_attempts": 3
+  },
+  "scope": "Real file-backed SQLite transactions and concurrent connections; logical lease clock, no managed queue or power-loss test"
+}

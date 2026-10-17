@@ -1,0 +1,689 @@
+{
+  "module": 23,
+  "verified_date": "2026-10-15",
+  "python": "3.12.10",
+  "os": "Windows-11-10.0.26300-SP0",
+  "dependencies": {
+    "pypdf": "6.20.1",
+    "tiktoken": "0.14.0"
+  },
+  "sqlite": "3.49.1",
+  "checks": [
+    {
+      "group": "extraction",
+      "name": "utf8_newlines_and_unicode_are_normalized",
+      "passed": true
+    },
+    {
+      "group": "extraction",
+      "name": "real_pdf_parser_extracts_two_text_pages",
+      "passed": true
+    },
+    {
+      "group": "extraction",
+      "name": "pdf_page_numbers_are_preserved",
+      "passed": true
+    },
+    {
+      "group": "extraction",
+      "name": "invalid_utf8_is_rejected_or_routed",
+      "passed": true
+    },
+    {
+      "group": "extraction",
+      "name": "path_like_name_is_rejected_or_routed",
+      "passed": true
+    },
+    {
+      "group": "extraction",
+      "name": "unsupported_extension_is_rejected_or_routed",
+      "passed": true
+    },
+    {
+      "group": "extraction",
+      "name": "oversized_bytes_is_rejected_or_routed",
+      "passed": true
+    },
+    {
+      "group": "extraction",
+      "name": "empty_bytes_is_rejected_or_routed",
+      "passed": true
+    },
+    {
+      "group": "extraction",
+      "name": "wrong_pdf_signature_is_rejected_or_routed",
+      "passed": true
+    },
+    {
+      "group": "extraction",
+      "name": "malformed_pdf_is_rejected_or_routed",
+      "passed": true
+    },
+    {
+      "group": "extraction",
+      "name": "encrypted_pdf_is_rejected_or_routed",
+      "passed": true
+    },
+    {
+      "group": "extraction",
+      "name": "excess_pdf_pages_is_rejected_or_routed",
+      "passed": true
+    },
+    {
+      "group": "extraction",
+      "name": "textless_pdf_is_rejected_or_routed",
+      "passed": true
+    },
+    {
+      "group": "extraction",
+      "name": "nul_text_is_rejected_or_routed",
+      "passed": true
+    },
+    {
+      "group": "chunking",
+      "name": "overlapping_chunks_have_bounded_word_count",
+      "passed": true
+    },
+    {
+      "group": "chunking",
+      "name": "adjacent_windows_repeat_exact_overlap",
+      "passed": true
+    },
+    {
+      "group": "chunking",
+      "name": "character_offsets_round_trip_normalized_source",
+      "passed": true
+    },
+    {
+      "group": "chunking",
+      "name": "stable_inputs_produce_stable_chunk_ids",
+      "passed": true
+    },
+    {
+      "group": "chunking",
+      "name": "version_change_produces_new_identity",
+      "passed": true
+    },
+    {
+      "group": "chunking",
+      "name": "configuration_change_produces_new_identity",
+      "passed": true
+    },
+    {
+      "group": "chunking",
+      "name": "tenant_is_part_of_chunk_identity",
+      "passed": true
+    },
+    {
+      "group": "chunking",
+      "name": "chunks_do_not_cross_pdf_pages",
+      "passed": true
+    },
+    {
+      "group": "chunking",
+      "name": "invalid_overlap_cannot_create_nonprogressing_loop",
+      "passed": true
+    },
+    {
+      "group": "publication",
+      "name": "initial_version_is_published",
+      "passed": true
+    },
+    {
+      "group": "publication",
+      "name": "same_version_retry_is_idempotent",
+      "passed": true
+    },
+    {
+      "group": "publication",
+      "name": "same_version_changed_content_is_conflict",
+      "passed": true
+    },
+    {
+      "group": "publication",
+      "name": "same_version_changed_chunk_config_is_conflict",
+      "passed": true
+    },
+    {
+      "group": "publication",
+      "name": "another_owner_cannot_replace_document",
+      "passed": true
+    },
+    {
+      "group": "publication",
+      "name": "controlled_partial_publication_rolls_back",
+      "passed": true
+    },
+    {
+      "group": "publication",
+      "name": "rollback_preserves_previous_searchable_generation",
+      "passed": true
+    },
+    {
+      "group": "publication",
+      "name": "rollback_does_not_leak_partial_fts_rows",
+      "passed": true
+    },
+    {
+      "group": "retrieval",
+      "name": "fts_bm25_finds_expected_public_topic",
+      "passed": true
+    },
+    {
+      "group": "authorization",
+      "name": "search_excludes_same_tenant_other_owner_before_limit",
+      "passed": true
+    },
+    {
+      "group": "authorization",
+      "name": "search_excludes_other_tenant_content",
+      "passed": true
+    },
+    {
+      "group": "authorization",
+      "name": "direct_source_lookup_rechecks_owner",
+      "passed": true
+    },
+    {
+      "group": "authorization",
+      "name": "direct_source_lookup_rechecks_tenant",
+      "passed": true
+    },
+    {
+      "group": "retrieval",
+      "name": "fts_query_expression_quotes_user_terms",
+      "passed": true
+    },
+    {
+      "group": "retrieval",
+      "name": "query_operators_do_not_execute_sql",
+      "passed": true
+    },
+    {
+      "group": "retrieval",
+      "name": "blank_query_is_rejected",
+      "passed": true
+    },
+    {
+      "group": "retrieval",
+      "name": "excessive_query_length_is_rejected",
+      "passed": true
+    },
+    {
+      "group": "retrieval",
+      "name": "excessive_top_k_is_rejected",
+      "passed": true
+    },
+    {
+      "group": "retrieval",
+      "name": "no_match_returns_no_candidates",
+      "passed": true
+    },
+    {
+      "group": "publication",
+      "name": "committed_index_survives_connection_reopen",
+      "passed": true
+    },
+    {
+      "group": "cache",
+      "name": "same_scope_epoch_query_reuses_local_cache",
+      "passed": true
+    },
+    {
+      "group": "cache",
+      "name": "same_query_other_owner_has_separate_cache_key",
+      "passed": true
+    },
+    {
+      "group": "cache",
+      "name": "same_query_other_tenant_has_separate_cache_key",
+      "passed": true
+    },
+    {
+      "group": "cache",
+      "name": "caller_cannot_mutate_cached_result",
+      "passed": true
+    },
+    {
+      "group": "context",
+      "name": "serialized_evidence_and_output_reserve_fit_budget",
+      "passed": true
+    },
+    {
+      "group": "context",
+      "name": "source_metadata_preserves_page_and_version",
+      "passed": true
+    },
+    {
+      "group": "context",
+      "name": "trusted_instructions_and_source_data_are_separate",
+      "passed": true
+    },
+    {
+      "group": "citation",
+      "name": "extractive_reply_quote_is_validated_against_source",
+      "passed": true
+    },
+    {
+      "group": "citation",
+      "name": "invented_citation_id_is_rejected",
+      "passed": true
+    },
+    {
+      "group": "citation",
+      "name": "valid_citation_with_wrong_quote_is_rejected",
+      "passed": true
+    },
+    {
+      "group": "context",
+      "name": "foreign_candidate_cannot_enter_prompt",
+      "passed": true
+    },
+    {
+      "group": "context",
+      "name": "oversized_base_prompt_is_rejected",
+      "passed": true
+    },
+    {
+      "group": "context",
+      "name": "no_evidence_produces_explicit_abstention",
+      "passed": true
+    },
+    {
+      "group": "context",
+      "name": "injection_text_remains_data_without_executing_tools",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "authenticated_fixture_search_returns_200",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "http_responses_disable_shared_caching",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "missing_fixture_token_returns_401",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "unknown_fixture_token_returns_401",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "bare_token_without_bearer_scheme_returns_401",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "model_style_tenant_override_is_not_accepted",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "repeated_query_parameters_are_rejected",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "authorized_source_returns_exact_chunk",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "other_owner_source_is_404",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "other_tenant_source_is_404",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "unknown_source_is_404",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "answer_endpoint_returns_scoped_quote",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "no_evidence_answer_endpoint_abstains",
+      "passed": true
+    },
+    {
+      "group": "publication",
+      "name": "newer_version_publishes_atomically",
+      "passed": true
+    },
+    {
+      "group": "publication",
+      "name": "late_older_job_is_stale",
+      "passed": true
+    },
+    {
+      "group": "publication",
+      "name": "old_chunk_ids_are_removed_from_current_index",
+      "passed": true
+    },
+    {
+      "group": "cache",
+      "name": "publication_epoch_invalidates_old_query_cache",
+      "passed": true
+    },
+    {
+      "group": "citation",
+      "name": "stale_context_cannot_validate_after_replacement",
+      "passed": true
+    },
+    {
+      "group": "context",
+      "name": "stale_candidates_cannot_enter_new_prompt",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "old_source_url_returns_404_after_update",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "search_after_update_has_only_new_version",
+      "passed": true
+    },
+    {
+      "group": "deletion",
+      "name": "another_owner_cannot_delete_document",
+      "passed": true
+    },
+    {
+      "group": "deletion",
+      "name": "delete_tombstones_and_removes_searchable_chunks",
+      "passed": true
+    },
+    {
+      "group": "deletion",
+      "name": "duplicate_delete_is_idempotent",
+      "passed": true
+    },
+    {
+      "group": "deletion",
+      "name": "late_job_cannot_resurrect_tombstoned_document",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "current_source_url_is_404_after_delete",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "cached_deleted_query_does_not_return_removed_text",
+      "passed": true
+    },
+    {
+      "group": "deletion",
+      "name": "other_tenant_document_survives_delete",
+      "passed": true
+    },
+    {
+      "group": "deletion",
+      "name": "fts_and_chunk_tables_remain_in_sync",
+      "passed": true
+    },
+    {
+      "group": "cleanup",
+      "name": "owned_http_listener_closed",
+      "passed": true
+    },
+    {
+      "group": "ranking",
+      "name": "rrf_promotes_candidate_present_in_both_lists",
+      "passed": true
+    },
+    {
+      "group": "ranking",
+      "name": "rrf_uses_rank_not_incomparable_raw_scores",
+      "passed": true
+    },
+    {
+      "group": "ranking",
+      "name": "duplicate_ids_do_not_add_multiple_votes_per_list",
+      "passed": true
+    },
+    {
+      "group": "ranking",
+      "name": "transparent_phrase_heuristic_can_reorder_candidates",
+      "passed": true
+    },
+    {
+      "group": "ranking",
+      "name": "reranking_does_not_invent_missing_candidates",
+      "passed": true
+    },
+    {
+      "group": "evaluation",
+      "name": "known_runtime_evidence_is_retrieved",
+      "passed": true
+    },
+    {
+      "group": "evaluation",
+      "name": "known_identity_evidence_is_retrieved",
+      "passed": true
+    },
+    {
+      "group": "evaluation",
+      "name": "lexical_paraphrase_miss_is_recorded_not_hidden",
+      "passed": true
+    },
+    {
+      "group": "evaluation",
+      "name": "unanswerable_case_is_separate_from_positive_recall",
+      "passed": true
+    },
+    {
+      "group": "evaluation",
+      "name": "duplicate_chunk_hits_do_not_inflate_document_recall",
+      "passed": true
+    },
+    {
+      "group": "evaluation",
+      "name": "reciprocal_rank_tracks_first_relevant_document",
+      "passed": true
+    },
+    {
+      "group": "cleanup",
+      "name": "temporary_databases_removed_after_connection_closure",
+      "passed": true
+    }
+  ],
+  "counts": {
+    "authorization": 4,
+    "cache": 5,
+    "chunking": 9,
+    "citation": 4,
+    "cleanup": 2,
+    "context": 8,
+    "deletion": 6,
+    "evaluation": 6,
+    "extraction": 14,
+    "http": 17,
+    "publication": 12,
+    "ranking": 5,
+    "retrieval": 7
+  },
+  "total": 99,
+  "observations": {
+    "extraction": {
+      "pdf_pages": [
+        {
+          "page": 1,
+          "text": "Node.js is a runtime."
+        },
+        {
+          "page": 2,
+          "text": "Stable keys preserve identity."
+        }
+      ],
+      "normalized_markdown": "Café\nSecond line.",
+      "textless_policy": "review/OCR route; no OCR executed"
+    },
+    "chunking": {
+      "unit": "whitespace words",
+      "size": 12,
+      "overlap": 3,
+      "config": "{\"overlap_words\": 3, \"parser\": \"m23-nfc-pages-v1\", \"size_words\": 12}",
+      "windows": [
+        {
+          "start": 0,
+          "end": 73,
+          "words": 12
+        },
+        {
+          "start": 54,
+          "end": 136,
+          "words": 12
+        },
+        {
+          "start": 116,
+          "end": 199,
+          "words": 12
+        },
+        {
+          "start": 179,
+          "end": 234,
+          "words": 8
+        }
+      ]
+    },
+    "context": {
+      "serialized_tokens": 150,
+      "output_reserve": 128,
+      "evidence": [
+        {
+          "chunk_id": "478e3424cced068c5a367eb7db4b09ca2905d14da03a29b10e6f66e7879eb7b9",
+          "document_id": "node",
+          "version": 1,
+          "page": 1,
+          "start": 0,
+          "end": 133,
+          "text": "Node.js runs JavaScript outside the browser. It is a runtime, not a database. Event loop work must avoid blocking unrelated requests."
+        }
+      ],
+      "reply": {
+        "kind": "answer",
+        "claims": [
+          {
+            "quote": "Node.js runs JavaScript outside the browser. It is a runtime, not a database. Event loop work must avoid blocking unrelated requests.",
+            "citation": "478e3424cced068c5a367eb7db4b09ca2905d14da03a29b10e6f66e7879eb7b9"
+          }
+        ]
+      },
+      "no_evidence_reply": {
+        "kind": "abstain",
+        "claims": []
+      }
+    },
+    "lifecycle": {
+      "initial_version": 1,
+      "replacement_version": 3,
+      "late_version_2": "stale",
+      "deleted_source_status": 404,
+      "late_version_4": "rejected by tombstone",
+      "remaining_chunks": 5,
+      "remaining_fts_rows": 5
+    },
+    "http_requests": 16,
+    "ranking": {
+      "input_kind": "handwritten rank lists, not semantic retrieval",
+      "rrf": [
+        {
+          "id": "shared-b",
+          "score": 0.03225806451612903
+        },
+        {
+          "id": "lexical-a",
+          "score": 0.01639344262295082
+        },
+        {
+          "id": "semantic-c",
+          "score": 0.01639344262295082
+        }
+      ],
+      "heuristic_rerank_ids": [
+        "b",
+        "a"
+      ]
+    },
+    "evaluation": {
+      "granularity": "document",
+      "cases": [
+        {
+          "id": "runtime",
+          "query": "JavaScript outside browser",
+          "retrieved_documents": [
+            "node"
+          ],
+          "relevant_documents": [
+            "node"
+          ],
+          "recall": 1.0,
+          "reciprocal_rank": 1.0,
+          "empty_result": false
+        },
+        {
+          "id": "identity",
+          "query": "stable keys",
+          "retrieved_documents": [
+            "react"
+          ],
+          "relevant_documents": [
+            "react"
+          ],
+          "recall": 1.0,
+          "reciprocal_rank": 1.0,
+          "empty_result": false
+        },
+        {
+          "id": "paraphrase",
+          "query": "server programs",
+          "retrieved_documents": [],
+          "relevant_documents": [
+            "node"
+          ],
+          "recall": 0.0,
+          "reciprocal_rank": 0.0,
+          "empty_result": true
+        },
+        {
+          "id": "unanswerable",
+          "query": "quantum entanglement",
+          "retrieved_documents": [],
+          "relevant_documents": [],
+          "recall": null,
+          "reciprocal_rank": null,
+          "empty_result": true
+        }
+      ],
+      "mean_recall_at_5": 0.666667,
+      "mrr_at_5": 0.666667,
+      "scope": "three tiny labeled positive queries and one unanswerable query; lexical baseline, no model inference"
+    }
+  },
+  "cleanup": {
+    "temporary_databases_removed": true,
+    "loopback_ports_closed": {
+      "64195": true
+    },
+    "docker_started": false
+  },
+  "scope": "Actual pypdf extraction on synthetic text PDFs, UTF-8/page-aware word chunks, SQLite FTS5/BM25 and transactions, scoped local HTTP/context/citations/cache/lifecycle, real tokenizer budgeting and tiny lexical retrieval metrics. RRF lists handcrafted, reranker heuristic, answer extractive. No trained embeddings, LLM generation, OCR, hosted vector store, real auth or production sandbox/benchmark."
+}

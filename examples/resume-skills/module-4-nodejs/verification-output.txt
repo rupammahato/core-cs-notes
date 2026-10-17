@@ -1,0 +1,21 @@
+PASS 01-host - Node supplies host capabilities around V8
+PASS 02-events - EventEmitter listeners run synchronously
+PASS 03-commonjs - CommonJS caches the exported object for this resolved file
+PASS 04-esm - ES-module imports observe live bindings
+PASS 05-files - A promise-based file read has a later result
+PASS 06-io-order - Ordering inside a file-I/O callback
+PASS 07-yield - Host-level yielding lets other callbacks progress
+PASS 08-buffer - Buffers are bytes; subarray shares storage
+PASS 09-decoder - UTF-8 characters can cross chunk boundaries
+PASS 10-pipeline - A pipeline connects chunk producers and consumers
+PASS 11-backpressure - A false write return asks the producer to pause
+PASS 12-pipeline-error - Pipeline rejects and destroys streams on a write failure
+PASS 13-compression - A transform can change byte representation
+PASS 14-worker - A worker executes JavaScript in another thread of this process
+PASS 15-worker-error - A worker failure has an explicit error and exit path
+PASS 16-child - A child process has a different process identity
+PASS 17-config - Environment variables need parsing and validation
+PASS 18-liveness - An unreferenced timer does not keep the process alive
+PASS 19-native-work - A native asynchronous operation still returns through JavaScript
+PASS 20-http - The learning HTTP server passes its route and concurrency checks
+Verified 20 snippets in their recorded module modes; Node v22.14.0

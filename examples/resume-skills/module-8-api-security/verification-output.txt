@@ -1,0 +1,80 @@
+PASS viewer permission matrix: [true,true,false,false,false,false,false]
+PASS editor permission matrix: [true,true,false,true,true,false,true]
+PASS admin permission matrix: [true,true,true,true,true,true,true]
+PASS unexpected permission matrix: [false,false,false,false,false,false,false]
+PASS unknown writable properties rejected: {"status":400,"code":"unknown_field"}
+PASS prototype property rejected without polluting objects: {"rejected":true,"polluted":false}
+PASS create normalizes title and defaults visibility: {"title":"A","visibility":"private"}
+PASS empty patch rejected: {"status":400,"code":"empty_patch"}
+PASS filename accepts narrow text display name: "notes-1.txt"
+PASS unsafe filename rejected "../notes.txt": {"status":400,"code":"invalid_filename"}
+PASS unsafe filename rejected "..\\notes.txt": {"status":400,"code":"invalid_filename"}
+PASS unsafe filename rejected "notes.pdf": {"status":400,"code":"invalid_filename"}
+PASS unsafe filename rejected "notes.txt.exe": {"status":400,"code":"invalid_filename"}
+PASS unsafe filename rejected ".hidden.txt": {"status":400,"code":"invalid_filename"}
+PASS unsafe filename rejected "a\u0000.txt": {"status":400,"code":"invalid_filename"}
+PASS UTF-8 content preserves ordinary text: "Placement café"
+PASS invalid UTF-8 rejected: {"status":400,"code":"invalid_utf8"}
+PASS NUL-bearing text rejected: {"status":400,"code":"invalid_text"}
+PASS text size checked at service boundary: {"status":413,"code":"body_too_large"}
+PASS HTML text context escapes metacharacters: "&lt;script&gt;alert(&quot;x&quot;)&lt;/script&gt;&amp;"
+PASS attempt budget scoped by verified tenant and subject: {"exhausted":["alpha","alice"],"otherSubjectAllowed":true,"otherTenantAllowed":true}
+PASS rate-limit delay rounds up and next window resets: {"retryAfterSeconds":2,"newWindowAllowed":true}
+Verified 22 policy checks.
+PASS anonymous request rejected: {"status":401,"code":"unauthenticated"}
+PASS forged bearer credential rejected: {"status":401,"code":"unauthenticated"}
+PASS cross-tenant reads and unknown tenant concealed: {"aliceBetaPaths":6,"carolAlpha":404,"unknown":404,"stateUnchanged":true}
+PASS ownership and sharing distinguish private and tenant documents: {"ownerPrivate":200,"viewerPrivate":404,"viewerShared":200,"sameUserOtherTenantAdmin":200}
+PASS projection excludes content and private server fields: {"fields":["id","ownerId","title","version","visibility"]}
+PASS list filters permissions before pagination: {"bobIds":[2],"bobNext":null,"aliceIds":[1,2]}
+PASS continuation and search do not reveal private rows: {"after1":[2],"after2":[],"privateSearch":[]}
+PASS query parameters have an explicit allowlist and bounds: {"rejectedQueries":5}
+PASS tenant header cannot redirect authorized path context: {"title":"Alpha private"}
+PASS claimed role and user headers do not bypass ownership: {"status":403,"stateUnchanged":true}
+PASS signed role and tenant claims do not replace current membership: {"otherTenant":404,"roleEscalation":403}
+PASS scope ceiling restricts an otherwise capable editor: {"status":403,"stateUnchanged":true}
+PASS write scope does not upgrade viewer role: {"create":403,"editOwn":403,"stateUnchanged":true}
+PASS mass assignment attempts cannot alter server-owned fields: {"rejectedInputs":4,"stateUnchanged":true}
+PASS creation assigns owner and tenant on the server: {"id":3,"ownerId":"alice","visibility":"private"}
+PASS owner edit requires condition and preserves server fields: {"status":200,"tag":"\"v2\"","staleStatus":412}
+PASS property-level permission restricts visibility changes: {"editor":403,"tenantAdmin":200,"editorStateUnchanged":true}
+PASS bulk failure has no partial deletion: {"forbidden":403,"missing":404,"duplicate":400,"stateUnchanged":true}
+PASS authorized bulk deletion stays within selected tenant: {"betaRemaining":0,"alphaRemaining":3}
+PASS download has independent object authorization and safe type: {"denied":404,"allowed":200,"attachment":true,"nosniff":true}
+PASS audit records correlate decisions without body or credential values: {"correlated":true,"denialRecorded":true,"credentialOrBodyLogged":false}
+PASS cache cannot mix same local ID across tenants or viewers: {"alpha1":"Alpha private","beta1":"Beta shared","otherViewer":404}
+PASS current membership and object policy checked before cache hit: {"downgradedPrivate":404,"removedMembership":404}
+PASS unknown membership role fails closed: {"status":404}
+PASS preflight advertises an allowed route without exposing data: {"status":204,"allowOrigin":"https://app.example.test","credentials":false}
+PASS origin allowlist rejects null and suffix tricks: {"rejectedOrigins":3}
+PASS preflight rejects unsupported method or header: {"rejectedPreflights":2}
+PASS allowed Origin does not establish identity or tenant permission: {"anonymous":401,"nonmember":404}
+PASS non-browser request still requires real authorization: {"own":200,"otherTenant":404}
+PASS disallowed-origin mutation has no effect: {"status":403,"stateUnchanged":true}
+PASS import rejects path filename without storing a row: {"status":400,"stateUnchanged":true}
+PASS import rejects active extension without storing a row: {"status":400,"stateUnchanged":true}
+PASS import rejects oversize text without storing a row: {"status":413,"stateUnchanged":true}
+PASS import rejects invalid UTF-8 without storing a row: {"status":400,"stateUnchanged":true}
+PASS import rejects NUL content without storing a row: {"status":400,"stateUnchanged":true}
+PASS import rejects compressed body without storing a row: {"status":415,"stateUnchanged":true}
+PASS import rejects unsupported MIME without storing a row: {"status":415,"stateUnchanged":true}
+PASS import authorizes before payload processing: {"viewer":403,"nonmember":404,"stateUnchanged":true}
+PASS text import records server ownership and opaque storage metadata: {"id":3,"ownerId":"alice","visibility":"private","publicStorageKey":false}
+PASS markup remains text in authorized attachment response: {"bytesPreserved":true,"type":"text/plain","attachment":true}
+PASS HTTP import budget keys verified tenant and subject: {"exhausted":429,"retryAfterSeconds":2,"otherSubject":201,"reads":200}
+PASS HTTP import budget resets next window: {"status":201}
+PASS membership revoked while update awaits prevents commit: {"status":404,"documentsUnchanged":true}
+PASS membership revoked while bulk-delete awaits prevents commit: {"status":404,"documentsUnchanged":true}
+PASS overlapping tenant requests keep local context and role: {"alpha":"Alpha shared","beta":"Beta private"}
+PASS expired identity rejected before tenant access: {"status":401,"code":"unauthenticated"}
+Verified 46 http checks.
+All temporary HTTP listeners closed.
+Recorded expected experimental node:sqlite warning.
+PASS composite identity distinguishes same ID across tenants: {"alpha1":"Alpha private","beta1":"Beta shared"}
+PASS unsafe concatenation leaks rows in isolated training database: {"rows":4,"includesOtherTenant":true}
+PASS bound value remains data rather than injected SQL: {"rows":0}
+PASS parameterization alone does not add tenant authorization: {"rows":2,"distinctTenants":["alpha","beta"]}
+PASS composite foreign key rejects cross-tenant parent: {"rejected":true,"rowsRemain":4}
+PASS allowed sort mapping rejects identifier injection: {"rejectedSort":true,"allowedSortIds":[1,2]}
+Verified 6 sql checks.
+Verified 74 checks across policy, real HTTP and SQLite groups.

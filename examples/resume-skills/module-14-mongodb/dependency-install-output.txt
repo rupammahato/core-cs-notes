@@ -1,0 +1,5 @@
+Looking in links: c:/Development/Placement/examples/resume-skills/module-14-mongodb/.wheelhouse
+Processing c:\development\placement\examples\resume-skills\module-14-mongodb\.wheelhouse\pymongo-4.10.1-cp312-cp312-win_amd64.whl (from -r C:/Development/Placement/examples/resume-skills/module-14-mongodb/requirements.lock.txt (line 1))
+Processing c:\development\placement\examples\resume-skills\module-14-mongodb\.wheelhouse\dnspython-2.8.0-py3-none-any.whl (from -r C:/Development/Placement/examples/resume-skills/module-14-mongodb/requirements.lock.txt (line 2))
+Installing collected packages: dnspython, pymongo
+Successfully installed dnspython-2.8.0 pymongo-4.10.1

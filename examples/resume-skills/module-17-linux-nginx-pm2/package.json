@@ -1,0 +1,7 @@
+{
+  "name": "placement-m17-deployment-fixture",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Isolated Linux deployment learning fixture",
+  "dependencies": { "pm2": "7.0.4" }
+}

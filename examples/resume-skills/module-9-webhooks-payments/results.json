@@ -1,0 +1,23 @@
+{
+  "node": "v22.14.0",
+  "sqlite": "3.47.2",
+  "passed": 57,
+  "groups": [
+    {
+      "group": "core",
+      "passed": 21
+    },
+    {
+      "group": "http",
+      "passed": 26
+    },
+    {
+      "group": "reconciliation",
+      "passed": 6
+    },
+    {
+      "group": "recovery",
+      "passed": 4
+    }
+  ]
+}

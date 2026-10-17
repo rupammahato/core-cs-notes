@@ -1,0 +1,7 @@
+{
+  "name": "placement-m27-system-design",
+  "private": true,
+  "type": "module",
+  "scripts": { "verify": "node verify.mjs" },
+  "engines": { "node": ">=22" }
+}

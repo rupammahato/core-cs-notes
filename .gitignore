@@ -8,5 +8,9 @@ desktop.ini
 .vscode/
 *.swp
 
+# Personal source resumes stay local; the derived study notes are versioned.
+/Rupam_Resume_Product.pdf
+/Rupam_Resume_Updated.pdf
+
 # the site has its own .gitignore for node_modules, .next and the
 # generated content/docs/ copies

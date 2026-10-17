@@ -1,0 +1,187 @@
+{
+  "node": "v22.14.0",
+  "passed": 21,
+  "sqlite": "3.47.2",
+  "checks": [
+    {
+      "name": "HMAC SHA256 matches RFC 4231 known vector",
+      "passed": true,
+      "observed": "b0344c61d8db38535ca8afceaf0bf12b881dc200c9833da726e9376c2e32cff7"
+    },
+    {
+      "name": "verification preserves raw whitespace and rejects reserialization",
+      "passed": true,
+      "observed": {
+        "exactBytesAccepted": true,
+        "reserializedRejected": true
+      }
+    },
+    {
+      "name": "old secret works only while explicitly configured",
+      "passed": true,
+      "observed": {
+        "status": 401,
+        "code": "invalid_signature"
+      }
+    },
+    {
+      "name": "acceptance is inbox commit rather than credit completion",
+      "passed": true,
+      "observed": {
+        "state": "pending",
+        "credits": 0,
+        "inboxRows": 1
+      }
+    },
+    {
+      "name": "worker commits credit, paid order, receipt and outbox together",
+      "passed": true,
+      "observed": {
+        "credits": 100,
+        "ledgerRows": 1,
+        "order": "paid",
+        "receipt": "processed",
+        "outboxRows": 1
+      }
+    },
+    {
+      "name": "same event replay returns duplicate without a second effect",
+      "passed": true,
+      "observed": {
+        "duplicate": true,
+        "credits": 100,
+        "outboxRows": 1
+      }
+    },
+    {
+      "name": "new delivery ID for same signed payment cannot grant twice",
+      "passed": true,
+      "observed": {
+        "receiptRows": 2,
+        "ledgerRows": 1,
+        "credits": 100
+      }
+    },
+    {
+      "name": "captured then authorized or failed cannot downgrade capture/order",
+      "passed": true,
+      "observed": {
+        "payment": "captured",
+        "order": "paid",
+        "credits": 100
+      }
+    },
+    {
+      "name": "second captured payment for funded order enters review",
+      "passed": true,
+      "observed": {
+        "reason": "order_already_funded",
+        "credits": 100
+      }
+    },
+    {
+      "name": "failed attempt does not close order to a later successful attempt",
+      "passed": true,
+      "observed": {
+        "failedAttemptCredits": 0,
+        "finalOrder": "paid",
+        "credits": 100
+      }
+    },
+    {
+      "name": "wrong amount quarantined without credit",
+      "passed": true,
+      "observed": {
+        "state": "review",
+        "reason": "amount_or_currency_mismatch",
+        "credits": 0
+      }
+    },
+    {
+      "name": "wrong currency quarantined without credit",
+      "passed": true,
+      "observed": {
+        "state": "review",
+        "reason": "amount_or_currency_mismatch",
+        "credits": 0
+      }
+    },
+    {
+      "name": "unknown order quarantined without credit",
+      "passed": true,
+      "observed": {
+        "state": "review",
+        "reason": "unknown_order",
+        "credits": 0
+      }
+    },
+    {
+      "name": "other tenant order through alpha endpoint quarantined without credit",
+      "passed": true,
+      "observed": {
+        "state": "review",
+        "reason": "unknown_order",
+        "credits": 0
+      }
+    },
+    {
+      "name": "payload notes cannot choose tenant or number of credits",
+      "passed": true,
+      "observed": {
+        "alphaCredits": 100,
+        "betaCredits": 0
+      }
+    },
+    {
+      "name": "payment identity cannot be rebound to a different order",
+      "passed": true,
+      "observed": {
+        "reason": "payment_identity_conflict",
+        "credits": 100
+      }
+    },
+    {
+      "name": "same provider event ID is scoped to configured endpoint",
+      "passed": true,
+      "observed": {
+        "alphaCredits": 100,
+        "betaCredits": 100
+      }
+    },
+    {
+      "name": "same endpoint event ID with changed bytes conflicts",
+      "passed": true,
+      "observed": {
+        "status": 409,
+        "code": "event_id_conflict"
+      }
+    },
+    {
+      "name": "injected failure after ledger insert rolls back every business effect",
+      "passed": true,
+      "observed": {
+        "credits": 0,
+        "ledgerRows": 0,
+        "outboxRows": 0,
+        "receipt": "pending"
+      }
+    },
+    {
+      "name": "retry after rollback grants once",
+      "passed": true,
+      "observed": {
+        "credits": 100,
+        "ledgerRows": 1
+      }
+    },
+    {
+      "name": "outbox retry after accepted send can repeat delivery but not idempotent sink effect",
+      "passed": true,
+      "observed": {
+        "deliveryAttempts": 2,
+        "sinkEffects": 1,
+        "outbox": "sent"
+      }
+    }
+  ]
+}

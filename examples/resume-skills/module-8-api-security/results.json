@@ -1,0 +1,20 @@
+{
+  "node": "v22.14.0",
+  "jose": "6.2.12",
+  "passed": 74,
+  "groups": [
+    {
+      "group": "policy",
+      "passed": 22
+    },
+    {
+      "group": "http",
+      "passed": 46
+    },
+    {
+      "group": "sql",
+      "passed": 6,
+      "sqlite": "3.47.2"
+    }
+  ]
+}

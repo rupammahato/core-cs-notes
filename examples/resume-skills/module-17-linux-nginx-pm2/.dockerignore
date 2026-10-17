@@ -1,0 +1,11 @@
+node_modules
+.git
+.run-*
+__pycache__
+*-output.txt
+*-results.json
+*-validation.json
+validation-summary.json
+README.md
+chapter.template.md
+*.tmp.py

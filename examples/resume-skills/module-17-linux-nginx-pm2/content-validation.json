@@ -1,0 +1,71 @@
+{
+  "chapter": "resume-skills-handbook-part-19-module-17-linux-deployment-nginx-pm2.md",
+  "words": 8881,
+  "lines": 928,
+  "questions": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30
+  ],
+  "practice_tasks": 10,
+  "unchecked_learning_items": 12,
+  "source_fidelity": {
+    "app.cjs": true,
+    "ecosystem.config.cjs": true,
+    "nginx.conf": true,
+    "Dockerfile": true
+  },
+  "counts": {
+    "host": 3,
+    "lifecycle": 5,
+    "linux": 6,
+    "nginx": 14,
+    "pm2": 8,
+    "tls": 4
+  },
+  "total": 40,
+  "embedded_observations": [
+    "VERSIONS",
+    "DIGEST",
+    "URI",
+    "FORWARDED",
+    "WORKERS",
+    "RELOAD"
+  ],
+  "result_fidelity": {
+    "versions": true,
+    "digest": true,
+    "uri": true,
+    "forwarding": true,
+    "workers": true,
+    "reload": true,
+    "audit": true
+  }
+}

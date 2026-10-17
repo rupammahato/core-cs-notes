@@ -1,0 +1,15 @@
+{
+  "completeSources": 8,
+  "verifiedOrmExcerpt": 1,
+  "verifiedObservationBlocks": 9,
+  "interviewQuestions": 30,
+  "practiceTasks": 10,
+  "totalChecks": 76,
+  "groups": {
+    "orm": 15,
+    "transactions": 14,
+    "framework": 9,
+    "http": 38
+  },
+  "additionalManagementChecks": 3
+}

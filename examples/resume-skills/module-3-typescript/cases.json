@@ -1,0 +1,254 @@
+[
+  {
+    "id": "01-erasure",
+    "title": "Type annotations and interfaces disappear",
+    "kind": "run",
+    "source": "interface Product { id: number; name: string }\ntype ProductId = number;\nconst id: ProductId = 7;\nconst product: Product = { id, name: 'Keyboard' };\nconsole.log(typeof id, product.name);",
+    "expectedOutput": [
+      "number Keyboard"
+    ]
+  },
+  {
+    "id": "02-inference",
+    "title": "Inference and annotations describe the same JavaScript values",
+    "kind": "run",
+    "source": "let retries = 2;\nconst mode = 'safe';\nfunction total(price: number, quantity: number): number {\n  return price * quantity;\n}\nconst scores = [1, 2, 3].map(value => value * 2);\nconsole.log(total(25000, retries), mode, scores.join(','));",
+    "expectedOutput": [
+      "50000 safe 2,4,6"
+    ]
+  },
+  {
+    "id": "03-argument",
+    "title": "A checked function call rejects the wrong argument type",
+    "kind": "reject",
+    "source": "function total(price: number, quantity: number): number {\n  return price * quantity;\n}\ntotal(25000, '2');",
+    "expectedCodes": [
+      2345
+    ]
+  },
+  {
+    "id": "04-structural",
+    "title": "Structural compatibility does not remove extra fields",
+    "kind": "run",
+    "source": "interface PublicUser { id: number; name: string }\nconst stored = { id: 7, name: 'Rupam', passwordHash: 'demo-only' };\nconst view: PublicUser = stored;\nfunction label(user: PublicUser): string { return user.name; }\nconsole.log(label(stored), view === stored);\nconsole.log(JSON.stringify(view));",
+    "expectedOutput": [
+      "Rupam true",
+      "{\"id\":7,\"name\":\"Rupam\",\"passwordHash\":\"demo-only\"}"
+    ]
+  },
+  {
+    "id": "05-excess",
+    "title": "Fresh object literals receive an excess-property check",
+    "kind": "reject",
+    "source": "interface PublicUser { id: number; name: string }\nconst user: PublicUser = { id: 7, name: 'Rupam', passwordHash: 'demo-only' };",
+    "expectedCodes": [
+      2353
+    ]
+  },
+  {
+    "id": "06-narrowing",
+    "title": "Control flow narrows a union",
+    "kind": "run",
+    "source": "function normalize(id: string | number): string {\n  if (typeof id === 'string') return id.trim();\n  return id.toFixed(0);\n}\nconsole.log(normalize(' 7 '), normalize(8));\nfunction text(value: string | null): string {\n  if (value === null) return 'missing';\n  return value.length === 0 ? 'empty' : value.toUpperCase();\n}\nconsole.log(text(''), text(null), text('ok'));",
+    "expectedOutput": [
+      "7 8",
+      "empty missing OK"
+    ]
+  },
+  {
+    "id": "07-unknown",
+    "title": "unknown requires evidence before property access",
+    "kind": "reject",
+    "source": "function readName(value: unknown): string {\n  return value.name;\n}",
+    "expectedCodes": [
+      18046
+    ]
+  },
+  {
+    "id": "08-any",
+    "title": "Explicit any bypasses checks even under strict",
+    "kind": "run",
+    "source": "const input: any = 7;\ntry { console.log(input.toUpperCase()); }\ncatch (error: unknown) {\n  console.log(error instanceof Error ? error.name : 'unknown failure');\n}",
+    "expectedOutput": [
+      "TypeError"
+    ]
+  },
+  {
+    "id": "09-assertion",
+    "title": "An assertion is not conversion or validation",
+    "kind": "run",
+    "source": "const quantity = JSON.parse('\"two\"') as number;\nconsole.log(typeof quantity, quantity + 1);\nfunction readLength(value: string | undefined): number { return value!.length; }\ntry { console.log(readLength(undefined)); }\ncatch (error: unknown) {\n  console.log(error instanceof Error ? error.name : 'unknown failure');\n}",
+    "expectedOutput": [
+      "string two1",
+      "TypeError"
+    ]
+  },
+  {
+    "id": "10-null",
+    "title": "Strict null checking requires a check",
+    "kind": "reject",
+    "source": "function upper(value: string | null): string {\n  return value.toUpperCase();\n}",
+    "expectedCodes": [
+      18047
+    ]
+  },
+  {
+    "id": "11-optional",
+    "title": "Exact optional properties distinguish absence from undefined",
+    "kind": "reject",
+    "source": "interface Patch { name?: string }\nconst patch: Patch = { name: undefined };",
+    "expectedCodes": [
+      2375
+    ]
+  },
+  {
+    "id": "12-index",
+    "title": "Unchecked indexing adds undefined to a possible missing element",
+    "kind": "reject",
+    "source": "function firstLength(values: string[]): number {\n  return values[0].length;\n}",
+    "expectedCodes": [
+      2532
+    ]
+  },
+  {
+    "id": "13-readonly",
+    "title": "Readonly is shallow and does not freeze an aliased object",
+    "kind": "run",
+    "source": "const mutable = { id: 7, settings: { theme: 'light' } };\nconst view: Readonly<typeof mutable> = mutable;\nmutable.id = 8;\nview.settings.theme = 'dark';\nconsole.log(view.id, view.settings.theme, Object.isFrozen(view));",
+    "expectedOutput": [
+      "8 dark false"
+    ]
+  },
+  {
+    "id": "14-readonly-write",
+    "title": "A readonly property rejects assignment through that view",
+    "kind": "reject",
+    "source": "interface User { readonly id: number }\nconst user: User = { id: 7 };\nuser.id = 8;",
+    "expectedCodes": [
+      2540
+    ]
+  },
+  {
+    "id": "15-result",
+    "title": "A discriminated union models valid result states",
+    "kind": "run",
+    "source": "type Result<T> =\n  | { ok: true; value: T }\n  | { ok: false; error: string };\nfunction assertNever(value: never): never {\n  throw new Error('Unexpected variant');\n}\nfunction describe(result: Result<number>): string {\n  switch (result.ok) {\n    case true: return 'value:' + result.value;\n    case false: return 'error:' + result.error;\n    default: return assertNever(result);\n  }\n}\nconsole.log(describe({ ok: true, value: 7 }));\nconsole.log(describe({ ok: false, error: 'missing' }));",
+    "expectedOutput": [
+      "value:7",
+      "error:missing"
+    ]
+  },
+  {
+    "id": "16-exhaustive",
+    "title": "A missing variant fails an exhaustive switch",
+    "kind": "reject",
+    "source": "type Job =\n  | { state: 'queued' }\n  | { state: 'done'; output: string }\n  | { state: 'failed'; error: string };\nfunction assertNever(value: never): never {\n  throw new Error('Unexpected variant');\n}\nfunction describe(job: Job): string {\n  switch (job.state) {\n    case 'queued': return 'waiting';\n    case 'done': return job.output;\n    default: return assertNever(job);\n  }\n}",
+    "expectedCodes": [
+      2345
+    ]
+  },
+  {
+    "id": "17-interface-alias",
+    "title": "Interfaces can merge; aliases can name unions",
+    "kind": "run",
+    "source": "interface User { id: number }\ninterface User { name: string }\ninterface Admin extends User { role: 'admin' }\ntype UserId = string | number;\ntype Identified = User & { active: boolean };\nconst admin: Admin = { id: 7, name: 'Rupam', role: 'admin' };\nconst active: Identified = { ...admin, active: true };\nconst id: UserId = admin.id;\nconsole.log(id, active.name, active.active);",
+    "expectedOutput": [
+      "7 Rupam true"
+    ]
+  },
+  {
+    "id": "18-generics",
+    "title": "Generics preserve relationships between input and output types",
+    "kind": "run",
+    "source": "function get<T, K extends keyof T>(object: T, key: K): T[K] {\n  return object[key];\n}\nfunction first<T>(items: readonly T[]): T | undefined {\n  return items[0];\n}\nconst user = { id: 7, name: 'Rupam' };\nconst name: string = get(user, 'name');\nconst id: number = get(user, 'id');\nconsole.log(name, id, first([10, 20]), first([]));",
+    "expectedOutput": [
+      "Rupam 7 10 undefined"
+    ]
+  },
+  {
+    "id": "19-generic-key",
+    "title": "A key constraint rejects nonexistent known keys",
+    "kind": "reject",
+    "source": "function get<T, K extends keyof T>(object: T, key: K): T[K] {\n  return object[key];\n}\nget({ id: 7 }, 'email');",
+    "expectedCodes": [
+      2345
+    ]
+  },
+  {
+    "id": "20-satisfies",
+    "title": "satisfies checks compatibility without a broad annotation",
+    "kind": "run",
+    "source": "type RouteName = 'health' | 'submit';\ntype Route = { method: 'GET' | 'POST'; path: string };\nconst routes = {\n  health: { method: 'GET', path: '/health' },\n  submit: { method: 'POST', path: '/submit' }\n} as const satisfies Record<RouteName, Route>;\nconst method: 'GET' = routes.health.method;\nconsole.log(method, routes.submit.path, Object.isFrozen(routes));",
+    "expectedOutput": [
+      "GET /submit false"
+    ]
+  },
+  {
+    "id": "21-utilities",
+    "title": "Utility types derive contracts without runtime field filtering",
+    "kind": "run",
+    "source": "interface User {\n  id: number;\n  name: string;\n  email: string;\n  passwordHash: string;\n}\ntype PublicUser = Pick<User, 'id' | 'name'>;\ntype Editable = Partial<Pick<User, 'name' | 'email'>>;\ntype NewUser = Omit<User, 'id'>;\nconst stored: User = {\n  id: 7, name: 'Rupam', email: 'r@example.test', passwordHash: 'demo-only'\n};\nfunction toPublic(user: User): PublicUser {\n  return { id: user.id, name: user.name };\n}\nconst update: Editable = { name: 'New name' };\nconst defaults: Required<Editable> = { name: '', email: '' };\nconst totals: Record<'accepted' | 'rejected', number> = { accepted: 1, rejected: 0 };\nconst draft: NewUser = { name: defaults.name, email: '', passwordHash: 'demo-only' };\nconsole.log(JSON.stringify(toPublic(stored)));\nconsole.log(update.name, totals.accepted, draft.name.length);",
+    "expectedOutput": [
+      "{\"id\":7,\"name\":\"Rupam\"}",
+      "New name 1 0"
+    ]
+  },
+  {
+    "id": "22-functions",
+    "title": "Promise return types and void callbacks remain runtime JavaScript",
+    "kind": "run",
+    "source": "async function load(): Promise<{ id: number }> {\n  return { id: 7 };\n}\ntype Loaded = Awaited<ReturnType<typeof load>>;\nconst user: Loaded = await load();\nconst callback: () => void = () => 7;\nconsole.log(user.id, callback());",
+    "expectedOutput": [
+      "7 7"
+    ]
+  },
+  {
+    "id": "23-boundary",
+    "title": "Validate unknown input and construct a trusted request object",
+    "kind": "run",
+    "source": "type QuoteInput = { productId: number; quantity: number };\ntype Parsed =\n  | { ok: true; value: QuoteInput }\n  | { ok: false; error: string };\nfunction isRecord(value: unknown): value is Record<string, unknown> {\n  return typeof value === 'object' && value !== null && !Array.isArray(value);\n}\nfunction parseQuote(input: unknown): Parsed {\n  if (!isRecord(input)) return { ok: false, error: 'shape' };\n  if (Object.keys(input).some(key => key !== 'productId' && key !== 'quantity')) {\n    return { ok: false, error: 'fields' };\n  }\n  const productId = input.productId;\n  const quantity = input.quantity;\n  if (typeof productId !== 'number' || !Number.isSafeInteger(productId) || productId < 1) {\n    return { ok: false, error: 'productId' };\n  }\n  if (typeof quantity !== 'number' || !Number.isSafeInteger(quantity) ||\n      quantity < 1 || quantity > 10) {\n    return { ok: false, error: 'quantity' };\n  }\n  return { ok: true, value: { productId, quantity } };\n}\nconst samples: unknown[] = [\n  JSON.parse('{\"productId\":7,\"quantity\":2}'),\n  { productId: 7, quantity: 1 },\n  { productId: 7, quantity: 10 },\n  { productId: '7', quantity: 2 },\n  { productId: 7, quantity: NaN },\n  null, [], {},\n  { productId: 7, quantity: '2' },\n  { productId: 7, quantity: 0 },\n  { productId: 7, quantity: 1.5 },\n  { productId: 7, quantity: 11 },\n  { productId: Number.MAX_SAFE_INTEGER + 1, quantity: 2 },\n  { productId: 7, quantity: 2, tenantId: 'other' }\n];\nfor (const sample of samples) {\n  const result = parseQuote(sample);\n  console.log(result.ok ? JSON.stringify(result.value) : result.error);\n}",
+    "expectedOutput": [
+      "{\"productId\":7,\"quantity\":2}",
+      "{\"productId\":7,\"quantity\":1}",
+      "{\"productId\":7,\"quantity\":10}",
+      "productId",
+      "quantity",
+      "shape",
+      "shape",
+      "productId",
+      "quantity",
+      "quantity",
+      "quantity",
+      "quantity",
+      "productId",
+      "fields"
+    ]
+  },
+  {
+    "id": "24-lying-guard",
+    "title": "A user-written type predicate can lie",
+    "kind": "run",
+    "source": "interface User { name: string }\nfunction isUser(value: unknown): value is User {\n  return true; // Incorrect implementation.\n}\nconst input: unknown = 7;\nif (isUser(input)) {\n  try { console.log(input.name.toUpperCase()); }\n  catch (error: unknown) {\n    console.log(error instanceof Error ? error.name : 'unknown failure');\n  }\n}",
+    "expectedOutput": [
+      "TypeError"
+    ]
+  },
+  {
+    "id": "25-tuple",
+    "title": "Tuples describe positions and as const is compile-time readonly",
+    "kind": "run",
+    "source": "type Coordinate = readonly [latitude: number, longitude: number];\nconst point = [22.57, 88.36] as const;\nfunction describe([latitude, longitude]: Coordinate): string {\n  return latitude + ',' + longitude;\n}\nconsole.log(describe(point), point.length, Object.isFrozen(point));",
+    "expectedOutput": [
+      "22.57,88.36 2 false"
+    ]
+  },
+  {
+    "id": "26-intersection",
+    "title": "Conflicting intersection requirements can produce never",
+    "kind": "reject",
+    "source": "type Impossible = { id: string } & { id: number };\nconst item: Impossible = { id: 7 };",
+    "expectedCodes": [
+      2322
+    ]
+  }
+]

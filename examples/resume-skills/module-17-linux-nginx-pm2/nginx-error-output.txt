@@ -1,0 +1,28 @@
+2026/10/14 15:15:05 [notice] 83#83: using the "epoll" event method
+2026/10/14 15:15:05 [notice] 83#83: nginx/1.22.1
+2026/10/14 15:15:05 [notice] 83#83: OS: Linux 5.15.153.1-microsoft-standard-WSL2
+2026/10/14 15:15:05 [notice] 83#83: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2026/10/14 15:15:05 [notice] 84#84: start worker processes
+2026/10/14 15:15:05 [notice] 84#84: start worker process 85
+2026/10/14 15:15:05 [error] 85#85: *17 client intended to send too large body: 2048 bytes, client: 127.0.0.1, server: localhost, request: "POST /api/echo HTTP/1.1", host: "127.0.0.1:8080"
+2026/10/14 15:15:06 [error] 85#85: *20 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 127.0.0.1, server: localhost, request: "GET /api/slow?ms=1500 HTTP/1.1", upstream: "http://127.0.0.1:9000/slow?ms=1500", host: "127.0.0.1:8080"
+2026/10/14 15:15:07 [info] 85#85: *24 SSL_do_handshake() failed (SSL: error:0A000418:SSL routines::tlsv1 alert unknown ca:SSL alert number 48) while SSL handshaking, client: 127.0.0.1, server: 0.0.0.0:8443
+2026/10/14 15:15:10 [notice] 84#84: signal 1 (SIGHUP) received from 302, reconfiguring
+2026/10/14 15:15:10 [notice] 84#84: reconfiguring
+2026/10/14 15:15:10 [notice] 84#84: using the "epoll" event method
+2026/10/14 15:15:10 [notice] 84#84: start worker processes
+2026/10/14 15:15:10 [notice] 84#84: start worker process 303
+2026/10/14 15:15:10 [notice] 85#85: gracefully shutting down
+2026/10/14 15:15:10 [notice] 85#85: exiting
+2026/10/14 15:15:10 [notice] 85#85: exit
+2026/10/14 15:15:10 [notice] 84#84: signal 17 (SIGCHLD) received from 85
+2026/10/14 15:15:10 [notice] 84#84: worker process 85 exited with code 0
+2026/10/14 15:15:10 [notice] 84#84: signal 29 (SIGIO) received
+2026/10/14 15:15:11 [error] 303#303: *185 connect() failed (111: Connection refused) while connecting to upstream, client: 127.0.0.1, server: localhost, request: "GET /api/echo HTTP/1.1", upstream: "http://127.0.0.1:9000/echo", host: "127.0.0.1:8080"
+2026/10/14 15:15:12 [notice] 84#84: signal 3 (SIGQUIT) received from 397, shutting down
+2026/10/14 15:15:12 [notice] 303#303: gracefully shutting down
+2026/10/14 15:15:12 [notice] 303#303: exiting
+2026/10/14 15:15:12 [notice] 303#303: exit
+2026/10/14 15:15:12 [notice] 84#84: signal 17 (SIGCHLD) received from 303
+2026/10/14 15:15:12 [notice] 84#84: worker process 303 exited with code 0
+2026/10/14 15:15:12 [notice] 84#84: exit

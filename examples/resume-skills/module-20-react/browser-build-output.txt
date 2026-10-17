@@ -1,0 +1,13 @@
+
+> placement-m20-react-fixture@1.0.0 build
+> node build.mjs
+
+
+
+  dist\app.development.js  1.2mb ⚠️
+
+⚡ Done in 348ms
+
+  dist\app.production.js  229.3kb
+
+⚡ Done in 181ms

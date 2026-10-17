@@ -1,0 +1,205 @@
+{
+  "module": 19,
+  "title": "Git, CI/CD, Testing, Observability and Performance",
+  "verified_date": "2026-10-14",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "node": "v22.14.0",
+  "git": "git version 2.55.0.windows.5",
+  "pyyaml": "6.0.2",
+  "dependencies": {
+    "@opentelemetry/api": "1.9.1",
+    "@opentelemetry/core": "2.12.0",
+    "@opentelemetry/sdk-trace-base": "2.12.0",
+    "@opentelemetry/sdk-trace-node": "2.12.0"
+  },
+  "checks": {
+    "counts": {
+      "contracts": 3,
+      "git": 15,
+      "http": 4,
+      "load": 5,
+      "logs": 2,
+      "metrics": 4,
+      "pipeline": 9,
+      "statistics": 8,
+      "tracing": 7,
+      "workflow": 5
+    },
+    "total": 62,
+    "all_passed": true
+  },
+  "cleanup": {
+    "loopback_ports_closed": {
+      "51670": true,
+      "51671": true,
+      "50463": true,
+      "50462": true,
+      "50468": true,
+      "50467": true,
+      "50471": true,
+      "50470": true
+    },
+    "scratch_repositories_releases_and_directory_removed": true,
+    "main_repository_head_unchanged": true,
+    "remote_github_actions_run": false,
+    "external_deployment_performed": false,
+    "docker_started": false
+  },
+  "content": {
+    "chapter": "resume-skills-handbook-part-21-module-19-git-ci-cd-testing-observability-performance.md",
+    "words": 9820,
+    "lines": 1225,
+    "questions": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30
+    ],
+    "practice_tasks": 10,
+    "unchecked_learning_items": 12,
+    "source_fidelity": {
+      "telemetry.mjs": true,
+      "app.mjs": true,
+      "contract.test.mjs": true,
+      "statistics.mjs": true,
+      "load.mjs": true,
+      "release.py": true,
+      "ci.example.yml": true
+    },
+    "counts": {
+      "contracts": 3,
+      "git": 15,
+      "http": 4,
+      "load": 5,
+      "logs": 2,
+      "metrics": 4,
+      "pipeline": 9,
+      "statistics": 8,
+      "tracing": 7,
+      "workflow": 5
+    },
+    "total": 62,
+    "embedded_observations": [
+      "VERSIONS",
+      "STAGING",
+      "REBASE",
+      "FETCH",
+      "PIPELINE",
+      "LOG",
+      "METRICS",
+      "LOAD",
+      "SLO"
+    ],
+    "retained_artifact_digest_matches": true,
+    "artifact_sources_match_current": true,
+    "result_fidelity": {
+      "versions": true,
+      "staging": true,
+      "rebase": true,
+      "fetch": true,
+      "pipeline": true,
+      "log": true,
+      "metrics": true,
+      "load": true,
+      "slo": true
+    }
+  },
+  "website": {
+    "build_passed": true,
+    "static_pages": 95,
+    "routes_checked": 23,
+    "all_routes_200": true,
+    "assertions": {
+      "title": true,
+      "q30": true,
+      "implementation": true,
+      "totalChecks": true,
+      "releaseEvidence": true,
+      "loadEvidence": true,
+      "architecture": true,
+      "nextReact": true,
+      "hostedBoundary": true,
+      "capacityBoundary": true,
+      "group": true,
+      "roadmapLink": true,
+      "previousLink": true
+    },
+    "search": {
+      "status": 200,
+      "results": 32,
+      "chapterIndexed": true,
+      "scoped": true
+    },
+    "temporary_server_closed": true,
+    "cached_font_fixture_used": true
+  },
+  "ports_stopped": {
+    "3000": true,
+    "54531": true,
+    "51670": true,
+    "51671": true,
+    "50463": true,
+    "50462": true,
+    "50468": true,
+    "50467": true,
+    "50471": true,
+    "50470": true
+  },
+  "git_diff_check_passed": true,
+  "trailing_whitespace_files": [],
+  "core_handbooks": [
+    {
+      "subject": "DSA Notes",
+      "files": 17,
+      "lines": 17589
+    },
+    {
+      "subject": "OOP Notes",
+      "files": 13,
+      "lines": 8806
+    },
+    {
+      "subject": "OS Notes",
+      "files": 13,
+      "lines": 6341
+    },
+    {
+      "subject": "DBMS Notes",
+      "files": 13,
+      "lines": 9613
+    },
+    {
+      "subject": "CN Notes",
+      "files": 13,
+      "lines": 9322
+    }
+  ],
+  "next_module": "M20: React Fundamentals",
+  "scope": "Disposable local Git repositories/remotes; actual local source-bundle gates and candidate HTTP; official in-memory OpenTelemetry traces, custom metrics/logs and short same-process closed-model load runs. No hosted Actions, production release or capacity benchmark."
+}

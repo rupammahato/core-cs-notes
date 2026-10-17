@@ -1,0 +1,20 @@
+module.exports = {
+  apps: [{
+    name: 'm17-api',
+    script: '/opt/fixture/app.cjs',
+    cwd: '/opt/fixture',
+    instances: 2,
+    exec_mode: 'cluster',
+    wait_ready: true,
+    listen_timeout: 5000,
+    kill_timeout: 5000,
+    min_uptime: 1000,
+    max_restarts: 5,
+    restart_delay: 200,
+    watch: false,
+    merge_logs: true,
+    out_file: '/run/m17/logs/api-out.log',
+    error_file: '/run/m17/logs/api-error.log',
+    env: { NODE_ENV: 'production', PORT: '9000' },
+  }],
+};

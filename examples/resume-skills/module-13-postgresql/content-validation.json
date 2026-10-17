@@ -1,0 +1,58 @@
+{
+  "chapter": "resume-skills-handbook-part-15-module-13-postgresql-backend.md",
+  "words": 11166,
+  "lines": 1159,
+  "questions": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30
+  ],
+  "practiceTasks": 10,
+  "exitChecklistUnchecked": 12,
+  "sourceFidelity": {
+    "schema.sql": true,
+    "db.py": true,
+    "reservation.py": true,
+    "retry.py": true,
+    "verify_plans.py": true
+  },
+  "counts": {
+    "core": 19,
+    "concurrency": 14,
+    "pool": 8,
+    "plans": 7,
+    "service": 12
+  },
+  "total": 60,
+  "recordedJsonFidelity": {
+    "service": true,
+    "plans": true
+  }
+}

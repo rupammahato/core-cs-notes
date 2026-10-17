@@ -1,0 +1,61 @@
+{
+  "node": "v22.14.0",
+  "passed": 6,
+  "sqlite": "3.47.2",
+  "api": "node:sqlite (experimental on recorded runtime)",
+  "checks": [
+    {
+      "name": "composite identity distinguishes same ID across tenants",
+      "passed": true,
+      "observed": {
+        "alpha1": "Alpha private",
+        "beta1": "Beta shared"
+      }
+    },
+    {
+      "name": "unsafe concatenation leaks rows in isolated training database",
+      "passed": true,
+      "observed": {
+        "rows": 4,
+        "includesOtherTenant": true
+      }
+    },
+    {
+      "name": "bound value remains data rather than injected SQL",
+      "passed": true,
+      "observed": {
+        "rows": 0
+      }
+    },
+    {
+      "name": "parameterization alone does not add tenant authorization",
+      "passed": true,
+      "observed": {
+        "rows": 2,
+        "distinctTenants": [
+          "alpha",
+          "beta"
+        ]
+      }
+    },
+    {
+      "name": "composite foreign key rejects cross-tenant parent",
+      "passed": true,
+      "observed": {
+        "rejected": true,
+        "rowsRemain": 4
+      }
+    },
+    {
+      "name": "allowed sort mapping rejects identifier injection",
+      "passed": true,
+      "observed": {
+        "rejectedSort": true,
+        "allowedSortIds": [
+          1,
+          2
+        ]
+      }
+    }
+  ]
+}

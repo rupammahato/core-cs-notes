@@ -1,0 +1,14 @@
+{
+  "sourceBlocks": 32,
+  "verifiedSnippetSources": 30,
+  "fixtureAndServiceSources": 2,
+  "capturedOutputs": 30,
+  "interviewQuestions": 30,
+  "practiceTasks": 10,
+  "checks": {
+    "language": 24,
+    "concurrency": 6,
+    "domain": 14
+  },
+  "total": 44
+}

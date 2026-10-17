@@ -1,0 +1,118 @@
+{
+  "node": "v22.14.0",
+  "mode": "Per-case: module or commonjs",
+  "cases": [
+    {
+      "id": "01-order",
+      "title": "next advances the stack but does not return from the caller",
+      "mode": "module",
+      "source": "import { requestApp } from './http-helper.mjs';\nconst trace = [];\nconst result = await requestApp(app => {\n  app.use((req, res, next) => {\n    trace.push('before');\n    next();\n    trace.push('after');\n  });\n  app.get('/', (req, res) => { trace.push('route'); res.json({ ok: true }); });\n});\nconsole.log(result.status, trace.join(','));",
+      "output": "200 before,route,after"
+    },
+    {
+      "id": "02-end",
+      "title": "A response without next stops ordinary stack traversal",
+      "mode": "module",
+      "source": "import { requestApp } from './http-helper.mjs';\nlet reached = false;\nconst result = await requestApp(app => {\n  app.use((req, res) => res.status(403).json({ error: 'blocked' }));\n  app.get('/', (req, res) => { reached = true; res.json({ ok: true }); });\n});\nconsole.log(result.status, reached, result.body.error);",
+      "output": "403 false blocked"
+    },
+    {
+      "id": "03-next-route",
+      "title": "next route skips the remaining callbacks of this route",
+      "mode": "module",
+      "source": "import { requestApp } from './http-helper.mjs';\nconst result = await requestApp(app => {\n  app.get('/choice', (req, res, next) => next('route'),\n    (req, res) => res.send('unreachable'));\n  app.get('/choice', (req, res) => res.send('fallback'));\n}, '/choice');\nconsole.log(result.status, result.body);",
+      "output": "200 fallback"
+    },
+    {
+      "id": "04-error-mode",
+      "title": "next error skips ordinary middleware and reaches an error handler",
+      "mode": "module",
+      "source": "import { requestApp } from './http-helper.mjs';\nconst trace = [];\nconst result = await requestApp(app => {\n  app.use((req, res, next) => next(new Error('failed')));\n  app.use((req, res) => { trace.push('ordinary'); res.send('wrong'); });\n  app.use((error, req, res, next) => {\n    trace.push('error');\n    res.status(503).json({ message: error.message });\n  });\n});\nconsole.log(result.status, trace.join(','), result.body.message);",
+      "output": "503 error failed"
+    },
+    {
+      "id": "05-mounted-path",
+      "title": "Mounted routers expose distinct URL views",
+      "mode": "module",
+      "source": "import express from 'express';\nimport { requestApp } from './http-helper.mjs';\nconst result = await requestApp(app => {\n  const router = express.Router();\n  router.get('/items/:id', (req, res) => res.json({\n    id: req.params.id, q: req.query.q,\n    baseUrl: req.baseUrl, url: req.url, originalUrl: req.originalUrl\n  }));\n  app.use('/api', router);\n}, '/api/items/7?q=blue');\nconsole.log(JSON.stringify(result.body));",
+      "output": "{\"id\":\"7\",\"q\":\"blue\",\"baseUrl\":\"/api\",\"url\":\"/items/7?q=blue\",\"originalUrl\":\"/api/items/7?q=blue\"}"
+    },
+    {
+      "id": "06-query",
+      "title": "Repeated query keys need a deliberate input policy",
+      "mode": "module",
+      "source": "import { requestApp } from './http-helper.mjs';\nconst result = await requestApp(app => {\n  app.set('query parser', 'simple');\n  app.get('/', (req, res) => res.json(req.query));\n}, '/?q=a&q=b&a%5Bb%5D=1');\nconsole.log(Array.isArray(result.body.q), result.body.q.length,\n  typeof result.body.q === 'string', result.body['a[b]']);",
+      "output": "true 2 false 1"
+    },
+    {
+      "id": "07-parser-order",
+      "title": "A parser registered after a completed route cannot populate that route's body",
+      "mode": "module",
+      "source": "import express from 'express';\nimport { requestApp } from './http-helper.mjs';\nconst options = { method: 'POST', headers: { 'content-type': 'application/json' },\n  body: '{\"name\":\"Ada\"}' };\nconst before = await requestApp(app => {\n  app.post('/', (req, res) => res.json({ type: typeof req.body }));\n  app.use(express.json());\n}, '/', options);\nconst after = await requestApp(app => {\n  app.use(express.json());\n  app.post('/', (req, res) => res.json({ name: req.body.name }));\n}, '/', options);\nconsole.log(before.body.type, after.body.name);",
+      "output": "undefined Ada"
+    },
+    {
+      "id": "08-parser-not-validator",
+      "title": "JSON parsing accepts shapes and values the application may reject",
+      "mode": "module",
+      "source": "import express from 'express';\nimport { requestApp } from './http-helper.mjs';\nfunction configure(app) {\n  app.use(express.json());\n  app.post('/', (req, res) => res.json({\n    array: Array.isArray(req.body), quantityType: typeof req.body.quantity\n  }));\n}\nconst array = await requestApp(configure, '/', { method: 'POST',\n  headers: { 'content-type': 'application/json' }, body: '[]' });\nconst string = await requestApp(configure, '/', { method: 'POST',\n  headers: { 'content-type': 'application/json' }, body: '{\"quantity\":\"2\"}' });\nconsole.log(array.status, array.body.array);\nconsole.log(string.status, string.body.quantityType);",
+      "output": "200 true\n200 string"
+    },
+    {
+      "id": "09-async-five",
+      "title": "Express 5 forwards a returned async-handler rejection",
+      "mode": "module",
+      "source": "import { requestApp } from './http-helper.mjs';\nconst result = await requestApp(app => {\n  app.get('/', async (req, res) => {\n    await Promise.resolve();\n    throw new Error('async failure');\n  });\n  app.use((error, req, res, next) => res.status(500).json({ message: error.message }));\n});\nconsole.log(result.status, result.body.message);",
+      "output": "500 async failure"
+    },
+    {
+      "id": "10-callback-error",
+      "title": "A later callback must explicitly forward its error",
+      "mode": "module",
+      "source": "import { requestApp } from './http-helper.mjs';\nconst result = await requestApp(app => {\n  app.get('/', (req, res, next) => {\n    setImmediate(() => {\n      try { throw new Error('callback failure'); }\n      catch (error) { next(error); }\n    });\n  });\n  app.use((error, req, res, next) => res.status(500).json({ message: error.message }));\n});\nconsole.log(result.status, result.body.message);",
+      "output": "500 callback failure"
+    },
+    {
+      "id": "11-head-and-notfound",
+      "title": "HEAD can use GET; a missing route is not an error-handler event",
+      "mode": "module",
+      "source": "import { requestApp } from './http-helper.mjs';\nlet errorCalls = 0;\nfunction configure(app) {\n  app.get('/hello', (req, res) => res.json({ ok: true }));\n  app.use((error, req, res, next) => { errorCalls++; res.status(500).send('error'); });\n}\nconst head = await requestApp(configure, '/hello', { method: 'HEAD' });\nconst missing = await requestApp(configure, '/missing');\nconsole.log('HEAD', head.status, head.text.length, Number(head.headers['content-length']) > 0);\nconsole.log('missing', missing.status, 'error calls', errorCalls);",
+      "output": "HEAD 200 0 true\nmissing 404 error calls 0"
+    },
+    {
+      "id": "12-path-five",
+      "title": "Express 5 string paths use named wildcards and braces",
+      "mode": "module",
+      "source": "import express from 'express';\nimport { requestApp } from './http-helper.mjs';\ntry { express().get('*', (req, res) => res.end()); }\ncatch (error) { console.log('bare wildcard rejected', error instanceof TypeError); }\nfunction wildcard(app) {\n  app.get('/{*splat}', (req, res) => res.json({ parts: req.params.splat ?? [] }));\n}\nconsole.log(JSON.stringify((await requestApp(wildcard, '/a/b')).body));\nconsole.log(JSON.stringify((await requestApp(wildcard, '/')).body));\nfunction optional(app) {\n  app.get('/docs{/:page}', (req, res) => res.json({ page: req.params.page ?? 'index' }));\n}\nconsole.log((await requestApp(optional, '/docs')).body.page,\n  (await requestApp(optional, '/docs/intro')).body.page);",
+      "output": "bare wildcard rejected true\n{\"parts\":[\"a\",\"b\"]}\n{\"parts\":[]}\nindex intro"
+    },
+    {
+      "id": "13-merge-params",
+      "title": "Nested router parameters require an explicit inheritance choice",
+      "mode": "module",
+      "source": "import express from 'express';\nimport { requestApp } from './http-helper.mjs';\nfunction configure(mergeParams) {\n  return app => {\n    const router = express.Router({ mergeParams });\n    router.get('/items/:itemId', (req, res) => res.json(req.params));\n    app.use('/orgs/:orgId', router);\n  };\n}\nconsole.log('default', JSON.stringify((await requestApp(configure(false), '/orgs/7/items/9')).body));\nconsole.log('merged', JSON.stringify((await requestApp(configure(true), '/orgs/7/items/9')).body));",
+      "output": "default {\"itemId\":\"9\"}\nmerged {\"orgId\":\"7\",\"itemId\":\"9\"}"
+    },
+    {
+      "id": "14-next-not-await",
+      "title": "next is not an asynchronous join",
+      "mode": "module",
+      "source": "import { requestApp } from './http-helper.mjs';\nconst trace = [];\nconst result = await requestApp(app => {\n  app.use((req, res, next) => {\n    trace.push('outer-before');\n    const returned = next();\n    trace.push('outer-after');\n    console.log('next returned', typeof returned);\n  });\n  app.get('/', async (req, res) => {\n    trace.push('route-before');\n    await Promise.resolve();\n    trace.push('route-after');\n    res.json({ ok: true });\n  });\n});\nconsole.log(result.status, trace.join(','));",
+      "output": "next returned undefined\n200 outer-before,route-before,outer-after,route-after"
+    },
+    {
+      "id": "15-raw-body",
+      "title": "Raw parsing preserves bytes; prior JSON parsing does not restore them",
+      "mode": "module",
+      "source": "import express from 'express';\nimport { requestApp } from './http-helper.mjs';\nconst body = ' { \"a\": 1 } ';\nconst options = { method: 'POST', headers: { 'content-type': 'application/json' }, body };\nconst raw = await requestApp(app => {\n  app.post('/', express.raw({ type: 'application/json' }), (req, res) =>\n    res.json({ buffer: Buffer.isBuffer(req.body), exact: req.body.toString('utf8') === body }));\n}, '/', options);\nconst parsed = await requestApp(app => {\n  app.use(express.json());\n  app.post('/', express.raw({ type: 'application/json' }), (req, res) =>\n    res.json({ buffer: Buffer.isBuffer(req.body), exact: JSON.stringify(req.body) === body }));\n}, '/', options);\nconsole.log('raw', raw.body.buffer, raw.body.exact);\nconsole.log('after JSON', parsed.body.buffer, parsed.body.exact);",
+      "output": "raw true true\nafter JSON false false"
+    },
+    {
+      "id": "16-api",
+      "title": "The layered API passes its HTTP and boundary checks",
+      "mode": "module",
+      "source": "await import('./verify-api.mjs');",
+      "output": "PASS API health\nPASS API product-projection\nPASS API implicit-head\nPASS API authoritative-quote\nPASS API quote-does-not-reserve\nPASS API zero-path-id\nPASS API partial-path-id\nPASS API unsafe-path-id\nPASS API missing-product\nPASS API wrong-media-type\nPASS API missing-media-type\nPASS API empty-json-body\nPASS API malformed-json\nPASS API array-body\nPASS API primitive-json-policy\nPASS API missing-fields\nPASS API string-product-id\nPASS API string-quantity\nPASS API zero-quantity\nPASS API fractional-quantity\nPASS API policy-limit\nPASS API caller-price-rejected\nPASS API caller-tenant-rejected\nPASS API insufficient-stock\nPASS API zero-stock\nPASS API valid-upper-bound-stock-conflict\nPASS API quote-missing-product\nPASS API json-byte-limit\nPASS API compressed-body-policy\nPASS API unknown-route-not-parsed\nPASS API quote-method-allow\nPASS API product-method-allow\nPASS API malformed-path-encoding\nPASS API middleware-success-and-failure-traces\nTRACE quote: request > router > media-type > parsed > validate-body > controller > service > repository\nTRACE malformed: request > router > media-type > error\nPASS API async-repository-failure-hidden\nPASS API request-failure-does-not-kill-app\nPASS API health-progresses-during-async-work\nPASS API request-locals-stay-independent\nPASS API listeners-closed\nVerified 39 Express API checks"
+    }
+  ]
+}

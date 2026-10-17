@@ -1,0 +1,15 @@
+{
+  "completeSources": 4,
+  "verifiedRuntimeExcerpt": 1,
+  "interviewQuestions": 30,
+  "practiceTasks": 10,
+  "recordedObservationBlocks": 7,
+  "totalChecks": 80,
+  "groups": {
+    "protocols": 2,
+    "validation": 10,
+    "http": 52,
+    "runtime": 16
+  },
+  "verifiedObservationBlocks": 7
+}

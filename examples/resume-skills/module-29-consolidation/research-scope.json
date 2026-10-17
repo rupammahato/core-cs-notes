@@ -1,0 +1,14 @@
+{
+  "checked_date": "2026-10-16",
+  "primary_references": [
+    "https://nodejs.org/download/release/v22.14.0/docs/api/process.html#when-to-use-queuemicrotask-vs-processnexttick",
+    "https://www.typescriptlang.org/docs/handbook/2/narrowing.html",
+    "https://www.sqlite.org/lang_aggfunc.html",
+    "https://www.sqlite.org/lang_createtable.html",
+    "https://fastapi.tiangolo.com/async/",
+    "https://react.dev/learn/state-as-a-snapshot",
+    "https://nextjs.org/docs/14/app/building-your-application/rendering/server-components",
+    "https://docs.cloud.google.com/tasks/docs/common-pitfalls"
+  ],
+  "scope": "Consolidates mechanisms from M0-M28, with fresh isolated language/SQLite output drills. Prompts and schedules are editorial recommendations, not measured company frequencies or evaluated learner mastery. Next.js 14 project context is separate from the site's installed Next.js 16. Earlier fixtures/original project claims retain their own evidence boundaries."
+}

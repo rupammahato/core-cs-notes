@@ -1,0 +1,709 @@
+{
+  "runtime": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "libpq_version": 180003,
+  "packages": {
+    "psycopg": "3.3.4",
+    "psycopg-binary": "3.3.4",
+    "psycopg-pool": "3.3.1",
+    "typing_extensions": "4.16.0",
+    "tzdata": "2026.4"
+  },
+  "server_version": "18.4",
+  "cluster": {
+    "existing_service_touched": false,
+    "port": 53978,
+    "server_version": "18.4",
+    "isolated_data_directory_verified": true,
+    "initdb_stdout": "The files belonging to this database system will be owned by user \"CodexSandboxOffline\".\nThis user must also own the server process.\n\nThe database cluster will be initialized with locale \"C\".\nThe default text search configuration will be set to \"english\".\n\nData page checksums are enabled.\n\ncreating directory C:/Users/Win11/AppData/Local/Temp/placement-m13-fqu7ibhr/data ... ok\ncreating subdirectories ... ok\nselecting dynamic shared memory implementation ... windows\nselecting default \"max_connections\" ... 100\nselecting default \"shared_buffers\" ... 128MB\nselecting default time zone ... Asia/Calcutta\ncreating configuration files ... ok\nrunning bootstrap script ... ok\nperforming post-bootstrap initialization ... ok\nsyncing data to disk ... ok\n\nSuccess. You can now start the database server using:\n\n    ^\"C^:^\\Program^ Files^\\PostgreSQL^\\18^\\bin^\\pg^_ctl^\" -D ^\"C^:^\\Users^\\Win11^\\AppData^\\Local^\\Temp^\\placement^-m13^-fqu7ibhr^\\data^\" -l logfile start\n\n",
+    "host_authentication": "scram-sha-256",
+    "tls": "disabled for loopback fixture",
+    "stop_stdout": "waiting for server to shut down...... done\nserver stopped\n",
+    "server_log": "2026-10-14 12:46:52.243 IST [17732] LOG:  starting PostgreSQL 18.4 on x86_64-windows, compiled by msvc-19.44.35226, 64-bit\n2026-10-14 12:46:52.243 IST [17732] LOG:  listening on IPv4 address \"127.0.0.1\", port 53978\n2026-10-14 12:46:52.296 IST [32584] LOG:  database system was shut down at 2026-10-14 12:46:49 IST\n2026-10-14 12:46:52.310 IST [17732] LOG:  database system is ready to accept connections\n2026-10-14 12:46:53.689 IST [32212] ERROR:  new row for relation \"products\" violates check constraint \"products_available_check\"\n2026-10-14 12:46:53.689 IST [32212] DETAIL:  Failing row contains (1, basic, -1, 12500, INR).\n2026-10-14 12:46:53.689 IST [32212] STATEMENT:  UPDATE lesson.products SET available=-1 WHERE tenant_id=1 AND sku='basic'\n2026-10-14 12:46:53.689 IST [32212] ERROR:  duplicate key value violates unique constraint \"products_pkey\"\n2026-10-14 12:46:53.689 IST [32212] DETAIL:  Key (tenant_id, sku)=(1, basic) already exists.\n2026-10-14 12:46:53.689 IST [32212] STATEMENT:  INSERT INTO lesson.products VALUES (1,'basic',1,1,'INR')\n2026-10-14 12:46:53.690 IST [32212] ERROR:  null value in column \"sku\" of relation \"products\" violates not-null constraint\n2026-10-14 12:46:53.690 IST [32212] DETAIL:  Failing row contains (1, null, 1, 1, INR).\n2026-10-14 12:46:53.690 IST [32212] STATEMENT:  INSERT INTO lesson.products VALUES (1,NULL,1,1,'INR')\n2026-10-14 12:46:53.692 IST [32212] ERROR:  insert or update on table \"reservations\" violates foreign key constraint \"reservation_product_fk\"\n2026-10-14 12:46:53.692 IST [32212] DETAIL:  Key (tenant_id, sku)=(1, beta-only) is not present in table \"products\".\n2026-10-14 12:46:53.692 IST [32212] STATEMENT:  INSERT INTO lesson.reservations(id,tenant_id,request_key,sku,quantity,status) VALUES ($1,1,'foreign','beta-only',1,'pending')\n2026-10-14 12:46:53.692 IST [32212] ERROR:  permission denied for schema lesson at character 14\n2026-10-14 12:46:53.692 IST [32212] STATEMENT:  CREATE TABLE lesson.not_allowed(id int)\n2026-10-14 12:46:53.704 IST [32212] ERROR:  duplicate key value violates unique constraint \"products_pkey\"\n2026-10-14 12:46:53.704 IST [32212] DETAIL:  Key (tenant_id, sku)=(1, basic) already exists.\n2026-10-14 12:46:53.704 IST [32212] STATEMENT:  INSERT INTO lesson.products VALUES (1,'basic',1,1,'INR')\n2026-10-14 12:46:53.732 IST [34064] ERROR:  duplicate key value violates unique constraint \"products_pkey\"\n2026-10-14 12:46:53.732 IST [34064] DETAIL:  Key (tenant_id, sku)=(1, basic) already exists.\n2026-10-14 12:46:53.732 IST [34064] STATEMENT:  INSERT INTO lesson.products VALUES (1,'basic',1,1,'INR')\n2026-10-14 12:46:53.732 IST [34064] ERROR:  current transaction is aborted, commands ignored until end of transaction block\n2026-10-14 12:46:53.732 IST [34064] STATEMENT:  SELECT 1\n2026-10-14 12:46:53.760 IST [8548] FATAL:  password authentication failed for user \"m13_app\"\n2026-10-14 12:46:53.760 IST [8548] DETAIL:  Connection matched file \"C:/Users/Win11/AppData/Local/Temp/placement-m13-fqu7ibhr/data/pg_hba.conf\" line 119: \"host    all             all             127.0.0.1/32            scram-sha-256\"\n2026-10-14 12:46:55.092 IST [22376] ERROR:  could not obtain lock on row in relation \"accounts\"\n2026-10-14 12:46:55.092 IST [22376] STATEMENT:  SELECT id FROM lesson.accounts WHERE id=1 FOR UPDATE NOWAIT\n2026-10-14 12:46:55.304 IST [32920] ERROR:  canceling statement due to lock timeout\n2026-10-14 12:46:55.304 IST [32920] CONTEXT:  while updating tuple (0,12) in relation \"accounts\"\n2026-10-14 12:46:55.304 IST [32920] STATEMENT:  UPDATE lesson.accounts SET balance=balance+1 WHERE id=1\n2026-10-14 12:46:55.397 IST [27568] ERROR:  canceling statement due to statement timeout\n2026-10-14 12:46:55.397 IST [27568] STATEMENT:  SELECT pg_sleep(5)\n2026-10-14 12:46:56.013 IST [30664] ERROR:  could not serialize access due to read/write dependencies among transactions\n2026-10-14 12:46:56.013 IST [30664] DETAIL:  Reason code: Canceled on identification as a pivot, during write.\n2026-10-14 12:46:56.013 IST [30664] HINT:  The transaction might succeed if retried.\n2026-10-14 12:46:56.013 IST [30664] STATEMENT:  UPDATE lesson.doctors SET on_call=false WHERE id=1\n2026-10-14 12:46:56.486 IST [23160] ERROR:  deadlock detected\n2026-10-14 12:46:56.486 IST [23160] DETAIL:  Process 23160 waits for ShareLock on transaction 799; blocked by process 19504.\n\tProcess 19504 waits for ShareLock on transaction 798; blocked by process 23160.\n\tProcess 23160: UPDATE lesson.accounts SET balance=balance+1 WHERE id=2\n\tProcess 19504: UPDATE lesson.accounts SET balance=balance+1 WHERE id=1\n2026-10-14 12:46:56.486 IST [23160] HINT:  See server log for query details.\n2026-10-14 12:46:56.486 IST [23160] CONTEXT:  while updating tuple (0,24) in relation \"accounts\"\n2026-10-14 12:46:56.486 IST [23160] STATEMENT:  UPDATE lesson.accounts SET balance=balance+1 WHERE id=2\n2026-10-14 12:46:59.769 IST [28444] ERROR:  CREATE INDEX CONCURRENTLY cannot run inside a transaction block\n2026-10-14 12:46:59.769 IST [28444] STATEMENT:  CREATE INDEX CONCURRENTLY not_created ON lesson.events(status)\n2026-10-14 12:47:01.232 IST [32740] ERROR:  insert or update on table \"reservations\" violates foreign key constraint \"reservation_product_fk\"\n2026-10-14 12:47:01.232 IST [32740] DETAIL:  Key (tenant_id, sku)=(1, beta-only) is not present in table \"products\".\n2026-10-14 12:47:01.232 IST [32740] STATEMENT:  \n\tINSERT INTO lesson.reservations (id, tenant_id, request_key, sku, quantity, status)\n\tVALUES ($1,$2,$3,$4,$5,'pending')\n\tON CONFLICT ON CONSTRAINT reservation_request_unique DO NOTHING\n\tRETURNING id\n\t\n2026-10-14 12:47:02.130 IST [17732] LOG:  received fast shutdown request\n2026-10-14 12:47:02.132 IST [17732] LOG:  aborting any active transactions\n2026-10-14 12:47:02.137 IST [17732] LOG:  background worker \"logical replication launcher\" (PID 6292) exited with exit code 1\n2026-10-14 12:47:02.903 IST [30940] LOG:  shutting down\n2026-10-14 12:47:03.028 IST [30940] LOG:  checkpoint starting: shutdown immediate\n2026-10-14 12:47:04.527 IST [30940] LOG:  checkpoint complete: wrote 2686 buffers (65.6%), wrote 4 SLRU buffers; 0 WAL file(s) added, 0 removed, 3 recycled; write=0.209 s, sync=1.270 s, total=1.624 s; sync files=1690, longest=0.020 s, average=0.001 s; distance=44255 kB, estimate=44255 kB; lsn=0/4329338, redo lsn=0/4329338\n2026-10-14 12:47:05.002 IST [17732] LOG:  database system is shut down\n",
+    "listener_stopped": true,
+    "temporary_cluster_removed": true
+  },
+  "counts": {
+    "core": 19,
+    "concurrency": 14,
+    "pool": 8,
+    "plans": 7,
+    "service": 12
+  },
+  "total": 60,
+  "groups": [
+    {
+      "group": "core",
+      "total": 19,
+      "checks": [
+        {
+          "name": "application role is non-superuser and server configuration is recorded",
+          "passed": true
+        },
+        {
+          "name": "adversarial text is bound as a value without executing SQL",
+          "passed": true
+        },
+        {
+          "name": "Identifier composition selects a column while a bound value stays literal",
+          "passed": true
+        },
+        {
+          "name": "numeric timestamptz and jsonb round-trip through real type adapters",
+          "passed": true
+        },
+        {
+          "name": "jsonb containment executes on PostgreSQL",
+          "passed": true
+        },
+        {
+          "name": "ordinary UNIQUE permits multiple null values by default",
+          "passed": true
+        },
+        {
+          "name": "check constraint rejects negative stock",
+          "passed": true
+        },
+        {
+          "name": "unique constraint rejects duplicate tenant SKU",
+          "passed": true
+        },
+        {
+          "name": "not-null constraint rejects null SKU",
+          "passed": true
+        },
+        {
+          "name": "composite foreign key rejects a product from another tenant",
+          "passed": true
+        },
+        {
+          "name": "application role cannot create tables in migration-owned schema",
+          "passed": true
+        },
+        {
+          "name": "table grants do not replace application tenant predicates",
+          "passed": true
+        },
+        {
+          "name": "foreign key does not automatically add a referencing SKU index",
+          "passed": true
+        },
+        {
+          "name": "ON CONFLICT updates the specified conflict target and RETURNING reports value",
+          "passed": true
+        },
+        {
+          "name": "identity sequence allocation is not rolled back",
+          "passed": true
+        },
+        {
+          "name": "savepoint rollback permits the outer transaction to continue",
+          "passed": true
+        },
+        {
+          "name": "implicit SELECT transaction and failed state require deliberate rollback",
+          "passed": true
+        },
+        {
+          "name": "SCRAM host authentication rejects incorrect fixture password",
+          "passed": true
+        },
+        {
+          "name": "ordinary CREATE TABLE rolls back with its transaction",
+          "passed": true
+        }
+      ],
+      "observations": {
+        "server": {
+          "server_version": "18.4",
+          "default_transaction_isolation": "read committed",
+          "fsync": "on",
+          "synchronous_commit": "on",
+          "ssl": "off"
+        },
+        "typed_values": {
+          "amount": "125.50",
+          "timestamp": "2026-10-14T06:30:00+00:00",
+          "metadata": {
+            "tags": [
+              "api"
+            ],
+            "tenant": "alpha"
+          }
+        },
+        "role_is_not_tenant_filter": true,
+        "reservation_indexes": [
+          "CREATE UNIQUE INDEX reservations_pkey ON lesson.reservations USING btree (id)",
+          "CREATE UNIQUE INDEX reservation_request_unique ON lesson.reservations USING btree (tenant_id, request_key)"
+        ],
+        "sequence_gap": {
+          "rolled_back_id": 1,
+          "next_id": 2
+        }
+      }
+    },
+    {
+      "group": "concurrency",
+      "total": 14,
+      "checks": [
+        {
+          "name": "ordinary SELECT does not read another transaction uncommitted write",
+          "passed": true
+        },
+        {
+          "name": "Read Committed successive statements see a newly committed value",
+          "passed": true
+        },
+        {
+          "name": "Repeatable Read keeps the transaction snapshot across statements",
+          "passed": true
+        },
+        {
+          "name": "FOR UPDATE really blocks a competing writer until transaction release",
+          "passed": true
+        },
+        {
+          "name": "NOWAIT rejects a held row lock with its SQLSTATE",
+          "passed": true
+        },
+        {
+          "name": "SKIP LOCKED chooses another available job row",
+          "passed": true
+        },
+        {
+          "name": "lock_timeout bounds waiting for a held row lock",
+          "passed": true
+        },
+        {
+          "name": "statement_timeout cancels a long statement and autocommit session recovers",
+          "passed": true
+        },
+        {
+          "name": "two overlapping Read Committed transactions can lose a stale absolute update",
+          "passed": true
+        },
+        {
+          "name": "SQL relative updates preserve both fixture decrements",
+          "passed": true
+        },
+        {
+          "name": "conditional predicate rejects a stale compare-and-set writer",
+          "passed": true
+        },
+        {
+          "name": "Repeatable Read permits the disjoint-row write-skew fixture",
+          "passed": true
+        },
+        {
+          "name": "Serializable failure retries the whole transaction and rechecks the invariant",
+          "passed": true
+        },
+        {
+          "name": "opposite lock ordering causes a real deadlock and one transaction abort",
+          "passed": true
+        }
+      ],
+      "observations": {
+        "read_committed": [
+          100,
+          200
+        ],
+        "repeatable_read": [
+          100,
+          100
+        ],
+        "row_lock": {
+          "wait_observed": true,
+          "plain_read_during_wait": 100,
+          "after_release": 101
+        },
+        "nowait_sqlstate": "55P03",
+        "skip_locked": {
+          "locked_id": 1,
+          "selected_id": 2
+        },
+        "stale_absolute_writes": {
+          "read_values": [
+            100,
+            100
+          ],
+          "final": 80
+        },
+        "relative_updates_final": 70,
+        "repeatable_read_write_skew_remaining": 0,
+        "serializable_retry": {
+          "attempts": 2,
+          "remaining_on_call": 1,
+          "final_change_allowed": false,
+          "retry_sqlstates": [
+            "40001"
+          ]
+        },
+        "deadlock": {
+          "aborted_sqlstate": "40P01",
+          "committed_updates": 1,
+          "victim_identity_not_assumed": true
+        }
+      },
+      "scope": "Real separate PostgreSQL sessions; coordinated snapshots and observed lock waits"
+    },
+    {
+      "group": "pool",
+      "total": 8,
+      "checks": [
+        {
+          "name": "returning a lease permits reuse of the same database session",
+          "passed": true
+        },
+        {
+          "name": "two checked-out leases use two different PostgreSQL sessions",
+          "passed": true
+        },
+        {
+          "name": "pool capacity and acquisition deadline bound a third borrower",
+          "passed": true
+        },
+        {
+          "name": "failed transactional lease returns without committing its partial write",
+          "passed": true
+        },
+        {
+          "name": "ordinary pool return does not erase arbitrary session SET state",
+          "passed": true
+        },
+        {
+          "name": "SET LOCAL request state expires at its transaction boundary",
+          "passed": true
+        },
+        {
+          "name": "explicit reset callback clears the tested session setting",
+          "passed": true
+        },
+        {
+          "name": "closed pool rejects new acquisition",
+          "passed": true
+        }
+      ],
+      "observations": {
+        "backend_reused": true,
+        "simultaneous_backends": 2,
+        "exhaustion": "PoolTimeout",
+        "nonlocal_setting_persisted": true,
+        "local_setting_cleared": true,
+        "explicit_guc_reset": true,
+        "capacity_example": {
+          "replicas": 3,
+          "workers_per_replica": 2,
+          "pool_max": 2,
+          "maximum_client_connections": 12
+        }
+      },
+      "scope": "Actual Psycopg pool and PostgreSQL sessions; no PgBouncer or load benchmark"
+    },
+    {
+      "group": "plans",
+      "total": 7,
+      "checks": [
+        {
+          "name": "unindexed selective ordered fixture naturally scans and sorts",
+          "passed": true
+        },
+        {
+          "name": "composite index preserves the actual result rows",
+          "passed": true
+        },
+        {
+          "name": "planner naturally uses the composite index without a Sort node",
+          "passed": true
+        },
+        {
+          "name": "broad fixture still naturally chooses a sequential scan",
+          "passed": true
+        },
+        {
+          "name": "plain EXPLAIN does not execute the UPDATE",
+          "passed": true
+        },
+        {
+          "name": "EXPLAIN ANALYZE executes the UPDATE; explicit transaction rollback restores it",
+          "passed": true
+        },
+        {
+          "name": "CREATE INDEX CONCURRENTLY is rejected inside a transaction block",
+          "passed": true
+        }
+      ],
+      "observations": {
+        "fixture_rows": 50000,
+        "matching_rows": 100,
+        "result_limit": 20,
+        "before": [
+          {
+            "Node Type": "Limit",
+            "Plan Rows": 20,
+            "Actual Rows": 20.0,
+            "Actual Loops": 1,
+            "Shared Hit Blocks": 1713,
+            "Shared Read Blocks": 0
+          },
+          {
+            "Node Type": "Sort",
+            "Plan Rows": 104,
+            "Actual Rows": 20.0,
+            "Actual Loops": 1,
+            "Shared Hit Blocks": 1713,
+            "Shared Read Blocks": 0
+          },
+          {
+            "Node Type": "Seq Scan",
+            "Plan Rows": 104,
+            "Actual Rows": 100.0,
+            "Actual Loops": 1,
+            "Rows Removed by Filter": 49900,
+            "Shared Hit Blocks": 1713,
+            "Shared Read Blocks": 0
+          }
+        ],
+        "after": [
+          {
+            "Node Type": "Limit",
+            "Plan Rows": 20,
+            "Actual Rows": 20.0,
+            "Actual Loops": 1,
+            "Shared Hit Blocks": 23,
+            "Shared Read Blocks": 3
+          },
+          {
+            "Node Type": "Index Scan",
+            "Index Name": "events_lookup",
+            "Plan Rows": 97,
+            "Actual Rows": 20.0,
+            "Actual Loops": 1,
+            "Shared Hit Blocks": 23,
+            "Shared Read Blocks": 3
+          }
+        ],
+        "broad": [
+          {
+            "Node Type": "Seq Scan",
+            "Plan Rows": 40102,
+            "Actual Rows": 40000.0,
+            "Actual Loops": 1,
+            "Rows Removed by Filter": 10000,
+            "Shared Hit Blocks": 1713,
+            "Shared Read Blocks": 0
+          }
+        ],
+        "raw_before": {
+          "Plan": {
+            "Node Type": "Limit",
+            "Parallel Aware": false,
+            "Async Capable": false,
+            "Startup Cost": 2465.77,
+            "Total Cost": 2465.82,
+            "Plan Rows": 20,
+            "Plan Width": 224,
+            "Actual Startup Time": 2.736,
+            "Actual Total Time": 2.739,
+            "Actual Rows": 20.0,
+            "Actual Loops": 1,
+            "Disabled": false,
+            "Shared Hit Blocks": 1713,
+            "Shared Read Blocks": 0,
+            "Shared Dirtied Blocks": 0,
+            "Shared Written Blocks": 0,
+            "Local Hit Blocks": 0,
+            "Local Read Blocks": 0,
+            "Local Dirtied Blocks": 0,
+            "Local Written Blocks": 0,
+            "Temp Read Blocks": 0,
+            "Temp Written Blocks": 0,
+            "Plans": [
+              {
+                "Node Type": "Sort",
+                "Parent Relationship": "Outer",
+                "Parallel Aware": false,
+                "Async Capable": false,
+                "Startup Cost": 2465.77,
+                "Total Cost": 2466.03,
+                "Plan Rows": 104,
+                "Plan Width": 224,
+                "Actual Startup Time": 2.735,
+                "Actual Total Time": 2.736,
+                "Actual Rows": 20.0,
+                "Actual Loops": 1,
+                "Disabled": false,
+                "Sort Key": [
+                  "created_at DESC",
+                  "id DESC"
+                ],
+                "Sort Method": "top-N heapsort",
+                "Sort Space Used": 35,
+                "Sort Space Type": "Memory",
+                "Shared Hit Blocks": 1713,
+                "Shared Read Blocks": 0,
+                "Shared Dirtied Blocks": 0,
+                "Shared Written Blocks": 0,
+                "Local Hit Blocks": 0,
+                "Local Read Blocks": 0,
+                "Local Dirtied Blocks": 0,
+                "Local Written Blocks": 0,
+                "Temp Read Blocks": 0,
+                "Temp Written Blocks": 0,
+                "Plans": [
+                  {
+                    "Node Type": "Seq Scan",
+                    "Parent Relationship": "Outer",
+                    "Parallel Aware": false,
+                    "Async Capable": false,
+                    "Relation Name": "events",
+                    "Alias": "events",
+                    "Startup Cost": 0.0,
+                    "Total Cost": 2463.0,
+                    "Plan Rows": 104,
+                    "Plan Width": 224,
+                    "Actual Startup Time": 0.015,
+                    "Actual Total Time": 2.699,
+                    "Actual Rows": 100.0,
+                    "Actual Loops": 1,
+                    "Disabled": false,
+                    "Filter": "((tenant_id = '7'::smallint) AND (status = 'open'::text))",
+                    "Rows Removed by Filter": 49900,
+                    "Shared Hit Blocks": 1713,
+                    "Shared Read Blocks": 0,
+                    "Shared Dirtied Blocks": 0,
+                    "Shared Written Blocks": 0,
+                    "Local Hit Blocks": 0,
+                    "Local Read Blocks": 0,
+                    "Local Dirtied Blocks": 0,
+                    "Local Written Blocks": 0,
+                    "Temp Read Blocks": 0,
+                    "Temp Written Blocks": 0
+                  }
+                ]
+              }
+            ]
+          },
+          "Planning": {
+            "Shared Hit Blocks": 65,
+            "Shared Read Blocks": 0,
+            "Shared Dirtied Blocks": 0,
+            "Shared Written Blocks": 0,
+            "Local Hit Blocks": 0,
+            "Local Read Blocks": 0,
+            "Local Dirtied Blocks": 0,
+            "Local Written Blocks": 0,
+            "Temp Read Blocks": 0,
+            "Temp Written Blocks": 0
+          },
+          "Planning Time": 1.236,
+          "Triggers": [],
+          "Execution Time": 2.758
+        },
+        "raw_after": {
+          "Plan": {
+            "Node Type": "Limit",
+            "Parallel Aware": false,
+            "Async Capable": false,
+            "Startup Cost": 0.41,
+            "Total Cost": 79.98,
+            "Plan Rows": 20,
+            "Plan Width": 224,
+            "Actual Startup Time": 0.047,
+            "Actual Total Time": 0.061,
+            "Actual Rows": 20.0,
+            "Actual Loops": 1,
+            "Disabled": false,
+            "Shared Hit Blocks": 23,
+            "Shared Read Blocks": 3,
+            "Shared Dirtied Blocks": 0,
+            "Shared Written Blocks": 0,
+            "Local Hit Blocks": 0,
+            "Local Read Blocks": 0,
+            "Local Dirtied Blocks": 0,
+            "Local Written Blocks": 0,
+            "Temp Read Blocks": 0,
+            "Temp Written Blocks": 0,
+            "Plans": [
+              {
+                "Node Type": "Index Scan",
+                "Parent Relationship": "Outer",
+                "Parallel Aware": false,
+                "Async Capable": false,
+                "Scan Direction": "Forward",
+                "Index Name": "events_lookup",
+                "Relation Name": "events",
+                "Alias": "events",
+                "Startup Cost": 0.41,
+                "Total Cost": 386.29,
+                "Plan Rows": 97,
+                "Plan Width": 224,
+                "Actual Startup Time": 0.046,
+                "Actual Total Time": 0.059,
+                "Actual Rows": 20.0,
+                "Actual Loops": 1,
+                "Disabled": false,
+                "Index Cond": "((tenant_id = '7'::smallint) AND (status = 'open'::text))",
+                "Rows Removed by Index Recheck": 0,
+                "Index Searches": 1,
+                "Shared Hit Blocks": 23,
+                "Shared Read Blocks": 3,
+                "Shared Dirtied Blocks": 0,
+                "Shared Written Blocks": 0,
+                "Local Hit Blocks": 0,
+                "Local Read Blocks": 0,
+                "Local Dirtied Blocks": 0,
+                "Local Written Blocks": 0,
+                "Temp Read Blocks": 0,
+                "Temp Written Blocks": 0
+              }
+            ]
+          },
+          "Planning": {
+            "Shared Hit Blocks": 26,
+            "Shared Read Blocks": 1,
+            "Shared Dirtied Blocks": 0,
+            "Shared Written Blocks": 0,
+            "Local Hit Blocks": 0,
+            "Local Read Blocks": 0,
+            "Local Dirtied Blocks": 0,
+            "Local Written Blocks": 0,
+            "Temp Read Blocks": 0,
+            "Temp Written Blocks": 0
+          },
+          "Planning Time": 0.173,
+          "Triggers": [],
+          "Execution Time": 0.07
+        },
+        "raw_broad": {
+          "Plan": {
+            "Node Type": "Seq Scan",
+            "Parallel Aware": false,
+            "Async Capable": false,
+            "Relation Name": "events",
+            "Alias": "events",
+            "Startup Cost": 0.0,
+            "Total Cost": 2338.0,
+            "Plan Rows": 40102,
+            "Plan Width": 234,
+            "Actual Startup Time": 0.021,
+            "Actual Total Time": 3.667,
+            "Actual Rows": 40000.0,
+            "Actual Loops": 1,
+            "Disabled": false,
+            "Filter": "(status = 'closed'::text)",
+            "Rows Removed by Filter": 10000,
+            "Shared Hit Blocks": 1713,
+            "Shared Read Blocks": 0,
+            "Shared Dirtied Blocks": 0,
+            "Shared Written Blocks": 0,
+            "Local Hit Blocks": 0,
+            "Local Read Blocks": 0,
+            "Local Dirtied Blocks": 0,
+            "Local Written Blocks": 0,
+            "Temp Read Blocks": 0,
+            "Temp Written Blocks": 0
+          },
+          "Planning": {
+            "Shared Hit Blocks": 0,
+            "Shared Read Blocks": 0,
+            "Shared Dirtied Blocks": 0,
+            "Shared Written Blocks": 0,
+            "Local Hit Blocks": 0,
+            "Local Read Blocks": 0,
+            "Local Dirtied Blocks": 0,
+            "Local Written Blocks": 0,
+            "Temp Read Blocks": 0,
+            "Temp Written Blocks": 0
+          },
+          "Planning Time": 0.027,
+          "Triggers": [],
+          "Execution Time": 4.549
+        },
+        "planner_settings": {
+          "enable_seqscan": "on",
+          "max_parallel_workers_per_gather": 0
+        }
+      },
+      "scope": "Actual PostgreSQL plans on a 50000-row fixture; counts/plans, not a benchmark"
+    },
+    {
+      "group": "service",
+      "total": 12,
+      "checks": [
+        {
+          "name": "trusted price stock reservation and outbox commit together",
+          "passed": true
+        },
+        {
+          "name": "sequential replay returns the same reservation without another stock effect",
+          "passed": true
+        },
+        {
+          "name": "same idempotency key with different payload is rejected",
+          "passed": true
+        },
+        {
+          "name": "idempotency and inventory scope include the trusted tenant",
+          "passed": true
+        },
+        {
+          "name": "invalid quantity types bounds and booleans are rejected before state changes",
+          "passed": true
+        },
+        {
+          "name": "known composite foreign-key failure becomes unavailable and rolls back claim",
+          "passed": true
+        },
+        {
+          "name": "insufficient stock rolls back the idempotency claim",
+          "passed": true
+        },
+        {
+          "name": "failure after stock update rolls back stock reservation and outbox",
+          "passed": true
+        },
+        {
+          "name": "competing last-unit requests cannot both reserve stock",
+          "passed": true
+        },
+        {
+          "name": "concurrent duplicate key waits then replays one committed reservation",
+          "passed": true
+        },
+        {
+          "name": "replay succeeds after stock is exhausted because claim precedes stock work",
+          "passed": true
+        },
+        {
+          "name": "rolled-back unavailable key can later succeed after fixture restock",
+          "passed": true
+        }
+      ],
+      "observations": {
+        "successful_reservation": {
+          "quantity": 2,
+          "total_minor": 25000,
+          "currency": "INR",
+          "replayed": false
+        },
+        "last_unit_race": {
+          "wait_observed": true,
+          "blocked_statement": "conditional stock UPDATE",
+          "remaining_stock": 0,
+          "reservations": 1,
+          "outbox_rows": 1,
+          "outcome": "one reserved and one unavailable"
+        },
+        "same_key_race": {
+          "wait_observed": true,
+          "blocked_statement": "idempotency INSERT",
+          "remaining_stock": 0,
+          "reservations": 1,
+          "outbox_rows": 1,
+          "outcome": "one new and one replay"
+        }
+      },
+      "scope": "Real PostgreSQL transactions and coordinated two-session service races; no HTTP/payment/delivery worker"
+    }
+  ]
+}

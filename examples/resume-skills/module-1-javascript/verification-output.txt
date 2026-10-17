@@ -1,0 +1,31 @@
+PASS 01-types - Values, typeof and arrays
+PASS 02-alias - Primitive copies and object aliases
+PASS 03-arguments - Mutation versus parameter rebinding
+PASS 04-const - Const fixes a binding, not its object
+PASS 05-shallow - Spread shares nested objects
+PASS 06-path-copy - Copy the changed nested path
+PASS 07-clone - Structured clone and cycles
+PASS 08-numbers - Floating point and integer boundaries
+PASS 09-equality - Strict, loose and same-value equality
+PASS 10-coercion - Plus and explicit conversion
+PASS 11-defaults - Nullish versus falsy defaults
+PASS 12-scope - Function scope and block scope
+PASS 13-hoisting - Var initialization and the temporal dead zone
+PASS 14-functions - Declaration versus const function expression
+PASS 15-closure-binding - Closures retain access to bindings
+PASS 16-loop - Var and let loop closures without timers
+PASS 17-factory - Independent closure state
+PASS 18-snapshot - A captured binding versus an earlier computed value
+PASS 19-this - The call site supplies this
+PASS 20-arrow - An object literal does not create lexical this
+PASS 21-arrow-callback - An arrow can retain an enclosing method's this
+PASS 22-prototype - Lookup, shadowing and own properties
+PASS 23-class - Class methods and per-instance arrow fields
+PASS 24-destructure - Defaults, rest and nested references
+PASS 25-array - Array transforms and sorting
+PASS 26-map - Key identity and set membership
+PASS 27-json - JSON is not a universal object clone
+PASS 28-optional - Optional access only guards nullish values
+PASS 29-boundary - Parse a positive integer deliberately
+PASS 30-field-order - Spread order is a trust-boundary decision
+Verified 30 snippets as ES modules; Node v22.14.0

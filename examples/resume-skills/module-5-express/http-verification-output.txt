@@ -1,0 +1,42 @@
+PASS API health
+PASS API product-projection
+PASS API implicit-head
+PASS API authoritative-quote
+PASS API quote-does-not-reserve
+PASS API zero-path-id
+PASS API partial-path-id
+PASS API unsafe-path-id
+PASS API missing-product
+PASS API wrong-media-type
+PASS API missing-media-type
+PASS API empty-json-body
+PASS API malformed-json
+PASS API array-body
+PASS API primitive-json-policy
+PASS API missing-fields
+PASS API string-product-id
+PASS API string-quantity
+PASS API zero-quantity
+PASS API fractional-quantity
+PASS API policy-limit
+PASS API caller-price-rejected
+PASS API caller-tenant-rejected
+PASS API insufficient-stock
+PASS API zero-stock
+PASS API valid-upper-bound-stock-conflict
+PASS API quote-missing-product
+PASS API json-byte-limit
+PASS API compressed-body-policy
+PASS API unknown-route-not-parsed
+PASS API quote-method-allow
+PASS API product-method-allow
+PASS API malformed-path-encoding
+PASS API middleware-success-and-failure-traces
+TRACE quote: request > router > media-type > parsed > validate-body > controller > service > repository
+TRACE malformed: request > router > media-type > error
+PASS API async-repository-failure-hidden
+PASS API request-failure-does-not-kill-app
+PASS API health-progresses-during-async-work
+PASS API request-locals-stay-independent
+PASS API listeners-closed
+Verified 39 Express API checks

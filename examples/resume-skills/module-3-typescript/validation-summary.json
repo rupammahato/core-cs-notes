@@ -1,0 +1,107 @@
+{
+  "module": "M3: TypeScript Fundamentals",
+  "verifiedOn": "2026-10-13T14:40:48.594Z",
+  "compiler": "Version 7.0.2",
+  "runtime": "v22.14.0",
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "lib": [
+      "ES2022",
+      "DOM"
+    ],
+    "types": [],
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "noEmitOnError": true,
+    "outDir": "./out"
+  },
+  "cases": {
+    "total": 26,
+    "compiledAndRan": 16,
+    "rejectedWithoutEmit": 10,
+    "validatorInputs": 14
+  },
+  "chapter": {
+    "sourceMatchesEvidence": true,
+    "outputsAndDiagnosticsMatch": true,
+    "interviewQuestions": 28,
+    "practiceExercises": 10,
+    "qaSequential": true,
+    "balancedCodeFences": true
+  },
+  "siteSync": {
+    "chapters": 74,
+    "resumeSkillsChapters": 5
+  },
+  "siteBuild": {
+    "passed": true,
+    "typeScript": true,
+    "staticPages": 79,
+    "fontSource": "Existing cached font files through Next Google Fonts mock-response hook; external font download unavailable; source configuration unchanged"
+  },
+  "httpRoutes": [
+    {
+      "route": "/",
+      "status": 200,
+      "bytes": 67007
+    },
+    {
+      "route": "/docs/resume-skills",
+      "status": 200,
+      "bytes": 196929
+    },
+    {
+      "route": "/docs/resume-skills/how-backend-works",
+      "status": 200,
+      "bytes": 486617
+    },
+    {
+      "route": "/docs/resume-skills/javascript-fundamentals",
+      "status": 200,
+      "bytes": 818591
+    },
+    {
+      "route": "/docs/resume-skills/asynchronous-javascript",
+      "status": 200,
+      "bytes": 949497
+    },
+    {
+      "route": "/docs/resume-skills/typescript-fundamentals",
+      "status": 200,
+      "bytes": 865717
+    },
+    {
+      "route": "/docs/dbms",
+      "status": 200,
+      "bytes": 243495
+    }
+  ],
+  "renderChecks": {
+    "lastQuestion": true,
+    "validator": true,
+    "compilerError": true,
+    "lastExample": true,
+    "nextModule": true,
+    "navFromM2": true
+  },
+  "search": {
+    "query": "unknown",
+    "tag": "resume-skills",
+    "status": 200,
+    "count": 16,
+    "hasM3": true,
+    "subjectScoped": true
+  },
+  "server": {
+    "url": "http://localhost:3000",
+    "pid": 15420
+  },
+  "limitations": [
+    "Compiler diagnostics are version-specific; actual source, diagnostics and emitted JavaScript are preserved.",
+    "The JSON-data validator establishes input field/value constraints, not authentication, authorization or transactional state guarantees.",
+    "Compiler acceptance does not establish all runtime or business behavior."
+  ]
+}

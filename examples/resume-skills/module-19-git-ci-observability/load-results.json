@@ -1,0 +1,992 @@
+{
+  "normal": {
+    "configuration": {
+      "model": "closed: each slot starts again only after its previous attempt ends",
+      "requests": 60,
+      "concurrency": 4,
+      "warmup": 6,
+      "deadline_ms": 500,
+      "keepalive": false
+    },
+    "summary": {
+      "attempts": 60,
+      "successful": 60,
+      "failed": 0,
+      "error_ratio": 0,
+      "elapsed_seconds": 0.45,
+      "attempted_rps": 133.411,
+      "successful_rps": 133.411,
+      "mean_ms": 29.671,
+      "p50_ms": 30.574,
+      "p95_ms": 32.974,
+      "p99_ms": 33.105,
+      "percentile_method": "nearest rank across all completed attempts, including HTTP failures and client errors"
+    },
+    "samples": [
+      {
+        "status": 200,
+        "error": null,
+        "body": "{\"request_id\":\"59976b19-9d83-47a7-8f35-579bdab56ecb\",\"trace_id\":\"9a1cf8eb7fe034a21e012ff74805ca53\",\"release\":\"v1\",\"result\":\"computed\"}",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 14 Oct 2026 16:34:23 GMT",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "latency_ms": 16.429100000000005
+      },
+      {
+        "status": 200,
+        "error": null,
+        "body": "{\"request_id\":\"7043b97e-8dd2-42a8-bb09-281290ea91c4\",\"trace_id\":\"0e0b0846b46030c17da7ed8fa01dc2d3\",\"release\":\"v1\",\"result\":\"computed\"}",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 14 Oct 2026 16:34:23 GMT",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "latency_ms": 16.911599999999964
+      },
+      {
+        "status": 200,
+        "error": null,
+        "body": "{\"request_id\":\"5ab8351c-6a39-483f-9489-5d98eace2e04\",\"trace_id\":\"8513c015c68788f09dfa6fbc50591616\",\"release\":\"v1\",\"result\":\"computed\"}",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 14 Oct 2026 16:34:23 GMT",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "latency_ms": 17.45210000000003
+      },
+      {
+        "status": 200,
+        "error": null,
+        "body": "{\"request_id\":\"2f3dac0c-4429-4bbb-95aa-caf8d19efe0e\",\"trace_id\":\"428b7196e5d941b6f6fc5ca3cab745b3\",\"release\":\"v1\",\"result\":\"computed\"}",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 14 Oct 2026 16:34:23 GMT",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "latency_ms": 18.798400000000015
+      },
+      {
+        "status": 200,
+        "error": null,
+        "body": "{\"request_id\":\"bb52b760-36fc-4b4f-9bc4-06f178f425fe\",\"trace_id\":\"d7e6f8eb8b80147fe74235767e875424\",\"release\":\"v1\",\"result\":\"computed\"}",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 14 Oct 2026 16:34:23 GMT",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "latency_ms": 31.432900000000018
+      },
+      {
+        "status": 200,
+        "error": null,
+        "body": "{\"request_id\":\"4759d79c-a067-4ba8-8311-2a17d4b59e73\",\"trace_id\":\"45bf83b001a324b1a3d195cf5e4311f8\",\"release\":\"v1\",\"result\":\"computed\"}",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 14 Oct 2026 16:34:23 GMT",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "latency_ms": 31.400199999999984
+      },
+      {
+        "status": 200,
+        "error": null,
+        "body": "{\"request_id\":\"b6aeba6f-c52b-46c9-be0e-e06aab42bbf9\",\"trace_id\":\"cf9ac25e9dd2b858b304f9c23ba7322a\",\"release\":\"v1\",\"result\":\"computed\"}",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 14 Oct 2026 16:34:23 GMT",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "latency_ms": 31.33190000000002
+      },
+      {
+        "status": 200,
+        "error": null,
+        "body": "{\"request_id\":\"ec6c9cb8-a848-47da-abc3-b8f47f6f07f3\",\"trace_id\":\"87b877df141b0737183e7d17ddf513a3\",\"release\":\"v1\",\"result\":\"computed\"}",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 14 Oct 2026 16:34:23 GMT",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "latency_ms": 30.371299999999962
+      },
+      {
+        "status": 200,
+        "error": null,
+        "body": "{\"request_id\":\"59c3c6d9-6d48-4268-a5a3-a449868d4350\",\"trace_id\":\"61f9151cd0be30a08145d66034c83cca\",\"release\":\"v1\",\"result\":\"computed\"}",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 14 Oct 2026 16:34:23 GMT",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "latency_ms": 30.2217
+      },
+      {
+        "status": 200,
+        "error": null,
+        "body": "{\"request_id\":\"57fd8dfb-0891-4c0d-b22d-70206b7466fd\",\"trace_id\":\"c5a361f00995e1a4f904546af1627003\",\"release\":\"v1\",\"result\":\"computed\"}",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 14 Oct 2026 16:34:23 GMT",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "latency_ms": 30.292500000000018
+      },
+      {
+        "status": 200,
+        "error": null,
+        "body": "{\"request_id\":\"305d70d4-1440-4311-afe5-6fd6d960d98e\",\"trace_id\":\"c1dcac6b6274def79e087a7b97ab36d7\",\"release\":\"v1\",\"result\":\"computed\"}",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 14 Oct 2026 16:34:23 GMT",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "latency_ms": 30.28490000000005
+      },
+      {
+        "status": 200,
+        "error": null,
+        "body": "{\"request_id\":\"d8ea2ade-d175-436c-a8d0-30c6b99890c8\",\"trace_id\":\"9990fabe390355abcecb7adc6aea433a\",\"release\":\"v1\",\"result\":\"computed\"}",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 14 Oct 2026 16:34:23 GMT",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "latency_ms": 30.3168
+      },
+      {
+        "status": 200,
+        "error": null,
+        "body": "{\"request_id\":\"978e27ce-2121-4d27-99f6-0fe1098f8816\",\"trace_id\":\"5778cbcb3681a2e6a77c858d28a19f72\",\"release\":\"v1\",\"result\":\"computed\"}",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 14 Oct 2026 16:34:23 GMT",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "latency_ms": 31.41560000000004
+      },
+      {
+        "status": 200,
+        "error": null,
+        "body": "{\"request_id\":\"e45b5795-5f19-42af-91c4-1d2009e43253\",\"trace_id\":\"fa4d4b7c9c1b8c4446a3944143813332\",\"release\":\"v1\",\"result\":\"computed\"}",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 14 Oct 2026 16:34:23 GMT",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "latency_ms": 31.466699999999946
+      },
+      {
+        "status": 200,
+        "error": null,
+        "body": "{\"request_id\":\"4058e788-1265-42d6-9528-ba0cd277b13d\",\"trace_id\":\"f089ab8e4a983439d3bc56d3b7a2425d\",\"release\":\"v1\",\"result\":\"computed\"}",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 14 Oct 2026 16:34:23 GMT",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "latency_ms": 31.48470000000009
+      },
+      {
+        "status": 200,
+        "error": null,
+        "body": "{\"request_id\":\"259f7c8a-dc74-44da-aeac-f4e20d2c911d\",\"trace_id\":\"8b17cf83e648ac1c37cad2b52a095ff7\",\"release\":\"v1\",\"result\":\"computed\"}",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 14 Oct 2026 16:34:23 GMT",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "latency_ms": 31.478000000000065
+      },
+      {
+        "status": 200,
+        "error": null,
+        "body": "{\"request_id\":\"093ba534-9e1c-4c1f-b231-a6866b34bf6b\",\"trace_id\":\"a1e60677992cc19ee2e891b4dc531b4f\",\"release\":\"v1\",\"result\":\"computed\"}",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 14 Oct 2026 16:34:23 GMT",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "latency_ms": 30.040300000000002
+      },
+      {
+        "status": 200,
+        "error": null,
+        "body": "{\"request_id\":\"b6c19eaf-dcfc-48f4-bb7f-0d71c2904585\",\"trace_id\":\"596c2c5e66b3e6aab524451550612f07\",\"release\":\"v1\",\"result\":\"computed\"}",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 14 Oct 2026 16:34:23 GMT",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "latency_ms": 29.973500000000058
+      },
+      {
+        "status": 200,
+        "error": null,
+        "body": "{\"request_id\":\"848beac6-9be9-42a1-a028-6115ae92219b\",\"trace_id\":\"5c8bb77ea839d05dd247564d1b8c1cc3\",\"release\":\"v1\",\"result\":\"computed\"}",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 14 Oct 2026 16:34:23 GMT",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "latency_ms": 29.948999999999955
+      },
+      {
+        "status": 200,
+        "error": null,
+        "body": "{\"request_id\":\"7bb2115a-4ff7-428c-bbe2-1b91cc2328a0\",\"trace_id\":\"36b9068866860d6cbb1649d6803852bb\",\"release\":\"v1\",\"result\":\"computed\"}",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 14 Oct 2026 16:34:23 GMT",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "latency_ms": 29.929200000000037
+      },
+      {
+        "status": 200,
+        "error": null,
+        "body": "{\"request_id\":\"2b811952-c7ec-4c88-bf34-26ab3e523535\",\"trace_id\":\"37335e5b84656e8729130d34f02490ba\",\"release\":\"v1\",\"result\":\"computed\"}",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 14 Oct 2026 16:34:23 GMT",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "latency_ms": 29.9609999999999
+      },
+      {
+        "status": 200,
+        "error": null,
+        "body": "{\"request_id\":\"4bb2f925-0ddc-4397-9515-7dbe4196093e\",\"trace_id\":\"405a10f28d4a3fe6e61c3056b92731a4\",\"release\":\"v1\",\"result\":\"computed\"}",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 14 Oct 2026 16:34:23 GMT",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "latency_ms": 29.90070000000003
+      },
+      {
+        "status": 200,
+        "error": null,
+        "body": "{\"request_id\":\"f928f5ac-9ac2-404d-b70c-5093382a6ab7\",\"trace_id\":\"a58f43eaf17592f74cdd6a303a5fc70f\",\"release\":\"v1\",\"result\":\"computed\"}",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 14 Oct 2026 16:34:23 GMT",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "latency_ms": 30.275499999999965
+      },
+      {
+        "status": 200,
+        "error": null,
+        "body": "{\"request_id\":\"eb0ffe5b-60ed-4946-9256-dedb40324b47\",\"trace_id\":\"497a6205202852124f04704c9ae77beb\",\"release\":\"v1\",\"result\":\"computed\"}",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 14 Oct 2026 16:34:23 GMT",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "latency_ms": 30.28710000000001
+      },
+      {
+        "status": 200,
+        "error": null,
+        "body": "{\"request_id\":\"34b0b9b4-8905-4c48-81dd-66dca961d938\",\"trace_id\":\"79d48a396a9be5862bb48471b017bde2\",\"release\":\"v1\",\"result\":\"computed\"}",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 14 Oct 2026 16:34:23 GMT",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "latency_ms": 30.68100000000004
+      },
+      {
+        "status": 200,
+        "error": null,
+        "body": "{\"request_id\":\"12434cbf-42a5-472c-9ae0-7c15dd03c456\",\"trace_id\":\"d442501238f9ce4391fac8fa5a2309e6\",\"release\":\"v1\",\"result\":\"computed\"}",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 14 Oct 2026 16:34:23 GMT",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "latency_ms": 30.720199999999977
+      },
+      {
+        "status": 200,
+        "error": null,
+        "body": "{\"request_id\":\"3230a41e-5084-461d-ba32-2292d4ba6045\",\"trace_id\":\"eac0cbeadfee1ccfc54a45e0a2b1d770\",\"release\":\"v1\",\"result\":\"computed\"}",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 14 Oct 2026 16:34:23 GMT",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "latency_ms": 30.384799999999927
+      },
+      {
+        "status": 200,
+        "error": null,
+        "body": "{\"request_id\":\"0d4f52da-a9ec-460f-a804-7aa9c71576d1\",\"trace_id\":\"c7cbd658b313d4548b0e8dff2551523a\",\"release\":\"v1\",\"result\":\"computed\"}",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 14 Oct 2026 16:34:23 GMT",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "latency_ms": 30.51890000000003
+      },
+      {
+        "status": 200,
+        "error": null,
+        "body": "{\"request_id\":\"48d05aaa-798f-413c-a22a-a6c254bc6952\",\"trace_id\":\"12920d616a134b67c13c05731d4d476c\",\"release\":\"v1\",\"result\":\"computed\"}",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 14 Oct 2026 16:34:23 GMT",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "latency_ms": 31.11080000000004
+      },
+      {
+        "status": 200,
+        "error": null,
+        "body": "{\"request_id\":\"89d62490-9129-49b9-b29b-d4bb1892aea6\",\"trace_id\":\"183d0fd2ba52fc10d2e160e15ba91e66\",\"release\":\"v1\",\"result\":\"computed\"}",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 14 Oct 2026 16:34:23 GMT",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "latency_ms": 31.065699999999993
+      },
+      {
+        "status": 200,
+        "error": null,
+        "body": "{\"request_id\":\"49586d1d-a1fe-47fd-a3e8-14233a88c87a\",\"trace_id\":\"a7ecec6bdb376547afb735a65945b85b\",\"release\":\"v1\",\"result\":\"computed\"}",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 14 Oct 2026 16:34:23 GMT",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "latency_ms": 30.9987000000001
+      },
+      {
+        "status": 200,
+        "error": null,
+        "body": "{\"request_id\":\"4f289aa2-186f-4370-8b50-bf3ab838de93\",\"trace_id\":\"11e1b6de24e3bc912539bc20cd5f7599\",\"release\":\"v1\",\"result\":\"computed\"}",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 14 Oct 2026 16:34:23 GMT",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "latency_ms": 30.79169999999999
+      },
+      {
+        "status": 200,
+        "error": null,
+        "body": "{\"request_id\":\"8e68b64f-4947-4fb4-9ad2-92d55ca7ae79\",\"trace_id\":\"9b92e72ff0bf923de473c71edc749791\",\"release\":\"v1\",\"result\":\"computed\"}",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 14 Oct 2026 16:34:23 GMT",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "latency_ms": 31.535600000000045
+      },
+      {
+        "status": 200,
+        "error": null,
+        "body": "{\"request_id\":\"b66ad327-33cd-46b6-ae55-0276de7bc2c9\",\"trace_id\":\"62b3998bf01a31e236076b493f5787f2\",\"release\":\"v1\",\"result\":\"computed\"}",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 14 Oct 2026 16:34:23 GMT",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "latency_ms": 31.56239999999991
+      },
+      {
+        "status": 200,
+        "error": null,
+        "body": "{\"request_id\":\"fd509e27-d5df-4c17-b02e-64894b8832fa\",\"trace_id\":\"9f12ced2aa2fc8635d22d8d0805db0ee\",\"release\":\"v1\",\"result\":\"computed\"}",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 14 Oct 2026 16:34:23 GMT",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "latency_ms": 31.610500000000002
+      },
+      {
+        "status": 200,
+        "error": null,
+        "body": "{\"request_id\":\"2b2ab563-bc5c-45f0-abf2-6a563d00ba5a\",\"trace_id\":\"34113226eb4134d074ae8357b0ab7c5e\",\"release\":\"v1\",\"result\":\"computed\"}",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 14 Oct 2026 16:34:23 GMT",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "latency_ms": 31.696199999999976
+      },
+      {
+        "status": 200,
+        "error": null,
+        "body": "{\"request_id\":\"ae7183ff-e270-4c56-adb5-3fd8022c9b37\",\"trace_id\":\"cec6bb37daa92b7bce1eb9b4dacc579c\",\"release\":\"v1\",\"result\":\"computed\"}",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 14 Oct 2026 16:34:23 GMT",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "latency_ms": 30.05740000000003
+      },
+      {
+        "status": 200,
+        "error": null,
+        "body": "{\"request_id\":\"e6c0d78d-3589-45fa-8cbb-146bf52ef4b6\",\"trace_id\":\"dd2ccb62cc548a32b2364346cc074d64\",\"release\":\"v1\",\"result\":\"computed\"}",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 14 Oct 2026 16:34:23 GMT",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "latency_ms": 30.097699999999918
+      },
+      {
+        "status": 200,
+        "error": null,
+        "body": "{\"request_id\":\"d61bc764-4824-44a9-94a4-9eff234c5a4b\",\"trace_id\":\"07d375b88177d64f36dd7b601e1eb553\",\"release\":\"v1\",\"result\":\"computed\"}",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 14 Oct 2026 16:34:23 GMT",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "latency_ms": 30.05950000000007
+      },
+      {
+        "status": 200,
+        "error": null,
+        "body": "{\"request_id\":\"906ea94a-1fcc-494c-a4b1-5bacb4274c4b\",\"trace_id\":\"9894b76db0ed66b7dac835e574f6843d\",\"release\":\"v1\",\"result\":\"computed\"}",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 14 Oct 2026 16:34:23 GMT",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "latency_ms": 29.979100000000017
+      },
+      {
+        "status": 200,
+        "error": null,
+        "body": "{\"request_id\":\"dfd83d94-8297-469f-b374-d9ebb544677c\",\"trace_id\":\"a3710e868577f7a27c68a0b4a4a320bb\",\"release\":\"v1\",\"result\":\"computed\"}",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 14 Oct 2026 16:34:23 GMT",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "latency_ms": 32.99509999999998
+      },
+      {
+        "status": 200,
+        "error": null,
+        "body": "{\"request_id\":\"d2a9ce05-6d76-4d42-bf46-18743335439e\",\"trace_id\":\"86e1a00bd392627a2461c4e2509b894e\",\"release\":\"v1\",\"result\":\"computed\"}",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 14 Oct 2026 16:34:23 GMT",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "latency_ms": 32.97379999999998
+      },
+      {
+        "status": 200,
+        "error": null,
+        "body": "{\"request_id\":\"63e985a8-8dd8-4dec-a9e0-b45117bafc66\",\"trace_id\":\"82366ff8478556af901584abbabd4cda\",\"release\":\"v1\",\"result\":\"computed\"}",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 14 Oct 2026 16:34:23 GMT",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "latency_ms": 33.0471
+      },
+      {
+        "status": 200,
+        "error": null,
+        "body": "{\"request_id\":\"1eac32bb-d12d-440d-9378-55bd50d4bf57\",\"trace_id\":\"f8c3280d098765037a458916241a00af\",\"release\":\"v1\",\"result\":\"computed\"}",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 14 Oct 2026 16:34:23 GMT",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "latency_ms": 33.10500000000002
+      },
+      {
+        "status": 200,
+        "error": null,
+        "body": "{\"request_id\":\"dfae90ea-1955-47d6-b098-e7e2325ed5e5\",\"trace_id\":\"1567c8ac27fd78949eaa6b584b1e23e4\",\"release\":\"v1\",\"result\":\"computed\"}",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 14 Oct 2026 16:34:23 GMT",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "latency_ms": 30.57420000000002
+      },
+      {
+        "status": 200,
+        "error": null,
+        "body": "{\"request_id\":\"4801567a-b030-43d5-9382-583407cadd73\",\"trace_id\":\"7865490d8e08708661a9a12faea8d482\",\"release\":\"v1\",\"result\":\"computed\"}",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 14 Oct 2026 16:34:23 GMT",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "latency_ms": 30.680399999999963
+      },
+      {
+        "status": 200,
+        "error": null,
+        "body": "{\"request_id\":\"dfcbe8c4-9d88-4487-a581-b5e68905c14e\",\"trace_id\":\"6b72bf09df17a4127efc93952ce6851a\",\"release\":\"v1\",\"result\":\"computed\"}",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 14 Oct 2026 16:34:23 GMT",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "latency_ms": 30.619500000000016
+      },
+      {
+        "status": 200,
+        "error": null,
+        "body": "{\"request_id\":\"a6d84bb4-4fe6-4cf0-b596-fbba19feb8bb\",\"trace_id\":\"97c292388fbcbc2d1e83260d3dbc9559\",\"release\":\"v1\",\"result\":\"computed\"}",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 14 Oct 2026 16:34:23 GMT",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "latency_ms": 30.56529999999998
+      },
+      {
+        "status": 200,
+        "error": null,
+        "body": "{\"request_id\":\"376fcda6-987d-4d75-91b1-cfc79036f778\",\"trace_id\":\"5faddd57c4ab33c07b0773c07bde3f88\",\"release\":\"v1\",\"result\":\"computed\"}",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 14 Oct 2026 16:34:23 GMT",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "latency_ms": 30.01789999999994
+      },
+      {
+        "status": 200,
+        "error": null,
+        "body": "{\"request_id\":\"4467d3fe-b4b1-47e7-8190-14f93d060c65\",\"trace_id\":\"1a226b83a2218a6f4a7571e41338f5f6\",\"release\":\"v1\",\"result\":\"computed\"}",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 14 Oct 2026 16:34:23 GMT",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "latency_ms": 29.897499999999923
+      },
+      {
+        "status": 200,
+        "error": null,
+        "body": "{\"request_id\":\"84fd183d-9deb-43cd-91a8-4c17ed4bb6eb\",\"trace_id\":\"beada75f4420040c6c18a72d48a33cc1\",\"release\":\"v1\",\"result\":\"computed\"}",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 14 Oct 2026 16:34:23 GMT",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "latency_ms": 29.938600000000065
+      },
+      {
+        "status": 200,
+        "error": null,
+        "body": "{\"request_id\":\"cd58ccd7-3e22-4531-ab38-4723a1af26ac\",\"trace_id\":\"032e7eb88d3c1b39234db75a7f5d75a2\",\"release\":\"v1\",\"result\":\"computed\"}",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 14 Oct 2026 16:34:23 GMT",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "latency_ms": 30.04079999999999
+      },
+      {
+        "status": 200,
+        "error": null,
+        "body": "{\"request_id\":\"7877d8e5-774d-4fce-ae84-a28e11f7497b\",\"trace_id\":\"672106a4195967a0efca55238a9862f8\",\"release\":\"v1\",\"result\":\"computed\"}",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 14 Oct 2026 16:34:23 GMT",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "latency_ms": 30.850599999999986
+      },
+      {
+        "status": 200,
+        "error": null,
+        "body": "{\"request_id\":\"1381cd42-6a99-4e50-95e1-4abc7572f76d\",\"trace_id\":\"4b4eff86de58c178663eb7e6499fb9e3\",\"release\":\"v1\",\"result\":\"computed\"}",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 14 Oct 2026 16:34:23 GMT",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "latency_ms": 30.831500000000005
+      },
+      {
+        "status": 200,
+        "error": null,
+        "body": "{\"request_id\":\"8759ecd0-5e62-443d-8778-ad0d21772a08\",\"trace_id\":\"b899273de6a720ccc9aa152fb237933a\",\"release\":\"v1\",\"result\":\"computed\"}",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 14 Oct 2026 16:34:23 GMT",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "latency_ms": 30.741899999999987
+      },
+      {
+        "status": 200,
+        "error": null,
+        "body": "{\"request_id\":\"34a6e553-b2ac-4490-b2b9-508517151640\",\"trace_id\":\"db58c631f335b11501b7de53703c7705\",\"release\":\"v1\",\"result\":\"computed\"}",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 14 Oct 2026 16:34:23 GMT",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "latency_ms": 30.61310000000003
+      },
+      {
+        "status": 200,
+        "error": null,
+        "body": "{\"request_id\":\"5c715a70-7224-46f8-b435-316ba17ed26c\",\"trace_id\":\"c2e1c609fc0d77d73a2e4e099ce498b5\",\"release\":\"v1\",\"result\":\"computed\"}",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 14 Oct 2026 16:34:23 GMT",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "latency_ms": 15.245400000000018
+      },
+      {
+        "status": 200,
+        "error": null,
+        "body": "{\"request_id\":\"b80234b6-bcf1-4ebf-8d62-e6dfb00254c5\",\"trace_id\":\"fcc43d5564fec990a25182746be25d5a\",\"release\":\"v1\",\"result\":\"computed\"}",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 14 Oct 2026 16:34:23 GMT",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "latency_ms": 31.48219999999992
+      },
+      {
+        "status": 200,
+        "error": null,
+        "body": "{\"request_id\":\"0b239361-f8ce-4550-9e31-2c4d51e7e083\",\"trace_id\":\"6f69db0ee384e4182aa1634c39e913e1\",\"release\":\"v1\",\"result\":\"computed\"}",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 14 Oct 2026 16:34:23 GMT",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "latency_ms": 31.073000000000093
+      },
+      {
+        "status": 200,
+        "error": null,
+        "body": "{\"request_id\":\"acb3922c-8c0f-4ebf-b042-c48f4b7cb32b\",\"trace_id\":\"9eae90f9a2287cf174196691eda66677\",\"release\":\"v1\",\"result\":\"computed\"}",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 14 Oct 2026 16:34:23 GMT",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "latency_ms": 30.717300000000023
+      }
+    ],
+    "local_process": {
+      "cpu_user_ms": 0,
+      "cpu_system_ms": 0,
+      "rss_end_bytes": 56262656,
+      "event_loop_samples": 28,
+      "event_loop_p99_ms": 22.855679,
+      "scope": "load generator and both fixture HTTP services share this Node process"
+    }
+  },
+  "errors": {
+    "configuration": {
+      "model": "closed: each slot starts again only after its previous attempt ends",
+      "requests": 12,
+      "concurrency": 3,
+      "warmup": 0,
+      "deadline_ms": 500,
+      "keepalive": false
+    },
+    "summary": {
+      "attempts": 12,
+      "successful": 0,
+      "failed": 12,
+      "error_ratio": 1,
+      "elapsed_seconds": 0.043,
+      "attempted_rps": 282.319,
+      "successful_rps": 0,
+      "mean_ms": 10.369,
+      "p50_ms": 5.993,
+      "p95_ms": 15.736,
+      "p99_ms": 15.736,
+      "percentile_method": "nearest rank across all completed attempts, including HTTP failures and client errors"
+    },
+    "samples": [
+      {
+        "status": 503,
+        "error": null,
+        "body": "{\"request_id\":\"f76c3bad-ccb6-4fa4-bd1b-b9db97789895\",\"trace_id\":\"98cafb7a3121b621414c45d10baa28f7\",\"release\":\"v1\",\"error\":\"dependency unavailable\"}",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 14 Oct 2026 16:34:23 GMT",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "latency_ms": 14.805200000000013
+      },
+      {
+        "status": 503,
+        "error": null,
+        "body": "{\"request_id\":\"44ea7e70-9b69-4024-ade4-dbeaffa4ec4f\",\"trace_id\":\"d40579e7127b4c4d2560c1c663e712a9\",\"release\":\"v1\",\"error\":\"dependency unavailable\"}",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 14 Oct 2026 16:34:23 GMT",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "latency_ms": 15.18259999999998
+      },
+      {
+        "status": 503,
+        "error": null,
+        "body": "{\"request_id\":\"4f1808f8-7568-4fde-b38d-7034127b6f75\",\"trace_id\":\"223cf5d4826f56796eb6979dbcd4baa0\",\"release\":\"v1\",\"error\":\"dependency unavailable\"}",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 14 Oct 2026 16:34:23 GMT",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "latency_ms": 15.582500000000095
+      },
+      {
+        "status": 503,
+        "error": null,
+        "body": "{\"request_id\":\"45eaefbb-6781-4fc0-a46a-7ff7d9bf27db\",\"trace_id\":\"c4b03b3de7442b2b3c2bc23fbdb2d6cd\",\"release\":\"v1\",\"error\":\"dependency unavailable\"}",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 14 Oct 2026 16:34:23 GMT",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "latency_ms": 15.670499999999947
+      },
+      {
+        "status": 503,
+        "error": null,
+        "body": "{\"request_id\":\"50dbfb0b-a3a4-4a84-981d-aeb706640be3\",\"trace_id\":\"2143fd67e16a9984943310a86b65c23c\",\"release\":\"v1\",\"error\":\"dependency unavailable\"}",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 14 Oct 2026 16:34:23 GMT",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "latency_ms": 15.7029
+      },
+      {
+        "status": 503,
+        "error": null,
+        "body": "{\"request_id\":\"d3c6db8d-2763-49e7-a38a-f6f85d594a5c\",\"trace_id\":\"3eb0c3579e51f72fa5074a0b5a2d6ac2\",\"release\":\"v1\",\"error\":\"dependency unavailable\"}",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 14 Oct 2026 16:34:23 GMT",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "latency_ms": 15.735700000000065
+      },
+      {
+        "status": 503,
+        "error": null,
+        "body": "{\"request_id\":\"3e59272e-6226-46ee-b983-d1488dfe3c79\",\"trace_id\":\"ec45a300c0ebc0eb9f223967c5d98d34\",\"release\":\"v1\",\"error\":\"dependency unavailable\"}",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 14 Oct 2026 16:34:23 GMT",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "latency_ms": 4.599799999999959
+      },
+      {
+        "status": 503,
+        "error": null,
+        "body": "{\"request_id\":\"bd8bf032-ba96-467a-bbc1-48ca69a07b7c\",\"trace_id\":\"d6dd5306d784076986d09f0fbe2493de\",\"release\":\"v1\",\"error\":\"dependency unavailable\"}",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 14 Oct 2026 16:34:23 GMT",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "latency_ms": 5.9927000000000135
+      },
+      {
+        "status": 503,
+        "error": null,
+        "body": "{\"request_id\":\"04ea4fa9-062b-410b-9915-c2e3ca214f5d\",\"trace_id\":\"a5b0925cbf86b02cb241bd5081b69318\",\"release\":\"v1\",\"error\":\"dependency unavailable\"}",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 14 Oct 2026 16:34:23 GMT",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "latency_ms": 5.909899999999993
+      },
+      {
+        "status": 503,
+        "error": null,
+        "body": "{\"request_id\":\"90a5f7f0-8347-4784-9331-4dcc1d78e6e4\",\"trace_id\":\"93f8d4b9a9f68d90cffc49eb935089ea\",\"release\":\"v1\",\"error\":\"dependency unavailable\"}",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 14 Oct 2026 16:34:23 GMT",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "latency_ms": 5.593500000000063
+      },
+      {
+        "status": 503,
+        "error": null,
+        "body": "{\"request_id\":\"c4daf363-84bf-4634-b050-e288d1db5feb\",\"trace_id\":\"8dad28870f8dd0cc60f621c5d24cd77a\",\"release\":\"v1\",\"error\":\"dependency unavailable\"}",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 14 Oct 2026 16:34:23 GMT",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "latency_ms": 4.640099999999961
+      },
+      {
+        "status": 503,
+        "error": null,
+        "body": "{\"request_id\":\"4a2881da-3e66-4f30-87ca-f541bb6f9757\",\"trace_id\":\"fcf7fab4cf1e81aff901d3952c1fba34\",\"release\":\"v1\",\"error\":\"dependency unavailable\"}",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 14 Oct 2026 16:34:23 GMT",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "latency_ms": 5.008100000000013
+      }
+    ],
+    "local_process": {
+      "cpu_user_ms": 0,
+      "cpu_system_ms": 0,
+      "rss_end_bytes": 56639488,
+      "event_loop_samples": 2,
+      "event_loop_p99_ms": 15.622143,
+      "scope": "load generator and both fixture HTTP services share this Node process"
+    }
+  },
+  "deadlines": {
+    "configuration": {
+      "model": "closed: each slot starts again only after its previous attempt ends",
+      "requests": 4,
+      "concurrency": 2,
+      "warmup": 0,
+      "deadline_ms": 10,
+      "keepalive": false
+    },
+    "summary": {
+      "attempts": 4,
+      "successful": 0,
+      "failed": 4,
+      "error_ratio": 1,
+      "elapsed_seconds": 0.035,
+      "attempted_rps": 115.461,
+      "successful_rps": 0,
+      "mean_ms": 17.231,
+      "p50_ms": 15.166,
+      "p95_ms": 19.979,
+      "p99_ms": 19.979,
+      "percentile_method": "nearest rank across all completed attempts, including HTTP failures and client errors"
+    },
+    "samples": [
+      {
+        "status": 0,
+        "error": "DEADLINE",
+        "body": "",
+        "latency_ms": 19.297199999999975
+      },
+      {
+        "status": 0,
+        "error": "DEADLINE",
+        "body": "",
+        "latency_ms": 19.979099999999903
+      },
+      {
+        "status": 0,
+        "error": "DEADLINE",
+        "body": "",
+        "latency_ms": 15.16599999999994
+      },
+      {
+        "status": 0,
+        "error": "DEADLINE",
+        "body": "",
+        "latency_ms": 14.483299999999986
+      }
+    ],
+    "local_process": {
+      "cpu_user_ms": 0,
+      "cpu_system_ms": 16,
+      "rss_end_bytes": 57278464,
+      "event_loop_samples": 1,
+      "event_loop_p99_ms": 16.080895,
+      "scope": "load generator and both fixture HTTP services share this Node process"
+    }
+  }
+}

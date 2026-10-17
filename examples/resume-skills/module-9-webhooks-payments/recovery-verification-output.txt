@@ -1,0 +1,5 @@
+PASS inbox persists across close and reopen before any worker: {"pendingSurvived":true,"afterWorkerCredits":100}
+PASS process exit before effect commit recovers pending receipt with zero partial credit: {"workerExit":77,"beforeRetryLedgerRows":0,"receipt":"pending","afterRetryCredits":100}
+PASS process exit after commit preserves one grant and one outbox row: {"workerExit":77,"receipt":"processed","ledgerRows":1,"outboxRows":1,"afterRetryCredits":100}
+PASS two ready independent worker processes commit a single grant: {"workerProcesses":2,"grants":1,"ledgerRows":1,"outboxRows":1,"credits":100}
+Verified 4 recovery checks.

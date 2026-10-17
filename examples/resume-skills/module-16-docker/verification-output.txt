@@ -1,0 +1,41 @@
+PASS build: Compose resolves the API and database configuration
+PASS build: actual multi-stage image build and context exclusion assertions pass
+PASS build: unchanged rebuild reports actual BuildKit cache reuse
+PASS build: image default user is non-root and command is exec form
+PASS build: builder artifact context and secret source are absent from final filesystem
+PASS runtime: Compose startup reaches actual API and database health
+PASS http: published API serves runtime environment configuration
+PASS runtime: application executes as UID 10001 inside the container
+PASS network: only API has a loopback ephemeral host port
+PASS network: service DNS resolves db and actual PostgreSQL query succeeds
+PASS network: API container localhost is not the separate database service
+PASS runtime: application database role has no superuser or DDL-owner powers
+PASS http: real HTTP write commits through API to PostgreSQL
+PASS http: same request replays the original committed ID
+PASS http: changed idempotency payload is rejected
+PASS http: invalid input and unknown route have controlled responses
+PASS http: list reads the committed database record
+PASS runtime: public fixture password is mounted read-only at runtime
+PASS runtime: read-only root init and dropped capabilities are configured
+PASS runtime: kernel reports zero effective capabilities and no-new-privileges
+PASS runtime: engine records explicit memory CPU and PID bounds
+PASS runtime: actual root filesystem write is denied
+PASS runtime: declared tmpfs permits intended temporary writes
+PASS runtime: Linux container shares the engine kernel rather than the Windows host kernel
+PASS lifecycle: one-shot foreground process exits and stops its container
+PASS lifecycle: completed one-shot is stopped with exit code zero
+PASS lifecycle: nonzero main process exit remains observable
+PASS lifecycle: backgrounding work does not keep the container main process alive
+PASS storage: restart keeps one writable layer while a new container starts fresh
+PASS storage: bind mount observes actual host file changes
+PASS storage: read-only bind mount rejects container writes
+PASS storage: bind mount over app obscures image files
+PASS network: EXPOSE metadata alone allocates no host port binding
+PASS network: container-loopback-only listener fails through the published host path
+PASS readiness: database outage makes readiness fail while liveness still responds
+PASS readiness: unhealthy status alone does not restart this running API
+PASS readiness: API recovers connectivity after database restart without recreation
+PASS lifecycle: SIGTERM reaches application and completes its shutdown handler
+PASS storage: ordinary Compose down preserves the owned database volume
+PASS storage: new database container reads records from the preserved volume
+PASS total: 40

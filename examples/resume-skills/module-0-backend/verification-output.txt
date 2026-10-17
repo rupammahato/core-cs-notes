@@ -1,0 +1,15 @@
+PASS health -> 200
+PASS stored product -> 200
+PASS invalid ID -> 400
+PASS unknown product -> 404
+PASS unknown route -> 404
+PASS unsupported method -> 405
+PASS missing quantity -> 400
+PASS zero quantity -> 400
+PASS fractional quantity -> 400
+PASS unsafe integer ID -> 400
+PASS unavailable quantity -> 409
+PASS forged price ignored -> 200
+PASS quote does not reserve stock -> 200
+TRACE receive GET /api/quote -> route quote -> repository product=7 -> service totalPaise=50000 -> respond 200
+Verified 13 HTTP cases; Node v22.14.0

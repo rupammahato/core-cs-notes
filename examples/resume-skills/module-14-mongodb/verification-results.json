@@ -1,0 +1,1176 @@
+{
+  "runtime": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "packages": {
+    "pymongo": "4.10.1",
+    "dnspython": "2.8.0"
+  },
+  "server_version": "7.0.28",
+  "cluster": {
+    "port": 56698,
+    "existing_service_touched": false,
+    "authentication": "disabled for owned loopback fixture",
+    "tls": false,
+    "replica_set_members": 1,
+    "server_version": "7.0.28",
+    "owned_dbpath_verified": true,
+    "writable_primary": true,
+    "storage_engine": "wiredTiger",
+    "graceful_shutdown": true,
+    "listener_stopped": true,
+    "temporary_cluster_removed": true
+  },
+  "counts": {
+    "core": 17,
+    "queries": 12,
+    "indexes": 10,
+    "atomic": 6,
+    "transactions": 15,
+    "pool": 5
+  },
+  "total": 65,
+  "groups": [
+    {
+      "group": "core",
+      "total": 17,
+      "checks": [
+        {
+          "name": "server validator rejects negative stock",
+          "passed": true
+        },
+        {
+          "name": "server validator rejects string stock",
+          "passed": true
+        },
+        {
+          "name": "server validator rejects boolean stock despite Python bool being an int subclass",
+          "passed": true
+        },
+        {
+          "name": "required field is enforced by the server",
+          "passed": true
+        },
+        {
+          "name": "compound unique index scopes SKU uniqueness to tenant",
+          "passed": true
+        },
+        {
+          "name": "ObjectId and its hexadecimal string are different BSON values",
+          "passed": true
+        },
+        {
+          "name": "Decimal128 and aware BSON date round-trip with millisecond precision",
+          "passed": true
+        },
+        {
+          "name": "Extended JSON preserves ObjectId across serialization",
+          "passed": true
+        },
+        {
+          "name": "query builder rejects operator objects and keeps string input literal",
+          "passed": true
+        },
+        {
+          "name": "collection access does not supply per-request tenant isolation",
+          "passed": true
+        },
+        {
+          "name": "a reference field does not create foreign-key enforcement",
+          "passed": true
+        },
+        {
+          "name": "null equality includes missing fields while exists and type distinguish them",
+          "passed": true
+        },
+        {
+          "name": "single-field unique index treats missing and null as a shared null key",
+          "passed": true
+        },
+        {
+          "name": "operator update preserves other fields while replacement removes them",
+          "passed": true
+        },
+        {
+          "name": "addToSet prevents repeat insertion of the same scalar member",
+          "passed": true
+        },
+        {
+          "name": "sequential upsert reports insert then matched update",
+          "passed": true
+        },
+        {
+          "name": "ordered batch can leave earlier documents committed after a later validation failure",
+          "passed": true
+        }
+      ],
+      "observations": {
+        "typed_values": {
+          "decimal": "125.50",
+          "date": "2026-10-14T06:30:00.123000+00:00"
+        },
+        "tenant_filter_required": true,
+        "dangling_reference_accepted": true,
+        "null_query_ids": [
+          1,
+          2
+        ]
+      },
+      "scope": "Real MongoDB BSON adapters validators CRUD and unique indexes; no application authentication"
+    },
+    {
+      "group": "queries",
+      "total": 12,
+      "checks": [
+        {
+          "name": "separate dotted array predicates can match different elements",
+          "passed": true
+        },
+        {
+          "name": "elemMatch requires the conditions to hold on the same element",
+          "passed": true
+        },
+        {
+          "name": "array membership query matches a scalar contained in tags",
+          "passed": true
+        },
+        {
+          "name": "projection limits returned fields without changing tenant scope",
+          "passed": true
+        },
+        {
+          "name": "mixed inclusion and exclusion projection is rejected except the id exception",
+          "passed": true
+        },
+        {
+          "name": "scoped aggregation unwinds items and groups actual quantity and revenue",
+          "passed": true
+        },
+        {
+          "name": "unwind duplicates order-level totals if summed at item granularity",
+          "passed": true
+        },
+        {
+          "name": "outer tenant match alone does not scope a foreign lookup",
+          "passed": true
+        },
+        {
+          "name": "lookup pipeline includes tenant and SKU on the foreign collection",
+          "passed": true
+        },
+        {
+          "name": "keyset pagination uses a stable id tie-breaker and preserves tenant filter",
+          "passed": true
+        },
+        {
+          "name": "newer insert between pages does not shift this keyset continuation",
+          "passed": true
+        },
+        {
+          "name": "dot update preserves siblings while assigning an embedded object replaces it",
+          "passed": true
+        }
+      ],
+      "observations": {
+        "dotted_array_ids": [
+          "cross",
+          "same"
+        ],
+        "elem_match_ids": [
+          "same"
+        ],
+        "dashboard": [
+          {
+            "_id": "A",
+            "quantity": 6,
+            "revenue_minor": 600
+          },
+          {
+            "_id": "B",
+            "quantity": 1,
+            "revenue_minor": 300
+          }
+        ],
+        "unwind_total_trap": {
+          "wrong": 1400,
+          "correct": 900
+        },
+        "cursor_ids": [
+          6,
+          5,
+          4,
+          3,
+          2,
+          1
+        ]
+      },
+      "scope": "Actual MongoDB array queries aggregation lookup and cursor pagination"
+    },
+    {
+      "group": "indexes",
+      "total": 10,
+      "checks": [
+        {
+          "name": "unindexed selective ordered query naturally scans and sorts",
+          "passed": true
+        },
+        {
+          "name": "compound index preserves the actual selected documents",
+          "passed": true
+        },
+        {
+          "name": "natural compound index plan avoids a blocking sort",
+          "passed": true
+        },
+        {
+          "name": "selective indexed query examines fewer documents in the fixture",
+          "passed": true
+        },
+        {
+          "name": "covered indexed projection returns rows without fetching documents",
+          "passed": true
+        },
+        {
+          "name": "broad query naturally uses collection scan despite the selective-query index",
+          "passed": true
+        },
+        {
+          "name": "array index is multikey and supports a selective member query",
+          "passed": true
+        },
+        {
+          "name": "compound multikey index rejects independent parallel array fields",
+          "passed": true
+        },
+        {
+          "name": "unique multikey index constrains separate documents not repeated array entries within one",
+          "passed": true
+        },
+        {
+          "name": "partial unique index permits excluded missing values and rejects duplicate indexed email",
+          "passed": true
+        }
+      ],
+      "observations": {
+        "fixture_rows": 30000,
+        "matching_rows": 60,
+        "before": {
+          "stages": [
+            "COLLSCAN",
+            "SORT"
+          ],
+          "returned": 20,
+          "keys_examined": 0,
+          "documents_examined": 30000
+        },
+        "after": {
+          "stages": [
+            "FETCH",
+            "IXSCAN",
+            "LIMIT"
+          ],
+          "returned": 20,
+          "keys_examined": 20,
+          "documents_examined": 20
+        },
+        "covered": {
+          "stages": [
+            "IXSCAN",
+            "LIMIT",
+            "PROJECTION_COVERED"
+          ],
+          "returned": 20,
+          "keys_examined": 20,
+          "documents_examined": 0
+        },
+        "broad": {
+          "stages": [
+            "COLLSCAN"
+          ],
+          "returned": 24000,
+          "keys_examined": 0,
+          "documents_examined": 30000
+        },
+        "raw_before": {
+          "explainVersion": "1",
+          "queryPlanner": {
+            "namespace": "m14_indexes.events",
+            "indexFilterSet": false,
+            "parsedQuery": {
+              "$and": [
+                {
+                  "status": {
+                    "$eq": "open"
+                  }
+                },
+                {
+                  "tenant_id": {
+                    "$eq": 7
+                  }
+                }
+              ]
+            },
+            "queryHash": "390FF0EF",
+            "planCacheKey": "390FF0EF",
+            "optimizationTimeMillis": 0,
+            "maxIndexedOrSolutionsReached": false,
+            "maxIndexedAndSolutionsReached": false,
+            "maxScansToExplodeReached": false,
+            "winningPlan": {
+              "stage": "SORT",
+              "sortPattern": {
+                "created_at": -1,
+                "_id": -1
+              },
+              "memLimit": 104857600,
+              "limitAmount": 20,
+              "type": "simple",
+              "inputStage": {
+                "stage": "COLLSCAN",
+                "filter": {
+                  "$and": [
+                    {
+                      "status": {
+                        "$eq": "open"
+                      }
+                    },
+                    {
+                      "tenant_id": {
+                        "$eq": 7
+                      }
+                    }
+                  ]
+                },
+                "direction": "forward"
+              }
+            },
+            "rejectedPlans": []
+          },
+          "executionStats": {
+            "executionSuccess": true,
+            "nReturned": 20,
+            "executionTimeMillis": 12,
+            "totalKeysExamined": 0,
+            "totalDocsExamined": 30000,
+            "executionStages": {
+              "stage": "SORT",
+              "nReturned": 20,
+              "executionTimeMillisEstimate": 0,
+              "works": 30022,
+              "advanced": 20,
+              "needTime": 30001,
+              "needYield": 0,
+              "saveState": 30,
+              "restoreState": 30,
+              "isEOF": 1,
+              "sortPattern": {
+                "created_at": -1,
+                "_id": -1
+              },
+              "memLimit": 104857600,
+              "limitAmount": 20,
+              "type": "simple",
+              "totalDataSizeSorted": 7680,
+              "usedDisk": false,
+              "spills": 0,
+              "spilledDataStorageSize": 0,
+              "inputStage": {
+                "stage": "COLLSCAN",
+                "filter": {
+                  "$and": [
+                    {
+                      "status": {
+                        "$eq": "open"
+                      }
+                    },
+                    {
+                      "tenant_id": {
+                        "$eq": 7
+                      }
+                    }
+                  ]
+                },
+                "nReturned": 60,
+                "executionTimeMillisEstimate": 0,
+                "works": 30001,
+                "advanced": 60,
+                "needTime": 29940,
+                "needYield": 0,
+                "saveState": 30,
+                "restoreState": 30,
+                "isEOF": 1,
+                "direction": "forward",
+                "docsExamined": 30000
+              }
+            }
+          },
+          "command": {
+            "find": "events",
+            "filter": {
+              "tenant_id": 7,
+              "status": "open"
+            },
+            "sort": {
+              "created_at": -1,
+              "_id": -1
+            },
+            "limit": 20,
+            "$db": "m14_indexes"
+          },
+          "serverInfo": {
+            "host": "LAPTOP-35GIEML2",
+            "port": 56698,
+            "version": "7.0.28",
+            "gitVersion": "cfc346c59d2cc3dbc903507fc642e22e3097f362"
+          },
+          "serverParameters": {
+            "internalQueryFacetBufferSizeBytes": 104857600,
+            "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+            "internalLookupStageIntermediateDocumentMaxSizeBytes": 104857600,
+            "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+            "internalQueryMaxBlockingSortMemoryUsageBytes": 104857600,
+            "internalQueryProhibitBlockingMergeOnMongoS": 0,
+            "internalQueryMaxAddToSetBytes": 104857600,
+            "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600,
+            "internalQueryFrameworkControl": "forceClassicEngine"
+          },
+          "ok": 1.0,
+          "$clusterTime": {
+            "clusterTime": {
+              "$timestamp": {
+                "t": 1791966578,
+                "i": 30001
+              }
+            },
+            "signature": {
+              "hash": {
+                "$binary": {
+                  "base64": "AAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+                  "subType": "00"
+                }
+              },
+              "keyId": 0
+            }
+          },
+          "operationTime": {
+            "$timestamp": {
+              "t": 1791966578,
+              "i": 30001
+            }
+          }
+        },
+        "raw_after": {
+          "explainVersion": "1",
+          "queryPlanner": {
+            "namespace": "m14_indexes.events",
+            "indexFilterSet": false,
+            "parsedQuery": {
+              "$and": [
+                {
+                  "status": {
+                    "$eq": "open"
+                  }
+                },
+                {
+                  "tenant_id": {
+                    "$eq": 7
+                  }
+                }
+              ]
+            },
+            "queryHash": "390FF0EF",
+            "planCacheKey": "8031E241",
+            "optimizationTimeMillis": 0,
+            "maxIndexedOrSolutionsReached": false,
+            "maxIndexedAndSolutionsReached": false,
+            "maxScansToExplodeReached": false,
+            "winningPlan": {
+              "stage": "LIMIT",
+              "limitAmount": 20,
+              "inputStage": {
+                "stage": "FETCH",
+                "inputStage": {
+                  "stage": "IXSCAN",
+                  "keyPattern": {
+                    "tenant_id": 1,
+                    "status": 1,
+                    "created_at": -1,
+                    "_id": -1
+                  },
+                  "indexName": "tenant_status_latest",
+                  "isMultiKey": false,
+                  "multiKeyPaths": {
+                    "tenant_id": [],
+                    "status": [],
+                    "created_at": [],
+                    "_id": []
+                  },
+                  "isUnique": false,
+                  "isSparse": false,
+                  "isPartial": false,
+                  "indexVersion": 2,
+                  "direction": "forward",
+                  "indexBounds": {
+                    "tenant_id": [
+                      "[7, 7]"
+                    ],
+                    "status": [
+                      "[\"open\", \"open\"]"
+                    ],
+                    "created_at": [
+                      "[MaxKey, MinKey]"
+                    ],
+                    "_id": [
+                      "[MaxKey, MinKey]"
+                    ]
+                  }
+                }
+              }
+            },
+            "rejectedPlans": []
+          },
+          "executionStats": {
+            "executionSuccess": true,
+            "nReturned": 20,
+            "executionTimeMillis": 4,
+            "totalKeysExamined": 20,
+            "totalDocsExamined": 20,
+            "executionStages": {
+              "stage": "LIMIT",
+              "nReturned": 20,
+              "executionTimeMillisEstimate": 0,
+              "works": 21,
+              "advanced": 20,
+              "needTime": 0,
+              "needYield": 0,
+              "saveState": 0,
+              "restoreState": 0,
+              "isEOF": 1,
+              "limitAmount": 20,
+              "inputStage": {
+                "stage": "FETCH",
+                "nReturned": 20,
+                "executionTimeMillisEstimate": 0,
+                "works": 20,
+                "advanced": 20,
+                "needTime": 0,
+                "needYield": 0,
+                "saveState": 0,
+                "restoreState": 0,
+                "isEOF": 0,
+                "docsExamined": 20,
+                "alreadyHasObj": 0,
+                "inputStage": {
+                  "stage": "IXSCAN",
+                  "nReturned": 20,
+                  "executionTimeMillisEstimate": 0,
+                  "works": 20,
+                  "advanced": 20,
+                  "needTime": 0,
+                  "needYield": 0,
+                  "saveState": 0,
+                  "restoreState": 0,
+                  "isEOF": 0,
+                  "keyPattern": {
+                    "tenant_id": 1,
+                    "status": 1,
+                    "created_at": -1,
+                    "_id": -1
+                  },
+                  "indexName": "tenant_status_latest",
+                  "isMultiKey": false,
+                  "multiKeyPaths": {
+                    "tenant_id": [],
+                    "status": [],
+                    "created_at": [],
+                    "_id": []
+                  },
+                  "isUnique": false,
+                  "isSparse": false,
+                  "isPartial": false,
+                  "indexVersion": 2,
+                  "direction": "forward",
+                  "indexBounds": {
+                    "tenant_id": [
+                      "[7, 7]"
+                    ],
+                    "status": [
+                      "[\"open\", \"open\"]"
+                    ],
+                    "created_at": [
+                      "[MaxKey, MinKey]"
+                    ],
+                    "_id": [
+                      "[MaxKey, MinKey]"
+                    ]
+                  },
+                  "keysExamined": 20,
+                  "seeks": 1,
+                  "dupsTested": 0,
+                  "dupsDropped": 0
+                }
+              }
+            }
+          },
+          "command": {
+            "find": "events",
+            "filter": {
+              "tenant_id": 7,
+              "status": "open"
+            },
+            "sort": {
+              "created_at": -1,
+              "_id": -1
+            },
+            "limit": 20,
+            "$db": "m14_indexes"
+          },
+          "serverInfo": {
+            "host": "LAPTOP-35GIEML2",
+            "port": 56698,
+            "version": "7.0.28",
+            "gitVersion": "cfc346c59d2cc3dbc903507fc642e22e3097f362"
+          },
+          "serverParameters": {
+            "internalQueryFacetBufferSizeBytes": 104857600,
+            "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+            "internalLookupStageIntermediateDocumentMaxSizeBytes": 104857600,
+            "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+            "internalQueryMaxBlockingSortMemoryUsageBytes": 104857600,
+            "internalQueryProhibitBlockingMergeOnMongoS": 0,
+            "internalQueryMaxAddToSetBytes": 104857600,
+            "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600,
+            "internalQueryFrameworkControl": "forceClassicEngine"
+          },
+          "ok": 1.0,
+          "$clusterTime": {
+            "clusterTime": {
+              "$timestamp": {
+                "t": 1791966578,
+                "i": 30006
+              }
+            },
+            "signature": {
+              "hash": {
+                "$binary": {
+                  "base64": "AAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+                  "subType": "00"
+                }
+              },
+              "keyId": 0
+            }
+          },
+          "operationTime": {
+            "$timestamp": {
+              "t": 1791966578,
+              "i": 30006
+            }
+          }
+        },
+        "raw_covered": {
+          "explainVersion": "1",
+          "queryPlanner": {
+            "namespace": "m14_indexes.events",
+            "indexFilterSet": false,
+            "parsedQuery": {
+              "$and": [
+                {
+                  "status": {
+                    "$eq": "open"
+                  }
+                },
+                {
+                  "tenant_id": {
+                    "$eq": 7
+                  }
+                }
+              ]
+            },
+            "queryHash": "A210AC8D",
+            "planCacheKey": "2CF4A225",
+            "optimizationTimeMillis": 0,
+            "maxIndexedOrSolutionsReached": false,
+            "maxIndexedAndSolutionsReached": false,
+            "maxScansToExplodeReached": false,
+            "winningPlan": {
+              "stage": "LIMIT",
+              "limitAmount": 20,
+              "inputStage": {
+                "stage": "PROJECTION_COVERED",
+                "transformBy": {
+                  "_id": 1,
+                  "created_at": 1
+                },
+                "inputStage": {
+                  "stage": "IXSCAN",
+                  "keyPattern": {
+                    "tenant_id": 1,
+                    "status": 1,
+                    "created_at": -1,
+                    "_id": -1
+                  },
+                  "indexName": "tenant_status_latest",
+                  "isMultiKey": false,
+                  "multiKeyPaths": {
+                    "tenant_id": [],
+                    "status": [],
+                    "created_at": [],
+                    "_id": []
+                  },
+                  "isUnique": false,
+                  "isSparse": false,
+                  "isPartial": false,
+                  "indexVersion": 2,
+                  "direction": "forward",
+                  "indexBounds": {
+                    "tenant_id": [
+                      "[7, 7]"
+                    ],
+                    "status": [
+                      "[\"open\", \"open\"]"
+                    ],
+                    "created_at": [
+                      "[MaxKey, MinKey]"
+                    ],
+                    "_id": [
+                      "[MaxKey, MinKey]"
+                    ]
+                  }
+                }
+              }
+            },
+            "rejectedPlans": []
+          },
+          "executionStats": {
+            "executionSuccess": true,
+            "nReturned": 20,
+            "executionTimeMillis": 0,
+            "totalKeysExamined": 20,
+            "totalDocsExamined": 0,
+            "executionStages": {
+              "stage": "LIMIT",
+              "nReturned": 20,
+              "executionTimeMillisEstimate": 0,
+              "works": 21,
+              "advanced": 20,
+              "needTime": 0,
+              "needYield": 0,
+              "saveState": 0,
+              "restoreState": 0,
+              "isEOF": 1,
+              "limitAmount": 20,
+              "inputStage": {
+                "stage": "PROJECTION_COVERED",
+                "nReturned": 20,
+                "executionTimeMillisEstimate": 0,
+                "works": 20,
+                "advanced": 20,
+                "needTime": 0,
+                "needYield": 0,
+                "saveState": 0,
+                "restoreState": 0,
+                "isEOF": 0,
+                "transformBy": {
+                  "_id": 1,
+                  "created_at": 1
+                },
+                "inputStage": {
+                  "stage": "IXSCAN",
+                  "nReturned": 20,
+                  "executionTimeMillisEstimate": 0,
+                  "works": 20,
+                  "advanced": 20,
+                  "needTime": 0,
+                  "needYield": 0,
+                  "saveState": 0,
+                  "restoreState": 0,
+                  "isEOF": 0,
+                  "keyPattern": {
+                    "tenant_id": 1,
+                    "status": 1,
+                    "created_at": -1,
+                    "_id": -1
+                  },
+                  "indexName": "tenant_status_latest",
+                  "isMultiKey": false,
+                  "multiKeyPaths": {
+                    "tenant_id": [],
+                    "status": [],
+                    "created_at": [],
+                    "_id": []
+                  },
+                  "isUnique": false,
+                  "isSparse": false,
+                  "isPartial": false,
+                  "indexVersion": 2,
+                  "direction": "forward",
+                  "indexBounds": {
+                    "tenant_id": [
+                      "[7, 7]"
+                    ],
+                    "status": [
+                      "[\"open\", \"open\"]"
+                    ],
+                    "created_at": [
+                      "[MaxKey, MinKey]"
+                    ],
+                    "_id": [
+                      "[MaxKey, MinKey]"
+                    ]
+                  },
+                  "keysExamined": 20,
+                  "seeks": 1,
+                  "dupsTested": 0,
+                  "dupsDropped": 0
+                }
+              }
+            }
+          },
+          "command": {
+            "find": "events",
+            "filter": {
+              "tenant_id": 7,
+              "status": "open"
+            },
+            "sort": {
+              "created_at": -1,
+              "_id": -1
+            },
+            "limit": 20,
+            "projection": {
+              "_id": 1,
+              "created_at": 1
+            },
+            "$db": "m14_indexes"
+          },
+          "serverInfo": {
+            "host": "LAPTOP-35GIEML2",
+            "port": 56698,
+            "version": "7.0.28",
+            "gitVersion": "cfc346c59d2cc3dbc903507fc642e22e3097f362"
+          },
+          "serverParameters": {
+            "internalQueryFacetBufferSizeBytes": 104857600,
+            "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+            "internalLookupStageIntermediateDocumentMaxSizeBytes": 104857600,
+            "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+            "internalQueryMaxBlockingSortMemoryUsageBytes": 104857600,
+            "internalQueryProhibitBlockingMergeOnMongoS": 0,
+            "internalQueryMaxAddToSetBytes": 104857600,
+            "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600,
+            "internalQueryFrameworkControl": "forceClassicEngine"
+          },
+          "ok": 1.0,
+          "$clusterTime": {
+            "clusterTime": {
+              "$timestamp": {
+                "t": 1791966578,
+                "i": 30006
+              }
+            },
+            "signature": {
+              "hash": {
+                "$binary": {
+                  "base64": "AAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+                  "subType": "00"
+                }
+              },
+              "keyId": 0
+            }
+          },
+          "operationTime": {
+            "$timestamp": {
+              "t": 1791966578,
+              "i": 30006
+            }
+          }
+        },
+        "raw_broad": {
+          "explainVersion": "1",
+          "queryPlanner": {
+            "namespace": "m14_indexes.events",
+            "indexFilterSet": false,
+            "parsedQuery": {
+              "status": {
+                "$eq": "closed"
+              }
+            },
+            "queryHash": "4B6FAB47",
+            "planCacheKey": "65D76290",
+            "optimizationTimeMillis": 0,
+            "maxIndexedOrSolutionsReached": false,
+            "maxIndexedAndSolutionsReached": false,
+            "maxScansToExplodeReached": false,
+            "winningPlan": {
+              "stage": "COLLSCAN",
+              "filter": {
+                "status": {
+                  "$eq": "closed"
+                }
+              },
+              "direction": "forward"
+            },
+            "rejectedPlans": []
+          },
+          "executionStats": {
+            "executionSuccess": true,
+            "nReturned": 24000,
+            "executionTimeMillis": 10,
+            "totalKeysExamined": 0,
+            "totalDocsExamined": 30000,
+            "executionStages": {
+              "stage": "COLLSCAN",
+              "filter": {
+                "status": {
+                  "$eq": "closed"
+                }
+              },
+              "nReturned": 24000,
+              "executionTimeMillisEstimate": 0,
+              "works": 30001,
+              "advanced": 24000,
+              "needTime": 6000,
+              "needYield": 0,
+              "saveState": 30,
+              "restoreState": 30,
+              "isEOF": 1,
+              "direction": "forward",
+              "docsExamined": 30000
+            }
+          },
+          "command": {
+            "find": "events",
+            "filter": {
+              "status": "closed"
+            },
+            "$db": "m14_indexes"
+          },
+          "serverInfo": {
+            "host": "LAPTOP-35GIEML2",
+            "port": 56698,
+            "version": "7.0.28",
+            "gitVersion": "cfc346c59d2cc3dbc903507fc642e22e3097f362"
+          },
+          "serverParameters": {
+            "internalQueryFacetBufferSizeBytes": 104857600,
+            "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+            "internalLookupStageIntermediateDocumentMaxSizeBytes": 104857600,
+            "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+            "internalQueryMaxBlockingSortMemoryUsageBytes": 104857600,
+            "internalQueryProhibitBlockingMergeOnMongoS": 0,
+            "internalQueryMaxAddToSetBytes": 104857600,
+            "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600,
+            "internalQueryFrameworkControl": "forceClassicEngine"
+          },
+          "ok": 1.0,
+          "$clusterTime": {
+            "clusterTime": {
+              "$timestamp": {
+                "t": 1791966578,
+                "i": 30006
+              }
+            },
+            "signature": {
+              "hash": {
+                "$binary": {
+                  "base64": "AAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+                  "subType": "00"
+                }
+              },
+              "keyId": 0
+            }
+          },
+          "operationTime": {
+            "$timestamp": {
+              "t": 1791966578,
+              "i": 30006
+            }
+          }
+        }
+      },
+      "scope": "Actual unhinted query plans on 30000 rows plus multikey/partial constraints; not a benchmark"
+    },
+    {
+      "group": "atomic",
+      "total": 6,
+      "checks": [
+        {
+          "name": "two stale read-modify-set decisions can overwrite a stock decrement",
+          "passed": true
+        },
+        {
+          "name": "independent concurrent increment operations preserve both decrements",
+          "passed": true
+        },
+        {
+          "name": "conditional single-document stock update permits one last-unit winner",
+          "passed": true
+        },
+        {
+          "name": "revision predicate rejects a stale optimistic writer",
+          "passed": true
+        },
+        {
+          "name": "one document update changes embedded state and counter together",
+          "passed": true
+        },
+        {
+          "name": "independent document writes do not roll back after an application failure",
+          "passed": true
+        }
+      ],
+      "observations": {
+        "stale_absolute_final": 8,
+        "relative_final": 7,
+        "last_unit": {
+          "modified_counts": [
+            0,
+            1
+          ],
+          "stock": 0
+        },
+        "without_transaction_balances": [
+          90,
+          100
+        ]
+      },
+      "scope": "Real writes and barrier-started concurrent requests; no claim of observed internal lock scheduling"
+    },
+    {
+      "group": "transactions",
+      "total": 15,
+      "checks": [
+        {
+          "name": "multi-document transaction commits the complete transfer",
+          "passed": true
+        },
+        {
+          "name": "transaction exception rolls back its partial transfer",
+          "passed": true
+        },
+        {
+          "name": "snapshot transaction retains its read view after another session commits",
+          "passed": true
+        },
+        {
+          "name": "real transient write conflict causes callback retry and fresh reads",
+          "passed": true
+        },
+        {
+          "name": "purchase commits trusted price snapshot stock order and outbox together",
+          "passed": true
+        },
+        {
+          "name": "same-key replay returns original result without repeating stock or outbox",
+          "passed": true
+        },
+        {
+          "name": "same key with changed quantity is a conflict",
+          "passed": true
+        },
+        {
+          "name": "same key and SKU in another tenant form an independent operation",
+          "passed": true
+        },
+        {
+          "name": "invalid quantity shapes and bounds fail before writes",
+          "passed": true
+        },
+        {
+          "name": "unavailable stock rolls back the unique pending gate",
+          "passed": true
+        },
+        {
+          "name": "failure after decrement rolls back stock order and outbox",
+          "passed": true
+        },
+        {
+          "name": "barrier-started distinct-key purchases cannot both consume the last unit",
+          "passed": true
+        },
+        {
+          "name": "barrier-started duplicate purchases create one order and one replay",
+          "passed": true
+        },
+        {
+          "name": "committed replay still succeeds when stock is zero",
+          "passed": true
+        },
+        {
+          "name": "rolled-back unavailable key can succeed after later restock",
+          "passed": true
+        }
+      ],
+      "observations": {
+        "snapshot_reads": [
+          100,
+          100
+        ],
+        "real_transaction_retry": {
+          "read_values": [
+            0,
+            1
+          ],
+          "failures": [
+            {
+              "code": 112,
+              "transient": true
+            }
+          ],
+          "final_value": 2
+        },
+        "purchase": {
+          "total_minor": 25000,
+          "currency": "INR",
+          "replayed": false
+        },
+        "last_unit_race": {
+          "stock": 0,
+          "orders": 1,
+          "outbox": 1,
+          "outcome": "one reserved and one unavailable"
+        },
+        "same_key_race": {
+          "stock": 0,
+          "orders": 1,
+          "outbox": 1,
+          "outcome": "one new and one replay"
+        }
+      },
+      "scope": "Real single-member replica-set transactions and concurrent service calls; no failover or HTTP/provider delivery"
+    },
+    {
+      "group": "pool",
+      "total": 5,
+      "checks": [
+        {
+          "name": "cursor construction is lazy and iteration issues real find and getMore commands",
+          "passed": true
+        },
+        {
+          "name": "explicit close releases a still-open server cursor",
+          "passed": true
+        },
+        {
+          "name": "held real command exhausts max-size-one pool and bounds another checkout",
+          "passed": true
+        },
+        {
+          "name": "pool serves requests again after its held connection is released",
+          "passed": true
+        },
+        {
+          "name": "closed MongoClient rejects subsequent operations",
+          "passed": true
+        }
+      ],
+      "observations": {
+        "cursor_commands": {
+          "find": 1,
+          "getMore": 2
+        },
+        "exhaustion": "WaitQueueTimeoutError",
+        "pool_max": 1
+      },
+      "scope": "Actual synchronous PyMongo command monitoring pool checkout pressure cursor cleanup and client close"
+    }
+  ]
+}

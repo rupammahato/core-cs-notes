@@ -1,0 +1,177 @@
+PASS 01-binding: Mutation versus local rebinding
+['request', 'accepted'] ['request', 'accepted'] True
+5 4
+
+PASS 02-copy: Shallow and deep copies
+{'tags': ['backend', 'python']}
+{'tags': ['backend']}
+False False
+
+PASS 03-tuple: Tuple immutability and augmented assignment
+assignment rejected
+(['a', 'b'],)
+unhashable
+
+PASS 04-equality: Identity and equality
+True False False
+True True False
+1
+third
+
+PASS 05-collections: Collection operations and stable sort
+None [1, 2, 3]
+3 [1, 3]
+a ['b']
+[('second', 1), ('first', 2), ('third', 2)]
+['api', 'db']
+
+PASS 06-dict: Hashability and insertion order
+['a', 'b']
+['b', 'a']
+row
+list key rejected
+
+PASS 07-absence: Missing, null and false values
+20
+0
+True
+True
+False True
+
+PASS 08-defaults: Default arguments persist across calls
+['a', 'b'] ['a', 'b'] True
+['a'] ['b']
+
+PASS 09-scope: Local binding and nonlocal closure
+local read before binding
+1 2 10
+
+PASS 10-closures: Late-bound closures and explicit capture
+[2, 2, 2]
+[0, 1, 2]
+
+PASS 11-arguments: Positional-only and keyword-only arguments
+('orders', 5, ['trace'])
+positional-only argument required
+limit must be keyword
+
+PASS 12-decorator: Decorator wrapping and metadata
+5 total ['total']
+9
+
+PASS 13-iterator: Iterable versus one-shot iterator
+True 1
+[2] []
+[1, 2] [1, 2]
+exhausted
+
+PASS 14-generator: Lazy execution and explicit cleanup
+created
+start
+10
+cleanup
+[]
+
+PASS 15-comprehensions: Eager lists and lazy generator expressions
+[0, 1, 4] [0, 1, 2]
+[]
+0 [0]
+5 [0, 1, 2]
+
+PASS 16-exceptions: Exception translation preserves cause
+quantity must be an integer
+ValueError
+
+PASS 17-context: Context cleanup on failure
+open
+handle
+close
+propagated
+
+PASS 18-finally: Returning from finally hides an error
+masked
+
+PASS 19-dataclass: Factories and shallow frozen behavior
+['changed'] []
+rebinding rejected
+
+PASS 20-classes: Class attributes and bound methods
+['visible'] a False
+True
+
+PASS 21-typing: Annotations do not validate runtime inputs
+many
+True
+True
+
+PASS 22-values: Money, text bytes and aware timestamps
+False
+True
+2.68
+1 3 True
+2026-10-14T06:30:00+00:00
+{"amount_paise": 12500}
+
+PASS 23-imports: Imports cache module objects and bind names
+module initialized
+True initial changed ['row']
+
+PASS 24-gc: Collect an unreachable reference cycle explicitly
+True
+True
+
+PASS 25-async-lifecycle: Coroutine creation, scheduling and blocking calls
+[]
+7 ['start', 'done']
+['blocking call returned', 'caller continued', 'tick']
+thread offload: True
+
+PASS 26-bounded-workers: Bounded queue and fixed async worker count
+jobs: 8 peak: 3 queued: 3
+
+PASS 27-taskgroup: TaskGroup cancels siblings and waits for cleanup
+failures: 1
+peer cleaned: True
+
+PASS 28-timeout: Timeout cancellation runs finally
+timed out
+cleaned: True
+
+PASS 29-threads: GIL does not make a read-modify-write transaction
+unsynchronized: 1
+locked: 2000
+
+PASS 30-processes: Explicit spawn, picklable worker and copied arguments
+method: spawn
+results: [30, 204]
+parent: ['parent'] child: ['parent', 'child']
+
+PASS domain-1: trusted price and validated quantity determine total
+
+PASS domain-2: public projection excludes internal fields and normalizes UTC
+
+PASS domain-3: string quantity rejected
+
+PASS domain-4: boolean quantity rejected despite bool subclassing int
+
+PASS domain-5: zero negative float null and non-finite quantities rejected
+
+PASS domain-6: quantity cap enforced
+
+PASS domain-7: missing fields invalid identifier and non-object bodies rejected
+
+PASS domain-8: client price and tenant injection rejected
+
+PASS domain-9: tenant catalog boundary enforced
+
+PASS domain-10: malformed JSON rejected with cause preserved
+
+PASS domain-11: duplicate JSON keys rejected
+
+PASS domain-12: invalid UTF-8 rejected
+
+PASS domain-13: body byte limit enforced before parsing
+
+PASS domain-14: naive internal clock rejected
+
+PASS total: 44 (24 language, 6 concurrency, 14 domain)

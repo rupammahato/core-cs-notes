@@ -1,0 +1,9 @@
+{
+  "containers_removed": true,
+  "helper_containers_removed": true,
+  "volumes_removed": true,
+  "networks_removed": true,
+  "owned_image_removed": true,
+  "base_images_and_build_cache_retained": true,
+  "listeners_stopped": true
+}

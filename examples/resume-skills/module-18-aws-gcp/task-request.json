@@ -1,0 +1,23 @@
+{
+  "parent": "projects/placement-fixture/locations/us-central1/queues/ingestion",
+  "task": {
+    "name": "projects/placement-fixture/locations/us-central1/queues/ingestion/tasks/5e2a2208f9534574f27f70d8bfd5f9c92e459d5338b807c1e984ee122dc70c88",
+    "httpRequest": {
+      "url": "https://worker.example.test/tasks/import",
+      "httpMethod": 1,
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "body": "eyJqb2JfaWQiOiJqb2ItMSIsInRlbmFudF9pZCI6InRlbmFudC1hIiwidmFsdWUiOiJoZWxsbyJ9",
+      "oidcToken": {
+        "serviceAccountEmail": "task-invoker@placement-fixture.iam.gserviceaccount.com",
+        "audience": "https://worker.example.test/tasks/import"
+      }
+    },
+    "dispatchDeadline": "30s",
+    "dispatchCount": 0,
+    "responseCount": 0,
+    "view": 0
+  },
+  "responseView": 0
+}

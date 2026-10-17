@@ -1,0 +1,237 @@
+{
+  "module": 29,
+  "title": "Consolidation and Interview Drills",
+  "verified_date": "2026-10-16",
+  "node": "v22.14.0",
+  "python": "3.12.10",
+  "sqlite": "3.49.1",
+  "os": "Windows-11-10.0.26300-SP0",
+  "checks": {
+    "counts": {
+      "runtime-output": 14,
+      "chapter-reference": 29
+    },
+    "total": 43,
+    "all_passed": true
+  },
+  "cleanup": {
+    "drill_processes": [
+      {
+        "drill": "D01",
+        "pid": 23612,
+        "exit_code": 0,
+        "exited": true
+      },
+      {
+        "drill": "D02",
+        "pid": 9452,
+        "exit_code": 0,
+        "exited": true
+      },
+      {
+        "drill": "D03",
+        "pid": 7276,
+        "exit_code": 0,
+        "exited": true
+      },
+      {
+        "drill": "D04",
+        "pid": 23128,
+        "exit_code": 0,
+        "exited": true
+      },
+      {
+        "drill": "D05",
+        "pid": 3184,
+        "exit_code": 0,
+        "exited": true
+      },
+      {
+        "drill": "D06",
+        "pid": 27988,
+        "exit_code": 0,
+        "exited": true
+      },
+      {
+        "drill": "D07",
+        "pid": 9576,
+        "exit_code": 0,
+        "exited": true
+      },
+      {
+        "drill": "D08",
+        "pid": 19988,
+        "exit_code": 0,
+        "exited": true
+      },
+      {
+        "drill": "D09",
+        "pid": 5652,
+        "exit_code": 0,
+        "exited": true
+      },
+      {
+        "drill": "D10",
+        "pid": 27600,
+        "exit_code": 0,
+        "exited": true
+      },
+      {
+        "drill": "D11",
+        "pid": 15196,
+        "exit_code": 0,
+        "exited": true
+      },
+      {
+        "drill": "D12",
+        "pid": 8596,
+        "exit_code": 0,
+        "exited": true
+      },
+      {
+        "drill": "D13",
+        "pid": 24592,
+        "exit_code": 0,
+        "exited": true
+      },
+      {
+        "drill": "D14",
+        "pid": 30128,
+        "exit_code": 0,
+        "exited": true
+      }
+    ],
+    "all_drill_processes_exited": true,
+    "sqlite_storage": "in-memory connections explicitly closed inside three SQL drills",
+    "persistent_listener_started": false,
+    "external_services_called": false
+  },
+  "content": {
+    "chapter": "resume-skills-handbook-part-31-module-29-consolidation-interview-drills.md",
+    "words": 10964,
+    "lines": 1576,
+    "rapid_fire_questions": 60,
+    "debug_cards": 16,
+    "self_test_questions": 24,
+    "confusable_pairs": 36,
+    "output_drills": 14,
+    "teaching_module_links": 29,
+    "practice_tasks": 10,
+    "unchecked_learning_items": 12,
+    "source_fidelity": [
+      "drills/d01-async-prefix.mjs",
+      "drills/d02-esm-microtasks.mjs",
+      "drills/d03-promise-effects.mjs",
+      "drills/d04-async-map.mjs",
+      "drills/d05-shallow-copy.mjs",
+      "drills/d06-json-boundary.mjs",
+      "drills/d07-mutable-default.py",
+      "drills/d08-offset.py",
+      "drills/d09-decimal.py",
+      "drills/d10-coroutine.py",
+      "drills/d11-sql-null-count.py",
+      "drills/d12-sql-null-unique.py",
+      "drills/d13-sql-rollback.py",
+      "drills/d14-async-filter.mjs"
+    ],
+    "timing_minutes": {
+      "backend_mock": 45,
+      "ai_mock": 45,
+      "two_hour_route": 120,
+      "seven_day_active": 840,
+      "three_day_active": 450
+    },
+    "self_test_maximum": 48,
+    "result_fidelity": {
+      "D01": true,
+      "D02": true,
+      "D03": true,
+      "D04": true,
+      "D05": true,
+      "D06": true,
+      "D07": true,
+      "D08": true,
+      "D09": true,
+      "D10": true,
+      "D11": true,
+      "D12": true,
+      "D13": true,
+      "D14": true,
+      "versions": true
+    },
+    "all_module_routes_present": true
+  },
+  "dependency_check": "Output drills and verification: Python standard library, Node.js built-ins and local source files only.\nRecorded runtime: Python 3.12.10, Node.js v22.14.0, SQLite 3.49.1.\nNo third-party package install/download, Docker startup, hosted model/provider/payment call or cloud credentials.\nSite validation uses the existing installed Next.js/Fumadocs dependencies and cached font fixture when available.\nThe chapter-reference audit checks canonical files/routes/hashes, not all earlier runtime environments or production claims.",
+  "website": {
+    "build_passed": true,
+    "static_pages": 105,
+    "routes_checked": 33,
+    "all_routes_200": true,
+    "assertions": {
+      "title": true,
+      "q60": true,
+      "outputDrills": true,
+      "banks": true,
+      "actualOutput": true,
+      "references": true,
+      "answerCheckpoints": true,
+      "timedPractice": true,
+      "scope": true,
+      "mainComplete": true,
+      "nextTrack": true,
+      "group": true,
+      "roadmapLink": true,
+      "previousLink": true
+    },
+    "search": {
+      "status": 200,
+      "results": 18,
+      "chapterIndexed": true,
+      "scoped": true
+    },
+    "temporary_server_closed": true,
+    "cached_font_fixture_used": true
+  },
+  "ports_stopped": {
+    "3000": true,
+    "55473": true
+  },
+  "git_diff_check_passed": true,
+  "trailing_whitespace_files": [],
+  "core_handbooks": [
+    {
+      "subject": "DSA Notes",
+      "files": 17,
+      "lines": 17589
+    },
+    {
+      "subject": "OOP Notes",
+      "files": 13,
+      "lines": 8806
+    },
+    {
+      "subject": "OS Notes",
+      "files": 13,
+      "lines": 6341
+    },
+    {
+      "subject": "DBMS Notes",
+      "files": 13,
+      "lines": 9613
+    },
+    {
+      "subject": "CN Notes",
+      "files": 13,
+      "lines": 9322
+    }
+  ],
+  "resume_handbook": {
+    "files": 31,
+    "lines": 37575,
+    "groups": 11,
+    "main_sequence_authored": true,
+    "learner_mastery_asserted": false
+  },
+  "next": "Architecture companion roadmap, then A0: How to approach a design question",
+  "scope": "Fourteen new isolated language/SQLite output drills and 29 canonical teaching-chapter reference audits. Debug cards, mock interviews, schedules and self-test answers are editorial learning material, not executed production cases or a scored user assessment. Earlier service/database/browser/provider fixtures were not rerun."
+}

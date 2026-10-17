@@ -1,0 +1,716 @@
+{
+  "module": 24,
+  "verified_date": "2026-10-15",
+  "python": "3.12.10",
+  "os": "Windows-11-10.0.26300-SP0",
+  "postgresql": "16.15",
+  "pgvector": "0.8.6",
+  "dependencies": {
+    "psycopg": "3.3.4",
+    "psycopg-binary": "3.3.4"
+  },
+  "counts": {
+    "math": 12,
+    "space": 11,
+    "contract": 12,
+    "engine": 11,
+    "lifecycle": 12,
+    "retrieval": 8,
+    "authorization": 8,
+    "ann": 15,
+    "cleanup": 3
+  },
+  "total": 92,
+  "checks": [
+    {
+      "group": "math",
+      "name": "dot magnitude calculation",
+      "passed": true
+    },
+    {
+      "group": "math",
+      "name": "cosine ignores positive scaling",
+      "passed": true
+    },
+    {
+      "group": "math",
+      "name": "opposite vectors cosine minus one",
+      "passed": true
+    },
+    {
+      "group": "math",
+      "name": "orthogonal vectors cosine zero",
+      "passed": true
+    },
+    {
+      "group": "math",
+      "name": "L2 is symmetric",
+      "passed": true
+    },
+    {
+      "group": "math",
+      "name": "identical vectors distance zero",
+      "passed": true
+    },
+    {
+      "group": "math",
+      "name": "metric changes rankings when magnitudes vary",
+      "passed": true
+    },
+    {
+      "group": "math",
+      "name": "normalized L2 squared equals twice cosine distance",
+      "passed": true
+    },
+    {
+      "group": "math",
+      "name": "normalized dot equals cosine",
+      "passed": true
+    },
+    {
+      "group": "math",
+      "name": "normalizing zero rejected",
+      "passed": true
+    },
+    {
+      "group": "math",
+      "name": "mismatched dot dimensions rejected",
+      "passed": true
+    },
+    {
+      "group": "math",
+      "name": "mismatched L2 dimensions rejected",
+      "passed": true
+    },
+    {
+      "group": "space",
+      "name": "compatible dimensions accepted",
+      "passed": true
+    },
+    {
+      "group": "space",
+      "name": "short rejected by application",
+      "passed": true
+    },
+    {
+      "group": "space",
+      "name": "zero rejected by application",
+      "passed": true
+    },
+    {
+      "group": "space",
+      "name": "NaN rejected by application",
+      "passed": true
+    },
+    {
+      "group": "space",
+      "name": "Infinity rejected by application",
+      "passed": true
+    },
+    {
+      "group": "space",
+      "name": "string rejected by application",
+      "passed": true
+    },
+    {
+      "group": "space",
+      "name": "boolean rejected by application",
+      "passed": true
+    },
+    {
+      "group": "space",
+      "name": "model mismatch rejected even at same dimensions",
+      "passed": true
+    },
+    {
+      "group": "space",
+      "name": "revision mismatch rejected even at same dimensions",
+      "passed": true
+    },
+    {
+      "group": "space",
+      "name": "preprocessing mismatch rejected even at same dimensions",
+      "passed": true
+    },
+    {
+      "group": "space",
+      "name": "metric mismatch rejected even at same dimensions",
+      "passed": true
+    },
+    {
+      "group": "contract",
+      "name": "upsert body selects trusted namespace",
+      "passed": true
+    },
+    {
+      "group": "contract",
+      "name": "namespaces differ between authenticated tenants",
+      "passed": true
+    },
+    {
+      "group": "contract",
+      "name": "versioned deterministic record IDs",
+      "passed": true
+    },
+    {
+      "group": "contract",
+      "name": "new revision has distinct record IDs",
+      "passed": true
+    },
+    {
+      "group": "contract",
+      "name": "query carries mandatory filters",
+      "passed": true
+    },
+    {
+      "group": "contract",
+      "name": "query omits values and requests metadata",
+      "passed": true
+    },
+    {
+      "group": "contract",
+      "name": "delete explicitly names owned record IDs",
+      "passed": true
+    },
+    {
+      "group": "contract",
+      "name": "unknown namespace denied",
+      "passed": true
+    },
+    {
+      "group": "contract",
+      "name": "invalid record ID rejected",
+      "passed": true
+    },
+    {
+      "group": "contract",
+      "name": "empty delete does not become deleteAll",
+      "passed": true
+    },
+    {
+      "group": "contract",
+      "name": "top_k application cap enforced",
+      "passed": true
+    },
+    {
+      "group": "contract",
+      "name": "incompatible space cannot be upserted",
+      "passed": true
+    },
+    {
+      "group": "engine",
+      "name": "actual pgvector extension version",
+      "passed": true
+    },
+    {
+      "group": "engine",
+      "name": "local role cannot bypass RLS",
+      "passed": true
+    },
+    {
+      "group": "engine",
+      "name": "engine L2 agrees with Python within float32 tolerance",
+      "passed": true
+    },
+    {
+      "group": "engine",
+      "name": "inner product operator returns negative dot",
+      "passed": true
+    },
+    {
+      "group": "engine",
+      "name": "cosine distance agrees with Python",
+      "passed": true
+    },
+    {
+      "group": "engine",
+      "name": "pgvector rejects [NaN,1,0]",
+      "passed": true
+    },
+    {
+      "group": "engine",
+      "name": "pgvector rejects [Infinity,1,0]",
+      "passed": true
+    },
+    {
+      "group": "engine",
+      "name": "pgvector rejects [-Infinity,1,0]",
+      "passed": true
+    },
+    {
+      "group": "engine",
+      "name": "vector column cast rejects dimension mismatch",
+      "passed": true
+    },
+    {
+      "group": "engine",
+      "name": "raw cosine zero vector distance is NaN",
+      "passed": true
+    },
+    {
+      "group": "engine",
+      "name": "raw NULL distance stays NULL",
+      "passed": true
+    },
+    {
+      "group": "lifecycle",
+      "name": "publish alpha revision 1",
+      "passed": true
+    },
+    {
+      "group": "lifecycle",
+      "name": "publish beta private content",
+      "passed": true
+    },
+    {
+      "group": "lifecycle",
+      "name": "publish another alpha document",
+      "passed": true
+    },
+    {
+      "group": "retrieval",
+      "name": "exact search sorted by cosine with deterministic tie break",
+      "passed": true
+    },
+    {
+      "group": "retrieval",
+      "name": "alpha cannot retrieve the closest beta vector",
+      "passed": true
+    },
+    {
+      "group": "retrieval",
+      "name": "top_k bounds quantity",
+      "passed": true
+    },
+    {
+      "group": "retrieval",
+      "name": "threshold can return no matches",
+      "passed": true
+    },
+    {
+      "group": "retrieval",
+      "name": "threshold and top_k are different constraints",
+      "passed": true
+    },
+    {
+      "group": "retrieval",
+      "name": "bad top_k rejected",
+      "passed": true
+    },
+    {
+      "group": "retrieval",
+      "name": "NaN query rejected before SQL",
+      "passed": true
+    },
+    {
+      "group": "retrieval",
+      "name": "incompatible model query rejected",
+      "passed": true
+    },
+    {
+      "group": "authorization",
+      "name": "unset application tenant sees no documents",
+      "passed": true
+    },
+    {
+      "group": "authorization",
+      "name": "RLS hides beta even without explicit tenant WHERE",
+      "passed": true
+    },
+    {
+      "group": "authorization",
+      "name": "RLS blocks direct beta lookup",
+      "passed": true
+    },
+    {
+      "group": "authorization",
+      "name": "RLS rejects cross-tenant update by hiding row",
+      "passed": true
+    },
+    {
+      "group": "authorization",
+      "name": "RLS WITH CHECK denies cross-tenant insert",
+      "passed": true
+    },
+    {
+      "group": "authorization",
+      "name": "transaction-local tenant does not persist",
+      "passed": true
+    },
+    {
+      "group": "authorization",
+      "name": "same connection can safely switch to beta",
+      "passed": true
+    },
+    {
+      "group": "authorization",
+      "name": "backend refuses unknown authenticated tenant",
+      "passed": true
+    },
+    {
+      "group": "lifecycle",
+      "name": "failed publication rolls back replacement",
+      "passed": true
+    },
+    {
+      "group": "lifecycle",
+      "name": "original vector rows survive publication rollback",
+      "passed": true
+    },
+    {
+      "group": "lifecycle",
+      "name": "stale revision is hidden before new publication",
+      "passed": true
+    },
+    {
+      "group": "lifecycle",
+      "name": "late revision 1 worker rejected",
+      "passed": true
+    },
+    {
+      "group": "lifecycle",
+      "name": "revision 2 publishes atomically",
+      "passed": true
+    },
+    {
+      "group": "lifecycle",
+      "name": "retry same deterministic generation does not duplicate rows",
+      "passed": true
+    },
+    {
+      "group": "lifecycle",
+      "name": "deleted document never enters search",
+      "passed": true
+    },
+    {
+      "group": "lifecycle",
+      "name": "late worker cannot resurrect tombstone",
+      "passed": true
+    },
+    {
+      "group": "lifecycle",
+      "name": "deletion removes only the target tenant vectors",
+      "passed": true
+    },
+    {
+      "group": "ann",
+      "name": "exact ground truth has five unique neighbors for each query",
+      "passed": true
+    },
+    {
+      "group": "ann",
+      "name": "self neighbor is nearest under exact cosine",
+      "passed": true
+    },
+    {
+      "group": "ann",
+      "name": "exact query plan scans and sorts without an ANN index",
+      "passed": true
+    },
+    {
+      "group": "ann",
+      "name": "HNSW operator query actually uses ann_hnsw",
+      "passed": true
+    },
+    {
+      "group": "ann",
+      "name": "HNSW sampled recall is within valid range and at least 0.8",
+      "passed": true
+    },
+    {
+      "group": "ann",
+      "name": "HNSW returns five neighbors on these unfiltered queries",
+      "passed": true
+    },
+    {
+      "group": "ann",
+      "name": "selective filter demonstrates underfilled noniterative ANN",
+      "passed": true
+    },
+    {
+      "group": "ann",
+      "name": "iterative HNSW supplies five filtered neighbors on fixture",
+      "passed": true
+    },
+    {
+      "group": "ann",
+      "name": "iterative filtered results obey predicate",
+      "passed": true
+    },
+    {
+      "group": "ann",
+      "name": "iterative filtered recall does not regress on fixture",
+      "passed": true
+    },
+    {
+      "group": "ann",
+      "name": "rewritten similarity sort does not use the ANN distance index",
+      "passed": true
+    },
+    {
+      "group": "ann",
+      "name": "IVFFlat operator query actually uses ann_ivf",
+      "passed": true
+    },
+    {
+      "group": "ann",
+      "name": "IVFFlat sampled recall is valid and at least 0.4",
+      "passed": true
+    },
+    {
+      "group": "ann",
+      "name": "sequential ground truth unchanged after ANN index creation",
+      "passed": true
+    },
+    {
+      "group": "ann",
+      "name": "recall counts relevant IDs rather than arbitrary similarity scores",
+      "passed": true
+    },
+    {
+      "group": "cleanup",
+      "name": "owned PostgreSQL listener stopped",
+      "passed": true
+    },
+    {
+      "group": "cleanup",
+      "name": "temporary cluster removed",
+      "passed": true
+    },
+    {
+      "group": "cleanup",
+      "name": "existing service untouched",
+      "passed": true
+    }
+  ],
+  "observations": {
+    "math": {
+      "query": [
+        1,
+        0,
+        0
+      ],
+      "vectors": {
+        "near": [
+          0.8,
+          0.2,
+          0
+        ],
+        "large": [
+          10,
+          1,
+          0
+        ],
+        "opposite": [
+          -1,
+          0,
+          0
+        ]
+      },
+      "rankings": {
+        "cosine": [
+          "large",
+          "near",
+          "opposite"
+        ],
+        "dot": [
+          "large",
+          "near",
+          "opposite"
+        ],
+        "l2": [
+          "near",
+          "opposite",
+          "large"
+        ]
+      },
+      "large_dot": 10,
+      "large_cosine": 0.995037,
+      "near_l2": 0.282843
+    },
+    "pinecone_contract": {
+      "upsert": {
+        "namespace": "tenant-alpha-space-v1",
+        "vectors": [
+          {
+            "id": "notes:r2:c0",
+            "values": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "metadata": {
+              "document_id": "notes",
+              "revision": 2,
+              "space_key": "authored-fixture:v1:3:identity:cosine",
+              "status": "ready"
+            }
+          }
+        ]
+      },
+      "query": {
+        "namespace": "tenant-alpha-space-v1",
+        "vector": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "topK": 5,
+        "includeMetadata": true,
+        "includeValues": false,
+        "filter": {
+          "$and": [
+            {
+              "status": {
+                "$eq": "ready"
+              }
+            },
+            {
+              "space_key": {
+                "$eq": "authored-fixture:v1:3:identity:cosine"
+              }
+            }
+          ]
+        }
+      },
+      "delete": {
+        "namespace": "tenant-alpha-space-v1",
+        "ids": [
+          "notes:r2:c0",
+          "notes:r2:c1"
+        ]
+      },
+      "executed_scope": "JSON request-body construction only; no SDK, HTTP or hosted Pinecone"
+    },
+    "retrieval": {
+      "alpha_cosine_results": [
+        {
+          "document": "notes",
+          "ordinal": 1,
+          "content": "large text",
+          "similarity": 0.995037
+        },
+        {
+          "document": "notes",
+          "ordinal": 0,
+          "content": "near text",
+          "similarity": 0.970142
+        },
+        {
+          "document": "other",
+          "ordinal": 0,
+          "content": "orthogonal",
+          "similarity": 0.0
+        },
+        {
+          "document": "notes",
+          "ordinal": 2,
+          "content": "opposite text",
+          "similarity": -1.0
+        }
+      ],
+      "threshold_0_98": [
+        {
+          "document": "notes",
+          "ordinal": 1,
+          "content": "large text",
+          "similarity": 0.995037
+        }
+      ],
+      "beta_results": [
+        {
+          "document": "notes",
+          "ordinal": 0,
+          "content": "private beta",
+          "similarity": 1.0
+        }
+      ],
+      "scope_after_transaction": ""
+    },
+    "lifecycle": {
+      "deleted_document": [
+        3,
+        true
+      ],
+      "remaining_alpha_vectors": 1,
+      "remaining_beta_vectors": 1,
+      "failed_publication_rolled_back": true,
+      "late_worker_accepted": false
+    },
+    "ann": {
+      "rows": 1000,
+      "dimensions": 8,
+      "queries": 5,
+      "k": 5,
+      "exact_plan": [
+        "Limit",
+        "Sort",
+        "Seq Scan"
+      ],
+      "hnsw_plan": [
+        "Limit",
+        "ann_hnsw"
+      ],
+      "ivfflat_plan": [
+        "Limit",
+        "ann_ivf"
+      ],
+      "hnsw_ef_search": 100,
+      "hnsw_recall_at_5": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ivfflat_lists": 10,
+      "ivfflat_probes": 4,
+      "ivfflat_recall_at_5": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "filtered_exact": [
+        420,
+        100,
+        540,
+        940,
+        960
+      ],
+      "filtered_noniterative": [],
+      "filtered_iterative": [
+        420,
+        100,
+        540,
+        940,
+        960
+      ],
+      "rewritten_sort_plan": [
+        "Limit",
+        "Sort",
+        "Seq Scan"
+      ],
+      "planner_note": "enable_seqscan=off used only to demonstrate actual index paths; no latency/capacity claim"
+    }
+  },
+  "cleanup": {
+    "existing_service_touched": false,
+    "port": 59896,
+    "server_version": "16.15",
+    "isolated_data_directory_verified": true,
+    "initdb_stdout": "The files belonging to this database system will be owned by user \"Win11\".\nThis user must also own the server process.\n\nThe database cluster will be initialized with locale \"C\".\nThe default text search configuration will be set to \"english\".\n\nData page checksums are disabled.\n\ncreating directory C:/Users/Win11/AppData/Local/Temp/placement-m24-__81tnpg/data ... ok\ncreating subdirectories ... ok\nselecting dynamic shared memory implementation ... windows\nselecting default max_connections ... 100\nselecting default shared_buffers ... 128MB\nselecting default time zone ... Asia/Calcutta\ncreating configuration files ... ok\nrunning bootstrap script ... ok\nperforming post-bootstrap initialization ... ok\nsyncing data to disk ... ok\n\nSuccess. You can now start the database server using:\n\n    ^\"C^:^\\Development^\\Placement^\\examples^\\resume^-skills^\\module^-24^-vectors^\\^.runtime^\\Library^\\bin^\\pg^_ctl^\" -D ^\"C^:^\\Users^\\Win11^\\AppData^\\Local^\\Temp^\\placement^-m24^-^_^_81tnpg^\\data^\" -l logfile start\n\n",
+    "host_authentication": "scram-sha-256",
+    "tls": "disabled for loopback fixture",
+    "pgvector": "0.8.6",
+    "stop_stdout": "waiting for server to shut down.... done\nserver stopped\n",
+    "server_log": "2026-10-15 14:56:41.936 IST [5536] LOG:  starting PostgreSQL 16.15, compiled by Visual C++ build 1944, 64-bit\n2026-10-15 14:56:41.937 IST [5536] LOG:  listening on IPv4 address \"127.0.0.1\", port 59896\n2026-10-15 14:56:41.978 IST [19064] LOG:  database system was shut down at 2026-10-15 14:56:39 IST\n2026-10-15 14:56:42.015 IST [5536] LOG:  database system is ready to accept connections\n2026-10-15 14:56:42.627 IST [13960] ERROR:  NaN not allowed in vector\n2026-10-15 14:56:42.627 IST [13960] CONTEXT:  unnamed portal parameter $1 = '...'\n2026-10-15 14:56:42.627 IST [13960] STATEMENT:  SELECT $1::vector\n2026-10-15 14:56:42.627 IST [13960] ERROR:  infinite value not allowed in vector\n2026-10-15 14:56:42.627 IST [13960] CONTEXT:  unnamed portal parameter $1 = '...'\n2026-10-15 14:56:42.627 IST [13960] STATEMENT:  SELECT $1::vector\n2026-10-15 14:56:42.627 IST [13960] ERROR:  infinite value not allowed in vector\n2026-10-15 14:56:42.627 IST [13960] CONTEXT:  unnamed portal parameter $1 = '...'\n2026-10-15 14:56:42.627 IST [13960] STATEMENT:  SELECT $1::vector\n2026-10-15 14:56:42.628 IST [13960] ERROR:  expected 3 dimensions, not 2\n2026-10-15 14:56:42.628 IST [13960] STATEMENT:  SELECT '[1,2]'::vector(3)\n2026-10-15 14:56:42.652 IST [16116] ERROR:  new row violates row-level security policy for table \"documents\"\n2026-10-15 14:56:42.652 IST [16116] STATEMENT:  INSERT INTO documents VALUES ('beta','intruder',1,false)\n2026-10-15 14:56:42.658 IST [16116] ERROR:  null value in column \"content\" of relation \"chunks\" violates not-null constraint\n2026-10-15 14:56:42.658 IST [16116] STATEMENT:  INSERT INTO chunks VALUES ($1,$2,$3,$4,$5,$6,$7::vector)\n2026-10-15 14:56:42.915 IST [5536] LOG:  received fast shutdown request\n2026-10-15 14:56:42.916 IST [5536] LOG:  aborting any active transactions\n2026-10-15 14:56:42.920 IST [5536] LOG:  background worker \"logical replication launcher\" (PID 33288) exited with exit code 1\n2026-10-15 14:56:42.920 IST [1032] LOG:  shutting down\n2026-10-15 14:56:42.921 IST [1032] LOG:  checkpoint starting: shutdown immediate\n2026-10-15 14:56:42.994 IST [1032] LOG:  checkpoint complete: wrote 269 buffers (6.6%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.022 s, sync=0.044 s, total=0.074 s; sync files=122, longest=0.002 s, average=0.001 s; distance=1679 kB, estimate=1679 kB; lsn=0/16AD178, redo lsn=0/16AD178\n2026-10-15 14:56:43.232 IST [5536] LOG:  database system is shut down\n",
+    "listener_stopped": true,
+    "temporary_cluster_removed": true,
+    "loopback_ports_closed": [
+      59896
+    ]
+  },
+  "scope": "Real native PostgreSQL/pgvector; authored 3D/8D vectors. Pinecone JSON bodies only. No learned embeddings, inference, hosted API, Docker or production benchmark."
+}

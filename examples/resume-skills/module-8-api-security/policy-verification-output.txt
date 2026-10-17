@@ -1,0 +1,23 @@
+PASS viewer permission matrix: [true,true,false,false,false,false,false]
+PASS editor permission matrix: [true,true,false,true,true,false,true]
+PASS admin permission matrix: [true,true,true,true,true,true,true]
+PASS unexpected permission matrix: [false,false,false,false,false,false,false]
+PASS unknown writable properties rejected: {"status":400,"code":"unknown_field"}
+PASS prototype property rejected without polluting objects: {"rejected":true,"polluted":false}
+PASS create normalizes title and defaults visibility: {"title":"A","visibility":"private"}
+PASS empty patch rejected: {"status":400,"code":"empty_patch"}
+PASS filename accepts narrow text display name: "notes-1.txt"
+PASS unsafe filename rejected "../notes.txt": {"status":400,"code":"invalid_filename"}
+PASS unsafe filename rejected "..\\notes.txt": {"status":400,"code":"invalid_filename"}
+PASS unsafe filename rejected "notes.pdf": {"status":400,"code":"invalid_filename"}
+PASS unsafe filename rejected "notes.txt.exe": {"status":400,"code":"invalid_filename"}
+PASS unsafe filename rejected ".hidden.txt": {"status":400,"code":"invalid_filename"}
+PASS unsafe filename rejected "a\u0000.txt": {"status":400,"code":"invalid_filename"}
+PASS UTF-8 content preserves ordinary text: "Placement café"
+PASS invalid UTF-8 rejected: {"status":400,"code":"invalid_utf8"}
+PASS NUL-bearing text rejected: {"status":400,"code":"invalid_text"}
+PASS text size checked at service boundary: {"status":413,"code":"body_too_large"}
+PASS HTML text context escapes metacharacters: "&lt;script&gt;alert(&quot;x&quot;)&lt;/script&gt;&amp;"
+PASS attempt budget scoped by verified tenant and subject: {"exhausted":["alpha","alice"],"otherSubjectAllowed":true,"otherTenantAllowed":true}
+PASS rate-limit delay rounds up and next window resets: {"retryAfterSeconds":2,"newWindowAllowed":true}
+Verified 22 policy checks.

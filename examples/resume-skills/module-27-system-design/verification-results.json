@@ -1,0 +1,655 @@
+{
+  "module": 27,
+  "verified_date": "2026-10-16",
+  "node": "v22.14.0",
+  "os": "Windows_NT 10.0.26300 x64",
+  "total": 95,
+  "counts": {
+    "ring": 21,
+    "pool": 17,
+    "capacity": 8,
+    "cache": 11,
+    "http": 38
+  },
+  "checks": [
+    {
+      "group": "ring",
+      "name": "Member order does not alter placement",
+      "passed": true
+    },
+    {
+      "group": "ring",
+      "name": "Canonical member order preserves version",
+      "passed": true
+    },
+    {
+      "group": "ring",
+      "name": "128 virtual nodes per physical node",
+      "passed": true
+    },
+    {
+      "group": "ring",
+      "name": "Exact token lower bound",
+      "passed": true
+    },
+    {
+      "group": "ring",
+      "name": "Clockwise lookup wraps",
+      "passed": true
+    },
+    {
+      "group": "ring",
+      "name": "Candidates contain each physical node once",
+      "passed": true
+    },
+    {
+      "group": "ring",
+      "name": "Primary is first candidate",
+      "passed": true
+    },
+    {
+      "group": "ring",
+      "name": "Duplicate member rejected",
+      "passed": true
+    },
+    {
+      "group": "ring",
+      "name": "Empty ring rejected",
+      "passed": true
+    },
+    {
+      "group": "ring",
+      "name": "Unsafe identifier rejected",
+      "passed": true
+    },
+    {
+      "group": "ring",
+      "name": "Zero virtual nodes rejected",
+      "passed": true
+    },
+    {
+      "group": "ring",
+      "name": "Empty affinity rejected",
+      "passed": true
+    },
+    {
+      "group": "ring",
+      "name": "Version changes with membership",
+      "passed": true
+    },
+    {
+      "group": "ring",
+      "name": "Version changes with virtual-node count",
+      "passed": true
+    },
+    {
+      "group": "ring",
+      "name": "Removal moves only removed owner keys",
+      "passed": true
+    },
+    {
+      "group": "ring",
+      "name": "Addition moves keys only to new owner",
+      "passed": true
+    },
+    {
+      "group": "ring",
+      "name": "Removal numerator equals removed-node keys",
+      "passed": true
+    },
+    {
+      "group": "ring",
+      "name": "Fixed-corpus modulo movement exceeds ring movement",
+      "passed": true
+    },
+    {
+      "group": "ring",
+      "name": "128 tokens improve this corpus distribution",
+      "passed": true
+    },
+    {
+      "group": "ring",
+      "name": "Tenant-key encoding avoids delimiter ambiguity",
+      "passed": true
+    },
+    {
+      "group": "ring",
+      "name": "Hot key dominates request load despite many tokens",
+      "passed": true
+    },
+    {
+      "group": "pool",
+      "name": "Round robin rotates configured eligible nodes",
+      "passed": true
+    },
+    {
+      "group": "pool",
+      "name": "Least inflight chooses smallest active count",
+      "passed": true
+    },
+    {
+      "group": "pool",
+      "name": "Hash affinity is stable",
+      "passed": true
+    },
+    {
+      "group": "pool",
+      "name": "Two failures do not yet evict",
+      "passed": true
+    },
+    {
+      "group": "pool",
+      "name": "Third failure marks unavailable",
+      "passed": true
+    },
+    {
+      "group": "pool",
+      "name": "Routing falls back without ring mutation",
+      "passed": true
+    },
+    {
+      "group": "pool",
+      "name": "One success does not yet recover",
+      "passed": true
+    },
+    {
+      "group": "pool",
+      "name": "Second success restores primary",
+      "passed": true
+    },
+    {
+      "group": "pool",
+      "name": "Success resets consecutive failures",
+      "passed": true
+    },
+    {
+      "group": "pool",
+      "name": "Drain excludes new routing but keeps active count",
+      "passed": true
+    },
+    {
+      "group": "pool",
+      "name": "Drain leaves placement version intact",
+      "passed": true
+    },
+    {
+      "group": "pool",
+      "name": "All draining yields no target",
+      "passed": true
+    },
+    {
+      "group": "pool",
+      "name": "Unknown health member rejected",
+      "passed": true
+    },
+    {
+      "group": "pool",
+      "name": "Unknown drain member rejected",
+      "passed": true
+    },
+    {
+      "group": "pool",
+      "name": "Non-loopback upstream rejected",
+      "passed": true
+    },
+    {
+      "group": "pool",
+      "name": "Unsupported strategy rejected",
+      "passed": true
+    },
+    {
+      "group": "pool",
+      "name": "Invalid health threshold rejected",
+      "passed": true
+    },
+    {
+      "group": "capacity",
+      "name": "Daily request arithmetic",
+      "passed": true
+    },
+    {
+      "group": "capacity",
+      "name": "Peak applies specified multiplier",
+      "passed": true
+    },
+    {
+      "group": "capacity",
+      "name": "Mean inflight uses seconds",
+      "passed": true
+    },
+    {
+      "group": "capacity",
+      "name": "Target capacity leaves utilization margin",
+      "passed": true
+    },
+    {
+      "group": "capacity",
+      "name": "Five healthy backends under stated assumptions",
+      "passed": true
+    },
+    {
+      "group": "capacity",
+      "name": "One failure reserve adds one backend",
+      "passed": true
+    },
+    {
+      "group": "capacity",
+      "name": "Zero users rejected",
+      "passed": true
+    },
+    {
+      "group": "capacity",
+      "name": "Invalid utilization rejected",
+      "passed": true
+    },
+    {
+      "group": "cache",
+      "name": "Cold key loads source",
+      "passed": true
+    },
+    {
+      "group": "cache",
+      "name": "Warm key hits matching revision",
+      "passed": true
+    },
+    {
+      "group": "cache",
+      "name": "Tenant namespace separates equal IDs",
+      "passed": true
+    },
+    {
+      "group": "cache",
+      "name": "Exact TTL boundary misses",
+      "passed": true
+    },
+    {
+      "group": "cache",
+      "name": "Revision change rejects stale value",
+      "passed": true
+    },
+    {
+      "group": "cache",
+      "name": "Revision reload is a miss",
+      "passed": true
+    },
+    {
+      "group": "cache",
+      "name": "Canonical deletion prevents old cache answer",
+      "passed": true
+    },
+    {
+      "group": "cache",
+      "name": "Absent source is absent",
+      "passed": true
+    },
+    {
+      "group": "cache",
+      "name": "Membership change chooses new shard",
+      "passed": true
+    },
+    {
+      "group": "cache",
+      "name": "New owner starts cold without migration",
+      "passed": true
+    },
+    {
+      "group": "cache",
+      "name": "Old physical copy remains in model",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "Real proxy returns upstream success",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "Repeated affinity selects same real backend",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "Request body is forwarded exactly",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "Tenant comes from fixture credential",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "Credential is not passed to backend",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "Spoofed tenant is not passed to backend",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "Connection-nominated header is not passed",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "Connection nomination also excludes optional allowlisted header",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "Missing fixture identity rejected",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "Unknown target route rejected",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "Unsupported method rejected",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "Invalid affinity rejected",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "Oversized buffered body rejected",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "Beta fixture credential maps to beta tenant",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "Backend HTTP error is propagated",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "Two actual failed readiness probes retain member",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "Third failed readiness probe routes to another real server",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "Fallback still reports original primary",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "Health fallback preserves placement version",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "First actual successful probe does not recover",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "Second actual success restores affinity",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "Lost write acknowledgement returns transport failure",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "Ambiguous write makes one upstream attempt",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "Write committed exactly once in fixture",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "In-flight request counted on chosen backend",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "Draining routes new work elsewhere",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "Draining permits admitted request to finish",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "Backend active count returns to zero",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "All four slots occupied",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "Fifth request fails bounded admission",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "Admission releases all completed slots",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "Client cancellation is observed by client",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "Client cancellation releases admission",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "Proxy records upstream cancellation",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "All unavailable fails closed",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "Slow upstream exceeds absolute deadline",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "Timeout recorded once",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "Timeout releases admission",
+      "passed": true
+    }
+  ],
+  "observations": {
+    "ring": {
+      "corpus": "key-0 through key-9999, equal weight",
+      "physicalMembers": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "virtualNodesPerMember": 128,
+      "ringVersion": "a8d036ec26a5",
+      "removal": {
+        "keys": 10000,
+        "moved": 1983,
+        "fraction": 0.1983
+      },
+      "addition": {
+        "keys": 10000,
+        "moved": 1734,
+        "fraction": 0.1734
+      },
+      "moduloRemoval": {
+        "keys": 10000,
+        "moved": 7965,
+        "fraction": 0.7965
+      },
+      "oneTokenDistribution": {
+        "a": 715,
+        "b": 4672,
+        "c": 1021,
+        "d": 1107,
+        "e": 2485
+      },
+      "manyTokenDistribution": {
+        "a": 1923,
+        "b": 1978,
+        "c": 1983,
+        "d": 2193,
+        "e": 1923
+      },
+      "oneTokenCoefficientOfVariation": 0.7342317072968179,
+      "manyTokenCoefficientOfVariation": 0.04993996395673509,
+      "hotTraffic": {
+        "requests": 10000,
+        "hotKeyRequests": 9000,
+        "hotOwner": "c",
+        "byMember": {
+          "a": 184,
+          "b": 194,
+          "c": 9195,
+          "d": 221,
+          "e": 206
+        }
+      },
+      "scope": "Deterministic placement experiment, not a throughput benchmark or resume reproduction."
+    },
+    "capacity": {
+      "assumptions": {
+        "users": 100000,
+        "requestsPerUserDay": 20,
+        "peakFactor": 10,
+        "meanServiceMs": 120,
+        "assumedBackendQps": 80,
+        "utilization": 0.7,
+        "responseBytes": 20480
+      },
+      "requestsPerDay": 2000000,
+      "averageQps": 23.14814814814815,
+      "peakQps": 231.4814814814815,
+      "meanInFlightAtPeak": 27.777777777777782,
+      "targetPerBackendQps": 56,
+      "healthyBackends": 5,
+      "fleetForOneFailure": 6,
+      "responseBytesPerSecondAtPeak": 4740740.740740741,
+      "scope": "Calculated planning scenario; per-backend capacity is an assumption, not a benchmark."
+    },
+    "cache": {
+      "cold": {
+        "text": "alpha-v1",
+        "revision": 1,
+        "expiresAt": 100,
+        "owner": "b",
+        "hit": false
+      },
+      "warm": {
+        "text": "alpha-v1",
+        "revision": 1,
+        "expiresAt": 100,
+        "owner": "b",
+        "hit": true
+      },
+      "revised": {
+        "text": "alpha-v2",
+        "revision": 2,
+        "expiresAt": 200,
+        "owner": "b",
+        "hit": false
+      },
+      "remapping": {
+        "key": "key-3",
+        "before": {
+          "text": "move-me",
+          "revision": 1,
+          "expiresAt": 200,
+          "owner": "d",
+          "hit": false
+        },
+        "after": {
+          "text": "move-me",
+          "revision": 1,
+          "expiresAt": 200,
+          "owner": "f",
+          "hit": false
+        }
+      },
+      "scope": "In-process model consults canonical memory on every read; no network cache, replication or distributed invalidation was tested."
+    },
+    "http": {
+      "affinity": {
+        "firstBackend": "a",
+        "repeatedBackend": "a",
+        "ringVersion": "fa24e1dc1f1f"
+      },
+      "health": {
+        "failedPrimary": "a",
+        "fallbackBackend": "c",
+        "recoveredBackend": "a",
+        "failureThreshold": 3,
+        "recoveryThreshold": 2
+      },
+      "ambiguousWrite": {
+        "status": 502,
+        "upstreamAttempts": 1,
+        "committedMutations": 1
+      },
+      "drain": {
+        "existingRequestBackend": "a",
+        "newRequestBackend": "c"
+      },
+      "admission": {
+        "limit": 4,
+        "overflowStatus": 503
+      },
+      "timeout": {
+        "deadlineMs": 50,
+        "upstreamDelayMs": 400,
+        "status": 504
+      },
+      "scope": "Actual HTTP over owned loopback sockets; public fixture identities, bounded buffered bodies, manually invoked probes, no automatic retries."
+    }
+  },
+  "cleanup": {
+    "loopback_ports_closed": {
+      "62467": true,
+      "62468": true,
+      "62469": true,
+      "62470": true,
+      "62515": true
+    },
+    "agents_destroyed": true,
+    "fixture_timers_cleared": true
+  },
+  "scope": "Real HTTP routing/failure fixture plus deterministic placement, capacity arithmetic and in-process cache models. No original-project throughput or latency claims reproduced."
+}

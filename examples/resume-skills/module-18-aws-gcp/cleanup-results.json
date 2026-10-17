@@ -1,0 +1,13 @@
+{
+  "loopback_ports_closed": {
+    "55451": true,
+    "55485": true,
+    "55487": true,
+    "55488": true
+  },
+  "server_threads_stopped": true,
+  "scratch_database_and_directory_removed": true,
+  "generated_private_keys_written_to_disk": false,
+  "cloud_resources_created": false,
+  "docker_started": false
+}

@@ -1,0 +1,63 @@
+{
+  "module": "M1: JavaScript Fundamentals for Interviews",
+  "verifiedOn": "2026-10-13T14:02:19.907Z",
+  "runtime": "v22.14.0",
+  "executionContext": "Isolated ES modules",
+  "snippetCases": 30,
+  "sourceMatchesChapter": true,
+  "actualOutputsMatchChapter": true,
+  "interviewQuestions": 24,
+  "qaSequential": true,
+  "balancedCodeFences": true,
+  "siteSync": {
+    "chapters": 72,
+    "resumeSkillsChapters": 3
+  },
+  "siteBuild": {
+    "passed": true,
+    "typeScript": true,
+    "staticPages": 77,
+    "fontSource": "Next.js Google Fonts mock-response hook with existing local cached font files; external font download unavailable; source configuration unchanged"
+  },
+  "httpRoutes": [
+    {
+      "path": "/",
+      "status": 200,
+      "bytes": 67007
+    },
+    {
+      "path": "/docs/resume-skills",
+      "status": 200,
+      "bytes": 194457
+    },
+    {
+      "path": "/docs/resume-skills/how-backend-works",
+      "status": 200,
+      "bytes": 484375
+    },
+    {
+      "path": "/docs/resume-skills/javascript-fundamentals",
+      "status": 200,
+      "bytes": 815527
+    },
+    {
+      "path": "/docs/dbms",
+      "status": 200,
+      "bytes": 242777
+    }
+  ],
+  "search": {
+    "query": "closure",
+    "tag": "resume-skills",
+    "results": 13,
+    "allWithinSubject": true
+  },
+  "server": {
+    "url": "http://localhost:3000",
+    "pid": 8096
+  },
+  "limitations": [
+    "Runtime output was checked on Node.js v22.14.0, ES modules; host-context-dependent examples must be re-evaluated elsewhere.",
+    "This module covers synchronous language fundamentals; async scheduling is M2."
+  ]
+}

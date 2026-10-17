@@ -1,0 +1,16 @@
+  ▲ Next.js 14.2.35
+  - Local:        http://127.0.0.1:64191
+  - Network:      http://127.0.0.1:64191
+
+ ✓ Starting...
+ ✓ Ready in 370ms
+Error: M21_PRIVATE_FAILURE_DETAILS
+    at n (C:\Development\Placement\examples\resume-skills\module-21-nextjs\.next\server\app\broken\page.js:1:3131)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5) {
+  digest: '385034583'
+}
+Error: M21_PRIVATE_FAILURE_DETAILS
+    at n (C:\Development\Placement\examples\resume-skills\module-21-nextjs\.next\server\app\broken\page.js:1:3131)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5) {
+  digest: '385034583'
+}

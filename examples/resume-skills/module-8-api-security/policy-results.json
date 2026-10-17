@@ -1,0 +1,197 @@
+{
+  "node": "v22.14.0",
+  "passed": 22,
+  "checks": [
+    {
+      "name": "viewer permission matrix",
+      "passed": true,
+      "observed": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "name": "editor permission matrix",
+      "passed": true,
+      "observed": [
+        true,
+        true,
+        false,
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    {
+      "name": "admin permission matrix",
+      "passed": true,
+      "observed": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "unexpected permission matrix",
+      "passed": true,
+      "observed": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "name": "unknown writable properties rejected",
+      "passed": true,
+      "observed": {
+        "status": 400,
+        "code": "unknown_field"
+      }
+    },
+    {
+      "name": "prototype property rejected without polluting objects",
+      "passed": true,
+      "observed": {
+        "rejected": true,
+        "polluted": false
+      }
+    },
+    {
+      "name": "create normalizes title and defaults visibility",
+      "passed": true,
+      "observed": {
+        "title": "A",
+        "visibility": "private"
+      }
+    },
+    {
+      "name": "empty patch rejected",
+      "passed": true,
+      "observed": {
+        "status": 400,
+        "code": "empty_patch"
+      }
+    },
+    {
+      "name": "filename accepts narrow text display name",
+      "passed": true,
+      "observed": "notes-1.txt"
+    },
+    {
+      "name": "unsafe filename rejected \"../notes.txt\"",
+      "passed": true,
+      "observed": {
+        "status": 400,
+        "code": "invalid_filename"
+      }
+    },
+    {
+      "name": "unsafe filename rejected \"..\\\\notes.txt\"",
+      "passed": true,
+      "observed": {
+        "status": 400,
+        "code": "invalid_filename"
+      }
+    },
+    {
+      "name": "unsafe filename rejected \"notes.pdf\"",
+      "passed": true,
+      "observed": {
+        "status": 400,
+        "code": "invalid_filename"
+      }
+    },
+    {
+      "name": "unsafe filename rejected \"notes.txt.exe\"",
+      "passed": true,
+      "observed": {
+        "status": 400,
+        "code": "invalid_filename"
+      }
+    },
+    {
+      "name": "unsafe filename rejected \".hidden.txt\"",
+      "passed": true,
+      "observed": {
+        "status": 400,
+        "code": "invalid_filename"
+      }
+    },
+    {
+      "name": "unsafe filename rejected \"a\\u0000.txt\"",
+      "passed": true,
+      "observed": {
+        "status": 400,
+        "code": "invalid_filename"
+      }
+    },
+    {
+      "name": "UTF-8 content preserves ordinary text",
+      "passed": true,
+      "observed": "Placement café"
+    },
+    {
+      "name": "invalid UTF-8 rejected",
+      "passed": true,
+      "observed": {
+        "status": 400,
+        "code": "invalid_utf8"
+      }
+    },
+    {
+      "name": "NUL-bearing text rejected",
+      "passed": true,
+      "observed": {
+        "status": 400,
+        "code": "invalid_text"
+      }
+    },
+    {
+      "name": "text size checked at service boundary",
+      "passed": true,
+      "observed": {
+        "status": 413,
+        "code": "body_too_large"
+      }
+    },
+    {
+      "name": "HTML text context escapes metacharacters",
+      "passed": true,
+      "observed": "&lt;script&gt;alert(&quot;x&quot;)&lt;/script&gt;&amp;"
+    },
+    {
+      "name": "attempt budget scoped by verified tenant and subject",
+      "passed": true,
+      "observed": {
+        "exhausted": [
+          "alpha",
+          "alice"
+        ],
+        "otherSubjectAllowed": true,
+        "otherTenantAllowed": true
+      }
+    },
+    {
+      "name": "rate-limit delay rounds up and next window resets",
+      "passed": true,
+      "observed": {
+        "retryAfterSeconds": 2,
+        "newWindowAllowed": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,193 @@
+{
+  "module": 17,
+  "title": "Linux Deployment, Nginx and PM2",
+  "verified_date": "2026-10-14",
+  "versions": {
+    "node": "v22.23.3",
+    "pm2": "7.0.4",
+    "nginx": "nginx version: nginx/1.22.1",
+    "openssl": "OpenSSL 3.0.22 25 Aug 2026 (Library: OpenSSL 3.0.22 25 Aug 2026)",
+    "linux": "Linux 5.15.153.1-microsoft-standard-WSL2",
+    "debian": "12.15"
+  },
+  "docker": {
+    "client": "29.8.2",
+    "engine": "29.8.2",
+    "base_image": "node@sha256:c3de60bf2f9dd0ac6370e6117950ff62d6e339527e7472301c9c78a017978392",
+    "published_ports": [
+      57246,
+      57247
+    ]
+  },
+  "checks": {
+    "counts": {
+      "host": 3,
+      "lifecycle": 5,
+      "linux": 6,
+      "nginx": 14,
+      "pm2": 8,
+      "tls": 4
+    },
+    "total": 40,
+    "all_passed": true
+  },
+  "cleanup": {
+    "container_removed": true,
+    "owned_image_removed": true,
+    "scratch_removed": true,
+    "ports_closed": {
+      "57246": true,
+      "57247": true
+    },
+    "public_base_image_and_build_cache_retained": true
+  },
+  "engine_session": {
+    "engine_initially_stopped": true,
+    "engine_started_for_this_module": true,
+    "containers_before_engine_stop": [],
+    "engine_restored_stopped": true,
+    "public_base_image_and_build_cache_retained": true
+  },
+  "dependency_audit": {
+    "info": 0,
+    "low": 0,
+    "moderate": 0,
+    "high": 8,
+    "critical": 0,
+    "total": 8
+  },
+  "content": {
+    "chapter": "resume-skills-handbook-part-19-module-17-linux-deployment-nginx-pm2.md",
+    "words": 8881,
+    "lines": 928,
+    "questions": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30
+    ],
+    "practice_tasks": 10,
+    "unchecked_learning_items": 12,
+    "source_fidelity": {
+      "app.cjs": true,
+      "ecosystem.config.cjs": true,
+      "nginx.conf": true,
+      "Dockerfile": true
+    },
+    "counts": {
+      "host": 3,
+      "lifecycle": 5,
+      "linux": 6,
+      "nginx": 14,
+      "pm2": 8,
+      "tls": 4
+    },
+    "total": 40,
+    "embedded_observations": [
+      "VERSIONS",
+      "DIGEST",
+      "URI",
+      "FORWARDED",
+      "WORKERS",
+      "RELOAD"
+    ],
+    "result_fidelity": {
+      "versions": true,
+      "digest": true,
+      "uri": true,
+      "forwarding": true,
+      "workers": true,
+      "reload": true,
+      "audit": true
+    }
+  },
+  "website": {
+    "build_passed": true,
+    "static_pages": 93,
+    "routes_checked": 21,
+    "all_routes_200": true,
+    "assertions": {
+      "title": true,
+      "q30": true,
+      "implementation": true,
+      "totalChecks": true,
+      "reloadEvidence": true,
+      "architecture": true,
+      "nextCloud": true,
+      "auditBoundary": true,
+      "bootBoundary": true,
+      "group": true,
+      "roadmapLink": true,
+      "previousLink": true
+    },
+    "search": {
+      "status": 200,
+      "results": 24,
+      "chapterIndexed": true,
+      "scoped": true
+    },
+    "temporary_server_closed": true,
+    "cached_font_fixture_used": true
+  },
+  "ports_stopped": {
+    "3000": true,
+    "63752": true
+  },
+  "git_diff_check_passed": true,
+  "trailing_whitespace_files": [],
+  "core_handbooks": [
+    {
+      "subject": "DSA Notes",
+      "files": 17,
+      "lines": 17589
+    },
+    {
+      "subject": "OOP Notes",
+      "files": 13,
+      "lines": 8806
+    },
+    {
+      "subject": "OS Notes",
+      "files": 13,
+      "lines": 6341
+    },
+    {
+      "subject": "DBMS Notes",
+      "files": 13,
+      "lines": 9613
+    },
+    {
+      "subject": "CN Notes",
+      "files": 13,
+      "lines": 9322
+    }
+  ],
+  "next_module": "M18: AWS and GCP Fundamentals for This Resume",
+  "scope": "Real Linux Nginx and PM2 inside an owned Docker network namespace. No systemd boot, public DNS/CA, cloud deployment or load benchmark."
+}

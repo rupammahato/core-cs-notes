@@ -1,0 +1,654 @@
+{
+  "module": 19,
+  "verified_date": "2026-10-14",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "node": "v22.14.0",
+  "git": "git version 2.55.0.windows.5",
+  "pyyaml": "6.0.2",
+  "dependencies": {
+    "@opentelemetry/api": "1.9.1",
+    "@opentelemetry/core": "2.12.0",
+    "@opentelemetry/sdk-trace-base": "2.12.0",
+    "@opentelemetry/sdk-trace-node": "2.12.0"
+  },
+  "checks": [
+    {
+      "group": "git",
+      "name": "head_index_worktree_are_distinct",
+      "passed": true,
+      "evidence": {
+        "head": "base",
+        "index": "staged",
+        "working": "working"
+      }
+    },
+    {
+      "group": "git",
+      "name": "unstage_preserves_working_file",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "group": "git",
+      "name": "restore_worktree_uses_index",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "group": "git",
+      "name": "merge_records_two_parent_histories",
+      "passed": true,
+      "evidence": [
+        "cc0f1a6c28d6642165918ada26d2169783e92745",
+        "1247cb57a94320fea6daaa759a32cb26bb9fb51f"
+      ]
+    },
+    {
+      "group": "git",
+      "name": "conflict_stops_merge_with_unmerged_index",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "group": "git",
+      "name": "abort_restores_premerge_head_and_file",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "group": "git",
+      "name": "resolved_merge_has_two_parents",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "group": "git",
+      "name": "rebase_replays_to_a_new_commit",
+      "passed": true,
+      "evidence": {
+        "old": "ccea9dcb72ca1f6f6d22a233a3b8a76b956fdac6",
+        "new": "c39640cf02d94d22ad7454b0b482d87b7a8a4d95"
+      }
+    },
+    {
+      "group": "git",
+      "name": "rebase_preserves_the_example_patch",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "group": "git",
+      "name": "revert_adds_inverse_without_erasing_target",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "group": "git",
+      "name": "fetch_updates_tracking_ref_without_moving_head",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "group": "git",
+      "name": "fast_forward_moves_to_existing_commit",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "group": "git",
+      "name": "ff_only_refuses_diverged_history",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "group": "git",
+      "name": "source_snapshot_matches_release_files",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "group": "git",
+      "name": "release_tag_identifies_a_commit",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "group": "statistics",
+      "name": "nearest_rank_reference_percentiles",
+      "passed": true
+    },
+    {
+      "group": "statistics",
+      "name": "percentile_does_not_mutate_input",
+      "passed": true
+    },
+    {
+      "group": "statistics",
+      "name": "empty_samples_have_no_latency_claim",
+      "passed": true
+    },
+    {
+      "group": "statistics",
+      "name": "invalid_measurement_samples_rejected",
+      "passed": true
+    },
+    {
+      "group": "statistics",
+      "name": "http_errors_and_timeouts_count_as_failures",
+      "passed": true
+    },
+    {
+      "group": "statistics",
+      "name": "attempted_and_successful_rates_differ",
+      "passed": true
+    },
+    {
+      "group": "statistics",
+      "name": "failure_latency_retained_in_distribution",
+      "passed": true
+    },
+    {
+      "group": "statistics",
+      "name": "slo_budget_reference_example",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "successful_response_contains_release_and_result",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "invalid_input_returns_400",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "unknown_route_returns_404",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "dependency_failure_returns_safe_503",
+      "passed": true
+    },
+    {
+      "group": "tracing",
+      "name": "three_real_sdk_spans_per_work_request",
+      "passed": true
+    },
+    {
+      "group": "tracing",
+      "name": "client_and_dependency_parent_relationships",
+      "passed": true
+    },
+    {
+      "group": "tracing",
+      "name": "root_context_and_distinct_span_ids",
+      "passed": true
+    },
+    {
+      "group": "tracing",
+      "name": "valid_w3c_parent_propagates",
+      "passed": true
+    },
+    {
+      "group": "tracing",
+      "name": "zero_trace_context_is_replaced",
+      "passed": true
+    },
+    {
+      "group": "tracing",
+      "name": "dependency_failure_marks_trace_error",
+      "passed": true
+    },
+    {
+      "group": "tracing",
+      "name": "concurrent_requests_keep_distinct_context",
+      "passed": true
+    },
+    {
+      "group": "logs",
+      "name": "response_log_and_trace_are_correlated",
+      "passed": true
+    },
+    {
+      "group": "logs",
+      "name": "allowlisted_log_fields_omit_credentials_and_query",
+      "passed": true
+    },
+    {
+      "group": "metrics",
+      "name": "bounded_route_status_labels",
+      "passed": true
+    },
+    {
+      "group": "metrics",
+      "name": "histogram_count_matches_counters",
+      "passed": true
+    },
+    {
+      "group": "metrics",
+      "name": "cumulative_buckets_are_monotone",
+      "passed": true
+    },
+    {
+      "group": "metrics",
+      "name": "active_work_returns_to_zero",
+      "passed": true
+    },
+    {
+      "group": "load",
+      "name": "measured_attempt_count_excludes_warmup",
+      "passed": true
+    },
+    {
+      "group": "load",
+      "name": "normal_samples_are_all_successful",
+      "passed": true
+    },
+    {
+      "group": "load",
+      "name": "reported_percentiles_derive_from_raw_samples",
+      "passed": true
+    },
+    {
+      "group": "load",
+      "name": "failure_run_has_zero_successful_throughput",
+      "passed": true
+    },
+    {
+      "group": "load",
+      "name": "client_deadlines_remain_in_failed_attempts",
+      "passed": true
+    },
+    {
+      "group": "pipeline",
+      "name": "syntax_gate_executes_successfully",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "group": "pipeline",
+      "name": "real_http_contract_suite_passes",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "group": "pipeline",
+      "name": "known_good_release_smoked_before_selection",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "group": "pipeline",
+      "name": "failed_test_gate_blocks_packaging",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "group": "pipeline",
+      "name": "digest_mismatch_blocks_extraction_and_selection",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "group": "pipeline",
+      "name": "unhealthy_candidate_keeps_last_good_release",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "group": "pipeline",
+      "name": "validated_candidate_selected_with_revision_and_digest",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "group": "pipeline",
+      "name": "local_rollback_reselects_retained_good_artifact",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "group": "pipeline",
+      "name": "all_candidate_processes_and_ports_close",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "group": "workflow",
+      "name": "yaml_parses_with_intended_events",
+      "passed": true
+    },
+    {
+      "group": "workflow",
+      "name": "token_permissions_are_read_only",
+      "passed": true
+    },
+    {
+      "group": "workflow",
+      "name": "actions_match_resolved_official_commit_pins",
+      "passed": true
+    },
+    {
+      "group": "workflow",
+      "name": "test_and_check_gates_precede_packaging",
+      "passed": true
+    },
+    {
+      "group": "workflow",
+      "name": "checkout_does_not_persist_credentials",
+      "passed": true
+    },
+    {
+      "group": "contracts",
+      "name": "success contract over real HTTP",
+      "passed": true
+    },
+    {
+      "group": "contracts",
+      "name": "invalid input is rejected at the API boundary",
+      "passed": true
+    },
+    {
+      "group": "contracts",
+      "name": "dependency failure has a stable public error contract",
+      "passed": true
+    }
+  ],
+  "total": 62,
+  "counts": {
+    "contracts": 3,
+    "git": 15,
+    "http": 4,
+    "load": 5,
+    "logs": 2,
+    "metrics": 4,
+    "pipeline": 9,
+    "statistics": 8,
+    "tracing": 7,
+    "workflow": 5
+  },
+  "observations": {
+    "git": {
+      "staging": {
+        "head": "base",
+        "index": "staged",
+        "working": "working"
+      },
+      "merge_parents": [
+        "cc0f1a6c28d6642165918ada26d2169783e92745",
+        "1247cb57a94320fea6daaa759a32cb26bb9fb51f"
+      ],
+      "rebase": {
+        "before": "ccea9dcb72ca1f6f6d22a233a3b8a76b956fdac6",
+        "after": "c39640cf02d94d22ad7454b0b482d87b7a8a4d95",
+        "new_parent": "8736d1a5686e0bd5c803508239d8d55c55e3b2b3"
+      },
+      "revert": {
+        "target": "8661ff66b5782b68690e40ddbd4a5b9c24955dbd",
+        "inverse": "406a161dc7e1b78e6f44a745702cbe75c4d206b6"
+      },
+      "fetch": {
+        "before_peer_head": "8736d1a5686e0bd5c803508239d8d55c55e3b2b3",
+        "remote_head": "be6a4cba77016d0457de1755dd8898cab5b958f4"
+      },
+      "release_revision": "28d1ef891abe9eccb6a500b58f848c999bb1da28",
+      "graph": "* 28d1ef8 (HEAD -> main, tag: fixture-v1) Snapshot the actual teaching release sources\n* ad013b0 (origin/main) Main diverges too\n* be6a4cb New published fixture commit\n| * 406a161 (topic) Revert \"Feature to revert\"\n| * 8661ff6 Feature to revert\n| * c39640c Topic before rebase\n|/  \n* 8736d1a Advance main before rebase\n*   03c1692 Resolve conflict deliberately\n|\\  \n| * 28e44db (conflict-side) Side edits same line\n* | 66c8db1 Main edits same line\n|/  \n*   8abda42 Merge independent work\n|\\  \n| * 1247cb5 (feature) Feature\n* | cc0f1a6 Main independently advances\n|/  \n* baca3a9 Base snapshot\n"
+    },
+    "node": {
+      "statistics": {
+        "known_sample_count": 100,
+        "known": {
+          "p50": 50,
+          "p95": 95,
+          "p99": 99
+        },
+        "synthetic_summary": {
+          "attempts": 4,
+          "successful": 2,
+          "failed": 2,
+          "error_ratio": 0.5,
+          "elapsed_seconds": 2,
+          "attempted_rps": 2,
+          "successful_rps": 1,
+          "mean_ms": 38.25,
+          "p50_ms": 2,
+          "p95_ms": 100,
+          "p99_ms": 100,
+          "percentile_method": "nearest rank across all completed attempts, including HTTP failures and client errors"
+        },
+        "synthetic_slo": {
+          "total": 1000,
+          "good": 995,
+          "bad": 5,
+          "target": 0.999,
+          "observed_good_ratio": 0.995,
+          "allowed_bad": 1,
+          "burn_rate": 5
+        }
+      },
+      "trace": [
+        {
+          "name": "dependency GET /compute",
+          "kind": 1,
+          "trace_id": "6446a797d81e0689e2338ebc7ab55481",
+          "span_id": "75925ff219cfe422",
+          "parent_span_id": "f1c6d4d27d3ce9ec",
+          "status": 0,
+          "attributes": {
+            "http.response.status_code": 200
+          },
+          "duration_ms": 13.1422
+        },
+        {
+          "name": "gateway HTTP dependency",
+          "kind": 2,
+          "trace_id": "6446a797d81e0689e2338ebc7ab55481",
+          "span_id": "f1c6d4d27d3ce9ec",
+          "parent_span_id": "5747ef75f8f5a859",
+          "status": 0,
+          "attributes": {
+            "http.response.status_code": 200
+          },
+          "duration_ms": 17.3572
+        },
+        {
+          "name": "gateway GET /work",
+          "kind": 1,
+          "trace_id": "6446a797d81e0689e2338ebc7ab55481",
+          "span_id": "5747ef75f8f5a859",
+          "parent_span_id": null,
+          "status": 0,
+          "attributes": {
+            "http.route": "/work",
+            "http.response.status_code": 200
+          },
+          "duration_ms": 18.1
+        }
+      ],
+      "log": {
+        "event": "request_complete",
+        "request_id": "0c47c565-8d36-4201-ab71-69efa03857b5",
+        "trace_id": "6446a797d81e0689e2338ebc7ab55481",
+        "route": "/work",
+        "status": 200,
+        "duration_ms": 18.873400000000004,
+        "release": "v1"
+      },
+      "metrics_before_load": {
+        "requests": {
+          "/work|2xx": 12,
+          "/work|4xx": 1,
+          "unmatched|4xx": 3,
+          "/work|5xx": 1
+        },
+        "active": 0,
+        "histogram": {
+          "count": 17,
+          "sum_seconds": 0.27249239999999986,
+          "cumulative_buckets": {
+            "1": 17,
+            "0.01": 6,
+            "0.05": 17,
+            "0.1": 17,
+            "0.5": 17,
+            "Inf": 17
+          }
+        }
+      },
+      "load": {
+        "normal": {
+          "configuration": {
+            "model": "closed: each slot starts again only after its previous attempt ends",
+            "requests": 60,
+            "concurrency": 4,
+            "warmup": 6,
+            "deadline_ms": 500,
+            "keepalive": false
+          },
+          "summary": {
+            "attempts": 60,
+            "successful": 60,
+            "failed": 0,
+            "error_ratio": 0,
+            "elapsed_seconds": 0.45,
+            "attempted_rps": 133.411,
+            "successful_rps": 133.411,
+            "mean_ms": 29.671,
+            "p50_ms": 30.574,
+            "p95_ms": 32.974,
+            "p99_ms": 33.105,
+            "percentile_method": "nearest rank across all completed attempts, including HTTP failures and client errors"
+          },
+          "local_process": {
+            "cpu_user_ms": 0,
+            "cpu_system_ms": 0,
+            "rss_end_bytes": 56262656,
+            "event_loop_samples": 28,
+            "event_loop_p99_ms": 22.855679,
+            "scope": "load generator and both fixture HTTP services share this Node process"
+          }
+        },
+        "errors": {
+          "attempts": 12,
+          "successful": 0,
+          "failed": 12,
+          "error_ratio": 1,
+          "elapsed_seconds": 0.043,
+          "attempted_rps": 282.319,
+          "successful_rps": 0,
+          "mean_ms": 10.369,
+          "p50_ms": 5.993,
+          "p95_ms": 15.736,
+          "p99_ms": 15.736,
+          "percentile_method": "nearest rank across all completed attempts, including HTTP failures and client errors"
+        },
+        "deadlines": {
+          "attempts": 4,
+          "successful": 0,
+          "failed": 4,
+          "error_ratio": 1,
+          "elapsed_seconds": 0.035,
+          "attempted_rps": 115.461,
+          "successful_rps": 0,
+          "mean_ms": 17.231,
+          "p50_ms": 15.166,
+          "p95_ms": 19.979,
+          "p99_ms": 19.979,
+          "percentile_method": "nearest rank across all completed attempts, including HTTP failures and client errors"
+        }
+      }
+    },
+    "pipeline": {
+      "runs": [
+        [
+          {
+            "stage": "syntax",
+            "status": "passed"
+          }
+        ],
+        [
+          {
+            "stage": "test",
+            "status": "failed",
+            "error_type": "CalledProcessError"
+          }
+        ],
+        [
+          {
+            "stage": "integrity",
+            "status": "failed",
+            "error_type": "ValueError"
+          }
+        ],
+        [
+          {
+            "stage": "smoke",
+            "status": "failed",
+            "error_type": "HTTPError"
+          }
+        ],
+        [
+          {
+            "stage": "integrity",
+            "status": "passed"
+          },
+          {
+            "stage": "smoke",
+            "status": "passed"
+          },
+          {
+            "stage": "promote",
+            "status": "passed"
+          }
+        ]
+      ],
+      "selected_before_rollback": {
+        "release": "v2",
+        "revision": "28d1ef891abe9eccb6a500b58f848c999bb1da28",
+        "artifact_sha256": "08f759f02e3da6adb962199975b2f04471966e84b1dfa08db96211657930f183"
+      },
+      "selected_after_rollback": {
+        "release": "v1",
+        "revision": "28d1ef891abe9eccb6a500b58f848c999bb1da28",
+        "artifact_sha256": "9bdc4dff5b90451d62177466a57b2b905a7478fdfaa82dda15f330432874cf6f"
+      },
+      "artifact_sha256": "08f759f02e3da6adb962199975b2f04471966e84b1dfa08db96211657930f183",
+      "boundary": "Candidate source bundle resolves locked dependencies from module node_modules; no remote runner or external deployment. Pointer replacement does not reroute a running server."
+    },
+    "action_pins": {
+      "checkout": {
+        "tag": "v7",
+        "sha": "3d3c42e5aac5ba805825da76410c181273ba90b1"
+      },
+      "setup-node": {
+        "tag": "v7",
+        "sha": "949feb2413d6458794dcd2491c4babbbce0c15c1"
+      },
+      "upload-artifact": {
+        "tag": "v7",
+        "sha": "cf430e030ddbb5b0abf93d22962f4752f3646cd9"
+      }
+    }
+  },
+  "cleanup": {
+    "loopback_ports_closed": {
+      "51670": true,
+      "51671": true,
+      "50463": true,
+      "50462": true,
+      "50468": true,
+      "50467": true,
+      "50471": true,
+      "50470": true
+    },
+    "scratch_repositories_releases_and_directory_removed": true,
+    "main_repository_head_unchanged": true,
+    "remote_github_actions_run": false,
+    "external_deployment_performed": false,
+    "docker_started": false
+  },
+  "scope": "Disposable local Git repositories/remotes; actual local source-bundle gates and candidate HTTP; official in-memory OpenTelemetry traces, custom metrics/logs and short same-process closed-model load runs. No hosted Actions, production release or capacity benchmark."
+}

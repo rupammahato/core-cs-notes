@@ -1,0 +1,77 @@
+PASS accessibility/document_language_and_main_landmark
+PASS state/three_snapshot_replacements_increment_once
+PASS state/setter_does_not_rewrite_current_handler_snapshot
+PASS state/three_pure_updaters_increment_three_times
+PASS state/stored_closure_keeps_its_render_snapshot
+PASS state/ref_mutation_does_not_publish_ui_state
+PASS state/event_can_read_and_publish_current_ref
+PASS state/immutable_update_changes_rendered_nested_value
+PASS state/previous_object_and_nested_identity_remain_distinct
+PASS identity/stable_key_keeps_draft_with_logical_item
+PASS identity/stable_reorder_reuses_the_input_dom_node
+PASS identity/index_counterexample_misassigns_draft_after_reorder
+PASS identity/same_type_position_key_preserves_editor_state
+PASS identity/new_key_resets_editor_state
+PASS identity/previously_unmounted_key_does_not_cache_old_state
+PASS effects/ordinary_mount_has_one_active_subscription
+PASS effects/unchanged_dependency_does_not_reconnect
+PASS effects/changed_dependency_cleans_old_before_new_setup
+PASS effects/conditional_unmount_releases_external_resource
+PASS effects/remount_creates_one_new_subscription
+PASS forms/blank_trimmed_value_has_visible_error
+PASS accessibility/invalid_input_links_its_error
+PASS forms/controlled_field_reflects_typed_value
+PASS forms/enter_submits_trimmed_value_without_navigation
+PASS forms/successful_submit_clears_invalid_state
+PASS forms/derived_filter_and_sibling_count_agree
+PASS forms/controlled_checkbox_combines_with_filter
+PASS accessibility/ref_focus_reaches_named_input
+PASS accessibility/native_button_supports_keyboard_activation
+PASS sharing/provider_update_reaches_context_consumer
+PASS sharing/memo_skips_child_commit_for_unchanged_props_in_this_run
+PASS sharing/changed_prop_updates_memo_child_and_derived_value
+PASS sharing/stable_callback_requests_parent_state_update
+PASS api/idle_ui_does_not_fetch_before_query
+PASS api/held_request_displays_loading_and_busy_state
+PASS api/successful_http_response_renders_items
+PASS api/query_change_aborts_old_browser_fetch
+PASS api/empty_success_has_distinct_ui
+PASS api/http_503_is_checked_and_rendered_as_error
+PASS api/retry_uses_current_query_and_recovers
+PASS api/invalid_success_payload_fails_runtime_contract
+PASS api/api_text_is_rendered_as_text_not_raw_html
+PASS api/unmount_aborts_pending_request_and_removes_view
+PASS api/inactive_result_is_ignored_even_when_transport_does_not_abort
+PASS strict/development_root_strict_mode_probes_setup_cleanup_setup
+PASS strict/development_probe_leaves_one_active_resource
+PASS strict/production_build_has_no_extra_development_effect_probe
+PASS accessibility/narrow_viewport_has_no_horizontal_overflow
+PASS effects/root_unmount_releases_subscription_and_dom
+PASS browser/no_uncaught_react_or_application_exceptions
+{
+  "total": 50,
+  "counts": {
+    "accessibility": 5,
+    "api": 11,
+    "browser": 1,
+    "effects": 6,
+    "forms": 6,
+    "identity": 6,
+    "sharing": 4,
+    "state": 8,
+    "strict": 3
+  },
+  "browser": {
+    "version": "155.0.8059.40",
+    "executable": "C:/Program Files/Google/Chrome/Application/chrome.exe",
+    "headless": true
+  },
+  "cleanup": {
+    "browser_closed": true,
+    "loopback_ports_closed": {
+      "58417": true
+    },
+    "docker_started": false
+  }
+}
+

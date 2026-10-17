@@ -1,0 +1,87 @@
+{
+  "group": "core",
+  "total": 17,
+  "checks": [
+    {
+      "name": "server validator rejects negative stock",
+      "passed": true
+    },
+    {
+      "name": "server validator rejects string stock",
+      "passed": true
+    },
+    {
+      "name": "server validator rejects boolean stock despite Python bool being an int subclass",
+      "passed": true
+    },
+    {
+      "name": "required field is enforced by the server",
+      "passed": true
+    },
+    {
+      "name": "compound unique index scopes SKU uniqueness to tenant",
+      "passed": true
+    },
+    {
+      "name": "ObjectId and its hexadecimal string are different BSON values",
+      "passed": true
+    },
+    {
+      "name": "Decimal128 and aware BSON date round-trip with millisecond precision",
+      "passed": true
+    },
+    {
+      "name": "Extended JSON preserves ObjectId across serialization",
+      "passed": true
+    },
+    {
+      "name": "query builder rejects operator objects and keeps string input literal",
+      "passed": true
+    },
+    {
+      "name": "collection access does not supply per-request tenant isolation",
+      "passed": true
+    },
+    {
+      "name": "a reference field does not create foreign-key enforcement",
+      "passed": true
+    },
+    {
+      "name": "null equality includes missing fields while exists and type distinguish them",
+      "passed": true
+    },
+    {
+      "name": "single-field unique index treats missing and null as a shared null key",
+      "passed": true
+    },
+    {
+      "name": "operator update preserves other fields while replacement removes them",
+      "passed": true
+    },
+    {
+      "name": "addToSet prevents repeat insertion of the same scalar member",
+      "passed": true
+    },
+    {
+      "name": "sequential upsert reports insert then matched update",
+      "passed": true
+    },
+    {
+      "name": "ordered batch can leave earlier documents committed after a later validation failure",
+      "passed": true
+    }
+  ],
+  "observations": {
+    "typed_values": {
+      "decimal": "125.50",
+      "date": "2026-10-14T06:30:00.123000+00:00"
+    },
+    "tenant_filter_required": true,
+    "dangling_reference_accepted": true,
+    "null_query_ids": [
+      1,
+      2
+    ]
+  },
+  "scope": "Real MongoDB BSON adapters validators CRUD and unique indexes; no application authentication"
+}

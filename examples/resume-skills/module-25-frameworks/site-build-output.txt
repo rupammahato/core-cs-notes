@@ -1,0 +1,33 @@
+▲ Next.js 16.3.8 (webpack)
+✓ Running next.config.mjs took 1111ms
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 16.8s
+  Running TypeScript ...
+  Finished TypeScript in 1448ms ...
+  Collecting page data using 7 workers ...
+  Generating static pages using 7 workers (0/101) ...
+  Generating static pages using 7 workers (25/101) 
+  Generating static pages using 7 workers (50/101) 
+  Generating static pages using 7 workers (75/101) 
+✓ Generating static pages using 7 workers (101/101) in 9.3s
+  Finalizing page optimization ...
+  Collecting build traces ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ƒ /api/search
+├   /docs/[[...slug]]
+│ ├ ● /docs/cn/dns
+│ ├ ● /docs/cn/http-web
+│ ├ ● /docs/cn/consolidation
+│ └ ● [+93 more paths]
+└ ○ /icon.svg
+
+
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses generateStaticParams)
+ƒ  (Dynamic)  server-rendered on demand
+
+

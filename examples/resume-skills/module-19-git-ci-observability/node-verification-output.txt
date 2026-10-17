@@ -1,0 +1,60 @@
+PASS statistics/nearest_rank_reference_percentiles
+PASS statistics/percentile_does_not_mutate_input
+PASS statistics/empty_samples_have_no_latency_claim
+PASS statistics/invalid_measurement_samples_rejected
+PASS statistics/http_errors_and_timeouts_count_as_failures
+PASS statistics/attempted_and_successful_rates_differ
+PASS statistics/failure_latency_retained_in_distribution
+PASS statistics/slo_budget_reference_example
+PASS http/successful_response_contains_release_and_result
+PASS http/invalid_input_returns_400
+PASS http/unknown_route_returns_404
+PASS http/dependency_failure_returns_safe_503
+PASS tracing/three_real_sdk_spans_per_work_request
+PASS tracing/client_and_dependency_parent_relationships
+PASS tracing/root_context_and_distinct_span_ids
+PASS tracing/valid_w3c_parent_propagates
+PASS tracing/zero_trace_context_is_replaced
+PASS tracing/dependency_failure_marks_trace_error
+PASS tracing/concurrent_requests_keep_distinct_context
+PASS logs/response_log_and_trace_are_correlated
+PASS logs/allowlisted_log_fields_omit_credentials_and_query
+PASS metrics/bounded_route_status_labels
+PASS metrics/histogram_count_matches_counters
+PASS metrics/cumulative_buckets_are_monotone
+PASS metrics/active_work_returns_to_zero
+PASS load/measured_attempt_count_excludes_warmup
+PASS load/normal_samples_are_all_successful
+PASS load/reported_percentiles_derive_from_raw_samples
+PASS load/failure_run_has_zero_successful_throughput
+PASS load/client_deadlines_remain_in_failed_attempts
+{
+  "total": 30,
+  "counts": {
+    "http": 4,
+    "load": 5,
+    "logs": 2,
+    "metrics": 4,
+    "statistics": 8,
+    "tracing": 7
+  },
+  "normal_load": {
+    "attempts": 60,
+    "successful": 60,
+    "failed": 0,
+    "error_ratio": 0,
+    "elapsed_seconds": 0.45,
+    "attempted_rps": 133.411,
+    "successful_rps": 133.411,
+    "mean_ms": 29.671,
+    "p50_ms": 30.574,
+    "p95_ms": 32.974,
+    "p99_ms": 33.105,
+    "percentile_method": "nearest rank across all completed attempts, including HTTP failures and client errors"
+  },
+  "portsClosed": {
+    "51670": true,
+    "51671": true
+  }
+}
+

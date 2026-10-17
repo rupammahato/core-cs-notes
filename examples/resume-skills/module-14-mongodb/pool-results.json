@@ -1,0 +1,35 @@
+{
+  "group": "pool",
+  "total": 5,
+  "checks": [
+    {
+      "name": "cursor construction is lazy and iteration issues real find and getMore commands",
+      "passed": true
+    },
+    {
+      "name": "explicit close releases a still-open server cursor",
+      "passed": true
+    },
+    {
+      "name": "held real command exhausts max-size-one pool and bounds another checkout",
+      "passed": true
+    },
+    {
+      "name": "pool serves requests again after its held connection is released",
+      "passed": true
+    },
+    {
+      "name": "closed MongoClient rejects subsequent operations",
+      "passed": true
+    }
+  ],
+  "observations": {
+    "cursor_commands": {
+      "find": 1,
+      "getMore": 2
+    },
+    "exhaustion": "WaitQueueTimeoutError",
+    "pool_max": 1
+  },
+  "scope": "Actual synchronous PyMongo command monitoring pool checkout pressure cursor cleanup and client close"
+}

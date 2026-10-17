@@ -1,0 +1,268 @@
+{
+  "routes": [
+    {
+      "route": "/",
+      "status": 200
+    },
+    {
+      "route": "/docs/resume-skills",
+      "status": 200
+    },
+    {
+      "route": "/docs/resume-skills/how-backend-works",
+      "status": 200
+    },
+    {
+      "route": "/docs/resume-skills/javascript-fundamentals",
+      "status": 200
+    },
+    {
+      "route": "/docs/resume-skills/asynchronous-javascript",
+      "status": 200
+    },
+    {
+      "route": "/docs/resume-skills/typescript-fundamentals",
+      "status": 200
+    },
+    {
+      "route": "/docs/resume-skills/nodejs",
+      "status": 200
+    },
+    {
+      "route": "/docs/resume-skills/express-backend-structure",
+      "status": 200
+    },
+    {
+      "route": "/docs/resume-skills/rest-apis-http",
+      "status": 200
+    },
+    {
+      "route": "/docs/dbms",
+      "status": 200
+    }
+  ],
+  "assertions": {
+    "title": true,
+    "q28": true,
+    "implementation": true,
+    "checks": true,
+    "backendGroup": true,
+    "slowBody": true,
+    "nextAuth": true,
+    "priorChapterLink": true,
+    "roadmapAvailable": true
+  },
+  "searchStatus": 200,
+  "searchResults": [
+    {
+      "id": "/docs/resume-skills/rest-apis-http",
+      "type": "page",
+      "content": "Module 6: REST APIs and HTTP in Application Design",
+      "breadcrumbs": [
+        "Docs",
+        "Resume Skills",
+        "Backend APIs"
+      ],
+      "url": "/docs/resume-skills/rest-apis-http"
+    },
+    {
+      "id": "/docs/resume-skills/rest-apis-http-274",
+      "content": "<mark>Idempotency</mark>-Key",
+      "type": "text",
+      "url": "/docs/resume-skills/rest-apis-http#65-headers-are-part-of-the-contract"
+    },
+    {
+      "id": "/docs/resume-skills/rest-apis-http-430",
+      "content": "full task + <mark>Idempotency</mark>-Key",
+      "type": "text",
+      "url": "/docs/resume-skills/rest-apis-http#endpoint-contract"
+    },
+    {
+      "id": "/docs/resume-skills/rest-apis-http-31",
+      "content": "6.11 <mark>Idempotency</mark> keys and duplicate creation",
+      "type": "heading",
+      "url": "/docs/resume-skills/rest-apis-http#611-idempotency-keys-and-duplicate-creation"
+    },
+    {
+      "id": "/docs/resume-skills/rest-apis-http-533",
+      "content": "Safety, <mark>idempotency</mark> and cacheability are different properties.",
+      "type": "text",
+      "url": "/docs/resume-skills/rest-apis-http#620-must-remember"
+    },
+    {
+      "id": "/docs/resume-skills/rest-apis-http-650",
+      "content": "**Q23. What belongs in an <mark>idempotency</mark> record?**",
+      "type": "text",
+      "url": "/docs/resume-skills/rest-apis-http#622-interview-questions-and-follow-ups"
+    },
+    {
+      "id": "/docs/resume-skills/rest-apis-http-535",
+      "content": "<mark>Idempotency</mark> concerns the intended effect, not identical response statuses.",
+      "type": "text",
+      "url": "/docs/resume-skills/rest-apis-http#620-must-remember"
+    },
+    {
+      "id": "/docs/resume-skills/rest-apis-http-546",
+      "content": "Request IDs, resource IDs and <mark>idempotency</mark> keys have different purposes.",
+      "type": "text",
+      "url": "/docs/resume-skills/rest-apis-http#620-must-remember"
+    },
+    {
+      "id": "/docs/resume-skills/rest-apis-http-669",
+      "content": "Draw the POST flow from bytes through normalization, key reservation and response. Label resource ID, request ID and <mark>idempotency</mark> key.",
+      "type": "text",
+      "url": "/docs/resume-skills/rest-apis-http#task-1-trace-one-request"
+    },
+    {
+      "id": "/docs/resume-skills",
+      "type": "page",
+      "content": "Master Roadmap",
+      "breadcrumbs": [
+        "Docs",
+        "Resume Skills"
+      ],
+      "url": "/docs/resume-skills"
+    },
+    {
+      "id": "/docs/resume-skills-227",
+      "content": "Transactions and <mark>idempotency</mark>",
+      "type": "text",
+      "url": "/docs/resume-skills#2-dependency-map"
+    },
+    {
+      "id": "/docs/resume-skills-254",
+      "content": "Queues, retries, <mark>idempotency</mark>, concurrency and recovery",
+      "type": "text",
+      "url": "/docs/resume-skills#3-architecture-is-part-of-the-learning-path"
+    },
+    {
+      "id": "/docs/resume-skills/asynchronous-javascript",
+      "type": "page",
+      "content": "Module 2: Asynchronous JavaScript",
+      "breadcrumbs": [
+        "Docs",
+        "Resume Skills",
+        "Backend Foundations"
+      ],
+      "url": "/docs/resume-skills/asynchronous-javascript"
+    },
+    {
+      "id": "/docs/resume-skills/asynchronous-javascript-414",
+      "content": "Uncertain outcomes; retry/<mark>idempotency</mark> boundaries",
+      "type": "text",
+      "url": "/docs/resume-skills/asynchronous-javascript#resume-connections"
+    },
+    {
+      "id": "/docs/resume-skills/asynchronous-javascript-359",
+      "content": "**Retries:** avoid monopolizing slots indefinitely; preserve an attempt budget and <mark>idempotency</mark>.",
+      "type": "text",
+      "url": "/docs/resume-skills/asynchronous-javascript#what-would-change-in-production"
+    },
+    {
+      "id": "/docs/resume-skills/asynchronous-javascript-533",
+      "content": "**7:** no response proves only a missing observed response. Query status/use <mark>idempotency</mark> according to the payment contract.",
+      "type": "text",
+      "url": "/docs/resume-skills/asynchronous-javascript#answer-checkpoints"
+    },
+    {
+      "id": "/docs/resume-skills/asynchronous-javascript-329",
+      "content": "Retries need a deliberate failure classification, bounded attempts, backoff/jitter and an <mark>idempotency</mark> policy. Those reliability mechanisms return in M9/M15 and architecture A3.",
+      "type": "text",
+      "url": "/docs/resume-skills/asynchronous-javascript#end-to-end-deadline-thinking"
+    },
+    {
+      "id": "/docs/resume-skills/asynchronous-javascript-513",
+      "content": "**Q22. Does cancellation mean rollback?**\nNo. It requests stopping supported work, and remote side effects may already exist.\n**Follow-up:** What makes a retry safe after uncertainty? A defined <mark>idempotency</mark>/reconciliation contract.",
+      "type": "text",
+      "url": "/docs/resume-skills/asynchronous-javascript#interview-qa-bank"
+    },
+    {
+      "id": "/docs/resume-skills/asynchronous-javascript-310",
+      "content": "**Payment connection:** after a client timeout, “no response” is not proof that the server did nothing. A blind retry of a non-idempotent action can duplicate it. Later chapters use <mark>idempotency</mark> keys, status lookup and explicit uncertain outcomes.",
+      "type": "text",
+      "url": "/docs/resume-skills/asynchronous-javascript#racing-a-deadline-is-not-cancellation"
+    },
+    {
+      "id": "/docs/resume-skills/express-backend-structure",
+      "type": "page",
+      "content": "Module 5: Express.js and Backend Application Structure",
+      "breadcrumbs": [
+        "Docs",
+        "Resume Skills",
+        "Backend APIs"
+      ],
+      "url": "/docs/resume-skills/express-backend-structure"
+    },
+    {
+      "id": "/docs/resume-skills/express-backend-structure-442",
+      "content": "Bounded data writes/jobs and <mark>idempotency</mark>",
+      "type": "text",
+      "url": "/docs/resume-skills/express-backend-structure#follow-the-same-path-in-each-project"
+    },
+    {
+      "id": "/docs/resume-skills/express-backend-structure-597",
+      "content": "**M6: REST APIs and HTTP in Application Design**. Build on these routes to design resource contracts, methods/status codes, pagination, filtering, versioning, retries/<mark>idempotency</mark> and rate-limit behavior.",
+      "type": "text",
+      "url": "/docs/resume-skills/express-backend-structure#next"
+    },
+    {
+      "id": "/docs/resume-skills/nodejs",
+      "type": "page",
+      "content": "Module 4: Node.js — What It Is and How It Works",
+      "breadcrumbs": [
+        "Docs",
+        "Resume Skills",
+        "Backend Foundations"
+      ],
+      "url": "/docs/resume-skills/nodejs"
+    },
+    {
+      "id": "/docs/resume-skills/nodejs-500",
+      "content": "Durable job ownership and retry/<mark>idempotency</mark> design",
+      "type": "text",
+      "url": "/docs/resume-skills/nodejs#start-from-requirements"
+    },
+    {
+      "id": "/docs/resume-skills/nodejs-527",
+      "content": "Method/business <mark>idempotency</mark> and whether data was already sent/committed",
+      "type": "text",
+      "url": "/docs/resume-skills/nodejs#questions-to-prepare"
+    },
+    {
+      "id": "/docs/resume-skills/nodejs-425",
+      "content": "In either case, ordinary module variables, in-memory sessions and caches are not automatically shared across processes. A global variable in worker A cannot enforce a global inventory/rate/<mark>idempotency</mark> invariant for worker B.",
+      "type": "text",
+      "url": "/docs/resume-skills/nodejs#cluster-and-horizontal-replicas"
+    },
+    {
+      "id": "/docs/resume-skills/how-backend-works",
+      "type": "page",
+      "content": "Module 0: How a Backend Works",
+      "breadcrumbs": [
+        "Docs",
+        "Resume Skills",
+        "Backend Foundations"
+      ],
+      "url": "/docs/resume-skills/how-backend-works"
+    },
+    {
+      "id": "/docs/resume-skills/how-backend-works-418",
+      "content": "The outcome can be uncertain; use <mark>idempotency</mark> and reconciliation",
+      "type": "text",
+      "url": "/docs/resume-skills/how-backend-works#common-wrong-answers"
+    },
+    {
+      "id": "/docs/resume-skills/how-backend-works-172",
+      "content": "For a quote, retrying is simple because no reservation or payment occurs. For a payment, an uncertain result needs operation identity and reconciliation. That is why M9 and architecture A3 cover <mark>idempotency</mark>.",
+      "type": "text",
+      "url": "/docs/resume-skills/how-backend-works#what-if-the-browser-times-out"
+    },
+    {
+      "id": "/docs/resume-skills/how-backend-works-443",
+      "content": "**Q17. What if the client times out?**\nThe server may still have completed or be executing the work. The caller needs a way to establish the outcome for operations with effects.\n**Follow-up:** What makes a retry safe? Defined <mark>idempotency</mark> and outcome handling.",
+      "type": "text",
+      "url": "/docs/resume-skills/how-backend-works#interview-qa-bank"
+    }
+  ],
+  "sitePid": 15500
+}

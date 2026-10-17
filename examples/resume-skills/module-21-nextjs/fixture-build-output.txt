@@ -1,0 +1,49 @@
+  ▲ Next.js 14.2.35
+  - Experiments (use with caution):
+    · cpus
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/14) ...
+   Generating static pages (3/14) 
+   Generating static pages (6/14) 
+   Generating static pages (10/14) 
+ ✓ Generating static pages (14/14)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                               Size     First Load JS
+┌ ○ /                                     916 B          96.8 kB
+├ ○ /_not-found                           163 B          87.4 kB
+├ ƒ /api/echo                             0 B                0 B
+├ ƒ /api/revalidate                       0 B                0 B
+├ ƒ /api/topics/[slug]                    0 B                0 B
+├ ƒ /broken                               163 B          87.4 kB
+├ ƒ /cache                                163 B          87.4 kB
+├ ● /catalog/[slug]                       163 B          87.4 kB
+├   ├ /catalog/node
+├   └ /catalog/react
+├ ƒ /dashboard                            163 B          87.4 kB
+├ ○ /dashboard/settings                   163 B          87.4 kB
+├ ○ /isr                                  163 B          87.4 kB
+└ ƒ /stream                               163 B          87.4 kB
++ First Load JS shared by all             87.2 kB
+  ├ chunks/117-83a3bb9e3d27f189.js        31.7 kB
+  ├ chunks/fd9d1056-aaea432f04ab57e5.js   53.6 kB
+  └ other shared chunks (total)           1.86 kB
+
+Route (pages)                             Size     First Load JS
+─ ƒ /api/legacy-echo                      0 B            80.9 kB
++ First Load JS shared by all             80.9 kB
+  ├ chunks/framework-f66176bb897dc684.js  44.8 kB
+  ├ chunks/main-9b60a912c9a94ecf.js       34.2 kB
+  └ other shared chunks (total)           1.84 kB
+
+ƒ Middleware                              26.5 kB
+
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses getStaticProps)
+ƒ  (Dynamic)  server-rendered on demand
+

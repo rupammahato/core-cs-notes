@@ -1,0 +1,32 @@
+{
+  "group": "protocols",
+  "total": 2,
+  "checks": [
+    {
+      "name": "WSGI callable returns byte iterable and response metadata",
+      "passed": true
+    },
+    {
+      "name": "ASGI callable receives chunk events and sends response events",
+      "passed": true
+    }
+  ],
+  "observations": {
+    "wsgi": {
+      "status": "200 OK",
+      "body": {
+        "method": "GET",
+        "path": "/probe"
+      }
+    },
+    "asgi": {
+      "status": 200,
+      "body": {
+        "method": "POST",
+        "path": "/probe",
+        "bytes": 3
+      }
+    }
+  },
+  "transport": "In-process protocol calls; no network listener"
+}

@@ -1,0 +1,171 @@
+{
+  "module": 18,
+  "title": "AWS and GCP Fundamentals for This Resume",
+  "verified_date": "2026-10-14",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "os": "Windows",
+  "versions": {
+    "google-auth": "2.62.0",
+    "google-cloud-tasks": "2.26.0",
+    "cryptography": "50.0.2",
+    "requests": "2.34.2"
+  },
+  "checks": {
+    "counts": {
+      "auth": 14,
+      "cache": 14,
+      "sdk": 9,
+      "worker": 16
+    },
+    "total": 53,
+    "all_passed": true
+  },
+  "cleanup": {
+    "loopback_ports_closed": {
+      "55451": true,
+      "55485": true,
+      "55487": true,
+      "55488": true
+    },
+    "server_threads_stopped": true,
+    "scratch_database_and_directory_removed": true,
+    "generated_private_keys_written_to_disk": false,
+    "cloud_resources_created": false,
+    "docker_started": false
+  },
+  "content": {
+    "chapter": "resume-skills-handbook-part-20-module-18-aws-gcp-fundamentals.md",
+    "words": 9499,
+    "lines": 1050,
+    "questions": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30
+    ],
+    "practice_tasks": 10,
+    "unchecked_learning_items": 12,
+    "source_fidelity": {
+      "cache_demo.py": true,
+      "task_request.py": true,
+      "worker.py": true,
+      "iam-read-object-policy.json": true,
+      "ec2-trust-policy.json": true
+    },
+    "counts": {
+      "auth": 14,
+      "cache": 14,
+      "sdk": 9,
+      "worker": 16
+    },
+    "total": 53,
+    "embedded_observations": [
+      "VERSIONS",
+      "CACHE",
+      "DELIVERY",
+      "TASK_JSON"
+    ],
+    "aws_policies_json_parsed": true,
+    "aws_policies_cloud_evaluated": false,
+    "result_fidelity": {
+      "versions": true,
+      "sdk_json": true,
+      "cache": true,
+      "delivery": true
+    }
+  },
+  "website": {
+    "build_passed": true,
+    "static_pages": 94,
+    "routes_checked": 22,
+    "all_routes_200": true,
+    "assertions": {
+      "title": true,
+      "q30": true,
+      "implementation": true,
+      "totalChecks": true,
+      "deliveryEvidence": true,
+      "architecture": true,
+      "nextDelivery": true,
+      "liveBoundary": true,
+      "healthException": true,
+      "cacheException": true,
+      "group": true,
+      "roadmapLink": true,
+      "previousLink": true
+    },
+    "search": {
+      "status": 200,
+      "results": 22,
+      "chapterIndexed": true,
+      "scoped": true
+    },
+    "temporary_server_closed": true,
+    "cached_font_fixture_used": true
+  },
+  "ports_stopped": {
+    "3000": true,
+    "49353": true,
+    "55451": true,
+    "55485": true,
+    "55487": true,
+    "55488": true
+  },
+  "git_diff_check_passed": true,
+  "trailing_whitespace_files": [],
+  "core_handbooks": [
+    {
+      "subject": "DSA Notes",
+      "files": 17,
+      "lines": 17589
+    },
+    {
+      "subject": "OOP Notes",
+      "files": 13,
+      "lines": 8806
+    },
+    {
+      "subject": "OS Notes",
+      "files": 13,
+      "lines": 6341
+    },
+    {
+      "subject": "DBMS Notes",
+      "files": 13,
+      "lines": 9613
+    },
+    {
+      "subject": "CN Notes",
+      "files": 13,
+      "lines": 9322
+    }
+  ],
+  "next_module": "M19: Git, CI/CD, Testing, Observability and Performance",
+  "scope": "Offline official SDK serialization and Google-auth verification against generated local trust; actual loopback HTTP and SQLite. No AWS/GCP API, live Google-issued identity, real CDN/ALB, queue delivery or cloud resources."
+}

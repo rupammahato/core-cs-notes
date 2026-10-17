@@ -1,0 +1,324 @@
+[
+  {
+    "id": "health",
+    "route": "/health",
+    "status": 200,
+    "check": "health",
+    "repoDelta": 0
+  },
+  {
+    "id": "product-projection",
+    "route": "/api/products/7",
+    "status": 200,
+    "check": "product",
+    "repoDelta": 1
+  },
+  {
+    "id": "implicit-head",
+    "route": "/api/products/7",
+    "method": "HEAD",
+    "status": 200,
+    "check": "head",
+    "repoDelta": 1
+  },
+  {
+    "id": "authoritative-quote",
+    "route": "/api/quotes",
+    "json": {
+      "productId": 7,
+      "quantity": 2
+    },
+    "status": 200,
+    "check": "quote",
+    "repoDelta": 1
+  },
+  {
+    "id": "quote-does-not-reserve",
+    "route": "/api/quotes",
+    "json": {
+      "productId": 7,
+      "quantity": 4
+    },
+    "status": 200,
+    "check": "unchanged",
+    "repoDelta": 1
+  },
+  {
+    "id": "zero-path-id",
+    "route": "/api/products/0",
+    "status": 400,
+    "code": "invalid_product_id",
+    "repoDelta": 0
+  },
+  {
+    "id": "partial-path-id",
+    "route": "/api/products/7oops",
+    "status": 400,
+    "code": "invalid_product_id",
+    "repoDelta": 0
+  },
+  {
+    "id": "unsafe-path-id",
+    "route": "/api/products/9007199254740992",
+    "status": 400,
+    "code": "invalid_product_id",
+    "repoDelta": 0
+  },
+  {
+    "id": "missing-product",
+    "route": "/api/products/999",
+    "status": 404,
+    "code": "product_not_found",
+    "repoDelta": 1
+  },
+  {
+    "id": "wrong-media-type",
+    "route": "/api/quotes",
+    "method": "POST",
+    "headers": {
+      "content-type": "text/plain"
+    },
+    "body": "{\"productId\":7,\"quantity\":2}",
+    "status": 415,
+    "code": "json_required",
+    "repoDelta": 0
+  },
+  {
+    "id": "missing-media-type",
+    "route": "/api/quotes",
+    "method": "POST",
+    "status": 415,
+    "code": "json_required",
+    "repoDelta": 0
+  },
+  {
+    "id": "empty-json-body",
+    "route": "/api/quotes",
+    "method": "POST",
+    "headers": {
+      "content-type": "application/json"
+    },
+    "body": "",
+    "status": 400,
+    "code": "invalid_product_id",
+    "repoDelta": 0
+  },
+  {
+    "id": "malformed-json",
+    "route": "/api/quotes",
+    "method": "POST",
+    "headers": {
+      "content-type": "application/json"
+    },
+    "body": "{\"productId\":",
+    "status": 400,
+    "code": "invalid_json",
+    "repoDelta": 0
+  },
+  {
+    "id": "array-body",
+    "route": "/api/quotes",
+    "json": [],
+    "status": 400,
+    "code": "invalid_body",
+    "repoDelta": 0
+  },
+  {
+    "id": "primitive-json-policy",
+    "route": "/api/quotes",
+    "json": null,
+    "status": 400,
+    "code": "invalid_json",
+    "repoDelta": 0
+  },
+  {
+    "id": "missing-fields",
+    "route": "/api/quotes",
+    "json": {},
+    "status": 400,
+    "code": "invalid_product_id",
+    "repoDelta": 0
+  },
+  {
+    "id": "string-product-id",
+    "route": "/api/quotes",
+    "json": {
+      "productId": "7",
+      "quantity": 2
+    },
+    "status": 400,
+    "code": "invalid_product_id",
+    "repoDelta": 0
+  },
+  {
+    "id": "string-quantity",
+    "route": "/api/quotes",
+    "json": {
+      "productId": 7,
+      "quantity": "2"
+    },
+    "status": 400,
+    "code": "invalid_quantity",
+    "repoDelta": 0
+  },
+  {
+    "id": "zero-quantity",
+    "route": "/api/quotes",
+    "json": {
+      "productId": 7,
+      "quantity": 0
+    },
+    "status": 400,
+    "code": "invalid_quantity",
+    "repoDelta": 0
+  },
+  {
+    "id": "fractional-quantity",
+    "route": "/api/quotes",
+    "json": {
+      "productId": 7,
+      "quantity": 1.5
+    },
+    "status": 400,
+    "code": "invalid_quantity",
+    "repoDelta": 0
+  },
+  {
+    "id": "policy-limit",
+    "route": "/api/quotes",
+    "json": {
+      "productId": 7,
+      "quantity": 11
+    },
+    "status": 400,
+    "code": "invalid_quantity",
+    "repoDelta": 0
+  },
+  {
+    "id": "caller-price-rejected",
+    "route": "/api/quotes",
+    "json": {
+      "productId": 7,
+      "quantity": 2,
+      "unitPricePaise": 1
+    },
+    "status": 400,
+    "code": "unknown_fields",
+    "repoDelta": 0
+  },
+  {
+    "id": "caller-tenant-rejected",
+    "route": "/api/quotes",
+    "json": {
+      "productId": 7,
+      "quantity": 2,
+      "tenantId": "other"
+    },
+    "status": 400,
+    "code": "unknown_fields",
+    "repoDelta": 0
+  },
+  {
+    "id": "insufficient-stock",
+    "route": "/api/quotes",
+    "json": {
+      "productId": 7,
+      "quantity": 5
+    },
+    "status": 409,
+    "code": "insufficient_stock",
+    "repoDelta": 1
+  },
+  {
+    "id": "zero-stock",
+    "route": "/api/quotes",
+    "json": {
+      "productId": 8,
+      "quantity": 1
+    },
+    "status": 409,
+    "code": "insufficient_stock",
+    "repoDelta": 1
+  },
+  {
+    "id": "valid-upper-bound-stock-conflict",
+    "route": "/api/quotes",
+    "json": {
+      "productId": 7,
+      "quantity": 10
+    },
+    "status": 409,
+    "code": "insufficient_stock",
+    "repoDelta": 1
+  },
+  {
+    "id": "quote-missing-product",
+    "route": "/api/quotes",
+    "json": {
+      "productId": 999,
+      "quantity": 2
+    },
+    "status": 404,
+    "code": "product_not_found",
+    "repoDelta": 1
+  },
+  {
+    "id": "json-byte-limit",
+    "route": "/api/quotes",
+    "json": {
+      "productId": 7,
+      "quantity": 2,
+      "padding": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+    },
+    "status": 413,
+    "code": "body_too_large",
+    "repoDelta": 0
+  },
+  {
+    "id": "compressed-body-policy",
+    "route": "/api/quotes",
+    "gzip": {
+      "productId": 7,
+      "quantity": 2
+    },
+    "status": 415,
+    "code": "unsupported_encoding",
+    "repoDelta": 0
+  },
+  {
+    "id": "unknown-route-not-parsed",
+    "route": "/api/unknown",
+    "method": "POST",
+    "headers": {
+      "content-type": "application/json"
+    },
+    "body": "{broken",
+    "status": 404,
+    "code": "route_not_found",
+    "repoDelta": 0
+  },
+  {
+    "id": "quote-method-allow",
+    "route": "/api/quotes",
+    "status": 405,
+    "code": "method_not_allowed",
+    "allow": "POST",
+    "repoDelta": 0
+  },
+  {
+    "id": "product-method-allow",
+    "route": "/api/products/7",
+    "method": "POST",
+    "status": 405,
+    "code": "method_not_allowed",
+    "allow": "GET, HEAD",
+    "repoDelta": 0
+  },
+  {
+    "id": "malformed-path-encoding",
+    "route": "/api/products/%E0%A4%A",
+    "status": 400,
+    "code": "invalid_path",
+    "repoDelta": 0
+  }
+]

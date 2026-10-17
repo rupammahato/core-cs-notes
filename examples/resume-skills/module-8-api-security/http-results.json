@@ -1,0 +1,403 @@
+{
+  "node": "v22.14.0",
+  "passed": 46,
+  "checks": [
+    {
+      "name": "anonymous request rejected",
+      "passed": true,
+      "observed": {
+        "status": 401,
+        "code": "unauthenticated"
+      }
+    },
+    {
+      "name": "forged bearer credential rejected",
+      "passed": true,
+      "observed": {
+        "status": 401,
+        "code": "unauthenticated"
+      }
+    },
+    {
+      "name": "cross-tenant reads and unknown tenant concealed",
+      "passed": true,
+      "observed": {
+        "aliceBetaPaths": 6,
+        "carolAlpha": 404,
+        "unknown": 404,
+        "stateUnchanged": true
+      }
+    },
+    {
+      "name": "ownership and sharing distinguish private and tenant documents",
+      "passed": true,
+      "observed": {
+        "ownerPrivate": 200,
+        "viewerPrivate": 404,
+        "viewerShared": 200,
+        "sameUserOtherTenantAdmin": 200
+      }
+    },
+    {
+      "name": "projection excludes content and private server fields",
+      "passed": true,
+      "observed": {
+        "fields": [
+          "id",
+          "ownerId",
+          "title",
+          "version",
+          "visibility"
+        ]
+      }
+    },
+    {
+      "name": "list filters permissions before pagination",
+      "passed": true,
+      "observed": {
+        "bobIds": [
+          2
+        ],
+        "bobNext": null,
+        "aliceIds": [
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "name": "continuation and search do not reveal private rows",
+      "passed": true,
+      "observed": {
+        "after1": [
+          2
+        ],
+        "after2": [],
+        "privateSearch": []
+      }
+    },
+    {
+      "name": "query parameters have an explicit allowlist and bounds",
+      "passed": true,
+      "observed": {
+        "rejectedQueries": 5
+      }
+    },
+    {
+      "name": "tenant header cannot redirect authorized path context",
+      "passed": true,
+      "observed": {
+        "title": "Alpha private"
+      }
+    },
+    {
+      "name": "claimed role and user headers do not bypass ownership",
+      "passed": true,
+      "observed": {
+        "status": 403,
+        "stateUnchanged": true
+      }
+    },
+    {
+      "name": "signed role and tenant claims do not replace current membership",
+      "passed": true,
+      "observed": {
+        "otherTenant": 404,
+        "roleEscalation": 403
+      }
+    },
+    {
+      "name": "scope ceiling restricts an otherwise capable editor",
+      "passed": true,
+      "observed": {
+        "status": 403,
+        "stateUnchanged": true
+      }
+    },
+    {
+      "name": "write scope does not upgrade viewer role",
+      "passed": true,
+      "observed": {
+        "create": 403,
+        "editOwn": 403,
+        "stateUnchanged": true
+      }
+    },
+    {
+      "name": "mass assignment attempts cannot alter server-owned fields",
+      "passed": true,
+      "observed": {
+        "rejectedInputs": 4,
+        "stateUnchanged": true
+      }
+    },
+    {
+      "name": "creation assigns owner and tenant on the server",
+      "passed": true,
+      "observed": {
+        "id": 3,
+        "ownerId": "alice",
+        "visibility": "private"
+      }
+    },
+    {
+      "name": "owner edit requires condition and preserves server fields",
+      "passed": true,
+      "observed": {
+        "status": 200,
+        "tag": "\"v2\"",
+        "staleStatus": 412
+      }
+    },
+    {
+      "name": "property-level permission restricts visibility changes",
+      "passed": true,
+      "observed": {
+        "editor": 403,
+        "tenantAdmin": 200,
+        "editorStateUnchanged": true
+      }
+    },
+    {
+      "name": "bulk failure has no partial deletion",
+      "passed": true,
+      "observed": {
+        "forbidden": 403,
+        "missing": 404,
+        "duplicate": 400,
+        "stateUnchanged": true
+      }
+    },
+    {
+      "name": "authorized bulk deletion stays within selected tenant",
+      "passed": true,
+      "observed": {
+        "betaRemaining": 0,
+        "alphaRemaining": 3
+      }
+    },
+    {
+      "name": "download has independent object authorization and safe type",
+      "passed": true,
+      "observed": {
+        "denied": 404,
+        "allowed": 200,
+        "attachment": true,
+        "nosniff": true
+      }
+    },
+    {
+      "name": "audit records correlate decisions without body or credential values",
+      "passed": true,
+      "observed": {
+        "correlated": true,
+        "denialRecorded": true,
+        "credentialOrBodyLogged": false
+      }
+    },
+    {
+      "name": "cache cannot mix same local ID across tenants or viewers",
+      "passed": true,
+      "observed": {
+        "alpha1": "Alpha private",
+        "beta1": "Beta shared",
+        "otherViewer": 404
+      }
+    },
+    {
+      "name": "current membership and object policy checked before cache hit",
+      "passed": true,
+      "observed": {
+        "downgradedPrivate": 404,
+        "removedMembership": 404
+      }
+    },
+    {
+      "name": "unknown membership role fails closed",
+      "passed": true,
+      "observed": {
+        "status": 404
+      }
+    },
+    {
+      "name": "preflight advertises an allowed route without exposing data",
+      "passed": true,
+      "observed": {
+        "status": 204,
+        "allowOrigin": "https://app.example.test",
+        "credentials": false
+      }
+    },
+    {
+      "name": "origin allowlist rejects null and suffix tricks",
+      "passed": true,
+      "observed": {
+        "rejectedOrigins": 3
+      }
+    },
+    {
+      "name": "preflight rejects unsupported method or header",
+      "passed": true,
+      "observed": {
+        "rejectedPreflights": 2
+      }
+    },
+    {
+      "name": "allowed Origin does not establish identity or tenant permission",
+      "passed": true,
+      "observed": {
+        "anonymous": 401,
+        "nonmember": 404
+      }
+    },
+    {
+      "name": "non-browser request still requires real authorization",
+      "passed": true,
+      "observed": {
+        "own": 200,
+        "otherTenant": 404
+      }
+    },
+    {
+      "name": "disallowed-origin mutation has no effect",
+      "passed": true,
+      "observed": {
+        "status": 403,
+        "stateUnchanged": true
+      }
+    },
+    {
+      "name": "import rejects path filename without storing a row",
+      "passed": true,
+      "observed": {
+        "status": 400,
+        "stateUnchanged": true
+      }
+    },
+    {
+      "name": "import rejects active extension without storing a row",
+      "passed": true,
+      "observed": {
+        "status": 400,
+        "stateUnchanged": true
+      }
+    },
+    {
+      "name": "import rejects oversize text without storing a row",
+      "passed": true,
+      "observed": {
+        "status": 413,
+        "stateUnchanged": true
+      }
+    },
+    {
+      "name": "import rejects invalid UTF-8 without storing a row",
+      "passed": true,
+      "observed": {
+        "status": 400,
+        "stateUnchanged": true
+      }
+    },
+    {
+      "name": "import rejects NUL content without storing a row",
+      "passed": true,
+      "observed": {
+        "status": 400,
+        "stateUnchanged": true
+      }
+    },
+    {
+      "name": "import rejects compressed body without storing a row",
+      "passed": true,
+      "observed": {
+        "status": 415,
+        "stateUnchanged": true
+      }
+    },
+    {
+      "name": "import rejects unsupported MIME without storing a row",
+      "passed": true,
+      "observed": {
+        "status": 415,
+        "stateUnchanged": true
+      }
+    },
+    {
+      "name": "import authorizes before payload processing",
+      "passed": true,
+      "observed": {
+        "viewer": 403,
+        "nonmember": 404,
+        "stateUnchanged": true
+      }
+    },
+    {
+      "name": "text import records server ownership and opaque storage metadata",
+      "passed": true,
+      "observed": {
+        "id": 3,
+        "ownerId": "alice",
+        "visibility": "private",
+        "publicStorageKey": false
+      }
+    },
+    {
+      "name": "markup remains text in authorized attachment response",
+      "passed": true,
+      "observed": {
+        "bytesPreserved": true,
+        "type": "text/plain",
+        "attachment": true
+      }
+    },
+    {
+      "name": "HTTP import budget keys verified tenant and subject",
+      "passed": true,
+      "observed": {
+        "exhausted": 429,
+        "retryAfterSeconds": 2,
+        "otherSubject": 201,
+        "reads": 200
+      }
+    },
+    {
+      "name": "HTTP import budget resets next window",
+      "passed": true,
+      "observed": {
+        "status": 201
+      }
+    },
+    {
+      "name": "membership revoked while update awaits prevents commit",
+      "passed": true,
+      "observed": {
+        "status": 404,
+        "documentsUnchanged": true
+      }
+    },
+    {
+      "name": "membership revoked while bulk-delete awaits prevents commit",
+      "passed": true,
+      "observed": {
+        "status": 404,
+        "documentsUnchanged": true
+      }
+    },
+    {
+      "name": "overlapping tenant requests keep local context and role",
+      "passed": true,
+      "observed": {
+        "alpha": "Alpha shared",
+        "beta": "Beta private"
+      }
+    },
+    {
+      "name": "expired identity rejected before tenant access",
+      "passed": true,
+      "observed": {
+        "status": 401,
+        "code": "unauthenticated"
+      }
+    }
+  ]
+}

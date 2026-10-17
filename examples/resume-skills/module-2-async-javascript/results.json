@@ -1,0 +1,202 @@
+{
+  "node": "v22.14.0",
+  "mode": "Per-case: module or commonjs",
+  "cases": [
+    {
+      "id": "01-callback",
+      "title": "A callback does not become the caller's return value",
+      "mode": "module",
+      "source": "function lookup(id, callback) {\n  queueMicrotask(() => callback(null, { id }));\n}\nconst result = lookup(7, (error, row) => {\n  if (error) throw error;\n  console.log('callback', row.id);\n  return row;\n});\nconsole.log('returned', typeof result);",
+      "output": "returned undefined\ncallback 7"
+    },
+    {
+      "id": "02-executor",
+      "title": "The executor runs now; handlers run later",
+      "mode": "module",
+      "source": "console.log('start');\nconst p = new Promise((resolve, reject) => {\n  console.log('executor');\n  resolve(7);\n  reject(new Error('ignored settlement'));\n  console.log('executor continues');\n});\np.then(value => console.log('then', value));\nconsole.log('end');",
+      "output": "start\nexecutor\nexecutor continues\nend\nthen 7"
+    },
+    {
+      "id": "03-adoption",
+      "title": "Resolved can still be pending",
+      "mode": "module",
+      "source": "let release;\nconst inner = new Promise(resolve => { release = resolve; });\nconst outer = new Promise(resolve => {\n  resolve(inner);\n  console.log('adopted inner');\n});\nlet observed = false;\nouter.then(value => { observed = true; console.log('value', value); });\nawait Promise.resolve();\nconsole.log('observed before release', observed);\nrelease(42);\nawait outer;",
+      "output": "adopted inner\nobserved before release false\nvalue 42"
+    },
+    {
+      "id": "04-chain",
+      "title": "Returning values and promises sequences a chain",
+      "mode": "module",
+      "source": "const value = await Promise.resolve(2)\n  .then(n => n + 1)\n  .then(n => Promise.resolve(n * 4));\nconsole.log(value);",
+      "output": "12"
+    },
+    {
+      "id": "05-floating",
+      "title": "A missing return disconnects completion",
+      "mode": "module",
+      "source": "let release;\nconst gate = new Promise(resolve => { release = resolve; });\nlet saved = false;\nlet child;\nawait Promise.resolve().then(() => {\n  child = gate.then(() => { saved = true; });\n  // Missing: return child;\n});\nconsole.log('outer complete', saved);\nrelease();\nawait child;\nconsole.log('child complete', saved);",
+      "output": "outer complete false\nchild complete true"
+    },
+    {
+      "id": "06-errors",
+      "title": "Throws reject the next promise; catch can recover",
+      "mode": "module",
+      "source": "const value = await Promise.resolve(7)\n  .then(() => { throw new Error('invalid'); })\n  .then(() => console.log('skipped'))\n  .catch(error => { console.log('caught', error.message); return 0; })\n  .then(n => n + 1);\nconsole.log('recovered', value);\ntry {\n  await Promise.resolve().then(\n    () => { throw new Error('handler failed'); },\n    () => console.log('same then rejection handler')\n  );\n} catch (error) { console.log('downstream', error.message); }",
+      "output": "caught invalid\nrecovered 1\ndownstream handler failed"
+    },
+    {
+      "id": "07-finally",
+      "title": "Cleanup preserves a result unless cleanup fails",
+      "mode": "module",
+      "source": "console.log(await Promise.resolve(7).finally(() => 99));\ntry {\n  await Promise.reject(new Error('original')).finally(() => {});\n} catch (error) { console.log(error.message); }\ntry {\n  await Promise.resolve(7).finally(() => { throw new Error('cleanup'); });\n} catch (error) { console.log(error.message); }",
+      "output": "7\noriginal\ncleanup"
+    },
+    {
+      "id": "08-await",
+      "title": "Await yields even for a non-promise value",
+      "mode": "module",
+      "source": "async function run() {\n  console.log('inside before');\n  const value = await 7;\n  console.log('inside after', value);\n  return value + 1;\n}\nconsole.log('outside before');\nconst p = run();\nconsole.log('outside after', p instanceof Promise);\nconsole.log('result', await p);",
+      "output": "outside before\ninside before\noutside after true\ninside after 7\nresult 8"
+    },
+    {
+      "id": "09-return-await",
+      "title": "A local catch needs to observe the rejection",
+      "mode": "module",
+      "source": "function fail() { return Promise.reject(new Error('failed')); }\nasync function forwarded() {\n  try { return fail(); }\n  catch { return 'local fallback'; }\n}\nasync function observed() {\n  try { return await fail(); }\n  catch { return 'local fallback'; }\n}\ntry { await forwarded(); }\ncatch (error) { console.log('caller', error.message); }\nconsole.log(await observed());",
+      "output": "caller failed\nlocal fallback"
+    },
+    {
+      "id": "10-foreach",
+      "title": "forEach ignores callback promises",
+      "mode": "module",
+      "source": "let release;\nconst gate = new Promise(resolve => { release = resolve; });\nconst values = [];\nconst pending = [];\nawait [1, 2].forEach(id => {\n  pending.push((async () => {\n    await gate;\n    values.push(id);\n  })());\n  return pending.at(-1); // forEach ignores this promise.\n});\nconsole.log('after forEach', values.length);\nrelease();\nawait Promise.all(pending);\nconsole.log('after explicit join', values.join(','));",
+      "output": "after forEach 0\nafter explicit join 1,2"
+    },
+    {
+      "id": "11-concurrency",
+      "title": "Starting operations determines overlap",
+      "mode": "module",
+      "source": "let active = 0;\nlet peak = 0;\nasync function work(id) {\n  active++;\n  peak = Math.max(peak, active);\n  await Promise.resolve();\n  active--;\n  return id;\n}\nconst sequential = [];\nfor (const id of [1, 2, 3]) sequential.push(await work(id));\nconsole.log('sequential', sequential.join(','), 'peak', peak);\npeak = 0;\nconst concurrent = await Promise.all([1, 2, 3].map(work));\nconsole.log('concurrent', concurrent.join(','), 'peak', peak);",
+      "output": "sequential 1,2,3 peak 1\nconcurrent 1,2,3 peak 3"
+    },
+    {
+      "id": "12-all-order",
+      "title": "all preserves input order, not completion order",
+      "mode": "module",
+      "source": "let firstDone, secondDone;\nconst first = new Promise(resolve => { firstDone = resolve; });\nconst second = new Promise(resolve => { secondDone = resolve; });\nconst combined = Promise.all([first, second]);\nsecondDone('B');\nfirstDone('A');\nconsole.log((await combined).join(','));\nconsole.log(JSON.stringify(await Promise.all([])));",
+      "output": "A,B\n[]"
+    },
+    {
+      "id": "13-all-failure",
+      "title": "all rejecting does not cancel another operation",
+      "mode": "module",
+      "source": "let release;\nlet completed = false;\nconst slow = new Promise(resolve => { release = resolve; })\n  .then(() => { completed = true; return 'saved'; });\ntry { await Promise.all([Promise.reject(new Error('required failed')), slow]); }\ncatch (error) { console.log(error.message, completed); }\nrelease();\nawait slow;\nconsole.log('later side effect', completed);",
+      "output": "required failed false\nlater side effect true"
+    },
+    {
+      "id": "14-settled",
+      "title": "allSettled records each outcome",
+      "mode": "module",
+      "source": "const results = await Promise.allSettled([\n  Promise.resolve('profile'),\n  Promise.reject(new Error('recommendations unavailable'))\n]);\nconsole.log(JSON.stringify(results.map(result =>\n  result.status === 'fulfilled'\n    ? { status: result.status, value: result.value }\n    : { status: result.status, reason: result.reason.message }\n)));",
+      "output": "[{\"status\":\"fulfilled\",\"value\":\"profile\"},{\"status\":\"rejected\",\"reason\":\"recommendations unavailable\"}]"
+    },
+    {
+      "id": "15-any",
+      "title": "any ignores rejections until a success or total failure",
+      "mode": "module",
+      "source": "console.log(await Promise.any([\n  Promise.reject(new Error('replica A')),\n  Promise.resolve('replica B')\n]));\ntry {\n  await Promise.any([Promise.reject('A'), Promise.reject('B')]);\n} catch (error) { console.log(error.name, error.errors.join(',')); }\ntry { await Promise.any([]); }\ncatch (error) { console.log('empty', error.name, error.errors.length); }",
+      "output": "replica B\nAggregateError A,B\nempty AggregateError 0"
+    },
+    {
+      "id": "16-race",
+      "title": "race observes the first settlement and is asynchronous",
+      "mode": "module",
+      "source": "let synchronous = true;\nconst p = Promise.race([Promise.resolve('ready')])\n  .then(value => console.log(value, synchronous));\nsynchronous = false;\nawait p;\ntry {\n  await Promise.race([Promise.reject(new Error('fast failure')), Promise.resolve('ok')]);\n} catch (error) { console.log(error.message); }\nlet emptySettled = false;\nPromise.race([]).then(() => { emptySettled = true; });\nawait Promise.resolve();\nconsole.log('empty settled', emptySettled);",
+      "output": "ready false\nfast failure\nempty settled false"
+    },
+    {
+      "id": "17-microtasks",
+      "title": "New microtasks drain before a later timer callback",
+      "mode": "module",
+      "source": "console.log('A');\nsetTimeout(() => console.log('timer'), 0);\nPromise.resolve().then(() => {\n  console.log('promise');\n  queueMicrotask(() => console.log('nested'));\n});\nqueueMicrotask(() => console.log('microtask'));\nconsole.log('B');",
+      "output": "A\nB\npromise\nmicrotask\nnested\ntimer"
+    },
+    {
+      "id": "18-esm-tick",
+      "title": "Node ES-module top-level scheduling",
+      "mode": "module",
+      "source": "console.log('sync');\nprocess.nextTick(() => console.log('nextTick'));\nPromise.resolve().then(() => console.log('promise'));\nqueueMicrotask(() => console.log('microtask'));",
+      "output": "sync\npromise\nmicrotask\nnextTick"
+    },
+    {
+      "id": "19-cjs-tick",
+      "title": "Node CommonJS top-level scheduling",
+      "mode": "commonjs",
+      "source": "console.log('sync');\nprocess.nextTick(() => console.log('nextTick'));\nPromise.resolve().then(() => console.log('promise'));\nqueueMicrotask(() => console.log('microtask'));",
+      "output": "sync\nnextTick\npromise\nmicrotask"
+    },
+    {
+      "id": "20-cpu",
+      "title": "async does not offload synchronous CPU work",
+      "mode": "module",
+      "source": "setTimeout(() => console.log('timer'), 0);\nasync function calculate() {\n  console.log('CPU start');\n  let total = 0;\n  for (let i = 0; i < 100000; i++) total += i;\n  console.log('CPU end', total);\n  return total;\n}\nconst p = calculate();\nconsole.log('caller regained control');\nawait p;",
+      "output": "CPU start\nCPU end 4999950000\ncaller regained control\ntimer"
+    },
+    {
+      "id": "21-timeout-race",
+      "title": "A timeout race leaves underlying work alive",
+      "mode": "module",
+      "source": "let release;\nlet completed = false;\nconst work = new Promise(resolve => { release = resolve; })\n  .then(() => { completed = true; return 'committed'; });\nlet timer;\nconst deadline = new Promise((_, reject) => {\n  timer = setTimeout(() => reject(new Error('deadline')), 1);\n});\ntry { await Promise.race([work, deadline]); }\ncatch (error) { console.log(error.message, completed); }\nfinally { clearTimeout(timer); }\nrelease();\nconsole.log(await work, completed);",
+      "output": "deadline false\ncommitted true"
+    },
+    {
+      "id": "22-abort",
+      "title": "Cancel an operation that supports AbortSignal",
+      "mode": "module",
+      "source": "import { setTimeout as sleep } from 'node:timers/promises';\nconst controller = new AbortController();\nconst pending = sleep(10000, 'done', { signal: controller.signal });\nconst observed = pending.catch(error => {\n  console.log(error.name, controller.signal.aborted);\n});\ncontroller.abort(new Error('caller left'));\nawait observed;\nconsole.log('reason', controller.signal.reason.message);",
+      "output": "AbortError true\nreason caller left"
+    },
+    {
+      "id": "23-deadline-signal",
+      "title": "Deadline signals and API errors are distinct",
+      "mode": "module",
+      "source": "import { setTimeout as sleep } from 'node:timers/promises';\nconst signal = AbortSignal.timeout(5);\ntry {\n  await sleep(10000, 'done', { signal });\n} catch (error) {\n  console.log('operation error', error.name);\n  console.log('signal reason', signal.reason.name);\n}",
+      "output": "operation error AbortError\nsignal reason TimeoutError"
+    },
+    {
+      "id": "24-fetch",
+      "title": "HTTP failure is different from fetch rejection",
+      "mode": "module",
+      "source": "import { createServer } from 'node:http';\nconst server = createServer((request, response) => {\n  response.writeHead(404, { 'content-type': 'application/json', connection: 'close' });\n  response.end(JSON.stringify({ error: 'not_found' }));\n});\nawait new Promise((resolve, reject) => {\n  server.once('error', reject);\n  server.listen(0, '127.0.0.1', resolve);\n});\ntry {\n  const url = 'http://127.0.0.1:' + server.address().port + '/missing';\n  const response = await fetch(url, { signal: AbortSignal.timeout(2000) });\n  console.log('fetch fulfilled', response.status, response.ok);\n  console.log('body', (await response.json()).error);\n  try {\n    await response.json();\n  } catch (error) { console.log('second read', error.name); }\n} finally {\n  await new Promise((resolve, reject) => server.close(error => error ? reject(error) : resolve()));\n}",
+      "output": "fetch fulfilled 404 false\nbody not_found\nsecond read TypeError"
+    },
+    {
+      "id": "25-bounded",
+      "title": "A bounded worker pool collects outcomes in input order",
+      "mode": "module",
+      "source": "async function mapSettledLimit(items, limit, work) {\n  if (!Number.isInteger(limit) || limit < 1) throw new RangeError('limit');\n  const results = new Array(items.length);\n  let cursor = 0;\n  async function worker() {\n    while (cursor < items.length) {\n      const index = cursor++;\n      try {\n        const value = await work(items[index], index);\n        results[index] = { status: 'fulfilled', value };\n      } catch (reason) {\n        results[index] = { status: 'rejected', reason };\n      }\n    }\n  }\n  await Promise.all(Array.from(\n    { length: Math.min(limit, items.length) }, () => worker()\n  ));\n  return results;\n}\nlet active = 0;\nlet peak = 0;\nconst results = await mapSettledLimit([1, 2, 3, 4, 5], 2, async id => {\n  active++;\n  peak = Math.max(peak, active);\n  try {\n    await Promise.resolve();\n    if (id === 3) throw new Error('bad row');\n    return id * 10;\n  } finally { active--; }\n});\nconsole.log('peak', peak, 'active at end', active);\nconsole.log(results.map(result => result.status === 'fulfilled'\n  ? result.value : result.reason.message).join(','));\nconsole.log('empty', (await mapSettledLimit([], 2, () => 0)).length);\ntry { await mapSettledLimit([1], 0, () => 0); }\ncatch (error) { console.log(error.name); }",
+      "output": "peak 2 active at end 0\n10,20,bad row,40,50\nempty 0\nRangeError"
+    },
+    {
+      "id": "26-lost-update",
+      "title": "One JavaScript thread can still have a logical race",
+      "mode": "module",
+      "source": "let stock = 2;\nasync function reserve() {\n  const read = stock;\n  await Promise.resolve();\n  stock = read - 1;\n}\nawait Promise.all([reserve(), reserve()]);\nconsole.log('two reservations; stored stock', stock);\nstock = 2;\nawait reserve();\nawait reserve();\nconsole.log('sequential stored stock', stock);",
+      "output": "two reservations; stored stock 1\nsequential stored stock 0"
+    },
+    {
+      "id": "27-adapter",
+      "title": "Adapt an error-first callback at the boundary",
+      "mode": "module",
+      "source": "function legacyLookup(id, callback) {\n  queueMicrotask(() => {\n    if (id !== 7) callback(new Error('missing'));\n    else callback(null, { id });\n  });\n}\nfunction lookup(id) {\n  return new Promise((resolve, reject) => {\n    legacyLookup(id, (error, row) => {\n      if (error) { reject(error); return; }\n      resolve(row);\n    });\n  });\n}\nconsole.log((await lookup(7)).id);\ntry { await lookup(8); }\ncatch (error) { console.log(error.message); }",
+      "output": "7\nmissing"
+    },
+    {
+      "id": "28-aggregate",
+      "title": "Required and optional dependencies need different contracts",
+      "mode": "module",
+      "source": "async function profile() { return { id: 7 }; }\nasync function recommendations() { throw new Error('upstream unavailable'); }\nasync function summary() {\n  const [user, suggestions] = await Promise.all([\n    profile(),\n    recommendations().then(\n      value => ({ status: 'ok', items: value }),\n      () => ({ status: 'unavailable', items: [] })\n    )\n  ]);\n  return { user, suggestions };\n}\nconsole.log(JSON.stringify(await summary()));",
+      "output": "{\"user\":{\"id\":7},\"suggestions\":{\"status\":\"unavailable\",\"items\":[]}}"
+    }
+  ]
+}

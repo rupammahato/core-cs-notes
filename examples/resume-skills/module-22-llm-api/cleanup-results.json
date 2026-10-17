@@ -1,0 +1,7 @@
+{
+  "sdk_closed": true,
+  "loopback_ports_closed": {
+    "56865": true
+  },
+  "docker_started": false
+}

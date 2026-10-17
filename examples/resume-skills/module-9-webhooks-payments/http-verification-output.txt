@@ -1,0 +1,28 @@
+PASS HTTP rejects wrong signature before inbox effects: {"status":401,"code":"invalid_signature"}
+PASS HTTP rejects missing signature before inbox effects: {"status":401,"code":"invalid_signature"}
+PASS HTTP rejects malformed signature before inbox effects: {"status":401,"code":"invalid_signature"}
+PASS HTTP rejects missing event ID before inbox effects: {"status":400,"code":"invalid_event_id"}
+PASS HTTP rejects oversize event ID before inbox effects: {"status":400,"code":"invalid_event_id"}
+PASS HTTP rejects unsupported type before inbox effects: {"status":415,"code":"unsupported_body_format"}
+PASS HTTP rejects compressed content before inbox effects: {"status":415,"code":"unsupported_body_format"}
+PASS HTTP rejects oversize body before inbox effects: {"status":413,"code":"body_too_large"}
+PASS HTTP rejects signed malformed JSON before inbox effects: {"status":400,"code":"invalid_json"}
+PASS HTTP rejects signed invalid UTF-8 before inbox effects: {"status":400,"code":"invalid_json"}
+PASS HTTP rejects wrong account before inbox effects: {"status":403,"code":"account_mismatch"}
+PASS HTTP rejects missing payment fields before inbox effects: {"status":400,"code":"invalid_payment"}
+PASS HTTP rejects wrong status for event before inbox effects: {"status":400,"code":"invalid_payment"}
+PASS HTTP rejects unknown route before inbox effects: {"status":404,"code":"not_found"}
+PASS HTTP method policy includes Allow: {"status":405,"allow":"POST"}
+PASS signature checked before parsing invalid bytes: {"status":401}
+PASS raw formatting change breaks otherwise equivalent JSON signature: {"status":401}
+PASS acknowledgment follows inbox commit but precedes worker effect: {"ack":202,"inboxAtAck":1,"ledgerAtAck":0,"ledgerAfterWorker":1}
+PASS overlapping same-delivery requests retain one inbox row and one grant: {"responses":[202,202],"deliveryRows":1,"totalLedgerRows":1}
+PASS same raw payload under changed unsigned delivery header is business-idempotent: {"status":202,"ledgerRows":1,"alphaCredits":100}
+PASS configured old secret permits delayed retry: {"status":202,"ledgerRows":1}
+PASS endpoint secret cannot authenticate another configured account: {"status":401}
+PASS tenant header cannot reroute trusted provider-order mapping: {"alphaCredits":100,"betaCredited":false}
+PASS unsupported signed event is durably ignored without granting: {"ack":202,"state":"ignored","ledgerRows":1}
+PASS failed inbox persistence returns 503 and retry can accept: {"first":503,"retry":202,"inboxRows":1}
+PASS post-commit acknowledgment failure leaves retryable durable acceptance: {"first":503,"retry":202,"duplicate":true,"ledgerRows":1}
+Verified 26 http checks.
+All temporary HTTP listeners closed.

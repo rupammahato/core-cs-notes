@@ -1,0 +1,131 @@
+{
+  "module": "M10: Python Fundamentals for Backend Interviews",
+  "runtime": {
+    "version": "3.13.15 (tags/v3.13.15:4061bc4, Aug  5 2026, 13:05:39) [MSC v.1944 64 bit (AMD64)]",
+    "implementation": "cpython",
+    "executable": "C:\\Users\\Win11\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+    "gil_disabled_build": 0,
+    "gil_enabled": true
+  },
+  "verification": {
+    "total": 44,
+    "groups": {
+      "language": 24,
+      "concurrency": 6,
+      "domain": 14
+    },
+    "allPassed": true
+  },
+  "content": {
+    "sourceBlocks": 32,
+    "verifiedSnippetSources": 30,
+    "fixtureAndServiceSources": 2,
+    "capturedOutputs": 30,
+    "interviewQuestions": 30,
+    "practiceTasks": 10,
+    "checks": {
+      "language": 24,
+      "concurrency": 6,
+      "domain": 14
+    },
+    "total": 44
+  },
+  "site": {
+    "build": {
+      "passed": true,
+      "next": "16.3.8",
+      "bundler": "webpack",
+      "staticPages": 86,
+      "typeScriptPassed": true,
+      "fontSource": "cached local Google-font response fixture; no source font changes"
+    },
+    "smoke": {
+      "port": 60676,
+      "routes": [
+        {
+          "route": "/",
+          "status": 200
+        },
+        {
+          "route": "/docs/resume-skills",
+          "status": 200
+        },
+        {
+          "route": "/docs/resume-skills/how-backend-works",
+          "status": 200
+        },
+        {
+          "route": "/docs/resume-skills/javascript-fundamentals",
+          "status": 200
+        },
+        {
+          "route": "/docs/resume-skills/asynchronous-javascript",
+          "status": 200
+        },
+        {
+          "route": "/docs/resume-skills/typescript-fundamentals",
+          "status": 200
+        },
+        {
+          "route": "/docs/resume-skills/nodejs",
+          "status": 200
+        },
+        {
+          "route": "/docs/resume-skills/express-backend-structure",
+          "status": 200
+        },
+        {
+          "route": "/docs/resume-skills/rest-apis-http",
+          "status": 200
+        },
+        {
+          "route": "/docs/resume-skills/authentication-sessions-jwt-oauth",
+          "status": 200
+        },
+        {
+          "route": "/docs/resume-skills/api-security-authorization-multi-tenancy",
+          "status": 200
+        },
+        {
+          "route": "/docs/resume-skills/webhooks-payments-reliable-integrations",
+          "status": 200
+        },
+        {
+          "route": "/docs/resume-skills/python-fundamentals",
+          "status": 200
+        },
+        {
+          "route": "/docs/dbms",
+          "status": 200
+        }
+      ],
+      "assertions": {
+        "title": true,
+        "q30": true,
+        "implementation": true,
+        "totalChecks": true,
+        "concurrency": true,
+        "architecture": true,
+        "nextFrameworks": true,
+        "group": true,
+        "roadmapLink": true,
+        "previousLink": true
+      },
+      "search": {
+        "status": 200,
+        "results": 24,
+        "chapterIndexed": true,
+        "scoped": true
+      },
+      "temporaryServerClosed": true,
+      "port3000Stopped": true,
+      "temporaryPortStopped": true
+    }
+  },
+  "limits": [
+    "Standard-library local fixtures; no external API, framework server or database",
+    "No free-threaded build, static type checker or performance benchmark",
+    "Document-processing architecture is a design exercise"
+  ],
+  "next": "M11: Flask, FastAPI and Python Request Handling"
+}

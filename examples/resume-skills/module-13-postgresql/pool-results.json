@@ -1,0 +1,53 @@
+{
+  "group": "pool",
+  "total": 8,
+  "checks": [
+    {
+      "name": "returning a lease permits reuse of the same database session",
+      "passed": true
+    },
+    {
+      "name": "two checked-out leases use two different PostgreSQL sessions",
+      "passed": true
+    },
+    {
+      "name": "pool capacity and acquisition deadline bound a third borrower",
+      "passed": true
+    },
+    {
+      "name": "failed transactional lease returns without committing its partial write",
+      "passed": true
+    },
+    {
+      "name": "ordinary pool return does not erase arbitrary session SET state",
+      "passed": true
+    },
+    {
+      "name": "SET LOCAL request state expires at its transaction boundary",
+      "passed": true
+    },
+    {
+      "name": "explicit reset callback clears the tested session setting",
+      "passed": true
+    },
+    {
+      "name": "closed pool rejects new acquisition",
+      "passed": true
+    }
+  ],
+  "observations": {
+    "backend_reused": true,
+    "simultaneous_backends": 2,
+    "exhaustion": "PoolTimeout",
+    "nonlocal_setting_persisted": true,
+    "local_setting_cleared": true,
+    "explicit_guc_reset": true,
+    "capacity_example": {
+      "replicas": 3,
+      "workers_per_replica": 2,
+      "pool_max": 2,
+      "maximum_client_connections": 12
+    }
+  },
+  "scope": "Actual Psycopg pool and PostgreSQL sessions; no PgBouncer or load benchmark"
+}

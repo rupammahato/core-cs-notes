@@ -1,0 +1,11 @@
+{
+  "loopback_ports_closed": {
+    "62467": true,
+    "62468": true,
+    "62469": true,
+    "62470": true,
+    "62515": true
+  },
+  "agents_destroyed": true,
+  "fixture_timers_cleared": true
+}

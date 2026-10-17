@@ -1,0 +1,47 @@
+{
+  "module": 9,
+  "node": "v22.14.0",
+  "sqlite": "3.47.2",
+  "passed": 57,
+  "groups": {
+    "core": 21,
+    "realHttp": 26,
+    "reconciliationFixtures": 6,
+    "fileProcessRecovery": 4
+  },
+  "questions": 30,
+  "practiceTasks": 10,
+  "rawSignatureKnownVector": true,
+  "explicitDatabasePath": true,
+  "fileBackedRecovery": true,
+  "independentWorkerProcesses": 2,
+  "sqliteWarning": "Expected experimental node:sqlite warnings preserved separately",
+  "notVerified": [
+    "real provider account/checkout/API",
+    "external notification semantics",
+    "refund/dispute/settlement workflows",
+    "machine power loss/storage failures",
+    "PostgreSQL/multi-host operation",
+    "queue retry/dead-letter scheduling",
+    "multi-dispatcher leases",
+    "backup restoration",
+    "load/performance",
+    "launcher signals"
+  ],
+  "siteBuild": {
+    "passed": true,
+    "next": "16.3.8",
+    "compiler": "webpack",
+    "staticPages": 85,
+    "typescriptPassed": true,
+    "fontResponses": "Existing cached local font fixture via NEXT_FONT_GOOGLE_MOCKED_RESPONSES"
+  },
+  "siteSmoke": {
+    "passed": true,
+    "routes": 13,
+    "chapterIndexed": true,
+    "searchScoped": true,
+    "temporaryListenerClosed": true,
+    "port3000Stopped": true
+  }
+}

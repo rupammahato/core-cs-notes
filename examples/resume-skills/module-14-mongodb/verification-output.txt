@@ -1,0 +1,78 @@
+PASS core: server validator rejects negative stock
+PASS core: server validator rejects string stock
+PASS core: server validator rejects boolean stock despite Python bool being an int subclass
+PASS core: required field is enforced by the server
+PASS core: compound unique index scopes SKU uniqueness to tenant
+PASS core: ObjectId and its hexadecimal string are different BSON values
+PASS core: Decimal128 and aware BSON date round-trip with millisecond precision
+PASS core: Extended JSON preserves ObjectId across serialization
+PASS core: query builder rejects operator objects and keeps string input literal
+PASS core: collection access does not supply per-request tenant isolation
+PASS core: a reference field does not create foreign-key enforcement
+PASS core: null equality includes missing fields while exists and type distinguish them
+PASS core: single-field unique index treats missing and null as a shared null key
+PASS core: operator update preserves other fields while replacement removes them
+PASS core: addToSet prevents repeat insertion of the same scalar member
+PASS core: sequential upsert reports insert then matched update
+PASS core: ordered batch can leave earlier documents committed after a later validation failure
+PASS core total: 17
+
+PASS queries: separate dotted array predicates can match different elements
+PASS queries: elemMatch requires the conditions to hold on the same element
+PASS queries: array membership query matches a scalar contained in tags
+PASS queries: projection limits returned fields without changing tenant scope
+PASS queries: mixed inclusion and exclusion projection is rejected except the id exception
+PASS queries: scoped aggregation unwinds items and groups actual quantity and revenue
+PASS queries: unwind duplicates order-level totals if summed at item granularity
+PASS queries: outer tenant match alone does not scope a foreign lookup
+PASS queries: lookup pipeline includes tenant and SKU on the foreign collection
+PASS queries: keyset pagination uses a stable id tie-breaker and preserves tenant filter
+PASS queries: newer insert between pages does not shift this keyset continuation
+PASS queries: dot update preserves siblings while assigning an embedded object replaces it
+PASS queries total: 12
+
+PASS indexes: unindexed selective ordered query naturally scans and sorts
+PASS indexes: compound index preserves the actual selected documents
+PASS indexes: natural compound index plan avoids a blocking sort
+PASS indexes: selective indexed query examines fewer documents in the fixture
+PASS indexes: covered indexed projection returns rows without fetching documents
+PASS indexes: broad query naturally uses collection scan despite the selective-query index
+PASS indexes: array index is multikey and supports a selective member query
+PASS indexes: compound multikey index rejects independent parallel array fields
+PASS indexes: unique multikey index constrains separate documents not repeated array entries within one
+PASS indexes: partial unique index permits excluded missing values and rejects duplicate indexed email
+PASS indexes total: 10
+
+PASS atomic: two stale read-modify-set decisions can overwrite a stock decrement
+PASS atomic: independent concurrent increment operations preserve both decrements
+PASS atomic: conditional single-document stock update permits one last-unit winner
+PASS atomic: revision predicate rejects a stale optimistic writer
+PASS atomic: one document update changes embedded state and counter together
+PASS atomic: independent document writes do not roll back after an application failure
+PASS atomic total: 6
+
+PASS transactions: multi-document transaction commits the complete transfer
+PASS transactions: transaction exception rolls back its partial transfer
+PASS transactions: snapshot transaction retains its read view after another session commits
+PASS transactions: real transient write conflict causes callback retry and fresh reads
+PASS transactions: purchase commits trusted price snapshot stock order and outbox together
+PASS transactions: same-key replay returns original result without repeating stock or outbox
+PASS transactions: same key with changed quantity is a conflict
+PASS transactions: same key and SKU in another tenant form an independent operation
+PASS transactions: invalid quantity shapes and bounds fail before writes
+PASS transactions: unavailable stock rolls back the unique pending gate
+PASS transactions: failure after decrement rolls back stock order and outbox
+PASS transactions: barrier-started distinct-key purchases cannot both consume the last unit
+PASS transactions: barrier-started duplicate purchases create one order and one replay
+PASS transactions: committed replay still succeeds when stock is zero
+PASS transactions: rolled-back unavailable key can succeed after later restock
+PASS transactions total: 15
+
+PASS pool: cursor construction is lazy and iteration issues real find and getMore commands
+PASS pool: explicit close releases a still-open server cursor
+PASS pool: held real command exhausts max-size-one pool and bounds another checkout
+PASS pool: pool serves requests again after its held connection is released
+PASS pool: closed MongoClient rejects subsequent operations
+PASS pool total: 5
+
+PASS total: 65

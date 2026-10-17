@@ -1,0 +1,36 @@
+{
+  "module": 6,
+  "node": "v22.14.0",
+  "httpChecks": 68,
+  "passed": 68,
+  "dependencies": "Node built-ins only",
+  "realHttp": true,
+  "controlledClock": true,
+  "controlledCreationOverlap": true,
+  "splitBodyRace": true,
+  "notVerified": [
+    "process crashes",
+    "multi-instance coordination",
+    "database transactions",
+    "browser caching/CORS",
+    "external provider effects",
+    "launcher signals",
+    "load/performance"
+  ],
+  "siteBuild": {
+    "passed": true,
+    "next": "16.3.8",
+    "compiler": "webpack",
+    "staticPages": 82,
+    "typescriptPassed": true,
+    "fontResponses": "Existing cached local font fixture via NEXT_FONT_GOOGLE_MOCKED_RESPONSES"
+  },
+  "siteSmoke": {
+    "passed": true,
+    "routes": 10,
+    "searchScoped": true,
+    "chapterIndexed": true
+  },
+  "interviewQuestions": 28,
+  "practiceTasks": 10
+}

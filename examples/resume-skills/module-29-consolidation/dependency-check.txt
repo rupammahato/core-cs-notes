@@ -1,0 +1,5 @@
+Output drills and verification: Python standard library, Node.js built-ins and local source files only.
+Recorded runtime: Python 3.12.10, Node.js v22.14.0, SQLite 3.49.1.
+No third-party package install/download, Docker startup, hosted model/provider/payment call or cloud credentials.
+Site validation uses the existing installed Next.js/Fumadocs dependencies and cached font fixture when available.
+The chapter-reference audit checks canonical files/routes/hashes, not all earlier runtime environments or production claims.

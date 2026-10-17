@@ -1,0 +1,18 @@
+[
+  {
+    "name": "neo4j",
+    "version": "2026.09.0",
+    "url": "https://dist.neo4j.org/neo4j-community-2026.09.0-windows.zip",
+    "sha256": "020929aded4ba31a3b111918f4a4c85aa4dfb55a866d4bb8f6e593878335626e",
+    "checksum_source": "https://dist.neo4j.org/neo4j-community-2026.09.0-windows.zip.sha256",
+    "directory": "neo4j-community-2026.09.0"
+  },
+  {
+    "name": "java",
+    "version": "21.0.12.1",
+    "url": "https://cdn.azul.com/zulu/bin/zulu21.52.203-ca-jdk21.0.12.1-win_x64.zip",
+    "sha256": "ebfe6ccb94a1a7c8743ed270c6a96dbb22f5abc48b2cc4785dbf067e02dbed22",
+    "checksum_source": "https://api.azul.com/metadata/v1/zulu/packages/d02613cd-7cae-488b-ab30-704ba8f0a627",
+    "directory": "zulu21.52.203-ca-jdk21.0.12.1-win_x64"
+  }
+]

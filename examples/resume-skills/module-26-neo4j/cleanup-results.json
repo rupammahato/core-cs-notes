@@ -1,0 +1,16 @@
+{
+  "port": 61151,
+  "loopback_ports_closed": [
+    61151
+  ],
+  "system_services_touched": false,
+  "authentication": "disabled only for isolated loopback fixture",
+  "tls": "disabled for local Bolt",
+  "heap_mib": 256,
+  "page_cache_mib": 64,
+  "java": "openjdk version \"21.0.12.1\" 2026-08-18 LTS",
+  "process_exit_code": 0,
+  "console_log": "M26_READY C:\\Users\\Win11\\AppData\\Local\\Temp\\placement-m26-7cko315x\\database\n",
+  "listener_stopped": true,
+  "temporary_directory_removed": true
+}

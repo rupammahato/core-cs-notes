@@ -1,0 +1,125 @@
+{
+  "module": 27,
+  "title": "System-Design Bridge Through Your Load Balancer",
+  "verified_date": "2026-10-16",
+  "node": "v22.14.0",
+  "os": "Windows_NT 10.0.26300 x64",
+  "checks": {
+    "counts": {
+      "ring": 21,
+      "pool": 17,
+      "capacity": 8,
+      "cache": 11,
+      "http": 38
+    },
+    "total": 95,
+    "all_passed": true
+  },
+  "cleanup": {
+    "loopback_ports_closed": {
+      "62467": true,
+      "62468": true,
+      "62469": true,
+      "62470": true,
+      "62515": true
+    },
+    "agents_destroyed": true,
+    "fixture_timers_cleared": true
+  },
+  "content": {
+    "chapter": "resume-skills-handbook-part-29-module-27-system-design-load-balancer.md",
+    "words": 8710,
+    "lines": 916,
+    "interview_questions": 30,
+    "practice_tasks": 10,
+    "unchecked_learning_items": 12,
+    "source_fidelity": [
+      "capacity.mjs",
+      "ring.mjs",
+      "pool.mjs",
+      "proxy.mjs",
+      "cache-model.mjs"
+    ],
+    "result_fidelity": {
+      "ring": true,
+      "capacity": true,
+      "cache": true,
+      "http": true,
+      "versions": true
+    }
+  },
+  "dependency_check": "Runtime dependencies: Node.js built-in modules and local ES modules only; no third-party packages.\nRecorded executable: Node.js v22.14.0. No npm install or dependency download was needed.\nPython is used only for chapter assembly and existing site-validation orchestration.\nThe example does not require Docker, Redis, a cloud account or a hosted load balancer.",
+  "website": {
+    "build_passed": true,
+    "static_pages": 103,
+    "routes_checked": 31,
+    "all_routes_200": true,
+    "assertions": {
+      "title": true,
+      "q30": true,
+      "totalChecks": true,
+      "implementation": true,
+      "remappingEvidence": true,
+      "failureEvidence": true,
+      "architecture": true,
+      "fixtureBoundary": true,
+      "nextModule": true,
+      "group": true,
+      "roadmapLink": true,
+      "previousLink": true
+    },
+    "search": {
+      "status": 200,
+      "results": 26,
+      "chapterIndexed": true,
+      "scoped": true
+    },
+    "temporary_server_closed": true,
+    "cached_font_fixture_used": true
+  },
+  "ports_stopped": {
+    "3000": true,
+    "55672": true,
+    "62467": true,
+    "62468": true,
+    "62469": true,
+    "62470": true,
+    "62515": true
+  },
+  "git_diff_check_passed": true,
+  "trailing_whitespace_files": [],
+  "core_handbooks": [
+    {
+      "subject": "DSA Notes",
+      "files": 17,
+      "lines": 17589
+    },
+    {
+      "subject": "OOP Notes",
+      "files": 13,
+      "lines": 8806
+    },
+    {
+      "subject": "OS Notes",
+      "files": 13,
+      "lines": 6341
+    },
+    {
+      "subject": "DBMS Notes",
+      "files": 13,
+      "lines": 9613
+    },
+    {
+      "subject": "CN Notes",
+      "files": 13,
+      "lines": 9322
+    }
+  ],
+  "resume_handbook": {
+    "files": 29,
+    "lines": 35052,
+    "groups": 9
+  },
+  "next_module": "M28: Resume project and experience deep-dives",
+  "scope": "Real HTTP routing/failure fixture plus deterministic placement, capacity arithmetic and in-process cache models. No original-project throughput or latency claims reproduced."
+}

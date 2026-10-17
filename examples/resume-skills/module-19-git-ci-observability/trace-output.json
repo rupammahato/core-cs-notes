@@ -1,0 +1,3519 @@
+[
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "6446a797d81e0689e2338ebc7ab55481",
+    "span_id": "75925ff219cfe422",
+    "parent_span_id": "f1c6d4d27d3ce9ec",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 13.1422
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "6446a797d81e0689e2338ebc7ab55481",
+    "span_id": "f1c6d4d27d3ce9ec",
+    "parent_span_id": "5747ef75f8f5a859",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 17.3572
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "6446a797d81e0689e2338ebc7ab55481",
+    "span_id": "5747ef75f8f5a859",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 18.1
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "3c06a04097a7943aa623121b71c0b680",
+    "span_id": "aad8fd8db6e87a0b",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 400
+    },
+    "duration_ms": 0.172
+  },
+  {
+    "name": "gateway GET unmatched",
+    "kind": 1,
+    "trace_id": "a8888ba34d5bbb6835831da021c9bcb2",
+    "span_id": "28bf9ffe51d97c11",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "unmatched",
+      "http.response.status_code": 404
+    },
+    "duration_ms": 0.3067
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "6576a33413bf13f1acc873b4acd66427",
+    "span_id": "29f91bf5a48aadb3",
+    "parent_span_id": "87d8d50f549c84ff",
+    "status": 2,
+    "attributes": {
+      "http.response.status_code": 503
+    },
+    "duration_ms": 1.8065
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "6576a33413bf13f1acc873b4acd66427",
+    "span_id": "87d8d50f549c84ff",
+    "parent_span_id": "71082aca8e719dbd",
+    "status": 2,
+    "attributes": {
+      "http.response.status_code": 503
+    },
+    "duration_ms": 3.486
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "6576a33413bf13f1acc873b4acd66427",
+    "span_id": "71082aca8e719dbd",
+    "parent_span_id": null,
+    "status": 2,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 503
+    },
+    "duration_ms": 3.698
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "11111111111111111111111111111111",
+    "span_id": "95712fa5a6e377fe",
+    "parent_span_id": "8b23bd0dcce6ccc2",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 12.0113
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "11111111111111111111111111111111",
+    "span_id": "8b23bd0dcce6ccc2",
+    "parent_span_id": "2b41bf4c26fb6552",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 13.6053
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "11111111111111111111111111111111",
+    "span_id": "2b41bf4c26fb6552",
+    "parent_span_id": "2222222222222222",
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 13.9764
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "33d6f498bcd32dc89b417e2804c26846",
+    "span_id": "45c6d067994f35fd",
+    "parent_span_id": "54553797227ef4e5",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 10.5239
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "33d6f498bcd32dc89b417e2804c26846",
+    "span_id": "54553797227ef4e5",
+    "parent_span_id": "14b9044e6b6711b2",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 11.9709
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "33d6f498bcd32dc89b417e2804c26846",
+    "span_id": "14b9044e6b6711b2",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 12.1769
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "fbba21bc7e2c792ca19842489c92c086",
+    "span_id": "98c090d86e93459e",
+    "parent_span_id": "8a6c136e5d4dac97",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 21.504
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "a0cc4ac29344a302c3c723e049859e32",
+    "span_id": "b1ad608fb34440d8",
+    "parent_span_id": "988896253b5507d4",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 21.4236
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "09ce6feb0498db52dcc6dda3184fc980",
+    "span_id": "2107ae47e3403ae2",
+    "parent_span_id": "35e91be227858614",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 21.4939
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "bf2ed2adc6e4bc6fc8dfc96286574b10",
+    "span_id": "6315cf423ecb4f7d",
+    "parent_span_id": "b1f32bfee070edaf",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 21.5129
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "1826d23ae981bc2ca2b4dea619b4bca5",
+    "span_id": "23de30fc9b6a130c",
+    "parent_span_id": "fb3f3a8060f7b904",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 21.5183
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "f757cc680996f57cca08e66909741595",
+    "span_id": "db59a2c7bb0963f6",
+    "parent_span_id": "014a8784ffb9b7ef",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 21.4309
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "14c341c50ae35a92553f6896f746bb51",
+    "span_id": "8ae9ffd5f3a3fb84",
+    "parent_span_id": "89f63e573b61b88b",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 21.1991
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "f14fad9dc3c891f3d64cd3c93e6f6c57",
+    "span_id": "6e82842f834d2a3c",
+    "parent_span_id": "cd9c544b397e4595",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 21.0536
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "fbba21bc7e2c792ca19842489c92c086",
+    "span_id": "8a6c136e5d4dac97",
+    "parent_span_id": "366f59d513eacd79",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 27.4048
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "fbba21bc7e2c792ca19842489c92c086",
+    "span_id": "366f59d513eacd79",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 27.6303
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "a0cc4ac29344a302c3c723e049859e32",
+    "span_id": "988896253b5507d4",
+    "parent_span_id": "73794548b2834539",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 27.2183
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "a0cc4ac29344a302c3c723e049859e32",
+    "span_id": "73794548b2834539",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 27.3488
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "09ce6feb0498db52dcc6dda3184fc980",
+    "span_id": "35e91be227858614",
+    "parent_span_id": "585c4397a4628f53",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 26.9423
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "09ce6feb0498db52dcc6dda3184fc980",
+    "span_id": "585c4397a4628f53",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 27.0451
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "bf2ed2adc6e4bc6fc8dfc96286574b10",
+    "span_id": "b1f32bfee070edaf",
+    "parent_span_id": "a7fe796b4e5c059c",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 26.8122
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "bf2ed2adc6e4bc6fc8dfc96286574b10",
+    "span_id": "a7fe796b4e5c059c",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 26.9436
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "1826d23ae981bc2ca2b4dea619b4bca5",
+    "span_id": "fb3f3a8060f7b904",
+    "parent_span_id": "e28a0166e7caf7ca",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 26.644
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "1826d23ae981bc2ca2b4dea619b4bca5",
+    "span_id": "e28a0166e7caf7ca",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 26.7491
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "f757cc680996f57cca08e66909741595",
+    "span_id": "014a8784ffb9b7ef",
+    "parent_span_id": "83ad2c304099c347",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 26.2983
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "f757cc680996f57cca08e66909741595",
+    "span_id": "83ad2c304099c347",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 26.4648
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "14c341c50ae35a92553f6896f746bb51",
+    "span_id": "89f63e573b61b88b",
+    "parent_span_id": "a12c46bf57727213",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 26.1263
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "14c341c50ae35a92553f6896f746bb51",
+    "span_id": "a12c46bf57727213",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 26.2219
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "f14fad9dc3c891f3d64cd3c93e6f6c57",
+    "span_id": "cd9c544b397e4595",
+    "parent_span_id": "f4e5308ccb009a09",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 25.938
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "f14fad9dc3c891f3d64cd3c93e6f6c57",
+    "span_id": "f4e5308ccb009a09",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 26.0255
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "bb40c2fc91e6c0bc92c3df70c163ed84",
+    "span_id": "2a21db9033c02349",
+    "parent_span_id": "5f1fd819bd7adc46",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 6.8992
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "bb40c2fc91e6c0bc92c3df70c163ed84",
+    "span_id": "5f1fd819bd7adc46",
+    "parent_span_id": "b19e985074a07b77",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 7.9201
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "bb40c2fc91e6c0bc92c3df70c163ed84",
+    "span_id": "b19e985074a07b77",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 8.0925
+  },
+  {
+    "name": "gateway GET unmatched",
+    "kind": 1,
+    "trace_id": "d159095067f7136780b3406c59fecf7d",
+    "span_id": "7c5af8cb051c1495",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "unmatched",
+      "http.response.status_code": 404
+    },
+    "duration_ms": 0.1108
+  },
+  {
+    "name": "gateway GET unmatched",
+    "kind": 1,
+    "trace_id": "3cd888e1be256cf076f44de8c6a78c1c",
+    "span_id": "b6987cdffaf3b42b",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "unmatched",
+      "http.response.status_code": 404
+    },
+    "duration_ms": 0.1519
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "f75cf20ed194be5d80e2034c07061eac",
+    "span_id": "149cff20e208cd92",
+    "parent_span_id": "bb7a4e793f996d07",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 25.5445
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "f75cf20ed194be5d80e2034c07061eac",
+    "span_id": "bb7a4e793f996d07",
+    "parent_span_id": "f85db2900874466d",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 27.2799
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "f75cf20ed194be5d80e2034c07061eac",
+    "span_id": "f85db2900874466d",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 27.5076
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "c4d2df86bf393165c47f7b7fc8982f67",
+    "span_id": "a755178da613d382",
+    "parent_span_id": "a1d2715ac06d3352",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 25.3473
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "c4d2df86bf393165c47f7b7fc8982f67",
+    "span_id": "a1d2715ac06d3352",
+    "parent_span_id": "ceb17470c92755cb",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 26.9303
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "c4d2df86bf393165c47f7b7fc8982f67",
+    "span_id": "ceb17470c92755cb",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 27.0924
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "40c93027f88781fa9653b85c14b8e0f4",
+    "span_id": "ea7b7bb0ef63df38",
+    "parent_span_id": "ab5f08539938764d",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 12.9488
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "40c93027f88781fa9653b85c14b8e0f4",
+    "span_id": "ab5f08539938764d",
+    "parent_span_id": "164f7e2e4565c5ea",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 14.0411
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "40c93027f88781fa9653b85c14b8e0f4",
+    "span_id": "164f7e2e4565c5ea",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 14.1767
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "db43c61ec19f2c56f7cc51daae2cf530",
+    "span_id": "26580030f64816d8",
+    "parent_span_id": "8251ffb7bc5d2120",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 13.7576
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "db43c61ec19f2c56f7cc51daae2cf530",
+    "span_id": "8251ffb7bc5d2120",
+    "parent_span_id": "e5cd25c131c0d676",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 14.7491
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "db43c61ec19f2c56f7cc51daae2cf530",
+    "span_id": "e5cd25c131c0d676",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 14.8936
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "f4c44aa134e59555025605846b5400bb",
+    "span_id": "1b17ee5fc04a84db",
+    "parent_span_id": "8227e9d6b6a2cebf",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 12.6517
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "f4c44aa134e59555025605846b5400bb",
+    "span_id": "8227e9d6b6a2cebf",
+    "parent_span_id": "c642b02c55986ccb",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 13.6745
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "f4c44aa134e59555025605846b5400bb",
+    "span_id": "c642b02c55986ccb",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 13.8061
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "7b7dc0052e6f3d429f0a7794608879a3",
+    "span_id": "343d070595e89f06",
+    "parent_span_id": "94464ed722f95dac",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 13.1962
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "7b7dc0052e6f3d429f0a7794608879a3",
+    "span_id": "94464ed722f95dac",
+    "parent_span_id": "8dd4f0adf4376f73",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 14.084
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "7b7dc0052e6f3d429f0a7794608879a3",
+    "span_id": "8dd4f0adf4376f73",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 14.2136
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "9a1cf8eb7fe034a21e012ff74805ca53",
+    "span_id": "a2e0e58cbee20cf7",
+    "parent_span_id": "74a6ea4572ad309c",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 9.663
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "0e0b0846b46030c17da7ed8fa01dc2d3",
+    "span_id": "fc5aafc01da930be",
+    "parent_span_id": "bdb0a0c02fd71864",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 9.7665
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "8513c015c68788f09dfa6fbc50591616",
+    "span_id": "142f93ebc6043f9f",
+    "parent_span_id": "ca543c0fadc2546f",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 9.8165
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "9a1cf8eb7fe034a21e012ff74805ca53",
+    "span_id": "74a6ea4572ad309c",
+    "parent_span_id": "5b4fa9f5b4c366f4",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 12.5614
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "9a1cf8eb7fe034a21e012ff74805ca53",
+    "span_id": "5b4fa9f5b4c366f4",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 12.6866
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "0e0b0846b46030c17da7ed8fa01dc2d3",
+    "span_id": "bdb0a0c02fd71864",
+    "parent_span_id": "f7a125e3da8370bf",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 12.2109
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "0e0b0846b46030c17da7ed8fa01dc2d3",
+    "span_id": "f7a125e3da8370bf",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 12.3177
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "8513c015c68788f09dfa6fbc50591616",
+    "span_id": "ca543c0fadc2546f",
+    "parent_span_id": "b412e04c3bbfb540",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 11.9797
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "8513c015c68788f09dfa6fbc50591616",
+    "span_id": "b412e04c3bbfb540",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 12.0663
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "428b7196e5d941b6f6fc5ca3cab745b3",
+    "span_id": "abc172f3d4ea1372",
+    "parent_span_id": "035c407e6795315c",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 11.2268
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "428b7196e5d941b6f6fc5ca3cab745b3",
+    "span_id": "035c407e6795315c",
+    "parent_span_id": "f5a921247c56a448",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 14.1481
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "428b7196e5d941b6f6fc5ca3cab745b3",
+    "span_id": "f5a921247c56a448",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 14.2681
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "d7e6f8eb8b80147fe74235767e875424",
+    "span_id": "e04c648b8f32ac28",
+    "parent_span_id": "7213e12e49e17cd7",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 22.7741
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "45bf83b001a324b1a3d195cf5e4311f8",
+    "span_id": "67814a1121dd8392",
+    "parent_span_id": "1fdac3c4a484dfca",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 22.5619
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "cf9ac25e9dd2b858b304f9c23ba7322a",
+    "span_id": "eb67575a8780dc9a",
+    "parent_span_id": "83738a1774062999",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 22.5844
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "87b877df141b0737183e7d17ddf513a3",
+    "span_id": "4ef1d2440c15cf8a",
+    "parent_span_id": "ded55c367b13d6f0",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 22.4409
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "d7e6f8eb8b80147fe74235767e875424",
+    "span_id": "7213e12e49e17cd7",
+    "parent_span_id": "c1a0cb7d63ca50ed",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 25.9405
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "d7e6f8eb8b80147fe74235767e875424",
+    "span_id": "c1a0cb7d63ca50ed",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 26.117
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "45bf83b001a324b1a3d195cf5e4311f8",
+    "span_id": "1fdac3c4a484dfca",
+    "parent_span_id": "815271751cc103a8",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 25.8877
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "45bf83b001a324b1a3d195cf5e4311f8",
+    "span_id": "815271751cc103a8",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 26.0187
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "cf9ac25e9dd2b858b304f9c23ba7322a",
+    "span_id": "83738a1774062999",
+    "parent_span_id": "9ef26c4b7e278488",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 25.7259
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "cf9ac25e9dd2b858b304f9c23ba7322a",
+    "span_id": "9ef26c4b7e278488",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 25.8343
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "87b877df141b0737183e7d17ddf513a3",
+    "span_id": "ded55c367b13d6f0",
+    "parent_span_id": "60445f2e08095e38",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 25.1326
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "87b877df141b0737183e7d17ddf513a3",
+    "span_id": "60445f2e08095e38",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 25.2566
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "61f9151cd0be30a08145d66034c83cca",
+    "span_id": "0ef194068dafb679",
+    "parent_span_id": "b6a9f6067add35f1",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 22.7459
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "c5a361f00995e1a4f904546af1627003",
+    "span_id": "cc2ace9e2fd366dc",
+    "parent_span_id": "2c2b784879951549",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 22.8609
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "c1dcac6b6274def79e087a7b97ab36d7",
+    "span_id": "2ca48b9eea3cedd2",
+    "parent_span_id": "e8580dc3dd4b1945",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 22.9129
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "9990fabe390355abcecb7adc6aea433a",
+    "span_id": "571dc523d5a292d1",
+    "parent_span_id": "b26c0f4ebfa8750c",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 22.9578
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "61f9151cd0be30a08145d66034c83cca",
+    "span_id": "b6a9f6067add35f1",
+    "parent_span_id": "0ea42098e12ac1c7",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 25.7582
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "61f9151cd0be30a08145d66034c83cca",
+    "span_id": "0ea42098e12ac1c7",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 25.8807
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "c5a361f00995e1a4f904546af1627003",
+    "span_id": "2c2b784879951549",
+    "parent_span_id": "23ff4fdf1e37068e",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 25.5291
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "c5a361f00995e1a4f904546af1627003",
+    "span_id": "23ff4fdf1e37068e",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 25.6174
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "c1dcac6b6274def79e087a7b97ab36d7",
+    "span_id": "e8580dc3dd4b1945",
+    "parent_span_id": "2c1fbef3d845611b",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 25.2786
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "c1dcac6b6274def79e087a7b97ab36d7",
+    "span_id": "2c1fbef3d845611b",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 25.444
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "9990fabe390355abcecb7adc6aea433a",
+    "span_id": "b26c0f4ebfa8750c",
+    "parent_span_id": "b3f5fb0d75208c37",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 25.078
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "9990fabe390355abcecb7adc6aea433a",
+    "span_id": "b3f5fb0d75208c37",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 25.2595
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "5778cbcb3681a2e6a77c858d28a19f72",
+    "span_id": "5a731d618a01f068",
+    "parent_span_id": "dc38c4a70d207bf3",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 23.0848
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "fa4d4b7c9c1b8c4446a3944143813332",
+    "span_id": "0bc469b7f6bfcaee",
+    "parent_span_id": "8de35911baeed0e9",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 23.1967
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "f089ab8e4a983439d3bc56d3b7a2425d",
+    "span_id": "3e61ed865cb29f28",
+    "parent_span_id": "b5f7bda300458004",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 23.2492
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "8b17cf83e648ac1c37cad2b52a095ff7",
+    "span_id": "4bda0852a3613d68",
+    "parent_span_id": "0ea14c26e4428f81",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 23.3003
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "5778cbcb3681a2e6a77c858d28a19f72",
+    "span_id": "dc38c4a70d207bf3",
+    "parent_span_id": "a00ac64512de98ce",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 26.1685
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "5778cbcb3681a2e6a77c858d28a19f72",
+    "span_id": "a00ac64512de98ce",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 26.3279
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "fa4d4b7c9c1b8c4446a3944143813332",
+    "span_id": "8de35911baeed0e9",
+    "parent_span_id": "001ceda244331e92",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 25.7626
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "fa4d4b7c9c1b8c4446a3944143813332",
+    "span_id": "001ceda244331e92",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 25.8572
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "f089ab8e4a983439d3bc56d3b7a2425d",
+    "span_id": "b5f7bda300458004",
+    "parent_span_id": "916c7d4ca6d5951a",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 25.4733
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "f089ab8e4a983439d3bc56d3b7a2425d",
+    "span_id": "916c7d4ca6d5951a",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 25.5581
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "8b17cf83e648ac1c37cad2b52a095ff7",
+    "span_id": "0ea14c26e4428f81",
+    "parent_span_id": "29bb2d3863285a95",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 25.2014
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "8b17cf83e648ac1c37cad2b52a095ff7",
+    "span_id": "29bb2d3863285a95",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 25.2735
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "a1e60677992cc19ee2e891b4dc531b4f",
+    "span_id": "28336708322dbdc7",
+    "parent_span_id": "24b56e34353b299b",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 22.0603
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "596c2c5e66b3e6aab524451550612f07",
+    "span_id": "4cb9b8ad17052ed3",
+    "parent_span_id": "755a7507b52c1732",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 22.1471
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "5c8bb77ea839d05dd247564d1b8c1cc3",
+    "span_id": "1ace0c8223d66a5c",
+    "parent_span_id": "fecf9a6ec32d984c",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 22.183
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "36b9068866860d6cbb1649d6803852bb",
+    "span_id": "17dc585defe20fb7",
+    "parent_span_id": "55d6a8ddf9a83258",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 22.2116
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "a1e60677992cc19ee2e891b4dc531b4f",
+    "span_id": "24b56e34353b299b",
+    "parent_span_id": "6da81f0af7a4fe72",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 25.2644
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "a1e60677992cc19ee2e891b4dc531b4f",
+    "span_id": "6da81f0af7a4fe72",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 25.3912
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "596c2c5e66b3e6aab524451550612f07",
+    "span_id": "755a7507b52c1732",
+    "parent_span_id": "1c8fe81a6ad13886",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 24.921
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "596c2c5e66b3e6aab524451550612f07",
+    "span_id": "1c8fe81a6ad13886",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 25.0141
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "5c8bb77ea839d05dd247564d1b8c1cc3",
+    "span_id": "fecf9a6ec32d984c",
+    "parent_span_id": "39e887f3da0da4ad",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 24.6708
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "5c8bb77ea839d05dd247564d1b8c1cc3",
+    "span_id": "39e887f3da0da4ad",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 24.7671
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "36b9068866860d6cbb1649d6803852bb",
+    "span_id": "55d6a8ddf9a83258",
+    "parent_span_id": "94b68f52e6762f63",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 24.5292
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "36b9068866860d6cbb1649d6803852bb",
+    "span_id": "94b68f52e6762f63",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 24.6419
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "37335e5b84656e8729130d34f02490ba",
+    "span_id": "6bfa0db75763b679",
+    "parent_span_id": "90b7a8934b429057",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 22.4391
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "405a10f28d4a3fe6e61c3056b92731a4",
+    "span_id": "c39e25fe03f61f2e",
+    "parent_span_id": "76a6ea53e07c245f",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 22.5274
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "a58f43eaf17592f74cdd6a303a5fc70f",
+    "span_id": "9ec4e6bd8bbb5a2d",
+    "parent_span_id": "003142ed0e02f068",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 22.5628
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "497a6205202852124f04704c9ae77beb",
+    "span_id": "cd595fb3beb26952",
+    "parent_span_id": "b00a08cb005dfe55",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 22.6171
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "37335e5b84656e8729130d34f02490ba",
+    "span_id": "90b7a8934b429057",
+    "parent_span_id": "ea3b1c24f0e073ea",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 25.1758
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "37335e5b84656e8729130d34f02490ba",
+    "span_id": "ea3b1c24f0e073ea",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 25.2968
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "405a10f28d4a3fe6e61c3056b92731a4",
+    "span_id": "76a6ea53e07c245f",
+    "parent_span_id": "076d4db93e70ace4",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 24.8689
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "405a10f28d4a3fe6e61c3056b92731a4",
+    "span_id": "076d4db93e70ace4",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 24.9535
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "a58f43eaf17592f74cdd6a303a5fc70f",
+    "span_id": "003142ed0e02f068",
+    "parent_span_id": "7fed4bd22f618961",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 24.6188
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "a58f43eaf17592f74cdd6a303a5fc70f",
+    "span_id": "7fed4bd22f618961",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 24.7534
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "497a6205202852124f04704c9ae77beb",
+    "span_id": "b00a08cb005dfe55",
+    "parent_span_id": "2be8704b601b468b",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 24.4957
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "497a6205202852124f04704c9ae77beb",
+    "span_id": "2be8704b601b468b",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 24.5932
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "79d48a396a9be5862bb48471b017bde2",
+    "span_id": "6e6083e2ccfe0764",
+    "parent_span_id": "c86246a73512d29a",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 20.5965
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "d442501238f9ce4391fac8fa5a2309e6",
+    "span_id": "98aea474d1a7490b",
+    "parent_span_id": "74de477eef2ed783",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 20.6567
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "eac0cbeadfee1ccfc54a45e0a2b1d770",
+    "span_id": "139422b579fdcd77",
+    "parent_span_id": "ad33419590c8193e",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 20.7638
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "c7cbd658b313d4548b0e8dff2551523a",
+    "span_id": "9889f5e51f9e1dfd",
+    "parent_span_id": "8fd6384310b4d974",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 20.8163
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "79d48a396a9be5862bb48471b017bde2",
+    "span_id": "c86246a73512d29a",
+    "parent_span_id": "b57f1d8dd0792fb7",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 25.5277
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "79d48a396a9be5862bb48471b017bde2",
+    "span_id": "b57f1d8dd0792fb7",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 25.6874
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "d442501238f9ce4391fac8fa5a2309e6",
+    "span_id": "74de477eef2ed783",
+    "parent_span_id": "106bb5dacd2037d0",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 25.25
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "d442501238f9ce4391fac8fa5a2309e6",
+    "span_id": "106bb5dacd2037d0",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 25.3524
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "eac0cbeadfee1ccfc54a45e0a2b1d770",
+    "span_id": "ad33419590c8193e",
+    "parent_span_id": "4d0025ad52fa9be1",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 24.8724
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "eac0cbeadfee1ccfc54a45e0a2b1d770",
+    "span_id": "4d0025ad52fa9be1",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 24.9558
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "c7cbd658b313d4548b0e8dff2551523a",
+    "span_id": "8fd6384310b4d974",
+    "parent_span_id": "b57771115ef29cf6",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 24.4206
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "c7cbd658b313d4548b0e8dff2551523a",
+    "span_id": "b57771115ef29cf6",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 24.4969
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "12920d616a134b67c13c05731d4d476c",
+    "span_id": "714d4e54a747deb6",
+    "parent_span_id": "4dd6af2367cece6e",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 23.0637
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "183d0fd2ba52fc10d2e160e15ba91e66",
+    "span_id": "b7b25ac398838d10",
+    "parent_span_id": "ae30e04e273c07a5",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 23.0543
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "a7ecec6bdb376547afb735a65945b85b",
+    "span_id": "7ca18aa7551e6162",
+    "parent_span_id": "097228aeb3518d3c",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 22.9502
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "11e1b6de24e3bc912539bc20cd5f7599",
+    "span_id": "4c91eeca5c7e248b",
+    "parent_span_id": "d671647c8d0b8d2c",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 22.8816
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "12920d616a134b67c13c05731d4d476c",
+    "span_id": "4dd6af2367cece6e",
+    "parent_span_id": "693337dccb08257b",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 26.6074
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "12920d616a134b67c13c05731d4d476c",
+    "span_id": "693337dccb08257b",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 26.7209
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "183d0fd2ba52fc10d2e160e15ba91e66",
+    "span_id": "ae30e04e273c07a5",
+    "parent_span_id": "5b3436e2aa05d52d",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 26.332
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "183d0fd2ba52fc10d2e160e15ba91e66",
+    "span_id": "5b3436e2aa05d52d",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 26.4155
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "a7ecec6bdb376547afb735a65945b85b",
+    "span_id": "097228aeb3518d3c",
+    "parent_span_id": "4d3de388df4f616a",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 26.007
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "a7ecec6bdb376547afb735a65945b85b",
+    "span_id": "4d3de388df4f616a",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 26.0924
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "11e1b6de24e3bc912539bc20cd5f7599",
+    "span_id": "d671647c8d0b8d2c",
+    "parent_span_id": "031e1f727deec79b",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 25.7788
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "11e1b6de24e3bc912539bc20cd5f7599",
+    "span_id": "031e1f727deec79b",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 25.8781
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "9b92e72ff0bf923de473c71edc749791",
+    "span_id": "62ebc41d1d6e94e7",
+    "parent_span_id": "d7fa7fdf6ccbb6ce",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 24.6004
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "62b3998bf01a31e236076b493f5787f2",
+    "span_id": "288532ae45570ae1",
+    "parent_span_id": "fc1fabea0f696598",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 24.7321
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "9f12ced2aa2fc8635d22d8d0805db0ee",
+    "span_id": "9e7729e7af3616e8",
+    "parent_span_id": "2e9387e71aef1368",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 24.7905
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "34113226eb4134d074ae8357b0ab7c5e",
+    "span_id": "9e2abb5eafb4613d",
+    "parent_span_id": "607695480c6687b9",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 24.8353
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "9b92e72ff0bf923de473c71edc749791",
+    "span_id": "d7fa7fdf6ccbb6ce",
+    "parent_span_id": "7980b8d275d9eaa0",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 27.2198
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "9b92e72ff0bf923de473c71edc749791",
+    "span_id": "7980b8d275d9eaa0",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 27.3487
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "62b3998bf01a31e236076b493f5787f2",
+    "span_id": "fc1fabea0f696598",
+    "parent_span_id": "c491eeff63ff1b97",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 27.0436
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "62b3998bf01a31e236076b493f5787f2",
+    "span_id": "c491eeff63ff1b97",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 27.1277
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "9f12ced2aa2fc8635d22d8d0805db0ee",
+    "span_id": "2e9387e71aef1368",
+    "parent_span_id": "f2be820304c347f2",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 26.8754
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "9f12ced2aa2fc8635d22d8d0805db0ee",
+    "span_id": "f2be820304c347f2",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 26.9573
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "34113226eb4134d074ae8357b0ab7c5e",
+    "span_id": "607695480c6687b9",
+    "parent_span_id": "901ab348b717627b",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 26.7433
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "34113226eb4134d074ae8357b0ab7c5e",
+    "span_id": "901ab348b717627b",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 26.8704
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "cec6bb37daa92b7bce1eb9b4dacc579c",
+    "span_id": "524678f633e58756",
+    "parent_span_id": "69beec6159df7446",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 22.6967
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "dd2ccb62cc548a32b2364346cc074d64",
+    "span_id": "94a52dea3b1f1738",
+    "parent_span_id": "df57ab42ec3115fe",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 22.7634
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "07d375b88177d64f36dd7b601e1eb553",
+    "span_id": "3fca8320b4b31960",
+    "parent_span_id": "c9e501c2ab4670f9",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 22.786
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "9894b76db0ed66b7dac835e574f6843d",
+    "span_id": "567b69ba7d2cff3f",
+    "parent_span_id": "e3a4929bcaa994bb",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 22.7673
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "cec6bb37daa92b7bce1eb9b4dacc579c",
+    "span_id": "69beec6159df7446",
+    "parent_span_id": "fcdd279aa9c671f5",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 25.6067
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "cec6bb37daa92b7bce1eb9b4dacc579c",
+    "span_id": "fcdd279aa9c671f5",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 25.7227
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "dd2ccb62cc548a32b2364346cc074d64",
+    "span_id": "df57ab42ec3115fe",
+    "parent_span_id": "6419baa80838c86b",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 25.2647
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "dd2ccb62cc548a32b2364346cc074d64",
+    "span_id": "6419baa80838c86b",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 25.3504
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "07d375b88177d64f36dd7b601e1eb553",
+    "span_id": "c9e501c2ab4670f9",
+    "parent_span_id": "7ab3a893a16a3a6f",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 24.9368
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "07d375b88177d64f36dd7b601e1eb553",
+    "span_id": "7ab3a893a16a3a6f",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 25.0081
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "9894b76db0ed66b7dac835e574f6843d",
+    "span_id": "e3a4929bcaa994bb",
+    "parent_span_id": "5dc7ea7e73b4ad0a",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 24.6306
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "9894b76db0ed66b7dac835e574f6843d",
+    "span_id": "5dc7ea7e73b4ad0a",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 24.6956
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "a3710e868577f7a27c68a0b4a4a320bb",
+    "span_id": "1a9cca82d44b1588",
+    "parent_span_id": "5a35190547a62372",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 26.3704
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "86e1a00bd392627a2461c4e2509b894e",
+    "span_id": "67ab515275259b8d",
+    "parent_span_id": "a3aa4fae8fe5cef9",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 26.4597
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "82366ff8478556af901584abbabd4cda",
+    "span_id": "1fbfbe1ad4c9ab7c",
+    "parent_span_id": "1b005c635767a7ed",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 26.4909
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "f8c3280d098765037a458916241a00af",
+    "span_id": "0e61798adad40a00",
+    "parent_span_id": "517b2ee30abc9e7c",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 26.5218
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "a3710e868577f7a27c68a0b4a4a320bb",
+    "span_id": "5a35190547a62372",
+    "parent_span_id": "17745878f753a73a",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 28.8445
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "a3710e868577f7a27c68a0b4a4a320bb",
+    "span_id": "17745878f753a73a",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 28.9994
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "86e1a00bd392627a2461c4e2509b894e",
+    "span_id": "a3aa4fae8fe5cef9",
+    "parent_span_id": "eb7bcbed6876af89",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 28.7167
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "86e1a00bd392627a2461c4e2509b894e",
+    "span_id": "eb7bcbed6876af89",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 28.816
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "82366ff8478556af901584abbabd4cda",
+    "span_id": "1b005c635767a7ed",
+    "parent_span_id": "ec5373809254d1e3",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 28.5
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "82366ff8478556af901584abbabd4cda",
+    "span_id": "ec5373809254d1e3",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 28.579
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "f8c3280d098765037a458916241a00af",
+    "span_id": "517b2ee30abc9e7c",
+    "parent_span_id": "8e87a58570daeb52",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 28.2731
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "f8c3280d098765037a458916241a00af",
+    "span_id": "8e87a58570daeb52",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 28.3394
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "1567c8ac27fd78949eaa6b584b1e23e4",
+    "span_id": "1f563b1d0e3fc9dd",
+    "parent_span_id": "15005581ebca536b",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 23.0585
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "7865490d8e08708661a9a12faea8d482",
+    "span_id": "bce62d5b4ccf1bfc",
+    "parent_span_id": "fa58186a0a2b76bd",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 23.1337
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "6b72bf09df17a4127efc93952ce6851a",
+    "span_id": "81f9f4e3fab8c26f",
+    "parent_span_id": "98d03d9558c069d9",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 23.1561
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "97c292388fbcbc2d1e83260d3dbc9559",
+    "span_id": "42662672e9e642a2",
+    "parent_span_id": "6e38c29affbd0758",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 23.1238
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "1567c8ac27fd78949eaa6b584b1e23e4",
+    "span_id": "15005581ebca536b",
+    "parent_span_id": "3bb7ddde78987533",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 25.6841
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "1567c8ac27fd78949eaa6b584b1e23e4",
+    "span_id": "3bb7ddde78987533",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 25.7926
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "7865490d8e08708661a9a12faea8d482",
+    "span_id": "fa58186a0a2b76bd",
+    "parent_span_id": "4b98e36ab51f222a",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 25.3932
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "7865490d8e08708661a9a12faea8d482",
+    "span_id": "4b98e36ab51f222a",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 25.4703
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "6b72bf09df17a4127efc93952ce6851a",
+    "span_id": "98d03d9558c069d9",
+    "parent_span_id": "52c59945bd2249cb",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 25.0982
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "6b72bf09df17a4127efc93952ce6851a",
+    "span_id": "52c59945bd2249cb",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 25.1662
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "97c292388fbcbc2d1e83260d3dbc9559",
+    "span_id": "6e38c29affbd0758",
+    "parent_span_id": "851da48a0ee9aba6",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 24.8134
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "97c292388fbcbc2d1e83260d3dbc9559",
+    "span_id": "851da48a0ee9aba6",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 24.8991
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "5faddd57c4ab33c07b0773c07bde3f88",
+    "span_id": "c314b14b79e2898a",
+    "parent_span_id": "e151f5c30c402d2d",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 23.3775
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "1a226b83a2218a6f4a7571e41338f5f6",
+    "span_id": "734edb9329437847",
+    "parent_span_id": "9437328cfc17dfa9",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 23.4121
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "beada75f4420040c6c18a72d48a33cc1",
+    "span_id": "24ff86fd633b74dd",
+    "parent_span_id": "2050b4097741b23f",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 23.3923
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "032e7eb88d3c1b39234db75a7f5d75a2",
+    "span_id": "e4408d4793a67c29",
+    "parent_span_id": "1946a28a7fe5b833",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 23.393
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "5faddd57c4ab33c07b0773c07bde3f88",
+    "span_id": "e151f5c30c402d2d",
+    "parent_span_id": "8f4264497b54d03b",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 26.4049
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "5faddd57c4ab33c07b0773c07bde3f88",
+    "span_id": "8f4264497b54d03b",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 26.5299
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "1a226b83a2218a6f4a7571e41338f5f6",
+    "span_id": "9437328cfc17dfa9",
+    "parent_span_id": "546261728f825faf",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 26.1933
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "1a226b83a2218a6f4a7571e41338f5f6",
+    "span_id": "546261728f825faf",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 26.2734
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "beada75f4420040c6c18a72d48a33cc1",
+    "span_id": "2050b4097741b23f",
+    "parent_span_id": "edb3950bfce72dda",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 25.9503
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "beada75f4420040c6c18a72d48a33cc1",
+    "span_id": "edb3950bfce72dda",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 26.0178
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "032e7eb88d3c1b39234db75a7f5d75a2",
+    "span_id": "1946a28a7fe5b833",
+    "parent_span_id": "4db2003512bb5450",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 25.7128
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "032e7eb88d3c1b39234db75a7f5d75a2",
+    "span_id": "4db2003512bb5450",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 25.7728
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "672106a4195967a0efca55238a9862f8",
+    "span_id": "e5141103bd4aba49",
+    "parent_span_id": "f20f7d2ef6f8371c",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 23.82
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "4b4eff86de58c178663eb7e6499fb9e3",
+    "span_id": "1206a694abe87809",
+    "parent_span_id": "c2fccfda02418112",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 23.8621
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "b899273de6a720ccc9aa152fb237933a",
+    "span_id": "456e0ff965f69716",
+    "parent_span_id": "18a6f8c60753ff5b",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 23.8724
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "db58c631f335b11501b7de53703c7705",
+    "span_id": "2a7cf52e739ed6e7",
+    "parent_span_id": "1851a0d37cedfe29",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 23.893
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "672106a4195967a0efca55238a9862f8",
+    "span_id": "f20f7d2ef6f8371c",
+    "parent_span_id": "9b0631d9ae52d34d",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 26.8863
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "672106a4195967a0efca55238a9862f8",
+    "span_id": "9b0631d9ae52d34d",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 26.9998
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "4b4eff86de58c178663eb7e6499fb9e3",
+    "span_id": "c2fccfda02418112",
+    "parent_span_id": "a15e7f4b2901a4fd",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 26.5361
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "4b4eff86de58c178663eb7e6499fb9e3",
+    "span_id": "a15e7f4b2901a4fd",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 26.6155
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "b899273de6a720ccc9aa152fb237933a",
+    "span_id": "18a6f8c60753ff5b",
+    "parent_span_id": "1e355fbd380f9c48",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 26.222
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "b899273de6a720ccc9aa152fb237933a",
+    "span_id": "1e355fbd380f9c48",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 26.2877
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "db58c631f335b11501b7de53703c7705",
+    "span_id": "1851a0d37cedfe29",
+    "parent_span_id": "61402cfda2ed6d89",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 25.9094
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "db58c631f335b11501b7de53703c7705",
+    "span_id": "61402cfda2ed6d89",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 25.9698
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "c2e1c609fc0d77d73a2e4e099ce498b5",
+    "span_id": "9332758ac2449ea6",
+    "parent_span_id": "69b14b9ef337ea0c",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 9.2779
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "c2e1c609fc0d77d73a2e4e099ce498b5",
+    "span_id": "69b14b9ef337ea0c",
+    "parent_span_id": "13733495d544616b",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 12.1443
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "c2e1c609fc0d77d73a2e4e099ce498b5",
+    "span_id": "13733495d544616b",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 12.2671
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "fcc43d5564fec990a25182746be25d5a",
+    "span_id": "c79dc72d24338643",
+    "parent_span_id": "fdb404683ff1d153",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 25.1668
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "6f69db0ee384e4182aa1634c39e913e1",
+    "span_id": "12ef35e259c1a4de",
+    "parent_span_id": "5a8af09376f7c02b",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 25.2975
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "9eae90f9a2287cf174196691eda66677",
+    "span_id": "49cb2605d80a8390",
+    "parent_span_id": "5461839b02729777",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 25.343
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "fcc43d5564fec990a25182746be25d5a",
+    "span_id": "fdb404683ff1d153",
+    "parent_span_id": "065d27395040bb4a",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 27.7889
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "fcc43d5564fec990a25182746be25d5a",
+    "span_id": "065d27395040bb4a",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 27.8991
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "6f69db0ee384e4182aa1634c39e913e1",
+    "span_id": "5a8af09376f7c02b",
+    "parent_span_id": "68feb75580c33daf",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 27.5165
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "6f69db0ee384e4182aa1634c39e913e1",
+    "span_id": "68feb75580c33daf",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 27.6035
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "9eae90f9a2287cf174196691eda66677",
+    "span_id": "5461839b02729777",
+    "parent_span_id": "a621a314442e3729",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 27.2448
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "9eae90f9a2287cf174196691eda66677",
+    "span_id": "a621a314442e3729",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 27.3143
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "98cafb7a3121b621414c45d10baa28f7",
+    "span_id": "4daddaf164caf65e",
+    "parent_span_id": "a68f27d8c7d2d4d5",
+    "status": 2,
+    "attributes": {
+      "http.response.status_code": 503
+    },
+    "duration_ms": 9.3209
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "d40579e7127b4c4d2560c1c663e712a9",
+    "span_id": "d5e4b7f95f95addd",
+    "parent_span_id": "1672cca12a2e74bf",
+    "status": 2,
+    "attributes": {
+      "http.response.status_code": 503
+    },
+    "duration_ms": 9.3926
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "223cf5d4826f56796eb6979dbcd4baa0",
+    "span_id": "2726935a90725dd1",
+    "parent_span_id": "333e1963060b25de",
+    "status": 2,
+    "attributes": {
+      "http.response.status_code": 503
+    },
+    "duration_ms": 9.4311
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "98cafb7a3121b621414c45d10baa28f7",
+    "span_id": "a68f27d8c7d2d4d5",
+    "parent_span_id": "9cf7761ab92edffb",
+    "status": 2,
+    "attributes": {
+      "http.response.status_code": 503
+    },
+    "duration_ms": 11.5494
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "98cafb7a3121b621414c45d10baa28f7",
+    "span_id": "9cf7761ab92edffb",
+    "parent_span_id": null,
+    "status": 2,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 503
+    },
+    "duration_ms": 11.6625
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "d40579e7127b4c4d2560c1c663e712a9",
+    "span_id": "1672cca12a2e74bf",
+    "parent_span_id": "c7305f4ce0eda7c0",
+    "status": 2,
+    "attributes": {
+      "http.response.status_code": 503
+    },
+    "duration_ms": 11.1979
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "d40579e7127b4c4d2560c1c663e712a9",
+    "span_id": "c7305f4ce0eda7c0",
+    "parent_span_id": null,
+    "status": 2,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 503
+    },
+    "duration_ms": 11.2919
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "223cf5d4826f56796eb6979dbcd4baa0",
+    "span_id": "333e1963060b25de",
+    "parent_span_id": "54a08ad19cd1a3c4",
+    "status": 2,
+    "attributes": {
+      "http.response.status_code": 503
+    },
+    "duration_ms": 10.8886
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "223cf5d4826f56796eb6979dbcd4baa0",
+    "span_id": "54a08ad19cd1a3c4",
+    "parent_span_id": null,
+    "status": 2,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 503
+    },
+    "duration_ms": 10.9779
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "c4b03b3de7442b2b3c2bc23fbdb2d6cd",
+    "span_id": "cf9c6f35ed76e1e4",
+    "parent_span_id": "18669b33742f15a3",
+    "status": 2,
+    "attributes": {
+      "http.response.status_code": 503
+    },
+    "duration_ms": 10.3682
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "2143fd67e16a9984943310a86b65c23c",
+    "span_id": "00aa64449ad578ee",
+    "parent_span_id": "096ab9ec81fe8dc7",
+    "status": 2,
+    "attributes": {
+      "http.response.status_code": 503
+    },
+    "duration_ms": 10.4881
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "3eb0c3579e51f72fa5074a0b5a2d6ac2",
+    "span_id": "8108623667b366f8",
+    "parent_span_id": "85b444f5d0bc6e1e",
+    "status": 2,
+    "attributes": {
+      "http.response.status_code": 503
+    },
+    "duration_ms": 10.548
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "c4b03b3de7442b2b3c2bc23fbdb2d6cd",
+    "span_id": "18669b33742f15a3",
+    "parent_span_id": "ec548cb6b6032b94",
+    "status": 2,
+    "attributes": {
+      "http.response.status_code": 503
+    },
+    "duration_ms": 12.6966
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "c4b03b3de7442b2b3c2bc23fbdb2d6cd",
+    "span_id": "ec548cb6b6032b94",
+    "parent_span_id": null,
+    "status": 2,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 503
+    },
+    "duration_ms": 12.8357
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "2143fd67e16a9984943310a86b65c23c",
+    "span_id": "096ab9ec81fe8dc7",
+    "parent_span_id": "909635f902101bcd",
+    "status": 2,
+    "attributes": {
+      "http.response.status_code": 503
+    },
+    "duration_ms": 12.4906
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "2143fd67e16a9984943310a86b65c23c",
+    "span_id": "909635f902101bcd",
+    "parent_span_id": null,
+    "status": 2,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 503
+    },
+    "duration_ms": 12.6241
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "3eb0c3579e51f72fa5074a0b5a2d6ac2",
+    "span_id": "85b444f5d0bc6e1e",
+    "parent_span_id": "a2532255371b9429",
+    "status": 2,
+    "attributes": {
+      "http.response.status_code": 503
+    },
+    "duration_ms": 12.1662
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "3eb0c3579e51f72fa5074a0b5a2d6ac2",
+    "span_id": "a2532255371b9429",
+    "parent_span_id": null,
+    "status": 2,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 503
+    },
+    "duration_ms": 12.2465
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "ec45a300c0ebc0eb9f223967c5d98d34",
+    "span_id": "974a20032a278d81",
+    "parent_span_id": "3e66b8c993d8aed0",
+    "status": 2,
+    "attributes": {
+      "http.response.status_code": 503
+    },
+    "duration_ms": 0.2
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "ec45a300c0ebc0eb9f223967c5d98d34",
+    "span_id": "3e66b8c993d8aed0",
+    "parent_span_id": "3573fba75971fa17",
+    "status": 2,
+    "attributes": {
+      "http.response.status_code": 503
+    },
+    "duration_ms": 2.1206
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "ec45a300c0ebc0eb9f223967c5d98d34",
+    "span_id": "3573fba75971fa17",
+    "parent_span_id": null,
+    "status": 2,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 503
+    },
+    "duration_ms": 2.2234
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "d6dd5306d784076986d09f0fbe2493de",
+    "span_id": "4f669261f786fc16",
+    "parent_span_id": "ac7f0b2933127442",
+    "status": 2,
+    "attributes": {
+      "http.response.status_code": 503
+    },
+    "duration_ms": 1.1184
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "a5b0925cbf86b02cb241bd5081b69318",
+    "span_id": "5d0943cba2cf2610",
+    "parent_span_id": "eb71cbb17db44c2e",
+    "status": 2,
+    "attributes": {
+      "http.response.status_code": 503
+    },
+    "duration_ms": 1.2308
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "d6dd5306d784076986d09f0fbe2493de",
+    "span_id": "ac7f0b2933127442",
+    "parent_span_id": "e071ea9bb585a58c",
+    "status": 2,
+    "attributes": {
+      "http.response.status_code": 503
+    },
+    "duration_ms": 3.0382
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "d6dd5306d784076986d09f0fbe2493de",
+    "span_id": "e071ea9bb585a58c",
+    "parent_span_id": null,
+    "status": 2,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 503
+    },
+    "duration_ms": 3.137
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "a5b0925cbf86b02cb241bd5081b69318",
+    "span_id": "eb71cbb17db44c2e",
+    "parent_span_id": "87e2b4310c68e771",
+    "status": 2,
+    "attributes": {
+      "http.response.status_code": 503
+    },
+    "duration_ms": 2.6942
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "a5b0925cbf86b02cb241bd5081b69318",
+    "span_id": "87e2b4310c68e771",
+    "parent_span_id": null,
+    "status": 2,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 503
+    },
+    "duration_ms": 2.8128
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "93f8d4b9a9f68d90cffc49eb935089ea",
+    "span_id": "520fc7f7aebbe6e9",
+    "parent_span_id": "21f050fa885b1875",
+    "status": 2,
+    "attributes": {
+      "http.response.status_code": 503
+    },
+    "duration_ms": 1.3045
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "93f8d4b9a9f68d90cffc49eb935089ea",
+    "span_id": "21f050fa885b1875",
+    "parent_span_id": "3d010785f23fc0db",
+    "status": 2,
+    "attributes": {
+      "http.response.status_code": 503
+    },
+    "duration_ms": 3.4582
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "93f8d4b9a9f68d90cffc49eb935089ea",
+    "span_id": "3d010785f23fc0db",
+    "parent_span_id": null,
+    "status": 2,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 503
+    },
+    "duration_ms": 3.5755
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "8dad28870f8dd0cc60f621c5d24cd77a",
+    "span_id": "dbac94e7a22b5169",
+    "parent_span_id": "4b1249f377cfe1dd",
+    "status": 2,
+    "attributes": {
+      "http.response.status_code": 503
+    },
+    "duration_ms": 0.4395
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "8dad28870f8dd0cc60f621c5d24cd77a",
+    "span_id": "4b1249f377cfe1dd",
+    "parent_span_id": "2a7a77ade424eac1",
+    "status": 2,
+    "attributes": {
+      "http.response.status_code": 503
+    },
+    "duration_ms": 2.7416
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "8dad28870f8dd0cc60f621c5d24cd77a",
+    "span_id": "2a7a77ade424eac1",
+    "parent_span_id": null,
+    "status": 2,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 503
+    },
+    "duration_ms": 2.8466
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "fcf7fab4cf1e81aff901d3952c1fba34",
+    "span_id": "d4c13b5ae5158127",
+    "parent_span_id": "6577bf60cd37e708",
+    "status": 2,
+    "attributes": {
+      "http.response.status_code": 503
+    },
+    "duration_ms": 1.4035
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "fcf7fab4cf1e81aff901d3952c1fba34",
+    "span_id": "6577bf60cd37e708",
+    "parent_span_id": "42be88fce41d0da2",
+    "status": 2,
+    "attributes": {
+      "http.response.status_code": 503
+    },
+    "duration_ms": 3.2972
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "fcf7fab4cf1e81aff901d3952c1fba34",
+    "span_id": "42be88fce41d0da2",
+    "parent_span_id": null,
+    "status": 2,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 503
+    },
+    "duration_ms": 3.4064
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "07e74b679e80234130b501538d540646",
+    "span_id": "e66882ed318ddea1",
+    "parent_span_id": "b8b93e0a41b5b4e8",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 110.5537
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "f77441e477b11ea550bf51a0511a9eec",
+    "span_id": "8820f4bffe918e8e",
+    "parent_span_id": "17bd322c8707f383",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 110.6473
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "07e74b679e80234130b501538d540646",
+    "span_id": "b8b93e0a41b5b4e8",
+    "parent_span_id": "8dfe2b7839b880a2",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 112.1106
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "07e74b679e80234130b501538d540646",
+    "span_id": "8dfe2b7839b880a2",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 112.164
+  },
+  {
+    "name": "gateway HTTP dependency",
+    "kind": 2,
+    "trace_id": "f77441e477b11ea550bf51a0511a9eec",
+    "span_id": "17bd322c8707f383",
+    "parent_span_id": "d7536c5cd269ce89",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 111.7854
+  },
+  {
+    "name": "gateway GET /work",
+    "kind": 1,
+    "trace_id": "f77441e477b11ea550bf51a0511a9eec",
+    "span_id": "d7536c5cd269ce89",
+    "parent_span_id": null,
+    "status": 0,
+    "attributes": {
+      "http.route": "/work",
+      "http.response.status_code": 200
+    },
+    "duration_ms": 111.8173
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "1b07cbc7e449e0b1f2074e1ad2c3c589",
+    "span_id": "79d6b56d9d31128e",
+    "parent_span_id": "51fca8e2e22692c2",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 104.7819
+  },
+  {
+    "name": "dependency GET /compute",
+    "kind": 1,
+    "trace_id": "f157d35cd89ecf60d7d397fcf9c649ed",
+    "span_id": "a46dc281875bcb7c",
+    "parent_span_id": "6c874085a386406d",
+    "status": 0,
+    "attributes": {
+      "http.response.status_code": 200
+    },
+    "duration_ms": 104.9022
+  }
+]

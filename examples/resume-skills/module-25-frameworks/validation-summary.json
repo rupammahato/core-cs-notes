@@ -1,0 +1,130 @@
+{
+  "module": 25,
+  "title": "LangChain, LangGraph and LlamaIndex",
+  "verified_date": "2026-10-15",
+  "python": "3.12.10",
+  "os": "Windows-11-10.0.26300-SP0",
+  "sqlite": "3.49.1",
+  "dependencies": {
+    "langchain": "1.4.6",
+    "langchain-core": "1.6.10",
+    "langgraph": "1.2.15",
+    "langgraph-checkpoint": "4.3.0",
+    "langgraph-checkpoint-sqlite": "3.1.2",
+    "llama-index-core": "0.14.25",
+    "pydantic": "2.14.1"
+  },
+  "checks": {
+    "counts": {
+      "langchain": 14,
+      "retry_budget": 4,
+      "agent": 10,
+      "graph_state": 7,
+      "persistence": 11,
+      "approval": 8,
+      "recovery": 7,
+      "freshness": 5,
+      "llamaindex": 18,
+      "offline": 3,
+      "cleanup": 2
+    },
+    "total": 89,
+    "all_passed": true
+  },
+  "cleanup": {
+    "loopback_ports_closed": [],
+    "persistent_listener_started": false,
+    "temporary_directory_removed": true,
+    "worker_processes_exited": 21
+  },
+  "content": {
+    "chapter": "resume-skills-handbook-part-27-module-25-langchain-langgraph-llamaindex.md",
+    "words": 9764,
+    "lines": 1279,
+    "interview_questions": 30,
+    "practice_tasks": 10,
+    "unchecked_learning_items": 12,
+    "source_fidelity": {
+      "domain.py": true,
+      "langchain_demo.py": true,
+      "repository.py": true,
+      "graph_demo.py": true,
+      "graph_worker.py": true,
+      "llama_demo.py": true
+    },
+    "result_fidelity": {
+      "langchain": true,
+      "agent": true,
+      "graph_state": true,
+      "persistence": true,
+      "approval": true,
+      "recovery": true,
+      "llamaindex": true,
+      "versions": true
+    }
+  },
+  "dependency_check": "No broken requirements found.",
+  "website": {
+    "build_passed": true,
+    "static_pages": 101,
+    "routes_checked": 29,
+    "all_routes_200": true,
+    "assertions": {
+      "title": true,
+      "q30": true,
+      "implementation": true,
+      "totalChecks": true,
+      "lifecycleEvidence": true,
+      "evaluationEvidence": true,
+      "architecture": true,
+      "fixtureBoundary": true,
+      "nextModule": true,
+      "group": true,
+      "roadmapLink": true,
+      "previousLink": true
+    },
+    "search": {
+      "status": 200,
+      "results": 16,
+      "chapterIndexed": true,
+      "scoped": true
+    },
+    "temporary_server_closed": true,
+    "cached_font_fixture_used": true
+  },
+  "ports_stopped": {
+    "3000": true,
+    "58753": true
+  },
+  "git_diff_check_passed": true,
+  "trailing_whitespace_files": [],
+  "core_handbooks": [
+    {
+      "subject": "DSA Notes",
+      "files": 17,
+      "lines": 17589
+    },
+    {
+      "subject": "OOP Notes",
+      "files": 13,
+      "lines": 8806
+    },
+    {
+      "subject": "OS Notes",
+      "files": 13,
+      "lines": 6341
+    },
+    {
+      "subject": "DBMS Notes",
+      "files": 13,
+      "lines": 9613
+    },
+    {
+      "subject": "CN Notes",
+      "files": 13,
+      "lines": 9322
+    }
+  ],
+  "next_module": "M26: Neo4j and graph-backed applications",
+  "scope": "Actual LangChain/LangGraph/LlamaIndex offline runtimes. Fake/scripted chat, extractive graph draft and handwritten feature embeddings; no learned inference, provider/hosted tracing, HTTP service, Docker or production durability benchmark."
+}

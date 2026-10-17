@@ -1,0 +1,430 @@
+{
+  "node": "v22.14.0",
+  "checks": [
+    {
+      "id": "health",
+      "status": 200,
+      "trace": [
+        "request",
+        "health"
+      ]
+    },
+    {
+      "id": "product-projection",
+      "status": 200,
+      "trace": [
+        "request",
+        "router",
+        "validate-id",
+        "controller",
+        "service",
+        "repository"
+      ]
+    },
+    {
+      "id": "implicit-head",
+      "status": 200,
+      "trace": [
+        "request",
+        "router",
+        "validate-id",
+        "controller",
+        "service",
+        "repository"
+      ]
+    },
+    {
+      "id": "authoritative-quote",
+      "status": 200,
+      "trace": [
+        "request",
+        "router",
+        "media-type",
+        "parsed",
+        "validate-body",
+        "controller",
+        "service",
+        "repository"
+      ]
+    },
+    {
+      "id": "quote-does-not-reserve",
+      "status": 200,
+      "trace": [
+        "request",
+        "router",
+        "media-type",
+        "parsed",
+        "validate-body",
+        "controller",
+        "service",
+        "repository"
+      ]
+    },
+    {
+      "id": "zero-path-id",
+      "status": 400,
+      "code": "invalid_product_id",
+      "trace": [
+        "request",
+        "router",
+        "validate-id",
+        "error"
+      ]
+    },
+    {
+      "id": "partial-path-id",
+      "status": 400,
+      "code": "invalid_product_id",
+      "trace": [
+        "request",
+        "router",
+        "validate-id",
+        "error"
+      ]
+    },
+    {
+      "id": "unsafe-path-id",
+      "status": 400,
+      "code": "invalid_product_id",
+      "trace": [
+        "request",
+        "router",
+        "validate-id",
+        "error"
+      ]
+    },
+    {
+      "id": "missing-product",
+      "status": 404,
+      "code": "product_not_found",
+      "trace": [
+        "request",
+        "router",
+        "validate-id",
+        "controller",
+        "service",
+        "repository",
+        "error"
+      ]
+    },
+    {
+      "id": "wrong-media-type",
+      "status": 415,
+      "code": "json_required",
+      "trace": [
+        "request",
+        "router",
+        "media-type",
+        "error"
+      ]
+    },
+    {
+      "id": "missing-media-type",
+      "status": 415,
+      "code": "json_required",
+      "trace": [
+        "request",
+        "router",
+        "media-type",
+        "error"
+      ]
+    },
+    {
+      "id": "empty-json-body",
+      "status": 400,
+      "code": "invalid_product_id",
+      "trace": [
+        "request",
+        "router",
+        "media-type",
+        "parsed",
+        "validate-body",
+        "error"
+      ]
+    },
+    {
+      "id": "malformed-json",
+      "status": 400,
+      "code": "invalid_json",
+      "trace": [
+        "request",
+        "router",
+        "media-type",
+        "error"
+      ]
+    },
+    {
+      "id": "array-body",
+      "status": 400,
+      "code": "invalid_body",
+      "trace": [
+        "request",
+        "router",
+        "media-type",
+        "parsed",
+        "validate-body",
+        "error"
+      ]
+    },
+    {
+      "id": "primitive-json-policy",
+      "status": 400,
+      "code": "invalid_json",
+      "trace": [
+        "request",
+        "router",
+        "media-type",
+        "error"
+      ]
+    },
+    {
+      "id": "missing-fields",
+      "status": 400,
+      "code": "invalid_product_id",
+      "trace": [
+        "request",
+        "router",
+        "media-type",
+        "parsed",
+        "validate-body",
+        "error"
+      ]
+    },
+    {
+      "id": "string-product-id",
+      "status": 400,
+      "code": "invalid_product_id",
+      "trace": [
+        "request",
+        "router",
+        "media-type",
+        "parsed",
+        "validate-body",
+        "error"
+      ]
+    },
+    {
+      "id": "string-quantity",
+      "status": 400,
+      "code": "invalid_quantity",
+      "trace": [
+        "request",
+        "router",
+        "media-type",
+        "parsed",
+        "validate-body",
+        "error"
+      ]
+    },
+    {
+      "id": "zero-quantity",
+      "status": 400,
+      "code": "invalid_quantity",
+      "trace": [
+        "request",
+        "router",
+        "media-type",
+        "parsed",
+        "validate-body",
+        "error"
+      ]
+    },
+    {
+      "id": "fractional-quantity",
+      "status": 400,
+      "code": "invalid_quantity",
+      "trace": [
+        "request",
+        "router",
+        "media-type",
+        "parsed",
+        "validate-body",
+        "error"
+      ]
+    },
+    {
+      "id": "policy-limit",
+      "status": 400,
+      "code": "invalid_quantity",
+      "trace": [
+        "request",
+        "router",
+        "media-type",
+        "parsed",
+        "validate-body",
+        "error"
+      ]
+    },
+    {
+      "id": "caller-price-rejected",
+      "status": 400,
+      "code": "unknown_fields",
+      "trace": [
+        "request",
+        "router",
+        "media-type",
+        "parsed",
+        "validate-body",
+        "error"
+      ]
+    },
+    {
+      "id": "caller-tenant-rejected",
+      "status": 400,
+      "code": "unknown_fields",
+      "trace": [
+        "request",
+        "router",
+        "media-type",
+        "parsed",
+        "validate-body",
+        "error"
+      ]
+    },
+    {
+      "id": "insufficient-stock",
+      "status": 409,
+      "code": "insufficient_stock",
+      "trace": [
+        "request",
+        "router",
+        "media-type",
+        "parsed",
+        "validate-body",
+        "controller",
+        "service",
+        "repository",
+        "error"
+      ]
+    },
+    {
+      "id": "zero-stock",
+      "status": 409,
+      "code": "insufficient_stock",
+      "trace": [
+        "request",
+        "router",
+        "media-type",
+        "parsed",
+        "validate-body",
+        "controller",
+        "service",
+        "repository",
+        "error"
+      ]
+    },
+    {
+      "id": "valid-upper-bound-stock-conflict",
+      "status": 409,
+      "code": "insufficient_stock",
+      "trace": [
+        "request",
+        "router",
+        "media-type",
+        "parsed",
+        "validate-body",
+        "controller",
+        "service",
+        "repository",
+        "error"
+      ]
+    },
+    {
+      "id": "quote-missing-product",
+      "status": 404,
+      "code": "product_not_found",
+      "trace": [
+        "request",
+        "router",
+        "media-type",
+        "parsed",
+        "validate-body",
+        "controller",
+        "service",
+        "repository",
+        "error"
+      ]
+    },
+    {
+      "id": "json-byte-limit",
+      "status": 413,
+      "code": "body_too_large",
+      "trace": [
+        "request",
+        "router",
+        "media-type",
+        "error"
+      ]
+    },
+    {
+      "id": "compressed-body-policy",
+      "status": 415,
+      "code": "unsupported_encoding",
+      "trace": [
+        "request",
+        "router",
+        "media-type",
+        "error"
+      ]
+    },
+    {
+      "id": "unknown-route-not-parsed",
+      "status": 404,
+      "code": "route_not_found",
+      "trace": [
+        "request",
+        "router",
+        "not-found"
+      ]
+    },
+    {
+      "id": "quote-method-allow",
+      "status": 405,
+      "code": "method_not_allowed",
+      "trace": [
+        "request",
+        "router",
+        "error"
+      ]
+    },
+    {
+      "id": "product-method-allow",
+      "status": 405,
+      "code": "method_not_allowed",
+      "trace": [
+        "request",
+        "router",
+        "error"
+      ]
+    },
+    {
+      "id": "malformed-path-encoding",
+      "status": 400,
+      "code": "invalid_path",
+      "trace": [
+        "request",
+        "router",
+        "error"
+      ]
+    },
+    {
+      "id": "middleware-success-and-failure-traces"
+    },
+    {
+      "id": "async-repository-failure-hidden"
+    },
+    {
+      "id": "request-failure-does-not-kill-app"
+    },
+    {
+      "id": "health-progresses-during-async-work"
+    },
+    {
+      "id": "request-locals-stay-independent"
+    },
+    {
+      "id": "listeners-closed"
+    }
+  ]
+}

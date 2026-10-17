@@ -1,0 +1,7 @@
+PASS provider lookup timeout leaves outcome unresolved and local balance unchanged: {"knownPaymentFailure":false,"ledgerRows":0}
+PASS account-bound lookup repairs missing captured webhook: {"reason":"granted","credits":100}
+PASS repeated observation and later real webhook share business invariant: {"ledgerRows":1,"credits":100}
+PASS wrong provider account rejected before persistence: {"status":502,"code":"provider_account_mismatch"}
+PASS wrong provider payment ID rejected before persistence: {"status":502,"code":"provider_payment_mismatch"}
+PASS unhandled provider state is unresolved rather than a grant: {"outcome":"unresolved","ledgerRows":1}
+Verified 6 reconciliation checks.

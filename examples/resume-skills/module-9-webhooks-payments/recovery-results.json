@@ -1,0 +1,48 @@
+{
+  "node": "v22.14.0",
+  "passed": 4,
+  "sqlite": "3.47.2",
+  "temporaryDirectoryRemoved": true,
+  "checks": [
+    {
+      "name": "inbox persists across close and reopen before any worker",
+      "passed": true,
+      "observed": {
+        "pendingSurvived": true,
+        "afterWorkerCredits": 100
+      }
+    },
+    {
+      "name": "process exit before effect commit recovers pending receipt with zero partial credit",
+      "passed": true,
+      "observed": {
+        "workerExit": 77,
+        "beforeRetryLedgerRows": 0,
+        "receipt": "pending",
+        "afterRetryCredits": 100
+      }
+    },
+    {
+      "name": "process exit after commit preserves one grant and one outbox row",
+      "passed": true,
+      "observed": {
+        "workerExit": 77,
+        "receipt": "processed",
+        "ledgerRows": 1,
+        "outboxRows": 1,
+        "afterRetryCredits": 100
+      }
+    },
+    {
+      "name": "two ready independent worker processes commit a single grant",
+      "passed": true,
+      "observed": {
+        "workerProcesses": 2,
+        "grants": 1,
+        "ledgerRows": 1,
+        "outboxRows": 1,
+        "credits": 100
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "chapter": "resume-skills-handbook-part-29-module-27-system-design-load-balancer.md",
+  "words": 8710,
+  "lines": 916,
+  "interview_questions": 30,
+  "practice_tasks": 10,
+  "unchecked_learning_items": 12,
+  "source_fidelity": [
+    "capacity.mjs",
+    "ring.mjs",
+    "pool.mjs",
+    "proxy.mjs",
+    "cache-model.mjs"
+  ],
+  "result_fidelity": {
+    "ring": true,
+    "capacity": true,
+    "cache": true,
+    "http": true,
+    "versions": true
+  }
+}

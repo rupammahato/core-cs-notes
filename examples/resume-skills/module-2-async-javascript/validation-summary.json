@@ -1,0 +1,82 @@
+{
+  "module": "M2: Asynchronous JavaScript",
+  "verifiedOn": "2026-10-13T14:20:53.735Z",
+  "runtime": "v22.14.0",
+  "executionModes": {
+    "module": 27,
+    "commonjs": 1
+  },
+  "snippetCases": 28,
+  "sourceMatchesChapter": true,
+  "actualOutputsMatchChapter": true,
+  "interviewQuestions": 26,
+  "practiceExercises": 10,
+  "qaSequential": true,
+  "balancedCodeFences": true,
+  "siteSync": {
+    "chapters": 73,
+    "resumeSkillsChapters": 4
+  },
+  "siteBuild": {
+    "passed": true,
+    "typeScript": true,
+    "staticPages": 78,
+    "fontSource": "Existing cached font files through Next Google Fonts mock-response hook; external font download unavailable; source configuration unchanged"
+  },
+  "httpRoutes": [
+    {
+      "route": "/",
+      "status": 200,
+      "bytes": 67007
+    },
+    {
+      "route": "/docs/resume-skills",
+      "status": 200,
+      "bytes": 195664
+    },
+    {
+      "route": "/docs/resume-skills/how-backend-works",
+      "status": 200,
+      "bytes": 485487
+    },
+    {
+      "route": "/docs/resume-skills/javascript-fundamentals",
+      "status": 200,
+      "bytes": 817461
+    },
+    {
+      "route": "/docs/resume-skills/asynchronous-javascript",
+      "status": 200,
+      "bytes": 947511
+    },
+    {
+      "route": "/docs/dbms",
+      "status": 200,
+      "bytes": 243127
+    }
+  ],
+  "renderChecks": {
+    "lastQuestion": true,
+    "boundedPool": true,
+    "lastExample": true,
+    "nextModule": true,
+    "navFromM1": true
+  },
+  "search": {
+    "query": "cancellation",
+    "tag": "resume-skills",
+    "status": 200,
+    "count": 9,
+    "hasM2": true,
+    "subjectScoped": true
+  },
+  "server": {
+    "url": "http://localhost:3000",
+    "pid": 7604
+  },
+  "limitations": [
+    "Outputs verified on Node.js v22.14.0 in recorded module modes; scheduling depends on host/context.",
+    "Bounded pool is local, finite-batch, collect-all; no distributed rate control, retries, cancellation or persistence.",
+    "Examples are behavioral demonstrations, not performance or production-readiness claims."
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "module": "M5: Express.js and Backend Application Structure",
+  "verifiedOn": "2026-10-13T16:55:14.393Z",
+  "versions": {
+    "node": "v22.14.0",
+    "express": "5.3.0",
+    "bodyParser": "2.3.0",
+    "expressTypes": "5.0.6",
+    "typeScript": "Version 7.0.2"
+  },
+  "verification": {
+    "runtimeExamples": 16,
+    "apiChecks": 39,
+    "typedBoundaryChecks": 5,
+    "expectedDiagnosticCodes": [
+      18046
+    ],
+    "launcherSyntaxChecked": true
+  },
+  "chapter": {
+    "sourceMatches": true,
+    "outputsMatch": true,
+    "fullSourceBlocks": {
+      "app.mjs": true,
+      "validation.mjs": true,
+      "errors.mjs": true,
+      "repository.mjs": true,
+      "service.mjs": true,
+      "controllers.mjs": true,
+      "start.mjs": true,
+      "typed/typed-boundary.ts": true,
+      "typed/unsafe.ts": true
+    },
+    "typeDiagnosticMatches": true,
+    "interviewQuestions": 28,
+    "practiceExercises": 10,
+    "qaSequential": true,
+    "balancedCodeFences": true
+  },
+  "dependencies": {
+    "scope": "examples/resume-skills/module-5-express",
+    "pinnedLockfile": true,
+    "siteDependenciesUnchanged": true,
+    "installedCodeAndCacheGitIgnored": true
+  },
+  "siteSync": {
+    "chapters": 76,
+    "resumeSkillsChapters": 7,
+    "resumeSkillsGroups": 2
+  },
+  "siteBuild": {
+    "passed": true,
+    "typeScript": true,
+    "staticPages": 81,
+    "fontSource": "Existing cached font files through Next Google Fonts mock-response hook; external font download unavailable; source configuration unchanged"
+  },
+  "httpRoutes": [
+    {
+      "route": "/",
+      "status": 200,
+      "bytes": 68431
+    },
+    {
+      "route": "/docs/resume-skills",
+      "status": 200,
+      "bytes": 201450
+    },
+    {
+      "route": "/docs/resume-skills/how-backend-works",
+      "status": 200,
+      "bytes": 490268
+    },
+    {
+      "route": "/docs/resume-skills/javascript-fundamentals",
+      "status": 200,
+      "bytes": 822242
+    },
+    {
+      "route": "/docs/resume-skills/asynchronous-javascript",
+      "status": 200,
+      "bytes": 953148
+    },
+    {
+      "route": "/docs/resume-skills/typescript-fundamentals",
+      "status": 200,
+      "bytes": 870216
+    },
+    {
+      "route": "/docs/resume-skills/nodejs",
+      "status": 200,
+      "bytes": 952183
+    },
+    {
+      "route": "/docs/resume-skills/express-backend-structure",
+      "status": 200,
+      "bytes": 1067295
+    },
+    {
+      "route": "/docs/dbms",
+      "status": 200,
+      "bytes": 245137
+    }
+  ],
+  "renderChecks": {
+    "lastQuestion": true,
+    "appCode": true,
+    "typedBoundary": true,
+    "apiChecks": true,
+    "middlewareExample": true,
+    "sidebarGroup": true,
+    "nextModule": true,
+    "navFromM4": true
+  },
+  "search": {
+    "query": "middleware",
+    "tag": "resume-skills",
+    "status": 200,
+    "count": 17,
+    "hasM5": true,
+    "subjectScoped": true
+  },
+  "server": {
+    "url": "http://localhost:3000",
+    "pid": 34388
+  },
+  "limitations": [
+    "Express 5.3.0 was executed; the Express 4 comparison is documentation-based.",
+    "The data adapter uses seeded memory and a simulated async contract, not a database.",
+    "Authentication/authorization, order mutation, database atomicity and durable work are not implemented.",
+    "Client-abort/partial-response paths and OS signal delivery/forced shutdown were not integration-tested.",
+    "Functional examples are not performance benchmarks."
+  ]
+}

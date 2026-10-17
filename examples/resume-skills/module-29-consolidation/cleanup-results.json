@@ -1,0 +1,92 @@
+{
+  "drill_processes": [
+    {
+      "drill": "D01",
+      "pid": 23612,
+      "exit_code": 0,
+      "exited": true
+    },
+    {
+      "drill": "D02",
+      "pid": 9452,
+      "exit_code": 0,
+      "exited": true
+    },
+    {
+      "drill": "D03",
+      "pid": 7276,
+      "exit_code": 0,
+      "exited": true
+    },
+    {
+      "drill": "D04",
+      "pid": 23128,
+      "exit_code": 0,
+      "exited": true
+    },
+    {
+      "drill": "D05",
+      "pid": 3184,
+      "exit_code": 0,
+      "exited": true
+    },
+    {
+      "drill": "D06",
+      "pid": 27988,
+      "exit_code": 0,
+      "exited": true
+    },
+    {
+      "drill": "D07",
+      "pid": 9576,
+      "exit_code": 0,
+      "exited": true
+    },
+    {
+      "drill": "D08",
+      "pid": 19988,
+      "exit_code": 0,
+      "exited": true
+    },
+    {
+      "drill": "D09",
+      "pid": 5652,
+      "exit_code": 0,
+      "exited": true
+    },
+    {
+      "drill": "D10",
+      "pid": 27600,
+      "exit_code": 0,
+      "exited": true
+    },
+    {
+      "drill": "D11",
+      "pid": 15196,
+      "exit_code": 0,
+      "exited": true
+    },
+    {
+      "drill": "D12",
+      "pid": 8596,
+      "exit_code": 0,
+      "exited": true
+    },
+    {
+      "drill": "D13",
+      "pid": 24592,
+      "exit_code": 0,
+      "exited": true
+    },
+    {
+      "drill": "D14",
+      "pid": 30128,
+      "exit_code": 0,
+      "exited": true
+    }
+  ],
+  "all_drill_processes_exited": true,
+  "sqlite_storage": "in-memory connections explicitly closed inside three SQL drills",
+  "persistent_listener_started": false,
+  "external_services_called": false
+}

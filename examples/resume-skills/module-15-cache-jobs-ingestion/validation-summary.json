@@ -1,0 +1,143 @@
+{
+  "module": 15,
+  "title": "Caching, Background Jobs and Data Ingestion",
+  "verified_date": "2026-10-14",
+  "runtime": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "sqlite_version": "3.49.1",
+  "packages": {
+    "openpyxl": "3.1.5",
+    "et-xmlfile": "2.0.0",
+    "defusedxml": "0.7.1",
+    "pypdf": "6.19.0"
+  },
+  "checks": {
+    "counts": {
+      "cache": 10,
+      "jobs": 13,
+      "formats": 23,
+      "ingestion": 12
+    },
+    "total": 58,
+    "all_passed": true
+  },
+  "temporary_directory_removed": true,
+  "content": {
+    "chapter": "resume-skills-handbook-part-17-module-15-caching-background-jobs-data-ingestion.md",
+    "words": 8822,
+    "lines": 1059,
+    "questions": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30
+    ],
+    "practice_tasks": 10,
+    "unchecked_learning_items": 12,
+    "source_fidelity": {
+      "cache.py": true,
+      "store.py": true,
+      "jobs.py": true,
+      "ingestion.py": true
+    },
+    "result_fidelity": {
+      "cache": true,
+      "jobs": true,
+      "formats": true,
+      "ingestion": true
+    },
+    "counts": {
+      "cache": 10,
+      "jobs": 13,
+      "formats": 23,
+      "ingestion": 12
+    },
+    "total": 58
+  },
+  "website": {
+    "build_passed": true,
+    "static_pages": 91,
+    "routes_checked": 19,
+    "all_routes_200": true,
+    "assertions": {
+      "title": true,
+      "q30": true,
+      "implementation": true,
+      "totalChecks": true,
+      "databaseEvidence": true,
+      "architecture": true,
+      "nextDocker": true,
+      "group": true,
+      "roadmapLink": true,
+      "previousLink": true
+    },
+    "search": {
+      "status": 200,
+      "results": 46,
+      "chapterIndexed": true,
+      "scoped": true
+    },
+    "temporary_server_closed": true,
+    "cached_font_fixture_used": true
+  },
+  "ports_stopped": {
+    "3000": true,
+    "52589": true
+  },
+  "git_diff_check_passed": true,
+  "trailing_whitespace_files": [],
+  "core_handbooks": [
+    {
+      "subject": "DSA Notes",
+      "files": 17,
+      "lines": 17589
+    },
+    {
+      "subject": "OOP Notes",
+      "files": 13,
+      "lines": 8806
+    },
+    {
+      "subject": "OS Notes",
+      "files": 13,
+      "lines": 6341
+    },
+    {
+      "subject": "DBMS Notes",
+      "files": 13,
+      "lines": 9613
+    },
+    {
+      "subject": "CN Notes",
+      "files": 13,
+      "lines": 9322
+    }
+  ],
+  "next_module": "M16: Docker Fundamentals",
+  "scope": "Local cache algorithm, SQLite job/import engine, real parser libraries; no Redis or Cloud Tasks service; no HTTP/provider/cloud delivery, cross-process cache, OCR, hostile-parser sandbox, crash/power-loss or load test"
+}

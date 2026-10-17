@@ -1,0 +1,9 @@
+Looking in links: c:/Development/Placement/examples/resume-skills/module-13-postgresql/.wheelhouse
+Processing c:\development\placement\examples\resume-skills\module-13-postgresql\.wheelhouse\psycopg-3.3.4-py3-none-any.whl (from psycopg[binary]==3.3.4->-r C:/Development/Placement/examples/resume-skills/module-13-postgresql/requirements.txt (line 1))
+Processing c:\development\placement\examples\resume-skills\module-13-postgresql\.wheelhouse\psycopg_pool-3.3.1-py3-none-any.whl (from -r C:/Development/Placement/examples/resume-skills/module-13-postgresql/requirements.txt (line 2))
+Processing c:\development\placement\examples\resume-skills\module-13-postgresql\.wheelhouse\typing_extensions-4.16.0-py3-none-any.whl (from psycopg==3.3.4->psycopg[binary]==3.3.4->-r C:/Development/Placement/examples/resume-skills/module-13-postgresql/requirements.txt (line 1))
+Processing c:\development\placement\examples\resume-skills\module-13-postgresql\.wheelhouse\tzdata-2026.4-py3-none-any.whl (from psycopg==3.3.4->psycopg[binary]==3.3.4->-r C:/Development/Placement/examples/resume-skills/module-13-postgresql/requirements.txt (line 1))
+Processing c:\development\placement\examples\resume-skills\module-13-postgresql\.wheelhouse\psycopg_binary-3.3.4-cp312-cp312-win_amd64.whl (from psycopg[binary]==3.3.4->-r C:/Development/Placement/examples/resume-skills/module-13-postgresql/requirements.txt (line 1))
+Installing collected packages: tzdata, typing-extensions, psycopg-binary, psycopg-pool, psycopg
+Successfully installed psycopg-3.3.4 psycopg-binary-3.3.4 psycopg-pool-3.3.1 typing-extensions-4.16.0 tzdata-2026.4
+

@@ -1,0 +1,6 @@
+langchain==1.4.6
+langchain-core==1.6.10
+langgraph==1.2.15
+langgraph-checkpoint-sqlite==3.1.2
+llama-index-core==0.14.25
+pydantic==2.14.1

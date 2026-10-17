@@ -1,0 +1,12 @@
+{
+  "name": "placement-m7-authentication",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "verify": "node verify.mjs",
+    "start": "node start.mjs"
+  },
+  "dependencies": {
+    "jose": "6.2.12"
+  }
+}

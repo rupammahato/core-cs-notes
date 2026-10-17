@@ -1,0 +1,111 @@
+{
+  "module": 13,
+  "title": "PostgreSQL in a Backend",
+  "verified_date": "2026-10-14",
+  "runtime": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "server_version": "18.4",
+  "client_libpq_version": 180003,
+  "packages": {
+    "psycopg": "3.3.4",
+    "psycopg-binary": "3.3.4",
+    "psycopg-pool": "3.3.1",
+    "typing_extensions": "4.16.0",
+    "tzdata": "2026.4"
+  },
+  "database_checks": {
+    "counts": {
+      "core": 19,
+      "concurrency": 14,
+      "pool": 8,
+      "plans": 7,
+      "service": 12
+    },
+    "total": 60,
+    "all_passed": true
+  },
+  "isolation": {
+    "owned_data_directory_verified": true,
+    "owned_listener_stopped": true,
+    "temporary_cluster_removed": true,
+    "existing_service_touched": false,
+    "existing_service_observed_status": "Running"
+  },
+  "content": {
+    "questions": 30,
+    "practice_tasks": 10,
+    "unchecked_learning_items": 12,
+    "exact_embedded_sources": {
+      "schema.sql": true,
+      "db.py": true,
+      "reservation.py": true,
+      "retry.py": true,
+      "verify_plans.py": true
+    },
+    "recorded_json_fidelity": {
+      "service": true,
+      "plans": true
+    }
+  },
+  "website": {
+    "build_passed": true,
+    "static_pages": 89,
+    "font_validation": "Cached Google font response fixture used through build environment; source font configuration unchanged",
+    "routes_checked": 17,
+    "all_routes_200": true,
+    "assertions": {
+      "title": true,
+      "q30": true,
+      "implementation": true,
+      "totalChecks": true,
+      "databaseEvidence": true,
+      "architecture": true,
+      "nextMongo": true,
+      "group": true,
+      "roadmapLink": true,
+      "previousLink": true
+    },
+    "search": {
+      "status": 200,
+      "results": 49,
+      "chapterIndexed": true,
+      "scoped": true
+    },
+    "temporary_server_closed": true
+  },
+  "ports_stopped": {
+    "3000": true,
+    "53978": true,
+    "56861": true
+  },
+  "git_diff_check_passed": true,
+  "trailing_whitespace_files": [],
+  "core_handbooks": [
+    {
+      "subject": "DSA Notes",
+      "files": 17,
+      "lines": 17589
+    },
+    {
+      "subject": "OOP Notes",
+      "files": 13,
+      "lines": 8806
+    },
+    {
+      "subject": "OS Notes",
+      "files": 13,
+      "lines": 6341
+    },
+    {
+      "subject": "DBMS Notes",
+      "files": 13,
+      "lines": 9613
+    },
+    {
+      "subject": "CN Notes",
+      "files": 13,
+      "lines": 9322
+    }
+  ],
+  "next_module": "M14: MongoDB in a Backend",
+  "scope": "Real local PostgreSQL engine/driver checks; no HTTP/provider/outbox delivery, remote TLS, load benchmark, replication or crash/backup recovery test"
+}

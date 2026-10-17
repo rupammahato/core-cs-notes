@@ -1,0 +1,112 @@
+
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.08kB 0.0s done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python@sha256:a6e34c598f2467ed0e9a8d349809fcd8b5c603269512df273a0bb1784edc11b1
+#2 DONE 2.3s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 174B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 27.00kB done
+#4 DONE 0.0s
+
+#5 [wheels 1/6] FROM docker.io/library/python@sha256:a6e34c598f2467ed0e9a8d349809fcd8b5c603269512df273a0bb1784edc11b1
+#5 resolve docker.io/library/python@sha256:a6e34c598f2467ed0e9a8d349809fcd8b5c603269512df273a0bb1784edc11b1 0.0s done
+#5 DONE 0.1s
+
+#5 [wheels 1/6] FROM docker.io/library/python@sha256:a6e34c598f2467ed0e9a8d349809fcd8b5c603269512df273a0bb1784edc11b1
+#5 extracting sha256:ecc510c1e359bdc007b39802570bb7e4dec7d6ebccf357c3201a74299113e05e
+#5 extracting sha256:ecc510c1e359bdc007b39802570bb7e4dec7d6ebccf357c3201a74299113e05e 0.5s done
+#5 DONE 0.6s
+
+#5 [wheels 1/6] FROM docker.io/library/python@sha256:a6e34c598f2467ed0e9a8d349809fcd8b5c603269512df273a0bb1784edc11b1
+#5 extracting sha256:75b6a36c64a1cf3520fc4b4aae4739d5caa8a6a05c27835a920a61784c9c32f8 0.1s done
+#5 extracting sha256:6912e23eb44595b44dc6d9882b34f305ad6f6e9667cec70b13e5dbc4f8cd97f4
+#5 extracting sha256:6912e23eb44595b44dc6d9882b34f305ad6f6e9667cec70b13e5dbc4f8cd97f4 0.2s done
+#5 DONE 0.9s
+
+#5 [wheels 1/6] FROM docker.io/library/python@sha256:a6e34c598f2467ed0e9a8d349809fcd8b5c603269512df273a0bb1784edc11b1
+#5 extracting sha256:bbc5a12237474ec0b23b5051260d56d6436a24d70d9cad961adebe7a037ed813 0.0s done
+#5 DONE 0.9s
+
+#6 [wheels 2/6] WORKDIR /build
+#6 DONE 0.1s
+
+#7 [runtime 2/7] WORKDIR /app
+#7 DONE 0.1s
+
+#8 [wheels 3/6] COPY requirements.lock.txt .
+#8 DONE 0.0s
+
+#9 [wheels 4/6] RUN python -m pip wheel --no-cache-dir --wheel-dir /wheelhouse -r requirements.lock.txt
+#9 ...
+
+#10 [runtime 3/7] RUN groupadd --gid 10001 app && useradd --uid 10001 --gid app --no-create-home app && chown app:app /app
+#10 DONE 0.4s
+
+#9 [wheels 4/6] RUN python -m pip wheel --no-cache-dir --wheel-dir /wheelhouse -r requirements.lock.txt
+#9 1.519 Collecting psycopg==3.3.4 (from -r requirements.lock.txt (line 1))
+#9 1.671   Downloading psycopg-3.3.4-py3-none-any.whl.metadata (4.3 kB)
+#9 3.271 Collecting psycopg-binary==3.3.4 (from -r requirements.lock.txt (line 2))
+#9 3.319   Downloading psycopg_binary-3.3.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.7 kB)
+#9 3.649 Collecting psycopg-pool==3.3.1 (from -r requirements.lock.txt (line 3))
+#9 3.699   Downloading psycopg_pool-3.3.1-py3-none-any.whl.metadata (2.8 kB)
+#9 4.072 Collecting typing_extensions==4.16.0 (from -r requirements.lock.txt (line 4))
+#9 4.119   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+#9 4.174 Downloading psycopg-3.3.4-py3-none-any.whl (213 kB)
+#9 5.900 Downloading psycopg_binary-3.3.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.2 MB)
+#9 49.37    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.2/5.2 MB 151.5 kB/s eta 0:00:00
+#9 49.42 Downloading psycopg_pool-3.3.1-py3-none-any.whl (40 kB)
+#9 49.47 Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+#9 49.49 Saved /wheelhouse/psycopg-3.3.4-py3-none-any.whl
+#9 49.50 Saved /wheelhouse/psycopg_binary-3.3.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl
+#9 49.50 Saved /wheelhouse/psycopg_pool-3.3.1-py3-none-any.whl
+#9 49.50 Saved /wheelhouse/typing_extensions-4.16.0-py3-none-any.whl
+#9 50.48 
+#9 50.48 [notice] A new release of pip is available: 25.0.1 -> 26.2.1
+#9 50.48 [notice] To update, run: pip install --upgrade pip
+#9 DONE 50.6s
+
+#11 [wheels 5/6] COPY . /context-audit
+#11 DONE 0.0s
+
+#12 [wheels 6/6] RUN python -c "from pathlib import Path; p=Path('/context-audit'); assert (p/'app.py').exists(); assert not (p/'.env').exists(); assert not (p/'secrets').exists(); Path('/build-only.txt').write_text('builder artifact')"
+#12 DONE 0.4s
+
+#13 [runtime 4/7] COPY --from=wheels /wheelhouse /wheelhouse
+#13 DONE 0.0s
+
+#14 [runtime 5/7] COPY requirements.lock.txt .
+#14 DONE 0.0s
+
+#15 [runtime 6/7] RUN python -m pip install --no-cache-dir --no-index --find-links=/wheelhouse -r requirements.lock.txt && rm -rf /wheelhouse
+#15 1.524 Looking in links: /wheelhouse
+#15 1.529 Processing /wheelhouse/psycopg-3.3.4-py3-none-any.whl (from -r requirements.lock.txt (line 1))
+#15 1.538 Processing /wheelhouse/psycopg_binary-3.3.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (from -r requirements.lock.txt (line 2))
+#15 1.546 Processing /wheelhouse/psycopg_pool-3.3.1-py3-none-any.whl (from -r requirements.lock.txt (line 3))
+#15 1.549 Processing /wheelhouse/typing_extensions-4.16.0-py3-none-any.whl (from -r requirements.lock.txt (line 4))
+#15 1.560 Installing collected packages: typing_extensions, psycopg-binary, psycopg-pool, psycopg
+#15 1.842 Successfully installed psycopg-3.3.4 psycopg-binary-3.3.4 psycopg-pool-3.3.1 typing_extensions-4.16.0
+#15 1.842 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+#15 DONE 1.9s
+
+#16 [runtime 7/7] COPY --chown=app:app app.py healthcheck.py ./
+#16 DONE 0.0s
+
+#17 exporting to image
+#17 exporting layers
+#17 exporting layers 0.7s done
+#17 exporting manifest sha256:f3b2064f28e6cf1e11e1473b88791e1da0c6aa32841af81f19313db44195ba34 done
+#17 exporting config sha256:0db50f376028d0a6c3523edbd80e6f979a2769e91d093ec5874459a6b76612e3 0.0s done
+#17 exporting attestation manifest sha256:932f383911ee686f53714eee9461b50251d458ab9367f933252e6d3c154deeb3 0.0s done
+#17 exporting manifest list sha256:9be33b3c5e464d2b344906c4a28c472c92f8e1632dce8f7306726c2760c71832 0.0s done
+#17 naming to docker.io/library/placement-m16:m16-9ed9e85c25 done
+#17 unpacking to docker.io/library/placement-m16:m16-9ed9e85c25
+#17 unpacking to docker.io/library/placement-m16:m16-9ed9e85c25 0.2s done
+#17 DONE 1.0s

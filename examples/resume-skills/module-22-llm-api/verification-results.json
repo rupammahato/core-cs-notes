@@ -1,0 +1,583 @@
+{
+  "module": 22,
+  "verified_date": "2026-10-15",
+  "python": "3.12.10",
+  "os": "Windows-11-10.0.26300-SP0",
+  "dependencies": {
+    "openai": "3.31.0",
+    "httpx": "0.28.1",
+    "tiktoken": "0.14.0"
+  },
+  "checks": [
+    {
+      "group": "tokens",
+      "name": "actual_bpe_encoding_round_trips_unicode",
+      "passed": true
+    },
+    {
+      "group": "tokens",
+      "name": "token_count_is_not_character_count",
+      "passed": true
+    },
+    {
+      "group": "tokens",
+      "name": "application_budget_reserves_output_and_overhead",
+      "passed": true
+    },
+    {
+      "group": "tokens",
+      "name": "application_budget_rejects_overflow_before_request",
+      "passed": true
+    },
+    {
+      "group": "tokens",
+      "name": "encoded_output_can_exceed_word_count",
+      "passed": true
+    },
+    {
+      "group": "contract",
+      "name": "valid_card_passes_local_runtime_contract",
+      "passed": true
+    },
+    {
+      "group": "contract",
+      "name": "reject_wrong_enum",
+      "passed": true
+    },
+    {
+      "group": "contract",
+      "name": "reject_extra_field",
+      "passed": true
+    },
+    {
+      "group": "contract",
+      "name": "reject_blank_summary",
+      "passed": true
+    },
+    {
+      "group": "contract",
+      "name": "reject_long_summary",
+      "passed": true
+    },
+    {
+      "group": "contract",
+      "name": "reject_unapproved_source",
+      "passed": true
+    },
+    {
+      "group": "contract",
+      "name": "reject_duplicate_source",
+      "passed": true
+    },
+    {
+      "group": "contract",
+      "name": "reject_wrong_source_type",
+      "passed": true
+    },
+    {
+      "group": "contract",
+      "name": "reject_missing_field",
+      "passed": true
+    },
+    {
+      "group": "contract",
+      "name": "reject_malformed_json",
+      "passed": true
+    },
+    {
+      "group": "sdk_http",
+      "name": "responses_sdk_reads_real_local_http",
+      "passed": true
+    },
+    {
+      "group": "sdk_http",
+      "name": "structured_card_validates_after_sdk_parsing",
+      "passed": true
+    },
+    {
+      "group": "sdk_http",
+      "name": "responses_request_has_schema_and_explicit_storage_policy",
+      "passed": true
+    },
+    {
+      "group": "sdk_http",
+      "name": "instructions_and_untrusted_input_are_separate_fields",
+      "passed": true
+    },
+    {
+      "group": "sdk_http",
+      "name": "fixed_test_key_is_used_without_environment_credentials",
+      "passed": true
+    },
+    {
+      "group": "sdk_http",
+      "name": "sdk_captures_request_id",
+      "passed": true
+    },
+    {
+      "group": "sdk_http",
+      "name": "usage_has_cached_and_reasoning_subsets",
+      "passed": true
+    },
+    {
+      "group": "sdk_http",
+      "name": "refusal_is_distinct_from_structured_success",
+      "passed": true
+    },
+    {
+      "group": "sdk_http",
+      "name": "incomplete_is_not_published_as_success",
+      "passed": true
+    },
+    {
+      "group": "sdk_http",
+      "name": "empty_completed_output_is_rejected",
+      "passed": true
+    },
+    {
+      "group": "sdk_http",
+      "name": "unstructured_peer_output_fails_contract",
+      "passed": true
+    },
+    {
+      "group": "router_shape",
+      "name": "chat_compatible_sdk_uses_chat_completions_path",
+      "passed": true
+    },
+    {
+      "group": "router_shape",
+      "name": "chat_response_uses_choices_message_content",
+      "passed": true
+    },
+    {
+      "group": "router_shape",
+      "name": "router_preferences_survive_extra_body_serialization",
+      "passed": true
+    },
+    {
+      "group": "router_shape",
+      "name": "chat_request_does_not_reuse_responses_input_shape",
+      "passed": true
+    },
+    {
+      "group": "stream",
+      "name": "semantic_deltas_survive_fragmented_utf8_http",
+      "passed": true
+    },
+    {
+      "group": "stream",
+      "name": "preview_deltas_match_terminal_completed_text",
+      "passed": true
+    },
+    {
+      "group": "stream",
+      "name": "final_stream_event_supplies_usage",
+      "passed": true
+    },
+    {
+      "group": "stream",
+      "name": "eof_without_completion_is_failure",
+      "passed": true
+    },
+    {
+      "group": "stream",
+      "name": "midstream_failure_is_not_complete_answer",
+      "passed": true
+    },
+    {
+      "group": "tool_http",
+      "name": "two_round_tool_exchange_returns_final_text",
+      "passed": true
+    },
+    {
+      "group": "tool_http",
+      "name": "tool_output_links_call_id_and_preserves_prior_item",
+      "passed": true
+    },
+    {
+      "group": "tool_http",
+      "name": "principal_is_not_taken_from_model_arguments",
+      "passed": true
+    },
+    {
+      "group": "tool_http",
+      "name": "unknown_tool_from_peer_is_blocked",
+      "passed": true
+    },
+    {
+      "group": "tool_http",
+      "name": "repeated_tool_loop_stops_at_round_budget",
+      "passed": true
+    },
+    {
+      "group": "tool_http",
+      "name": "round_budget_bounds_actual_http_calls",
+      "passed": true
+    },
+    {
+      "group": "retry_http",
+      "name": "transient_429_recovers_in_two_attempts",
+      "passed": true
+    },
+    {
+      "group": "retry_http",
+      "name": "http-400_is_not_retried",
+      "passed": true
+    },
+    {
+      "group": "retry_http",
+      "name": "http-400_has_one_network_attempt",
+      "passed": true
+    },
+    {
+      "group": "retry_http",
+      "name": "http-401_is_not_retried",
+      "passed": true
+    },
+    {
+      "group": "retry_http",
+      "name": "http-401_has_one_network_attempt",
+      "passed": true
+    },
+    {
+      "group": "retry_http",
+      "name": "quota_is_not_retried",
+      "passed": true
+    },
+    {
+      "group": "retry_http",
+      "name": "quota_has_one_network_attempt",
+      "passed": true
+    },
+    {
+      "group": "retry_http",
+      "name": "persistent_503_exhausts_attempt_budget",
+      "passed": true
+    },
+    {
+      "group": "retry_http",
+      "name": "sdk_retry_disabled_prevents_nested_attempts",
+      "passed": true
+    },
+    {
+      "group": "retry_http",
+      "name": "huge_retry_hint_is_not_shortened",
+      "passed": true
+    },
+    {
+      "group": "retry_http",
+      "name": "actual_http_read_timeout_surfaces",
+      "passed": true
+    },
+    {
+      "group": "retry_http",
+      "name": "ambiguous_timeout_is_not_automatically_replayed",
+      "passed": true
+    },
+    {
+      "group": "cleanup",
+      "name": "sdk_http_client_closed",
+      "passed": true
+    },
+    {
+      "group": "boundary",
+      "name": "local_example_rejects_external_provider_url",
+      "passed": true
+    },
+    {
+      "group": "boundary",
+      "name": "local_example_rejects_url_credentials",
+      "passed": true
+    },
+    {
+      "group": "retry_policy",
+      "name": "numeric_retry_after_is_respected",
+      "passed": true
+    },
+    {
+      "group": "retry_policy",
+      "name": "http_date_retry_after_is_supported",
+      "passed": true
+    },
+    {
+      "group": "retry_policy",
+      "name": "invalid_hint_uses_bounded_jitter",
+      "passed": true
+    },
+    {
+      "group": "retry_policy",
+      "name": "fallback_backoff_is_capped",
+      "passed": true
+    },
+    {
+      "group": "tool_policy",
+      "name": "same_call_replay_reuses_local_result",
+      "passed": true
+    },
+    {
+      "group": "tool_policy",
+      "name": "unknown_tool_is_rejected",
+      "passed": true
+    },
+    {
+      "group": "tool_policy",
+      "name": "wrong_owner_is_rejected",
+      "passed": true
+    },
+    {
+      "group": "tool_policy",
+      "name": "model_supplied_principal_is_rejected",
+      "passed": true
+    },
+    {
+      "group": "tool_policy",
+      "name": "malformed_arguments_is_rejected",
+      "passed": true
+    },
+    {
+      "group": "tool_policy",
+      "name": "conflicting_call_reuse_is_rejected",
+      "passed": true
+    },
+    {
+      "group": "accounting",
+      "name": "cached_input_subset_and_output_cost_equal_decimal_total",
+      "passed": true
+    },
+    {
+      "group": "accounting",
+      "name": "cached_input_cannot_exceed_total_input",
+      "passed": true
+    },
+    {
+      "group": "accounting",
+      "name": "negative_usage_is_rejected",
+      "passed": true
+    },
+    {
+      "group": "accounting",
+      "name": "settlement_refunds_unused_reservation",
+      "passed": true
+    },
+    {
+      "group": "accounting",
+      "name": "same_settlement_is_idempotent_in_process",
+      "passed": true
+    },
+    {
+      "group": "accounting",
+      "name": "conflicting_settlement_is_rejected",
+      "passed": true
+    },
+    {
+      "group": "accounting",
+      "name": "ambiguous_timeout_keeps_reservation_for_reconciliation",
+      "passed": true
+    },
+    {
+      "group": "accounting",
+      "name": "concurrent_admission_does_not_overspend_available_balance",
+      "passed": true
+    },
+    {
+      "group": "evaluation",
+      "name": "handwritten_correct_case_passes",
+      "passed": true
+    },
+    {
+      "group": "evaluation",
+      "name": "format_success_does_not_hide_semantic_failure",
+      "passed": true
+    },
+    {
+      "group": "evaluation",
+      "name": "correct_label_does_not_hide_source_scope_failure",
+      "passed": true
+    },
+    {
+      "group": "evaluation",
+      "name": "aggregate_records_handcrafted_case_results",
+      "passed": true
+    },
+    {
+      "group": "cleanup",
+      "name": "owned_loopback_listener_closed",
+      "passed": true
+    }
+  ],
+  "counts": {
+    "accounting": 8,
+    "boundary": 2,
+    "cleanup": 2,
+    "contract": 10,
+    "evaluation": 4,
+    "retry_http": 12,
+    "retry_policy": 4,
+    "router_shape": 4,
+    "sdk_http": 11,
+    "stream": 5,
+    "tokens": 5,
+    "tool_http": 6,
+    "tool_policy": 6
+  },
+  "total": 79,
+  "observations": {
+    "tokens": [
+      {
+        "text": "Hello, world!",
+        "characters": 13,
+        "tokens": 4
+      },
+      {
+        "text": "café 🚀",
+        "characters": 6,
+        "tokens": 5
+      },
+      {
+        "text": "Node.js runs JavaScript outside the browser.",
+        "characters": 44,
+        "tokens": 8
+      }
+    ],
+    "responses": {
+      "status": "completed",
+      "card": {
+        "topic": "nodejs",
+        "summary": "Node.js runs JavaScript outside the browser.",
+        "source_ids": [
+          "note-a"
+        ]
+      },
+      "usage": {
+        "input_tokens": 1000,
+        "input_tokens_details": {
+          "cache_write_tokens": null,
+          "cached_tokens": 200
+        },
+        "output_tokens": 100,
+        "output_tokens_details": {
+          "reasoning_tokens": 40
+        },
+        "total_tokens": 1100
+      },
+      "request_id": "fixture-request-id",
+      "refusal_kind": "refusal"
+    },
+    "router_request": {
+      "model": "fixture/provider-model",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Explain Node.js briefly."
+        }
+      ],
+      "max_tokens": 100,
+      "provider": {
+        "require_parameters": true,
+        "allow_fallbacks": false
+      }
+    },
+    "stream": {
+      "text": "Node.js café 🚀",
+      "usage": {
+        "input_tokens": 1000,
+        "input_tokens_details": {
+          "cache_write_tokens": null,
+          "cached_tokens": 200
+        },
+        "output_tokens": 100,
+        "output_tokens_details": {
+          "reasoning_tokens": 40
+        },
+        "total_tokens": 1100
+      },
+      "deltas": [
+        "Node.js ",
+        "café 🚀"
+      ]
+    },
+    "tool_exchange": {
+      "final": {
+        "kind": "text",
+        "text": "Your note describes the Node.js runtime."
+      },
+      "trace": [
+        {
+          "call_id": "call_read_a",
+          "name": "read_note",
+          "result": {
+            "note_id": "note-a",
+            "text": "Node.js runs JavaScript outside the browser."
+          }
+        }
+      ],
+      "provider_rounds": 2
+    },
+    "retry_attempts": {
+      "retry": 2,
+      "http-400": 1,
+      "http-401": 1,
+      "quota": 1,
+      "http-503": 3,
+      "huge-hint": 1,
+      "slow": 1
+    },
+    "local_requests": 25,
+    "cost": {
+      "price_kind": "hypothetical USD per million tokens",
+      "input_tokens": 1000,
+      "cached_input_tokens": 200,
+      "output_tokens_including_reasoning": 100,
+      "reasoning_subset": 40,
+      "estimated_usd": "0.0025",
+      "balance_after_settlement": "0.0075",
+      "balance_with_unknown_reservation": "0.0055",
+      "concurrent_admissions": [
+        "admitted",
+        "denied"
+      ]
+    },
+    "evaluation": {
+      "total": 4,
+      "passed": 1,
+      "cases": [
+        {
+          "id": "correct",
+          "format_ok": true,
+          "label_ok": true,
+          "source_scope_ok": true,
+          "passed": true
+        },
+        {
+          "id": "wrong-label",
+          "format_ok": true,
+          "label_ok": false,
+          "source_scope_ok": true,
+          "passed": false
+        },
+        {
+          "id": "wrong-scope",
+          "format_ok": true,
+          "label_ok": true,
+          "source_scope_ok": false,
+          "passed": false
+        },
+        {
+          "id": "bad-format",
+          "format_ok": false,
+          "label_ok": false,
+          "source_scope_ok": false,
+          "passed": false
+        }
+      ]
+    }
+  },
+  "cleanup": {
+    "sdk_closed": true,
+    "loopback_ports_closed": {
+      "56865": true
+    },
+    "docker_started": false
+  },
+  "scope": "Actual OpenAI Python SDK serialization/parsing/SSE/errors over owned local HTTP; actual cl100k_base tokenizer; local tool/authorization, retry, Decimal budget/concurrency and deterministic grader mechanics. Handcrafted responses, no model inference/provider calls/keys/charges, no learned-model quality or production durability claim."
+}

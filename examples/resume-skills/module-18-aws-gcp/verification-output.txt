@@ -1,0 +1,82 @@
+PASS sdk/protobuf_body_roundtrip
+PASS sdk/json_wire_body_is_base64_once
+PASS sdk/stable_task_name_for_same_job
+PASS sdk/tenant_scoped_task_names
+PASS sdk/explicit_audience_and_identity
+PASS sdk/post_and_dispatch_deadline
+PASS sdk/insecure_target_rejected
+PASS sdk/query_audience_rejected_by_worker_contract
+PASS sdk/bounded_payload_contract
+PASS auth/valid_signed_fixture_identity
+PASS auth/untrusted_signature_rejected
+PASS auth/tampered_payload_rejected
+PASS auth/wrong_audience_rejected
+PASS auth/wrong_issuer_rejected
+PASS auth/expired_rejected
+PASS auth/future_issued_at_rejected
+PASS auth/unauthorized_service_account_rejected
+PASS auth/unverified_email_rejected
+PASS auth/unknown_key_id_rejected
+PASS auth/missing_iat_rejected
+PASS auth/missing_bearer_rejected
+PASS auth/unsigned_algorithm_rejected
+PASS auth/malformed_token_rejected
+PASS worker/spoofed_task_headers_do_not_authenticate
+PASS worker/signed_wrong_caller_forbidden
+PASS worker/first_delivery_commits_before_success
+PASS worker/same_job_replays_without_extra_effect
+PASS worker/changed_payload_conflicts
+PASS worker/wrong_tenant_cannot_select_job
+PASS worker/unknown_job_rejected
+PASS worker/malformed_json_rejected
+PASS worker/unexpected_fields_rejected
+PASS worker/oversized_body_rejected
+PASS worker/wrong_method_rejected
+PASS worker/precommit_failure_retry_applies_once
+PASS worker/postcommit_failed_ack_retry_replays
+PASS worker/concurrent_duplicates_have_one_effect
+PASS worker/same_job_id_distinct_tenant_is_separate
+PASS worker/recreated_http_worker_replays_persisted_result
+PASS cache/anonymous_hit_skips_real_origin
+PASS cache/query_variant_is_separate
+PASS cache/vary_header_variant_is_separate
+PASS cache/authorization_bypasses_shared_cache
+PASS cache/cookie_request_bypasses_shared_cache
+PASS cache/unlisted_route_bypasses_cache
+PASS cache/unlisted_query_bypasses_cache
+PASS cache/no_store_response_not_stored
+PASS cache/private_response_not_stored
+PASS cache/set_cookie_response_not_stored
+PASS cache/error_response_not_stored
+PASS cache/unmodeled_vary_response_not_stored
+PASS cache/ttl_bounds_stale_version
+PASS cache/local_invalidation_fetches_new_version
+{
+  "total": 53,
+  "counts": {
+    "auth": 14,
+    "cache": 14,
+    "sdk": 9,
+    "worker": 16
+  },
+  "versions": {
+    "google-auth": "2.62.0",
+    "google-cloud-tasks": "2.26.0",
+    "cryptography": "50.0.2",
+    "requests": "2.34.2"
+  },
+  "cleanup": {
+    "loopback_ports_closed": {
+      "55451": true,
+      "55485": true,
+      "55487": true,
+      "55488": true
+    },
+    "server_threads_stopped": true,
+    "scratch_database_and_directory_removed": true,
+    "generated_private_keys_written_to_disk": false,
+    "cloud_resources_created": false,
+    "docker_started": false
+  }
+}
+

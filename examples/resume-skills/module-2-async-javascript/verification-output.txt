@@ -1,0 +1,29 @@
+PASS 01-callback - A callback does not become the caller's return value
+PASS 02-executor - The executor runs now; handlers run later
+PASS 03-adoption - Resolved can still be pending
+PASS 04-chain - Returning values and promises sequences a chain
+PASS 05-floating - A missing return disconnects completion
+PASS 06-errors - Throws reject the next promise; catch can recover
+PASS 07-finally - Cleanup preserves a result unless cleanup fails
+PASS 08-await - Await yields even for a non-promise value
+PASS 09-return-await - A local catch needs to observe the rejection
+PASS 10-foreach - forEach ignores callback promises
+PASS 11-concurrency - Starting operations determines overlap
+PASS 12-all-order - all preserves input order, not completion order
+PASS 13-all-failure - all rejecting does not cancel another operation
+PASS 14-settled - allSettled records each outcome
+PASS 15-any - any ignores rejections until a success or total failure
+PASS 16-race - race observes the first settlement and is asynchronous
+PASS 17-microtasks - New microtasks drain before a later timer callback
+PASS 18-esm-tick - Node ES-module top-level scheduling
+PASS 19-cjs-tick - Node CommonJS top-level scheduling
+PASS 20-cpu - async does not offload synchronous CPU work
+PASS 21-timeout-race - A timeout race leaves underlying work alive
+PASS 22-abort - Cancel an operation that supports AbortSignal
+PASS 23-deadline-signal - Deadline signals and API errors are distinct
+PASS 24-fetch - HTTP failure is different from fetch rejection
+PASS 25-bounded - A bounded worker pool collects outcomes in input order
+PASS 26-lost-update - One JavaScript thread can still have a logical race
+PASS 27-adapter - Adapt an error-first callback at the boundary
+PASS 28-aggregate - Required and optional dependencies need different contracts
+Verified 28 snippets in their recorded module modes; Node v22.14.0

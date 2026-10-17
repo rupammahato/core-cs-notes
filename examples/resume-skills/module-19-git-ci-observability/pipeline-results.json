@@ -1,0 +1,248 @@
+{
+  "checks": [
+    {
+      "group": "pipeline",
+      "name": "syntax_gate_executes_successfully",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "group": "pipeline",
+      "name": "real_http_contract_suite_passes",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "group": "pipeline",
+      "name": "known_good_release_smoked_before_selection",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "group": "pipeline",
+      "name": "failed_test_gate_blocks_packaging",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "group": "pipeline",
+      "name": "digest_mismatch_blocks_extraction_and_selection",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "group": "pipeline",
+      "name": "unhealthy_candidate_keeps_last_good_release",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "group": "pipeline",
+      "name": "validated_candidate_selected_with_revision_and_digest",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "group": "pipeline",
+      "name": "local_rollback_reselects_retained_good_artifact",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "group": "pipeline",
+      "name": "all_candidate_processes_and_ports_close",
+      "passed": true,
+      "evidence": null
+    }
+  ],
+  "total": 9,
+  "runs": [
+    [
+      {
+        "stage": "syntax",
+        "status": "passed"
+      }
+    ],
+    [
+      {
+        "stage": "test",
+        "status": "failed",
+        "error_type": "CalledProcessError"
+      }
+    ],
+    [
+      {
+        "stage": "integrity",
+        "status": "failed",
+        "error_type": "ValueError"
+      }
+    ],
+    [
+      {
+        "stage": "smoke",
+        "status": "failed",
+        "error_type": "HTTPError"
+      }
+    ],
+    [
+      {
+        "stage": "integrity",
+        "status": "passed"
+      },
+      {
+        "stage": "smoke",
+        "status": "passed"
+      },
+      {
+        "stage": "promote",
+        "status": "passed"
+      }
+    ]
+  ],
+  "selected_before_rollback": {
+    "release": "v2",
+    "revision": "28d1ef891abe9eccb6a500b58f848c999bb1da28",
+    "artifact_sha256": "08f759f02e3da6adb962199975b2f04471966e84b1dfa08db96211657930f183"
+  },
+  "selected_after_rollback": {
+    "release": "v1",
+    "revision": "28d1ef891abe9eccb6a500b58f848c999bb1da28",
+    "artifact_sha256": "9bdc4dff5b90451d62177466a57b2b905a7478fdfaa82dda15f330432874cf6f"
+  },
+  "artifact_sha256": "08f759f02e3da6adb962199975b2f04471966e84b1dfa08db96211657930f183",
+  "manifest": {
+    "revision": "28d1ef891abe9eccb6a500b58f848c999bb1da28",
+    "release": "v2",
+    "files": {
+      "app.mjs": "b3b5a26c1f330c5b35162472ca37ebdbddcb69ab9b9b43e22c2db31457bb8484",
+      "telemetry.mjs": "8f4f26568ada32cd968252b717e9cceda715f2feddfc0c2c9caff7eb1c6c2e8a",
+      "serve.mjs": "cf2fc2f67e37b3c8e99edd5b927afb766ef96b800c544e26529b49a49e239d91",
+      "load.mjs": "861406b3ca30eeee1635685f6bf2e4d693a199434219cc3f48743296a80eed52",
+      "statistics.mjs": "140a3ec7c0817267947b7f541f1998da353b35899d00982e9e6acae61ebfff29",
+      "contract.test.mjs": "dde49caedebc773a149e0ffcfef13fb56ea6098a1b74cbf8ef0f4e033de0f30b",
+      "package.json": "7e97de970c6be4c95059d3c51b4544a2efbe96462fd40b96941d8ae1db8758ca",
+      "package-lock.json": "a9ae23e9040482ab1118da00cec0bd9345da35f2fb06489a937dd61d936f089f"
+    }
+  },
+  "ports_closed": {
+    "50463": true,
+    "50462": true,
+    "50468": true,
+    "50467": true,
+    "50471": true,
+    "50470": true
+  },
+  "commands": [
+    {
+      "args": [
+        "C:\\Program Files\\nodejs\\node.EXE",
+        "--check",
+        "app.mjs"
+      ],
+      "code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "C:\\Program Files\\nodejs\\node.EXE",
+        "--check",
+        "telemetry.mjs"
+      ],
+      "code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "C:\\Program Files\\nodejs\\node.EXE",
+        "--check",
+        "serve.mjs"
+      ],
+      "code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "C:\\Program Files\\nodejs\\node.EXE",
+        "--check",
+        "load.mjs"
+      ],
+      "code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "C:\\Program Files\\nodejs\\node.EXE",
+        "--check",
+        "statistics.mjs"
+      ],
+      "code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "C:\\Program Files\\nodejs\\node.EXE",
+        "--check",
+        "contract.test.mjs"
+      ],
+      "code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "C:\\Program Files\\nodejs\\node.EXE",
+        "--test",
+        "contract.test.mjs"
+      ],
+      "code": 0,
+      "stdout": "TAP version 13\n# Subtest: success contract over real HTTP\nok 1 - success contract over real HTTP\n  ---\n  duration_ms: 30.316\n  ...\n# Subtest: invalid input is rejected at the API boundary\nok 2 - invalid input is rejected at the API boundary\n  ---\n  duration_ms: 3.8894\n  ...\n# Subtest: dependency failure has a stable public error contract\nok 3 - dependency failure has a stable public error contract\n  ---\n  duration_ms: 6.5312\n  ...\n1..3\n# tests 3\n# suites 0\n# pass 3\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 282.979\n",
+      "stderr": ""
+    },
+    {
+      "candidate": "candidate-v1",
+      "ready": {
+        "event": "ready",
+        "port": 50463,
+        "dependency_port": 50462
+      },
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "args": [
+        "C:\\Program Files\\nodejs\\node.EXE",
+        "--test",
+        "C:\\Development\\Placement\\examples\\resume-skills\\module-19-git-ci-observability\\.run-pzf5al82\\intentional-failure.test.mjs"
+      ],
+      "code": 1,
+      "stdout": "TAP version 13\n# Subtest: intentional gate failure\nnot ok 1 - intentional gate failure\n  ---\n  duration_ms: 1.0779\n  location: 'C:\\\\Development\\\\Placement\\\\examples\\\\resume-skills\\\\module-19-git-ci-observability\\\\.run-pzf5al82\\\\intentional-failure.test.mjs:1:72'\n  failureType: 'testCodeFailure'\n  error: |-\n    Expected values to be strictly equal:\n    \n    1 !== 2\n    \n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  expected: 2\n  actual: 1\n  operator: 'strictEqual'\n  stack: |-\n    TestContext.<anonymous> (file:///C:/Development/Placement/examples/resume-skills/module-19-git-ci-observability/.run-pzf5al82/intentional-failure.test.mjs:1:115)\n    Test.runInAsyncScope (node:async_hooks:211:14)\n    Test.run (node:internal/test_runner/test:979:25)\n    Test.start (node:internal/test_runner/test:877:17)\n    startSubtestAfterBootstrap (node:internal/test_runner/harness:296:17)\n  ...\n1..1\n# tests 1\n# suites 0\n# pass 0\n# fail 1\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 70.2571\n",
+      "stderr": ""
+    },
+    {
+      "candidate": "candidate-unhealthy",
+      "ready": {
+        "event": "ready",
+        "port": 50468,
+        "dependency_port": 50467
+      },
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "candidate": "candidate-v2",
+      "ready": {
+        "event": "ready",
+        "port": 50471,
+        "dependency_port": 50470
+      },
+      "exit_code": 0,
+      "stderr": ""
+    }
+  ],
+  "boundary": "Candidate source bundle resolves locked dependencies from module node_modules; no remote runner or external deployment. Pointer replacement does not reroute a running server."
+}

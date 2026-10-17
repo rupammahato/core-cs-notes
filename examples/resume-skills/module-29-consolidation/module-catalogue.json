@@ -1,0 +1,292 @@
+[
+  {
+    "module": 0,
+    "file": "resume-skills-handbook-part-2-module-0-how-backend-works.md",
+    "title": "Module 0: How a Backend Works",
+    "slug": "how-backend-works",
+    "route": "/docs/resume-skills/how-backend-works",
+    "mechanism": "Trace browser, HTTP boundary, controller/service/data and response.",
+    "revisit_when": "You cannot place a bug in the request path.",
+    "sha256": "383ffc5cfb7b2cb21e0fc0fa16e5dfc52b791997368f1d9194f7783d8bc5e1bf"
+  },
+  {
+    "module": 1,
+    "file": "resume-skills-handbook-part-3-module-1-javascript-fundamentals.md",
+    "title": "Module 1: JavaScript Fundamentals for Interviews",
+    "slug": "javascript-fundamentals",
+    "route": "/docs/resume-skills/javascript-fundamentals",
+    "mechanism": "Explain scope, values, references, closures and collection behavior.",
+    "revisit_when": "Mutation, coercion or callback results surprise you.",
+    "sha256": "71197d786b9590df46a82ec2a7a9cfdc252261fc0ac64847faa48047f4647831"
+  },
+  {
+    "module": 2,
+    "file": "resume-skills-handbook-part-4-module-2-asynchronous-javascript.md",
+    "title": "Module 2: Asynchronous JavaScript",
+    "slug": "asynchronous-javascript",
+    "route": "/docs/resume-skills/asynchronous-javascript",
+    "mechanism": "Trace Promises, awaiting, scheduling, rejection and bounded concurrency.",
+    "revisit_when": "Async work is missing, leaked or falsely assumed rolled back.",
+    "sha256": "311941b59766cbef36e6476bb134dbd6463301744423e0a75067f4e2461bc4a4"
+  },
+  {
+    "module": 3,
+    "file": "resume-skills-handbook-part-5-module-3-typescript-fundamentals.md",
+    "title": "Module 3: TypeScript Fundamentals",
+    "slug": "typescript-fundamentals",
+    "route": "/docs/resume-skills/typescript-fundamentals",
+    "mechanism": "Separate static narrowing from runtime input validation.",
+    "revisit_when": "A typed API trusts malformed external JSON.",
+    "sha256": "b8fd6e0c2456a50064eb8033e22a78faf0c426a382e4c21e7b0b7d128f8c01b0"
+  },
+  {
+    "module": 4,
+    "file": "resume-skills-handbook-part-6-module-4-nodejs.md",
+    "title": "Module 4: Node.js — What It Is and How It Works",
+    "slug": "nodejs",
+    "route": "/docs/resume-skills/nodejs",
+    "mechanism": "Explain Node execution, I/O, buffers/streams and process resources.",
+    "revisit_when": "One CPU task or resource leak stalls unrelated traffic.",
+    "sha256": "60cb1922cb22d12f05851dcd257c87d0417c32bf6b06ad23521e750159fc2310"
+  },
+  {
+    "module": 5,
+    "file": "resume-skills-handbook-part-7-module-5-express-backend-structure.md",
+    "title": "Module 5: Express.js and Backend Application Structure",
+    "slug": "express-backend-structure",
+    "route": "/docs/resume-skills/express-backend-structure",
+    "mechanism": "Trace Express middleware order, service boundaries and error flow.",
+    "revisit_when": "Validation/auth/error handling executes in the wrong order.",
+    "sha256": "9ddabe1837ca2ec51f1eee37730be0c79bd53b213b8d698b24e2b33507cd140c"
+  },
+  {
+    "module": 6,
+    "file": "resume-skills-handbook-part-8-module-6-rest-apis-http.md",
+    "title": "Module 6: REST APIs and HTTP in Application Design",
+    "slug": "rest-apis-http",
+    "route": "/docs/resume-skills/rest-apis-http",
+    "mechanism": "Define method/status/representation, pagination and retry semantics.",
+    "revisit_when": "A client and API disagree about success or replay safety.",
+    "sha256": "04b44ceea5f63354a3410e33c5564b0eb2e4ff9923cf3e36da3071eb2a1c0cae"
+  },
+  {
+    "module": 7,
+    "file": "resume-skills-handbook-part-9-module-7-authentication-sessions-jwt-oauth.md",
+    "title": "Module 7: Authentication, Sessions, JWT and OAuth",
+    "slug": "authentication-sessions-jwt-oauth",
+    "route": "/docs/resume-skills/authentication-sessions-jwt-oauth",
+    "mechanism": "Trace credential transport, verification, expiry and revocation.",
+    "revisit_when": "A login works but identity/session assumptions are unclear.",
+    "sha256": "1f7bb8522bf5bb73be847f92c4baf0a4333edf6c00815984c710ee213c42d41e"
+  },
+  {
+    "module": 8,
+    "file": "resume-skills-handbook-part-10-module-8-api-security-authorization-multi-tenancy.md",
+    "title": "Module 8: API Security, Authorization and Multi-Tenancy",
+    "slug": "api-security-authorization-multi-tenancy",
+    "route": "/docs/resume-skills/api-security-authorization-multi-tenancy",
+    "mechanism": "Enforce resource/action/tenant policy at every relevant boundary.",
+    "revisit_when": "Another tenant or a revoked user can access derived data.",
+    "sha256": "b53e616431e6ea94ef341e05daf25453b62e372452ae712605dcaafbf6f98afe"
+  },
+  {
+    "module": 9,
+    "file": "resume-skills-handbook-part-11-module-9-webhooks-payments-reliable-integrations.md",
+    "title": "Module 9: Webhooks, Payments and Reliable Integrations",
+    "slug": "webhooks-payments-reliable-integrations",
+    "route": "/docs/resume-skills/webhooks-payments-reliable-integrations",
+    "mechanism": "Protect payment/webhook effects with authentication and durable identity.",
+    "revisit_when": "Duplicate or ambiguous events repeat business effects.",
+    "sha256": "b339d34cf16f6b7dce0a3d91d6b3804942558b510c1ebf4edcab8ba26c2e33fc"
+  },
+  {
+    "module": 10,
+    "file": "resume-skills-handbook-part-12-module-10-python-fundamentals.md",
+    "title": "Module 10: Python Fundamentals for Backend Interviews",
+    "slug": "python-fundamentals",
+    "route": "/docs/resume-skills/python-fundamentals",
+    "mechanism": "Explain Python values, mutability, exceptions and coroutine execution.",
+    "revisit_when": "Defaults, data types or async execution behave unexpectedly.",
+    "sha256": "79c0b089e0d9781594e2acc28f326443d048d1e52ab16f8f96ad528390548d9a"
+  },
+  {
+    "module": 11,
+    "file": "resume-skills-handbook-part-13-module-11-flask-fastapi-python-request-handling.md",
+    "title": "Module 11: Flask, FastAPI and Python Request Handling",
+    "slug": "flask-fastapi-python-request-handling",
+    "route": "/docs/resume-skills/flask-fastapi-python-request-handling",
+    "mechanism": "Distinguish framework request handling from blocking dependency work.",
+    "revisit_when": "An async endpoint blocks or loses request-lifetime work.",
+    "sha256": "9ec4b7413e5c3c766552e532ec92a81f9e28f7cb4772f26149f999186e0818b0"
+  },
+  {
+    "module": 12,
+    "file": "resume-skills-handbook-part-14-module-12-django-django-rest-framework.md",
+    "title": "Module 12: Django and Django REST Framework",
+    "slug": "django-django-rest-framework",
+    "route": "/docs/resume-skills/django-django-rest-framework",
+    "mechanism": "Trace Django/DRF validation, ORM/query work and permissions.",
+    "revisit_when": "Framework defaults are mistaken for complete application policy.",
+    "sha256": "97f3a7a37c1a18c6d8d0c454ed4a0846a5204e46508afbb92351194e24e53320"
+  },
+  {
+    "module": 13,
+    "file": "resume-skills-handbook-part-15-module-13-postgresql-backend.md",
+    "title": "Module 13: PostgreSQL in a Backend",
+    "slug": "postgresql-backend",
+    "route": "/docs/resume-skills/postgresql-backend",
+    "mechanism": "Use access patterns, constraints, plans and transactions deliberately.",
+    "revisit_when": "Queries, pool waits or read-modify-write operations fail under load.",
+    "sha256": "2be9a5469522d877291a7465cd53b58f62a6b360ef6ee30c87dca5dd12bbb267"
+  },
+  {
+    "module": 14,
+    "file": "resume-skills-handbook-part-16-module-14-mongodb-backend.md",
+    "title": "Module 14: MongoDB in a Backend",
+    "slug": "mongodb-backend",
+    "route": "/docs/resume-skills/mongodb-backend",
+    "mechanism": "Choose document boundaries, indexes and atomic/transactional updates.",
+    "revisit_when": "Partial updates, duplicate identity or multi-document rules fail.",
+    "sha256": "1c4ee17fd6f0a515870311199288b5bfd19f8439513ffa9ddc8d882fc327e455"
+  },
+  {
+    "module": 15,
+    "file": "resume-skills-handbook-part-17-module-15-caching-background-jobs-data-ingestion.md",
+    "title": "Module 15: Caching, Background Jobs and Data Ingestion",
+    "slug": "caching-background-jobs-data-ingestion",
+    "route": "/docs/resume-skills/caching-background-jobs-data-ingestion",
+    "mechanism": "Explain source truth, cache freshness, job identity and publication.",
+    "revisit_when": "A retry, stale worker or expiry creates incorrect derived state.",
+    "sha256": "8961723ad41ad09a86f1b34f002821b84414c0344d666143027aec144844afe0"
+  },
+  {
+    "module": 16,
+    "file": "resume-skills-handbook-part-18-module-16-docker-fundamentals.md",
+    "title": "Module 16: Docker Fundamentals",
+    "slug": "docker-fundamentals",
+    "route": "/docs/resume-skills/docker-fundamentals",
+    "mechanism": "Explain image/container, networks, volumes, configuration and readiness.",
+    "revisit_when": "A container cannot reach dependencies or preserve data.",
+    "sha256": "ae44b8a701f9e6e5bb599a6d988437300504151da805e0affa517e9facc99351"
+  },
+  {
+    "module": 17,
+    "file": "resume-skills-handbook-part-19-module-17-linux-deployment-nginx-pm2.md",
+    "title": "Module 17: Linux Deployment, Nginx and PM2",
+    "slug": "linux-deployment-nginx-pm2",
+    "route": "/docs/resume-skills/linux-deployment-nginx-pm2",
+    "mechanism": "Trace Linux process, reverse proxy, TLS, restart and drain behavior.",
+    "revisit_when": "Deployment, trust or shutdown differs from local development.",
+    "sha256": "abcd38f6664cf5b1e971725d9035f2450c6e63010020894e763a45d7e29f6158"
+  },
+  {
+    "module": 18,
+    "file": "resume-skills-handbook-part-20-module-18-aws-gcp-fundamentals.md",
+    "title": "Module 18: AWS and GCP Fundamentals for This Resume",
+    "slug": "aws-gcp-fundamentals",
+    "route": "/docs/resume-skills/aws-gcp-fundamentals",
+    "mechanism": "Separate IAM, service identity, networking, queue and storage boundaries.",
+    "revisit_when": "A managed-service label hides an unresolved permission/failure rule.",
+    "sha256": "35a753e8bb611c66b148db60d41daa8b9e5df418d329da0e2b1a62c4597f0cf6"
+  },
+  {
+    "module": 19,
+    "file": "resume-skills-handbook-part-21-module-19-git-ci-cd-testing-observability-performance.md",
+    "title": "Module 19: Git, CI/CD, Testing, Observability and Performance",
+    "slug": "git-ci-cd-testing-observability-performance",
+    "route": "/docs/resume-skills/git-ci-cd-testing-observability-performance",
+    "mechanism": "Link Git/CI gates, telemetry, performance evidence and rollback.",
+    "revisit_when": "A test or benchmark claim lacks a reproducible boundary.",
+    "sha256": "cbbf6fdfe9fa9e9a23d3c1dc14ddd9beeb867ec337934d426e03b9b2ed7b64c0"
+  },
+  {
+    "module": 20,
+    "file": "resume-skills-handbook-part-22-module-20-react-fundamentals.md",
+    "title": "Module 20: React Fundamentals",
+    "slug": "react-fundamentals",
+    "route": "/docs/resume-skills/react-fundamentals",
+    "mechanism": "Explain render snapshots, state, keys, effects and request races.",
+    "revisit_when": "The UI shows stale results or loses identity/state.",
+    "sha256": "7aaf0315bf029cd43f96423d1998c1c722ffd7e63e04aa557f263f43cef410fe"
+  },
+  {
+    "module": 21,
+    "file": "resume-skills-handbook-part-23-module-21-nextjs-api-routes-tailwind.md",
+    "title": "Module 21: Next.js, API Routes and Tailwind",
+    "slug": "nextjs-api-routes-tailwind",
+    "route": "/docs/resume-skills/nextjs-api-routes-tailwind",
+    "mechanism": "Separate Next.js runtime/render/cache boundaries and Tailwind styling.",
+    "revisit_when": "Server/client code, hydration or cache scope leaks correctness.",
+    "sha256": "174bb39345f9c9d1c5f68dcf578671c17fb7f555a119512628a2049cceb54938"
+  },
+  {
+    "module": 22,
+    "file": "resume-skills-handbook-part-24-module-22-llm-ai-api-fundamentals.md",
+    "title": "Module 22: LLM and AI API Fundamentals",
+    "slug": "llm-ai-api-fundamentals",
+    "route": "/docs/resume-skills/llm-ai-api-fundamentals",
+    "mechanism": "Bound model/tool work, usage, structured output and evaluation.",
+    "revisit_when": "A model result is trusted as permission or an unbounded workflow.",
+    "sha256": "a6cb7177cb5c15e338d0e569348b938cd256e25a9fa1a67726bf7cce5797adbb"
+  },
+  {
+    "module": 23,
+    "file": "resume-skills-handbook-part-25-module-23-rag-document-ingestion.md",
+    "title": "Module 23: RAG and Document Ingestion",
+    "slug": "rag-document-ingestion",
+    "route": "/docs/resume-skills/rag-document-ingestion",
+    "mechanism": "Trace source/chunk provenance, ingestion state and accepted evidence.",
+    "revisit_when": "A citation or answer uses stale, missing or unauthorized content.",
+    "sha256": "04723aa8363931117fee3ea5d65b6db03e0dcf1612ea3ba2f69906f945a09252"
+  },
+  {
+    "module": 24,
+    "file": "resume-skills-handbook-part-26-module-24-embeddings-pinecone-pgvector.md",
+    "title": "Module 24: Embeddings, Pinecone and pgvector",
+    "slug": "embeddings-pinecone-pgvector",
+    "route": "/docs/resume-skills/embeddings-pinecone-pgvector",
+    "mechanism": "Distinguish embedding/index configuration, scoped retrieval and recall.",
+    "revisit_when": "A similarity score is mistaken for relevance or permission.",
+    "sha256": "0e17467d323a1985c8b195b0d2ce930b6b06e939578ff76cd602325a927cbea2"
+  },
+  {
+    "module": 25,
+    "file": "resume-skills-handbook-part-27-module-25-langchain-langgraph-llamaindex.md",
+    "title": "Module 25: LangChain, LangGraph and LlamaIndex",
+    "slug": "langchain-langgraph-llamaindex",
+    "route": "/docs/resume-skills/langchain-langgraph-llamaindex",
+    "mechanism": "Explain chain/workflow/agent state, checkpoints and replay.",
+    "revisit_when": "A durable graph checkpoint repeats an external side effect.",
+    "sha256": "d9d50c65474cf3e9ea6523323529c6deb21dfd7c233b2088d27d7b60c403bf43"
+  },
+  {
+    "module": 26,
+    "file": "resume-skills-handbook-part-28-module-26-neo4j-graph-backed-applications.md",
+    "title": "Module 26: Neo4j and Graph-Backed Applications",
+    "slug": "neo4j-graph-backed-applications",
+    "route": "/docs/resume-skills/neo4j-graph-backed-applications",
+    "mechanism": "Anchor bounded graph queries and validate path/source scope.",
+    "revisit_when": "Graph expansion crosses tenant or freshness boundaries.",
+    "sha256": "cc7322d3a0a23b84895d3f83c3b072a33cb93032a2436e663edba41e1cbb2980"
+  },
+  {
+    "module": 27,
+    "file": "resume-skills-handbook-part-29-module-27-system-design-load-balancer.md",
+    "title": "Module 27: System-Design Bridge Through Your Load Balancer",
+    "slug": "system-design-load-balancer",
+    "route": "/docs/resume-skills/system-design-load-balancer",
+    "mechanism": "Defend placement, virtual nodes, health, overload and measured metrics.",
+    "revisit_when": "Affinity, key balance and actual request load are conflated.",
+    "sha256": "80bb81327cd89e9aba3038806f9412530b056cb55ac4218c76fbd636ffdd04e2"
+  },
+  {
+    "module": 28,
+    "file": "resume-skills-handbook-part-30-module-28-resume-project-experience-deep-dives.md",
+    "title": "Module 28: Resume Project and Experience Deep-Dives",
+    "slug": "resume-project-experience-deep-dives",
+    "route": "/docs/resume-skills/resume-project-experience-deep-dives",
+    "mechanism": "Explain personal work and label reported, verified and proposed details.",
+    "revisit_when": "A resume number or topology lacks original evidence.",
+    "sha256": "9a14aada329759b4eeb6187be6fba2813cd4d4d06d50d4c574996c4b196b39e3"
+  }
+]

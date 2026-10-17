@@ -1,0 +1,85 @@
+PASS orm: QuerySet construction/filter/slice are lazy until iteration
+PASS orm: evaluated QuerySet reuses its own result cache
+PASS orm: all clone performs a fresh query despite original cache
+PASS orm: count and exists execute their own queries on fresh QuerySets
+PASS orm: iterator bypasses normal result cache on repeated passes
+PASS orm: select_related removes measured FK N+1 while preserving values
+PASS orm: prefetch_related removes measured M2M N+1 using two queries
+PASS orm: serializer relation traversal stays within measured query budget
+PASS orm: annotate aggregation runs in SQL
+PASS orm: values explicitly projects dictionary fields
+PASS orm: Q expressions compose OR filters
+PASS orm: ORM lookup keeps adversarial text in bound parameters
+PASS orm: only can introduce extra queries when deferred fields are read
+PASS orm: save does not automatically call full_clean; SQLite accepts oversized varchar
+PASS orm: SQLite select_for_update is not a row-lock test
+PASS orm total: 15
+
+PASS transactions: conditional completion and audit insert commit together
+PASS transactions: sequential completion retry does not repeat revision audit or callback
+PASS transactions: injected failure after SQL update rolls back status revision and audit
+PASS transactions: service transition filters tenant and owner
+PASS transactions: on_commit runs after the outer transaction commits
+PASS transactions: rolled-back on_commit callbacks are discarded
+PASS transactions: nested atomic savepoint rolls back inner work while outer work continues
+PASS transactions: database rejects invalid task status
+PASS transactions: database rejects negative revision
+PASS transactions: database rejects duplicate project task title
+PASS transactions: database rejects duplicate task event kind
+PASS transactions: SQL F update does not refresh an already-loaded Python object
+PASS transactions: database rollback does not rewind Python model attributes
+PASS transactions: on_commit failure cannot undo the already-committed business transaction
+PASS transactions total: 14
+
+PASS framework: initial model migration is applied with no pending migration plan
+PASS framework: router maps URL names and HTTP actions to the ViewSet
+PASS framework: Django middleware wraps a resolved view and adds response metadata
+PASS framework: real authentication path rejects anonymous API access
+PASS framework: SessionAuthentication rejects unsafe authenticated requests without CSRF and accepts valid token
+PASS framework: inactive credential subject rejected
+PASS framework: fixture token does not bypass current database membership
+PASS framework: default serializer can coerce values and ignore unknown/read-only input
+PASS framework: M2M foreign keys permit cross-tenant link but API prefetch filters its disclosure
+PASS framework total: 9
+
+PASS http: public Django health view responds
+PASS http: anonymous list rejected
+PASS http: unknown token rejected
+PASS http: 401 retains authentication challenge
+PASS http: list is tenant-scoped ordered and paginated
+PASS http: second page has stable next records
+PASS http: page-size request is capped
+PASS http: invalid page returns 404
+PASS http: cross-tenant detail hidden
+PASS http: viewer can read tenant tasks
+PASS http: viewer cannot create and produces no database row
+PASS http: same-tenant peer cannot modify another owner task
+PASS http: same-tenant peer cannot delete another owner task
+PASS http: read policy permits same-tenant peer detail
+PASS http: owner may update allowed field
+PASS http: related project assignment is tenant-scoped
+PASS http: client cannot assign owner
+PASS http: client cannot directly set status
+PASS http: client cannot directly set revision
+PASS http: unknown field rejected
+PASS http: missing title rejected
+PASS http: blank title rejected
+PASS http: oversized title rejected by serializer
+PASS http: malformed JSON rejected
+PASS http: unsupported media rejected
+PASS http: database uniqueness conflict maps to 400 without extra row
+PASS http: create binds owner server-side and returns public schema
+PASS http: partial update retains required relation
+PASS http: full update requires project
+PASS http: custom action commits status revision and audit
+PASS http: sequential action retry does not duplicate effect
+PASS http: custom action applies owner permission
+PASS http: custom action hides other tenant object
+PASS http: action rejects unexpected input before changing state
+PASS http: owner deletion returns 204 and removes row
+PASS http: method rejection preserves Allow
+PASS http: unknown URL returns 404
+PASS http: middleware response headers survive DRF dispatch
+PASS http total: 38
+
+PASS total: 76

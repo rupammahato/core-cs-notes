@@ -1,0 +1,17 @@
+PASS PKCE S256 matches RFC 7636 Appendix B vector: "E9Melhoa2OwvFrEMTJguCHaoeK1t8URWbuGJSstw-cM"
+PASS PKCE rejects short verifier: {"rejected":"invalid_verifier"}
+PASS authorization request carries challenge rather than verifier: {"method":"S256","verifierInAuthorizationRequest":false}
+PASS unregistered redirect rejected: {"rejected":"invalid_authorization_request"}
+PASS wrong client rejected during authorization: {"rejected":"invalid_authorization_request"}
+PASS plain challenge method rejected by model policy: {"rejected":"invalid_authorization_request"}
+PASS unknown state rejected: {"rejected":"invalid_state"}
+PASS callback bound to initiating browser session: {"rejected":"invalid_state"}
+PASS valid callback consumes state once: {"rejected":"invalid_state"}
+PASS intercepted code without correct verifier rejected: {"rejected":"invalid_grant"}
+PASS token exchange requires same redirect URI: {"rejected":"invalid_grant"}
+PASS token exchange requires same client ID: {"rejected":"invalid_grant"}
+PASS valid code and verifier produce modeled delegation: {"delegatedSubject":"provider-user-1","scope":"tasks:read"}
+PASS authorization code cannot be exchanged twice: {"rejected":"invalid_grant"}
+PASS authorization code expiry enforced: {"rejected":"invalid_grant"}
+PASS browser transaction expiry enforced: {"rejected":"invalid_state"}
+Verified 16 oauth checks.

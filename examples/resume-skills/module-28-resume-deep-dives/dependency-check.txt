@@ -1,0 +1,5 @@
+Model verifier: Python standard library only (SQLite, Decimal, datetime, collections, hashing and temporary-file helpers).
+Recorded runtime: Python 3.12.10; SQLite version is recorded in verification-results.json.
+PDF extraction: pypdf 6.20.1 from the existing module-23-rag environment; no new installation/download.
+Site validation: existing local Node/Next.js/Fumadocs dependencies, with cached font fixture when available.
+No Docker, cloud credentials, hosted provider/model/payment API or persistent model listener needed.

@@ -1,0 +1,152 @@
+{
+  "module": "M11: Flask, FastAPI and Python Request Handling",
+  "runtime": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "packages": {
+    "Flask": "3.0.3",
+    "Werkzeug": "3.1.2",
+    "fastapi": "0.142.2",
+    "starlette": "1.7.0",
+    "pydantic": "2.13.5",
+    "pydantic-core": "2.46.5",
+    "uvicorn": "0.54.0",
+    "httpx": "0.28.1",
+    "anyio": "4.15.1",
+    "asgiref": "3.12.1"
+  },
+  "verification": {
+    "total": 80,
+    "groups": {
+      "protocols": 2,
+      "validation": 10,
+      "http": 52,
+      "runtime": 16
+    },
+    "allPassed": true,
+    "expectedWarning": "Pinned Starlette HTTPX TestClient adapter deprecation; preserved separately",
+    "dependencyCheck": "No broken requirements found"
+  },
+  "content": {
+    "completeSources": 4,
+    "verifiedRuntimeExcerpt": 1,
+    "interviewQuestions": 30,
+    "practiceTasks": 10,
+    "recordedObservationBlocks": 7,
+    "totalChecks": 80,
+    "groups": {
+      "protocols": 2,
+      "validation": 10,
+      "http": 52,
+      "runtime": 16
+    },
+    "verifiedObservationBlocks": 7
+  },
+  "site": {
+    "build": {
+      "passed": true,
+      "next": "16.3.8",
+      "bundler": "webpack",
+      "staticPages": 87,
+      "typeScriptPassed": true,
+      "fontSource": "Cached local font response fixture; source font configuration unchanged"
+    },
+    "smoke": {
+      "port": 63786,
+      "routes": [
+        {
+          "route": "/",
+          "status": 200
+        },
+        {
+          "route": "/docs/resume-skills",
+          "status": 200
+        },
+        {
+          "route": "/docs/resume-skills/how-backend-works",
+          "status": 200
+        },
+        {
+          "route": "/docs/resume-skills/javascript-fundamentals",
+          "status": 200
+        },
+        {
+          "route": "/docs/resume-skills/asynchronous-javascript",
+          "status": 200
+        },
+        {
+          "route": "/docs/resume-skills/typescript-fundamentals",
+          "status": 200
+        },
+        {
+          "route": "/docs/resume-skills/nodejs",
+          "status": 200
+        },
+        {
+          "route": "/docs/resume-skills/express-backend-structure",
+          "status": 200
+        },
+        {
+          "route": "/docs/resume-skills/rest-apis-http",
+          "status": 200
+        },
+        {
+          "route": "/docs/resume-skills/authentication-sessions-jwt-oauth",
+          "status": 200
+        },
+        {
+          "route": "/docs/resume-skills/api-security-authorization-multi-tenancy",
+          "status": 200
+        },
+        {
+          "route": "/docs/resume-skills/webhooks-payments-reliable-integrations",
+          "status": 200
+        },
+        {
+          "route": "/docs/resume-skills/python-fundamentals",
+          "status": 200
+        },
+        {
+          "route": "/docs/resume-skills/flask-fastapi-python-request-handling",
+          "status": 200
+        },
+        {
+          "route": "/docs/dbms",
+          "status": 200
+        }
+      ],
+      "assertions": {
+        "title": true,
+        "q30": true,
+        "implementation": true,
+        "totalChecks": true,
+        "scope": true,
+        "architecture": true,
+        "nextDjango": true,
+        "group": true,
+        "roadmapLink": true,
+        "previousLink": true
+      },
+      "search": {
+        "status": 200,
+        "results": 31,
+        "chapterIndexed": true,
+        "scoped": true
+      },
+      "temporaryServerClosed": true,
+      "port3000Stopped": true,
+      "temporaryPortStopped": true,
+      "frameworkHttpPortsStopped": true
+    }
+  },
+  "portsStopped": [
+    3000,
+    63786,
+    54232,
+    54259
+  ],
+  "limits": [
+    "Local credential/catalog/resource fixtures; no real JWT/login, database or external service",
+    "No production deployment, benchmark or durable ingestion implementation",
+    "Flask teaching snapshot and pinned framework cleanup/adapter behavior are documented"
+  ],
+  "next": "M12: Django and Django REST Framework"
+}

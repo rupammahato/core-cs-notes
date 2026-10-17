@@ -1,0 +1,79 @@
+{
+  "group": "service",
+  "total": 12,
+  "checks": [
+    {
+      "name": "trusted price stock reservation and outbox commit together",
+      "passed": true
+    },
+    {
+      "name": "sequential replay returns the same reservation without another stock effect",
+      "passed": true
+    },
+    {
+      "name": "same idempotency key with different payload is rejected",
+      "passed": true
+    },
+    {
+      "name": "idempotency and inventory scope include the trusted tenant",
+      "passed": true
+    },
+    {
+      "name": "invalid quantity types bounds and booleans are rejected before state changes",
+      "passed": true
+    },
+    {
+      "name": "known composite foreign-key failure becomes unavailable and rolls back claim",
+      "passed": true
+    },
+    {
+      "name": "insufficient stock rolls back the idempotency claim",
+      "passed": true
+    },
+    {
+      "name": "failure after stock update rolls back stock reservation and outbox",
+      "passed": true
+    },
+    {
+      "name": "competing last-unit requests cannot both reserve stock",
+      "passed": true
+    },
+    {
+      "name": "concurrent duplicate key waits then replays one committed reservation",
+      "passed": true
+    },
+    {
+      "name": "replay succeeds after stock is exhausted because claim precedes stock work",
+      "passed": true
+    },
+    {
+      "name": "rolled-back unavailable key can later succeed after fixture restock",
+      "passed": true
+    }
+  ],
+  "observations": {
+    "successful_reservation": {
+      "quantity": 2,
+      "total_minor": 25000,
+      "currency": "INR",
+      "replayed": false
+    },
+    "last_unit_race": {
+      "wait_observed": true,
+      "blocked_statement": "conditional stock UPDATE",
+      "remaining_stock": 0,
+      "reservations": 1,
+      "outbox_rows": 1,
+      "outcome": "one reserved and one unavailable"
+    },
+    "same_key_race": {
+      "wait_observed": true,
+      "blocked_statement": "idempotency INSERT",
+      "remaining_stock": 0,
+      "reservations": 1,
+      "outbox_rows": 1,
+      "outcome": "one new and one replay"
+    }
+  },
+  "scope": "Real PostgreSQL transactions and coordinated two-session service races; no HTTP/payment/delivery worker"
+}

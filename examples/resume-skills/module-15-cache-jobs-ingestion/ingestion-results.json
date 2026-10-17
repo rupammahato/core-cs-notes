@@ -1,0 +1,67 @@
+{
+  "group": "ingestion",
+  "total": 12,
+  "checks": [
+    {
+      "name": "batch import commits all source records and complete checkpoint",
+      "passed": true
+    },
+    {
+      "name": "same immutable file replay does not duplicate records",
+      "passed": true
+    },
+    {
+      "name": "same import key with changed source bytes is rejected",
+      "passed": true
+    },
+    {
+      "name": "identical external source IDs remain independent across tenants",
+      "passed": true
+    },
+    {
+      "name": "higher source version updates the existing scoped record",
+      "passed": true
+    },
+    {
+      "name": "out-of-order older source version cannot overwrite newer data",
+      "passed": true
+    },
+    {
+      "name": "same source version with changed content fails without advancing checkpoint",
+      "passed": true
+    },
+    {
+      "name": "failure within a batch rolls back records and checkpoint together",
+      "passed": true
+    },
+    {
+      "name": "restart resumes from durable checkpoint after a committed batch",
+      "passed": true
+    },
+    {
+      "name": "concurrent same-file importers reload checkpoint inside the serialized transaction",
+      "passed": true
+    },
+    {
+      "name": "whole-file validation rejects bad input before database mutation",
+      "passed": true
+    },
+    {
+      "name": "invalid batch size and boolean tenant fail early",
+      "passed": true
+    }
+  ],
+  "observations": {
+    "resume": {
+      "committed_checkpoint_before_restart": 2,
+      "final_checkpoint": 3,
+      "final_records": 3
+    },
+    "concurrent_restart": {
+      "callers": 2,
+      "imports": 1,
+      "records": 3
+    }
+  },
+  "scope": "Real SQLite conditional upserts checkpoints rollback and concurrent connections; injected application interruptions, not machine-crash recovery"
+}

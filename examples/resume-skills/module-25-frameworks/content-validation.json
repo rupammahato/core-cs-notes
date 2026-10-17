@@ -1,0 +1,26 @@
+{
+  "chapter": "resume-skills-handbook-part-27-module-25-langchain-langgraph-llamaindex.md",
+  "words": 9764,
+  "lines": 1279,
+  "interview_questions": 30,
+  "practice_tasks": 10,
+  "unchecked_learning_items": 12,
+  "source_fidelity": {
+    "domain.py": true,
+    "langchain_demo.py": true,
+    "repository.py": true,
+    "graph_demo.py": true,
+    "graph_worker.py": true,
+    "llama_demo.py": true
+  },
+  "result_fidelity": {
+    "langchain": true,
+    "agent": true,
+    "graph_state": true,
+    "persistence": true,
+    "approval": true,
+    "recovery": true,
+    "llamaindex": true,
+    "versions": true
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "checks": 62,
+  "counts": {
+    "contracts": 3,
+    "git": 15,
+    "http": 4,
+    "load": 5,
+    "logs": 2,
+    "metrics": 4,
+    "pipeline": 9,
+    "statistics": 8,
+    "tracing": 7,
+    "workflow": 5
+  },
+  "versions": {
+    "node": "v22.14.0",
+    "git": "git version 2.55.0.windows.5",
+    "pyyaml": "6.0.2"
+  },
+  "normal_load": {
+    "attempts": 60,
+    "successful": 60,
+    "failed": 0,
+    "error_ratio": 0,
+    "elapsed_seconds": 0.45,
+    "attempted_rps": 133.411,
+    "successful_rps": 133.411,
+    "mean_ms": 29.671,
+    "p50_ms": 30.574,
+    "p95_ms": 32.974,
+    "p99_ms": 33.105,
+    "percentile_method": "nearest rank across all completed attempts, including HTTP failures and client errors"
+  },
+  "cleanup": {
+    "loopback_ports_closed": {
+      "51670": true,
+      "51671": true,
+      "50463": true,
+      "50462": true,
+      "50468": true,
+      "50467": true,
+      "50471": true,
+      "50470": true
+    },
+    "scratch_repositories_releases_and_directory_removed": true,
+    "main_repository_head_unchanged": true,
+    "remote_github_actions_run": false,
+    "external_deployment_performed": false,
+    "docker_started": false
+  }
+}
+

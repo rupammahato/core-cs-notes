@@ -1,0 +1,280 @@
+{
+  "total": 40,
+  "counts": {
+    "build": 5,
+    "http": 6,
+    "lifecycle": 5,
+    "network": 5,
+    "readiness": 3,
+    "runtime": 10,
+    "storage": 6
+  },
+  "checks": [
+    {
+      "group": "build",
+      "name": "Compose resolves the API and database configuration",
+      "passed": true
+    },
+    {
+      "group": "build",
+      "name": "actual multi-stage image build and context exclusion assertions pass",
+      "passed": true
+    },
+    {
+      "group": "build",
+      "name": "unchanged rebuild reports actual BuildKit cache reuse",
+      "passed": true
+    },
+    {
+      "group": "build",
+      "name": "image default user is non-root and command is exec form",
+      "passed": true
+    },
+    {
+      "group": "build",
+      "name": "builder artifact context and secret source are absent from final filesystem",
+      "passed": true
+    },
+    {
+      "group": "runtime",
+      "name": "Compose startup reaches actual API and database health",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "published API serves runtime environment configuration",
+      "passed": true
+    },
+    {
+      "group": "runtime",
+      "name": "application executes as UID 10001 inside the container",
+      "passed": true
+    },
+    {
+      "group": "network",
+      "name": "only API has a loopback ephemeral host port",
+      "passed": true
+    },
+    {
+      "group": "network",
+      "name": "service DNS resolves db and actual PostgreSQL query succeeds",
+      "passed": true
+    },
+    {
+      "group": "network",
+      "name": "API container localhost is not the separate database service",
+      "passed": true
+    },
+    {
+      "group": "runtime",
+      "name": "application database role has no superuser or DDL-owner powers",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "real HTTP write commits through API to PostgreSQL",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "same request replays the original committed ID",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "changed idempotency payload is rejected",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "invalid input and unknown route have controlled responses",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "list reads the committed database record",
+      "passed": true
+    },
+    {
+      "group": "runtime",
+      "name": "public fixture password is mounted read-only at runtime",
+      "passed": true
+    },
+    {
+      "group": "runtime",
+      "name": "read-only root init and dropped capabilities are configured",
+      "passed": true
+    },
+    {
+      "group": "runtime",
+      "name": "kernel reports zero effective capabilities and no-new-privileges",
+      "passed": true
+    },
+    {
+      "group": "runtime",
+      "name": "engine records explicit memory CPU and PID bounds",
+      "passed": true
+    },
+    {
+      "group": "runtime",
+      "name": "actual root filesystem write is denied",
+      "passed": true
+    },
+    {
+      "group": "runtime",
+      "name": "declared tmpfs permits intended temporary writes",
+      "passed": true
+    },
+    {
+      "group": "runtime",
+      "name": "Linux container shares the engine kernel rather than the Windows host kernel",
+      "passed": true
+    },
+    {
+      "group": "lifecycle",
+      "name": "one-shot foreground process exits and stops its container",
+      "passed": true
+    },
+    {
+      "group": "lifecycle",
+      "name": "completed one-shot is stopped with exit code zero",
+      "passed": true
+    },
+    {
+      "group": "lifecycle",
+      "name": "nonzero main process exit remains observable",
+      "passed": true
+    },
+    {
+      "group": "lifecycle",
+      "name": "backgrounding work does not keep the container main process alive",
+      "passed": true
+    },
+    {
+      "group": "storage",
+      "name": "restart keeps one writable layer while a new container starts fresh",
+      "passed": true
+    },
+    {
+      "group": "storage",
+      "name": "bind mount observes actual host file changes",
+      "passed": true
+    },
+    {
+      "group": "storage",
+      "name": "read-only bind mount rejects container writes",
+      "passed": true
+    },
+    {
+      "group": "storage",
+      "name": "bind mount over app obscures image files",
+      "passed": true
+    },
+    {
+      "group": "network",
+      "name": "EXPOSE metadata alone allocates no host port binding",
+      "passed": true
+    },
+    {
+      "group": "network",
+      "name": "container-loopback-only listener fails through the published host path",
+      "passed": true
+    },
+    {
+      "group": "readiness",
+      "name": "database outage makes readiness fail while liveness still responds",
+      "passed": true
+    },
+    {
+      "group": "readiness",
+      "name": "unhealthy status alone does not restart this running API",
+      "passed": true
+    },
+    {
+      "group": "readiness",
+      "name": "API recovers connectivity after database restart without recreation",
+      "passed": true
+    },
+    {
+      "group": "lifecycle",
+      "name": "SIGTERM reaches application and completes its shutdown handler",
+      "passed": true
+    },
+    {
+      "group": "storage",
+      "name": "ordinary Compose down preserves the owned database volume",
+      "passed": true
+    },
+    {
+      "group": "storage",
+      "name": "new database container reads records from the preserved volume",
+      "passed": true
+    }
+  ],
+  "observations": {
+    "runtime": {
+      "host_python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+      "host_os": "Windows",
+      "client": "29.8.2",
+      "server": "29.8.2",
+      "compose": "5.5.1",
+      "buildx": "github.com/docker/buildx v0.37.2 2d379c0c3f22da0d2759d132a0ec81ca949098f0",
+      "kernel": "5.15.153.1-microsoft-standard-WSL2",
+      "cgroup_version": "1",
+      "baseline_containers": 0
+    },
+    "base_images": {
+      "PYTHON_IMAGE": "python@sha256:a6e34c598f2467ed0e9a8d349809fcd8b5c603269512df273a0bb1784edc11b1",
+      "POSTGRES_IMAGE": "postgres@sha256:77f585114c32fbca283dc835b0596f4e52b51b4c6662d7810b2f4084f60a1873"
+    },
+    "image": {
+      "id": "sha256:936ace40fab4891de5297c86df60d95ffe5935c5af8243d7a98aa1feb8e58c25",
+      "user": "10001:10001",
+      "command": [
+        "python",
+        "app.py"
+      ],
+      "layers": 10
+    },
+    "python_version": "3.12.15",
+    "postgres_version": "18.6",
+    "resource_limits": {
+      "memory_bytes": 268435456,
+      "nano_cpus": 500000000,
+      "pids": 64
+    },
+    "writable_layer_counts": [
+      1,
+      2,
+      1
+    ],
+    "persistence": {
+      "database_container_recreated": true,
+      "records_after_recreation": 1,
+      "volume_retained_by_down": true
+    },
+    "http_example": {
+      "created_status": 201,
+      "replay_status": 200,
+      "payload_conflict_status": 409,
+      "value": "durable fixture"
+    }
+  },
+  "cleanup": {
+    "containers_removed": true,
+    "helper_containers_removed": true,
+    "volumes_removed": true,
+    "networks_removed": true,
+    "owned_image_removed": true,
+    "base_images_and_build_cache_retained": true,
+    "listeners_stopped": true
+  },
+  "scratch_directory_removed": true,
+  "project": "m16-9ed9e85c25",
+  "tested_host_ports": [
+    32768,
+    52201,
+    32770
+  ],
+  "scope": "Actual Docker Linux engine containers builds Compose mounts HTTP and PostgreSQL; no production load TLS/cloud/host-crash recovery test"
+}

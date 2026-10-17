@@ -1,0 +1,138 @@
+{
+  "module": 26,
+  "title": "Neo4j and Graph-Backed Applications",
+  "verified_date": "2026-10-16",
+  "python": "3.12.10",
+  "os": "Windows-11-10.0.26300-SP0",
+  "neo4j": "2026.09.0",
+  "edition": "community",
+  "cypher": "5",
+  "java": "openjdk version \"21.0.12.1\" 2026-08-18 LTS",
+  "dependencies": {
+    "neo4j": "6.4.1"
+  },
+  "checks": {
+    "counts": {
+      "engine": 2,
+      "model": 5,
+      "cypher": 11,
+      "constraints": 3,
+      "merge": 6,
+      "traversal": 7,
+      "authorization": 8,
+      "bounds": 7,
+      "transactions": 5,
+      "concurrency": 4,
+      "plans": 3,
+      "delete": 4,
+      "retrieval": 7,
+      "cleanup": 4
+    },
+    "total": 76,
+    "all_passed": true
+  },
+  "cleanup": {
+    "port": 61151,
+    "loopback_ports_closed": [
+      61151
+    ],
+    "system_services_touched": false,
+    "authentication": "disabled only for isolated loopback fixture",
+    "tls": "disabled for local Bolt",
+    "heap_mib": 256,
+    "page_cache_mib": 64,
+    "java": "openjdk version \"21.0.12.1\" 2026-08-18 LTS",
+    "process_exit_code": 0,
+    "console_log": "M26_READY C:\\Users\\Win11\\AppData\\Local\\Temp\\placement-m26-7cko315x\\database\n",
+    "listener_stopped": true,
+    "temporary_directory_removed": true
+  },
+  "content": {
+    "chapter": "resume-skills-handbook-part-28-module-26-neo4j-graph-backed-applications.md",
+    "words": 7971,
+    "lines": 968,
+    "interview_questions": 30,
+    "practice_tasks": 10,
+    "unchecked_learning_items": 12,
+    "source_fidelity": {
+      "schema.cypher": true,
+      "fixtures.py": true,
+      "service.py": true,
+      "LocalGraphServer.java": true
+    },
+    "result_fidelity": {
+      "cypher": true,
+      "merge": true,
+      "traversal": true,
+      "transactions": true,
+      "plans": true,
+      "retrieval": true,
+      "versions": true
+    }
+  },
+  "dependency_check": "No broken requirements found.",
+  "website": {
+    "build_passed": true,
+    "static_pages": 102,
+    "routes_checked": 30,
+    "all_routes_200": true,
+    "assertions": {
+      "title": true,
+      "q30": true,
+      "implementation": true,
+      "totalChecks": true,
+      "lifecycleEvidence": true,
+      "evaluationEvidence": true,
+      "architecture": true,
+      "fixtureBoundary": true,
+      "nextModule": true,
+      "group": true,
+      "roadmapLink": true,
+      "previousLink": true
+    },
+    "search": {
+      "status": 200,
+      "results": 18,
+      "chapterIndexed": true,
+      "scoped": true
+    },
+    "temporary_server_closed": true,
+    "cached_font_fixture_used": true
+  },
+  "ports_stopped": {
+    "3000": true,
+    "57308": true,
+    "61151": true
+  },
+  "git_diff_check_passed": true,
+  "trailing_whitespace_files": [],
+  "core_handbooks": [
+    {
+      "subject": "DSA Notes",
+      "files": 17,
+      "lines": 17589
+    },
+    {
+      "subject": "OOP Notes",
+      "files": 13,
+      "lines": 8806
+    },
+    {
+      "subject": "OS Notes",
+      "files": 13,
+      "lines": 6341
+    },
+    {
+      "subject": "DBMS Notes",
+      "files": 13,
+      "lines": 9613
+    },
+    {
+      "subject": "CN Notes",
+      "files": 13,
+      "lines": 9322
+    }
+  ],
+  "next_module": "M27: System-design bridge through your load balancer",
+  "scope": "Actual embedded Neo4j Community engine over loopback Bolt, official Python driver and synthetic graph. Application tenant checks only; DB auth/TLS disabled locally. No Aura/Enterprise RBAC/APOC/GDS/learned extraction/model inference/production performance test."
+}

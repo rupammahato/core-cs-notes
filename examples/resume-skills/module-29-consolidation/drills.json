@@ -1,0 +1,238 @@
+[
+  {
+    "id": "D01",
+    "file": "drills/d01-async-prefix.mjs",
+    "kind": "node-esm",
+    "title": "Async function prefix",
+    "modules": [
+      1,
+      2,
+      4
+    ],
+    "expected": [
+      "before",
+      "inside",
+      "after",
+      42
+    ],
+    "explanation": "A JavaScript async function executes its synchronous prefix when called; returning a Promise does not offload CPU work."
+  },
+  {
+    "id": "D02",
+    "file": "drills/d02-esm-microtasks.mjs",
+    "kind": "node-esm",
+    "title": "ES-module microtask context",
+    "modules": [
+      2,
+      4
+    ],
+    "expected": [
+      "sync",
+      "promise",
+      "microtask",
+      "nextTick"
+    ],
+    "explanation": "This is top-level ES-module execution on the recorded Node version. It is not a universal nextTick ordering rule for CommonJS or every callback context."
+  },
+  {
+    "id": "D03",
+    "file": "drills/d03-promise-effects.mjs",
+    "kind": "node-esm",
+    "title": "Promise rejection and side effects",
+    "modules": [
+      2,
+      9
+    ],
+    "expected": {
+      "error": "fail",
+      "effects": [
+        "first",
+        "third"
+      ]
+    },
+    "explanation": "Promise.all rejects on failure but does not roll back completed effects or automatically cancel other started work."
+  },
+  {
+    "id": "D04",
+    "file": "drills/d04-async-map.mjs",
+    "kind": "node-esm",
+    "title": "Array of async results",
+    "modules": [
+      1,
+      2
+    ],
+    "expected": {
+      "firstIsPromise": true,
+      "resolved": [
+        2,
+        4
+      ]
+    },
+    "explanation": "map preserves callback return values. An async callback returns a Promise; Promise.all collects resolved results in input order."
+  },
+  {
+    "id": "D05",
+    "file": "drills/d05-shallow-copy.mjs",
+    "kind": "node-esm",
+    "title": "Nested alias after spread",
+    "modules": [
+      1,
+      20,
+      28
+    ],
+    "expected": {
+      "originalRole": "admin",
+      "sameNestedObject": true
+    },
+    "explanation": "Object spread copies top-level properties, retaining the nested object reference. This is a memory-alias demonstration, not an authorization grant."
+  },
+  {
+    "id": "D06",
+    "file": "drills/d06-json-boundary.mjs",
+    "kind": "node-esm",
+    "title": "Parsed JSON is still untrusted",
+    "modules": [
+      3,
+      6,
+      8
+    ],
+    "expected": {
+      "role": "admin",
+      "limitType": "string",
+      "limitPlusOne": "101"
+    },
+    "explanation": "JSON parsing establishes syntax, not types, bounds or permission. The supplied role must not become authority; validate the limit before numeric use."
+  },
+  {
+    "id": "D07",
+    "file": "drills/d07-mutable-default.py",
+    "kind": "python",
+    "title": "Python shared default",
+    "modules": [
+      10
+    ],
+    "expected": {
+      "first": [
+        "a",
+        "b"
+      ],
+      "second": [
+        "a",
+        "b"
+      ],
+      "same": true
+    },
+    "explanation": "The default list is created once for this function definition. Both calls return the same list; use a fresh per-call value when that is intended."
+  },
+  {
+    "id": "D08",
+    "file": "drills/d08-offset.py",
+    "kind": "python",
+    "title": "Timestamp meaning",
+    "modules": [
+      10,
+      15,
+      28
+    ],
+    "expected": {
+      "utc": "2026-10-16T04:30:00+00:00"
+    },
+    "explanation": "The explicit source offset permits conversion to UTC. Attaching UTC to an unknown naive timestamp is a different operation and may change its intended meaning."
+  },
+  {
+    "id": "D09",
+    "file": "drills/d09-decimal.py",
+    "kind": "python",
+    "title": "Decimal-string arithmetic",
+    "modules": [
+      9,
+      22,
+      28
+    ],
+    "expected": {
+      "binary_float": "0.30000000000000004",
+      "decimal": "0.3"
+    },
+    "explanation": "Binary floating-point cannot represent these decimal fractions exactly. Decimal-string input avoids that initial conversion; precision and rounding policy still matter."
+  },
+  {
+    "id": "D10",
+    "file": "drills/d10-coroutine.py",
+    "kind": "python",
+    "title": "Creating a Python coroutine",
+    "modules": [
+      10,
+      11
+    ],
+    "expected": [
+      0,
+      "ran"
+    ],
+    "explanation": "Calling Python async def creates a coroutine without running its body. Awaiting it runs the body. Contrast this with the JavaScript async prefix in D01."
+  },
+  {
+    "id": "D11",
+    "file": "drills/d11-sql-null-count.py",
+    "kind": "sqlite",
+    "title": "COUNT rows versus values",
+    "modules": [
+      13
+    ],
+    "expected": {
+      "rows": 3,
+      "nonnull": 1,
+      "sum": 10
+    },
+    "explanation": "COUNT(*) counts rows; COUNT(column) ignores null values. Do not mix these denominators in reporting."
+  },
+  {
+    "id": "D12",
+    "file": "drills/d12-sql-null-unique.py",
+    "kind": "sqlite",
+    "title": "SQLite nullable uniqueness",
+    "modules": [
+      13,
+      14,
+      28
+    ],
+    "expected": {
+      "rows": 3,
+      "null_rows": 2,
+      "duplicate_rejected": true
+    },
+    "explanation": "This SQLite UNIQUE column accepts multiple NULLs but rejects another nonnull x. Do not transfer this result to a MongoDB index or an explicit NULLS NOT DISTINCT policy."
+  },
+  {
+    "id": "D13",
+    "file": "drills/d13-sql-rollback.py",
+    "kind": "sqlite",
+    "title": "Rollback after a dependent failure",
+    "modules": [
+      9,
+      13,
+      28
+    ],
+    "expected": {
+      "balance_cents": 100,
+      "events": 1
+    },
+    "explanation": "Both writes are inside one transaction. The duplicate event error rolls back the prior debit. This is local atomicity, not a full payment/external-provider workflow."
+  },
+  {
+    "id": "D14",
+    "file": "drills/d14-async-filter.mjs",
+    "kind": "node-esm",
+    "title": "Async predicate in synchronous filter",
+    "modules": [
+      1,
+      2,
+      8
+    ],
+    "expected": [
+      1,
+      2,
+      3
+    ],
+    "explanation": "filter tests each returned Promise object for truthiness; it does not await its boolean result. This pattern is especially unsafe for permission filtering."
+  }
+]

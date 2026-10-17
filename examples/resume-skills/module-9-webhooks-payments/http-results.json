@@ -1,0 +1,222 @@
+{
+  "node": "v22.14.0",
+  "passed": 26,
+  "checks": [
+    {
+      "name": "HTTP rejects wrong signature before inbox effects",
+      "passed": true,
+      "observed": {
+        "status": 401,
+        "code": "invalid_signature"
+      }
+    },
+    {
+      "name": "HTTP rejects missing signature before inbox effects",
+      "passed": true,
+      "observed": {
+        "status": 401,
+        "code": "invalid_signature"
+      }
+    },
+    {
+      "name": "HTTP rejects malformed signature before inbox effects",
+      "passed": true,
+      "observed": {
+        "status": 401,
+        "code": "invalid_signature"
+      }
+    },
+    {
+      "name": "HTTP rejects missing event ID before inbox effects",
+      "passed": true,
+      "observed": {
+        "status": 400,
+        "code": "invalid_event_id"
+      }
+    },
+    {
+      "name": "HTTP rejects oversize event ID before inbox effects",
+      "passed": true,
+      "observed": {
+        "status": 400,
+        "code": "invalid_event_id"
+      }
+    },
+    {
+      "name": "HTTP rejects unsupported type before inbox effects",
+      "passed": true,
+      "observed": {
+        "status": 415,
+        "code": "unsupported_body_format"
+      }
+    },
+    {
+      "name": "HTTP rejects compressed content before inbox effects",
+      "passed": true,
+      "observed": {
+        "status": 415,
+        "code": "unsupported_body_format"
+      }
+    },
+    {
+      "name": "HTTP rejects oversize body before inbox effects",
+      "passed": true,
+      "observed": {
+        "status": 413,
+        "code": "body_too_large"
+      }
+    },
+    {
+      "name": "HTTP rejects signed malformed JSON before inbox effects",
+      "passed": true,
+      "observed": {
+        "status": 400,
+        "code": "invalid_json"
+      }
+    },
+    {
+      "name": "HTTP rejects signed invalid UTF-8 before inbox effects",
+      "passed": true,
+      "observed": {
+        "status": 400,
+        "code": "invalid_json"
+      }
+    },
+    {
+      "name": "HTTP rejects wrong account before inbox effects",
+      "passed": true,
+      "observed": {
+        "status": 403,
+        "code": "account_mismatch"
+      }
+    },
+    {
+      "name": "HTTP rejects missing payment fields before inbox effects",
+      "passed": true,
+      "observed": {
+        "status": 400,
+        "code": "invalid_payment"
+      }
+    },
+    {
+      "name": "HTTP rejects wrong status for event before inbox effects",
+      "passed": true,
+      "observed": {
+        "status": 400,
+        "code": "invalid_payment"
+      }
+    },
+    {
+      "name": "HTTP rejects unknown route before inbox effects",
+      "passed": true,
+      "observed": {
+        "status": 404,
+        "code": "not_found"
+      }
+    },
+    {
+      "name": "HTTP method policy includes Allow",
+      "passed": true,
+      "observed": {
+        "status": 405,
+        "allow": "POST"
+      }
+    },
+    {
+      "name": "signature checked before parsing invalid bytes",
+      "passed": true,
+      "observed": {
+        "status": 401
+      }
+    },
+    {
+      "name": "raw formatting change breaks otherwise equivalent JSON signature",
+      "passed": true,
+      "observed": {
+        "status": 401
+      }
+    },
+    {
+      "name": "acknowledgment follows inbox commit but precedes worker effect",
+      "passed": true,
+      "observed": {
+        "ack": 202,
+        "inboxAtAck": 1,
+        "ledgerAtAck": 0,
+        "ledgerAfterWorker": 1
+      }
+    },
+    {
+      "name": "overlapping same-delivery requests retain one inbox row and one grant",
+      "passed": true,
+      "observed": {
+        "responses": [
+          202,
+          202
+        ],
+        "deliveryRows": 1,
+        "totalLedgerRows": 1
+      }
+    },
+    {
+      "name": "same raw payload under changed unsigned delivery header is business-idempotent",
+      "passed": true,
+      "observed": {
+        "status": 202,
+        "ledgerRows": 1,
+        "alphaCredits": 100
+      }
+    },
+    {
+      "name": "configured old secret permits delayed retry",
+      "passed": true,
+      "observed": {
+        "status": 202,
+        "ledgerRows": 1
+      }
+    },
+    {
+      "name": "endpoint secret cannot authenticate another configured account",
+      "passed": true,
+      "observed": {
+        "status": 401
+      }
+    },
+    {
+      "name": "tenant header cannot reroute trusted provider-order mapping",
+      "passed": true,
+      "observed": {
+        "alphaCredits": 100,
+        "betaCredited": false
+      }
+    },
+    {
+      "name": "unsupported signed event is durably ignored without granting",
+      "passed": true,
+      "observed": {
+        "ack": 202,
+        "state": "ignored",
+        "ledgerRows": 1
+      }
+    },
+    {
+      "name": "failed inbox persistence returns 503 and retry can accept",
+      "passed": true,
+      "observed": {
+        "first": 503,
+        "retry": 202,
+        "inboxRows": 1
+      }
+    },
+    {
+      "name": "post-commit acknowledgment failure leaves retryable durable acceptance",
+      "passed": true,
+      "observed": {
+        "first": 503,
+        "retry": 202,
+        "duplicate": true,
+        "ledgerRows": 1
+      }
+    }
+  ]
+}

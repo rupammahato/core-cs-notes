@@ -1,0 +1,14 @@
+{
+  "port": 56698,
+  "existing_service_touched": false,
+  "authentication": "disabled for owned loopback fixture",
+  "tls": false,
+  "replica_set_members": 1,
+  "server_version": "7.0.28",
+  "owned_dbpath_verified": true,
+  "writable_primary": true,
+  "storage_engine": "wiredTiger",
+  "graceful_shutdown": true,
+  "listener_stopped": true,
+  "temporary_cluster_removed": true
+}

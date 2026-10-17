@@ -1,0 +1,37 @@
+{
+  "checked_date": "2026-10-16",
+  "original_code_reviewed": false,
+  "original_metrics_independently_reproduced": false,
+  "live_application_mutations": false,
+  "public_sources": [
+    {
+      "url": "https://github.com/rupammahato",
+      "class": "public-self-report",
+      "observations": "Profile describes original ring hash/keep-alive details and a credits-funded Zyke account. These clarify questions to investigate, not independent source-code, benchmark or revenue verification."
+    },
+    {
+      "url": "https://megalith.co.in/",
+      "class": "current-public-page",
+      "observations": "Page identified itself as Megalith 2026. Not evidence of the 2025 code, historical analytics or uptime."
+    },
+    {
+      "url": "https://load-balancer-sk.vercel.app/",
+      "class": "linked-deployment",
+      "observations": "Could not be accessed through the web research tool; no live behavior verified."
+    }
+  ],
+  "technical_references": [
+    "https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html",
+    "https://www.gov.uk/running-payroll",
+    "https://docs.python.org/3.12/library/datetime.html",
+    "https://docs.python.org/3.12/library/decimal.html",
+    "https://next-auth.js.org/configuration/options",
+    "https://www.rfc-editor.org/rfc/rfc7516.html",
+    "https://www.rfc-editor.org/rfc/rfc5869.html",
+    "https://nextjs.org/docs/14/app/building-your-application/rendering/edge-and-nodejs-runtimes",
+    "https://docs.cloud.google.com/tasks/docs/common-pitfalls",
+    "https://razorpay.com/docs/webhooks/validate-test/",
+    "https://docs.pinecone.io/guides/index-data/create-an-index"
+  ],
+  "scope": "Primary technical documentation supports preparation. User PDFs/public profile remain reported project accounts; original teaching models are explicitly separate. No payroll formulas or compliance determination provided."
+}
