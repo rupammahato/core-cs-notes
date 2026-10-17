@@ -1,0 +1,251 @@
+{
+  "labels": [
+    "S10",
+    "S11"
+  ],
+  "verified_date": "2026-10-17",
+  "total_checks": 164,
+  "sections": [
+    {
+      "label": "S10",
+      "checks": 69,
+      "counts": {
+        "placement": 6,
+        "bounds": 7,
+        "routing": 9,
+        "cache": 6,
+        "coherence": 6,
+        "isolation": 2,
+        "failure": 7,
+        "membership": 4,
+        "eviction": 3,
+        "concurrency": 2,
+        "atomicity": 2,
+        "http": 11,
+        "cleanup": 4
+      },
+      "runtime": {
+        "python": "3.12.10",
+        "sqlite": "3.49.1",
+        "os": "Windows"
+      },
+      "content": {
+        "label": "S10",
+        "chapter": "system-design-handbook-part-17-module-15-load-balancer-distributed-cache.md",
+        "words": 5764,
+        "lines": 876,
+        "questions": 30,
+        "practice_tasks": 10,
+        "unchecked_learning_items": 12,
+        "source_fidelity": [
+          "../worked-systems-s4-s6/runtime.py",
+          "cache.py"
+        ],
+        "output_fidelity": [
+          "placement",
+          "routing",
+          "coherence",
+          "failure_rejoin",
+          "concurrency",
+          "http_contract",
+          "estimates"
+        ],
+        "mock_minutes": 45,
+        "verified_checks": 69,
+        "next": "S11: Multi-tenant SaaS with authentication and permissions",
+        "result_fidelity": {
+          "placement": true,
+          "routing": true,
+          "coherence": true,
+          "failure_rejoin": true,
+          "concurrency": true,
+          "http_contract": true,
+          "estimates": true,
+          "versions": true
+        },
+        "authored_internal_links": 5
+      },
+      "cleanup": {
+        "fixture_ports": [
+          58408
+        ],
+        "temporary_database_directory_removed": true,
+        "sqlite_connections_closed": true,
+        "temporary_http_servers_closed": true,
+        "concurrent_worker_calls_completed": 4,
+        "port_3000_used": false
+      },
+      "scope": "Deterministic placement sample, in-process least-active routing/drain labels, bounded copied LRU caches, guarded fill/version/delete/epoch checks, controlled failure/rejoin, four competing calls, SQLite rollback/reopen and actual edge HTTP. No network proxy, distributed membership, Redis replication, automatic detector, quorum or throughput benchmark."
+    },
+    {
+      "label": "S11",
+      "checks": 95,
+      "counts": {
+        "sessions": 13,
+        "documents": 9,
+        "isolation": 6,
+        "roles": 12,
+        "exports": 7,
+        "invitations": 9,
+        "concurrency": 3,
+        "atomicity": 5,
+        "quota": 3,
+        "http": 24,
+        "cleanup": 4
+      },
+      "runtime": {
+        "python": "3.12.10",
+        "sqlite": "3.49.1",
+        "os": "Windows"
+      },
+      "content": {
+        "label": "S11",
+        "chapter": "system-design-handbook-part-18-module-16-multi-tenant-saas.md",
+        "words": 6690,
+        "lines": 997,
+        "questions": 30,
+        "practice_tasks": 10,
+        "unchecked_learning_items": 12,
+        "source_fidelity": [
+          "../worked-systems-s4-s6/runtime.py",
+          "saas.py"
+        ],
+        "output_fidelity": [
+          "sessions_roles",
+          "isolation_exports",
+          "invitations",
+          "quota_atomicity",
+          "http_contract",
+          "estimates"
+        ],
+        "mock_minutes": 45,
+        "verified_checks": 95,
+        "next": "S12: Multi-tenant RAG knowledge-base platform",
+        "result_fidelity": {
+          "sessions_roles": true,
+          "isolation_exports": true,
+          "invitations": true,
+          "quota_atomicity": true,
+          "http_contract": true,
+          "estimates": true,
+          "versions": true
+        },
+        "authored_internal_links": 6
+      },
+      "cleanup": {
+        "fixture_ports": [
+          58421
+        ],
+        "temporary_database_directory_removed": true,
+        "sqlite_connections_closed": true,
+        "temporary_http_servers_closed": true,
+        "concurrent_worker_calls_completed": 4,
+        "port_3000_used": false
+      },
+      "scope": "Local durable hashed opaque bearer sessions after trusted fixture login, current membership/role and tenant/document/share checks, rotated tenant switch, expiring revocable recipient/audience-bound invitation capabilities, atomic quota and audit, scoped metadata export with worker/delivery rechecks, four competing calls, rollback/reopen and real HTTP. No password/OIDC login, browser cookie/BFF/CSRF implementation, email, object storage, RLS deployment or production security/load claim."
+    }
+  ],
+  "roadmap_document_checks": 17,
+  "website": {
+    "build_passed": true,
+    "static_pages": 123,
+    "routes_checked": 55,
+    "all_routes_200": true,
+    "assertions": {
+      "cacheTitle": true,
+      "tenantTitle": true,
+      "cacheEvidence": true,
+      "tenantEvidence": true,
+      "architecture": true,
+      "predecessor": true,
+      "cacheNext": true,
+      "tenantNext": true,
+      "workedGroup": true,
+      "roadmapLinks": true,
+      "allFoundations": true,
+      "homeCard": true,
+      "bankRetained": true
+    },
+    "search": {
+      "system-design:Balancer": {
+        "status": 200,
+        "results": 24,
+        "indexed": true,
+        "scoped": true
+      },
+      "system-design:SaaS": {
+        "status": 200,
+        "results": 13,
+        "indexed": true,
+        "scoped": true
+      },
+      "resume-skills:Consolidation": {
+        "status": 200,
+        "results": 18,
+        "indexed": true,
+        "scoped": true
+      }
+    },
+    "next_route_status": 404,
+    "temporary_server_closed": true,
+    "cached_font_fixture_used": true
+  },
+  "ports_stopped": {
+    "3000": true,
+    "54388": true,
+    "58408": true,
+    "58421": true
+  },
+  "existing_handbooks": [
+    {
+      "subject": "DSA Notes",
+      "files": 17,
+      "lines": 17589
+    },
+    {
+      "subject": "OOP Notes",
+      "files": 13,
+      "lines": 8806
+    },
+    {
+      "subject": "OS Notes",
+      "files": 13,
+      "lines": 6341
+    },
+    {
+      "subject": "DBMS Notes",
+      "files": 13,
+      "lines": 9613
+    },
+    {
+      "subject": "CN Notes",
+      "files": 13,
+      "lines": 9322
+    },
+    {
+      "subject": "Resume Skills Notes",
+      "files": 31,
+      "lines": 37575
+    }
+  ],
+  "system_design": {
+    "files": 18,
+    "lines": 16242,
+    "published_worked_systems": [
+      "S0",
+      "S1",
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S6",
+      "S7",
+      "S8",
+      "S9",
+      "S10",
+      "S11"
+    ]
+  },
+  "git_diff_check_passed": true,
+  "next": "S12: Multi-tenant RAG knowledge-base platform"
+}

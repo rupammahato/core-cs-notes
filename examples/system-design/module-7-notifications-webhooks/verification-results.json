@@ -1,0 +1,668 @@
+{
+  "label": "S2",
+  "verified_date": "2026-10-17",
+  "python": "3.12.10",
+  "sqlite": "3.49.1",
+  "os": "Windows",
+  "total": 109,
+  "counts": {
+    "validation": 11,
+    "intake": 17,
+    "concurrency": 4,
+    "leases": 16,
+    "retry": 13,
+    "http": 22,
+    "network": 14,
+    "estimates": 8,
+    "cleanup": 4
+  },
+  "checks": [
+    {
+      "group": "validation",
+      "name": "empty tenant",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "delimiter identity",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "oversized event identity",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "empty message",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "oversized message",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "nonstring message",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "negative time",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "boolean time",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "nonboolean preference",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "invalid lease",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "invalid intake creates no events",
+      "passed": true
+    },
+    {
+      "group": "intake",
+      "name": "new event accepted durably",
+      "passed": true
+    },
+    {
+      "group": "intake",
+      "name": "only enabled subscription materialized",
+      "passed": true
+    },
+    {
+      "group": "intake",
+      "name": "equivalent retry recognized",
+      "passed": true
+    },
+    {
+      "group": "intake",
+      "name": "retry does not refanout newly added subscription",
+      "passed": true
+    },
+    {
+      "group": "intake",
+      "name": "same event ID with changed message conflicts",
+      "passed": true
+    },
+    {
+      "group": "intake",
+      "name": "changed intent leaves original bytes intact",
+      "passed": true
+    },
+    {
+      "group": "intake",
+      "name": "subscription target immutable",
+      "passed": true
+    },
+    {
+      "group": "intake",
+      "name": "event scope includes tenant",
+      "passed": true
+    },
+    {
+      "group": "intake",
+      "name": "close/reopen preserves original event replay",
+      "passed": true
+    },
+    {
+      "group": "intake",
+      "name": "cross-tenant status lookup returns no row",
+      "passed": true
+    },
+    {
+      "group": "intake",
+      "name": "owner-scoped status lookup finds row",
+      "passed": true
+    },
+    {
+      "group": "intake",
+      "name": "fanout insert fault aborts event transaction",
+      "passed": true
+    },
+    {
+      "group": "intake",
+      "name": "fanout fault leaves no event",
+      "passed": true
+    },
+    {
+      "group": "intake",
+      "name": "fanout fault leaves no partial deliveries",
+      "passed": true
+    },
+    {
+      "group": "intake",
+      "name": "fanout subscription cap enforced",
+      "passed": true
+    },
+    {
+      "group": "intake",
+      "name": "event retention cap rejects new work",
+      "passed": true
+    },
+    {
+      "group": "intake",
+      "name": "existing outcome replay works at capacity",
+      "passed": true
+    },
+    {
+      "group": "concurrency",
+      "name": "two equivalent producers create one event",
+      "passed": true
+    },
+    {
+      "group": "concurrency",
+      "name": "two producers create one delivery",
+      "passed": true
+    },
+    {
+      "group": "concurrency",
+      "name": "one live delivery has one claim owner",
+      "passed": true
+    },
+    {
+      "group": "concurrency",
+      "name": "one durable attempt exists after race",
+      "passed": true
+    },
+    {
+      "group": "leases",
+      "name": "claim records attempt before network I/O",
+      "passed": true
+    },
+    {
+      "group": "leases",
+      "name": "unexpired lease is not reclaimable",
+      "passed": true
+    },
+    {
+      "group": "leases",
+      "name": "completion at lease equality is fenced",
+      "passed": true
+    },
+    {
+      "group": "leases",
+      "name": "lease expiry equality permits reclaim",
+      "passed": true
+    },
+    {
+      "group": "leases",
+      "name": "reclaim changes fencing token",
+      "passed": true
+    },
+    {
+      "group": "leases",
+      "name": "stale worker cannot update reclaimed delivery",
+      "passed": true
+    },
+    {
+      "group": "leases",
+      "name": "current worker can finish",
+      "passed": true
+    },
+    {
+      "group": "leases",
+      "name": "accepted 202 reaches succeeded state",
+      "passed": true
+    },
+    {
+      "group": "leases",
+      "name": "completed delivery cannot be claimed",
+      "passed": true
+    },
+    {
+      "group": "leases",
+      "name": "expired attempt retains ambiguity",
+      "passed": true
+    },
+    {
+      "group": "leases",
+      "name": "three crashes consume three bounded claims",
+      "passed": true
+    },
+    {
+      "group": "leases",
+      "name": "crashed last attempt becomes terminal on recovery poll",
+      "passed": true
+    },
+    {
+      "group": "leases",
+      "name": "crash recovery preserves three attempt records",
+      "passed": true
+    },
+    {
+      "group": "leases",
+      "name": "opt-out is rechecked before claim",
+      "passed": true
+    },
+    {
+      "group": "leases",
+      "name": "queued optional notification becomes skipped",
+      "passed": true
+    },
+    {
+      "group": "leases",
+      "name": "re-enable does not resurrect skipped intent",
+      "passed": true
+    },
+    {
+      "group": "retry",
+      "name": "429 schedules retry",
+      "passed": true
+    },
+    {
+      "group": "retry",
+      "name": "provider hint is floor above jitter",
+      "passed": true
+    },
+    {
+      "group": "retry",
+      "name": "other endpoint is not blocked by cooldown",
+      "passed": true
+    },
+    {
+      "group": "retry",
+      "name": "400 is permanent",
+      "passed": true
+    },
+    {
+      "group": "retry",
+      "name": "cooldown blocks new deliveries to same endpoint",
+      "passed": true
+    },
+    {
+      "group": "retry",
+      "name": "no endpoint-a admission before cooldown equality",
+      "passed": true
+    },
+    {
+      "group": "retry",
+      "name": "cooldown is tenant scoped",
+      "passed": true
+    },
+    {
+      "group": "retry",
+      "name": "endpoint resumes at cooldown equality",
+      "passed": true
+    },
+    {
+      "group": "retry",
+      "name": "retry due uses completion time plus selected jitter",
+      "passed": true
+    },
+    {
+      "group": "retry",
+      "name": "retryable failures stop after three claims",
+      "passed": true
+    },
+    {
+      "group": "retry",
+      "name": "terminal retries do not loop forever",
+      "passed": true
+    },
+    {
+      "group": "retry",
+      "name": "unknown transport is recorded separately",
+      "passed": true
+    },
+    {
+      "group": "retry",
+      "name": "redirect response is permanent and not followed",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "valid signed unicode bytes accepted",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "duplicate signed delivery acknowledged again",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "duplicate produces one receiver effect",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "tampered raw body fails HMAC before processing",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "wrong signing secret fails",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "changed delivery header is signed",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "31-second old signature rejected",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "30-second tolerance equality accepted",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "31-second future signature rejected",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "nonnumeric timestamp rejected",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "other endpoint secret cannot be reused",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "signed tenant mismatch rejected",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "signed malformed JSON rejected",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "oversized declared body rejected before reading",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "unknown endpoint is 404",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "same signed delivery with changed payload rejected",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "rejected inputs did not add receiver effects",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "receiver DB fault yields 503",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "receiver fault rolls back receipt",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "retry after rollback can apply effect",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "concurrent receiver duplicates both acknowledged",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "concurrent receiver duplicates apply one effect",
+      "passed": true
+    },
+    {
+      "group": "network",
+      "name": "real connection closes without status after effect commits",
+      "passed": true
+    },
+    {
+      "group": "network",
+      "name": "lost acknowledgement schedules retry",
+      "passed": true
+    },
+    {
+      "group": "network",
+      "name": "receiver effect exists before retry",
+      "passed": true
+    },
+    {
+      "group": "network",
+      "name": "retry is not claimable before due",
+      "passed": true
+    },
+    {
+      "group": "network",
+      "name": "retry uses same stable delivery identity",
+      "passed": true
+    },
+    {
+      "group": "network",
+      "name": "retry acknowledged and sender succeeds",
+      "passed": true
+    },
+    {
+      "group": "network",
+      "name": "two HTTP attempts produce one transactional effect",
+      "passed": true
+    },
+    {
+      "group": "network",
+      "name": "both ambiguous and successful attempts persisted",
+      "passed": true
+    },
+    {
+      "group": "network",
+      "name": "actual HTTP 429 parsed as delay-seconds",
+      "passed": true
+    },
+    {
+      "group": "network",
+      "name": "HTTP hint determines durable due time",
+      "passed": true
+    },
+    {
+      "group": "network",
+      "name": "provider cooldown blocks early real retry",
+      "passed": true
+    },
+    {
+      "group": "network",
+      "name": "real delivery resumes after provider delay",
+      "passed": true
+    },
+    {
+      "group": "network",
+      "name": "retry allows a later event to arrive first",
+      "passed": true
+    },
+    {
+      "group": "network",
+      "name": "idle worker makes no HTTP call",
+      "passed": true
+    },
+    {
+      "group": "estimates",
+      "name": "deliveries_per_day",
+      "passed": true
+    },
+    {
+      "group": "estimates",
+      "name": "attempts_per_day",
+      "passed": true
+    },
+    {
+      "group": "estimates",
+      "name": "average_attempts_per_second",
+      "passed": true
+    },
+    {
+      "group": "estimates",
+      "name": "hypothetical_peak_attempts_per_second",
+      "passed": true
+    },
+    {
+      "group": "estimates",
+      "name": "planning_mean_inflight_at_peak",
+      "passed": true
+    },
+    {
+      "group": "estimates",
+      "name": "backlog_after_one_hour_at_100_deliveries_per_second",
+      "passed": true
+    },
+    {
+      "group": "estimates",
+      "name": "drain_seconds_at_150_service_and_100_new_per_second",
+      "passed": true
+    },
+    {
+      "group": "estimates",
+      "name": "workload is not a capacity measurement",
+      "passed": true
+    },
+    {
+      "group": "cleanup",
+      "name": "all tracked queue connections closed",
+      "passed": true
+    },
+    {
+      "group": "cleanup",
+      "name": "owned database directory removed",
+      "passed": true
+    },
+    {
+      "group": "cleanup",
+      "name": "owned receiver listener closed",
+      "passed": true
+    },
+    {
+      "group": "cleanup",
+      "name": "port 3000 unused",
+      "passed": true
+    }
+  ],
+  "observations": {
+    "intake": {
+      "event_and_delivery_transaction_rollback": true,
+      "stable_retry_refans_out": false,
+      "disabled_at_acceptance_materialized": false,
+      "tenant_scoped_status": true,
+      "close_reopen_replay": true,
+      "maximum_subscriptions_per_tenant": 8,
+      "lesson_event_retention_cap": 256
+    },
+    "concurrency": {
+      "queue_worker_calls": 4,
+      "new_events": 1,
+      "live_claims": 1,
+      "winner_order_assumed": false
+    },
+    "leases": {
+      "lease_ms": 2000,
+      "at_1999_reclaimable": false,
+      "at_2000_reclaimable": true,
+      "stale_worker_completion_accepted": false,
+      "new_worker_202_state": "succeeded",
+      "three_crashes_terminal": true,
+      "opted_out_before_claim_state": "skipped",
+      "external_effects_fenced_by_lease": false
+    },
+    "retry": {
+      "retryable_statuses": [
+        408,
+        429,
+        "5xx",
+        "transport_unknown"
+      ],
+      "permanent_examples": [
+        302,
+        400
+      ],
+      "maximum_attempts": 3,
+      "first_attempt_jitter_cap_ms": 500,
+      "second_attempt_jitter_cap_ms": 1000,
+      "429_hint_ms": 2000,
+      "same_endpoint_blocked_before_ms": 2000,
+      "other_endpoint_and_tenant_continue": true,
+      "dead_letter_state": "failed"
+    },
+    "http_contract": {
+      "valid_and_duplicate_statuses": [
+        200,
+        200
+      ],
+      "tampered_bytes_status": 401,
+      "old_signature_status": 401,
+      "signed_wrong_tenant_status": 400,
+      "receiver_transaction_rollback_tested": true,
+      "concurrent_duplicate_requests": 2,
+      "concurrent_duplicate_effects": 1,
+      "production_vendor_protocol_implemented": false
+    },
+    "lost_ack_and_ordering": {
+      "first_HTTP_outcome": "transport_unknown",
+      "receiver_effects_before_retry": 1,
+      "second_HTTP_status": 200,
+      "attempts": 2,
+      "stable_delivery_id": true,
+      "receiver_effects_after_retry": 1,
+      "sender_final_state": "succeeded",
+      "actual_429_retry_after_ms": 2000,
+      "observed_independent_event_order": [
+        "later",
+        "earlier"
+      ],
+      "human_read_or_inbox_delivery_proven": false
+    },
+    "estimates": {
+      "events_per_day": 100000,
+      "average_targets_per_event": 4,
+      "deliveries_per_day": 400000,
+      "selected_extra_attempt_fraction": 0.1,
+      "attempts_per_day": 440000,
+      "average_attempts_per_second": 5.093,
+      "selected_peak_factor": 20,
+      "hypothetical_peak_attempts_per_second": 101.852,
+      "assumed_mean_attempt_seconds": 0.2,
+      "planning_mean_inflight_at_peak": 20.37,
+      "backlog_after_one_hour_at_100_deliveries_per_second": 360000,
+      "drain_seconds_at_150_service_and_100_new_per_second": 7200,
+      "seven_day_event_payload_GB_at_1024_bytes": 0.7168,
+      "maximum_attempts_per_delivery_in_fixture": 3,
+      "measured_capacity": false
+    }
+  },
+  "cleanup": {
+    "fixture_ports": [
+      62017
+    ],
+    "temporary_database_directory_removed": true,
+    "sqlite_connections_closed": true,
+    "temporary_http_servers_closed": true,
+    "concurrent_worker_calls_completed": 6,
+    "port_3000_used": false
+  },
+  "scope": "Local Python/SQLite durable queue plus owned signed loopback HTTP receiver. No external messages, SMTP/SMS/push integration, vendor account, broker, production authentication/TLS, crash-power-loss, distributed clock/failover or load benchmark. At-least-once attempts are bounded; receiver effect dedupe is a local transactional record, not universal exactly-once delivery."
+}

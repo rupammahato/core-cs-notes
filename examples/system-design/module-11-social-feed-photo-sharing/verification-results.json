@@ -1,0 +1,421 @@
+{
+  "label": "S6",
+  "verified_date": "2026-10-17",
+  "python": "3.12.10",
+  "sqlite": "3.49.1",
+  "os": "Windows",
+  "total": 67,
+  "counts": {
+    "publication": 10,
+    "fanout": 9,
+    "concurrency": 4,
+    "hybrid": 4,
+    "pagination": 7,
+    "visibility": 13,
+    "http": 13,
+    "estimates": 3,
+    "cleanup": 4
+  },
+  "checks": [
+    {
+      "group": "publication",
+      "name": "quarantined media cannot publish",
+      "passed": true
+    },
+    {
+      "group": "publication",
+      "name": "another owner cannot attach the media",
+      "passed": true
+    },
+    {
+      "group": "publication",
+      "name": "another tenant cannot attach the media",
+      "passed": true
+    },
+    {
+      "group": "publication",
+      "name": "wrong media version rejected",
+      "passed": true
+    },
+    {
+      "group": "publication",
+      "name": "caption limit enforced",
+      "passed": true
+    },
+    {
+      "group": "publication",
+      "name": "invalid client key rejected",
+      "passed": true
+    },
+    {
+      "group": "publication",
+      "name": "post and pending push job commit together",
+      "passed": true
+    },
+    {
+      "group": "publication",
+      "name": "same operation replays original post",
+      "passed": true
+    },
+    {
+      "group": "publication",
+      "name": "changed post intent conflicts",
+      "passed": true
+    },
+    {
+      "group": "fanout",
+      "name": "push feed can lag durable post publication",
+      "passed": true
+    },
+    {
+      "group": "fanout",
+      "name": "author sees own push post without worker",
+      "passed": true
+    },
+    {
+      "group": "fanout",
+      "name": "batch inserts follower pointer",
+      "passed": true
+    },
+    {
+      "group": "fanout",
+      "name": "follower sees published post after batch",
+      "passed": true
+    },
+    {
+      "group": "fanout",
+      "name": "completed worker replay adds no duplicates",
+      "passed": true
+    },
+    {
+      "group": "publication",
+      "name": "failed job insert rolls back published post",
+      "passed": true
+    },
+    {
+      "group": "fanout",
+      "name": "batch failure rolls back earlier pointer and cursor",
+      "passed": true
+    },
+    {
+      "group": "fanout",
+      "name": "retry resumes intact batch frontier",
+      "passed": true
+    },
+    {
+      "group": "fanout",
+      "name": "new follower before batch cursor gets historical backfill",
+      "passed": true
+    },
+    {
+      "group": "concurrency",
+      "name": "competing workers share one durable cursor",
+      "passed": true
+    },
+    {
+      "group": "concurrency",
+      "name": "fanout and backfill have unique pointers",
+      "passed": true
+    },
+    {
+      "group": "fanout",
+      "name": "batch job eventually reaches done",
+      "passed": true
+    },
+    {
+      "group": "hybrid",
+      "name": "pull post creates no per-follower fanout job",
+      "passed": true
+    },
+    {
+      "group": "hybrid",
+      "name": "read merges pull and pushed candidates once",
+      "passed": true
+    },
+    {
+      "group": "hybrid",
+      "name": "mode changes do not rewrite old posts",
+      "passed": true
+    },
+    {
+      "group": "hybrid",
+      "name": "new posts can adopt changed author mode",
+      "passed": true
+    },
+    {
+      "group": "pagination",
+      "name": "keyset continuation has no first-page duplicate",
+      "passed": true
+    },
+    {
+      "group": "pagination",
+      "name": "snapshot high-water excludes new arrivals",
+      "passed": true
+    },
+    {
+      "group": "pagination",
+      "name": "new first page discovers new arrival",
+      "passed": true
+    },
+    {
+      "group": "pagination",
+      "name": "cursor is viewer scoped",
+      "passed": true
+    },
+    {
+      "group": "pagination",
+      "name": "cursor is tenant scoped",
+      "passed": true
+    },
+    {
+      "group": "pagination",
+      "name": "tampered cursor signature rejected",
+      "passed": true
+    },
+    {
+      "group": "pagination",
+      "name": "invalid page size rejected",
+      "passed": true
+    },
+    {
+      "group": "visibility",
+      "name": "unfollow hides stale push pointers",
+      "passed": true
+    },
+    {
+      "group": "visibility",
+      "name": "pointer may physically remain after unfollow",
+      "passed": true
+    },
+    {
+      "group": "visibility",
+      "name": "refollow backfills retained pushed history",
+      "passed": true
+    },
+    {
+      "group": "visibility",
+      "name": "author block hides push and pull posts",
+      "passed": true
+    },
+    {
+      "group": "visibility",
+      "name": "viewer cannot remove authors reverse block",
+      "passed": true
+    },
+    {
+      "group": "visibility",
+      "name": "viewer block also applies to pull candidates",
+      "passed": true
+    },
+    {
+      "group": "visibility",
+      "name": "deleted media hides referencing posts",
+      "passed": true
+    },
+    {
+      "group": "visibility",
+      "name": "new media version does not reactivate old pins",
+      "passed": true
+    },
+    {
+      "group": "visibility",
+      "name": "explicit new post can pin ready replacement",
+      "passed": true
+    },
+    {
+      "group": "visibility",
+      "name": "post deletion hides current candidate",
+      "passed": true
+    },
+    {
+      "group": "visibility",
+      "name": "original create replay does not resurrect deletion",
+      "passed": true
+    },
+    {
+      "group": "visibility",
+      "name": "other owner cannot delete post",
+      "passed": true
+    },
+    {
+      "group": "visibility",
+      "name": "another tenant feed has no candidates",
+      "passed": true
+    },
+    {
+      "group": "concurrency",
+      "name": "concurrent publish retries share one post ID",
+      "passed": true
+    },
+    {
+      "group": "concurrency",
+      "name": "concurrent publication creates one job",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "feed requires authentication",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "follow endpoint derives viewer from credential",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "real post creation accepts owned ready media",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "other owner media attachment denied",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "unknown tenant field cannot choose authority",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "real feed returns canonical post after fanout",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "private feed response is no-store",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "other tenant sees empty feed",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "invalid limit rejected",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "invalid cursor rejected",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "real block immediately filters next local feed request",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "foreign-owner delete is hidden",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "owner deletion succeeds",
+      "passed": true
+    },
+    {
+      "group": "estimates",
+      "name": "push amplification units",
+      "passed": true
+    },
+    {
+      "group": "estimates",
+      "name": "celebrity pointer logical bytes",
+      "passed": true
+    },
+    {
+      "group": "estimates",
+      "name": "no throughput claim",
+      "passed": true
+    },
+    {
+      "group": "cleanup",
+      "name": "tracked SQLite connections closed",
+      "passed": true
+    },
+    {
+      "group": "cleanup",
+      "name": "owned temporary directory removed",
+      "passed": true
+    },
+    {
+      "group": "cleanup",
+      "name": "owned HTTP listener closed",
+      "passed": true
+    },
+    {
+      "group": "cleanup",
+      "name": "port 3000 unused",
+      "passed": true
+    }
+  ],
+  "observations": {
+    "fanout": {
+      "push_visible_before_batch": false,
+      "push_visible_after_batch": true,
+      "partial_batch_rollback_tested": true,
+      "cursor_backfill_gap_closed": true,
+      "parallel_batch_sizes_sorted": [
+        0,
+        2
+      ],
+      "unique_inbox_pointers_after_backfill": 6,
+      "pull_post_creates_fanout_job": false,
+      "mode_frozen_per_post": true,
+      "ranking_engine_implemented": false
+    },
+    "visibility_and_pagination": {
+      "pointer_is_authorization": false,
+      "unfollow_filters_stale_pointer": true,
+      "bidirectional_block_checked": true,
+      "media_version_replacement_reactivates_old_post": false,
+      "delete_replay_resurrects_post": false,
+      "new_insert_enters_old_cursor_window": false,
+      "cursor_cross_viewer_status": 403,
+      "caption_or_media_already_delivered_retracted": false
+    },
+    "concurrency": {
+      "competing_worker_calls": 4,
+      "parallel_fanout_extra_recipients": 2,
+      "equivalent_post_calls": 2,
+      "created_posts": 1,
+      "created_jobs": 1,
+      "winner_order_assumed": false
+    },
+    "http_contract": {
+      "create_status": 201,
+      "wrong_media_owner_status": 409,
+      "feed_status": 200,
+      "private_cache_control": "no-store",
+      "invalid_cursor_status": 400,
+      "next_feed_after_block_empty": true,
+      "foreign_delete_status": 404,
+      "photo_bytes_or_S3_projection_integration_implemented": false
+    },
+    "estimates": {
+      "new_posts_per_second": 400,
+      "assumed_mean_followers": 100,
+      "hypothetical_push_pointer_writes_per_second": 40000,
+      "celebrity_followers": 1000000,
+      "assumed_pointer_bytes": 64,
+      "logical_pointer_MB_for_one_celebrity_post": 64,
+      "fixture_posts_per_tenant_cap": 256,
+      "measured_capacity": false
+    }
+  },
+  "cleanup": {
+    "fixture_ports": [
+      58282
+    ],
+    "temporary_database_directory_removed": true,
+    "sqlite_connections_closed": true,
+    "temporary_http_servers_closed": true,
+    "concurrent_worker_calls_completed": 4,
+    "port_3000_used": false
+  },
+  "scope": "Bounded local SQLite hybrid chronological feed and actual loopback JSON HTTP. Media state is a trusted metadata fixture, not image decoding, S3 integration or signed image delivery. No recommendation/ranking engine, production auth/TLS, distributed fanout/cache, global revocation or load benchmark. Visibility is rechecked for each local request; already delivered pages cannot be retracted."
+}

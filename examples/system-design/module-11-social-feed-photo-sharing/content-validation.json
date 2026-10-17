@@ -1,0 +1,23 @@
+{
+  "label": "S6",
+  "chapter": "system-design-handbook-part-13-module-11-social-feed-photo-sharing.md",
+  "words": 5744,
+  "lines": 829,
+  "questions": 30,
+  "practice_tasks": 10,
+  "unchecked_learning_items": 12,
+  "source_fidelity": [
+    "../worked-systems-s4-s6/runtime.py",
+    "feed.py"
+  ],
+  "output_fidelity": [
+    "fanout",
+    "visibility_and_pagination",
+    "concurrency",
+    "http_contract",
+    "estimates"
+  ],
+  "mock_minutes": 45,
+  "verified_checks": 67,
+  "next": "S7: Background job scheduler and worker platform"
+}

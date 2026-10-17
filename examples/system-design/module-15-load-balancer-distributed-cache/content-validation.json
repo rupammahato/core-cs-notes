@@ -1,0 +1,25 @@
+{
+  "label": "S10",
+  "chapter": "system-design-handbook-part-17-module-15-load-balancer-distributed-cache.md",
+  "words": 5764,
+  "lines": 876,
+  "questions": 30,
+  "practice_tasks": 10,
+  "unchecked_learning_items": 12,
+  "source_fidelity": [
+    "../worked-systems-s4-s6/runtime.py",
+    "cache.py"
+  ],
+  "output_fidelity": [
+    "placement",
+    "routing",
+    "coherence",
+    "failure_rejoin",
+    "concurrency",
+    "http_contract",
+    "estimates"
+  ],
+  "mock_minutes": 45,
+  "verified_checks": 69,
+  "next": "S11: Multi-tenant SaaS with authentication and permissions"
+}

@@ -1,0 +1,170 @@
+{
+  "label": "S2",
+  "module": 7,
+  "verified_date": "2026-10-17",
+  "runtime": {
+    "python": "3.12.10",
+    "sqlite": "3.49.1",
+    "os": "Windows"
+  },
+  "checks": {
+    "counts": {
+      "validation": 11,
+      "intake": 17,
+      "concurrency": 4,
+      "leases": 16,
+      "retry": 13,
+      "http": 22,
+      "network": 14,
+      "estimates": 8,
+      "cleanup": 4
+    },
+    "total": 109,
+    "all_passed": true
+  },
+  "roadmap_document_checks": 17,
+  "content": {
+    "label": "S2",
+    "chapter": "system-design-handbook-part-9-module-7-notifications-webhooks.md",
+    "words": 8373,
+    "lines": 1025,
+    "questions": 30,
+    "practice_tasks": 10,
+    "unchecked_learning_items": 12,
+    "source_fidelity": [
+      "estimates.py",
+      "delivery.py",
+      "protocol.py",
+      "worker.py"
+    ],
+    "output_fidelity": [
+      "estimates",
+      "intake",
+      "concurrency",
+      "leases",
+      "retry",
+      "http_contract",
+      "lost_ack_and_ordering"
+    ],
+    "mock_minutes": 45,
+    "verified_checks": 109,
+    "next": "S3: File upload, storage and processing service",
+    "result_fidelity": {
+      "estimates": true,
+      "intake": true,
+      "concurrency": true,
+      "leases": true,
+      "retry": true,
+      "http_contract": true,
+      "lost_ack_and_ordering": true,
+      "versions": true
+    },
+    "authored_internal_links": 6
+  },
+  "cleanup": {
+    "fixture_ports": [
+      62017
+    ],
+    "temporary_database_directory_removed": true,
+    "sqlite_connections_closed": true,
+    "temporary_http_servers_closed": true,
+    "concurrent_worker_calls_completed": 6,
+    "port_3000_used": false
+  },
+  "website": {
+    "build_passed": true,
+    "static_pages": 114,
+    "routes_checked": 46,
+    "all_routes_200": true,
+    "assertions": {
+      "title": true,
+      "q30": true,
+      "verifiedChecks": true,
+      "exactCode": true,
+      "evidence": true,
+      "architecture": true,
+      "scope": true,
+      "next": true,
+      "workedGroup": true,
+      "roadmapLink": true,
+      "allFoundations": true,
+      "predecessor": true,
+      "homeCard": true,
+      "bankRetained": true
+    },
+    "search": {
+      "system-design": {
+        "status": 200,
+        "results": 22,
+        "indexed": true,
+        "scoped": true
+      },
+      "resume-skills": {
+        "status": 200,
+        "results": 18,
+        "indexed": true,
+        "scoped": true
+      }
+    },
+    "next_route_status": 404,
+    "temporary_server_closed": true,
+    "cached_font_fixture_used": true
+  },
+  "ports_stopped": {
+    "3000": true,
+    "55231": true,
+    "62017": true
+  },
+  "existing_handbooks": [
+    {
+      "subject": "DSA Notes",
+      "files": 17,
+      "lines": 17589
+    },
+    {
+      "subject": "OOP Notes",
+      "files": 13,
+      "lines": 8806
+    },
+    {
+      "subject": "OS Notes",
+      "files": 13,
+      "lines": 6341
+    },
+    {
+      "subject": "DBMS Notes",
+      "files": 13,
+      "lines": 9613
+    },
+    {
+      "subject": "CN Notes",
+      "files": 13,
+      "lines": 9322
+    },
+    {
+      "subject": "Resume Skills Notes",
+      "files": 31,
+      "lines": 37575
+    }
+  ],
+  "system_design": {
+    "files": 9,
+    "lines": 8442,
+    "published_foundations": [
+      "A0",
+      "A1",
+      "A2",
+      "A3",
+      "A4"
+    ],
+    "published_worked_systems": [
+      "S0",
+      "S1",
+      "S2"
+    ]
+  },
+  "git_diff_check_passed": true,
+  "trailing_whitespace_files": [],
+  "next": "S3: File upload, storage and processing service",
+  "scope": "Local Python/SQLite durable queue plus owned signed loopback HTTP receiver. No external messages, SMTP/SMS/push integration, vendor account, broker, production authentication/TLS, crash-power-loss, distributed clock/failover or load benchmark. At-least-once attempts are bounded; receiver effect dedupe is a local transactional record, not universal exactly-once delivery."
+}

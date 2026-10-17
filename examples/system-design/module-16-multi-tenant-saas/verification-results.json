@@ -1,0 +1,586 @@
+{
+  "label": "S11",
+  "verified_date": "2026-10-17",
+  "python": "3.12.10",
+  "sqlite": "3.49.1",
+  "os": "Windows",
+  "total": 95,
+  "counts": {
+    "sessions": 13,
+    "documents": 9,
+    "isolation": 6,
+    "roles": 12,
+    "exports": 7,
+    "invitations": 9,
+    "concurrency": 3,
+    "atomicity": 5,
+    "quota": 3,
+    "http": 24,
+    "cleanup": 4
+  },
+  "checks": [
+    {
+      "group": "sessions",
+      "name": "trusted session derives tenant and role",
+      "passed": true
+    },
+    {
+      "group": "sessions",
+      "name": "database stores hash not bearer",
+      "passed": true
+    },
+    {
+      "group": "sessions",
+      "name": "fixed shared-helper token is not authority",
+      "passed": true
+    },
+    {
+      "group": "sessions",
+      "name": "unknown opaque bearer",
+      "passed": true
+    },
+    {
+      "group": "sessions",
+      "name": "session live before expiry",
+      "passed": true
+    },
+    {
+      "group": "sessions",
+      "name": "session expires at exact boundary",
+      "passed": true
+    },
+    {
+      "group": "sessions",
+      "name": "session cannot issue for nonmember",
+      "passed": true
+    },
+    {
+      "group": "sessions",
+      "name": "oversize TTL rejected",
+      "passed": true
+    },
+    {
+      "group": "documents",
+      "name": "create operation replay",
+      "passed": true
+    },
+    {
+      "group": "documents",
+      "name": "changed operation intent",
+      "passed": true
+    },
+    {
+      "group": "documents",
+      "name": "member sees own list only",
+      "passed": true
+    },
+    {
+      "group": "documents",
+      "name": "owner sees tenant documents",
+      "passed": true
+    },
+    {
+      "group": "documents",
+      "name": "admin reads other owner",
+      "passed": true
+    },
+    {
+      "group": "isolation",
+      "name": "viewer cannot read unshared document",
+      "passed": true
+    },
+    {
+      "group": "isolation",
+      "name": "member cannot read other private document",
+      "passed": true
+    },
+    {
+      "group": "isolation",
+      "name": "owner cannot read another tenant",
+      "passed": true
+    },
+    {
+      "group": "isolation",
+      "name": "owner cannot edit another tenant",
+      "passed": true
+    },
+    {
+      "group": "isolation",
+      "name": "cross tenant share target hidden",
+      "passed": true
+    },
+    {
+      "group": "documents",
+      "name": "same tenant share enables read",
+      "passed": true
+    },
+    {
+      "group": "documents",
+      "name": "share reflected in list",
+      "passed": true
+    },
+    {
+      "group": "roles",
+      "name": "viewer cannot create",
+      "passed": true
+    },
+    {
+      "group": "roles",
+      "name": "read grant does not enable edit",
+      "passed": true
+    },
+    {
+      "group": "roles",
+      "name": "read grant does not enable resharing",
+      "passed": true
+    },
+    {
+      "group": "exports",
+      "name": "scoped job initially pending",
+      "passed": true
+    },
+    {
+      "group": "exports",
+      "name": "worker rechecks and produces metadata",
+      "passed": true
+    },
+    {
+      "group": "exports",
+      "name": "owned result current access",
+      "passed": true
+    },
+    {
+      "group": "exports",
+      "name": "other requester cannot read result",
+      "passed": true
+    },
+    {
+      "group": "exports",
+      "name": "revoked grant hides completed export",
+      "passed": true
+    },
+    {
+      "group": "exports",
+      "name": "worker denies revoked pending job",
+      "passed": true
+    },
+    {
+      "group": "exports",
+      "name": "changed source makes result stale",
+      "passed": true
+    },
+    {
+      "group": "documents",
+      "name": "stale edit version conflicts",
+      "passed": true
+    },
+    {
+      "group": "documents",
+      "name": "create replay survives edits",
+      "passed": true
+    },
+    {
+      "group": "roles",
+      "name": "existing session sees current demotion",
+      "passed": true
+    },
+    {
+      "group": "roles",
+      "name": "demoted owner cannot write own doc",
+      "passed": true
+    },
+    {
+      "group": "roles",
+      "name": "demoted member cannot create",
+      "passed": true
+    },
+    {
+      "group": "roles",
+      "name": "admin cannot grant owner",
+      "passed": true
+    },
+    {
+      "group": "roles",
+      "name": "admin cannot demote owner",
+      "passed": true
+    },
+    {
+      "group": "roles",
+      "name": "last owner protected",
+      "passed": true
+    },
+    {
+      "group": "roles",
+      "name": "removed membership invalidates session",
+      "passed": true
+    },
+    {
+      "group": "roles",
+      "name": "reactivation does not revive old bearer",
+      "passed": true
+    },
+    {
+      "group": "roles",
+      "name": "new session after explicit reactivation",
+      "passed": true
+    },
+    {
+      "group": "sessions",
+      "name": "switch to nonmember tenant denied",
+      "passed": true
+    },
+    {
+      "group": "sessions",
+      "name": "failed switch preserves old session",
+      "passed": true
+    },
+    {
+      "group": "sessions",
+      "name": "switch rotates into verified membership",
+      "passed": true
+    },
+    {
+      "group": "sessions",
+      "name": "old switched session revoked",
+      "passed": true
+    },
+    {
+      "group": "isolation",
+      "name": "switch does not grant old tenant docs",
+      "passed": true
+    },
+    {
+      "group": "sessions",
+      "name": "logout revokes bearer",
+      "passed": true
+    },
+    {
+      "group": "invitations",
+      "name": "recipient binding",
+      "passed": true
+    },
+    {
+      "group": "invitations",
+      "name": "audience binding",
+      "passed": true
+    },
+    {
+      "group": "invitations",
+      "name": "member cannot issue invitations",
+      "passed": true
+    },
+    {
+      "group": "invitations",
+      "name": "privileged role cannot be invited",
+      "passed": true
+    },
+    {
+      "group": "concurrency",
+      "name": "two accepts converge on one membership",
+      "passed": true
+    },
+    {
+      "group": "invitations",
+      "name": "single target membership",
+      "passed": true
+    },
+    {
+      "group": "invitations",
+      "name": "used invite cannot reactivate removed member",
+      "passed": true
+    },
+    {
+      "group": "invitations",
+      "name": "expiry exact boundary",
+      "passed": true
+    },
+    {
+      "group": "invitations",
+      "name": "foreign tenant cannot revoke",
+      "passed": true
+    },
+    {
+      "group": "invitations",
+      "name": "revoked token rejected",
+      "passed": true
+    },
+    {
+      "group": "atomicity",
+      "name": "invite acceptance and membership rollback with audit",
+      "passed": true
+    },
+    {
+      "group": "atomicity",
+      "name": "invite acceptance recovers after rollback",
+      "passed": true
+    },
+    {
+      "group": "concurrency",
+      "name": "last quota slot has one winner",
+      "passed": true
+    },
+    {
+      "group": "concurrency",
+      "name": "quota row count stays one",
+      "passed": true
+    },
+    {
+      "group": "quota",
+      "name": "create replay allowed at quota",
+      "passed": true
+    },
+    {
+      "group": "quota",
+      "name": "different operation cannot exceed quota",
+      "passed": true
+    },
+    {
+      "group": "quota",
+      "name": "quota separated per tenant",
+      "passed": true
+    },
+    {
+      "group": "atomicity",
+      "name": "create quota and idempotency rollback with audit",
+      "passed": true
+    },
+    {
+      "group": "atomicity",
+      "name": "create recovers after rollback",
+      "passed": true
+    },
+    {
+      "group": "atomicity",
+      "name": "session and scope survive reopen",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "opaque session accepted",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "shared-helper identity rejected",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "anonymous rejected",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "cross tenant document hidden",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "foreign document update hidden",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "tenant override body rejected",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "viewer create denied",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "list is tenant scoped",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "viewer privilege escalation denied",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "owner share endpoint",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "export durable acceptance",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "export result endpoint",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "other tenant export hidden",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "unshare endpoint",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "revoked export hidden",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "logout endpoint",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "logged out session rejected",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "invitation issue endpoint",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "wrong audience at accept endpoint",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "bound invitation accepted over HTTP",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "accepted invitation cannot select tenant alone",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "verified switch endpoint",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "switch revokes previous HTTP bearer",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "revoke invite endpoint",
+      "passed": true
+    },
+    {
+      "group": "cleanup",
+      "name": "tracked SQLite connections closed",
+      "passed": true
+    },
+    {
+      "group": "cleanup",
+      "name": "owned temporary directory removed",
+      "passed": true
+    },
+    {
+      "group": "cleanup",
+      "name": "owned HTTP listener closed",
+      "passed": true
+    },
+    {
+      "group": "cleanup",
+      "name": "port 3000 unused",
+      "passed": true
+    }
+  ],
+  "observations": {
+    "isolation_exports": {
+      "foreign_tenant_read": 404,
+      "foreign_tenant_edit": 404,
+      "private_nonowner_read": 404,
+      "shared_viewer_edit": 404,
+      "completed_export_after_revoke": 404,
+      "pending_export_after_revoke": "denied",
+      "changed_source_export": 409,
+      "worker_result_is_metadata_not_file": true
+    },
+    "sessions_roles": {
+      "opaque_token_stored_as_hash": true,
+      "current_role_after_demotion": "viewer",
+      "removed_member_session": 401,
+      "reactivated_old_session": 401,
+      "tenant_switch_rotates_token": true,
+      "old_switch_token": 401,
+      "logout_token": 401,
+      "last_owner_change": 409,
+      "password_or_OAuth_login_executed": false
+    },
+    "invitations": {
+      "wrong_recipient": 403,
+      "wrong_audience": 403,
+      "exact_expiry_boundary": 410,
+      "revoked": 410,
+      "competing_accept_states": [
+        "accepted",
+        "already_accepted"
+      ],
+      "membership_rows_created": 1,
+      "used_invite_after_removal": 409,
+      "accept_membership_audit_rollback_tested": true,
+      "email_sent": false
+    },
+    "quota_atomicity": {
+      "tenant_quota": 1,
+      "simultaneous_new_creates": 2,
+      "committed_documents": 1,
+      "rejected_create_status": 409,
+      "replay_at_full_quota_succeeds": true,
+      "other_tenant_has_separate_quota": true,
+      "document_intent_audit_rollback_tested": true
+    },
+    "http_contract": {
+      "session": 200,
+      "fixed_lesson_token": 401,
+      "anonymous": 401,
+      "foreign_document": 404,
+      "foreign_document_update": 404,
+      "tenant_body_override": 400,
+      "viewer_create": 403,
+      "export_acceptance": 202,
+      "foreign_export": 404,
+      "revoked_export": 404,
+      "logout_reuse": 401,
+      "invite_issue": 201,
+      "invite_accept": 200,
+      "verified_tenant_switch": 200,
+      "old_switch_bearer": 401,
+      "invite_revoke": 200,
+      "real_loopback_HTTP": true,
+      "browser_cookie_BFF_or_OAuth_executed": false
+    },
+    "estimates": {
+      "tenants": 1000,
+      "assumed_users_per_tenant": 20,
+      "membership_rows": 20000,
+      "assumed_documents_per_tenant": 500,
+      "documents": 500000,
+      "fixture_quota_is_per_tenant": true,
+      "session_max_ttl_ms": 3600000,
+      "invitation_max_ttl_ms": 3600000,
+      "measured_capacity": false
+    }
+  },
+  "cleanup": {
+    "fixture_ports": [
+      58421
+    ],
+    "temporary_database_directory_removed": true,
+    "sqlite_connections_closed": true,
+    "temporary_http_servers_closed": true,
+    "concurrent_worker_calls_completed": 4,
+    "port_3000_used": false
+  },
+  "scope": "Local durable hashed opaque bearer sessions after trusted fixture login, current membership/role and tenant/document/share checks, rotated tenant switch, expiring revocable recipient/audience-bound invitation capabilities, atomic quota and audit, scoped metadata export with worker/delivery rechecks, four competing calls, rollback/reopen and real HTTP. No password/OIDC login, browser cookie/BFF/CSRF implementation, email, object storage, RLS deployment or production security/load claim."
+}

@@ -1,0 +1,24 @@
+{
+  "label": "S8",
+  "chapter": "system-design-handbook-part-15-module-13-checkout-payments-credit-ledger.md",
+  "words": 5735,
+  "lines": 851,
+  "questions": 30,
+  "practice_tasks": 10,
+  "unchecked_learning_items": 12,
+  "source_fidelity": [
+    "../worked-systems-s4-s6/runtime.py",
+    "checkout.py"
+  ],
+  "output_fidelity": [
+    "payment_recovery",
+    "binding",
+    "concurrency",
+    "rollback_reconciliation",
+    "http_contract",
+    "estimates"
+  ],
+  "mock_minutes": 45,
+  "verified_checks": 62,
+  "next": "S9: Search and autocomplete"
+}

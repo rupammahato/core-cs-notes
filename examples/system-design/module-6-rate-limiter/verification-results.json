@@ -1,0 +1,675 @@
+{
+  "label": "S1",
+  "verified_date": "2026-10-17",
+  "python": "3.12.10",
+  "sqlite": "3.49.1",
+  "os": "Windows",
+  "counts": {
+    "algorithms": 8,
+    "validation": 16,
+    "bucket": 14,
+    "scope_lifecycle": 13,
+    "concurrency": 7,
+    "http": 26,
+    "estimates": 7,
+    "cleanup": 4
+  },
+  "total": 95,
+  "checks": [
+    {
+      "group": "algorithms",
+      "name": "fixed window admits six across one-ms boundary",
+      "passed": true
+    },
+    {
+      "group": "algorithms",
+      "name": "sliding log rejects boundary burst",
+      "passed": true
+    },
+    {
+      "group": "algorithms",
+      "name": "exact sliding interval releases equality cutoff",
+      "passed": true
+    },
+    {
+      "group": "algorithms",
+      "name": "sliding counter rejects immediate new-window burst",
+      "passed": true
+    },
+    {
+      "group": "algorithms",
+      "name": "weighted approximation can admit while exact log denies",
+      "passed": true
+    },
+    {
+      "group": "algorithms",
+      "name": "skipped windows discard stale previous traffic",
+      "passed": true
+    },
+    {
+      "group": "algorithms",
+      "name": "denial does not grow exact log",
+      "passed": true
+    },
+    {
+      "group": "algorithms",
+      "name": "log prunes before admitting",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "zero capacity",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "boolean capacity",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "fractional rate",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "zero rate",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "unbounded rate",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "empty identity",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "control identity",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "unicode identity",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "oversized route",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "negative time",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "boolean time",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "zero cost",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "cost above burst",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "fractional cost",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "rejected inputs create no buckets",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "tuple key avoids delimiter collision",
+      "passed": true
+    },
+    {
+      "group": "bucket",
+      "name": "initial burst capped at capacity",
+      "passed": true
+    },
+    {
+      "group": "bucket",
+      "name": "remaining counts whole post-charge tokens",
+      "passed": true
+    },
+    {
+      "group": "bucket",
+      "name": "empty bucket retry is one second",
+      "passed": true
+    },
+    {
+      "group": "bucket",
+      "name": "partial refill does not round up",
+      "passed": true
+    },
+    {
+      "group": "bucket",
+      "name": "exact refill equality permits one request",
+      "passed": true
+    },
+    {
+      "group": "bucket",
+      "name": "backward clock does not create credit",
+      "passed": true
+    },
+    {
+      "group": "bucket",
+      "name": "backward-clock retry includes catch-up interval",
+      "passed": true
+    },
+    {
+      "group": "bucket",
+      "name": "refill resumes at previous high-water plus interval",
+      "passed": true
+    },
+    {
+      "group": "bucket",
+      "name": "large forward jump caps credit",
+      "passed": true
+    },
+    {
+      "group": "bucket",
+      "name": "weighted request debits server-selected cost",
+      "passed": true
+    },
+    {
+      "group": "bucket",
+      "name": "weighted denial computes missing credit",
+      "passed": true
+    },
+    {
+      "group": "bucket",
+      "name": "weighted cost refills using configured rate",
+      "passed": true
+    },
+    {
+      "group": "bucket",
+      "name": "integer refill retains 999 milli-tokens",
+      "passed": true
+    },
+    {
+      "group": "bucket",
+      "name": "ceil retry reaches sufficient credit",
+      "passed": true
+    },
+    {
+      "group": "scope_lifecycle",
+      "name": "first scoped admission succeeds",
+      "passed": true
+    },
+    {
+      "group": "scope_lifecycle",
+      "name": "same identity shares exhausted quota",
+      "passed": true
+    },
+    {
+      "group": "scope_lifecycle",
+      "name": "subject isolation",
+      "passed": true
+    },
+    {
+      "group": "scope_lifecycle",
+      "name": "tenant isolation",
+      "passed": true
+    },
+    {
+      "group": "scope_lifecycle",
+      "name": "route-class isolation",
+      "passed": true
+    },
+    {
+      "group": "scope_lifecycle",
+      "name": "active policy mismatch requires migration",
+      "passed": true
+    },
+    {
+      "group": "scope_lifecycle",
+      "name": "policy rejection rolls back state",
+      "passed": true
+    },
+    {
+      "group": "scope_lifecycle",
+      "name": "close/reopen retains depleted bucket",
+      "passed": true
+    },
+    {
+      "group": "scope_lifecycle",
+      "name": "new active scope rejected at cardinality cap",
+      "passed": true
+    },
+    {
+      "group": "scope_lifecycle",
+      "name": "existing depleted scope is not evicted for new key",
+      "passed": true
+    },
+    {
+      "group": "scope_lifecycle",
+      "name": "cleanup does not evict before conservative idle expiry",
+      "passed": true
+    },
+    {
+      "group": "scope_lifecycle",
+      "name": "idle cleanup frees scope at equality",
+      "passed": true
+    },
+    {
+      "group": "scope_lifecycle",
+      "name": "physical bucket count stays bounded",
+      "passed": true
+    },
+    {
+      "group": "concurrency",
+      "name": "broken precheck admits both final-slot contenders",
+      "passed": true
+    },
+    {
+      "group": "concurrency",
+      "name": "lost update hides over-admission",
+      "passed": true
+    },
+    {
+      "group": "concurrency",
+      "name": "atomic authority admits exactly one contender",
+      "passed": true
+    },
+    {
+      "group": "concurrency",
+      "name": "winning charge persists for next caller",
+      "passed": true
+    },
+    {
+      "group": "concurrency",
+      "name": "real writer contention reaches bounded dependency failure",
+      "passed": true
+    },
+    {
+      "group": "concurrency",
+      "name": "store recovers after writer lock release",
+      "passed": true
+    },
+    {
+      "group": "concurrency",
+      "name": "independent local stores double global burst",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "unknown route returns 404",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "missing identity returns 401",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "unknown identity returns 401",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "unexpected body rejected before quota",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "real HTTP burst has three successes then 429",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "429 carries integer Retry-After",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "429 is explicitly no-store",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "successful response is also no-store",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "remaining is post-charge informational value",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "rotated credential cannot reset stable subject quota",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "untrusted forwarded identity cannot reset quota",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "another subject has own quota",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "another tenant has own quota",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "query string does not create arbitrary scope",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "subsecond retry rounds up",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "request resumes after exact refill",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "downstream failure follows charged admission",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "failed work was not automatically refunded",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "read route chosen fail-open continues work",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "fail-open response exposes degraded mode",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "fail-open does not invent remaining quota",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "write route chosen fail-closed returns 503",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "outage is not misreported as 429",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "recovered authority retains previous exhausted read state",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "real contention triggers read fallback",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "real contention triggers write 503",
+      "passed": true
+    },
+    {
+      "group": "estimates",
+      "name": "average_requests_per_second",
+      "passed": true
+    },
+    {
+      "group": "estimates",
+      "name": "hypothetical_peak_decisions_per_second",
+      "passed": true
+    },
+    {
+      "group": "estimates",
+      "name": "logical_bucket_storage_MB",
+      "passed": true
+    },
+    {
+      "group": "estimates",
+      "name": "three_replicated_logical_copies_MB",
+      "passed": true
+    },
+    {
+      "group": "estimates",
+      "name": "sliding_log_event_payload_MB",
+      "passed": true
+    },
+    {
+      "group": "estimates",
+      "name": "possible_aggregate_initial_burst",
+      "passed": true
+    },
+    {
+      "group": "estimates",
+      "name": "calculation makes no throughput claim",
+      "passed": true
+    },
+    {
+      "group": "cleanup",
+      "name": "all tracked SQLite connections closed",
+      "passed": true
+    },
+    {
+      "group": "cleanup",
+      "name": "owned temporary directory removed",
+      "passed": true
+    },
+    {
+      "group": "cleanup",
+      "name": "owned HTTP listener closed",
+      "passed": true
+    },
+    {
+      "group": "cleanup",
+      "name": "port 3000 not used",
+      "passed": true
+    }
+  ],
+  "observations": {
+    "algorithms": {
+      "times_ms": [
+        999,
+        999,
+        999,
+        1000,
+        1000,
+        1000,
+        1999
+      ],
+      "fixed": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false
+      ],
+      "sliding_log": [
+        true,
+        true,
+        true,
+        false,
+        false,
+        false,
+        true
+      ],
+      "sliding_counter": [
+        true,
+        true,
+        true,
+        false,
+        false,
+        false,
+        true
+      ],
+      "counterexample_at_1500": {
+        "counter_allowed": true,
+        "exact_log_allowed": false
+      }
+    },
+    "bucket": {
+      "initial": [
+        {
+          "allowed": true,
+          "remaining": 2,
+          "retry_ms": 0,
+          "effective_ms": 0
+        },
+        {
+          "allowed": true,
+          "remaining": 1,
+          "retry_ms": 0,
+          "effective_ms": 0
+        },
+        {
+          "allowed": true,
+          "remaining": 0,
+          "retry_ms": 0,
+          "effective_ms": 0
+        },
+        {
+          "allowed": false,
+          "remaining": 0,
+          "retry_ms": 1000,
+          "effective_ms": 0
+        }
+      ],
+      "at_999_ms": {
+        "allowed": false,
+        "remaining": 0,
+        "retry_ms": 1,
+        "effective_ms": 999
+      },
+      "at_1000_ms": {
+        "allowed": true,
+        "remaining": 0,
+        "retry_ms": 0,
+        "effective_ms": 1000
+      },
+      "clock_back_to_500_ms": {
+        "allowed": false,
+        "remaining": 0,
+        "retry_ms": 1500,
+        "effective_ms": 1000
+      },
+      "weighted_denial": {
+        "allowed": false,
+        "remaining": 2,
+        "retry_ms": 500,
+        "effective_ms": 0
+      },
+      "forward_jump_capped": {
+        "allowed": true,
+        "remaining": 2,
+        "retry_ms": 0,
+        "effective_ms": 1000000000000
+      }
+    },
+    "scope_lifecycle": {
+      "scope_parts": [
+        "trusted tenant",
+        "authenticated subject",
+        "server route class"
+      ],
+      "reopen_preserves_quota": true,
+      "active_policy_change_rejected": true,
+      "max_keys_demonstrated": 1,
+      "safe_idle_cleanup_ms": 2001,
+      "new_scope_after_cleanup": {
+        "allowed": true,
+        "remaining": 1,
+        "retry_ms": 0,
+        "effective_ms": 2001
+      }
+    },
+    "concurrency": {
+      "independent_worker_calls": 4,
+      "unsafe_admitted": 2,
+      "unsafe_persisted_count": 1,
+      "atomic_admitted": 1,
+      "atomic_denied": 1,
+      "real_lock_timeout_observed": true,
+      "winner_order_assumed": false
+    },
+    "http_contract": {
+      "burst_statuses": [
+        200,
+        200,
+        200,
+        429
+      ],
+      "denied_retry_after_seconds": "1",
+      "denied_cache_control": "no-store",
+      "read_outage": {
+        "status": 200,
+        "mode": "degraded-open"
+      },
+      "write_outage": {
+        "status": 503,
+        "body": {
+          "error": "quota authority unavailable"
+        }
+      },
+      "failed_work_remaining": "2",
+      "real_lock_fallback_tested": true,
+      "client_time_or_cost_trusted": false
+    },
+    "estimates": {
+      "requests_per_day": 8640000,
+      "average_requests_per_second": 100.0,
+      "selected_peak_factor": 10,
+      "hypothetical_peak_decisions_per_second": 1000.0,
+      "active_scope_keys": 1000000,
+      "assumed_logical_bytes_per_bucket": 128,
+      "logical_bucket_storage_MB": 128.0,
+      "three_replicated_logical_copies_MB": 384.0,
+      "sliding_log_example_keys": 100000,
+      "sliding_log_events_per_key": 60,
+      "assumed_bytes_per_event": 16,
+      "sliding_log_event_payload_MB": 96.0,
+      "local_instances": 4,
+      "local_capacity_each": 30,
+      "possible_aggregate_initial_burst": 120,
+      "measured_capacity": false
+    }
+  },
+  "cleanup": {
+    "fixture_ports": [
+      63338
+    ],
+    "temporary_database_directory_removed": true,
+    "sqlite_connections_closed": true,
+    "temporary_http_servers_closed": true,
+    "concurrent_worker_calls_completed": 4,
+    "port_3000_used": false
+  },
+  "scope": "Local Python/SQLite and loopback HTTP. No Redis, production authentication/TLS, distributed clock authority, multi-region failover or capacity benchmark. Denials do not charge tokens; successful admissions charge even if work fails. Fail-open intentionally relaxes enforcement."
+}

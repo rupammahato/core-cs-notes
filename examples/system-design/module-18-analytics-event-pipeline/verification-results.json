@@ -1,0 +1,494 @@
+{
+  "label": "S13",
+  "verified_date": "2026-10-18",
+  "python": "3.12.10",
+  "sqlite": "3.49.1",
+  "os": "Windows",
+  "total": 78,
+  "counts": {
+    "time": 6,
+    "intake": 5,
+    "scope": 4,
+    "validation": 8,
+    "atomicity": 5,
+    "projection": 2,
+    "watermarks": 5,
+    "rebuild": 5,
+    "concurrency": 3,
+    "metrics": 5,
+    "late_data": 4,
+    "privacy": 6,
+    "persistence": 1,
+    "bounds": 3,
+    "http": 12,
+    "cleanup": 4
+  },
+  "checks": [
+    {
+      "group": "time",
+      "name": "window start aligned",
+      "passed": true
+    },
+    {
+      "group": "time",
+      "name": "explicit offsets normalize to same UTC second",
+      "passed": true
+    },
+    {
+      "group": "time",
+      "name": "naive timestamp",
+      "passed": true
+    },
+    {
+      "group": "time",
+      "name": "invalid date",
+      "passed": true
+    },
+    {
+      "group": "time",
+      "name": "fractional timestamp",
+      "passed": true
+    },
+    {
+      "group": "time",
+      "name": "nonstring timestamp",
+      "passed": true
+    },
+    {
+      "group": "intake",
+      "name": "durable batch acceptance",
+      "passed": true
+    },
+    {
+      "group": "intake",
+      "name": "source accepted before projection",
+      "passed": true
+    },
+    {
+      "group": "intake",
+      "name": "idempotent batch replay",
+      "passed": true
+    },
+    {
+      "group": "intake",
+      "name": "normalized-time replay matches intent",
+      "passed": true
+    },
+    {
+      "group": "intake",
+      "name": "changed same event identity conflicts",
+      "passed": true
+    },
+    {
+      "group": "scope",
+      "name": "event identity scoped to tenant",
+      "passed": true
+    },
+    {
+      "group": "scope",
+      "name": "independent producer identity",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "empty batch",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "large batch",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "schema boolean",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "unsupported version",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "unknown kind",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "unknown channel",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "nested unrecognized field",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "future skew",
+      "passed": true
+    },
+    {
+      "group": "atomicity",
+      "name": "changed identity rolls back earlier batch insert",
+      "passed": true
+    },
+    {
+      "group": "atomicity",
+      "name": "no partial event from conflicted batch",
+      "passed": true
+    },
+    {
+      "group": "projection",
+      "name": "bounded batch advances two records",
+      "passed": true
+    },
+    {
+      "group": "projection",
+      "name": "partial dashboard reports pending source",
+      "passed": true
+    },
+    {
+      "group": "watermarks",
+      "name": "cannot finalize ahead of pending local source",
+      "passed": true
+    },
+    {
+      "group": "rebuild",
+      "name": "cannot rebuild ahead of pending source",
+      "passed": true
+    },
+    {
+      "group": "concurrency",
+      "name": "competing workers drain each row once",
+      "passed": true
+    },
+    {
+      "group": "concurrency",
+      "name": "frontiers converge after competing batches",
+      "passed": true
+    },
+    {
+      "group": "metrics",
+      "name": "all page views counted",
+      "passed": true
+    },
+    {
+      "group": "metrics",
+      "name": "duplicate semantic signups distinct by subject",
+      "passed": true
+    },
+    {
+      "group": "metrics",
+      "name": "only signup cohort activation enters numerator",
+      "passed": true
+    },
+    {
+      "group": "metrics",
+      "name": "undefined denominator is null",
+      "passed": true
+    },
+    {
+      "group": "scope",
+      "name": "other tenant projection still independent",
+      "passed": true
+    },
+    {
+      "group": "scope",
+      "name": "other tenant has only its event",
+      "passed": true
+    },
+    {
+      "group": "late_data",
+      "name": "out of order within mutable window corrects metric",
+      "passed": true
+    },
+    {
+      "group": "watermarks",
+      "name": "one second before final boundary still mutable",
+      "passed": true
+    },
+    {
+      "group": "late_data",
+      "name": "allowed late event updates prior window",
+      "passed": true
+    },
+    {
+      "group": "watermarks",
+      "name": "finalizes at end plus lateness boundary",
+      "passed": true
+    },
+    {
+      "group": "watermarks",
+      "name": "watermark cannot regress",
+      "passed": true
+    },
+    {
+      "group": "watermarks",
+      "name": "watermark cannot exceed server now",
+      "passed": true
+    },
+    {
+      "group": "late_data",
+      "name": "too late receipt retained outside aggregate",
+      "passed": true
+    },
+    {
+      "group": "late_data",
+      "name": "finalized metric not silently changed",
+      "passed": true
+    },
+    {
+      "group": "rebuild",
+      "name": "new generation activated",
+      "passed": true
+    },
+    {
+      "group": "rebuild",
+      "name": "rebuild preserves included decisions after watermark advance",
+      "passed": true
+    },
+    {
+      "group": "rebuild",
+      "name": "rebuild retains late exclusion",
+      "passed": true
+    },
+    {
+      "group": "atomicity",
+      "name": "rebuild aggregate and generation switch rollback",
+      "passed": true
+    },
+    {
+      "group": "rebuild",
+      "name": "failed rebuild preserves serving metrics",
+      "passed": true
+    },
+    {
+      "group": "atomicity",
+      "name": "counts receipts decisions and frontier rollback together",
+      "passed": true
+    },
+    {
+      "group": "atomicity",
+      "name": "retry after rollback processes accepted source",
+      "passed": true
+    },
+    {
+      "group": "concurrency",
+      "name": "competing intake shares one durable identity",
+      "passed": true
+    },
+    {
+      "group": "privacy",
+      "name": "forget removes retained source rows",
+      "passed": true
+    },
+    {
+      "group": "privacy",
+      "name": "forget removes subjects across old generations",
+      "passed": true
+    },
+    {
+      "group": "privacy",
+      "name": "aggregate rebuilt with remaining cohort",
+      "passed": true
+    },
+    {
+      "group": "privacy",
+      "name": "erasure marker blocks old event replay",
+      "passed": true
+    },
+    {
+      "group": "privacy",
+      "name": "privacy operation scoped to tenant",
+      "passed": true
+    },
+    {
+      "group": "privacy",
+      "name": "forget replay no extra deletion",
+      "passed": true
+    },
+    {
+      "group": "persistence",
+      "name": "frontier and projection survive reopen",
+      "passed": true
+    },
+    {
+      "group": "bounds",
+      "name": "limit boolean rejected",
+      "passed": true
+    },
+    {
+      "group": "bounds",
+      "name": "dashboard rejects unaligned start",
+      "passed": true
+    },
+    {
+      "group": "bounds",
+      "name": "dashboard rejects unbounded span",
+      "passed": true
+    },
+    {
+      "group": "metrics",
+      "name": "dashboard includes freshness and definition",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "durable intake accepted",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "equivalent HTTP retry same sequence",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "dashboard pending marker before worker",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "materialized dashboard endpoint",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "foreign tenant aggregate isolated",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "anonymous dashboard denied",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "client tenant override rejected",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "duplicate query parameter rejected",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "unbounded query span rejected",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "worker control not public",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "privacy control not public",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "cache policy explicit",
+      "passed": true
+    },
+    {
+      "group": "cleanup",
+      "name": "tracked SQLite connections closed",
+      "passed": true
+    },
+    {
+      "group": "cleanup",
+      "name": "owned temporary directory removed",
+      "passed": true
+    },
+    {
+      "group": "cleanup",
+      "name": "owned HTTP listener closed",
+      "passed": true
+    },
+    {
+      "group": "cleanup",
+      "name": "port 3000 unused",
+      "passed": true
+    }
+  ],
+  "observations": {
+    "time_metrics": {
+      "UTC_window_start": "2026-10-18T00:00:00Z",
+      "window_seconds": 300,
+      "allowed_lateness_seconds": 120,
+      "signup_subjects": 2,
+      "activated_signup_subjects_before_late": 1,
+      "activation_rate_before_late": 0.5,
+      "activation_rate_after_in_window_late": 1.0,
+      "page_views_after_allowed_late": 4,
+      "too_late_decision": "late_excluded",
+      "empty_cohort_rate": null,
+      "watermark_is_trusted_fixture_control": true
+    },
+    "rebuild": {
+      "active_generation_after_rebuild": 2,
+      "metric_values_preserved": true,
+      "historical_inclusion_decisions_reused": true,
+      "late_exclusions_preserved": 1,
+      "failed_generation_flip_rolled_back": true,
+      "online_external_rebuild": false
+    },
+    "recovery": {
+      "projection_batch_rollback_tested": true,
+      "accepted_events_survive_projection_fault": true,
+      "competing_source_insert_rows": 1,
+      "competing_projection_calls": 2,
+      "effects_and_frontier_atomic": true
+    },
+    "privacy": {
+      "removed_source_rows": 5,
+      "remaining_signup_cohort": 1,
+      "remaining_activated_cohort": 1,
+      "erased_subject_replay_status": 410,
+      "other_tenant_untouched": true,
+      "old_generation_participant_rows_removed": true,
+      "backups_or_disk_securely_erased": false
+    },
+    "http_contract": {
+      "POST_events": 202,
+      "dashboard": 200,
+      "anonymous": 401,
+      "tenant_override": 400,
+      "duplicate_query_parameter": 400,
+      "public_worker_control": 404,
+      "public_privacy_control": 404,
+      "metric_freshness_reported": true,
+      "real_loopback_HTTP": true,
+      "Kafka_Beam_or_browser_dashboard_executed": false
+    },
+    "estimates": {
+      "events_per_day": 8640000,
+      "average_events_per_second": 100,
+      "assumed_peak_multiplier": 5,
+      "peak_events_per_second": 500,
+      "assumed_raw_event_bytes": 400,
+      "logical_raw_GB_per_day": 3.456,
+      "outage_seconds": 600,
+      "backlog_at_average": 60000,
+      "drain_seconds_at_150_service_100_arrival": 1200,
+      "fixture_window_seconds": 300,
+      "fixture_allowed_lateness_seconds": 120,
+      "measured_capacity": false
+    }
+  },
+  "cleanup": {
+    "fixture_ports": [
+      65157
+    ],
+    "temporary_database_directory_removed": true,
+    "sqlite_connections_closed": true,
+    "temporary_http_servers_closed": true,
+    "concurrent_worker_calls_completed": 4,
+    "port_3000_used": false
+  },
+  "scope": "Local SQLite durable event batches, scoped immutable event identity, offset checkpoint/effect atomicity, event-time cohorts, explicit watermark/late policy, generation rebuild, subject erasure marker, four competing calls, fault rollback/reopen and actual aggregate HTTP. No Kafka/Beam cluster, automatic watermark estimation, browser chart, external spreadsheet connector, secure disk/backup erasure or production capacity claim."
+}

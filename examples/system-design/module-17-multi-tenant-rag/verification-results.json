@@ -1,0 +1,810 @@
+{
+  "label": "S12",
+  "verified_date": "2026-10-17",
+  "python": "3.12.10",
+  "sqlite": "3.49.1",
+  "os": "Windows",
+  "total": 125,
+  "counts": {
+    "ingestion": 5,
+    "isolation": 8,
+    "bounds": 10,
+    "vectors": 5,
+    "retrieval": 4,
+    "citations": 3,
+    "versions": 13,
+    "concurrency": 5,
+    "atomicity": 6,
+    "budget": 5,
+    "generation": 5,
+    "validation": 4,
+    "uncertainty": 5,
+    "revocation": 4,
+    "deletion": 14,
+    "evaluation": 6,
+    "http": 19,
+    "cleanup": 4
+  },
+  "checks": [
+    {
+      "group": "ingestion",
+      "name": "acceptance is pending not indexed",
+      "passed": true
+    },
+    {
+      "group": "ingestion",
+      "name": "equivalent upload replay",
+      "passed": true
+    },
+    {
+      "group": "ingestion",
+      "name": "changed original content conflicts",
+      "passed": true
+    },
+    {
+      "group": "isolation",
+      "name": "viewer cannot upload",
+      "passed": true
+    },
+    {
+      "group": "bounds",
+      "name": "empty normalized text",
+      "passed": true
+    },
+    {
+      "group": "bounds",
+      "name": "punctuation only",
+      "passed": true
+    },
+    {
+      "group": "bounds",
+      "name": "large text",
+      "passed": true
+    },
+    {
+      "group": "bounds",
+      "name": "invalid title",
+      "passed": true
+    },
+    {
+      "group": "vectors",
+      "name": "feature vectors deterministic",
+      "passed": true
+    },
+    {
+      "group": "vectors",
+      "name": "nonempty vector unit norm",
+      "passed": true
+    },
+    {
+      "group": "vectors",
+      "name": "empty vector remains zero",
+      "passed": true
+    },
+    {
+      "group": "vectors",
+      "name": "chunk offsets and overlap defined",
+      "passed": true
+    },
+    {
+      "group": "vectors",
+      "name": "chunk text agrees with source slice",
+      "passed": true
+    },
+    {
+      "group": "ingestion",
+      "name": "first publication applies",
+      "passed": true
+    },
+    {
+      "group": "ingestion",
+      "name": "publication replay stable",
+      "passed": true
+    },
+    {
+      "group": "retrieval",
+      "name": "owned current source retrieved",
+      "passed": true
+    },
+    {
+      "group": "citations",
+      "name": "citation binds current source offsets",
+      "passed": true
+    },
+    {
+      "group": "isolation",
+      "name": "private chunk not readable by another member",
+      "passed": true
+    },
+    {
+      "group": "isolation",
+      "name": "private chunk not retrievable",
+      "passed": true
+    },
+    {
+      "group": "isolation",
+      "name": "foreign tenant excluded",
+      "passed": true
+    },
+    {
+      "group": "isolation",
+      "name": "foreign document status hidden",
+      "passed": true
+    },
+    {
+      "group": "isolation",
+      "name": "foreign update hidden",
+      "passed": true
+    },
+    {
+      "group": "retrieval",
+      "name": "current share enables retrieval",
+      "passed": true
+    },
+    {
+      "group": "retrieval",
+      "name": "authorized matches survive forbidden top candidates",
+      "passed": true
+    },
+    {
+      "group": "retrieval",
+      "name": "revoked share immediately filters index",
+      "passed": true
+    },
+    {
+      "group": "citations",
+      "name": "revoked citation hidden",
+      "passed": true
+    },
+    {
+      "group": "versions",
+      "name": "edit advances canonical version",
+      "passed": true
+    },
+    {
+      "group": "versions",
+      "name": "old chunks hidden during lag",
+      "passed": true
+    },
+    {
+      "group": "versions",
+      "name": "old citation rejected after edit",
+      "passed": true
+    },
+    {
+      "group": "versions",
+      "name": "stale expected edit conflicts",
+      "passed": true
+    },
+    {
+      "group": "versions",
+      "name": "new version publishes",
+      "passed": true
+    },
+    {
+      "group": "versions",
+      "name": "old captured embedding retry fenced",
+      "passed": true
+    },
+    {
+      "group": "versions",
+      "name": "stale retry preserves new chunks",
+      "passed": true
+    },
+    {
+      "group": "versions",
+      "name": "new version has different chunk identity",
+      "passed": true
+    },
+    {
+      "group": "versions",
+      "name": "original create replay keeps same edited identity",
+      "passed": true
+    },
+    {
+      "group": "versions",
+      "name": "snapshot hash mismatch rejected",
+      "passed": true
+    },
+    {
+      "group": "versions",
+      "name": "job identity mismatch rejected",
+      "passed": true
+    },
+    {
+      "group": "versions",
+      "name": "unknown index profile does not publish",
+      "passed": true
+    },
+    {
+      "group": "versions",
+      "name": "canonical profile recovers",
+      "passed": true
+    },
+    {
+      "group": "concurrency",
+      "name": "two index publishers converge",
+      "passed": true
+    },
+    {
+      "group": "concurrency",
+      "name": "one deterministic chunk set",
+      "passed": true
+    },
+    {
+      "group": "atomicity",
+      "name": "source intent and content roll back with ingest",
+      "passed": true
+    },
+    {
+      "group": "atomicity",
+      "name": "chunks readiness and job rollback together",
+      "passed": true
+    },
+    {
+      "group": "budget",
+      "name": "reservation holds before model call",
+      "passed": true
+    },
+    {
+      "group": "generation",
+      "name": "extractive grounded fixture answer",
+      "passed": true
+    },
+    {
+      "group": "citations",
+      "name": "accepted quote equals allowed current chunk",
+      "passed": true
+    },
+    {
+      "group": "budget",
+      "name": "known usage settles and releases remainder",
+      "passed": true
+    },
+    {
+      "group": "generation",
+      "name": "operation replay same request",
+      "passed": true
+    },
+    {
+      "group": "generation",
+      "name": "answer retry does not call model again",
+      "passed": true
+    },
+    {
+      "group": "generation",
+      "name": "changed question intent conflicts",
+      "passed": true
+    },
+    {
+      "group": "isolation",
+      "name": "other requester cannot read answer",
+      "passed": true
+    },
+    {
+      "group": "isolation",
+      "name": "foreign tenant cannot read answer",
+      "passed": true
+    },
+    {
+      "group": "generation",
+      "name": "no evidence abstains without model call",
+      "passed": true
+    },
+    {
+      "group": "budget",
+      "name": "abstention consumes no reservation",
+      "passed": true
+    },
+    {
+      "group": "bounds",
+      "name": "reservation below worst case rejected",
+      "passed": true
+    },
+    {
+      "group": "bounds",
+      "name": "boolean reservation rejected",
+      "passed": true
+    },
+    {
+      "group": "bounds",
+      "name": "empty query",
+      "passed": true
+    },
+    {
+      "group": "bounds",
+      "name": "too many query terms",
+      "passed": true
+    },
+    {
+      "group": "bounds",
+      "name": "punctuation query",
+      "passed": true
+    },
+    {
+      "group": "bounds",
+      "name": "long query",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "bad_citation output cannot become accepted answer",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "fabrication output cannot become accepted answer",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "tool_attempt output cannot become accepted answer",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "over_usage output cannot become accepted answer",
+      "passed": true
+    },
+    {
+      "group": "budget",
+      "name": "untrusted usage keeps reservation",
+      "passed": true
+    },
+    {
+      "group": "uncertainty",
+      "name": "timeout records unknown",
+      "passed": true
+    },
+    {
+      "group": "uncertainty",
+      "name": "unknown outcome retains reservation",
+      "passed": true
+    },
+    {
+      "group": "uncertainty",
+      "name": "unknown retry does not make another call",
+      "passed": true
+    },
+    {
+      "group": "uncertainty",
+      "name": "authoritative local response can reconcile unknown",
+      "passed": true
+    },
+    {
+      "group": "uncertainty",
+      "name": "completion replay cannot settle twice",
+      "passed": true
+    },
+    {
+      "group": "revocation",
+      "name": "in-flight revocation suppresses output",
+      "passed": true
+    },
+    {
+      "group": "revocation",
+      "name": "in-flight call known usage still settled",
+      "passed": true
+    },
+    {
+      "group": "revocation",
+      "name": "revocation before call releases without invoking",
+      "passed": true
+    },
+    {
+      "group": "revocation",
+      "name": "completed answer cannot bypass later revoke",
+      "passed": true
+    },
+    {
+      "group": "deletion",
+      "name": "delete hides source before cleanup",
+      "passed": true
+    },
+    {
+      "group": "deletion",
+      "name": "delete hides citation immediately",
+      "passed": true
+    },
+    {
+      "group": "deletion",
+      "name": "late indexing after delete cannot resurrect",
+      "passed": true
+    },
+    {
+      "group": "deletion",
+      "name": "purge removes source and chunk rows",
+      "passed": true
+    },
+    {
+      "group": "deletion",
+      "name": "purge releases unstarted reservation",
+      "passed": true
+    },
+    {
+      "group": "deletion",
+      "name": "purged prepared request cannot run",
+      "passed": true
+    },
+    {
+      "group": "deletion",
+      "name": "purge redacts associated request context",
+      "passed": true
+    },
+    {
+      "group": "deletion",
+      "name": "purge retains canonical tombstone",
+      "passed": true
+    },
+    {
+      "group": "deletion",
+      "name": "purge replay removes no extra chunks",
+      "passed": true
+    },
+    {
+      "group": "deletion",
+      "name": "live source cannot purge",
+      "passed": true
+    },
+    {
+      "group": "deletion",
+      "name": "original upload cannot resurrect tombstone",
+      "passed": true
+    },
+    {
+      "group": "deletion",
+      "name": "purge does not refund in-flight unknown work",
+      "passed": true
+    },
+    {
+      "group": "deletion",
+      "name": "late completion after purge blocked",
+      "passed": true
+    },
+    {
+      "group": "deletion",
+      "name": "late known usage after purge settles once",
+      "passed": true
+    },
+    {
+      "group": "concurrency",
+      "name": "last budget reservation has one winner",
+      "passed": true
+    },
+    {
+      "group": "budget",
+      "name": "held never exceeds tenant allowance",
+      "passed": true
+    },
+    {
+      "group": "atomicity",
+      "name": "question reservation and intent rollback with context",
+      "passed": true
+    },
+    {
+      "group": "concurrency",
+      "name": "competing generation calls invoke model once",
+      "passed": true
+    },
+    {
+      "group": "concurrency",
+      "name": "competing generation converges on stored answer",
+      "passed": true
+    },
+    {
+      "group": "atomicity",
+      "name": "usage settlement rolls back with answer acceptance",
+      "passed": true
+    },
+    {
+      "group": "atomicity",
+      "name": "known completion retries settlement without another call",
+      "passed": true
+    },
+    {
+      "group": "evaluation",
+      "name": "queue selected expected first document",
+      "passed": true
+    },
+    {
+      "group": "evaluation",
+      "name": "ledger selected expected first document",
+      "passed": true
+    },
+    {
+      "group": "evaluation",
+      "name": "acl selected expected first document",
+      "passed": true
+    },
+    {
+      "group": "evaluation",
+      "name": "selected no-answer query returns no context",
+      "passed": true
+    },
+    {
+      "group": "evaluation",
+      "name": "selected unshared query returns no context",
+      "passed": true
+    },
+    {
+      "group": "evaluation",
+      "name": "injection document cannot authorize fixture tool request",
+      "passed": true
+    },
+    {
+      "group": "atomicity",
+      "name": "unknown/review reservation persists on reopen",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "durable upload accepted",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "fixed lesson token rejected",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "foreign document hidden",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "tenant override rejected",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "current retrieval endpoint",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "question accepts validated quote",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "citation endpoint scoped",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "foreign citation hidden",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "other requester answer hidden",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "question retry no new call",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "grant endpoint",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "granted retrieval",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "revoke endpoint",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "revoked retrieval empty",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "edit accepted",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "old answer after edit rejected",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "delete endpoint",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "purge endpoint",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "anonymous query denied",
+      "passed": true
+    },
+    {
+      "group": "cleanup",
+      "name": "tracked SQLite connections closed",
+      "passed": true
+    },
+    {
+      "group": "cleanup",
+      "name": "owned temporary directory removed",
+      "passed": true
+    },
+    {
+      "group": "cleanup",
+      "name": "owned HTTP listener closed",
+      "passed": true
+    },
+    {
+      "group": "cleanup",
+      "name": "port 3000 unused",
+      "passed": true
+    }
+  ],
+  "observations": {
+    "retrieval_isolation": {
+      "private_other_reader_results": 0,
+      "shared_reader_results": 1,
+      "revoked_reader_results": 0,
+      "revoked_citation": 404,
+      "foreign_document_status": 404,
+      "tenant_permission_version_filter_before_top_k": true,
+      "embedding": "deterministic feature hashing, not learned semantics"
+    },
+    "versioned_ingestion": {
+      "source_after_edit_version": 2,
+      "old_chunks_during_index_lag": 0,
+      "old_citation_after_edit": 404,
+      "delayed_old_publish": "stale",
+      "new_chunk_identity_changed": true,
+      "profile": {
+        "chunker": "char120-overlap20-v1",
+        "embedder": "featurehash64-v1"
+      },
+      "old_and_new_embedding_spaces_mixed": false
+    },
+    "atomic_ingestion": {
+      "source_content_intent_job_rollback_tested": true,
+      "chunk_readiness_job_rollback_tested": true,
+      "competing_publish_results": [
+        "applied",
+        "replay"
+      ],
+      "lease_or_external_embedding_service_executed": false
+    },
+    "generation_budget": {
+      "accepted_state": "done",
+      "claims": 1,
+      "usage_character_units": 171,
+      "reservation_units": 1000,
+      "held_after_known_completion": 0,
+      "model_calls_after_idempotent_retry": 1,
+      "no_context_state": "abstained",
+      "no_context_model_calls": 0,
+      "provider_tokens_or_cash": false
+    },
+    "validation_unknown": {
+      "invalid_output_states": {
+        "bad_citation": "rejected",
+        "fabrication": "rejected",
+        "tool_attempt": "rejected",
+        "over_usage": "usage_review"
+      },
+      "timeout_state": "unknown",
+      "automatic_retry_model_calls": 1,
+      "unknown_reservation_released_automatically": false,
+      "known_response_reconciled": "done",
+      "network_tool_executed": false,
+      "real_provider_contacted": false
+    },
+    "permission_races": {
+      "revoke_during_call": "blocked",
+      "known_inflight_usage_settled": true,
+      "revoke_before_call_model_calls": 0,
+      "revoke_before_call_reservation_released": true,
+      "completed_answer_after_revoke": 409,
+      "already_delivered_bytes_revoked": false
+    },
+    "deletion": {
+      "deleted_before_purge_results": 0,
+      "deleted_citation": 404,
+      "late_publish_after_delete": "stale",
+      "removed_chunk_rows": 1,
+      "source_content_rows_remaining": 0,
+      "prepared_request_after_purge": "purged",
+      "inflight_reservation_kept_until_known_completion": true,
+      "late_completion_after_purge": "blocked",
+      "tombstone_retained": true,
+      "backups_or_external_provider_data_erased": false
+    },
+    "concurrency": {
+      "competing_publish_results": [
+        "applied",
+        "replay"
+      ],
+      "budget_units_available": 1000,
+      "simultaneous_reservations_of": 1000,
+      "accepted_reservations": 1,
+      "rejected_reservation_status": 409,
+      "held_after_race": 1000,
+      "simultaneous_generation_model_calls": 1,
+      "usage_and_answer_rollback_tested": true
+    },
+    "evaluation": {
+      "judged_positive_queries": [
+        {
+          "query": "queue lease",
+          "expected": "queue",
+          "top_document_correct": true
+        },
+        {
+          "query": "credit balance",
+          "expected": "ledger",
+          "top_document_correct": true
+        },
+        {
+          "query": "membership grants",
+          "expected": "acl",
+          "top_document_correct": true
+        }
+      ],
+      "positive_queries": 3,
+      "selected_corpus_top1_accuracy": 1.0,
+      "selected_no_answer_contexts": 0,
+      "selected_unshared_contexts": 0,
+      "tool_request_case": "rejected",
+      "network_tool_executed": false,
+      "learned_model_quality_or_prompt_injection_immunity_proved": false
+    },
+    "http_contract": {
+      "upload": 202,
+      "question_with_accepted_quote": 200,
+      "foreign_citation": 404,
+      "other_requester_answer": 404,
+      "tenant_override": 400,
+      "revoked_retrieval_results": 0,
+      "old_answer_after_edit": 409,
+      "delete": 200,
+      "purge": 200,
+      "anonymous": 401,
+      "model_calls_after_question_retry": 1,
+      "real_loopback_HTTP": true,
+      "real_LLM_embedding_or_vector_service": false
+    },
+    "estimates": {
+      "documents": 100000,
+      "assumed_chunks_per_document": 20,
+      "vectors": 2000000,
+      "assumed_production_dimensions": 768,
+      "float32_vector_bytes": 6144000000,
+      "logical_float32_vector_GB": 6.144,
+      "fixture_dimensions": 64,
+      "fixture_context_chunks": 3,
+      "fixture_output_character_cap": 512,
+      "provider_tokens_or_money_measured": false,
+      "measured_capacity": false
+    }
+  },
+  "cleanup": {
+    "fixture_ports": [
+      61005
+    ],
+    "temporary_database_directory_removed": true,
+    "sqlite_connections_closed": true,
+    "temporary_http_servers_closed": true,
+    "concurrent_worker_calls_completed": 6,
+    "port_3000_used": false
+  },
+  "scope": "Local RAG orchestration using unchanged S11 session/membership authority, versioned plaintext and durable ingest, deterministic feature-hash vectors/exact scan, current permission-before-top-k, extractive model fixture, strict quote/citation/tool validation, integer character-budget reservation and uncertainty, deletion/redaction/tombstones, six competing calls, selected judged corpus, rollback/reopen and real HTTP. No real LLM/embedding/vector API, learned semantic retrieval, external tools, stream, object store, provider metering or production quality/performance claim."
+}

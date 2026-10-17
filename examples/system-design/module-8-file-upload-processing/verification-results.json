@@ -1,0 +1,722 @@
+{
+  "label": "S3",
+  "verified_date": "2026-10-17",
+  "python": "3.12.10",
+  "sqlite": "3.49.1",
+  "os": "Windows",
+  "total": 121,
+  "counts": {
+    "validation": 17,
+    "intake": 23,
+    "processing": 19,
+    "lifecycle": 19,
+    "http": 27,
+    "concurrency": 4,
+    "estimates": 8,
+    "cleanup": 4
+  },
+  "checks": [
+    {
+      "group": "validation",
+      "name": "path filename",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "absolute filename",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "unsupported extension",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "empty filename",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "wrong MIME",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "empty size",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "oversized size",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "boolean size",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "bad digest",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "unknown JSON field",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "empty operation key",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "negative time",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "invalid contracts create no metadata",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "object traversal rejected",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "cleanup outside owned object areas rejected",
+      "passed": true
+    },
+    {
+      "group": "intake",
+      "name": "equivalent create replays original ID",
+      "passed": true
+    },
+    {
+      "group": "intake",
+      "name": "create retry does not extend capability expiry",
+      "passed": true
+    },
+    {
+      "group": "intake",
+      "name": "create retry returns original capability",
+      "passed": true
+    },
+    {
+      "group": "intake",
+      "name": "changed idempotent intent conflicts",
+      "passed": true
+    },
+    {
+      "group": "intake",
+      "name": "operation scope includes owner",
+      "passed": true
+    },
+    {
+      "group": "intake",
+      "name": "operation scope includes tenant",
+      "passed": true
+    },
+    {
+      "group": "intake",
+      "name": "other owner cannot inspect metadata",
+      "passed": true
+    },
+    {
+      "group": "intake",
+      "name": "other tenant cannot complete file",
+      "passed": true
+    },
+    {
+      "group": "intake",
+      "name": "missing object prevents completion",
+      "passed": true
+    },
+    {
+      "group": "intake",
+      "name": "invalid capability cannot write",
+      "passed": true
+    },
+    {
+      "group": "intake",
+      "name": "non-ASCII capability rejected cleanly",
+      "passed": true
+    },
+    {
+      "group": "intake",
+      "name": "capability bound to exact target",
+      "passed": true
+    },
+    {
+      "group": "intake",
+      "name": "declared checksum enforced",
+      "passed": true
+    },
+    {
+      "group": "intake",
+      "name": "declared size enforced",
+      "passed": true
+    },
+    {
+      "group": "intake",
+      "name": "valid bytes installed immutably",
+      "passed": true
+    },
+    {
+      "group": "intake",
+      "name": "same-byte PUT retry does not replace object",
+      "passed": true
+    },
+    {
+      "group": "intake",
+      "name": "immutable object rejects different bytes",
+      "passed": true
+    },
+    {
+      "group": "intake",
+      "name": "uploaded bytes remain unavailable before completion",
+      "passed": true
+    },
+    {
+      "group": "intake",
+      "name": "close/reopen retains original upload intent",
+      "passed": true
+    },
+    {
+      "group": "intake",
+      "name": "completion enters quarantine",
+      "passed": true
+    },
+    {
+      "group": "intake",
+      "name": "completion replay is stable",
+      "passed": true
+    },
+    {
+      "group": "intake",
+      "name": "completion creates one durable job",
+      "passed": true
+    },
+    {
+      "group": "intake",
+      "name": "post-completion upload cannot change pinned version",
+      "passed": true
+    },
+    {
+      "group": "processing",
+      "name": "job insert failure rolls back quarantine transition",
+      "passed": true
+    },
+    {
+      "group": "processing",
+      "name": "completion rollback keeps uploaded object for retry",
+      "passed": true
+    },
+    {
+      "group": "processing",
+      "name": "worker claims quarantined source",
+      "passed": true
+    },
+    {
+      "group": "processing",
+      "name": "text processor derives bounded summary",
+      "passed": true
+    },
+    {
+      "group": "processing",
+      "name": "processing source cannot yet download",
+      "passed": true
+    },
+    {
+      "group": "processing",
+      "name": "current worker publishes ready result",
+      "passed": true
+    },
+    {
+      "group": "processing",
+      "name": "ready download is original checked bytes",
+      "passed": true
+    },
+    {
+      "group": "processing",
+      "name": "duplicate worker result cannot republish",
+      "passed": true
+    },
+    {
+      "group": "processing",
+      "name": "ready metadata references actual derived bytes",
+      "passed": true
+    },
+    {
+      "group": "processing",
+      "name": "bad-utf8 is rejected with explicit reason",
+      "passed": true
+    },
+    {
+      "group": "processing",
+      "name": "bad-utf8 never downloadable",
+      "passed": true
+    },
+    {
+      "group": "processing",
+      "name": "nul is rejected with explicit reason",
+      "passed": true
+    },
+    {
+      "group": "processing",
+      "name": "nul never downloadable",
+      "passed": true
+    },
+    {
+      "group": "processing",
+      "name": "marker is rejected with explicit reason",
+      "passed": true
+    },
+    {
+      "group": "processing",
+      "name": "marker never downloadable",
+      "passed": true
+    },
+    {
+      "group": "processing",
+      "name": "artifact write can survive rolled-back metadata publish",
+      "passed": true
+    },
+    {
+      "group": "processing",
+      "name": "failed publication stays processing",
+      "passed": true
+    },
+    {
+      "group": "processing",
+      "name": "collector removes unreferenced artifact while retaining source",
+      "passed": true
+    },
+    {
+      "group": "processing",
+      "name": "retry can recreate artifact and publish correctly",
+      "passed": true
+    },
+    {
+      "group": "lifecycle",
+      "name": "unexpired job cannot be claimed",
+      "passed": true
+    },
+    {
+      "group": "lifecycle",
+      "name": "lease equality fences publication",
+      "passed": true
+    },
+    {
+      "group": "lifecycle",
+      "name": "expired claim gets a new token",
+      "passed": true
+    },
+    {
+      "group": "lifecycle",
+      "name": "old token cannot publish after reclaim",
+      "passed": true
+    },
+    {
+      "group": "lifecycle",
+      "name": "new owner publishes one artifact",
+      "passed": true
+    },
+    {
+      "group": "lifecycle",
+      "name": "delete fences a previously computed result",
+      "passed": true
+    },
+    {
+      "group": "lifecycle",
+      "name": "deleted source physically collected",
+      "passed": true
+    },
+    {
+      "group": "lifecycle",
+      "name": "still-unexpired capability cannot recreate deleted source",
+      "passed": true
+    },
+    {
+      "group": "lifecycle",
+      "name": "deleted metadata remains tombstoned",
+      "passed": true
+    },
+    {
+      "group": "lifecycle",
+      "name": "repeated delete and cleanup are harmless",
+      "passed": true
+    },
+    {
+      "group": "lifecycle",
+      "name": "completion at upload-expiry equality is too late",
+      "passed": true
+    },
+    {
+      "group": "lifecycle",
+      "name": "sweeper expires abandoned metadata and removes bytes",
+      "passed": true
+    },
+    {
+      "group": "lifecycle",
+      "name": "expired create replay does not renew upload window",
+      "passed": true
+    },
+    {
+      "group": "lifecycle",
+      "name": "expired replay capability remains expired",
+      "passed": true
+    },
+    {
+      "group": "lifecycle",
+      "name": "three crashed claims consume bounded attempt budget",
+      "passed": true
+    },
+    {
+      "group": "lifecycle",
+      "name": "expired third attempt becomes failed",
+      "passed": true
+    },
+    {
+      "group": "lifecycle",
+      "name": "inventory collector removes metadata-free objects",
+      "passed": true
+    },
+    {
+      "group": "lifecycle",
+      "name": "missing ready object is availability failure, not success",
+      "passed": true
+    },
+    {
+      "group": "lifecycle",
+      "name": "cleanup does not touch outside-area sentinel",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "finite metadata cap rejects new work",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "original replay still works at metadata capacity",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "intake requires authentication",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "intake requires operation key",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "malformed JSON returns 400",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "create responds 201",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "real create replay retains ID",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "metadata response is no-store",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "other owner status is hidden",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "other tenant delete is hidden",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "missing bytes block complete",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "raw object is not publicly downloadable",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "PUT requires upload capability",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "PUT declared type restricted",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "oversized declared body rejected before reading",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "actual wrong checksum returns 422",
+      "passed": true
+    },
+    {
+      "group": "concurrency",
+      "name": "two actual PUTs create then replay without overwrite",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "uploaded but unprocessed object denied",
+      "passed": true
+    },
+    {
+      "group": "concurrency",
+      "name": "two actual completions are accepted idempotently",
+      "passed": true
+    },
+    {
+      "group": "concurrency",
+      "name": "concurrent completion creates one durable job",
+      "passed": true
+    },
+    {
+      "group": "concurrency",
+      "name": "independent connections produce one live processing claim",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "READY download returns exact accepted source",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "download is attachment",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "download disables MIME sniffing",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "download served as UTF-8 plain text",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "private download is no-store",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "other owner cannot download READY file",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "completed upload capability cannot overwrite READY",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "delete tombstones immediately",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "new download after delete is gone",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "late PUT cannot resurrect tombstoned object",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "delete replay remains successful",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "cleanup removes deleted source and result",
+      "passed": true
+    },
+    {
+      "group": "estimates",
+      "name": "average_incoming_MiB_per_second",
+      "passed": true
+    },
+    {
+      "group": "estimates",
+      "name": "hypothetical_peak_uploads_per_second",
+      "passed": true
+    },
+    {
+      "group": "estimates",
+      "name": "raw_30_day_storage_GiB",
+      "passed": true
+    },
+    {
+      "group": "estimates",
+      "name": "derived_30_day_storage_GiB",
+      "passed": true
+    },
+    {
+      "group": "estimates",
+      "name": "average_required_CPU_cores_at_full_utilization",
+      "passed": true
+    },
+    {
+      "group": "estimates",
+      "name": "daily_download_GiB",
+      "passed": true
+    },
+    {
+      "group": "estimates",
+      "name": "one_day_unfinished_parts_GiB",
+      "passed": true
+    },
+    {
+      "group": "estimates",
+      "name": "calculations make no capacity claim",
+      "passed": true
+    },
+    {
+      "group": "cleanup",
+      "name": "all tracked metadata connections closed",
+      "passed": true
+    },
+    {
+      "group": "cleanup",
+      "name": "owned temporary directory removed",
+      "passed": true
+    },
+    {
+      "group": "cleanup",
+      "name": "owned HTTP listener closed",
+      "passed": true
+    },
+    {
+      "group": "cleanup",
+      "name": "port 3000 not used",
+      "passed": true
+    }
+  ],
+  "observations": {
+    "intake": {
+      "create_replay_preserves_id_and_expiry": true,
+      "upload_window_ms": 10000,
+      "same_byte_upload_replay": true,
+      "wrong_target_capability_status": 403,
+      "wrong_checksum_status": 422,
+      "before_processing_download_status": 409,
+      "complete_replay_job_count": 1,
+      "post_completion_PUT_status": 409,
+      "client_filename_used_as_disk_key": false
+    },
+    "processing": {
+      "completed_state": "quarantined",
+      "claimed_state": "processing",
+      "accepted_state": "ready",
+      "rejected_examples": [
+        "unsupported_utf8",
+        "lesson_content_policy"
+      ],
+      "completion_job_transaction_rollback": true,
+      "artifact_survives_metadata_rollback": true,
+      "orphan_artifact_collected": true,
+      "publication_retry_succeeds": true,
+      "antivirus_or_general_document_safety_proven": false
+    },
+    "lifecycle": {
+      "lease_ms": 2000,
+      "stale_publication_accepted": false,
+      "post_delete_publication_accepted": false,
+      "late_capability_resurrection_status": 410,
+      "expiry_equality_ms": 10000,
+      "abandoned_state_after_sweep": "expired",
+      "expired_replay_renews_window": false,
+      "three_crashes_state": "failed",
+      "ready_but_missing_source_status": 503,
+      "arbitrary_external_cloud_writes_coordinated": false
+    },
+    "concurrency": {
+      "concurrent_call_count": 6,
+      "PUT_statuses_sorted": [
+        200,
+        201
+      ],
+      "completion_statuses": [
+        202,
+        202
+      ],
+      "durable_processing_jobs": 1,
+      "live_claims": 1,
+      "winner_order_assumed": false
+    },
+    "http_contract": {
+      "create_status": 201,
+      "PUT_without_owner_bearer_allowed_with_capability": true,
+      "before_ready_download_status": 409,
+      "ready_download_status": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "content_disposition": "attachment; filename=\"download.txt\"",
+      "cache_control": "no-store",
+      "nosniff": true,
+      "after_delete_download_status": 410,
+      "late_PUT_after_delete_status": 410,
+      "real_S3_or_multipart_protocol_implemented": false
+    },
+    "estimates": {
+      "uploads_per_day": 10000,
+      "assumed_mean_bytes_per_upload": 2097152,
+      "average_incoming_MiB_per_second": 0.231,
+      "selected_peak_multiplier": 10,
+      "hypothetical_peak_uploads_per_second": 1.157,
+      "raw_30_day_storage_GiB": 585.938,
+      "assumed_derived_fraction": 0.25,
+      "derived_30_day_storage_GiB": 146.484,
+      "assumed_CPU_seconds_per_processing_job": 2,
+      "average_required_CPU_cores_at_full_utilization": 0.231,
+      "selected_downloads_per_upload": 5,
+      "daily_download_GiB": 97.656,
+      "unfinished_sessions_per_day": 1000,
+      "assumed_parts_per_session": 4,
+      "assumed_MiB_per_part": 8,
+      "one_day_unfinished_parts_GiB": 31.25,
+      "fixture_max_upload_bytes": 1024,
+      "measured_capacity": false
+    }
+  },
+  "cleanup": {
+    "fixture_ports": [
+      54092
+    ],
+    "temporary_database_directory_removed": true,
+    "sqlite_connections_closed": true,
+    "temporary_http_servers_closed": true,
+    "concurrent_worker_calls_completed": 6,
+    "port_3000_used": false
+  },
+  "scope": "Owned local files/SQLite and actual loopback HTTP only. Immutable 1 KiB text objects, custom bearer capability and deterministic content policy; no S3 emulation, multipart transfer, antivirus, general document safety, external uploads, production authentication/TLS, distributed locking/clock, power-loss guarantee or load benchmark. Local writes and inventory cleanup share the SQLite write authority; cloud direct uploads require a different coordination protocol."
+}

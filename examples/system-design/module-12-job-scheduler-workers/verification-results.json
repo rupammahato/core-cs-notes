@@ -1,0 +1,422 @@
+{
+  "label": "S7",
+  "verified_date": "2026-10-17",
+  "python": "3.12.10",
+  "sqlite": "3.49.1",
+  "os": "Windows",
+  "total": 65,
+  "counts": {
+    "identity": 11,
+    "leases": 8,
+    "effects": 9,
+    "retries": 11,
+    "concurrency": 4,
+    "atomicity": 3,
+    "scheduling": 5,
+    "http": 10,
+    "cleanup": 4
+  },
+  "checks": [
+    {
+      "group": "identity",
+      "name": "durable pending job",
+      "passed": true
+    },
+    {
+      "group": "identity",
+      "name": "equivalent create replay",
+      "passed": true
+    },
+    {
+      "group": "identity",
+      "name": "changed job conflicts",
+      "passed": true
+    },
+    {
+      "group": "identity",
+      "name": "owner hidden",
+      "passed": true
+    },
+    {
+      "group": "identity",
+      "name": "tenant hidden",
+      "passed": true
+    },
+    {
+      "group": "identity",
+      "name": "boolean delta",
+      "passed": true
+    },
+    {
+      "group": "identity",
+      "name": "zero delta",
+      "passed": true
+    },
+    {
+      "group": "identity",
+      "name": "negative due",
+      "passed": true
+    },
+    {
+      "group": "identity",
+      "name": "empty interval",
+      "passed": true
+    },
+    {
+      "group": "identity",
+      "name": "reserved occurrence namespace",
+      "passed": true
+    },
+    {
+      "group": "leases",
+      "name": "not before due",
+      "passed": true
+    },
+    {
+      "group": "leases",
+      "name": "first claim bounded",
+      "passed": true
+    },
+    {
+      "group": "leases",
+      "name": "cannot acknowledge missing effect",
+      "passed": true
+    },
+    {
+      "group": "effects",
+      "name": "effect applied",
+      "passed": true
+    },
+    {
+      "group": "effects",
+      "name": "same lease effect replay",
+      "passed": true
+    },
+    {
+      "group": "effects",
+      "name": "committed effect survives reopen",
+      "passed": true
+    },
+    {
+      "group": "leases",
+      "name": "expired claim has new token",
+      "passed": true
+    },
+    {
+      "group": "leases",
+      "name": "stale worker fenced",
+      "passed": true
+    },
+    {
+      "group": "effects",
+      "name": "reclaimed effect deduplicated",
+      "passed": true
+    },
+    {
+      "group": "effects",
+      "name": "reclaimed acknowledgement succeeds",
+      "passed": true
+    },
+    {
+      "group": "effects",
+      "name": "counter incremented once",
+      "passed": true
+    },
+    {
+      "group": "leases",
+      "name": "terminal worker cannot renew",
+      "passed": true
+    },
+    {
+      "group": "effects",
+      "name": "cancel cannot undo effect",
+      "passed": true
+    },
+    {
+      "group": "retries",
+      "name": "bounded renewal",
+      "passed": true
+    },
+    {
+      "group": "retries",
+      "name": "renewal hard duration cap",
+      "passed": true
+    },
+    {
+      "group": "retries",
+      "name": "cannot revive expired lease",
+      "passed": true
+    },
+    {
+      "group": "retries",
+      "name": "reject excessive retry delay",
+      "passed": true
+    },
+    {
+      "group": "retries",
+      "name": "retry scheduled",
+      "passed": true
+    },
+    {
+      "group": "identity",
+      "name": "retry preserves original intent replay",
+      "passed": true
+    },
+    {
+      "group": "retries",
+      "name": "delayed retry not claimed early",
+      "passed": true
+    },
+    {
+      "group": "retries",
+      "name": "third attempt allowed",
+      "passed": true
+    },
+    {
+      "group": "retries",
+      "name": "third failure terminal",
+      "passed": true
+    },
+    {
+      "group": "retries",
+      "name": "running cancellation",
+      "passed": true
+    },
+    {
+      "group": "retries",
+      "name": "cancel fences running effect",
+      "passed": true
+    },
+    {
+      "group": "retries",
+      "name": "cancel replay terminal",
+      "passed": true
+    },
+    {
+      "group": "leases",
+      "name": "deadline bounds lease",
+      "passed": true
+    },
+    {
+      "group": "effects",
+      "name": "effect before deadline",
+      "passed": true
+    },
+    {
+      "group": "effects",
+      "name": "failed can have committed effect",
+      "passed": true
+    },
+    {
+      "group": "leases",
+      "name": "deadline boundary rejects ack",
+      "passed": true
+    },
+    {
+      "group": "concurrency",
+      "name": "two claims admit distinct tenants",
+      "passed": true
+    },
+    {
+      "group": "concurrency",
+      "name": "global inflight bound",
+      "passed": true
+    },
+    {
+      "group": "concurrency",
+      "name": "round robin advances to third tenant",
+      "passed": true
+    },
+    {
+      "group": "concurrency",
+      "name": "tenant cannot hold second live slot",
+      "passed": true
+    },
+    {
+      "group": "atomicity",
+      "name": "effect marker rolls back with counter",
+      "passed": true
+    },
+    {
+      "group": "atomicity",
+      "name": "effect recovers after rollback",
+      "passed": true
+    },
+    {
+      "group": "scheduling",
+      "name": "tick not early",
+      "passed": true
+    },
+    {
+      "group": "atomicity",
+      "name": "occurrence and frontier rollback",
+      "passed": true
+    },
+    {
+      "group": "scheduling",
+      "name": "misses coalesced to newest slot",
+      "passed": true
+    },
+    {
+      "group": "scheduling",
+      "name": "tick replay creates none",
+      "passed": true
+    },
+    {
+      "group": "scheduling",
+      "name": "next frontier persisted",
+      "passed": true
+    },
+    {
+      "group": "scheduling",
+      "name": "next interval is new occurrence",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "accepted durable create",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "cache prevention",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "owner GET",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "other owner hidden",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "other tenant hidden",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "anonymous denied",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "worker API not public",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "unknown field rejected",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "malformed body rejected",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "owner cancellation",
+      "passed": true
+    },
+    {
+      "group": "cleanup",
+      "name": "tracked SQLite connections closed",
+      "passed": true
+    },
+    {
+      "group": "cleanup",
+      "name": "owned temporary directory removed",
+      "passed": true
+    },
+    {
+      "group": "cleanup",
+      "name": "owned HTTP listener closed",
+      "passed": true
+    },
+    {
+      "group": "cleanup",
+      "name": "port 3000 unused",
+      "passed": true
+    }
+  ],
+  "observations": {
+    "effect_recovery": {
+      "effect_before_ack": "applied",
+      "reopen_after_omitting_ack": true,
+      "new_claim_token": true,
+      "old_worker_effect": "stale",
+      "new_worker_effect": "replay",
+      "counter": 7,
+      "final_state": "succeeded",
+      "actual_process_kill": false
+    },
+    "retry_deadline": {
+      "max_attempts": 3,
+      "renewal_hard_cap_ms": 6000,
+      "deadline_state": "failed",
+      "deadline_effect_applied": true,
+      "failed_proves_no_effect": false,
+      "original_intent_replay_after_retry": true
+    },
+    "admission": {
+      "first_two_tenants": [
+        "a",
+        "b"
+      ],
+      "third_tenant": "c",
+      "global_cap": 2,
+      "tenant_cap": 1,
+      "concurrent_claims": 2
+    },
+    "scheduling": {
+      "missed_slots": [
+        1000,
+        2000,
+        3000,
+        4000
+      ],
+      "coalesced_created_slots": [
+        4000
+      ],
+      "next_due_after_first_tick": 5000,
+      "tick_replay_created": 0,
+      "occurrence_frontier_rollback_tested": true
+    },
+    "http_contract": {
+      "POST_jobs": 202,
+      "GET_owner": 200,
+      "GET_other_owner": 404,
+      "GET_other_tenant": 404,
+      "anonymous": 401,
+      "public_claim_endpoint": 404,
+      "cancel_state": "cancelled",
+      "real_loopback_HTTP": true
+    },
+    "estimates": {
+      "jobs_per_day": 864000,
+      "average_arrivals_per_second": 10,
+      "assumed_mean_job_seconds": 0.5,
+      "mean_busy_slots_at_average": 5,
+      "one_hour_backlog_at_10_per_second": 36000,
+      "drain_seconds_at_15_service_10_arrival": 7200,
+      "fixture_global_inflight_cap": 2,
+      "fixture_per_tenant_inflight_cap": 1,
+      "measured_capacity": false
+    }
+  },
+  "cleanup": {
+    "fixture_ports": [
+      65219
+    ],
+    "temporary_database_directory_removed": true,
+    "sqlite_connections_closed": true,
+    "temporary_http_servers_closed": true,
+    "concurrent_worker_calls_completed": 2,
+    "port_3000_used": false
+  },
+  "scope": "Local SQLite scheduling, coalesced interval occurrences, two-slot tenant admission, fenced leases, local transactional effect dedupe, bounded retries, rollback and actual loopback HTTP. Explicit time inputs; no cron daemon, broker, external effect or production load test."
+}

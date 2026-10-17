@@ -1,0 +1,319 @@
+{
+  "labels": [
+    "S7",
+    "S8",
+    "S9"
+  ],
+  "verified_date": "2026-10-17",
+  "total_checks": 204,
+  "sections": [
+    {
+      "label": "S7",
+      "checks": 65,
+      "counts": {
+        "identity": 11,
+        "leases": 8,
+        "effects": 9,
+        "retries": 11,
+        "concurrency": 4,
+        "atomicity": 3,
+        "scheduling": 5,
+        "http": 10,
+        "cleanup": 4
+      },
+      "runtime": {
+        "python": "3.12.10",
+        "sqlite": "3.49.1",
+        "os": "Windows"
+      },
+      "content": {
+        "label": "S7",
+        "chapter": "system-design-handbook-part-14-module-12-job-scheduler-workers.md",
+        "words": 5395,
+        "lines": 785,
+        "questions": 30,
+        "practice_tasks": 10,
+        "unchecked_learning_items": 12,
+        "source_fidelity": [
+          "../worked-systems-s4-s6/runtime.py",
+          "scheduler.py"
+        ],
+        "output_fidelity": [
+          "effect_recovery",
+          "retry_deadline",
+          "admission",
+          "scheduling",
+          "http_contract",
+          "estimates"
+        ],
+        "mock_minutes": 45,
+        "verified_checks": 65,
+        "next": "S8: Checkout, payments and credit ledger",
+        "result_fidelity": {
+          "effect_recovery": true,
+          "retry_deadline": true,
+          "admission": true,
+          "scheduling": true,
+          "http_contract": true,
+          "estimates": true,
+          "versions": true
+        },
+        "authored_internal_links": 5
+      },
+      "cleanup": {
+        "fixture_ports": [
+          65219
+        ],
+        "temporary_database_directory_removed": true,
+        "sqlite_connections_closed": true,
+        "temporary_http_servers_closed": true,
+        "concurrent_worker_calls_completed": 2,
+        "port_3000_used": false
+      },
+      "scope": "Local SQLite scheduling, coalesced interval occurrences, two-slot tenant admission, fenced leases, local transactional effect dedupe, bounded retries, rollback and actual loopback HTTP. Explicit time inputs; no cron daemon, broker, external effect or production load test."
+    },
+    {
+      "label": "S8",
+      "checks": 62,
+      "counts": {
+        "checkout": 4,
+        "authorization": 3,
+        "uncertainty": 7,
+        "ledger": 16,
+        "binding": 8,
+        "concurrency": 3,
+        "atomicity": 5,
+        "http": 12,
+        "cleanup": 4
+      },
+      "runtime": {
+        "python": "3.12.10",
+        "sqlite": "3.49.1",
+        "os": "Windows"
+      },
+      "content": {
+        "label": "S8",
+        "chapter": "system-design-handbook-part-15-module-13-checkout-payments-credit-ledger.md",
+        "words": 5735,
+        "lines": 851,
+        "questions": 30,
+        "practice_tasks": 10,
+        "unchecked_learning_items": 12,
+        "source_fidelity": [
+          "../worked-systems-s4-s6/runtime.py",
+          "checkout.py"
+        ],
+        "output_fidelity": [
+          "payment_recovery",
+          "binding",
+          "concurrency",
+          "rollback_reconciliation",
+          "http_contract",
+          "estimates"
+        ],
+        "mock_minutes": 45,
+        "verified_checks": 62,
+        "next": "S9: Search and autocomplete",
+        "result_fidelity": {
+          "payment_recovery": true,
+          "binding": true,
+          "concurrency": true,
+          "rollback_reconciliation": true,
+          "http_contract": true,
+          "estimates": true,
+          "versions": true
+        },
+        "authored_internal_links": 6
+      },
+      "cleanup": {
+        "fixture_ports": [
+          65231
+        ],
+        "temporary_database_directory_removed": true,
+        "sqlite_connections_closed": true,
+        "temporary_http_servers_closed": true,
+        "concurrent_worker_calls_completed": 4,
+        "port_3000_used": false
+      },
+      "scope": "Separate local provider and merchant SQLite stores; injected reply loss after provider commit, immutable catalog snapshots, signed fixture callback, payment/event/grant dedupe, balanced integer credit journals, competing spends, reversal, rollback and real merchant loopback HTTP. No real charge, bank ledger, card data, refund or provider network."
+    },
+    {
+      "label": "S9",
+      "checks": 77,
+      "counts": {
+        "outbox": 4,
+        "retrieval": 10,
+        "authorization": 10,
+        "identity": 5,
+        "versions": 13,
+        "bounds": 8,
+        "atomicity": 2,
+        "concurrency": 2,
+        "rebuild": 5,
+        "http": 14,
+        "cleanup": 4
+      },
+      "runtime": {
+        "python": "3.12.10",
+        "sqlite": "3.49.1",
+        "os": "Windows"
+      },
+      "content": {
+        "label": "S9",
+        "chapter": "system-design-handbook-part-16-module-14-search-autocomplete.md",
+        "words": 5652,
+        "lines": 814,
+        "questions": 30,
+        "practice_tasks": 10,
+        "unchecked_learning_items": 12,
+        "source_fidelity": [
+          "../worked-systems-s4-s6/runtime.py",
+          "search.py"
+        ],
+        "output_fidelity": [
+          "permissions",
+          "version_fences",
+          "retrieval",
+          "rollback_rebuild",
+          "http_contract",
+          "estimates"
+        ],
+        "mock_minutes": 45,
+        "verified_checks": 77,
+        "next": "S10: Load balancer and distributed cache",
+        "result_fidelity": {
+          "permissions": true,
+          "version_fences": true,
+          "retrieval": true,
+          "rollback_rebuild": true,
+          "http_contract": true,
+          "estimates": true,
+          "versions": true
+        },
+        "authored_internal_links": 6
+      },
+      "cleanup": {
+        "fixture_ports": [
+          65245
+        ],
+        "temporary_database_directory_removed": true,
+        "sqlite_connections_closed": true,
+        "temporary_http_servers_closed": true,
+        "concurrent_worker_calls_completed": 2,
+        "port_3000_used": false
+      },
+      "scope": "Actual SQLite FTS5 full text and title-token prefix search; canonical ACL, tenant and version checks before top-k results, versioned outbox, stale/tombstone fences, rollback, two projector calls, local atomic rebuild and real HTTP. Selected relevance judgements only; no external search cluster, semantic ranking, online reindex or performance benchmark."
+    }
+  ],
+  "roadmap_document_checks": 17,
+  "website": {
+    "build_passed": true,
+    "static_pages": 121,
+    "routes_checked": 53,
+    "all_routes_200": true,
+    "assertions": {
+      "schedulerTitle": true,
+      "ledgerTitle": true,
+      "searchTitle": true,
+      "schedulerEvidence": true,
+      "ledgerEvidence": true,
+      "searchEvidence": true,
+      "architecture": true,
+      "predecessor": true,
+      "schedulerNext": true,
+      "ledgerNext": true,
+      "searchNext": true,
+      "workedGroup": true,
+      "roadmapLinks": true,
+      "allFoundations": true,
+      "homeCard": true,
+      "bankRetained": true
+    },
+    "search": {
+      "system-design:Scheduler": {
+        "status": 200,
+        "results": 22,
+        "indexed": true,
+        "scoped": true
+      },
+      "system-design:Ledger": {
+        "status": 200,
+        "results": 28,
+        "indexed": true,
+        "scoped": true
+      },
+      "system-design:Autocomplete": {
+        "status": 200,
+        "results": 14,
+        "indexed": true,
+        "scoped": true
+      },
+      "resume-skills:Consolidation": {
+        "status": 200,
+        "results": 18,
+        "indexed": true,
+        "scoped": true
+      }
+    },
+    "next_route_status": 404,
+    "temporary_server_closed": true,
+    "cached_font_fixture_used": true
+  },
+  "ports_stopped": {
+    "3000": true,
+    "63169": true,
+    "65219": true,
+    "65231": true,
+    "65245": true
+  },
+  "existing_handbooks": [
+    {
+      "subject": "DSA Notes",
+      "files": 17,
+      "lines": 17589
+    },
+    {
+      "subject": "OOP Notes",
+      "files": 13,
+      "lines": 8806
+    },
+    {
+      "subject": "OS Notes",
+      "files": 13,
+      "lines": 6341
+    },
+    {
+      "subject": "DBMS Notes",
+      "files": 13,
+      "lines": 9613
+    },
+    {
+      "subject": "CN Notes",
+      "files": 13,
+      "lines": 9322
+    },
+    {
+      "subject": "Resume Skills Notes",
+      "files": 31,
+      "lines": 37575
+    }
+  ],
+  "system_design": {
+    "files": 16,
+    "lines": 14369,
+    "published_worked_systems": [
+      "S0",
+      "S1",
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S6",
+      "S7",
+      "S8",
+      "S9"
+    ]
+  },
+  "git_diff_check_passed": true,
+  "next": "S10: Load balancer and distributed cache"
+}

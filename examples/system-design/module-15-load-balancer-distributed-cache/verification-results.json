@@ -1,0 +1,464 @@
+{
+  "label": "S10",
+  "verified_date": "2026-10-17",
+  "python": "3.12.10",
+  "sqlite": "3.49.1",
+  "os": "Windows",
+  "total": 69,
+  "counts": {
+    "placement": 6,
+    "bounds": 7,
+    "routing": 9,
+    "cache": 6,
+    "coherence": 6,
+    "isolation": 2,
+    "failure": 7,
+    "membership": 4,
+    "eviction": 3,
+    "concurrency": 2,
+    "atomicity": 2,
+    "http": 11,
+    "cleanup": 4
+  },
+  "checks": [
+    {
+      "group": "placement",
+      "name": "membership order deterministic",
+      "passed": true
+    },
+    {
+      "group": "placement",
+      "name": "replicas are distinct physical nodes",
+      "passed": true
+    },
+    {
+      "group": "placement",
+      "name": "all configured nodes receive sample keys",
+      "passed": true
+    },
+    {
+      "group": "placement",
+      "name": "addition moves only to added node",
+      "passed": true
+    },
+    {
+      "group": "placement",
+      "name": "removal preserves unaffected primaries",
+      "passed": true
+    },
+    {
+      "group": "placement",
+      "name": "single node does not duplicate replica",
+      "passed": true
+    },
+    {
+      "group": "bounds",
+      "name": "empty ring",
+      "passed": true
+    },
+    {
+      "group": "bounds",
+      "name": "duplicate nodes",
+      "passed": true
+    },
+    {
+      "group": "bounds",
+      "name": "invalid node",
+      "passed": true
+    },
+    {
+      "group": "bounds",
+      "name": "too many nodes",
+      "passed": true
+    },
+    {
+      "group": "bounds",
+      "name": "boolean vnode count",
+      "passed": true
+    },
+    {
+      "group": "routing",
+      "name": "least active sends second elsewhere",
+      "passed": true
+    },
+    {
+      "group": "routing",
+      "name": "drain preserves active ownership",
+      "passed": true
+    },
+    {
+      "group": "routing",
+      "name": "drain avoids new dispatch",
+      "passed": true
+    },
+    {
+      "group": "routing",
+      "name": "capacity exhausted returns unavailable",
+      "passed": true
+    },
+    {
+      "group": "routing",
+      "name": "finish draining request",
+      "passed": true
+    },
+    {
+      "group": "routing",
+      "name": "double finish harmless",
+      "passed": true
+    },
+    {
+      "group": "routing",
+      "name": "no healthy nondraining backend",
+      "passed": true
+    },
+    {
+      "group": "routing",
+      "name": "unhealthy backend active calls may finish",
+      "passed": true
+    },
+    {
+      "group": "routing",
+      "name": "recovered eligibility",
+      "passed": true
+    },
+    {
+      "group": "cache",
+      "name": "first read misses",
+      "passed": true
+    },
+    {
+      "group": "cache",
+      "name": "second read hits",
+      "passed": true
+    },
+    {
+      "group": "cache",
+      "name": "two cache copies populated",
+      "passed": true
+    },
+    {
+      "group": "cache",
+      "name": "every read probes source",
+      "passed": true
+    },
+    {
+      "group": "cache",
+      "name": "TTL before boundary hits",
+      "passed": true
+    },
+    {
+      "group": "cache",
+      "name": "TTL at boundary misses",
+      "passed": true
+    },
+    {
+      "group": "coherence",
+      "name": "lost invalidation cannot return old value",
+      "passed": true
+    },
+    {
+      "group": "coherence",
+      "name": "late old-version fill rejected",
+      "passed": true
+    },
+    {
+      "group": "coherence",
+      "name": "stale source CAS conflicts",
+      "passed": true
+    },
+    {
+      "group": "coherence",
+      "name": "delete hides old cached copies",
+      "passed": true
+    },
+    {
+      "group": "coherence",
+      "name": "late fill after delete rejected",
+      "passed": true
+    },
+    {
+      "group": "coherence",
+      "name": "explicit recreation advances version",
+      "passed": true
+    },
+    {
+      "group": "bounds",
+      "name": "boolean expected version",
+      "passed": true
+    },
+    {
+      "group": "bounds",
+      "name": "oversize cached value",
+      "passed": true
+    },
+    {
+      "group": "isolation",
+      "name": "another owner has no record",
+      "passed": true
+    },
+    {
+      "group": "isolation",
+      "name": "tenant cache key separated",
+      "passed": true
+    },
+    {
+      "group": "failure",
+      "name": "read from surviving populated copy",
+      "passed": true
+    },
+    {
+      "group": "failure",
+      "name": "old target-set fill rejected",
+      "passed": true
+    },
+    {
+      "group": "failure",
+      "name": "rejoin clears old values",
+      "passed": true
+    },
+    {
+      "group": "failure",
+      "name": "old incarnation fill rejected",
+      "passed": true
+    },
+    {
+      "group": "failure",
+      "name": "rejoined topology reads current value",
+      "passed": true
+    },
+    {
+      "group": "membership",
+      "name": "same config no epoch change",
+      "passed": true
+    },
+    {
+      "group": "membership",
+      "name": "new config advances epoch",
+      "passed": true
+    },
+    {
+      "group": "membership",
+      "name": "old epoch fill rejected",
+      "passed": true
+    },
+    {
+      "group": "membership",
+      "name": "membership epoch starts cold",
+      "passed": true
+    },
+    {
+      "group": "failure",
+      "name": "all caches down falls back to source",
+      "passed": true
+    },
+    {
+      "group": "failure",
+      "name": "unavailable caches not filled",
+      "passed": true
+    },
+    {
+      "group": "eviction",
+      "name": "LRU preserves recently read key",
+      "passed": true
+    },
+    {
+      "group": "eviction",
+      "name": "LRU removes older key",
+      "passed": true
+    },
+    {
+      "group": "eviction",
+      "name": "capacity respected",
+      "passed": true
+    },
+    {
+      "group": "concurrency",
+      "name": "two cold reads coalesce locally",
+      "passed": true
+    },
+    {
+      "group": "concurrency",
+      "name": "competing CAS has one winner",
+      "passed": true
+    },
+    {
+      "group": "atomicity",
+      "name": "source update rollback retains version and value",
+      "passed": true
+    },
+    {
+      "group": "atomicity",
+      "name": "source survives reopen with cold cache",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "source write",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "cold read",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "warm read",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "other owner hidden",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "other tenant hidden",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "anonymous denied",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "body tenant override rejected",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "stale version conflicts",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "delete source",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "deleted read hidden",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "router slots released on errors",
+      "passed": true
+    },
+    {
+      "group": "cleanup",
+      "name": "tracked SQLite connections closed",
+      "passed": true
+    },
+    {
+      "group": "cleanup",
+      "name": "owned temporary directory removed",
+      "passed": true
+    },
+    {
+      "group": "cleanup",
+      "name": "owned HTTP listener closed",
+      "passed": true
+    },
+    {
+      "group": "cleanup",
+      "name": "port 3000 unused",
+      "passed": true
+    }
+  ],
+  "observations": {
+    "placement": {
+      "sample_keys": 2000,
+      "old_primary_counts": {
+        "a": 647,
+        "b": 683,
+        "c": 670
+      },
+      "added_node_primary_moves": 512,
+      "movement_denominator": "all 2000 sampled keys",
+      "moved_fraction": 0.256,
+      "modulo_index_moves": 1521,
+      "only_added_node_receives_moved_primaries": true,
+      "virtual_nodes_per_physical_node": 32,
+      "throughput_benchmark": false
+    },
+    "routing": {
+      "initial_two_backends_distinct": true,
+      "drain_keeps_inflight": true,
+      "new_requests_skip_draining": true,
+      "per_backend_inflight_cap": 2,
+      "all_unavailable_status": 503,
+      "upstream_network_requests_executed": false
+    },
+    "coherence": {
+      "first_read": "miss",
+      "second_read": "hit",
+      "TTL_boundary_ms": 1000,
+      "value_after_lost_invalidation": "v2",
+      "old_version_fill_accepted": false,
+      "delete_read_status": 404,
+      "delete_fill_accepted": false,
+      "recreated_version": 4,
+      "source_version_probe_on_every_read": true
+    },
+    "failure_rejoin": {
+      "surviving_copy_read": "hit",
+      "rejoined_cache_cleared": true,
+      "first_rejoined_generation": 2,
+      "second_rejoined_generation": 3,
+      "new_membership_epoch": 2,
+      "old_epoch_fill_accepted": false,
+      "all_caches_down_source_value": "v5",
+      "automatic_failure_detector": false,
+      "network_replication_executed": false
+    },
+    "concurrency": {
+      "cold_reader_results": [
+        "hit",
+        "miss"
+      ],
+      "coalesced_payload_loads": 1,
+      "competing_source_update_results": [
+        2,
+        409
+      ],
+      "singleflight_scope": "one process, coarse shared lock"
+    },
+    "http_contract": {
+      "PUT": 200,
+      "first_GET": "miss",
+      "second_GET": "hit",
+      "foreign_owner": 404,
+      "foreign_tenant": 404,
+      "anonymous": 401,
+      "stale_write": 409,
+      "deleted_GET": 404,
+      "real_loopback_HTTP": true,
+      "application_backend_is_label_not_network_proxy": true
+    },
+    "estimates": {
+      "requests_per_second": 10000,
+      "assumed_mean_request_seconds": 0.02,
+      "mean_inflight": 200,
+      "assumed_cache_hit_ratio": 0.9,
+      "hypothetical_payload_misses_per_second": 1000,
+      "fixture_version_probes_per_second_at_that_load": 10000,
+      "hot_key_fraction": 0.6,
+      "hot_key_requests_per_second": 6000,
+      "keys_for_placement_comparison": 2000,
+      "measured_capacity": false
+    }
+  },
+  "cleanup": {
+    "fixture_ports": [
+      58408
+    ],
+    "temporary_database_directory_removed": true,
+    "sqlite_connections_closed": true,
+    "temporary_http_servers_closed": true,
+    "concurrent_worker_calls_completed": 4,
+    "port_3000_used": false
+  },
+  "scope": "Deterministic placement sample, in-process least-active routing/drain labels, bounded copied LRU caches, guarded fill/version/delete/epoch checks, controlled failure/rejoin, four competing calls, SQLite rollback/reopen and actual edge HTTP. No network proxy, distributed membership, Redis replication, automatic detector, quorum or throughput benchmark."
+}

@@ -1,0 +1,405 @@
+{
+  "label": "S8",
+  "verified_date": "2026-10-17",
+  "python": "3.12.10",
+  "sqlite": "3.49.1",
+  "os": "Windows",
+  "total": 62,
+  "counts": {
+    "checkout": 4,
+    "authorization": 3,
+    "uncertainty": 7,
+    "ledger": 16,
+    "binding": 8,
+    "concurrency": 3,
+    "atomicity": 5,
+    "http": 12,
+    "cleanup": 4
+  },
+  "checks": [
+    {
+      "group": "checkout",
+      "name": "server catalog snapshot",
+      "passed": true
+    },
+    {
+      "group": "checkout",
+      "name": "replay keeps original price",
+      "passed": true
+    },
+    {
+      "group": "checkout",
+      "name": "changed product conflicts",
+      "passed": true
+    },
+    {
+      "group": "checkout",
+      "name": "unknown product",
+      "passed": true
+    },
+    {
+      "group": "authorization",
+      "name": "owner order hidden",
+      "passed": true
+    },
+    {
+      "group": "authorization",
+      "name": "tenant order hidden",
+      "passed": true
+    },
+    {
+      "group": "uncertainty",
+      "name": "timeout marks unknown",
+      "passed": true
+    },
+    {
+      "group": "uncertainty",
+      "name": "provider committed before timeout",
+      "passed": true
+    },
+    {
+      "group": "uncertainty",
+      "name": "no unverified credit",
+      "passed": true
+    },
+    {
+      "group": "uncertainty",
+      "name": "retry recovers same charge",
+      "passed": true
+    },
+    {
+      "group": "ledger",
+      "name": "verified success grants once",
+      "passed": true
+    },
+    {
+      "group": "ledger",
+      "name": "duplicate event replay",
+      "passed": true
+    },
+    {
+      "group": "ledger",
+      "name": "different event same payment dedupe",
+      "passed": true
+    },
+    {
+      "group": "ledger",
+      "name": "changed event conflicts",
+      "passed": true
+    },
+    {
+      "group": "ledger",
+      "name": "changed payment binding conflicts",
+      "passed": true
+    },
+    {
+      "group": "uncertainty",
+      "name": "late unknown cannot downgrade paid",
+      "passed": true
+    },
+    {
+      "group": "uncertainty",
+      "name": "reconciliation idempotent",
+      "passed": true
+    },
+    {
+      "group": "uncertainty",
+      "name": "provider key binds request",
+      "passed": true
+    },
+    {
+      "group": "binding",
+      "name": "amount mismatch quarantined",
+      "passed": true
+    },
+    {
+      "group": "binding",
+      "name": "mismatch grants nothing",
+      "passed": true
+    },
+    {
+      "group": "binding",
+      "name": "currency mismatch quarantined",
+      "passed": true
+    },
+    {
+      "group": "binding",
+      "name": "second charge no extra credit",
+      "passed": true
+    },
+    {
+      "group": "binding",
+      "name": "extra charge remains visible for review",
+      "passed": true
+    },
+    {
+      "group": "binding",
+      "name": "unknown provider order",
+      "passed": true
+    },
+    {
+      "group": "binding",
+      "name": "amount boolean rejected",
+      "passed": true
+    },
+    {
+      "group": "binding",
+      "name": "invalid currency rejected",
+      "passed": true
+    },
+    {
+      "group": "concurrency",
+      "name": "one of two overspending attempts wins",
+      "passed": true
+    },
+    {
+      "group": "concurrency",
+      "name": "balance never negative",
+      "passed": true
+    },
+    {
+      "group": "ledger",
+      "name": "spend replay returns original journal",
+      "passed": true
+    },
+    {
+      "group": "ledger",
+      "name": "changed spend intent conflicts",
+      "passed": true
+    },
+    {
+      "group": "ledger",
+      "name": "zero spend rejected",
+      "passed": true
+    },
+    {
+      "group": "ledger",
+      "name": "boolean spend rejected",
+      "passed": true
+    },
+    {
+      "group": "ledger",
+      "name": "reversal appends inverse",
+      "passed": true
+    },
+    {
+      "group": "ledger",
+      "name": "reversal replay stable",
+      "passed": true
+    },
+    {
+      "group": "ledger",
+      "name": "second reversal conflicts",
+      "passed": true
+    },
+    {
+      "group": "authorization",
+      "name": "other owner reversal hidden",
+      "passed": true
+    },
+    {
+      "group": "ledger",
+      "name": "spend replay retains historical response",
+      "passed": true
+    },
+    {
+      "group": "ledger",
+      "name": "every journal balances in one unit",
+      "passed": true
+    },
+    {
+      "group": "ledger",
+      "name": "entries reject update",
+      "passed": true
+    },
+    {
+      "group": "ledger",
+      "name": "entries reject delete",
+      "passed": true
+    },
+    {
+      "group": "atomicity",
+      "name": "grant failure rolls back entries balance event",
+      "passed": true
+    },
+    {
+      "group": "atomicity",
+      "name": "provider remains committed despite merchant rollback",
+      "passed": true
+    },
+    {
+      "group": "concurrency",
+      "name": "callback and reconciliation converge",
+      "passed": true
+    },
+    {
+      "group": "atomicity",
+      "name": "second entry fault rolls back spend",
+      "passed": true
+    },
+    {
+      "group": "atomicity",
+      "name": "retry after entry fault succeeds",
+      "passed": true
+    },
+    {
+      "group": "atomicity",
+      "name": "ledger survives reopen",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "create from catalog",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "client price cannot be supplied",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "timeout returns accepted unknown",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "unsigned callback rejected",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "signed raw callback accepted",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "body tampering rejected",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "paid submit replay succeeds",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "foreign order hidden",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "foreign tenant hidden",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "anonymous balance denied",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "balance reads integer units",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "spend endpoint",
+      "passed": true
+    },
+    {
+      "group": "cleanup",
+      "name": "tracked SQLite connections closed",
+      "passed": true
+    },
+    {
+      "group": "cleanup",
+      "name": "owned temporary directory removed",
+      "passed": true
+    },
+    {
+      "group": "cleanup",
+      "name": "owned HTTP listener closed",
+      "passed": true
+    },
+    {
+      "group": "cleanup",
+      "name": "port 3000 unused",
+      "passed": true
+    }
+  ],
+  "observations": {
+    "payment_recovery": {
+      "injected_fault": "reply loss after provider commit",
+      "state_after_timeout": "unknown",
+      "balance_before_verification": 0,
+      "provider_charge_count_after_retry": 1,
+      "state_after_retry": "paid",
+      "credit_units_after_replays": 100,
+      "real_provider_network": false
+    },
+    "binding": {
+      "mismatch_outcome": "review_required",
+      "mismatch_balance": 0,
+      "second_successful_payment_outcome": "extra_charge_review",
+      "second_credit_granted": false,
+      "provider_refund_executed": false,
+      "units_are_currency": false
+    },
+    "concurrency": {
+      "two_spends_of": 80,
+      "initial_credit_units": 100,
+      "successful_spends": 1,
+      "rejected_spends": 1,
+      "balance_after_competing_spends": 20,
+      "balance_after_appended_reversal": 100,
+      "historical_spend_replay_balance_after": 20,
+      "all_journal_delta_sums": 0
+    },
+    "rollback_reconciliation": {
+      "provider_commit_survived_merchant_fault": true,
+      "merchant_grant_transaction_rolled_back": true,
+      "callback_reconciliation_outcomes": [
+        "paid",
+        "paid"
+      ],
+      "single_recovered_grant_units": 120,
+      "second_entry_rollback_tested": true,
+      "actual_process_kill": false
+    },
+    "http_contract": {
+      "create_order": 201,
+      "provider_timeout_submit": 202,
+      "verified_callback": 200,
+      "tampered_callback": 401,
+      "paid_submit_replay": 200,
+      "other_owner": 404,
+      "other_tenant": 404,
+      "anonymous_balance": 401,
+      "real_merchant_loopback_HTTP": true,
+      "provider_is_local_separate_SQLite": true
+    },
+    "estimates": {
+      "successful_topups_per_day": 100000,
+      "entries_per_grant": 2,
+      "daily_grant_entries": 200000,
+      "assumed_entry_bytes": 192,
+      "thirty_day_logical_entry_GB": 1.152,
+      "credit_unit": "integer CREDIT",
+      "fixture_USD_product_minor_units": 500,
+      "fixture_product_credit_units": 100,
+      "measured_capacity": false
+    }
+  },
+  "cleanup": {
+    "fixture_ports": [
+      65231
+    ],
+    "temporary_database_directory_removed": true,
+    "sqlite_connections_closed": true,
+    "temporary_http_servers_closed": true,
+    "concurrent_worker_calls_completed": 4,
+    "port_3000_used": false
+  },
+  "scope": "Separate local provider and merchant SQLite stores; injected reply loss after provider commit, immutable catalog snapshots, signed fixture callback, payment/event/grant dedupe, balanced integer credit journals, competing spends, reversal, rollback and real merchant loopback HTTP. No real charge, bank ledger, card data, refund or provider network."
+}

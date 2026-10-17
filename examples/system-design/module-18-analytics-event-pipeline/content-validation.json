@@ -1,0 +1,34 @@
+{
+  "label": "S13",
+  "chapter": "system-design-handbook-part-20-module-18-analytics-event-pipeline.md",
+  "slug": "analytics-event-pipeline",
+  "group": "worked-systems",
+  "words": 5522,
+  "lines": 843,
+  "questions": 30,
+  "practice_tasks": 10,
+  "unchecked_learning_items": 12,
+  "source_fidelity": [
+    "../worked-systems-s4-s6/runtime.py",
+    "pipeline.py"
+  ],
+  "output_fidelity": [
+    "time_metrics",
+    "recovery",
+    "rebuild",
+    "privacy",
+    "http_contract",
+    "estimates"
+  ],
+  "mock_minutes": 45,
+  "verified_checks": 78,
+  "next": "Consolidation and design mocks",
+  "result_fidelity": {
+    "time_metrics": true,
+    "recovery": true,
+    "rebuild": true,
+    "privacy": true,
+    "http_contract": true,
+    "estimates": true
+  }
+}

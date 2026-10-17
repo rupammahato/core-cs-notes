@@ -1,0 +1,24 @@
+{
+  "label": "S9",
+  "chapter": "system-design-handbook-part-16-module-14-search-autocomplete.md",
+  "words": 5653,
+  "lines": 814,
+  "questions": 30,
+  "practice_tasks": 10,
+  "unchecked_learning_items": 12,
+  "source_fidelity": [
+    "../worked-systems-s4-s6/runtime.py",
+    "search.py"
+  ],
+  "output_fidelity": [
+    "permissions",
+    "version_fences",
+    "retrieval",
+    "rollback_rebuild",
+    "http_contract",
+    "estimates"
+  ],
+  "mock_minutes": 45,
+  "verified_checks": 77,
+  "next": "S10: Load balancer and distributed cache"
+}

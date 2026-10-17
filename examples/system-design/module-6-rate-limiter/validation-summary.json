@@ -1,0 +1,166 @@
+{
+  "label": "S1",
+  "module": 6,
+  "verified_date": "2026-10-17",
+  "runtime": {
+    "python": "3.12.10",
+    "sqlite": "3.49.1",
+    "os": "Windows"
+  },
+  "checks": {
+    "counts": {
+      "algorithms": 8,
+      "validation": 16,
+      "bucket": 14,
+      "scope_lifecycle": 13,
+      "concurrency": 7,
+      "http": 26,
+      "estimates": 7,
+      "cleanup": 4
+    },
+    "total": 95,
+    "all_passed": true
+  },
+  "roadmap_document_checks": 17,
+  "content": {
+    "label": "S1",
+    "chapter": "system-design-handbook-part-8-module-6-rate-limiter.md",
+    "words": 8079,
+    "lines": 1029,
+    "questions": 30,
+    "practice_tasks": 10,
+    "unchecked_learning_items": 12,
+    "source_fidelity": [
+      "estimates.py",
+      "algorithms.py",
+      "limiter.py",
+      "http_api.py"
+    ],
+    "output_fidelity": [
+      "estimates",
+      "algorithms",
+      "bucket",
+      "scope_lifecycle",
+      "concurrency",
+      "http_contract"
+    ],
+    "mock_minutes": 45,
+    "verified_checks": 95,
+    "next": "S2: Notification and webhook delivery service",
+    "result_fidelity": {
+      "estimates": true,
+      "algorithms": true,
+      "bucket": true,
+      "scope_lifecycle": true,
+      "concurrency": true,
+      "http_contract": true,
+      "versions": true
+    },
+    "authored_internal_links": 9
+  },
+  "cleanup": {
+    "fixture_ports": [
+      63338
+    ],
+    "temporary_database_directory_removed": true,
+    "sqlite_connections_closed": true,
+    "temporary_http_servers_closed": true,
+    "concurrent_worker_calls_completed": 4,
+    "port_3000_used": false
+  },
+  "website": {
+    "build_passed": true,
+    "static_pages": 113,
+    "routes_checked": 45,
+    "all_routes_200": true,
+    "assertions": {
+      "title": true,
+      "q30": true,
+      "verifiedChecks": true,
+      "exactCode": true,
+      "evidence": true,
+      "architecture": true,
+      "scope": true,
+      "next": true,
+      "workedGroup": true,
+      "roadmapLink": true,
+      "allFoundations": true,
+      "predecessor": true,
+      "homeCard": true,
+      "bankRetained": true
+    },
+    "search": {
+      "system-design": {
+        "status": 200,
+        "results": 41,
+        "indexed": true,
+        "scoped": true
+      },
+      "resume-skills": {
+        "status": 200,
+        "results": 18,
+        "indexed": true,
+        "scoped": true
+      }
+    },
+    "next_route_status": 404,
+    "temporary_server_closed": true,
+    "cached_font_fixture_used": true
+  },
+  "ports_stopped": {
+    "3000": true,
+    "62004": true,
+    "63338": true
+  },
+  "existing_handbooks": [
+    {
+      "subject": "DSA Notes",
+      "files": 17,
+      "lines": 17589
+    },
+    {
+      "subject": "OOP Notes",
+      "files": 13,
+      "lines": 8806
+    },
+    {
+      "subject": "OS Notes",
+      "files": 13,
+      "lines": 6341
+    },
+    {
+      "subject": "DBMS Notes",
+      "files": 13,
+      "lines": 9613
+    },
+    {
+      "subject": "CN Notes",
+      "files": 13,
+      "lines": 9322
+    },
+    {
+      "subject": "Resume Skills Notes",
+      "files": 31,
+      "lines": 37575
+    }
+  ],
+  "system_design": {
+    "files": 8,
+    "lines": 7417,
+    "published_foundations": [
+      "A0",
+      "A1",
+      "A2",
+      "A3",
+      "A4"
+    ],
+    "published_worked_systems": [
+      "S0",
+      "S1"
+    ]
+  },
+  "git_diff_check_passed": true,
+  "trailing_whitespace_files": [],
+  "next": "S2: Notification and webhook delivery service",
+  "scope": "Local Python/SQLite and loopback HTTP. No Redis, production authentication/TLS, distributed clock authority, multi-region failover or capacity benchmark. Denials do not charge tokens; successful admissions charge even if work fails. Fail-open intentionally relaxes enforcement."
+}

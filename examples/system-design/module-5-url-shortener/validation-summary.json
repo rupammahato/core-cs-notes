@@ -1,0 +1,165 @@
+{
+  "label": "S0",
+  "module": 5,
+  "verified_date": "2026-10-16",
+  "runtime": {
+    "python": "3.12.10",
+    "sqlite": "3.49.1",
+    "os": "Windows 11"
+  },
+  "checks": {
+    "counts": {
+      "validation": 16,
+      "authority": 24,
+      "cache_expiry": 16,
+      "analytics": 12,
+      "concurrency": 6,
+      "http": 34,
+      "cleanup": 2,
+      "estimates": 8
+    },
+    "total": 118,
+    "all_passed": true
+  },
+  "roadmap_document_checks": 17,
+  "content": {
+    "label": "S0",
+    "chapter": "system-design-handbook-part-7-module-5-url-shortener.md",
+    "words": 8017,
+    "lines": 1044,
+    "questions": 30,
+    "practice_tasks": 10,
+    "unchecked_learning_items": 12,
+    "source_fidelity": [
+      "estimates.py",
+      "shortener.py",
+      "service.py",
+      "http_api.py"
+    ],
+    "output_fidelity": [
+      "estimates",
+      "allocation",
+      "concurrency",
+      "expiry_and_disable",
+      "analytics",
+      "http_contract"
+    ],
+    "mock_minutes": 45,
+    "verified_checks": 118,
+    "next": "S1: Rate limiter",
+    "result_fidelity": {
+      "estimates": true,
+      "allocation": true,
+      "concurrency": true,
+      "expiry_and_disable": true,
+      "analytics": true,
+      "http_contract": true,
+      "versions": true
+    },
+    "authored_internal_links": 8
+  },
+  "cleanup": {
+    "sqlite_connections_closed": true,
+    "temporary_database_directory_removed": true,
+    "temporary_http_servers_closed": true,
+    "fixture_ports": [
+      55366
+    ],
+    "concurrent_worker_calls_completed": 4,
+    "port_3000_used": false
+  },
+  "website": {
+    "build_passed": true,
+    "static_pages": 112,
+    "routes_checked": 44,
+    "all_routes_200": true,
+    "assertions": {
+      "title": true,
+      "q30": true,
+      "verifiedChecks": true,
+      "exactCode": true,
+      "evidence": true,
+      "architecture": true,
+      "scope": true,
+      "next": true,
+      "workedGroup": true,
+      "roadmapLink": true,
+      "allFoundations": true,
+      "predecessor": true,
+      "homeCard": true,
+      "bankRetained": true
+    },
+    "search": {
+      "system-design": {
+        "status": 200,
+        "results": 16,
+        "indexed": true,
+        "scoped": true
+      },
+      "resume-skills": {
+        "status": 200,
+        "results": 18,
+        "indexed": true,
+        "scoped": true
+      }
+    },
+    "next_route_status": 404,
+    "temporary_server_closed": true,
+    "cached_font_fixture_used": true
+  },
+  "ports_stopped": {
+    "3000": true,
+    "55461": true,
+    "55366": true
+  },
+  "existing_handbooks": [
+    {
+      "subject": "DSA Notes",
+      "files": 17,
+      "lines": 17589
+    },
+    {
+      "subject": "OOP Notes",
+      "files": 13,
+      "lines": 8806
+    },
+    {
+      "subject": "OS Notes",
+      "files": 13,
+      "lines": 6341
+    },
+    {
+      "subject": "DBMS Notes",
+      "files": 13,
+      "lines": 9613
+    },
+    {
+      "subject": "CN Notes",
+      "files": 13,
+      "lines": 9322
+    },
+    {
+      "subject": "Resume Skills Notes",
+      "files": 31,
+      "lines": 37575
+    }
+  ],
+  "system_design": {
+    "files": 7,
+    "lines": 6388,
+    "published_foundations": [
+      "A0",
+      "A1",
+      "A2",
+      "A3",
+      "A4"
+    ],
+    "published_worked_systems": [
+      "S0"
+    ]
+  },
+  "git_diff_check_passed": true,
+  "trailing_whitespace_files": [],
+  "next": "S1: Rate limiter",
+  "scope": "Real local SQLite allocation/replay/rollback and two-connection collision/duplicate races; real loopback HTTP create/manage/GET/HEAD redirect/expiry/disable/stats without following destinations. Process-local bounded cache, injected expiry clock and explicitly lossy in-memory analytics with durable bounded-age aggregates. Estimates are hypothetical. No production auth/TLS, unrestricted destination validation, Redis/CDN, durable analytics delivery, multi-host cache coherence, PostgreSQL isolation or throughput capacity verified."
+}

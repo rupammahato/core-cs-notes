@@ -1,0 +1,389 @@
+{
+  "label": "S5",
+  "verified_date": "2026-10-17",
+  "python": "3.12.10",
+  "sqlite": "3.49.1",
+  "os": "Windows",
+  "total": 59,
+  "counts": {
+    "validation": 7,
+    "durability": 6,
+    "history": 6,
+    "receipts": 3,
+    "hints": 6,
+    "permissions": 5,
+    "recovery": 3,
+    "concurrency": 4,
+    "http": 12,
+    "estimates": 3,
+    "cleanup": 4
+  },
+  "checks": [
+    {
+      "group": "validation",
+      "name": "empty message",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "oversized text",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "invalid client ID",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "nonmember cannot send",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "tenant boundary on history",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "invalid page limit",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "boolean sequence rejected",
+      "passed": true
+    },
+    {
+      "group": "durability",
+      "name": "retry returns original sequence",
+      "passed": true
+    },
+    {
+      "group": "durability",
+      "name": "duplicate retry creates one message",
+      "passed": true
+    },
+    {
+      "group": "durability",
+      "name": "changed same-client intent conflicts",
+      "passed": true
+    },
+    {
+      "group": "durability",
+      "name": "client ID scope includes sender",
+      "passed": true
+    },
+    {
+      "group": "durability",
+      "name": "message failure does not advance committed sequence",
+      "passed": true
+    },
+    {
+      "group": "durability",
+      "name": "next successful sequence has no rollback gap",
+      "passed": true
+    },
+    {
+      "group": "history",
+      "name": "catchup high-water excludes later arrivals",
+      "passed": true
+    },
+    {
+      "group": "history",
+      "name": "fresh catchup discovers later message",
+      "passed": true
+    },
+    {
+      "group": "history",
+      "name": "first page exposes continuation",
+      "passed": true
+    },
+    {
+      "group": "history",
+      "name": "ahead-of-history cursor rejected",
+      "passed": true
+    },
+    {
+      "group": "history",
+      "name": "snapshot beyond durable head rejected",
+      "passed": true
+    },
+    {
+      "group": "history",
+      "name": "empty tail retains cursor",
+      "passed": true
+    },
+    {
+      "group": "receipts",
+      "name": "read cursor advances",
+      "passed": true
+    },
+    {
+      "group": "receipts",
+      "name": "late device acknowledgement cannot regress cursor",
+      "passed": true
+    },
+    {
+      "group": "receipts",
+      "name": "future read acknowledgement rejected",
+      "passed": true
+    },
+    {
+      "group": "hints",
+      "name": "ephemeral hint can be lost after durable commit",
+      "passed": true
+    },
+    {
+      "group": "hints",
+      "name": "catchup recovers message despite lost hint",
+      "passed": true
+    },
+    {
+      "group": "hints",
+      "name": "slow consumer receives resync marker",
+      "passed": true
+    },
+    {
+      "group": "hints",
+      "name": "local hint queue remains bounded",
+      "passed": true
+    },
+    {
+      "group": "hints",
+      "name": "another user cannot poll connection",
+      "passed": true
+    },
+    {
+      "group": "hints",
+      "name": "closed connection cannot be polled",
+      "passed": true
+    },
+    {
+      "group": "permissions",
+      "name": "membership rechecked before hint delivery",
+      "passed": true
+    },
+    {
+      "group": "permissions",
+      "name": "revoked connection routing state removed",
+      "passed": true
+    },
+    {
+      "group": "permissions",
+      "name": "removed member cannot fetch old history",
+      "passed": true
+    },
+    {
+      "group": "permissions",
+      "name": "removed member cannot resend old ID",
+      "passed": true
+    },
+    {
+      "group": "permissions",
+      "name": "removed member cannot update receipt",
+      "passed": true
+    },
+    {
+      "group": "recovery",
+      "name": "connection state is ephemeral after restart",
+      "passed": true
+    },
+    {
+      "group": "recovery",
+      "name": "durable replay survives close/reopen",
+      "passed": true
+    },
+    {
+      "group": "recovery",
+      "name": "history survives loss of all hints",
+      "passed": true
+    },
+    {
+      "group": "concurrency",
+      "name": "concurrent duplicate sends share saved acknowledgement",
+      "passed": true
+    },
+    {
+      "group": "concurrency",
+      "name": "one duplicate is replay and one is new",
+      "passed": true
+    },
+    {
+      "group": "concurrency",
+      "name": "independent sends allocate distinct room sequence",
+      "passed": true
+    },
+    {
+      "group": "concurrency",
+      "name": "history is authoritative order regardless hint timing",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "history requires authentication",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "nonmember history hidden",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "real send acknowledges durable sequence",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "real resend returns original saved sequence",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "read response is no-store",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "online hint identifies sequence not durable replacement",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "HTTP catchup returns saved text",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "invalid query limit rejected",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "repeated cursor query rejected",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "real read ack is monotonic",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "real connection close frees routing state",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "other tenant cannot read messages",
+      "passed": true
+    },
+    {
+      "group": "estimates",
+      "name": "daily-to-second units",
+      "passed": true
+    },
+    {
+      "group": "estimates",
+      "name": "logical retained bytes",
+      "passed": true
+    },
+    {
+      "group": "estimates",
+      "name": "connection-memory units",
+      "passed": true
+    },
+    {
+      "group": "cleanup",
+      "name": "tracked SQLite connections closed",
+      "passed": true
+    },
+    {
+      "group": "cleanup",
+      "name": "owned temporary directory removed",
+      "passed": true
+    },
+    {
+      "group": "cleanup",
+      "name": "owned HTTP listener closed",
+      "passed": true
+    },
+    {
+      "group": "cleanup",
+      "name": "port 3000 unused",
+      "passed": true
+    }
+  ],
+  "observations": {
+    "durability": {
+      "first_sequence": 1,
+      "replay_sequence": 1,
+      "same_client_id_other_sender_sequence": 2,
+      "rollback_advances_sequence": false,
+      "snapshot_high_water": 3,
+      "snapshot_remaining_sequences": [
+        2,
+        3
+      ],
+      "later_message_requires_new_catchup": true,
+      "read_cursor_after_late_ack": 3,
+      "human_read_proven": false
+    },
+    "hints_and_permissions": {
+      "lost_hint_recovered_from_history": true,
+      "hint_capacity": 2,
+      "slow_consumer_resync_required": true,
+      "ephemeral_sessions_survive_restart": false,
+      "revoked_member_history_status": 404,
+      "revoked_connection_status": 404,
+      "WebSocket_protocol_executed": false
+    },
+    "concurrency": {
+      "competing_worker_calls": 4,
+      "duplicate_send_ack_sequences": [
+        1,
+        1
+      ],
+      "distinct_send_sequences_sorted": [
+        2,
+        3
+      ],
+      "hint_order_assumed": false
+    },
+    "http_contract": {
+      "send_status": 201,
+      "original_and_retry_sequence": 1,
+      "online_hint_sequences": [
+        1
+      ],
+      "nonmember_status": 404,
+      "malformed_cursor_status": 400,
+      "cache_control": "no-store",
+      "actual_transport": "loopback HTTP polling",
+      "WebSocket_handshake_implemented": false
+    },
+    "estimates": {
+      "daily_messages": 1000000,
+      "average_messages_per_second": 11.574,
+      "assumed_message_bytes": 512,
+      "thirty_day_logical_message_GB": 15.36,
+      "online_connections": 10000,
+      "assumed_connection_memory_KiB": 16,
+      "connection_memory_MiB": 156.25,
+      "fixture_hint_capacity": 2,
+      "measured_capacity": false
+    }
+  },
+  "cleanup": {
+    "fixture_ports": [
+      50064
+    ],
+    "temporary_database_directory_removed": true,
+    "sqlite_connections_closed": true,
+    "temporary_http_servers_closed": true,
+    "concurrent_worker_calls_completed": 4,
+    "port_3000_used": false
+  },
+  "scope": "Local SQLite room history and bounded process-local hints with actual loopback HTTP polling. No WebSocket/SSE protocol, external messages, Redis/broker, production auth/TLS, distributed sequencing/clock, load test or proof of human reading. Current members can read retained history; removed members cannot use new API requests."
+}

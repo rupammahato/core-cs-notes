@@ -1,0 +1,710 @@
+{
+  "label": "S0",
+  "module": 5,
+  "verified_date": "2026-10-16",
+  "python": "3.12.10",
+  "sqlite": "3.49.1",
+  "os": "Windows 11",
+  "total": 118,
+  "counts": {
+    "validation": 16,
+    "authority": 24,
+    "cache_expiry": 16,
+    "analytics": 12,
+    "concurrency": 6,
+    "http": 34,
+    "cleanup": 2,
+    "estimates": 8
+  },
+  "checks": [
+    {
+      "group": "validation",
+      "name": "destination rejected 'javascript:alert(1)'",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "destination rejected 'http://example.com/x'",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "destination rejected 'https://evil.example/x'",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "destination rejected 'https://example.com@evil.example/x'",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "destination rejected 'https://user:pw@example.com/x'",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "destination rejected 'https://example.com:444/x'",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "destination rejected 'https://example.com:bad/x'",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "destination rejected 'https://example.com/\\r\\nLocation:x'",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "destination rejected 'https://example.com/%0d%0aX:y'",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "destination rejected 'https://example.com\\\\@evil.example/x'",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "destination rejected 'https://example.com/space here'",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "destination rejected 'https://example.com/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "exact accepted path query and fragment preserved",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "explicit HTTPS default port accepted",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "approved documentation host accepted",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "default code generator produces valid base62-shaped codes",
+      "passed": true
+    },
+    {
+      "group": "authority",
+      "name": "database code namespace distinguishes letter case",
+      "passed": true
+    },
+    {
+      "group": "authority",
+      "name": "new create stores a non-replay result",
+      "passed": true
+    },
+    {
+      "group": "authority",
+      "name": "forced collision retries another code",
+      "passed": true
+    },
+    {
+      "group": "authority",
+      "name": "collision never overwrites original destination",
+      "passed": true
+    },
+    {
+      "group": "authority",
+      "name": "retry returns original outcome and expiry",
+      "passed": true
+    },
+    {
+      "group": "authority",
+      "name": "changed URL under operation key conflicts",
+      "passed": true
+    },
+    {
+      "group": "authority",
+      "name": "changed-intent conflict is explicit",
+      "passed": true
+    },
+    {
+      "group": "authority",
+      "name": "changed lifetime under operation key conflicts",
+      "passed": true
+    },
+    {
+      "group": "authority",
+      "name": "owner and tenant operation scopes are separate",
+      "passed": true
+    },
+    {
+      "group": "authority",
+      "name": "wrong owner cannot manage link",
+      "passed": true
+    },
+    {
+      "group": "authority",
+      "name": "wrong tenant cannot disable link",
+      "passed": true
+    },
+    {
+      "group": "authority",
+      "name": "boolean lifetime rejected",
+      "passed": true
+    },
+    {
+      "group": "authority",
+      "name": "zero lifetime rejected",
+      "passed": true
+    },
+    {
+      "group": "authority",
+      "name": "too-long lifetime rejected",
+      "passed": true
+    },
+    {
+      "group": "authority",
+      "name": "invalid operation key rejected",
+      "passed": true
+    },
+    {
+      "group": "authority",
+      "name": "original successful operation survives reopen",
+      "passed": true
+    },
+    {
+      "group": "authority",
+      "name": "global link identity survives reopen",
+      "passed": true
+    },
+    {
+      "group": "authority",
+      "name": "allocation attempts are bounded",
+      "passed": true
+    },
+    {
+      "group": "authority",
+      "name": "exhaustion is a retryable service failure",
+      "passed": true
+    },
+    {
+      "group": "authority",
+      "name": "exhaustion leaves one link and no false outcome",
+      "passed": true
+    },
+    {
+      "group": "authority",
+      "name": "fault after allocation rolls back",
+      "passed": true
+    },
+    {
+      "group": "authority",
+      "name": "rollback leaves no orphan link",
+      "passed": true
+    },
+    {
+      "group": "authority",
+      "name": "rollback leaves no successful operation record",
+      "passed": true
+    },
+    {
+      "group": "authority",
+      "name": "retry after rollback creates normally",
+      "passed": true
+    },
+    {
+      "group": "cache_expiry",
+      "name": "cold resolution returns canonical destination",
+      "passed": true
+    },
+    {
+      "group": "cache_expiry",
+      "name": "warm resolution returns same destination",
+      "passed": true
+    },
+    {
+      "group": "cache_expiry",
+      "name": "warm hit avoids authority read",
+      "passed": true
+    },
+    {
+      "group": "cache_expiry",
+      "name": "link remains valid just before absolute expiry",
+      "passed": true
+    },
+    {
+      "group": "cache_expiry",
+      "name": "expiry enforced at equality even with long cache TTL",
+      "passed": true
+    },
+    {
+      "group": "cache_expiry",
+      "name": "known expired code reports gone",
+      "passed": true
+    },
+    {
+      "group": "cache_expiry",
+      "name": "create retry cannot renew an expired link",
+      "passed": true
+    },
+    {
+      "group": "cache_expiry",
+      "name": "missing lookup has declared error",
+      "passed": true
+    },
+    {
+      "group": "cache_expiry",
+      "name": "missing code reports not found",
+      "passed": true
+    },
+    {
+      "group": "cache_expiry",
+      "name": "malformed code is not a path or query",
+      "passed": true
+    },
+    {
+      "group": "cache_expiry",
+      "name": "local cache capacity is bounded",
+      "passed": true
+    },
+    {
+      "group": "cache_expiry",
+      "name": "disabled local resolution fails",
+      "passed": true
+    },
+    {
+      "group": "cache_expiry",
+      "name": "local disable invalidates warmed cache",
+      "passed": true
+    },
+    {
+      "group": "cache_expiry",
+      "name": "independent warmed cache can still serve old active state",
+      "passed": true
+    },
+    {
+      "group": "cache_expiry",
+      "name": "remote cache refresh finds disabled state",
+      "passed": true
+    },
+    {
+      "group": "cache_expiry",
+      "name": "independent cache observes disable after TTL",
+      "passed": true
+    },
+    {
+      "group": "analytics",
+      "name": "queue bound does not suppress redirect decisions",
+      "passed": true
+    },
+    {
+      "group": "analytics",
+      "name": "analytics admission drops excess rather than grows without bound",
+      "passed": true
+    },
+    {
+      "group": "analytics",
+      "name": "bounded batch persists accepted aggregate",
+      "passed": true
+    },
+    {
+      "group": "analytics",
+      "name": "statistics identify recorded decisions rather than visits",
+      "passed": true
+    },
+    {
+      "group": "analytics",
+      "name": "flushed queue has no unfinished tasks",
+      "passed": true
+    },
+    {
+      "group": "analytics",
+      "name": "controlled analytics write failure is isolated",
+      "passed": true
+    },
+    {
+      "group": "analytics",
+      "name": "failed analytics batch rolls back its count",
+      "passed": true
+    },
+    {
+      "group": "analytics",
+      "name": "redirect still works after analytics failure",
+      "passed": true
+    },
+    {
+      "group": "analytics",
+      "name": "other owner cannot read statistics",
+      "passed": true
+    },
+    {
+      "group": "analytics",
+      "name": "statistics window excludes old minute buckets",
+      "passed": true
+    },
+    {
+      "group": "analytics",
+      "name": "flush prunes old durable buckets",
+      "passed": true
+    },
+    {
+      "group": "analytics",
+      "name": "late queued events cannot resurrect expired analytics buckets",
+      "passed": true
+    },
+    {
+      "group": "concurrency",
+      "name": "competing creators receive different globally unique codes",
+      "passed": true
+    },
+    {
+      "group": "concurrency",
+      "name": "collision loser retries instead of overwriting",
+      "passed": true
+    },
+    {
+      "group": "concurrency",
+      "name": "two successful intents persist two links and outcomes",
+      "passed": true
+    },
+    {
+      "group": "concurrency",
+      "name": "concurrent same operation receives same code and outcome",
+      "passed": true
+    },
+    {
+      "group": "concurrency",
+      "name": "one concurrent retry reports replay",
+      "passed": true
+    },
+    {
+      "group": "concurrency",
+      "name": "same operation allocates only one link",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "authenticated create returns 201",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "trusted configured base ignores untrusted Host",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "create Location points to owned management resource",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "new create reports non-replay",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "HTTP retry returns exact original create representation",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "HTTP changed-intent retry maps to conflict",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "public redirect requires no management credential",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "redirect Location preserves target exactly",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "redirect has empty response body",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "redirect explicitly prevents downstream caching",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "redirect does not disclose owner metadata",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "HEAD returns redirect headers without a body",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "HEAD is excluded from analytics decisions",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "POST to redirect route is rejected",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "owner can read management state",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "other owner cannot read management state",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "other tenant cannot disable code",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "other owner cannot read analytics",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "management requires credentials",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "unknown management token rejected",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "missing create key rejected",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "unknown create field rejected",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "malformed JSON rejected safely",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "wrong content type rejected",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "oversized JSON body rejected",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "unapproved destination rejected",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "owned analytics expose recorded decisions",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "absolute expiration produces HTTP 410",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "unknown public code produces HTTP 404",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "unknown route produces HTTP 404",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "owner disable returns empty 204",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "repeat disable has same effect/status",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "local disable affects warmed redirect immediately",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "original create replay does not reactivate disabled link",
+      "passed": true
+    },
+    {
+      "group": "cleanup",
+      "name": "temporary database directory removed after connections close",
+      "passed": true
+    },
+    {
+      "group": "cleanup",
+      "name": "all owned HTTP serving threads stopped",
+      "passed": true
+    },
+    {
+      "group": "estimates",
+      "name": "namespace cardinality equals 62 to the selected length",
+      "passed": true
+    },
+    {
+      "group": "estimates",
+      "name": "annual create population uses explicit assumption",
+      "passed": true
+    },
+    {
+      "group": "estimates",
+      "name": "storage arithmetic uses stated logical record bytes",
+      "passed": true
+    },
+    {
+      "group": "estimates",
+      "name": "collision probability is bounded and nonzero",
+      "passed": true
+    },
+    {
+      "group": "estimates",
+      "name": "per-draw collision and population-pair probability differ",
+      "passed": true
+    },
+    {
+      "group": "estimates",
+      "name": "eight-character entropy matches selected alphabet",
+      "passed": true
+    },
+    {
+      "group": "estimates",
+      "name": "invalid workload assumption rejected",
+      "passed": true
+    },
+    {
+      "group": "estimates",
+      "name": "overfull namespace rejected",
+      "passed": true
+    }
+  ],
+  "observations": {
+    "allocation": {
+      "forced_collision_count": 1,
+      "original_code": "AAAAAAAA",
+      "collision_retry_code": "BBBBBBBB",
+      "original_preserved": true,
+      "replay_survives_reopen": true,
+      "exhausted_candidate_attempts": 5,
+      "post_rollback_new_code": "FAULT001"
+    },
+    "expiry_and_disable": {
+      "expires_at": 10,
+      "before_expiry": 302,
+      "at_expiry": 410,
+      "expired_create_retry_expires_at": 10,
+      "local_disable": 410,
+      "other_cache_before_refresh": 302,
+      "other_cache_after_refresh": 410,
+      "invalidation_broadcast_implemented": false
+    },
+    "analytics": {
+      "initial_redirect_decisions": 5,
+      "queue_capacity": 2,
+      "initial_enqueued": 2,
+      "initial_overflow_dropped": 3,
+      "initial_recorded": 2,
+      "write_failure_dropped": 1,
+      "expired_buckets_pruned": true,
+      "late_event_dropped": true,
+      "unique_human_visits_measured": false
+    },
+    "concurrency": {
+      "forced_same_candidate_two_intents": {
+        "links": 2,
+        "collisions": 1
+      },
+      "same_operation_two_callers": {
+        "links": 1,
+        "replay_flags": [
+          false,
+          true
+        ]
+      },
+      "independent_connections_per_race": 2,
+      "worker_calls_completed": 4
+    },
+    "http_contract": {
+      "create": 201,
+      "short_url": "https://short.example/r/HTTP0000",
+      "replay": "true",
+      "redirect": 302,
+      "location": "https://example.com/guide?topic=system-design#intro",
+      "cache_control": "no-store",
+      "head": 302,
+      "expires_at": 110,
+      "at_expiry": 410,
+      "disable": 204,
+      "after_disable": 410,
+      "destination_requests_made": 0
+    },
+    "estimates": {
+      "assumed_creates_per_day": 10000,
+      "assumed_redirects_per_day": 1000000,
+      "average_create_qps": 0.11574074074074074,
+      "average_redirect_qps": 11.574074074074074,
+      "assumed_peak_multiplier": 10,
+      "assumed_peak_redirect_qps": 115.74074074074075,
+      "assumed_days": 365,
+      "new_links_in_period": 3650000,
+      "code_length": 8,
+      "alphabet_size": 62,
+      "namespace_size": 218340105584896,
+      "code_entropy_bits": 47.633570483095,
+      "expected_collision_pairs_approx": 0.030508587312237708,
+      "probability_at_least_one_collision_approx": 0.03004789725011458,
+      "next_draw_collision_probability_at_end": 1.6717038723702504e-08,
+      "assumed_logical_record_bytes": 512,
+      "logical_link_storage_bytes": 1868800000,
+      "storage_excludes": [
+        "operation outcomes",
+        "indexes",
+        "replicas",
+        "backups",
+        "analytics"
+      ],
+      "automatic_code_reuse_implemented": false
+    }
+  },
+  "cleanup": {
+    "sqlite_connections_closed": true,
+    "temporary_database_directory_removed": true,
+    "temporary_http_servers_closed": true,
+    "fixture_ports": [
+      55366
+    ],
+    "concurrent_worker_calls_completed": 4,
+    "port_3000_used": false
+  },
+  "scope": "Real local SQLite allocation/replay/rollback and two-connection collision/duplicate races; real loopback HTTP create/manage/GET/HEAD redirect/expiry/disable/stats without following destinations. Process-local bounded cache, injected expiry clock and explicitly lossy in-memory analytics with durable bounded-age aggregates. Estimates are hypothetical. No production auth/TLS, unrestricted destination validation, Redis/CDN, durable analytics delivery, multi-host cache coherence, PostgreSQL isolation or throughput capacity verified."
+}

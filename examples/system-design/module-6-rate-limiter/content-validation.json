@@ -1,0 +1,26 @@
+{
+  "label": "S1",
+  "chapter": "system-design-handbook-part-8-module-6-rate-limiter.md",
+  "words": 8077,
+  "lines": 1029,
+  "questions": 30,
+  "practice_tasks": 10,
+  "unchecked_learning_items": 12,
+  "source_fidelity": [
+    "estimates.py",
+    "algorithms.py",
+    "limiter.py",
+    "http_api.py"
+  ],
+  "output_fidelity": [
+    "estimates",
+    "algorithms",
+    "bucket",
+    "scope_lifecycle",
+    "concurrency",
+    "http_contract"
+  ],
+  "mock_minutes": 45,
+  "verified_checks": 95,
+  "next": "S2: Notification and webhook delivery service"
+}

@@ -1,0 +1,487 @@
+{
+  "label": "S9",
+  "verified_date": "2026-10-17",
+  "python": "3.12.10",
+  "sqlite": "3.49.1",
+  "os": "Windows",
+  "total": 77,
+  "counts": {
+    "outbox": 4,
+    "retrieval": 10,
+    "authorization": 10,
+    "identity": 5,
+    "versions": 13,
+    "bounds": 8,
+    "atomicity": 2,
+    "concurrency": 2,
+    "rebuild": 5,
+    "http": 14,
+    "cleanup": 4
+  },
+  "checks": [
+    {
+      "group": "outbox",
+      "name": "source and event committed",
+      "passed": true
+    },
+    {
+      "group": "outbox",
+      "name": "new source absent before projection",
+      "passed": true
+    },
+    {
+      "group": "outbox",
+      "name": "event projects source",
+      "passed": true
+    },
+    {
+      "group": "outbox",
+      "name": "event replay",
+      "passed": true
+    },
+    {
+      "group": "retrieval",
+      "name": "owner can search private source",
+      "passed": true
+    },
+    {
+      "group": "authorization",
+      "name": "other reader filtered",
+      "passed": true
+    },
+    {
+      "group": "authorization",
+      "name": "other tenant filtered",
+      "passed": true
+    },
+    {
+      "group": "identity",
+      "name": "create replay does not duplicate",
+      "passed": true
+    },
+    {
+      "group": "identity",
+      "name": "changed create conflicts",
+      "passed": true
+    },
+    {
+      "group": "identity",
+      "name": "nonowner edit hidden",
+      "passed": true
+    },
+    {
+      "group": "identity",
+      "name": "nonowner share hidden",
+      "passed": true
+    },
+    {
+      "group": "authorization",
+      "name": "grant enables search immediately",
+      "passed": true
+    },
+    {
+      "group": "retrieval",
+      "name": "title token autocomplete",
+      "passed": true
+    },
+    {
+      "group": "retrieval",
+      "name": "body token does not autocomplete title",
+      "passed": true
+    },
+    {
+      "group": "retrieval",
+      "name": "full text body term",
+      "passed": true
+    },
+    {
+      "group": "authorization",
+      "name": "revocation hides full result and snippet",
+      "passed": true
+    },
+    {
+      "group": "authorization",
+      "name": "revocation hides suggestion",
+      "passed": true
+    },
+    {
+      "group": "authorization",
+      "name": "revocation needs no index mutation",
+      "passed": true
+    },
+    {
+      "group": "versions",
+      "name": "source version advances",
+      "passed": true
+    },
+    {
+      "group": "versions",
+      "name": "old title hidden before update indexed",
+      "passed": true
+    },
+    {
+      "group": "versions",
+      "name": "new title absent until projected",
+      "passed": true
+    },
+    {
+      "group": "versions",
+      "name": "stale expected version conflicts",
+      "passed": true
+    },
+    {
+      "group": "versions",
+      "name": "new version searchable",
+      "passed": true
+    },
+    {
+      "group": "identity",
+      "name": "create replay after edit returns same identity",
+      "passed": true
+    },
+    {
+      "group": "versions",
+      "name": "delete is source tombstone",
+      "passed": true
+    },
+    {
+      "group": "authorization",
+      "name": "delete hides stale indexed title",
+      "passed": true
+    },
+    {
+      "group": "authorization",
+      "name": "delete hides prefix",
+      "passed": true
+    },
+    {
+      "group": "versions",
+      "name": "delete replay no extra event",
+      "passed": true
+    },
+    {
+      "group": "versions",
+      "name": "deleted source cannot edit",
+      "passed": true
+    },
+    {
+      "group": "versions",
+      "name": "delete removes projection row",
+      "passed": true
+    },
+    {
+      "group": "versions",
+      "name": "out of order old upsert fenced",
+      "passed": true
+    },
+    {
+      "group": "versions",
+      "name": "latest title preserved",
+      "passed": true
+    },
+    {
+      "group": "versions",
+      "name": "old upsert after delete fenced",
+      "passed": true
+    },
+    {
+      "group": "versions",
+      "name": "no resurrection",
+      "passed": true
+    },
+    {
+      "group": "retrieval",
+      "name": "selected title boost judgement",
+      "passed": true
+    },
+    {
+      "group": "authorization",
+      "name": "ACL before top k retains authorized hit",
+      "passed": true
+    },
+    {
+      "group": "retrieval",
+      "name": "authorized has more",
+      "passed": true
+    },
+    {
+      "group": "authorization",
+      "name": "no unfiltered count exposed",
+      "passed": true
+    },
+    {
+      "group": "retrieval",
+      "name": "unicode61 accent behavior",
+      "passed": true
+    },
+    {
+      "group": "retrieval",
+      "name": "literal syntax cannot select all",
+      "passed": true
+    },
+    {
+      "group": "retrieval",
+      "name": "wildcard syntax is not accepted as operator",
+      "passed": true
+    },
+    {
+      "group": "retrieval",
+      "name": "prefix mode supplies controlled operator",
+      "passed": true
+    },
+    {
+      "group": "bounds",
+      "name": "empty query",
+      "passed": true
+    },
+    {
+      "group": "bounds",
+      "name": "punctuation only",
+      "passed": true
+    },
+    {
+      "group": "bounds",
+      "name": "too many terms",
+      "passed": true
+    },
+    {
+      "group": "bounds",
+      "name": "oversize limit",
+      "passed": true
+    },
+    {
+      "group": "bounds",
+      "name": "boolean limit",
+      "passed": true
+    },
+    {
+      "group": "bounds",
+      "name": "unknown mode",
+      "passed": true
+    },
+    {
+      "group": "bounds",
+      "name": "oversize title",
+      "passed": true
+    },
+    {
+      "group": "bounds",
+      "name": "nonboolean visibility",
+      "passed": true
+    },
+    {
+      "group": "atomicity",
+      "name": "source and idempotency rollback with outbox",
+      "passed": true
+    },
+    {
+      "group": "atomicity",
+      "name": "projection event and watermark rollback together",
+      "passed": true
+    },
+    {
+      "group": "concurrency",
+      "name": "competing projectors converge",
+      "passed": true
+    },
+    {
+      "group": "concurrency",
+      "name": "single projection after competing apply",
+      "passed": true
+    },
+    {
+      "group": "rebuild",
+      "name": "rebuild indexes source current version",
+      "passed": true
+    },
+    {
+      "group": "rebuild",
+      "name": "old pending event cannot overwrite rebuild",
+      "passed": true
+    },
+    {
+      "group": "rebuild",
+      "name": "same version pending event ignored",
+      "passed": true
+    },
+    {
+      "group": "rebuild",
+      "name": "rebuild preserves tombstones",
+      "passed": true
+    },
+    {
+      "group": "rebuild",
+      "name": "index survives reopen",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "document create",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "authenticated full text query",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "authenticated title prefix",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "private other reader hidden",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "tenant boundary",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "anonymous query denied",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "duplicate query parameter rejected",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "invalid numeric limit rejected",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "unknown query parameter rejected",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "owner grants reader",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "granted reader can query",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "owner revokes reader",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "revoked reader cannot autocomplete",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "delete hides index immediately",
+      "passed": true
+    },
+    {
+      "group": "cleanup",
+      "name": "tracked SQLite connections closed",
+      "passed": true
+    },
+    {
+      "group": "cleanup",
+      "name": "owned temporary directory removed",
+      "passed": true
+    },
+    {
+      "group": "cleanup",
+      "name": "owned HTTP listener closed",
+      "passed": true
+    },
+    {
+      "group": "cleanup",
+      "name": "port 3000 unused",
+      "passed": true
+    }
+  ],
+  "observations": {
+    "permissions": {
+      "private_owner_results": 1,
+      "private_other_reader_results": 0,
+      "after_grant_results": 1,
+      "after_revoke": {
+        "items": [],
+        "returned": 0,
+        "has_more": false
+      },
+      "after_revoke_prefix_results": 0,
+      "projection_row_still_present": true,
+      "cross_tenant_results": 0
+    },
+    "version_fences": {
+      "old_title_before_index_update": 0,
+      "new_title_before_index_update": 0,
+      "new_title_after_index_update": 1,
+      "deleted_title_before_delete_event": 0,
+      "old_upsert_after_newer_version": "stale",
+      "old_upsert_after_tombstone": "stale",
+      "resurrection_results": 0
+    },
+    "retrieval": {
+      "selected_corpus_title_hit_before_body_hit": true,
+      "authorized_returned_with_limit_one": 1,
+      "has_more": true,
+      "unicode61_cafe_matches_accented_title": true,
+      "raw_FTS_OR_interpreted_as_operator": false,
+      "autocomplete_scope": "title token prefix",
+      "universal_relevance_claim": false
+    },
+    "rollback_rebuild": {
+      "source_outbox_rollback_tested": true,
+      "projection_watermark_event_rollback_tested": true,
+      "competing_projector_results": [
+        "applied",
+        "replay"
+      ],
+      "rebuild_source_rows": 9,
+      "late_events_after_rebuild": "stale",
+      "local_atomic_rebuild": true,
+      "online_blue_green_rebuild": false
+    },
+    "http_contract": {
+      "create": 201,
+      "full_text_owner_results": 1,
+      "prefix_owner_results": 1,
+      "private_other_reader_results": 0,
+      "cross_tenant_results": 0,
+      "anonymous": 401,
+      "duplicate_query_parameter": 400,
+      "revoked_prefix_results": 0,
+      "deleted_before_index_event_results": 0,
+      "real_loopback_HTTP": true
+    },
+    "estimates": {
+      "documents": 1000000,
+      "assumed_average_document_bytes": 2000,
+      "logical_document_GB": 2,
+      "assumed_index_multiplier": 1.5,
+      "assumed_index_GB": 3,
+      "updates_per_second": 100,
+      "sixty_second_outage_backlog": 6000,
+      "drain_seconds_at_150_service_100_arrival": 120,
+      "measured_capacity": false
+    }
+  },
+  "cleanup": {
+    "fixture_ports": [
+      65245
+    ],
+    "temporary_database_directory_removed": true,
+    "sqlite_connections_closed": true,
+    "temporary_http_servers_closed": true,
+    "concurrent_worker_calls_completed": 2,
+    "port_3000_used": false
+  },
+  "scope": "Actual SQLite FTS5 full text and title-token prefix search; canonical ACL, tenant and version checks before top-k results, versioned outbox, stale/tombstone fences, rollback, two projector calls, local atomic rebuild and real HTTP. Selected relevance judgements only; no external search cluster, semantic ranking, online reindex or performance benchmark."
+}

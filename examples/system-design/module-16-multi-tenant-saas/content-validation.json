@@ -1,0 +1,24 @@
+{
+  "label": "S11",
+  "chapter": "system-design-handbook-part-18-module-16-multi-tenant-saas.md",
+  "words": 6690,
+  "lines": 997,
+  "questions": 30,
+  "practice_tasks": 10,
+  "unchecked_learning_items": 12,
+  "source_fidelity": [
+    "../worked-systems-s4-s6/runtime.py",
+    "saas.py"
+  ],
+  "output_fidelity": [
+    "sessions_roles",
+    "isolation_exports",
+    "invitations",
+    "quota_atomicity",
+    "http_contract",
+    "estimates"
+  ],
+  "mock_minutes": 45,
+  "verified_checks": 95,
+  "next": "S12: Multi-tenant RAG knowledge-base platform"
+}

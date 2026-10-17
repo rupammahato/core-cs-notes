@@ -1,0 +1,26 @@
+{
+  "label": "S3",
+  "chapter": "system-design-handbook-part-10-module-8-file-upload-processing.md",
+  "words": 8114,
+  "lines": 1048,
+  "questions": 30,
+  "practice_tasks": 10,
+  "unchecked_learning_items": 12,
+  "source_fidelity": [
+    "estimates.py",
+    "objects.py",
+    "uploads.py",
+    "http_api.py"
+  ],
+  "output_fidelity": [
+    "estimates",
+    "intake",
+    "processing",
+    "lifecycle",
+    "concurrency",
+    "http_contract"
+  ],
+  "mock_minutes": 45,
+  "verified_checks": 121,
+  "next": "S4: Ticket booking and limited-inventory reservation"
+}

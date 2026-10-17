@@ -1,0 +1,35 @@
+{
+  "label": "S12",
+  "chapter": "system-design-handbook-part-19-module-17-multi-tenant-rag.md",
+  "words": 7348,
+  "lines": 1150,
+  "questions": 30,
+  "practice_tasks": 10,
+  "unchecked_learning_items": 12,
+  "source_fidelity": [
+    "../worked-systems-s4-s6/runtime.py",
+    "rag.py"
+  ],
+  "dependency_fidelity": [
+    {
+      "path": "../module-16-multi-tenant-saas/saas.py",
+      "sha256": "2c2daed38260edd5dea340d7f3b439bdd9125d020f40e99170f089c2f6efbb47"
+    }
+  ],
+  "output_fidelity": [
+    "versioned_ingestion",
+    "atomic_ingestion",
+    "retrieval_isolation",
+    "permission_races",
+    "generation_budget",
+    "validation_unknown",
+    "concurrency",
+    "deletion",
+    "http_contract",
+    "evaluation",
+    "estimates"
+  ],
+  "mock_minutes": 45,
+  "verified_checks": 125,
+  "next": "S13: Analytics event pipeline and dashboard"
+}

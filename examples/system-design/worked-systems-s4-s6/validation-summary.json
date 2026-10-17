@@ -1,0 +1,306 @@
+{
+  "labels": [
+    "S4",
+    "S5",
+    "S6"
+  ],
+  "verified_date": "2026-10-17",
+  "total_checks": 183,
+  "sections": [
+    {
+      "label": "S4",
+      "checks": 57,
+      "counts": {
+        "validation": 7,
+        "holds": 15,
+        "concurrency": 1,
+        "payments": 15,
+        "http": 12,
+        "estimates": 3,
+        "cleanup": 4
+      },
+      "runtime": {
+        "python": "3.12.10",
+        "sqlite": "3.49.1",
+        "os": "Windows"
+      },
+      "content": {
+        "label": "S4",
+        "chapter": "system-design-handbook-part-11-module-9-booking-reservations.md",
+        "words": 5347,
+        "lines": 777,
+        "questions": 30,
+        "practice_tasks": 10,
+        "unchecked_learning_items": 12,
+        "source_fidelity": [
+          "../worked-systems-s4-s6/runtime.py",
+          "booking.py"
+        ],
+        "output_fidelity": [
+          "holds",
+          "late_payment",
+          "http_contract",
+          "estimates"
+        ],
+        "mock_minutes": 45,
+        "verified_checks": 57,
+        "next": "S5: Chat and real-time messaging",
+        "result_fidelity": {
+          "holds": true,
+          "late_payment": true,
+          "http_contract": true,
+          "estimates": true,
+          "versions": true
+        },
+        "authored_internal_links": 7
+      },
+      "cleanup": {
+        "fixture_ports": [
+          49978
+        ],
+        "temporary_database_directory_removed": true,
+        "sqlite_connections_closed": true,
+        "temporary_http_servers_closed": true,
+        "concurrent_worker_calls_completed": 2,
+        "port_3000_used": false
+      },
+      "scope": "Local SQLite assigned-seat authority and signed loopback callback only. No real payment/refund, provider SDK, distributed clock/lock, PostgreSQL execution, production auth/TLS or load benchmark. Refund rows are durable pending intents, not executed refunds."
+    },
+    {
+      "label": "S5",
+      "checks": 59,
+      "counts": {
+        "validation": 7,
+        "durability": 6,
+        "history": 6,
+        "receipts": 3,
+        "hints": 6,
+        "permissions": 5,
+        "recovery": 3,
+        "concurrency": 4,
+        "http": 12,
+        "estimates": 3,
+        "cleanup": 4
+      },
+      "runtime": {
+        "python": "3.12.10",
+        "sqlite": "3.49.1",
+        "os": "Windows"
+      },
+      "content": {
+        "label": "S5",
+        "chapter": "system-design-handbook-part-12-module-10-chat-messaging.md",
+        "words": 5393,
+        "lines": 823,
+        "questions": 30,
+        "practice_tasks": 10,
+        "unchecked_learning_items": 12,
+        "source_fidelity": [
+          "../worked-systems-s4-s6/runtime.py",
+          "chat.py"
+        ],
+        "output_fidelity": [
+          "durability",
+          "hints_and_permissions",
+          "concurrency",
+          "http_contract",
+          "estimates"
+        ],
+        "mock_minutes": 45,
+        "verified_checks": 59,
+        "next": "S6: Social feed and photo sharing",
+        "result_fidelity": {
+          "durability": true,
+          "hints_and_permissions": true,
+          "concurrency": true,
+          "http_contract": true,
+          "estimates": true,
+          "versions": true
+        },
+        "authored_internal_links": 8
+      },
+      "cleanup": {
+        "fixture_ports": [
+          50064
+        ],
+        "temporary_database_directory_removed": true,
+        "sqlite_connections_closed": true,
+        "temporary_http_servers_closed": true,
+        "concurrent_worker_calls_completed": 4,
+        "port_3000_used": false
+      },
+      "scope": "Local SQLite room history and bounded process-local hints with actual loopback HTTP polling. No WebSocket/SSE protocol, external messages, Redis/broker, production auth/TLS, distributed sequencing/clock, load test or proof of human reading. Current members can read retained history; removed members cannot use new API requests."
+    },
+    {
+      "label": "S6",
+      "checks": 67,
+      "counts": {
+        "publication": 10,
+        "fanout": 9,
+        "concurrency": 4,
+        "hybrid": 4,
+        "pagination": 7,
+        "visibility": 13,
+        "http": 13,
+        "estimates": 3,
+        "cleanup": 4
+      },
+      "runtime": {
+        "python": "3.12.10",
+        "sqlite": "3.49.1",
+        "os": "Windows"
+      },
+      "content": {
+        "label": "S6",
+        "chapter": "system-design-handbook-part-13-module-11-social-feed-photo-sharing.md",
+        "words": 5744,
+        "lines": 829,
+        "questions": 30,
+        "practice_tasks": 10,
+        "unchecked_learning_items": 12,
+        "source_fidelity": [
+          "../worked-systems-s4-s6/runtime.py",
+          "feed.py"
+        ],
+        "output_fidelity": [
+          "fanout",
+          "visibility_and_pagination",
+          "concurrency",
+          "http_contract",
+          "estimates"
+        ],
+        "mock_minutes": 45,
+        "verified_checks": 67,
+        "next": "S7: Background job scheduler and worker platform",
+        "result_fidelity": {
+          "fanout": true,
+          "visibility_and_pagination": true,
+          "concurrency": true,
+          "http_contract": true,
+          "estimates": true,
+          "versions": true
+        },
+        "authored_internal_links": 7
+      },
+      "cleanup": {
+        "fixture_ports": [
+          58282
+        ],
+        "temporary_database_directory_removed": true,
+        "sqlite_connections_closed": true,
+        "temporary_http_servers_closed": true,
+        "concurrent_worker_calls_completed": 4,
+        "port_3000_used": false
+      },
+      "scope": "Bounded local SQLite hybrid chronological feed and actual loopback JSON HTTP. Media state is a trusted metadata fixture, not image decoding, S3 integration or signed image delivery. No recommendation/ranking engine, production auth/TLS, distributed fanout/cache, global revocation or load benchmark. Visibility is rechecked for each local request; already delivered pages cannot be retracted."
+    }
+  ],
+  "roadmap_document_checks": 17,
+  "website": {
+    "build_passed": true,
+    "static_pages": 118,
+    "routes_checked": 50,
+    "all_routes_200": true,
+    "assertions": {
+      "bookingTitle": true,
+      "chatTitle": true,
+      "feedTitle": true,
+      "bookingEvidence": true,
+      "chatEvidence": true,
+      "feedEvidence": true,
+      "architecture": true,
+      "predecessor": true,
+      "bookingNext": true,
+      "chatNext": true,
+      "feedNext": true,
+      "workedGroup": true,
+      "roadmapLinks": true,
+      "allFoundations": true,
+      "homeCard": true,
+      "bankRetained": true
+    },
+    "search": {
+      "system-design:Booking": {
+        "status": 200,
+        "results": 20,
+        "indexed": true,
+        "scoped": true
+      },
+      "system-design:Chat": {
+        "status": 200,
+        "results": 17,
+        "indexed": true,
+        "scoped": true
+      },
+      "system-design:Photo": {
+        "status": 200,
+        "results": 19,
+        "indexed": true,
+        "scoped": true
+      },
+      "resume-skills:Consolidation": {
+        "status": 200,
+        "results": 18,
+        "indexed": true,
+        "scoped": true
+      }
+    },
+    "next_route_status": 404,
+    "temporary_server_closed": true,
+    "cached_font_fixture_used": true
+  },
+  "ports_stopped": {
+    "3000": true,
+    "64468": true,
+    "49978": true,
+    "50064": true,
+    "58282": true
+  },
+  "existing_handbooks": [
+    {
+      "subject": "DSA Notes",
+      "files": 17,
+      "lines": 17589
+    },
+    {
+      "subject": "OOP Notes",
+      "files": 13,
+      "lines": 8806
+    },
+    {
+      "subject": "OS Notes",
+      "files": 13,
+      "lines": 6341
+    },
+    {
+      "subject": "DBMS Notes",
+      "files": 13,
+      "lines": 9613
+    },
+    {
+      "subject": "CN Notes",
+      "files": 13,
+      "lines": 9322
+    },
+    {
+      "subject": "Resume Skills Notes",
+      "files": 31,
+      "lines": 37575
+    }
+  ],
+  "system_design": {
+    "files": 13,
+    "lines": 11919,
+    "published_worked_systems": [
+      "S0",
+      "S1",
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S6"
+    ]
+  },
+  "git_diff_check_passed": true,
+  "next": "S7: Background job scheduler and worker platform"
+}

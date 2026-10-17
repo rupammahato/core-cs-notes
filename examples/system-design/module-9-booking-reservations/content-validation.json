@@ -1,0 +1,22 @@
+{
+  "label": "S4",
+  "chapter": "system-design-handbook-part-11-module-9-booking-reservations.md",
+  "words": 5347,
+  "lines": 777,
+  "questions": 30,
+  "practice_tasks": 10,
+  "unchecked_learning_items": 12,
+  "source_fidelity": [
+    "../worked-systems-s4-s6/runtime.py",
+    "booking.py"
+  ],
+  "output_fidelity": [
+    "holds",
+    "late_payment",
+    "http_contract",
+    "estimates"
+  ],
+  "mock_minutes": 45,
+  "verified_checks": 57,
+  "next": "S5: Chat and real-time messaging"
+}

@@ -1,0 +1,24 @@
+{
+  "label": "S7",
+  "chapter": "system-design-handbook-part-14-module-12-job-scheduler-workers.md",
+  "words": 5395,
+  "lines": 785,
+  "questions": 30,
+  "practice_tasks": 10,
+  "unchecked_learning_items": 12,
+  "source_fidelity": [
+    "../worked-systems-s4-s6/runtime.py",
+    "scheduler.py"
+  ],
+  "output_fidelity": [
+    "effect_recovery",
+    "retry_deadline",
+    "admission",
+    "scheduling",
+    "http_contract",
+    "estimates"
+  ],
+  "mock_minutes": 45,
+  "verified_checks": 65,
+  "next": "S8: Checkout, payments and credit ledger"
+}

@@ -1,0 +1,27 @@
+{
+  "label": "S2",
+  "chapter": "system-design-handbook-part-9-module-7-notifications-webhooks.md",
+  "words": 8371,
+  "lines": 1025,
+  "questions": 30,
+  "practice_tasks": 10,
+  "unchecked_learning_items": 12,
+  "source_fidelity": [
+    "estimates.py",
+    "delivery.py",
+    "protocol.py",
+    "worker.py"
+  ],
+  "output_fidelity": [
+    "estimates",
+    "intake",
+    "concurrency",
+    "leases",
+    "retry",
+    "http_contract",
+    "lost_ack_and_ordering"
+  ],
+  "mock_minutes": 45,
+  "verified_checks": 109,
+  "next": "S3: File upload, storage and processing service"
+}

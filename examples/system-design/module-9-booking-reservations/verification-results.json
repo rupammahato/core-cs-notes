@@ -1,0 +1,358 @@
+{
+  "label": "S4",
+  "verified_date": "2026-10-17",
+  "python": "3.12.10",
+  "sqlite": "3.49.1",
+  "os": "Windows",
+  "total": 57,
+  "counts": {
+    "validation": 7,
+    "holds": 15,
+    "concurrency": 1,
+    "payments": 15,
+    "http": 12,
+    "estimates": 3,
+    "cleanup": 4
+  },
+  "checks": [
+    {
+      "group": "validation",
+      "name": "empty",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "duplicate",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "too_many",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "invalid_identity",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "negative server time",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "boolean time",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "missing seat",
+      "passed": true
+    },
+    {
+      "group": "holds",
+      "name": "canonical seat order replays original hold",
+      "passed": true
+    },
+    {
+      "group": "holds",
+      "name": "server sums integer minor units",
+      "passed": true
+    },
+    {
+      "group": "holds",
+      "name": "retry does not renew deadline",
+      "passed": true
+    },
+    {
+      "group": "holds",
+      "name": "changed operation conflicts",
+      "passed": true
+    },
+    {
+      "group": "holds",
+      "name": "another owner cannot inspect",
+      "passed": true
+    },
+    {
+      "group": "holds",
+      "name": "another tenant cannot cancel",
+      "passed": true
+    },
+    {
+      "group": "holds",
+      "name": "unavailable member makes group fail atomically",
+      "passed": true
+    },
+    {
+      "group": "holds",
+      "name": "failed group leaves other seat free",
+      "passed": true
+    },
+    {
+      "group": "holds",
+      "name": "hold valid immediately before deadline",
+      "passed": true
+    },
+    {
+      "group": "holds",
+      "name": "deadline equality means expired",
+      "passed": true
+    },
+    {
+      "group": "holds",
+      "name": "old cancel cannot release newly held seat",
+      "passed": true
+    },
+    {
+      "group": "holds",
+      "name": "expired create replay does not reacquire",
+      "passed": true
+    },
+    {
+      "group": "holds",
+      "name": "cancel held seat releases it",
+      "passed": true
+    },
+    {
+      "group": "holds",
+      "name": "repeat cancel remains terminal",
+      "passed": true
+    },
+    {
+      "group": "holds",
+      "name": "partial group writes roll back",
+      "passed": true
+    },
+    {
+      "group": "concurrency",
+      "name": "two independent callers get one last-seat hold",
+      "passed": true
+    },
+    {
+      "group": "payments",
+      "name": "late payment creates refund intent",
+      "passed": true
+    },
+    {
+      "group": "payments",
+      "name": "late payment cannot steal reallocated inventory",
+      "passed": true
+    },
+    {
+      "group": "payments",
+      "name": "repeat event replays durable compensation outcome",
+      "passed": true
+    },
+    {
+      "group": "payments",
+      "name": "different event same payment does not duplicate refund",
+      "passed": true
+    },
+    {
+      "group": "payments",
+      "name": "changed event binding conflicts",
+      "passed": true
+    },
+    {
+      "group": "payments",
+      "name": "changed payment amount conflicts across event IDs",
+      "passed": true
+    },
+    {
+      "group": "payments",
+      "name": "current owner can confirm before expiry",
+      "passed": true
+    },
+    {
+      "group": "payments",
+      "name": "confirmed seat survives later expiry sweep",
+      "passed": true
+    },
+    {
+      "group": "payments",
+      "name": "confirmed cancellation is explicit unsupported policy",
+      "passed": true
+    },
+    {
+      "group": "payments",
+      "name": "second charge after confirmation needs compensation",
+      "passed": true
+    },
+    {
+      "group": "payments",
+      "name": "amount mismatch does not confirm inventory",
+      "passed": true
+    },
+    {
+      "group": "payments",
+      "name": "currency mismatch is held for review",
+      "passed": true
+    },
+    {
+      "group": "payments",
+      "name": "close/reopen preserves payment outcome",
+      "passed": true
+    },
+    {
+      "group": "payments",
+      "name": "compensation outcome and event commit together",
+      "passed": true
+    },
+    {
+      "group": "payments",
+      "name": "retry after compensation rollback succeeds",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "reservation requires identity",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "missing operation key is rejected",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "real reservation returns authoritative price",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "reservation response is no-store",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "client cannot submit a cheaper price",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "other owner status is hidden",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "browser claim cannot confirm payment",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "signed raw provider observation confirms",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "tampered bytes fail before processing",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "signed replay remains confirmed",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "API status reports durable confirmation",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "confirmed cancel does not silently release",
+      "passed": true
+    },
+    {
+      "group": "estimates",
+      "name": "planning request-rate units",
+      "passed": true
+    },
+    {
+      "group": "estimates",
+      "name": "logical storage arithmetic",
+      "passed": true
+    },
+    {
+      "group": "estimates",
+      "name": "not a throughput benchmark",
+      "passed": true
+    },
+    {
+      "group": "cleanup",
+      "name": "tracked SQLite connections closed",
+      "passed": true
+    },
+    {
+      "group": "cleanup",
+      "name": "owned temporary directory removed",
+      "passed": true
+    },
+    {
+      "group": "cleanup",
+      "name": "owned HTTP listener closed",
+      "passed": true
+    },
+    {
+      "group": "cleanup",
+      "name": "port 3000 unused",
+      "passed": true
+    }
+  ],
+  "observations": {
+    "holds": {
+      "group_amount_minor_units": 2500,
+      "currency": "USD",
+      "hold_deadline_ms": 5000,
+      "expiry_at_equality": true,
+      "replay_renews_deadline": false,
+      "failed_group_partially_reserves": false,
+      "old_cancellation_releases_new_owner": false,
+      "partial_update_rollback_tested": true
+    },
+    "late_payment": {
+      "last_seat_contenders": 2,
+      "admitted_holds": 1,
+      "rejected_status": 409,
+      "old_payment_outcome": "refund_required",
+      "reallocated_seat_stolen": false,
+      "one_refund_for_duplicate_payment": true,
+      "new_owner_outcome": "confirmed",
+      "amount_mismatch_outcome": "review_required",
+      "refund_executed_at_provider": false,
+      "compensation_transaction_rollback_tested": true
+    },
+    "http_contract": {
+      "reserve_status": 201,
+      "server_amount_minor_units": 1200,
+      "unsigned_payment_status": 401,
+      "signed_payment_outcome": "confirmed",
+      "tampered_bytes_status": 401,
+      "foreign_owner_status": 404,
+      "confirmed_cancel_status": 409,
+      "cache_control": "no-store"
+    },
+    "estimates": {
+      "contenders_per_minute": 10000,
+      "average_reservation_attempts_per_second": 166.667,
+      "assumed_logical_hold_bytes": 512,
+      "one_million_retained_holds_MB": 512,
+      "hold_window_ms_in_fixture": 5000,
+      "seats_per_reservation_max": 4,
+      "measured_capacity": false
+    }
+  },
+  "cleanup": {
+    "fixture_ports": [
+      49978
+    ],
+    "temporary_database_directory_removed": true,
+    "sqlite_connections_closed": true,
+    "temporary_http_servers_closed": true,
+    "concurrent_worker_calls_completed": 2,
+    "port_3000_used": false
+  },
+  "scope": "Local SQLite assigned-seat authority and signed loopback callback only. No real payment/refund, provider SDK, distributed clock/lock, PostgreSQL execution, production auth/TLS or load benchmark. Refund rows are durable pending intents, not executed refunds."
+}

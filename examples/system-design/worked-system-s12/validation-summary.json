@@ -1,0 +1,194 @@
+{
+  "labels": [
+    "S12"
+  ],
+  "verified_date": "2026-10-17",
+  "total_checks": 125,
+  "sections": [
+    {
+      "label": "S12",
+      "checks": 125,
+      "counts": {
+        "ingestion": 5,
+        "isolation": 8,
+        "bounds": 10,
+        "vectors": 5,
+        "retrieval": 4,
+        "citations": 3,
+        "versions": 13,
+        "concurrency": 5,
+        "atomicity": 6,
+        "budget": 5,
+        "generation": 5,
+        "validation": 4,
+        "uncertainty": 5,
+        "revocation": 4,
+        "deletion": 14,
+        "evaluation": 6,
+        "http": 19,
+        "cleanup": 4
+      },
+      "runtime": {
+        "python": "3.12.10",
+        "sqlite": "3.49.1",
+        "os": "Windows"
+      },
+      "content": {
+        "label": "S12",
+        "chapter": "system-design-handbook-part-19-module-17-multi-tenant-rag.md",
+        "words": 7343,
+        "lines": 1150,
+        "questions": 30,
+        "practice_tasks": 10,
+        "unchecked_learning_items": 12,
+        "source_fidelity": [
+          "../worked-systems-s4-s6/runtime.py",
+          "rag.py"
+        ],
+        "dependency_fidelity": [
+          {
+            "path": "../module-16-multi-tenant-saas/saas.py",
+            "sha256": "2c2daed38260edd5dea340d7f3b439bdd9125d020f40e99170f089c2f6efbb47"
+          }
+        ],
+        "output_fidelity": [
+          "versioned_ingestion",
+          "atomic_ingestion",
+          "retrieval_isolation",
+          "permission_races",
+          "generation_budget",
+          "validation_unknown",
+          "concurrency",
+          "deletion",
+          "http_contract",
+          "evaluation",
+          "estimates"
+        ],
+        "mock_minutes": 45,
+        "verified_checks": 125,
+        "next": "S13: Analytics event pipeline and dashboard",
+        "result_fidelity": {
+          "versioned_ingestion": true,
+          "atomic_ingestion": true,
+          "retrieval_isolation": true,
+          "permission_races": true,
+          "generation_budget": true,
+          "validation_unknown": true,
+          "concurrency": true,
+          "deletion": true,
+          "http_contract": true,
+          "evaluation": true,
+          "estimates": true,
+          "versions": true
+        },
+        "authored_internal_links": 9
+      },
+      "cleanup": {
+        "fixture_ports": [
+          61005
+        ],
+        "temporary_database_directory_removed": true,
+        "sqlite_connections_closed": true,
+        "temporary_http_servers_closed": true,
+        "concurrent_worker_calls_completed": 6,
+        "port_3000_used": false
+      },
+      "scope": "Local RAG orchestration using unchanged S11 session/membership authority, versioned plaintext and durable ingest, deterministic feature-hash vectors/exact scan, current permission-before-top-k, extractive model fixture, strict quote/citation/tool validation, integer character-budget reservation and uncertainty, deletion/redaction/tombstones, six competing calls, selected judged corpus, rollback/reopen and real HTTP. No real LLM/embedding/vector API, learned semantic retrieval, external tools, stream, object store, provider metering or production quality/performance claim."
+    }
+  ],
+  "roadmap_document_checks": 17,
+  "website": {
+    "build_passed": true,
+    "static_pages": 124,
+    "routes_checked": 56,
+    "all_routes_200": true,
+    "assertions": {
+      "ragTitle": true,
+      "ragEvidence": true,
+      "evaluation": true,
+      "architecture": true,
+      "predecessor": true,
+      "ragNext": true,
+      "workedGroup": true,
+      "roadmapLink": true,
+      "allFoundations": true,
+      "homeCard": true,
+      "bankRetained": true
+    },
+    "search": {
+      "system-design:RAG": {
+        "status": 200,
+        "results": 24,
+        "indexed": true,
+        "scoped": true
+      },
+      "resume-skills:Consolidation": {
+        "status": 200,
+        "results": 18,
+        "indexed": true,
+        "scoped": true
+      }
+    },
+    "next_route_status": 404,
+    "temporary_server_closed": true,
+    "cached_font_fixture_used": true
+  },
+  "ports_stopped": {
+    "3000": true,
+    "55382": true,
+    "61005": true
+  },
+  "existing_handbooks": [
+    {
+      "subject": "DSA Notes",
+      "files": 17,
+      "lines": 17589
+    },
+    {
+      "subject": "OOP Notes",
+      "files": 13,
+      "lines": 8806
+    },
+    {
+      "subject": "OS Notes",
+      "files": 13,
+      "lines": 6341
+    },
+    {
+      "subject": "DBMS Notes",
+      "files": 13,
+      "lines": 9613
+    },
+    {
+      "subject": "CN Notes",
+      "files": 13,
+      "lines": 9322
+    },
+    {
+      "subject": "Resume Skills Notes",
+      "files": 31,
+      "lines": 37575
+    }
+  ],
+  "system_design": {
+    "files": 19,
+    "lines": 17392,
+    "published_worked_systems": [
+      "S0",
+      "S1",
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S6",
+      "S7",
+      "S8",
+      "S9",
+      "S10",
+      "S11",
+      "S12"
+    ]
+  },
+  "git_diff_check_passed": true,
+  "next": "S13: Analytics event pipeline and dashboard"
+}
