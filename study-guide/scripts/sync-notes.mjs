@@ -84,6 +84,40 @@ const SUBJECTS = [
       { slug: 'end-to-end', title: 'End to End & Revision', icon: 'ListChecks', pages: ['url-walkthrough', 'consolidation'] },
     ],
   },
+  {
+    slug: 'resume-skills',
+    title: 'Resume Skills',
+    dir: '../Resume Skills Notes',
+    description: 'Backend, frameworks, cloud and AI skills for interviews',
+    icon: 'Layers',
+    index: 'master-roadmap',
+    groups: [
+      { slug: 'foundations', title: 'Backend Foundations', icon: 'Blocks', pages: ['how-backend-works', 'javascript-fundamentals', 'asynchronous-javascript', 'typescript-fundamentals', 'nodejs'] },
+      { slug: 'backend-apis', title: 'Backend APIs', icon: 'Server', pages: ['express-backend-structure', 'rest-apis-http', 'authentication-sessions-jwt-oauth', 'api-security-authorization-multi-tenancy', 'webhooks-payments-reliable-integrations'] },
+      { slug: 'python-backend', title: 'Python Backend', icon: 'Code', pages: ['python-fundamentals', 'flask-fastapi-python-request-handling', 'django-django-rest-framework'] },
+      { slug: 'databases', title: 'Databases', icon: 'Database', pages: ['postgresql-backend', 'mongodb-backend', 'neo4j-graph-backed-applications'] },
+      { slug: 'data-pipelines', title: 'Caching and Background Work', icon: 'Workflow', pages: ['caching-background-jobs-data-ingestion'] },
+      { slug: 'deployment', title: 'Deployment and Operations', icon: 'Boxes', pages: ['docker-fundamentals', 'linux-deployment-nginx-pm2', 'aws-gcp-fundamentals', 'git-ci-cd-testing-observability-performance'] },
+      { slug: 'frontend', title: 'Frontend Fundamentals', icon: 'Code', pages: ['react-fundamentals', 'nextjs-api-routes-tailwind'] },
+      { slug: 'ai-systems', title: 'AI Systems', icon: 'Brain', pages: ['llm-ai-api-fundamentals', 'rag-document-ingestion', 'embeddings-pinecone-pgvector', 'langchain-langgraph-llamaindex'] },
+      { slug: 'system-design', title: 'System Design', icon: 'Workflow', pages: ['system-design-load-balancer'] },
+      { slug: 'resume-projects', title: 'Resume Projects', icon: 'ListChecks', pages: ['resume-project-experience-deep-dives'] },
+      { slug: 'revision', title: 'Revision', icon: 'ListChecks', pages: ['consolidation-interview-drills'] },
+    ],
+  },
+  {
+    slug: 'system-design',
+    title: 'System Design',
+    dir: '../System Design Notes',
+    description: 'Architecture foundations and worked system designs for backend interviews',
+    icon: 'Network',
+    index: 'master-roadmap',
+    groups: [
+      { slug: 'foundations', title: 'Foundations', icon: 'Blocks', pages: ['design-method-estimation', 'application-architecture-service-boundaries', 'data-caching-scaling', 'reliable-workflows-concurrency', 'secure-observable-operations'] },
+      { slug: 'worked-systems', title: 'Worked Systems', icon: 'Wrench', pages: ['url-shortener', 'rate-limiter', 'notifications-webhooks', 'file-upload-processing', 'booking-reservations', 'chat-messaging', 'social-feed-photo-sharing', 'job-scheduler-workers', 'checkout-payments-credit-ledger', 'search-autocomplete', 'load-balancer-distributed-cache', 'multi-tenant-saas', 'multi-tenant-rag', 'analytics-event-pipeline'] },
+      { slug: 'revision', title: 'Revision', icon: 'ListChecks', pages: ['consolidation'] },
+    ],
+  },
 ];
 
 // A bad icon name is only a build-time warning, so fail here instead.

@@ -1,6 +1,6 @@
 # Core CS Notes — study guide
 
-Renders the DSA, OOP, OS, DBMS and CN handbooks as a chapter/section study site
+Renders the DSA, OOP, OS, DBMS, CN, Resume Skills and System Design handbooks as a chapter/section study site
 (Next.js 16 + Fumadocs).
 
     npm run study    # build + serve at http://localhost:3000 (light on RAM; rerun after editing notes)
@@ -14,7 +14,7 @@ read — the sync never writes back to them.
 
 The sync script reads `../DSA Notes`, `../OOP Notes` and so on, which sit **outside** this folder.
 So the repository root must be the parent directory (the one containing both `study-guide/` and the
-five `* Notes/` folders), with the host's **root directory set to `study-guide`**. On Vercel that is
+source `* Notes/` folders), with the host's **root directory set to `study-guide`**. On Vercel that is
 Project Settings → Build → Root Directory. Deploying `study-guide/` alone fails at `prebuild`,
 because `../*/Notes` would not exist.
 

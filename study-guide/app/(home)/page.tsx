@@ -63,7 +63,8 @@ export default function HomePage() {
                 <p className="mt-3 text-sm text-fd-muted-foreground">{subject.description}</p>
               )}
               <p className="mt-4 font-mono text-xs text-fd-muted-foreground">
-                {chapters} chapters · {groups.length} groups
+                {chapters} {chapters === 1 ? 'chapter' : 'chapters'} · {groups.length}{' '}
+                {groups.length === 1 ? 'group' : 'groups'}
               </p>
               <div className="mt-3 flex flex-wrap gap-1.5">
                 {groups.map((group) => (
