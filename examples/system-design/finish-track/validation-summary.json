@@ -1,0 +1,164 @@
+{
+  "verified_date": "2026-10-18",
+  "authoring_complete": true,
+  "authored_track_files": 21,
+  "foundations": 5,
+  "worked_systems": 14,
+  "consolidation": 1,
+  "new_runtime_checks": 78,
+  "fresh_document_helper_checks": 204,
+  "historical_recorded_teaching_assertions": 1600,
+  "historical_runtime_suite_freshly_rerun": false,
+  "new_sections": [
+    {
+      "label": "S13",
+      "chapter": "system-design-handbook-part-20-module-18-analytics-event-pipeline.md",
+      "slug": "analytics-event-pipeline",
+      "group": "worked-systems",
+      "words": 5522,
+      "lines": 843,
+      "questions": 30,
+      "practice_tasks": 10,
+      "unchecked_learning_items": 12,
+      "source_fidelity": [
+        "../worked-systems-s4-s6/runtime.py",
+        "pipeline.py"
+      ],
+      "output_fidelity": [
+        "time_metrics",
+        "recovery",
+        "rebuild",
+        "privacy",
+        "http_contract",
+        "estimates"
+      ],
+      "mock_minutes": 45,
+      "verified_checks": 78,
+      "next": "Consolidation and design mocks",
+      "result_fidelity": {
+        "time_metrics": true,
+        "recovery": true,
+        "rebuild": true,
+        "privacy": true,
+        "http_contract": true,
+        "estimates": true
+      }
+    },
+    {
+      "label": "Revision",
+      "chapter": "system-design-handbook-part-21-consolidation.md",
+      "slug": "consolidation",
+      "group": "revision",
+      "words": 10236,
+      "lines": 1042,
+      "bank_drills": 60,
+      "failure_cards": 14,
+      "self_test_questions": 24,
+      "confusable_pairs": 24,
+      "mock_scenarios": 6,
+      "mock_minutes": 45,
+      "timing_minutes": {
+        "seven_day": 840,
+        "three_day": 450,
+        "final_review": 120
+      },
+      "practice_tasks": 10,
+      "unchecked_learning_items": 12,
+      "source_fidelity": [
+        "revision.py"
+      ],
+      "catalogue_teaching_chapters": 19,
+      "historical_recorded_assertions": 1600,
+      "source_bank_sha256": "7102fbba95225e7cb0715e7924d1620728df5ecb8d7ee22c36ae1283a64c56ad",
+      "scope": "Revision content, provenance inventory and manually supplied scoring; no automatic learner grading or fresh execution of historical engines.",
+      "verified_document_checks": 204,
+      "all_teaching_links_resolve": true
+    }
+  ],
+  "website": {
+    "build_passed": true,
+    "static_pages": 126,
+    "routes_checked": 58,
+    "all_routes_200": true,
+    "assertions": {
+      "analyticsTitle": true,
+      "analyticsEvidence": true,
+      "revisionTitle": true,
+      "revisionBank": true,
+      "revisionBoundaries": true,
+      "architecture": true,
+      "predecessor": true,
+      "analyticsFinish": true,
+      "groups": true,
+      "roadmapLinks": true,
+      "allFoundations": true,
+      "allPublished": true,
+      "completion": true,
+      "homeCard": true,
+      "bankRetained": true
+    },
+    "search": {
+      "system-design:Analytics": {
+        "status": 200,
+        "results": 43,
+        "indexed": true,
+        "scoped": true
+      },
+      "system-design:Consolidation": {
+        "status": 200,
+        "results": 45,
+        "indexed": true,
+        "scoped": true
+      },
+      "resume-skills:Consolidation": {
+        "status": 200,
+        "results": 18,
+        "indexed": true,
+        "scoped": true
+      }
+    },
+    "temporary_server_closed": true,
+    "cached_font_fixture_used": true
+  },
+  "ports_stopped": {
+    "3000": true,
+    "65184": true,
+    "65157": true
+  },
+  "preserved_handbooks": [
+    {
+      "subject": "DSA Notes",
+      "files": 17,
+      "lines": 17589
+    },
+    {
+      "subject": "OOP Notes",
+      "files": 13,
+      "lines": 8806
+    },
+    {
+      "subject": "OS Notes",
+      "files": 13,
+      "lines": 6341
+    },
+    {
+      "subject": "DBMS Notes",
+      "files": 13,
+      "lines": 9613
+    },
+    {
+      "subject": "CN Notes",
+      "files": 13,
+      "lines": 9322
+    },
+    {
+      "subject": "Resume Skills Notes",
+      "files": 31,
+      "lines": 37575
+    }
+  ],
+  "architecture_lines": 19277,
+  "all_learning_checklists_automatically_completed": false,
+  "later_track": "Separate product/analytics P0-P5; optional enrichment designs are not required architecture files",
+  "next": "Revision and manual practice"
+}

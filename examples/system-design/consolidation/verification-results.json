@@ -1,0 +1,1113 @@
+{
+  "label": "Revision",
+  "verified_date": "2026-10-18",
+  "python": "3.12.10",
+  "kind": "document-provenance-and-manual-helper-audit",
+  "total": 204,
+  "checks": [
+    {
+      "group": "catalogue",
+      "name": "all foundations and fourteen systems in numeric order",
+      "passed": true
+    },
+    {
+      "group": "provenance",
+      "name": "A0 chapter/proof hashes current",
+      "passed": true
+    },
+    {
+      "group": "provenance",
+      "name": "A0 recorded receipts internally consistent",
+      "passed": true
+    },
+    {
+      "group": "teaching",
+      "name": "A0 exact source fidelity",
+      "passed": true
+    },
+    {
+      "group": "teaching",
+      "name": "A0 thirty sequential Q&As",
+      "passed": true
+    },
+    {
+      "group": "teaching",
+      "name": "A0 ten tasks and unchecked learning",
+      "passed": true
+    },
+    {
+      "group": "links",
+      "name": "A0 local teaching links resolve",
+      "passed": true
+    },
+    {
+      "group": "provenance",
+      "name": "A1 chapter/proof hashes current",
+      "passed": true
+    },
+    {
+      "group": "provenance",
+      "name": "A1 recorded receipts internally consistent",
+      "passed": true
+    },
+    {
+      "group": "teaching",
+      "name": "A1 exact source fidelity",
+      "passed": true
+    },
+    {
+      "group": "teaching",
+      "name": "A1 thirty sequential Q&As",
+      "passed": true
+    },
+    {
+      "group": "teaching",
+      "name": "A1 ten tasks and unchecked learning",
+      "passed": true
+    },
+    {
+      "group": "links",
+      "name": "A1 local teaching links resolve",
+      "passed": true
+    },
+    {
+      "group": "provenance",
+      "name": "A2 chapter/proof hashes current",
+      "passed": true
+    },
+    {
+      "group": "provenance",
+      "name": "A2 recorded receipts internally consistent",
+      "passed": true
+    },
+    {
+      "group": "teaching",
+      "name": "A2 exact source fidelity",
+      "passed": true
+    },
+    {
+      "group": "teaching",
+      "name": "A2 thirty sequential Q&As",
+      "passed": true
+    },
+    {
+      "group": "teaching",
+      "name": "A2 ten tasks and unchecked learning",
+      "passed": true
+    },
+    {
+      "group": "links",
+      "name": "A2 local teaching links resolve",
+      "passed": true
+    },
+    {
+      "group": "provenance",
+      "name": "A3 chapter/proof hashes current",
+      "passed": true
+    },
+    {
+      "group": "provenance",
+      "name": "A3 recorded receipts internally consistent",
+      "passed": true
+    },
+    {
+      "group": "teaching",
+      "name": "A3 exact source fidelity",
+      "passed": true
+    },
+    {
+      "group": "teaching",
+      "name": "A3 thirty sequential Q&As",
+      "passed": true
+    },
+    {
+      "group": "teaching",
+      "name": "A3 ten tasks and unchecked learning",
+      "passed": true
+    },
+    {
+      "group": "links",
+      "name": "A3 local teaching links resolve",
+      "passed": true
+    },
+    {
+      "group": "provenance",
+      "name": "A4 chapter/proof hashes current",
+      "passed": true
+    },
+    {
+      "group": "provenance",
+      "name": "A4 recorded receipts internally consistent",
+      "passed": true
+    },
+    {
+      "group": "teaching",
+      "name": "A4 exact source fidelity",
+      "passed": true
+    },
+    {
+      "group": "teaching",
+      "name": "A4 thirty sequential Q&As",
+      "passed": true
+    },
+    {
+      "group": "teaching",
+      "name": "A4 ten tasks and unchecked learning",
+      "passed": true
+    },
+    {
+      "group": "links",
+      "name": "A4 local teaching links resolve",
+      "passed": true
+    },
+    {
+      "group": "provenance",
+      "name": "S0 chapter/proof hashes current",
+      "passed": true
+    },
+    {
+      "group": "provenance",
+      "name": "S0 recorded receipts internally consistent",
+      "passed": true
+    },
+    {
+      "group": "teaching",
+      "name": "S0 exact source fidelity",
+      "passed": true
+    },
+    {
+      "group": "teaching",
+      "name": "S0 thirty sequential Q&As",
+      "passed": true
+    },
+    {
+      "group": "teaching",
+      "name": "S0 ten tasks and unchecked learning",
+      "passed": true
+    },
+    {
+      "group": "links",
+      "name": "S0 local teaching links resolve",
+      "passed": true
+    },
+    {
+      "group": "provenance",
+      "name": "S1 chapter/proof hashes current",
+      "passed": true
+    },
+    {
+      "group": "provenance",
+      "name": "S1 recorded receipts internally consistent",
+      "passed": true
+    },
+    {
+      "group": "teaching",
+      "name": "S1 exact source fidelity",
+      "passed": true
+    },
+    {
+      "group": "teaching",
+      "name": "S1 thirty sequential Q&As",
+      "passed": true
+    },
+    {
+      "group": "teaching",
+      "name": "S1 ten tasks and unchecked learning",
+      "passed": true
+    },
+    {
+      "group": "links",
+      "name": "S1 local teaching links resolve",
+      "passed": true
+    },
+    {
+      "group": "provenance",
+      "name": "S2 chapter/proof hashes current",
+      "passed": true
+    },
+    {
+      "group": "provenance",
+      "name": "S2 recorded receipts internally consistent",
+      "passed": true
+    },
+    {
+      "group": "teaching",
+      "name": "S2 exact source fidelity",
+      "passed": true
+    },
+    {
+      "group": "teaching",
+      "name": "S2 thirty sequential Q&As",
+      "passed": true
+    },
+    {
+      "group": "teaching",
+      "name": "S2 ten tasks and unchecked learning",
+      "passed": true
+    },
+    {
+      "group": "links",
+      "name": "S2 local teaching links resolve",
+      "passed": true
+    },
+    {
+      "group": "provenance",
+      "name": "S3 chapter/proof hashes current",
+      "passed": true
+    },
+    {
+      "group": "provenance",
+      "name": "S3 recorded receipts internally consistent",
+      "passed": true
+    },
+    {
+      "group": "teaching",
+      "name": "S3 exact source fidelity",
+      "passed": true
+    },
+    {
+      "group": "teaching",
+      "name": "S3 thirty sequential Q&As",
+      "passed": true
+    },
+    {
+      "group": "teaching",
+      "name": "S3 ten tasks and unchecked learning",
+      "passed": true
+    },
+    {
+      "group": "links",
+      "name": "S3 local teaching links resolve",
+      "passed": true
+    },
+    {
+      "group": "provenance",
+      "name": "S4 chapter/proof hashes current",
+      "passed": true
+    },
+    {
+      "group": "provenance",
+      "name": "S4 recorded receipts internally consistent",
+      "passed": true
+    },
+    {
+      "group": "teaching",
+      "name": "S4 exact source fidelity",
+      "passed": true
+    },
+    {
+      "group": "teaching",
+      "name": "S4 thirty sequential Q&As",
+      "passed": true
+    },
+    {
+      "group": "teaching",
+      "name": "S4 ten tasks and unchecked learning",
+      "passed": true
+    },
+    {
+      "group": "links",
+      "name": "S4 local teaching links resolve",
+      "passed": true
+    },
+    {
+      "group": "provenance",
+      "name": "S5 chapter/proof hashes current",
+      "passed": true
+    },
+    {
+      "group": "provenance",
+      "name": "S5 recorded receipts internally consistent",
+      "passed": true
+    },
+    {
+      "group": "teaching",
+      "name": "S5 exact source fidelity",
+      "passed": true
+    },
+    {
+      "group": "teaching",
+      "name": "S5 thirty sequential Q&As",
+      "passed": true
+    },
+    {
+      "group": "teaching",
+      "name": "S5 ten tasks and unchecked learning",
+      "passed": true
+    },
+    {
+      "group": "links",
+      "name": "S5 local teaching links resolve",
+      "passed": true
+    },
+    {
+      "group": "provenance",
+      "name": "S6 chapter/proof hashes current",
+      "passed": true
+    },
+    {
+      "group": "provenance",
+      "name": "S6 recorded receipts internally consistent",
+      "passed": true
+    },
+    {
+      "group": "teaching",
+      "name": "S6 exact source fidelity",
+      "passed": true
+    },
+    {
+      "group": "teaching",
+      "name": "S6 thirty sequential Q&As",
+      "passed": true
+    },
+    {
+      "group": "teaching",
+      "name": "S6 ten tasks and unchecked learning",
+      "passed": true
+    },
+    {
+      "group": "links",
+      "name": "S6 local teaching links resolve",
+      "passed": true
+    },
+    {
+      "group": "provenance",
+      "name": "S7 chapter/proof hashes current",
+      "passed": true
+    },
+    {
+      "group": "provenance",
+      "name": "S7 recorded receipts internally consistent",
+      "passed": true
+    },
+    {
+      "group": "teaching",
+      "name": "S7 exact source fidelity",
+      "passed": true
+    },
+    {
+      "group": "teaching",
+      "name": "S7 thirty sequential Q&As",
+      "passed": true
+    },
+    {
+      "group": "teaching",
+      "name": "S7 ten tasks and unchecked learning",
+      "passed": true
+    },
+    {
+      "group": "links",
+      "name": "S7 local teaching links resolve",
+      "passed": true
+    },
+    {
+      "group": "provenance",
+      "name": "S8 chapter/proof hashes current",
+      "passed": true
+    },
+    {
+      "group": "provenance",
+      "name": "S8 recorded receipts internally consistent",
+      "passed": true
+    },
+    {
+      "group": "teaching",
+      "name": "S8 exact source fidelity",
+      "passed": true
+    },
+    {
+      "group": "teaching",
+      "name": "S8 thirty sequential Q&As",
+      "passed": true
+    },
+    {
+      "group": "teaching",
+      "name": "S8 ten tasks and unchecked learning",
+      "passed": true
+    },
+    {
+      "group": "links",
+      "name": "S8 local teaching links resolve",
+      "passed": true
+    },
+    {
+      "group": "provenance",
+      "name": "S9 chapter/proof hashes current",
+      "passed": true
+    },
+    {
+      "group": "provenance",
+      "name": "S9 recorded receipts internally consistent",
+      "passed": true
+    },
+    {
+      "group": "teaching",
+      "name": "S9 exact source fidelity",
+      "passed": true
+    },
+    {
+      "group": "teaching",
+      "name": "S9 thirty sequential Q&As",
+      "passed": true
+    },
+    {
+      "group": "teaching",
+      "name": "S9 ten tasks and unchecked learning",
+      "passed": true
+    },
+    {
+      "group": "links",
+      "name": "S9 local teaching links resolve",
+      "passed": true
+    },
+    {
+      "group": "provenance",
+      "name": "S10 chapter/proof hashes current",
+      "passed": true
+    },
+    {
+      "group": "provenance",
+      "name": "S10 recorded receipts internally consistent",
+      "passed": true
+    },
+    {
+      "group": "teaching",
+      "name": "S10 exact source fidelity",
+      "passed": true
+    },
+    {
+      "group": "teaching",
+      "name": "S10 thirty sequential Q&As",
+      "passed": true
+    },
+    {
+      "group": "teaching",
+      "name": "S10 ten tasks and unchecked learning",
+      "passed": true
+    },
+    {
+      "group": "links",
+      "name": "S10 local teaching links resolve",
+      "passed": true
+    },
+    {
+      "group": "provenance",
+      "name": "S11 chapter/proof hashes current",
+      "passed": true
+    },
+    {
+      "group": "provenance",
+      "name": "S11 recorded receipts internally consistent",
+      "passed": true
+    },
+    {
+      "group": "teaching",
+      "name": "S11 exact source fidelity",
+      "passed": true
+    },
+    {
+      "group": "teaching",
+      "name": "S11 thirty sequential Q&As",
+      "passed": true
+    },
+    {
+      "group": "teaching",
+      "name": "S11 ten tasks and unchecked learning",
+      "passed": true
+    },
+    {
+      "group": "links",
+      "name": "S11 local teaching links resolve",
+      "passed": true
+    },
+    {
+      "group": "provenance",
+      "name": "S12 chapter/proof hashes current",
+      "passed": true
+    },
+    {
+      "group": "provenance",
+      "name": "S12 recorded receipts internally consistent",
+      "passed": true
+    },
+    {
+      "group": "teaching",
+      "name": "S12 exact source fidelity",
+      "passed": true
+    },
+    {
+      "group": "teaching",
+      "name": "S12 thirty sequential Q&As",
+      "passed": true
+    },
+    {
+      "group": "teaching",
+      "name": "S12 ten tasks and unchecked learning",
+      "passed": true
+    },
+    {
+      "group": "links",
+      "name": "S12 local teaching links resolve",
+      "passed": true
+    },
+    {
+      "group": "provenance",
+      "name": "S13 chapter/proof hashes current",
+      "passed": true
+    },
+    {
+      "group": "provenance",
+      "name": "S13 recorded receipts internally consistent",
+      "passed": true
+    },
+    {
+      "group": "teaching",
+      "name": "S13 exact source fidelity",
+      "passed": true
+    },
+    {
+      "group": "teaching",
+      "name": "S13 thirty sequential Q&As",
+      "passed": true
+    },
+    {
+      "group": "teaching",
+      "name": "S13 ten tasks and unchecked learning",
+      "passed": true
+    },
+    {
+      "group": "links",
+      "name": "S13 local teaching links resolve",
+      "passed": true
+    },
+    {
+      "group": "catalogue",
+      "name": "recorded teaching assertion sum preserved",
+      "passed": true
+    },
+    {
+      "group": "catalogue",
+      "name": "all planned files exist and syllabus available",
+      "passed": true
+    },
+    {
+      "group": "bank",
+      "name": "all original prompts/checkpoints preserved",
+      "passed": true
+    },
+    {
+      "group": "bank",
+      "name": "sixty ordered bank drill headings",
+      "passed": true
+    },
+    {
+      "group": "bank",
+      "name": "Q01 prompt checkpoint expansion present",
+      "passed": true
+    },
+    {
+      "group": "bank",
+      "name": "Q02 prompt checkpoint expansion present",
+      "passed": true
+    },
+    {
+      "group": "bank",
+      "name": "Q03 prompt checkpoint expansion present",
+      "passed": true
+    },
+    {
+      "group": "bank",
+      "name": "Q04 prompt checkpoint expansion present",
+      "passed": true
+    },
+    {
+      "group": "bank",
+      "name": "Q05 prompt checkpoint expansion present",
+      "passed": true
+    },
+    {
+      "group": "bank",
+      "name": "Q06 prompt checkpoint expansion present",
+      "passed": true
+    },
+    {
+      "group": "bank",
+      "name": "Q07 prompt checkpoint expansion present",
+      "passed": true
+    },
+    {
+      "group": "bank",
+      "name": "Q08 prompt checkpoint expansion present",
+      "passed": true
+    },
+    {
+      "group": "bank",
+      "name": "Q09 prompt checkpoint expansion present",
+      "passed": true
+    },
+    {
+      "group": "bank",
+      "name": "Q10 prompt checkpoint expansion present",
+      "passed": true
+    },
+    {
+      "group": "bank",
+      "name": "Q11 prompt checkpoint expansion present",
+      "passed": true
+    },
+    {
+      "group": "bank",
+      "name": "Q12 prompt checkpoint expansion present",
+      "passed": true
+    },
+    {
+      "group": "bank",
+      "name": "Q13 prompt checkpoint expansion present",
+      "passed": true
+    },
+    {
+      "group": "bank",
+      "name": "Q14 prompt checkpoint expansion present",
+      "passed": true
+    },
+    {
+      "group": "bank",
+      "name": "Q15 prompt checkpoint expansion present",
+      "passed": true
+    },
+    {
+      "group": "bank",
+      "name": "Q16 prompt checkpoint expansion present",
+      "passed": true
+    },
+    {
+      "group": "bank",
+      "name": "Q17 prompt checkpoint expansion present",
+      "passed": true
+    },
+    {
+      "group": "bank",
+      "name": "Q18 prompt checkpoint expansion present",
+      "passed": true
+    },
+    {
+      "group": "bank",
+      "name": "Q19 prompt checkpoint expansion present",
+      "passed": true
+    },
+    {
+      "group": "bank",
+      "name": "Q20 prompt checkpoint expansion present",
+      "passed": true
+    },
+    {
+      "group": "bank",
+      "name": "Q21 prompt checkpoint expansion present",
+      "passed": true
+    },
+    {
+      "group": "bank",
+      "name": "Q22 prompt checkpoint expansion present",
+      "passed": true
+    },
+    {
+      "group": "bank",
+      "name": "Q23 prompt checkpoint expansion present",
+      "passed": true
+    },
+    {
+      "group": "bank",
+      "name": "Q24 prompt checkpoint expansion present",
+      "passed": true
+    },
+    {
+      "group": "bank",
+      "name": "Q25 prompt checkpoint expansion present",
+      "passed": true
+    },
+    {
+      "group": "bank",
+      "name": "Q26 prompt checkpoint expansion present",
+      "passed": true
+    },
+    {
+      "group": "bank",
+      "name": "Q27 prompt checkpoint expansion present",
+      "passed": true
+    },
+    {
+      "group": "bank",
+      "name": "Q28 prompt checkpoint expansion present",
+      "passed": true
+    },
+    {
+      "group": "bank",
+      "name": "Q29 prompt checkpoint expansion present",
+      "passed": true
+    },
+    {
+      "group": "bank",
+      "name": "Q30 prompt checkpoint expansion present",
+      "passed": true
+    },
+    {
+      "group": "bank",
+      "name": "Q31 prompt checkpoint expansion present",
+      "passed": true
+    },
+    {
+      "group": "bank",
+      "name": "Q32 prompt checkpoint expansion present",
+      "passed": true
+    },
+    {
+      "group": "bank",
+      "name": "Q33 prompt checkpoint expansion present",
+      "passed": true
+    },
+    {
+      "group": "bank",
+      "name": "Q34 prompt checkpoint expansion present",
+      "passed": true
+    },
+    {
+      "group": "bank",
+      "name": "Q35 prompt checkpoint expansion present",
+      "passed": true
+    },
+    {
+      "group": "bank",
+      "name": "Q36 prompt checkpoint expansion present",
+      "passed": true
+    },
+    {
+      "group": "bank",
+      "name": "Q37 prompt checkpoint expansion present",
+      "passed": true
+    },
+    {
+      "group": "bank",
+      "name": "Q38 prompt checkpoint expansion present",
+      "passed": true
+    },
+    {
+      "group": "bank",
+      "name": "Q39 prompt checkpoint expansion present",
+      "passed": true
+    },
+    {
+      "group": "bank",
+      "name": "Q40 prompt checkpoint expansion present",
+      "passed": true
+    },
+    {
+      "group": "bank",
+      "name": "Q41 prompt checkpoint expansion present",
+      "passed": true
+    },
+    {
+      "group": "bank",
+      "name": "Q42 prompt checkpoint expansion present",
+      "passed": true
+    },
+    {
+      "group": "bank",
+      "name": "Q43 prompt checkpoint expansion present",
+      "passed": true
+    },
+    {
+      "group": "bank",
+      "name": "Q44 prompt checkpoint expansion present",
+      "passed": true
+    },
+    {
+      "group": "bank",
+      "name": "Q45 prompt checkpoint expansion present",
+      "passed": true
+    },
+    {
+      "group": "bank",
+      "name": "Q46 prompt checkpoint expansion present",
+      "passed": true
+    },
+    {
+      "group": "bank",
+      "name": "Q47 prompt checkpoint expansion present",
+      "passed": true
+    },
+    {
+      "group": "bank",
+      "name": "Q48 prompt checkpoint expansion present",
+      "passed": true
+    },
+    {
+      "group": "bank",
+      "name": "Q49 prompt checkpoint expansion present",
+      "passed": true
+    },
+    {
+      "group": "bank",
+      "name": "Q50 prompt checkpoint expansion present",
+      "passed": true
+    },
+    {
+      "group": "bank",
+      "name": "Q51 prompt checkpoint expansion present",
+      "passed": true
+    },
+    {
+      "group": "bank",
+      "name": "Q52 prompt checkpoint expansion present",
+      "passed": true
+    },
+    {
+      "group": "bank",
+      "name": "Q53 prompt checkpoint expansion present",
+      "passed": true
+    },
+    {
+      "group": "bank",
+      "name": "Q54 prompt checkpoint expansion present",
+      "passed": true
+    },
+    {
+      "group": "bank",
+      "name": "Q55 prompt checkpoint expansion present",
+      "passed": true
+    },
+    {
+      "group": "bank",
+      "name": "Q56 prompt checkpoint expansion present",
+      "passed": true
+    },
+    {
+      "group": "bank",
+      "name": "Q57 prompt checkpoint expansion present",
+      "passed": true
+    },
+    {
+      "group": "bank",
+      "name": "Q58 prompt checkpoint expansion present",
+      "passed": true
+    },
+    {
+      "group": "bank",
+      "name": "Q59 prompt checkpoint expansion present",
+      "passed": true
+    },
+    {
+      "group": "bank",
+      "name": "Q60 prompt checkpoint expansion present",
+      "passed": true
+    },
+    {
+      "group": "structure",
+      "name": "all 22 sections ordered",
+      "passed": true
+    },
+    {
+      "group": "structure",
+      "name": "all 24 self-tests ordered",
+      "passed": true
+    },
+    {
+      "group": "structure",
+      "name": "fourteen failure cards",
+      "passed": true
+    },
+    {
+      "group": "structure",
+      "name": "twenty-four confusable pairs",
+      "passed": true
+    },
+    {
+      "group": "structure",
+      "name": "six distinct mock prompts",
+      "passed": true
+    },
+    {
+      "group": "structure",
+      "name": "ten practice tasks",
+      "passed": true
+    },
+    {
+      "group": "structure",
+      "name": "twelve learning items remain unchecked",
+      "passed": true
+    },
+    {
+      "group": "fidelity",
+      "name": "exact helper source and demo output",
+      "passed": true
+    },
+    {
+      "group": "fidelity",
+      "name": "chapter footprint and no placeholders",
+      "passed": true
+    },
+    {
+      "group": "links",
+      "name": "all consolidation internal links resolve",
+      "passed": true
+    },
+    {
+      "group": "timing",
+      "name": "standard mock sums 45",
+      "passed": true
+    },
+    {
+      "group": "timing",
+      "name": "seven day route sums 840",
+      "passed": true
+    },
+    {
+      "group": "timing",
+      "name": "three day route sums 450",
+      "passed": true
+    },
+    {
+      "group": "timing",
+      "name": "two hour route sums 120",
+      "passed": true
+    },
+    {
+      "group": "helper",
+      "name": "partial score denominator and unassessed count",
+      "passed": true
+    },
+    {
+      "group": "helper",
+      "name": "weakest question mapped first",
+      "passed": true
+    },
+    {
+      "group": "helper",
+      "name": "empty worksheet not graded",
+      "passed": true
+    },
+    {
+      "group": "helper",
+      "name": "full manual maximum and no weak cards",
+      "passed": true
+    },
+    {
+      "group": "helper",
+      "name": "unknown question rejected",
+      "passed": true
+    },
+    {
+      "group": "helper",
+      "name": "boolean score rejected",
+      "passed": true
+    },
+    {
+      "group": "helper",
+      "name": "negative score rejected",
+      "passed": true
+    },
+    {
+      "group": "helper",
+      "name": "score above rubric rejected",
+      "passed": true
+    },
+    {
+      "group": "helper",
+      "name": "fractional score rejected",
+      "passed": true
+    },
+    {
+      "group": "helper",
+      "name": "unfilled null rejected",
+      "passed": true
+    },
+    {
+      "group": "boundaries",
+      "name": "authoring learner and historical evidence distinguished",
+      "passed": true
+    }
+  ],
+  "counts": {
+    "bank": 62,
+    "boundaries": 1,
+    "catalogue": 3,
+    "fidelity": 2,
+    "helper": 10,
+    "links": 20,
+    "provenance": 38,
+    "structure": 7,
+    "teaching": 57,
+    "timing": 4
+  },
+  "observations": {
+    "teaching_chapters": 19,
+    "authored_track_files": 21,
+    "bank_drills": 60,
+    "self_tests": 24,
+    "failure_cards": 14,
+    "mock_scenarios": 6,
+    "recorded_historical_assertions": 1600,
+    "fresh_historical_runtime_reruns": false,
+    "manual_demo": {
+      "assessed": 8,
+      "unassessed": 52,
+      "manual_points": 12,
+      "maximum_for_assessed": 24,
+      "rubric": "0 cannot explain; 1 vocabulary; 2 mechanism; 3 mechanism/tradeoff/failure/evidence",
+      "next_cards": [
+        {
+          "id": "Q23",
+          "manual_score": 0,
+          "revisit": [
+            "A4",
+            "S11"
+          ]
+        },
+        {
+          "id": "Q02",
+          "manual_score": 1,
+          "revisit": [
+            "A0"
+          ]
+        },
+        {
+          "id": "Q35",
+          "manual_score": 1,
+          "revisit": [
+            "S10"
+          ]
+        },
+        {
+          "id": "Q52",
+          "manual_score": 1,
+          "revisit": [
+            "S13"
+          ]
+        },
+        {
+          "id": "Q01",
+          "manual_score": 2,
+          "revisit": [
+            "A0"
+          ]
+        },
+        {
+          "id": "Q37",
+          "manual_score": 2,
+          "revisit": [
+            "S12"
+          ]
+        },
+        {
+          "id": "Q47",
+          "manual_score": 2,
+          "revisit": [
+            "S8"
+          ]
+        }
+      ],
+      "automatically_graded": false,
+      "interview_outcome_predicted": false
+    }
+  },
+  "scope": "Fresh source/provenance/link/structure audit and real manual-score helper execution. Historical teaching receipts are audited, not rerun; no learner mastery or production guarantee."
+}

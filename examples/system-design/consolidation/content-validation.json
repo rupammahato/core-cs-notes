@@ -1,0 +1,30 @@
+{
+  "label": "Revision",
+  "chapter": "system-design-handbook-part-21-consolidation.md",
+  "slug": "consolidation",
+  "group": "revision",
+  "words": 10236,
+  "lines": 1042,
+  "bank_drills": 60,
+  "failure_cards": 14,
+  "self_test_questions": 24,
+  "confusable_pairs": 24,
+  "mock_scenarios": 6,
+  "mock_minutes": 45,
+  "timing_minutes": {
+    "seven_day": 840,
+    "three_day": 450,
+    "final_review": 120
+  },
+  "practice_tasks": 10,
+  "unchecked_learning_items": 12,
+  "source_fidelity": [
+    "revision.py"
+  ],
+  "catalogue_teaching_chapters": 19,
+  "historical_recorded_assertions": 1600,
+  "source_bank_sha256": "7102fbba95225e7cb0715e7924d1620728df5ecb8d7ee22c36ae1283a64c56ad",
+  "scope": "Revision content, provenance inventory and manually supplied scoring; no automatic learner grading or fresh execution of historical engines.",
+  "verified_document_checks": 204,
+  "all_teaching_links_resolve": true
+}

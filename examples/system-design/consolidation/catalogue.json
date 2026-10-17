@@ -1,0 +1,454 @@
+[
+  {
+    "label": "A0",
+    "module": 0,
+    "part": 2,
+    "title": "How to approach a design question",
+    "route": "/docs/system-design/design-method-estimation",
+    "chapter": "system-design-handbook-part-2-module-0-design-method-estimation.md",
+    "example": "module-0-design-method",
+    "recorded_assertions": 62,
+    "verified_date": "2026-10-16",
+    "runtime": {
+      "python": "3.12.10",
+      "sqlite": "3.49.1",
+      "os": "Windows-11-10.0.26300-SP0"
+    },
+    "scope": "Planning arithmetic, hand-authored SLI classification and a real SQLite repository probe. No HTTP service, authentication implementation, hosted resources, model/provider calls or production benchmark.",
+    "source_fidelity": [
+      "estimates.py",
+      "objectives.py",
+      "baseline.py"
+    ],
+    "chapter_sha256": "0520d01c2e275ddfabfefb4b0737baf92aef1a1d9b23fa68e0dcf9205aebcbe1",
+    "proof_sha256": "73f7a55783ac15ec993da94b7411684d8a6696e05c7e44af96244c8a91c27392"
+  },
+  {
+    "label": "A1",
+    "module": 1,
+    "part": 3,
+    "title": "Application architecture and service boundaries",
+    "route": "/docs/system-design/application-architecture-service-boundaries",
+    "chapter": "system-design-handbook-part-3-module-1-application-architecture-service-boundaries.md",
+    "example": "module-1-application-architecture",
+    "recorded_assertions": 67,
+    "verified_date": "2026-10-16",
+    "runtime": {
+      "node": "v22.14.0",
+      "typescript": "7.0.2",
+      "sqlite": "3.47.2",
+      "os": "win32 10.0.26300"
+    },
+    "scope": "Loopback Express HTTP, fixed public lesson-token allowlist, real file-backed synchronous SQLite, direct service calls and AST dependency checks. Parallel requests run in one Node process; no distributed concurrency, OAuth/TLS, durable events, proxies, production capacity or microservices deployment verified.",
+    "source_fidelity": [
+      "src/notes.ts",
+      "src/sqlite.ts",
+      "src/http.ts",
+      "src/composition.ts"
+    ],
+    "chapter_sha256": "c5b6bd8c1ac75d7a2c7d92bf7984294424e846bf03dc3c305f57949cdc24cb9f",
+    "proof_sha256": "e92f089f452842fbcd181d55211951766469598baad8cfe01d82a49864e957ef"
+  },
+  {
+    "label": "A2",
+    "module": 2,
+    "part": 4,
+    "title": "Data, caching and scaling",
+    "route": "/docs/system-design/data-caching-scaling",
+    "chapter": "system-design-handbook-part-4-module-2-data-caching-scaling.md",
+    "example": "module-2-data-caching-scaling",
+    "recorded_assertions": 91,
+    "verified_date": "2026-10-16",
+    "runtime": {
+      "python": "3.12.10",
+      "sqlite": "3.49.1",
+      "os": "Windows 11"
+    },
+    "scope": "Real local SQLite index plans, VM instruction counts, scoped keyset queries and conditional writes. Deterministic asyncio interleavings over process-local caches and two SQLite connections. TTL uses an injected clock; scaling/placement are hypothetical arithmetic. No Redis, HTTP/authentication, replicated database, sharded deployment, network partition or production throughput verified.",
+    "source_fidelity": [
+      "data.py",
+      "cache.py",
+      "scaling.py"
+    ],
+    "chapter_sha256": "176d5d0aac19dea03ce75a8e362ec2b9a705ffcd0c44875b87391a981c7969ac",
+    "proof_sha256": "0c925b6fdc4dc89b51e0bd028e5e13e7d58999717e95c9262e0601232c28290b"
+  },
+  {
+    "label": "A3",
+    "module": 3,
+    "part": 5,
+    "title": "Reliable workflows and concurrency",
+    "route": "/docs/system-design/reliable-workflows-concurrency",
+    "chapter": "system-design-handbook-part-5-module-3-reliable-workflows-concurrency.md",
+    "example": "module-3-reliable-workflows-concurrency",
+    "recorded_assertions": 90,
+    "verified_date": "2026-10-16",
+    "runtime": {
+      "python": "3.12.10",
+      "sqlite": "3.49.1",
+      "os": "Windows 11"
+    },
+    "scope": "Real SQLite operation replay, atomic note/outbox creation, separate consumer inbox/effect transactions, close/reopen recovery, lease generations, attempt bounds, two-connection races and idempotent local compensation. Retry transport/time and lease time are injected; crash boundaries omit steps or raise controlled exceptions. No process-kill/power-loss, broker/provider/network, PostgreSQL isolation, distributed lease target, full saga coordinator or production throughput verified.",
+    "source_fidelity": [
+      "retry.py",
+      "workflow.py",
+      "consumer.py"
+    ],
+    "chapter_sha256": "81a7705250e5458684b6df3d6ea8258032cb955450a785577e2859aa9640d5ad",
+    "proof_sha256": "f36c3523b030ffe7bfc367bfac7c0088524f9f91a50e21ba0ac06b3ae0c34f70"
+  },
+  {
+    "label": "A4",
+    "module": 4,
+    "part": 6,
+    "title": "Operating a secure and observable system",
+    "route": "/docs/system-design/secure-observable-operations",
+    "chapter": "system-design-handbook-part-6-module-4-secure-observable-operations.md",
+    "example": "module-4-secure-observable-operations",
+    "recorded_assertions": 93,
+    "verified_date": "2026-10-16",
+    "runtime": {
+      "python": "3.12.10",
+      "sqlite": "3.49.1",
+      "os": "Windows 11"
+    },
+    "scope": "Real loopback HTTP authorization with published lesson tokens, current SQLite membership/scoped reads, two-connection atomic fixed-window quotas, private text-upload quarantine, application readiness/drain/admission and bounded diagnostic records. Dependency failure and held work are controlled flags/barriers. SLI samples and capacity/cost inputs are authored offline exercises. No production authentication/TLS, antivirus/object storage, Kubernetes/signal rollout, OTel/Prometheus backend, production SLO or throughput capacity verified.",
+    "source_fidelity": [
+      "policy.py",
+      "server.py",
+      "indicators.py"
+    ],
+    "chapter_sha256": "3c367e6cee2d70e92f410cf2ec94bc401c52a2bfacba36d2064fdc4350026f65",
+    "proof_sha256": "b66c5cefcd1d4ee79bb7ebb40ea6f74e5fe74332bd8fe985f4857d59392bb826"
+  },
+  {
+    "label": "S0",
+    "module": 5,
+    "part": 7,
+    "title": "URL shortener",
+    "route": "/docs/system-design/url-shortener",
+    "chapter": "system-design-handbook-part-7-module-5-url-shortener.md",
+    "example": "module-5-url-shortener",
+    "recorded_assertions": 118,
+    "verified_date": "2026-10-16",
+    "runtime": {
+      "python": "3.12.10",
+      "sqlite": "3.49.1",
+      "os": "Windows 11"
+    },
+    "scope": "Real local SQLite allocation/replay/rollback and two-connection collision/duplicate races; real loopback HTTP create/manage/GET/HEAD redirect/expiry/disable/stats without following destinations. Process-local bounded cache, injected expiry clock and explicitly lossy in-memory analytics with durable bounded-age aggregates. Estimates are hypothetical. No production auth/TLS, unrestricted destination validation, Redis/CDN, durable analytics delivery, multi-host cache coherence, PostgreSQL isolation or throughput capacity verified.",
+    "source_fidelity": [
+      "estimates.py",
+      "shortener.py",
+      "service.py",
+      "http_api.py"
+    ],
+    "chapter_sha256": "998ffdce2ea0231f068d7099dc4c218c24ff0caa2d00113d55af7198e1341931",
+    "proof_sha256": "271e8969bb569a9e204b8d8dda8d6e56656f7d66bc511b0bb8ad1622b639b7df"
+  },
+  {
+    "label": "S1",
+    "module": 6,
+    "part": 8,
+    "title": "Rate limiter",
+    "route": "/docs/system-design/rate-limiter",
+    "chapter": "system-design-handbook-part-8-module-6-rate-limiter.md",
+    "example": "module-6-rate-limiter",
+    "recorded_assertions": 95,
+    "verified_date": "2026-10-17",
+    "runtime": {
+      "python": "3.12.10",
+      "sqlite": "3.49.1",
+      "os": "Windows"
+    },
+    "scope": "Local Python/SQLite and loopback HTTP. No Redis, production authentication/TLS, distributed clock authority, multi-region failover or capacity benchmark. Denials do not charge tokens; successful admissions charge even if work fails. Fail-open intentionally relaxes enforcement.",
+    "source_fidelity": [
+      "estimates.py",
+      "algorithms.py",
+      "limiter.py",
+      "http_api.py"
+    ],
+    "chapter_sha256": "b8d9d4ddfdf192e0332a21b1bdcde7ff0d794ef3185bbfb61d984a9ad3c94406",
+    "proof_sha256": "971b89dc060cae519da71d346efef75001a15e8f2a1363d43b47f7b97812d764"
+  },
+  {
+    "label": "S2",
+    "module": 7,
+    "part": 9,
+    "title": "Notification and webhook delivery service",
+    "route": "/docs/system-design/notifications-webhooks",
+    "chapter": "system-design-handbook-part-9-module-7-notifications-webhooks.md",
+    "example": "module-7-notifications-webhooks",
+    "recorded_assertions": 109,
+    "verified_date": "2026-10-17",
+    "runtime": {
+      "python": "3.12.10",
+      "sqlite": "3.49.1",
+      "os": "Windows"
+    },
+    "scope": "Local Python/SQLite durable queue plus owned signed loopback HTTP receiver. No external messages, SMTP/SMS/push integration, vendor account, broker, production authentication/TLS, crash-power-loss, distributed clock/failover or load benchmark. At-least-once attempts are bounded; receiver effect dedupe is a local transactional record, not universal exactly-once delivery.",
+    "source_fidelity": [
+      "estimates.py",
+      "delivery.py",
+      "protocol.py",
+      "worker.py"
+    ],
+    "chapter_sha256": "f774e6a565547c364c474012c8c1f1b994fe9f4dd7f2badbc85f86b99482da69",
+    "proof_sha256": "d7f404ca62154a456c1d13984081a1cca74911015c92ee5d60a6a50183ae2d39"
+  },
+  {
+    "label": "S3",
+    "module": 8,
+    "part": 10,
+    "title": "File upload, storage and processing service",
+    "route": "/docs/system-design/file-upload-processing",
+    "chapter": "system-design-handbook-part-10-module-8-file-upload-processing.md",
+    "example": "module-8-file-upload-processing",
+    "recorded_assertions": 121,
+    "verified_date": "2026-10-17",
+    "runtime": {
+      "python": "3.12.10",
+      "sqlite": "3.49.1",
+      "os": "Windows"
+    },
+    "scope": "Owned local files/SQLite and actual loopback HTTP only. Immutable 1 KiB text objects, custom bearer capability and deterministic content policy; no S3 emulation, multipart transfer, antivirus, general document safety, external uploads, production authentication/TLS, distributed locking/clock, power-loss guarantee or load benchmark. Local writes and inventory cleanup share the SQLite write authority; cloud direct uploads require a different coordination protocol.",
+    "source_fidelity": [
+      "estimates.py",
+      "objects.py",
+      "uploads.py",
+      "http_api.py"
+    ],
+    "chapter_sha256": "53c3c71e4f32076de8abb3e216f8d660b612abdbd80ade1c1170f362af0bd7fb",
+    "proof_sha256": "684600ca797335b317eeeaef46639076c366cde52a8b4a8ee952c26128589a88"
+  },
+  {
+    "label": "S4",
+    "module": 9,
+    "part": 11,
+    "title": "Ticket booking and limited-inventory reservation",
+    "route": "/docs/system-design/booking-reservations",
+    "chapter": "system-design-handbook-part-11-module-9-booking-reservations.md",
+    "example": "module-9-booking-reservations",
+    "recorded_assertions": 57,
+    "verified_date": "2026-10-17",
+    "runtime": {
+      "python": "3.12.10",
+      "sqlite": "3.49.1",
+      "os": "Windows"
+    },
+    "scope": "Local SQLite assigned-seat authority and signed loopback callback only. No real payment/refund, provider SDK, distributed clock/lock, PostgreSQL execution, production auth/TLS or load benchmark. Refund rows are durable pending intents, not executed refunds.",
+    "source_fidelity": [
+      "../worked-systems-s4-s6/runtime.py",
+      "booking.py"
+    ],
+    "chapter_sha256": "84153a37dc4a8d75f8f2c0fa5babdd2a8a57d93adde4a70d90a2f46b77628be2",
+    "proof_sha256": "7aaf5d47bebe74257161c2dc49c0441b2cb5477fbe912530d05c0e81446336fd"
+  },
+  {
+    "label": "S5",
+    "module": 10,
+    "part": 12,
+    "title": "Chat and real-time messaging",
+    "route": "/docs/system-design/chat-messaging",
+    "chapter": "system-design-handbook-part-12-module-10-chat-messaging.md",
+    "example": "module-10-chat-messaging",
+    "recorded_assertions": 59,
+    "verified_date": "2026-10-17",
+    "runtime": {
+      "python": "3.12.10",
+      "sqlite": "3.49.1",
+      "os": "Windows"
+    },
+    "scope": "Local SQLite room history and bounded process-local hints with actual loopback HTTP polling. No WebSocket/SSE protocol, external messages, Redis/broker, production auth/TLS, distributed sequencing/clock, load test or proof of human reading. Current members can read retained history; removed members cannot use new API requests.",
+    "source_fidelity": [
+      "../worked-systems-s4-s6/runtime.py",
+      "chat.py"
+    ],
+    "chapter_sha256": "88bda5111f47fe43581e2f9da6bccb5b6d4439a59ff95a6db0748e7e3029ef32",
+    "proof_sha256": "f5838c291b1b1669e423740df5489a672756eefe186f1864c9a82dbf5cdc95b7"
+  },
+  {
+    "label": "S6",
+    "module": 11,
+    "part": 13,
+    "title": "Social feed and photo sharing",
+    "route": "/docs/system-design/social-feed-photo-sharing",
+    "chapter": "system-design-handbook-part-13-module-11-social-feed-photo-sharing.md",
+    "example": "module-11-social-feed-photo-sharing",
+    "recorded_assertions": 67,
+    "verified_date": "2026-10-17",
+    "runtime": {
+      "python": "3.12.10",
+      "sqlite": "3.49.1",
+      "os": "Windows"
+    },
+    "scope": "Bounded local SQLite hybrid chronological feed and actual loopback JSON HTTP. Media state is a trusted metadata fixture, not image decoding, S3 integration or signed image delivery. No recommendation/ranking engine, production auth/TLS, distributed fanout/cache, global revocation or load benchmark. Visibility is rechecked for each local request; already delivered pages cannot be retracted.",
+    "source_fidelity": [
+      "../worked-systems-s4-s6/runtime.py",
+      "feed.py"
+    ],
+    "chapter_sha256": "29f2565f17f8d0bfe84b5e4ae3cb4b2159249cb0ce8004f0ff4a6fd0ae71e06a",
+    "proof_sha256": "3644736ef9b280f3dd4082eb0c8e48022f66a8dcb1df70fe53adf6fe22b2463a"
+  },
+  {
+    "label": "S7",
+    "module": 12,
+    "part": 14,
+    "title": "Background job scheduler and worker platform",
+    "route": "/docs/system-design/job-scheduler-workers",
+    "chapter": "system-design-handbook-part-14-module-12-job-scheduler-workers.md",
+    "example": "module-12-job-scheduler-workers",
+    "recorded_assertions": 65,
+    "verified_date": "2026-10-17",
+    "runtime": {
+      "python": "3.12.10",
+      "sqlite": "3.49.1",
+      "os": "Windows"
+    },
+    "scope": "Local SQLite scheduling, coalesced interval occurrences, two-slot tenant admission, fenced leases, local transactional effect dedupe, bounded retries, rollback and actual loopback HTTP. Explicit time inputs; no cron daemon, broker, external effect or production load test.",
+    "source_fidelity": [
+      "../worked-systems-s4-s6/runtime.py",
+      "scheduler.py"
+    ],
+    "chapter_sha256": "eba850da9e785e56054c21264078b0c4139b87c5e7d473b7baa03ec71d9b6bde",
+    "proof_sha256": "ac183b7f40dea637999a8637ae94620b4ad7ed8853f66330513d1ed3cb32ebd0"
+  },
+  {
+    "label": "S8",
+    "module": 13,
+    "part": 15,
+    "title": "Checkout, payments and credit ledger",
+    "route": "/docs/system-design/checkout-payments-credit-ledger",
+    "chapter": "system-design-handbook-part-15-module-13-checkout-payments-credit-ledger.md",
+    "example": "module-13-checkout-payments-credit-ledger",
+    "recorded_assertions": 62,
+    "verified_date": "2026-10-17",
+    "runtime": {
+      "python": "3.12.10",
+      "sqlite": "3.49.1",
+      "os": "Windows"
+    },
+    "scope": "Separate local provider and merchant SQLite stores; injected reply loss after provider commit, immutable catalog snapshots, signed fixture callback, payment/event/grant dedupe, balanced integer credit journals, competing spends, reversal, rollback and real merchant loopback HTTP. No real charge, bank ledger, card data, refund or provider network.",
+    "source_fidelity": [
+      "../worked-systems-s4-s6/runtime.py",
+      "checkout.py"
+    ],
+    "chapter_sha256": "0d55186024e8c41fb3060b7a94f04791b60a4da966dd417e68b24fde9a4dfe4b",
+    "proof_sha256": "216daea2d6de27320550c7e3472ac1cd8c20c71eb3ee98c42ff4ada7279bf04c"
+  },
+  {
+    "label": "S9",
+    "module": 14,
+    "part": 16,
+    "title": "Search and autocomplete",
+    "route": "/docs/system-design/search-autocomplete",
+    "chapter": "system-design-handbook-part-16-module-14-search-autocomplete.md",
+    "example": "module-14-search-autocomplete",
+    "recorded_assertions": 77,
+    "verified_date": "2026-10-17",
+    "runtime": {
+      "python": "3.12.10",
+      "sqlite": "3.49.1",
+      "os": "Windows"
+    },
+    "scope": "Actual SQLite FTS5 full text and title-token prefix search; canonical ACL, tenant and version checks before top-k results, versioned outbox, stale/tombstone fences, rollback, two projector calls, local atomic rebuild and real HTTP. Selected relevance judgements only; no external search cluster, semantic ranking, online reindex or performance benchmark.",
+    "source_fidelity": [
+      "../worked-systems-s4-s6/runtime.py",
+      "search.py"
+    ],
+    "chapter_sha256": "a08effcf6149090dbbd6683642bc8e5d425fcf16e47c1995b51eb69ea7c3eeb2",
+    "proof_sha256": "8461df8fd14e9780e997f0e2ee96a6b78f9c9a5514ba86f8323e93972694eebe"
+  },
+  {
+    "label": "S10",
+    "module": 15,
+    "part": 17,
+    "title": "Load balancer and distributed cache",
+    "route": "/docs/system-design/load-balancer-distributed-cache",
+    "chapter": "system-design-handbook-part-17-module-15-load-balancer-distributed-cache.md",
+    "example": "module-15-load-balancer-distributed-cache",
+    "recorded_assertions": 69,
+    "verified_date": "2026-10-17",
+    "runtime": {
+      "python": "3.12.10",
+      "sqlite": "3.49.1",
+      "os": "Windows"
+    },
+    "scope": "Deterministic placement sample, in-process least-active routing/drain labels, bounded copied LRU caches, guarded fill/version/delete/epoch checks, controlled failure/rejoin, four competing calls, SQLite rollback/reopen and actual edge HTTP. No network proxy, distributed membership, Redis replication, automatic detector, quorum or throughput benchmark.",
+    "source_fidelity": [
+      "../worked-systems-s4-s6/runtime.py",
+      "cache.py"
+    ],
+    "chapter_sha256": "8f36588e4ca02f17ce57c54b72064160994d202e880a2578f1589bd13aff12cc",
+    "proof_sha256": "dde30193a6707e543b497a3ee9a3c8ccc206307b2abe1d04fd4c64c9d9b9ff73"
+  },
+  {
+    "label": "S11",
+    "module": 16,
+    "part": 18,
+    "title": "Multi-tenant SaaS with authentication and permissions",
+    "route": "/docs/system-design/multi-tenant-saas",
+    "chapter": "system-design-handbook-part-18-module-16-multi-tenant-saas.md",
+    "example": "module-16-multi-tenant-saas",
+    "recorded_assertions": 95,
+    "verified_date": "2026-10-17",
+    "runtime": {
+      "python": "3.12.10",
+      "sqlite": "3.49.1",
+      "os": "Windows"
+    },
+    "scope": "Local durable hashed opaque bearer sessions after trusted fixture login, current membership/role and tenant/document/share checks, rotated tenant switch, expiring revocable recipient/audience-bound invitation capabilities, atomic quota and audit, scoped metadata export with worker/delivery rechecks, four competing calls, rollback/reopen and real HTTP. No password/OIDC login, browser cookie/BFF/CSRF implementation, email, object storage, RLS deployment or production security/load claim.",
+    "source_fidelity": [
+      "../worked-systems-s4-s6/runtime.py",
+      "saas.py"
+    ],
+    "chapter_sha256": "455125d67e37ffd4b023c7d3173190b84ae9d99891cec4a39409e39afe7fd6cc",
+    "proof_sha256": "08f5670592e092e15d6e92c0d88c6bf211e2fd2d20e87d27a9bc5bc166ac56c4"
+  },
+  {
+    "label": "S12",
+    "module": 17,
+    "part": 19,
+    "title": "Multi-tenant RAG knowledge-base platform",
+    "route": "/docs/system-design/multi-tenant-rag",
+    "chapter": "system-design-handbook-part-19-module-17-multi-tenant-rag.md",
+    "example": "module-17-multi-tenant-rag",
+    "recorded_assertions": 125,
+    "verified_date": "2026-10-17",
+    "runtime": {
+      "python": "3.12.10",
+      "sqlite": "3.49.1",
+      "os": "Windows"
+    },
+    "scope": "Local RAG orchestration using unchanged S11 session/membership authority, versioned plaintext and durable ingest, deterministic feature-hash vectors/exact scan, current permission-before-top-k, extractive model fixture, strict quote/citation/tool validation, integer character-budget reservation and uncertainty, deletion/redaction/tombstones, six competing calls, selected judged corpus, rollback/reopen and real HTTP. No real LLM/embedding/vector API, learned semantic retrieval, external tools, stream, object store, provider metering or production quality/performance claim.",
+    "source_fidelity": [
+      "../worked-systems-s4-s6/runtime.py",
+      "rag.py"
+    ],
+    "chapter_sha256": "dc7e2a2ef36356eb557f6e9247e06ae80ee3ca3f71e96631e90d08ae20959532",
+    "proof_sha256": "91f37afb695a70b73e53edf30390d44ba82b74cbaf59f51c3f8d80395fa519da"
+  },
+  {
+    "label": "S13",
+    "module": 18,
+    "part": 20,
+    "title": "Analytics event pipeline and dashboard",
+    "route": "/docs/system-design/analytics-event-pipeline",
+    "chapter": "system-design-handbook-part-20-module-18-analytics-event-pipeline.md",
+    "example": "module-18-analytics-event-pipeline",
+    "recorded_assertions": 78,
+    "verified_date": "2026-10-18",
+    "runtime": {
+      "python": "3.12.10",
+      "sqlite": "3.49.1",
+      "os": "Windows"
+    },
+    "scope": "Local SQLite durable event batches, scoped immutable event identity, offset checkpoint/effect atomicity, event-time cohorts, explicit watermark/late policy, generation rebuild, subject erasure marker, four competing calls, fault rollback/reopen and actual aggregate HTTP. No Kafka/Beam cluster, automatic watermark estimation, browser chart, external spreadsheet connector, secure disk/backup erasure or production capacity claim.",
+    "source_fidelity": [
+      "../worked-systems-s4-s6/runtime.py",
+      "pipeline.py"
+    ],
+    "chapter_sha256": "726952a03ba245e65d547f478dcd3600da68e88c70bfd98c87fb17d90c5a5288",
+    "proof_sha256": "bd402fd16b58bf4cc0e00eaf13a682f46a4dd53ee1717d8a3a89ec037abacc57"
+  }
+]
