@@ -1,0 +1,28 @@
+{
+  "label": "A4",
+  "chapter": "system-design-handbook-part-6-module-4-secure-observable-operations.md",
+  "words": 8718,
+  "lines": 1099,
+  "questions": 30,
+  "practice_tasks": 10,
+  "unchecked_learning_items": 12,
+  "source_fidelity": [
+    "policy.py",
+    "server.py",
+    "indicators.py"
+  ],
+  "output_fidelity": [
+    "authorization",
+    "uploads",
+    "quota_window",
+    "quota_race",
+    "drain",
+    "saturation",
+    "telemetry",
+    "objectives",
+    "planning"
+  ],
+  "mock_minutes": 45,
+  "verified_checks": 93,
+  "next": "S0: URL shortener"
+}

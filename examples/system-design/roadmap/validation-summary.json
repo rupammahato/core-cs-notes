@@ -1,0 +1,98 @@
+{
+  "checked_date": "2026-10-16",
+  "roadmap": {
+    "chapter": "system-design-handbook-part-1-master-roadmap.md",
+    "words": 5474,
+    "lines": 402,
+    "planned_files": 21,
+    "foundations": 5,
+    "worked_systems": 14,
+    "consolidations": 1,
+    "available_files": 1,
+    "compiled_questions": 60,
+    "unchecked_learning_items": 20,
+    "estimated_active_hours": [
+      77,
+      105
+    ]
+  },
+  "document_checks": {
+    "total": 17,
+    "all_passed": true
+  },
+  "website": {
+    "build_passed": true,
+    "static_pages": 106,
+    "routes_checked": 38,
+    "all_routes_200": true,
+    "assertions": {
+      "roadmapTitle": true,
+      "bank": true,
+      "labels": true,
+      "statusBoundary": true,
+      "prerequisites": true,
+      "computedEstimates": true,
+      "next": true,
+      "homeCard": true,
+      "resumeRoadmapLink": true,
+      "noFutureLink": true
+    },
+    "search": {
+      "system-design": {
+        "status": 200,
+        "results": 9,
+        "indexed": true,
+        "scoped": true
+      },
+      "resume-skills": {
+        "status": 200,
+        "results": 18,
+        "indexed": true,
+        "scoped": true
+      }
+    },
+    "unpublished_a0_status": 404,
+    "temporary_server_closed": true,
+    "cached_font_fixture_used": true
+  },
+  "ports_stopped": {
+    "3000": true,
+    "50284": true
+  },
+  "existing_handbooks": [
+    {
+      "subject": "DSA Notes",
+      "files": 17,
+      "lines": 17589
+    },
+    {
+      "subject": "OOP Notes",
+      "files": 13,
+      "lines": 8806
+    },
+    {
+      "subject": "OS Notes",
+      "files": 13,
+      "lines": 6341
+    },
+    {
+      "subject": "DBMS Notes",
+      "files": 13,
+      "lines": 9613
+    },
+    {
+      "subject": "CN Notes",
+      "files": 13,
+      "lines": 9322
+    },
+    {
+      "subject": "Resume Skills Notes",
+      "files": 31,
+      "lines": 37575
+    }
+  ],
+  "git_diff_check_passed": true,
+  "trailing_whitespace_files": [],
+  "next": "A0: How to approach a design question",
+  "scope": "Roadmap/document consistency only. No architecture implementation, runtime guarantee, production metric or learner mastery verified."
+}

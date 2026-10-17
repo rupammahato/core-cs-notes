@@ -1,0 +1,4 @@
+Runtime: Python standard library (SQLite, dataclasses, math, JSON/hashing, tempfile, concurrent.futures and threading).
+Recorded versions: Python 3.12.10 and SQLite 3.49.1.
+No package installation/download, Docker startup, cloud/payment/model/provider call or service credential.
+The local repository probe has no HTTP/authentication/TLS implementation; website validation uses the existing installed Next.js/Fumadocs dependencies.

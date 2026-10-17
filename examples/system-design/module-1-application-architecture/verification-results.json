@@ -1,0 +1,453 @@
+{
+  "label": "A1",
+  "verified_date": "2026-10-16",
+  "node": "v22.14.0",
+  "sqlite": "3.47.2",
+  "typescript": "7.0.2",
+  "express": "5.3.0",
+  "os": "win32 10.0.26300",
+  "total": 67,
+  "counts": {
+    "boundaries": 4,
+    "service_repository": 17,
+    "transactions": 4,
+    "http": 42
+  },
+  "checks": [
+    {
+      "group": "boundaries",
+      "name": "notes.ts local import direction",
+      "passed": true
+    },
+    {
+      "group": "boundaries",
+      "name": "sqlite.ts local import direction",
+      "passed": true
+    },
+    {
+      "group": "boundaries",
+      "name": "http.ts local import direction",
+      "passed": true
+    },
+    {
+      "group": "boundaries",
+      "name": "composition.ts local import direction",
+      "passed": true
+    },
+    {
+      "group": "service_repository",
+      "name": "direct use case without HTTP",
+      "passed": true
+    },
+    {
+      "group": "service_repository",
+      "name": "new operation reports non-replay",
+      "passed": true
+    },
+    {
+      "group": "service_repository",
+      "name": "direct read returns committed value",
+      "passed": true
+    },
+    {
+      "group": "service_repository",
+      "name": "body cannot assign owner",
+      "passed": true
+    },
+    {
+      "group": "service_repository",
+      "name": "blank title rejected",
+      "passed": true
+    },
+    {
+      "group": "service_repository",
+      "name": "NUL title rejected before SQLite",
+      "passed": true
+    },
+    {
+      "group": "service_repository",
+      "name": "trailing newline is not an operation identifier",
+      "passed": true
+    },
+    {
+      "group": "service_repository",
+      "name": "multibyte content limit uses bytes",
+      "passed": true
+    },
+    {
+      "group": "service_repository",
+      "name": "120 Unicode code points accepted",
+      "passed": true
+    },
+    {
+      "group": "service_repository",
+      "name": "unsafe revision rejected",
+      "passed": true
+    },
+    {
+      "group": "service_repository",
+      "name": "same operation different input conflicts",
+      "passed": true
+    },
+    {
+      "group": "service_repository",
+      "name": "replace advances revision",
+      "passed": true
+    },
+    {
+      "group": "service_repository",
+      "name": "replay returns original outcome after edit",
+      "passed": true
+    },
+    {
+      "group": "service_repository",
+      "name": "replay does not revert current note",
+      "passed": true
+    },
+    {
+      "group": "service_repository",
+      "name": "stale direct edit rejected",
+      "passed": true
+    },
+    {
+      "group": "service_repository",
+      "name": "reopen persists note state",
+      "passed": true
+    },
+    {
+      "group": "service_repository",
+      "name": "reopen persists operation outcome",
+      "passed": true
+    },
+    {
+      "group": "transactions",
+      "name": "failure after insert escapes transaction",
+      "passed": true
+    },
+    {
+      "group": "transactions",
+      "name": "rollback removes inserted note",
+      "passed": true
+    },
+    {
+      "group": "transactions",
+      "name": "rollback leaves no saved operation",
+      "passed": true
+    },
+    {
+      "group": "transactions",
+      "name": "retry after rollback creates normally",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "create status 201",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "create body revision 1",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "create resource location",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "strong revision validator",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "private result not cached",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "trace correlation present",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "new create replay header false",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "trace crosses intended responsibilities in order",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "get returns current representation",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "retry returns same body and location",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "retry header indicates replay",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "operation conflict maps to 409",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "conditional replacement succeeds",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "stale edit maps to 412",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "create retry after edit retains original response",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "GET after replay still shows latest revision",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "owner cannot read note",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "owner cannot edit note",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "owner has separate operation scope",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "tenant cannot read note",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "tenant cannot edit note",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "tenant has separate operation scope",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "absent representation matches invisible representation",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "missing credential is 401 with challenge",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "unknown allowlist token rejected",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "identity headers cannot override principal",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "invalid JSON maps to safe 400",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "parser rejects oversized transport body",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "unsupported media type maps to 415",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "missing operation identity rejected",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "unknown body fields rejected",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "domain byte limit enforced below parser limit",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "missing precondition maps to 428",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "unsupported or unsafe condition W/\"2\"",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "unsupported or unsafe condition *",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "unsupported or unsafe condition \"2\", \"3\"",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "unsupported or unsafe condition \"9007199254740992\"",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "two same-revision requests produce one winner",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "parallel edits advance revision once",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "unknown route maps to 404",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "async route rejection reaches Express error middleware",
+      "passed": true
+    },
+    {
+      "group": "http",
+      "name": "internal error hides exception details",
+      "passed": true
+    }
+  ],
+  "observations": {
+    "dependencies": {
+      "notes.ts": [
+        "node:buffer"
+      ],
+      "sqlite.ts": [
+        "node:sqlite",
+        "node:crypto",
+        "./notes.js"
+      ],
+      "http.ts": [
+        "express",
+        "node:crypto",
+        "./notes.js"
+      ],
+      "composition.ts": [
+        "./notes.js",
+        "./sqlite.js",
+        "./http.js"
+      ]
+    },
+    "persistence": {
+      "currentRevision": 2,
+      "replayRevision": 1,
+      "reopened": true
+    },
+    "rollback": {
+      "afterFailure": {
+        "notes": 0,
+        "operations": 0
+      },
+      "retryCreated": true
+    },
+    "create": {
+      "status": 201,
+      "headers": {
+        "cache-control": "no-store",
+        "connection": "keep-alive",
+        "content-length": "84",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Fri, 16 Oct 2026 07:18:40 GMT",
+        "etag": "\"1\"",
+        "idempotency-replayed": "false",
+        "keep-alive": "timeout=5",
+        "location": "/notes/note_5",
+        "x-request-id": "a4ff558c-393b-4a44-a8d7-db75baed0e6c"
+      },
+      "body": {
+        "id": "note_5",
+        "title": "Transactions",
+        "content": "Atomic state changes",
+        "revision": 1
+      }
+    },
+    "createTrace": [
+      "http.received",
+      "identity.allowlist_verified",
+      "controller.create",
+      "service.create.validated",
+      "repository.transaction.begin",
+      "repository.note.inserted",
+      "repository.operation.saved",
+      "repository.transaction.commit",
+      "controller.response"
+    ],
+    "contracts": {
+      "replay": {
+        "status": 201,
+        "replayed": "true",
+        "sameId": true
+      },
+      "conflict": 409,
+      "replacement": {
+        "status": 200,
+        "revision": 2
+      },
+      "stale": 412,
+      "replayAfterEdit": 1,
+      "parallelRequestStatuses": [
+        200,
+        412
+      ],
+      "finalRevision": 3,
+      "missingCredential": 401,
+      "crossOwner": 404,
+      "internalError": {
+        "status": 500,
+        "body": {
+          "error": "internal_error"
+        }
+      }
+    }
+  },
+  "cleanup": {
+    "temporaryDatabaseDirectoryRemoved": true,
+    "sqliteConnectionsClosed": true,
+    "temporaryListenersClosed": true,
+    "fixturePort": 49254
+  },
+  "scope": "Loopback Express HTTP, fixed public lesson-token allowlist, real file-backed synchronous SQLite, direct service calls and AST dependency checks. Parallel requests run in one Node process; no distributed concurrency, OAuth/TLS, durable events, proxies, production capacity or microservices deployment verified."
+}

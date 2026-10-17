@@ -1,0 +1,19 @@
+{
+  "name": "placement-architecture-a1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "prepare:local": "node prepare-local.mjs",
+    "build": "node node_modules/typescript/bin/tsc -p tsconfig.json",
+    "verify": "npm run build && node verify.mjs",
+    "start": "npm run build && node start.mjs"
+  },
+  "dependencies": { "express": "5.3.0" },
+  "devDependencies": {
+    "acorn": "8.19.0",
+    "@types/express": "5.0.6",
+    "@types/node": "26.6.5",
+    "typescript": "7.0.2"
+  },
+  "engines": { "node": ">=22.14.0" }
+}

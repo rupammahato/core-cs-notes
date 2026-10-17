@@ -1,0 +1,132 @@
+{
+  "label": "A0",
+  "module": 0,
+  "verified_date": "2026-10-16",
+  "python": "3.12.10",
+  "sqlite": "3.49.1",
+  "os": "Windows-11-10.0.26300-SP0",
+  "checks": {
+    "counts": {
+      "estimates": 23,
+      "objectives": 12,
+      "baseline": 23,
+      "concurrency": 4
+    },
+    "total": 62,
+    "all_passed": true
+  },
+  "roadmap_document_checks": 17,
+  "content": {
+    "label": "A0",
+    "module": 0,
+    "chapter": "system-design-handbook-part-2-module-0-design-method-estimation.md",
+    "words": 7167,
+    "lines": 864,
+    "interview_questions": 30,
+    "practice_tasks": 10,
+    "unchecked_learning_items": 12,
+    "source_fidelity": [
+      "estimates.py",
+      "objectives.py",
+      "baseline.py"
+    ],
+    "mock_minutes": 45,
+    "result_fidelity": {
+      "estimates": true,
+      "sensitivity": true,
+      "objectives": true,
+      "baseline": true,
+      "versions": true
+    }
+  },
+  "cleanup": {
+    "temporary_database_directory_removed": true,
+    "sqlite_connections_closed": true,
+    "concurrent_worker_calls_completed": 4,
+    "persistent_listener_started": false
+  },
+  "website": {
+    "build_passed": true,
+    "static_pages": 107,
+    "routes_checked": 39,
+    "all_routes_200": true,
+    "assertions": {
+      "title": true,
+      "q30": true,
+      "verifiedChecks": true,
+      "exactCode": true,
+      "evidence": true,
+      "architecture": true,
+      "scope": true,
+      "next": true,
+      "foundationGroup": true,
+      "roadmapLink": true,
+      "homeCard": true,
+      "bankRetained": true
+    },
+    "search": {
+      "system-design": {
+        "status": 200,
+        "results": 6,
+        "indexed": true,
+        "scoped": true
+      },
+      "resume-skills": {
+        "status": 200,
+        "results": 18,
+        "indexed": true,
+        "scoped": true
+      }
+    },
+    "next_route_status": 404,
+    "temporary_server_closed": true,
+    "cached_font_fixture_used": true
+  },
+  "ports_stopped": {
+    "3000": true,
+    "63226": true
+  },
+  "existing_handbooks": [
+    {
+      "subject": "DSA Notes",
+      "files": 17,
+      "lines": 17589
+    },
+    {
+      "subject": "OOP Notes",
+      "files": 13,
+      "lines": 8806
+    },
+    {
+      "subject": "OS Notes",
+      "files": 13,
+      "lines": 6341
+    },
+    {
+      "subject": "DBMS Notes",
+      "files": 13,
+      "lines": 9613
+    },
+    {
+      "subject": "CN Notes",
+      "files": 13,
+      "lines": 9322
+    },
+    {
+      "subject": "Resume Skills Notes",
+      "files": 31,
+      "lines": 37575
+    }
+  ],
+  "system_design": {
+    "files": 2,
+    "lines": 1266,
+    "published_foundations": [
+      "A0"
+    ]
+  },
+  "git_diff_check_passed": true,
+  "trailing_whitespace_files": [],
+  "next": "A1: Application architecture and service boundaries",
+  "scope": "Planning arithmetic, hand-authored SLI classification and a real SQLite repository probe. No HTTP service, authentication implementation, hosted resources, model/provider calls or production benchmark."
+}

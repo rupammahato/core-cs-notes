@@ -1,0 +1,149 @@
+{
+  "label": "A1",
+  "module": 1,
+  "verified_date": "2026-10-16",
+  "runtime": {
+    "node": "v22.14.0",
+    "express": "5.3.0",
+    "typescript": "7.0.2",
+    "sqlite": "3.47.2",
+    "os": "win32 10.0.26300"
+  },
+  "checks": {
+    "counts": {
+      "boundaries": 4,
+      "service_repository": 17,
+      "transactions": 4,
+      "http": 42
+    },
+    "total": 67,
+    "all_passed": true
+  },
+  "roadmap_document_checks": 17,
+  "content": {
+    "label": "A1",
+    "chapter": "system-design-handbook-part-3-module-1-application-architecture-service-boundaries.md",
+    "words": 9109,
+    "lines": 965,
+    "questions": 30,
+    "practice_tasks": 10,
+    "unchecked_learning_items": 12,
+    "source_fidelity": [
+      "src/notes.ts",
+      "src/sqlite.ts",
+      "src/http.ts",
+      "src/composition.ts"
+    ],
+    "output_fidelity": [
+      "create",
+      "createTrace",
+      "persistence",
+      "rollback",
+      "contracts"
+    ],
+    "mock_minutes": 45,
+    "verified_checks": 67,
+    "next": "A2: Data, caching and scaling",
+    "result_fidelity": {
+      "create": true,
+      "createTrace": true,
+      "persistence": true,
+      "rollback": true,
+      "contracts": true,
+      "versions": true
+    }
+  },
+  "cleanup": {
+    "temporaryDatabaseDirectoryRemoved": true,
+    "sqliteConnectionsClosed": true,
+    "temporaryListenersClosed": true,
+    "fixturePort": 49254
+  },
+  "website": {
+    "build_passed": true,
+    "static_pages": 108,
+    "routes_checked": 40,
+    "all_routes_200": true,
+    "assertions": {
+      "title": true,
+      "q30": true,
+      "verifiedChecks": true,
+      "exactCode": true,
+      "evidence": true,
+      "architecture": true,
+      "scope": true,
+      "next": true,
+      "foundationGroup": true,
+      "roadmapLink": true,
+      "predecessor": true,
+      "homeCard": true,
+      "bankRetained": true
+    },
+    "search": {
+      "system-design": {
+        "status": 200,
+        "results": 26,
+        "indexed": true,
+        "scoped": true
+      },
+      "resume-skills": {
+        "status": 200,
+        "results": 18,
+        "indexed": true,
+        "scoped": true
+      }
+    },
+    "next_route_status": 404,
+    "temporary_server_closed": true,
+    "cached_font_fixture_used": true
+  },
+  "ports_stopped": {
+    "3000": true,
+    "61121": true,
+    "49254": true
+  },
+  "existing_handbooks": [
+    {
+      "subject": "DSA Notes",
+      "files": 17,
+      "lines": 17589
+    },
+    {
+      "subject": "OOP Notes",
+      "files": 13,
+      "lines": 8806
+    },
+    {
+      "subject": "OS Notes",
+      "files": 13,
+      "lines": 6341
+    },
+    {
+      "subject": "DBMS Notes",
+      "files": 13,
+      "lines": 9613
+    },
+    {
+      "subject": "CN Notes",
+      "files": 13,
+      "lines": 9322
+    },
+    {
+      "subject": "Resume Skills Notes",
+      "files": 31,
+      "lines": 37575
+    }
+  ],
+  "system_design": {
+    "files": 3,
+    "lines": 2231,
+    "published_foundations": [
+      "A0",
+      "A1"
+    ]
+  },
+  "git_diff_check_passed": true,
+  "trailing_whitespace_files": [],
+  "next": "A2: Data, caching and scaling",
+  "scope": "Loopback Express HTTP, fixed public lesson-token allowlist, real file-backed synchronous SQLite, direct service calls and AST dependency checks. Parallel requests run in one Node process; no distributed concurrency, OAuth/TLS, durable events, proxies, production capacity or microservices deployment verified."
+}

@@ -1,0 +1,635 @@
+{
+  "label": "A4",
+  "verified_date": "2026-10-16",
+  "python": "3.12.10",
+  "sqlite": "3.49.1",
+  "os": "Windows 11",
+  "total": 93,
+  "counts": {
+    "http_policy": 17,
+    "uploads": 24,
+    "quotas": 7,
+    "lifecycle": 11,
+    "saturation": 5,
+    "telemetry": 9,
+    "cleanup": 2,
+    "indicators": 13,
+    "planning": 5
+  },
+  "checks": [
+    {
+      "group": "http_policy",
+      "name": "owned note is readable",
+      "passed": true
+    },
+    {
+      "group": "http_policy",
+      "name": "private response disables caching",
+      "passed": true
+    },
+    {
+      "group": "http_policy",
+      "name": "response forbids MIME sniffing",
+      "passed": true
+    },
+    {
+      "group": "http_policy",
+      "name": "server-generated correlation ID has fixed hex shape",
+      "passed": true
+    },
+    {
+      "group": "http_policy",
+      "name": "same resource ID resolves inside verified tenant",
+      "passed": true
+    },
+    {
+      "group": "http_policy",
+      "name": "cross-owner response matches absent resource",
+      "passed": true
+    },
+    {
+      "group": "http_policy",
+      "name": "identity headers do not override principal",
+      "passed": true
+    },
+    {
+      "group": "http_policy",
+      "name": "list query remains owner-scoped",
+      "passed": true
+    },
+    {
+      "group": "http_policy",
+      "name": "viewer can list without gaining other-owner content",
+      "passed": true
+    },
+    {
+      "group": "http_policy",
+      "name": "read-only role cannot upload",
+      "passed": true
+    },
+    {
+      "group": "http_policy",
+      "name": "unknown or missing lesson credential rejected ''",
+      "passed": true
+    },
+    {
+      "group": "http_policy",
+      "name": "unknown or missing lesson credential rejected 'forged'",
+      "passed": true
+    },
+    {
+      "group": "http_policy",
+      "name": "current membership revocation blocks next request",
+      "passed": true
+    },
+    {
+      "group": "http_policy",
+      "name": "unknown role denies by default",
+      "passed": true
+    },
+    {
+      "group": "http_policy",
+      "name": "missing membership denies direct store caller",
+      "passed": true
+    },
+    {
+      "group": "http_policy",
+      "name": "unexpected failure returns a safe public error",
+      "passed": true
+    },
+    {
+      "group": "http_policy",
+      "name": "untrusted correlation header cannot set internal request ID",
+      "passed": true
+    },
+    {
+      "group": "uploads",
+      "name": "accepted upload starts pending",
+      "passed": true
+    },
+    {
+      "group": "uploads",
+      "name": "server chooses an opaque storage key",
+      "passed": true
+    },
+    {
+      "group": "uploads",
+      "name": "pending upload cannot be downloaded",
+      "passed": true
+    },
+    {
+      "group": "uploads",
+      "name": "different tenant cannot read upload metadata",
+      "passed": true
+    },
+    {
+      "group": "uploads",
+      "name": "internal text validator approves expected bytes",
+      "passed": true
+    },
+    {
+      "group": "uploads",
+      "name": "approved bytes download through scoped handler",
+      "passed": true
+    },
+    {
+      "group": "uploads",
+      "name": "download forces attachment disposition",
+      "passed": true
+    },
+    {
+      "group": "uploads",
+      "name": "download uses generic binary MIME",
+      "passed": true
+    },
+    {
+      "group": "uploads",
+      "name": "approval is stable when repeated",
+      "passed": true
+    },
+    {
+      "group": "uploads",
+      "name": "unsafe or unsupported filename rejected ../escape.txt",
+      "passed": true
+    },
+    {
+      "group": "uploads",
+      "name": "unsafe or unsupported filename rejected bad.html",
+      "passed": true
+    },
+    {
+      "group": "uploads",
+      "name": "unsafe or unsupported filename rejected bad..txt",
+      "passed": true
+    },
+    {
+      "group": "uploads",
+      "name": "unsupported MIME claim rejected",
+      "passed": true
+    },
+    {
+      "group": "uploads",
+      "name": "transport body bound rejects oversized content",
+      "passed": true
+    },
+    {
+      "group": "uploads",
+      "name": "empty upload rejected",
+      "passed": true
+    },
+    {
+      "group": "uploads",
+      "name": "unvalidated bytes remain quarantined",
+      "passed": true
+    },
+    {
+      "group": "uploads",
+      "name": "strict decoding rejects invalid text",
+      "passed": true
+    },
+    {
+      "group": "uploads",
+      "name": "rejected upload remains unavailable",
+      "passed": true
+    },
+    {
+      "group": "uploads",
+      "name": "approval checks staged byte digest",
+      "passed": true
+    },
+    {
+      "group": "uploads",
+      "name": "path-like download ID cannot become a disk path",
+      "passed": true
+    },
+    {
+      "group": "uploads",
+      "name": "no file is written outside private vault",
+      "passed": true
+    },
+    {
+      "group": "uploads",
+      "name": "large valid upload fits remaining retained-byte budget",
+      "passed": true
+    },
+    {
+      "group": "uploads",
+      "name": "tenant retained-byte budget rejects excess",
+      "passed": true
+    },
+    {
+      "group": "uploads",
+      "name": "rejected excess leaves retained bytes within budget",
+      "passed": true
+    },
+    {
+      "group": "quotas",
+      "name": "tenant users share a request budget",
+      "passed": true
+    },
+    {
+      "group": "quotas",
+      "name": "quota response states a retry delay",
+      "passed": true
+    },
+    {
+      "group": "quotas",
+      "name": "another tenant has a separate budget",
+      "passed": true
+    },
+    {
+      "group": "quotas",
+      "name": "fixed window resets at explicit boundary",
+      "passed": true
+    },
+    {
+      "group": "quotas",
+      "name": "two connections cannot both take final quota slot",
+      "passed": true
+    },
+    {
+      "group": "quotas",
+      "name": "authoritative counter increments once",
+      "passed": true
+    },
+    {
+      "group": "quotas",
+      "name": "zero quota limit rejected",
+      "passed": true
+    },
+    {
+      "group": "lifecycle",
+      "name": "live process reports liveness",
+      "passed": true
+    },
+    {
+      "group": "lifecycle",
+      "name": "ready process reports readiness",
+      "passed": true
+    },
+    {
+      "group": "lifecycle",
+      "name": "dependency failure removes readiness",
+      "passed": true
+    },
+    {
+      "group": "lifecycle",
+      "name": "dependency failure does not falsely kill liveness",
+      "passed": true
+    },
+    {
+      "group": "lifecycle",
+      "name": "unready process rejects application work",
+      "passed": true
+    },
+    {
+      "group": "lifecycle",
+      "name": "capacity gate rejects work above active bound",
+      "passed": true
+    },
+    {
+      "group": "lifecycle",
+      "name": "drain withdraws readiness",
+      "passed": true
+    },
+    {
+      "group": "lifecycle",
+      "name": "draining process remains live",
+      "passed": true
+    },
+    {
+      "group": "lifecycle",
+      "name": "drain rejects new application work",
+      "passed": true
+    },
+    {
+      "group": "lifecycle",
+      "name": "accepted request completes during drain",
+      "passed": true
+    },
+    {
+      "group": "lifecycle",
+      "name": "drain reaches zero active application requests",
+      "passed": true
+    },
+    {
+      "group": "saturation",
+      "name": "controlled burst admits exactly two held requests",
+      "passed": true
+    },
+    {
+      "group": "saturation",
+      "name": "controlled burst explicitly rejects six excess requests",
+      "passed": true
+    },
+    {
+      "group": "saturation",
+      "name": "observed peak application work respects bound",
+      "passed": true
+    },
+    {
+      "group": "saturation",
+      "name": "all eight requests are counted",
+      "passed": true
+    },
+    {
+      "group": "saturation",
+      "name": "all admitted work drains after release",
+      "passed": true
+    },
+    {
+      "group": "telemetry",
+      "name": "request trace follows actual local boundaries",
+      "passed": true
+    },
+    {
+      "group": "telemetry",
+      "name": "log schema permits only selected metadata",
+      "passed": true
+    },
+    {
+      "group": "telemetry",
+      "name": "logs omit lesson credentials and private contents",
+      "passed": true
+    },
+    {
+      "group": "telemetry",
+      "name": "logs omit raw resource paths and filenames",
+      "passed": true
+    },
+    {
+      "group": "telemetry",
+      "name": "logs omit query values and internal failure details",
+      "passed": true
+    },
+    {
+      "group": "telemetry",
+      "name": "resource metrics use bounded route templates",
+      "passed": true
+    },
+    {
+      "group": "telemetry",
+      "name": "metric dimensions omit principal and resource identities",
+      "passed": true
+    },
+    {
+      "group": "telemetry",
+      "name": "local durations use nonnegative monotonic interval",
+      "passed": true
+    },
+    {
+      "group": "telemetry",
+      "name": "in-memory diagnostic buffers are bounded",
+      "passed": true
+    },
+    {
+      "group": "cleanup",
+      "name": "temporary files and private vault removed after connections close",
+      "passed": true
+    },
+    {
+      "group": "cleanup",
+      "name": "all owned HTTP serving threads stopped",
+      "passed": true
+    },
+    {
+      "group": "indicators",
+      "name": "authored SLI eligibility denominator is explicit",
+      "passed": true
+    },
+    {
+      "group": "indicators",
+      "name": "successful but slow responses fail good-event condition",
+      "passed": true
+    },
+    {
+      "group": "indicators",
+      "name": "eligible rate limits remain in denominator",
+      "passed": true
+    },
+    {
+      "group": "indicators",
+      "name": "error budget and burn calculated consistently",
+      "passed": true
+    },
+    {
+      "group": "indicators",
+      "name": "tail percentiles reveal slow results despite healthy p95",
+      "passed": true
+    },
+    {
+      "group": "indicators",
+      "name": "bad-event fraction fails selected objective",
+      "passed": true
+    },
+    {
+      "group": "indicators",
+      "name": "all-good sample passes quantitative objective",
+      "passed": true
+    },
+    {
+      "group": "indicators",
+      "name": "confidentiality violation fails separate invariant gate",
+      "passed": true
+    },
+    {
+      "group": "indicators",
+      "name": "empty denominator does not report healthy objective",
+      "passed": true
+    },
+    {
+      "group": "indicators",
+      "name": "percentile convention is nearest rank",
+      "passed": true
+    },
+    {
+      "group": "indicators",
+      "name": "negative latency rejected",
+      "passed": true
+    },
+    {
+      "group": "indicators",
+      "name": "boolean eligibility required",
+      "passed": true
+    },
+    {
+      "group": "indicators",
+      "name": "perfect target rejected by budget exercise",
+      "passed": true
+    },
+    {
+      "group": "planning",
+      "name": "steady-state in-flight estimate uses explicit units",
+      "passed": true
+    },
+    {
+      "group": "planning",
+      "name": "instance pools share a database connection budget",
+      "passed": true
+    },
+    {
+      "group": "planning",
+      "name": "hypothetical instance cost uses stated rate and hours",
+      "passed": true
+    },
+    {
+      "group": "planning",
+      "name": "cost exclusions remain explicit",
+      "passed": true
+    },
+    {
+      "group": "planning",
+      "name": "invalid planning instance count rejected",
+      "passed": true
+    }
+  ],
+  "observations": {
+    "authorization": {
+      "owned_note": 200,
+      "other_owner": 404,
+      "spoofed_headers": 404,
+      "read_only_upload": 403,
+      "revoked_membership": 403,
+      "same_id_other_tenant_title": "PRIVATE_BETA_NOTE"
+    },
+    "uploads": {
+      "accepted_state": "pending",
+      "before_approval": 409,
+      "after_approval": 200,
+      "other_tenant": 404,
+      "invalid_text_state": "rejected",
+      "tampered_bytes_state": "rejected",
+      "over_byte_budget": 429,
+      "retained_bytes": 1055,
+      "antivirus_executed": false
+    },
+    "quota_window": {
+      "limit_per_tenant_per_10_seconds": 2,
+      "before_boundary_statuses": [
+        200,
+        200,
+        429
+      ],
+      "after_boundary_statuses": [
+        200,
+        200
+      ],
+      "accepted_near_boundary": 4,
+      "retry_after_seconds": 1
+    },
+    "quota_race": {
+      "independent_connections": 2,
+      "statuses": [
+        200,
+        429
+      ],
+      "stored_used": 1
+    },
+    "drain": {
+      "initial_ready": 200,
+      "dependency_unready": 503,
+      "liveness_during_dependency_failure": 200,
+      "over_capacity": 503,
+      "new_work_during_drain": 503,
+      "already_accepted_work": 200,
+      "active_after_drain": 0,
+      "operating_system_signal_sent": false
+    },
+    "saturation": {
+      "offered_requests": 8,
+      "accepted_completed": 2,
+      "overload_responses": 6,
+      "peak_active_application_work": 2,
+      "test_shape": "two accepted requests held; six excess requests offered; then release",
+      "throughput_capacity_measured": false
+    },
+    "telemetry": {
+      "trace_events": [
+        "http.received",
+        "identity.lesson_allowlist",
+        "authorization.current_membership",
+        "quota.accepted",
+        "store.completed",
+        "http.response_written"
+      ],
+      "log_fields": [
+        "duration_ms",
+        "method",
+        "route",
+        "status",
+        "trace_id"
+      ],
+      "metric_labels": [
+        "method",
+        "route_template",
+        "status_class"
+      ],
+      "diagnostic_buffer_limit": 128,
+      "private_content_logged": false,
+      "otel_exporter_or_prometheus_server_started": false
+    },
+    "objectives": {
+      "authored_sample_result": {
+        "eligible": 1000,
+        "excluded": 3,
+        "good": 970,
+        "bad": 30,
+        "good_fraction": 0.97,
+        "allowed_bad": 10.0,
+        "remaining_budget": -20.0,
+        "burn_rate": 3.0,
+        "p95_ms": 50,
+        "p99_ms": 350,
+        "invariant_passed": true,
+        "objective_passed": false
+      },
+      "one_success_with_leak": {
+        "eligible": 1,
+        "excluded": 0,
+        "good": 1,
+        "bad": 0,
+        "good_fraction": 1.0,
+        "allowed_bad": 0.01,
+        "remaining_budget": 0.01,
+        "burn_rate": 0.0,
+        "p95_ms": 1,
+        "p99_ms": 1,
+        "invariant_passed": false,
+        "objective_passed": false
+      },
+      "production_slo_measured": false
+    },
+    "planning": {
+      "assumed_qps": 200,
+      "assumed_mean_service_ms": 50,
+      "estimated_mean_in_flight": 10.0,
+      "application_connection_ceiling": 80,
+      "selected_db_budget": 60,
+      "pool_ceiling_fits_budget": false,
+      "assumed_instance_hours": 2880,
+      "hypothetical_instance_cost": 288.0,
+      "cost_excludes": [
+        "database",
+        "storage",
+        "network",
+        "logs",
+        "backups",
+        "provider calls"
+      ]
+    }
+  },
+  "cleanup": {
+    "sqlite_connections_closed": true,
+    "temporary_database_directory_removed": true,
+    "temporary_http_servers_closed": true,
+    "fixture_ports": [
+      55830,
+      55862,
+      55869,
+      55881
+    ],
+    "concurrent_quota_worker_calls_completed": 2,
+    "port_3000_used": false
+  },
+  "scope": "Real loopback HTTP authorization with published lesson tokens, current SQLite membership/scoped reads, two-connection atomic fixed-window quotas, private text-upload quarantine, application readiness/drain/admission and bounded diagnostic records. Dependency failure and held work are controlled flags/barriers. SLI samples and capacity/cost inputs are authored offline exercises. No production authentication/TLS, antivirus/object storage, Kubernetes/signal rollout, OTel/Prometheus backend, production SLO or throughput capacity verified."
+}

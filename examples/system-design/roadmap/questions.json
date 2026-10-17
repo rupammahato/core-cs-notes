@@ -1,0 +1,422 @@
+[
+  {
+    "id": "Q01",
+    "question": "How do you turn an ambiguous product request into a design scope?",
+    "checkpoints": "Actors, three core flows, explicit exclusions, functional/non-functional requirements and a correctness invariant.",
+    "mapping": "A0",
+    "source_row": "| Q01 | How do you turn an ambiguous product request into a design scope? | Actors, three core flows, explicit exclusions, functional/non-functional requirements and a correctness invariant. | A0 |"
+  },
+  {
+    "id": "Q02",
+    "question": "How would you estimate average/peak request rate and in-flight work?",
+    "checkpoints": "Users and actions -> requests/day -> requests/second; state peak assumptions; distinguish latency, throughput and concurrency.",
+    "mapping": "A0",
+    "source_row": "| Q02 | How would you estimate average/peak request rate and in-flight work? | Users and actions -> requests/day -> requests/second; state peak assumptions; distinguish latency, throughput and concurrency. | A0 |"
+  },
+  {
+    "id": "Q03",
+    "question": "How do you estimate storage and bandwidth without false precision?",
+    "checkpoints": "Record/payload size, retention, read/write volume, indexes/replication overhead, units and a sensitivity check.",
+    "mapping": "A0",
+    "source_row": "| Q03 | How do you estimate storage and bandwidth without false precision? | Record/payload size, retention, read/write volume, indexes/replication overhead, units and a sensitivity check. | A0 |"
+  },
+  {
+    "id": "Q04",
+    "question": "When would you scale up versus scale out?",
+    "checkpoints": "Identify the saturated resource, state/correctness constraints, resource ceiling, operational cost and measurement.",
+    "mapping": "A2/A4",
+    "source_row": "| Q04 | When would you scale up versus scale out? | Identify the saturated resource, state/correctness constraints, resource ceiling, operational cost and measurement. | A2/A4 |"
+  },
+  {
+    "id": "Q05",
+    "question": "Would you start this product as a monolith, modular monolith or microservices?",
+    "checkpoints": "Team/deployment boundaries, ownership, change rate, failure isolation and the cost of remote calls.",
+    "mapping": "A1",
+    "source_row": "| Q05 | Would you start this product as a monolith, modular monolith or microservices? | Team/deployment boundaries, ownership, change rate, failure isolation and the cost of remote calls. | A1 |"
+  },
+  {
+    "id": "Q06",
+    "question": "How do you decide module/service boundaries and who owns the data?",
+    "checkpoints": "Business capability, invariants, ownership, APIs, coupling and cross-boundary transactions.",
+    "mapping": "A1",
+    "source_row": "| Q06 | How do you decide module/service boundaries and who owns the data? | Business capability, invariants, ownership, APIs, coupling and cross-boundary transactions. | A1 |"
+  },
+  {
+    "id": "Q07",
+    "question": "When should a request use a synchronous call, a queue or an event?",
+    "checkpoints": "Latency, immediate response needs, decoupling, completion semantics, backlog and recovery.",
+    "mapping": "A1/A3",
+    "source_row": "| Q07 | When should a request use a synchronous call, a queue or an event? | Latency, immediate response needs, decoupling, completion semantics, backlog and recovery. | A1/A3 |"
+  },
+  {
+    "id": "Q08",
+    "question": "How do a reverse proxy, load balancer, API gateway and BFF differ?",
+    "checkpoints": "The responsibility and placement of each; overlapping implementations; one request trace without redundant boxes.",
+    "mapping": "A1",
+    "source_row": "| Q08 | How do a reverse proxy, load balancer, API gateway and BFF differ? | The responsibility and placement of each; overlapping implementations; one request trace without redundant boxes. | A1 |"
+  },
+  {
+    "id": "Q09",
+    "question": "What makes an application instance stateless, and when are sticky sessions useful?",
+    "checkpoints": "Where sessions/state live, reconnection/failover, shared stores, affinity limits and scale-out implications.",
+    "mapping": "A1/A2",
+    "source_row": "| Q09 | What makes an application instance stateless, and when are sticky sessions useful? | Where sessions/state live, reconnection/failover, shared stores, affinity limits and scale-out implications. | A1/A2 |"
+  },
+  {
+    "id": "Q10",
+    "question": "How do access patterns determine the database and schema?",
+    "checkpoints": "Reads/writes, relationships, query shapes, constraints, consistency and a concrete index choice.",
+    "mapping": "A2",
+    "source_row": "| Q10 | How do access patterns determine the database and schema? | Reads/writes, relationships, query shapes, constraints, consistency and a concrete index choice. | A2 |"
+  },
+  {
+    "id": "Q11",
+    "question": "How would you diagnose a slow query before changing the architecture?",
+    "checkpoints": "Query plan, selectivity, indexes, N+1, returned rows, locks and reproducible before/after measurement.",
+    "mapping": "A2/A4",
+    "source_row": "| Q11 | How would you diagnose a slow query before changing the architecture? | Query plan, selectivity, indexes, N+1, returned rows, locks and reproducible before/after measurement. | A2/A4 |"
+  },
+  {
+    "id": "Q12",
+    "question": "How do replication, partitioning and sharding solve different problems?",
+    "checkpoints": "Read scale vs data placement/write scale; lag, shard keys, hot partitions, joins and operational trade-offs.",
+    "mapping": "A2",
+    "source_row": "| Q12 | How do replication, partitioning and sharding solve different problems? | Read scale vs data placement/write scale; lag, shard keys, hot partitions, joins and operational trade-offs. | A2 |"
+  },
+  {
+    "id": "Q13",
+    "question": "Where does this design require strong consistency, and where is eventual consistency acceptable?",
+    "checkpoints": "Name the operation/invariant; user-visible stale behavior; read-after-write and partition trade-offs.",
+    "mapping": "A2",
+    "source_row": "| Q13 | Where does this design require strong consistency, and where is eventual consistency acceptable? | Name the operation/invariant; user-visible stale behavior; read-after-write and partition trade-offs. | A2 |"
+  },
+  {
+    "id": "Q14",
+    "question": "Where would you add a cache, and how would you invalidate it?",
+    "checkpoints": "Source of truth, key, TTL, update path, stale-read tolerance and failure behavior.",
+    "mapping": "A2",
+    "source_row": "| Q14 | Where would you add a cache, and how would you invalidate it? | Source of truth, key, TTL, update path, stale-read tolerance and failure behavior. | A2 |"
+  },
+  {
+    "id": "Q15",
+    "question": "How do you handle a hot key, cache stampede or mass expiry?",
+    "checkpoints": "Identify the traffic shape; coalescing, jitter, bounded stale reads, spreading load and origin protection.",
+    "mapping": "A2/A4",
+    "source_row": "| Q15 | How do you handle a hot key, cache stampede or mass expiry? | Identify the traffic shape; coalescing, jitter, bounded stale reads, spreading load and origin protection. | A2/A4 |"
+  },
+  {
+    "id": "Q16",
+    "question": "When do you need a work queue versus publish/subscribe?",
+    "checkpoints": "One logical job vs multiple interested consumers; acknowledgements, retention, ordering and independent progress.",
+    "mapping": "A3",
+    "source_row": "| Q16 | When do you need a work queue versus publish/subscribe? | One logical job vs multiple interested consumers; acknowledgements, retention, ordering and independent progress. | A3 |"
+  },
+  {
+    "id": "Q17",
+    "question": "What do at-most-once, at-least-once and exactly-once mean here?",
+    "checkpoints": "Define delivery/effect scope; crash/ack timeline; duplication/loss risks; avoid an unscoped exactly-once claim.",
+    "mapping": "A3",
+    "source_row": "| Q17 | What do at-most-once, at-least-once and exactly-once mean here? | Define delivery/effect scope; crash/ack timeline; duplication/loss risks; avoid an unscoped exactly-once claim. | A3 |"
+  },
+  {
+    "id": "Q18",
+    "question": "How should timeouts and retries be chosen?",
+    "checkpoints": "End-to-end deadline, retryable errors, bounded attempts, backoff/jitter, retry amplification and operation safety.",
+    "mapping": "A3",
+    "source_row": "| Q18 | How should timeouts and retries be chosen? | End-to-end deadline, retryable errors, bounded attempts, backoff/jitter, retry amplification and operation safety. | A3 |"
+  },
+  {
+    "id": "Q19",
+    "question": "How would you make a create/payment operation idempotent?",
+    "checkpoints": "Client key scope, request equivalence, atomic effect plus dedupe record, saved response, concurrent retries and retention.",
+    "mapping": "A3/S8",
+    "source_row": "| Q19 | How would you make a create/payment operation idempotent? | Client key scope, request equivalence, atomic effect plus dedupe record, saved response, concurrent retries and retention. | A3/S8 |"
+  },
+  {
+    "id": "Q20",
+    "question": "Would you use a database lock, version check, unique constraint or distributed lease?",
+    "checkpoints": "State/invariant ownership; contention; transactional boundary; crash/expiry behavior; retries and fencing where needed.",
+    "mapping": "A3",
+    "source_row": "| Q20 | Would you use a database lock, version check, unique constraint or distributed lease? | State/invariant ownership; contention; transactional boundary; crash/expiry behavior; retries and fencing where needed. | A3 |"
+  },
+  {
+    "id": "Q21",
+    "question": "What problem does the transactional outbox solve?",
+    "checkpoints": "Database commit plus event publication dual-write gap; atomic local outbox write; publisher retries and consumer dedupe.",
+    "mapping": "A3",
+    "source_row": "| Q21 | What problem does the transactional outbox solve? | Database commit plus event publication dual-write gap; atomic local outbox write; publisher retries and consumer dedupe. | A3 |"
+  },
+  {
+    "id": "Q22",
+    "question": "When would you use a saga, and what can compensation fail to undo?",
+    "checkpoints": "Sequence of local commits; business compensation, external side effects, recovery ownership and reconciliation.",
+    "mapping": "A3",
+    "source_row": "| Q22 | When would you use a saga, and what can compensation fail to undo? | Sequence of local commits; business compensation, external side effects, recovery ownership and reconciliation. | A3 |"
+  },
+  {
+    "id": "Q23",
+    "question": "How would you enforce tenant isolation across an entire request path?",
+    "checkpoints": "Trusted tenant identity, authorization, query filters, cache/queue keys, files/vector search, logs and negative tests.",
+    "mapping": "A4/S11",
+    "source_row": "| Q23 | How would you enforce tenant isolation across an entire request path? | Trusted tenant identity, authorization, query filters, cache/queue keys, files/vector search, logs and negative tests. | A4/S11 |"
+  },
+  {
+    "id": "Q24",
+    "question": "How do you know whether the design is reliable and fast enough?",
+    "checkpoints": "SLOs, p95/p99 and error rate, saturation, traces, realistic load/failure tests, capacity headroom and cost.",
+    "mapping": "A4",
+    "source_row": "| Q24 | How do you know whether the design is reliable and fast enough? | SLOs, p95/p99 and error rate, saturation, traces, realistic load/failure tests, capacity headroom and cost. | A4 |"
+  },
+  {
+    "id": "Q25",
+    "question": "Design a URL-shortening service.",
+    "checkpoints": "Create/redirect APIs, unique code generation, collision handling, schema, expiry, cache and analytics trade-offs.",
+    "mapping": "S0",
+    "source_row": "| Q25 | Design a URL-shortening service. | Create/redirect APIs, unique code generation, collision handling, schema, expiry, cache and analytics trade-offs. | S0 |"
+  },
+  {
+    "id": "Q26",
+    "question": "Design a rate limiter for an API served by several application instances.",
+    "checkpoints": "Limiter algorithm, key/quota scope, atomic updates, shared state, bursts, expiry and degraded behavior.",
+    "mapping": "S1",
+    "source_row": "| Q26 | Design a rate limiter for an API served by several application instances. | Limiter algorithm, key/quota scope, atomic updates, shared state, bursts, expiry and degraded behavior. | S1 |"
+  },
+  {
+    "id": "Q27",
+    "question": "Design a notification service that also supports customer webhooks.",
+    "checkpoints": "Event storage, subscriptions/preferences, channel workers, retry schedule, signatures, deduplication and delivery status.",
+    "mapping": "S2",
+    "source_row": "| Q27 | Design a notification service that also supports customer webhooks. | Event storage, subscriptions/preferences, channel workers, retry schedule, signatures, deduplication and delivery status. | S2 |"
+  },
+  {
+    "id": "Q28",
+    "question": "Design a secure file-upload and asynchronous processing service.",
+    "checkpoints": "Metadata/object separation, direct upload authorization, multipart completion, validation, job state, download permissions and cleanup.",
+    "mapping": "S3",
+    "source_row": "| Q28 | Design a secure file-upload and asynchronous processing service. | Metadata/object separation, direct upload authorization, multipart completion, validation, job state, download permissions and cleanup. | S3 |"
+  },
+  {
+    "id": "Q29",
+    "question": "Design ticket booking or a limited-stock reservation system.",
+    "checkpoints": "Browse vs reserve, per-resource inventory state, holds/expiry, transaction/constraint, payment integration and release/refund.",
+    "mapping": "S4",
+    "source_row": "| Q29 | Design ticket booking or a limited-stock reservation system. | Browse vs reserve, per-resource inventory state, holds/expiry, transaction/constraint, payment integration and release/refund. | S4 |"
+  },
+  {
+    "id": "Q30",
+    "question": "Design a chat service with online and offline messaging.",
+    "checkpoints": "Connection routing, persistent messages, identifiers, ordering scope, acknowledgements, offline fetch, reconnect and permissions.",
+    "mapping": "S5",
+    "source_row": "| Q30 | Design a chat service with online and offline messaging. | Connection routing, persistent messages, identifiers, ordering scope, acknowledgements, offline fetch, reconnect and permissions. | S5 |"
+  },
+  {
+    "id": "Q31",
+    "question": "Design a social feed or photo-sharing service.",
+    "checkpoints": "Post/media storage, follow graph, feed generation, read/write fan-out, pagination, hot users and freshness.",
+    "mapping": "S6",
+    "source_row": "| Q31 | Design a social feed or photo-sharing service. | Post/media storage, follow graph, feed generation, read/write fan-out, pagination, hot users and freshness. | S6 |"
+  },
+  {
+    "id": "Q32",
+    "question": "Design a background-job scheduler and worker platform.",
+    "checkpoints": "Job contract/state, schedules, durable queue, claim/lease, concurrency limits, retry/backoff, poison jobs and monitoring.",
+    "mapping": "S7",
+    "source_row": "| Q32 | Design a background-job scheduler and worker platform. | Job contract/state, schedules, durable queue, claim/lease, concurrency limits, retry/backoff, poison jobs and monitoring. | S7 |"
+  },
+  {
+    "id": "Q33",
+    "question": "Design checkout, payments and a usage-credit ledger.",
+    "checkpoints": "Order/payment states, integer money, atomic ledger effects, idempotency, external outcomes, reconciliation and auditability.",
+    "mapping": "S8",
+    "source_row": "| Q33 | Design checkout, payments and a usage-credit ledger. | Order/payment states, integer money, atomic ledger effects, idempotency, external outcomes, reconciliation and auditability. | S8 |"
+  },
+  {
+    "id": "Q34",
+    "question": "Design search and autocomplete for a product catalog or documents.",
+    "checkpoints": "Query semantics, source data, prefix/full-text/semantic indexes, ranking, updates, authorization and latency.",
+    "mapping": "S9",
+    "source_row": "| Q34 | Design search and autocomplete for a product catalog or documents. | Query semantics, source data, prefix/full-text/semantic indexes, ranking, updates, authorization and latency. | S9 |"
+  },
+  {
+    "id": "Q35",
+    "question": "Design request routing and a distributed cache across changing nodes.",
+    "checkpoints": "Hash placement, virtual nodes, membership/health, remapping, hot keys, replica choice, TTL and failure routing.",
+    "mapping": "S10",
+    "source_row": "| Q35 | Design request routing and a distributed cache across changing nodes. | Hash placement, virtual nodes, membership/health, remapping, hot keys, replica choice, TTL and failure routing. | S10 |"
+  },
+  {
+    "id": "Q36",
+    "question": "Design a multi-tenant SaaS with roles, document sharing and expiring invitations.",
+    "checkpoints": "Tenant and ownership model, auth/BFF, role checks, invite lifecycle, quotas, storage isolation and tests.",
+    "mapping": "S11",
+    "source_row": "| Q36 | Design a multi-tenant SaaS with roles, document sharing and expiring invitations. | Tenant and ownership model, auth/BFF, role checks, invite lifecycle, quotas, storage isolation and tests. | S11 |"
+  },
+  {
+    "id": "Q37",
+    "question": "Design a multi-tenant RAG knowledge-base service.",
+    "checkpoints": "Upload/ingestion state, chunk/version metadata, embeddings, retrieval permissions, generation/streaming, evaluation, deletion and cost.",
+    "mapping": "S12",
+    "source_row": "| Q37 | Design a multi-tenant RAG knowledge-base service. | Upload/ingestion state, chunk/version metadata, embeddings, retrieval permissions, generation/streaming, evaluation, deletion and cost. | S12 |"
+  },
+  {
+    "id": "Q38",
+    "question": "Design an analytics event-ingestion pipeline and dashboard.",
+    "checkpoints": "Event IDs/schema, ingestion/queueing, dedupe, event time, aggregates, late data, dashboard freshness and privacy.",
+    "mapping": "S13",
+    "source_row": "| Q38 | Design an analytics event-ingestion pipeline and dashboard. | Event IDs/schema, ingestion/queueing, dedupe, event time, aggregates, late data, dashboard freshness and privacy. | S13 |"
+  },
+  {
+    "id": "Q39",
+    "question": "Two URL creators generate the same short code. What happens?",
+    "checkpoints": "Uniqueness enforced at storage, collision detection/retry, custom aliases, idempotency and deterministic tests.",
+    "mapping": "S0",
+    "source_row": "| Q39 | Two URL creators generate the same short code. What happens? | Uniqueness enforced at storage, collision detection/retry, custom aliases, idempotency and deterministic tests. | S0 |"
+  },
+  {
+    "id": "Q40",
+    "question": "Two API servers both admit the final request in a quota. How do you prevent it?",
+    "checkpoints": "Atomic shared decision/update, algorithm boundary behavior, consistent keying, time assumptions and failure policy.",
+    "mapping": "S1",
+    "source_row": "| Q40 | Two API servers both admit the final request in a quota. How do you prevent it? | Atomic shared decision/update, algorithm boundary behavior, consistent keying, time assumptions and failure policy. | S1 |"
+  },
+  {
+    "id": "Q41",
+    "question": "A webhook receiver accepts an event but the acknowledgement is lost. What happens next?",
+    "checkpoints": "Sender retries; receiver deduplicates effects; saved delivery attempts/status; bounded retries and replay.",
+    "mapping": "S2",
+    "source_row": "| Q41 | A webhook receiver accepts an event but the acknowledgement is lost. What happens next? | Sender retries; receiver deduplicates effects; saved delivery attempts/status; bounded retries and replay. | S2 |"
+  },
+  {
+    "id": "Q42",
+    "question": "A user uploads a file, but the completion callback or processing worker crashes. How do you recover?",
+    "checkpoints": "Durable state, idempotent completion/job, reconciliation, orphan/partial cleanup and safe retry.",
+    "mapping": "S3",
+    "source_row": "| Q42 | A user uploads a file, but the completion callback or processing worker crashes. How do you recover? | Durable state, idempotent completion/job, reconciliation, orphan/partial cleanup and safe retry. | S3 |"
+  },
+  {
+    "id": "Q43",
+    "question": "Two users reserve the last seat while one payment arrives after hold expiry. What should happen?",
+    "checkpoints": "Atomic reservation, authoritative expiry/version recheck, late-payment handling and explicit refund/reconciliation.",
+    "mapping": "S4",
+    "source_row": "| Q43 | Two users reserve the last seat while one payment arrives after hold expiry. What should happen? | Atomic reservation, authoritative expiry/version recheck, late-payment handling and explicit refund/reconciliation. | S4 |"
+  },
+  {
+    "id": "Q44",
+    "question": "A chat client disconnects after sending and resends on reconnect. How do you avoid confusing duplicates?",
+    "checkpoints": "Client message ID, persistence/ack boundary, dedupe, reconnect cursor and defined ordering scope.",
+    "mapping": "S5",
+    "source_row": "| Q44 | A chat client disconnects after sending and resends on reconnect. How do you avoid confusing duplicates? | Client message ID, persistence/ack boundary, dedupe, reconnect cursor and defined ordering scope. | S5 |"
+  },
+  {
+    "id": "Q45",
+    "question": "A celebrity publishes a post and fan-out overloads the system. What changes?",
+    "checkpoints": "Hybrid read/write fan-out, asynchronous/batched work, hot-user handling, feed latency and backpressure.",
+    "mapping": "S6",
+    "source_row": "| Q45 | A celebrity publishes a post and fan-out overloads the system. What changes? | Hybrid read/write fan-out, asynchronous/batched work, hot-user handling, feed latency and backpressure. | S6 |"
+  },
+  {
+    "id": "Q46",
+    "question": "A worker finishes its effect but crashes before acknowledging the job. What happens on retry?",
+    "checkpoints": "Redelivery, durable idempotency with the business effect, lease/ack scope and crash-point testing.",
+    "mapping": "S7",
+    "source_row": "| Q46 | A worker finishes its effect but crashes before acknowledging the job. What happens on retry? | Redelivery, durable idempotency with the business effect, lease/ack scope and crash-point testing. | S7 |"
+  },
+  {
+    "id": "Q47",
+    "question": "A payment provider succeeds, but your request times out and the client retries. What do you return?",
+    "checkpoints": "Stable operation ID, unknown/pending state, provider verification/webhook, atomic ledger effect and reconciliation.",
+    "mapping": "S8",
+    "source_row": "| Q47 | A payment provider succeeds, but your request times out and the client retries. What do you return? | Stable operation ID, unknown/pending state, provider verification/webhook, atomic ledger effect and reconciliation. | S8 |"
+  },
+  {
+    "id": "Q48",
+    "question": "A document is deleted or access is revoked while the search index is stale. How do you avoid leaking it?",
+    "checkpoints": "Authoritative permission enforcement, deletion/version propagation, result filtering and cache/index lag handling.",
+    "mapping": "S9",
+    "source_row": "| Q48 | A document is deleted or access is revoked while the search index is stale. How do you avoid leaking it? | Authoritative permission enforcement, deletion/version propagation, result filtering and cache/index lag handling. | S9 |"
+  },
+  {
+    "id": "Q49",
+    "question": "A cache/backend node fails, then rejoins. What happens to placement, load and stale values?",
+    "checkpoints": "Membership and health state, bounded remapping, ownership/replication, hot spots, invalidation and measured behavior.",
+    "mapping": "S10",
+    "source_row": "| Q49 | A cache/backend node fails, then rejoins. What happens to placement, load and stale values? | Membership and health state, bounded remapping, ownership/replication, hot spots, invalidation and measured behavior. | S10 |"
+  },
+  {
+    "id": "Q50",
+    "question": "A valid user changes the document or tenant ID in a request. How is access rejected?",
+    "checkpoints": "Server-derived tenant context, resource-level checks, all data paths including lists/jobs, and negative tests.",
+    "mapping": "S11",
+    "source_row": "| Q50 | A valid user changes the document or tenant ID in a request. How is access rejected? | Server-derived tenant context, resource-level checks, all data paths including lists/jobs, and negative tests. | S11 |"
+  },
+  {
+    "id": "Q51",
+    "question": "A document is updated while embedding retries run, or one tenant's chunks reach another tenant's query. How do you prevent that?",
+    "checkpoints": "Document/version IDs, idempotent indexing, stale-job checks, tenant-scoped keys/filters and retrieval-time authorization.",
+    "mapping": "S12",
+    "source_row": "| Q51 | A document is updated while embedding retries run, or one tenant's chunks reach another tenant's query. How do you prevent that? | Document/version IDs, idempotent indexing, stale-job checks, tenant-scoped keys/filters and retrieval-time authorization. | S12 |"
+  },
+  {
+    "id": "Q52",
+    "question": "An event is duplicated or arrives late, after the dashboard aggregate was computed. How do you correct the metric?",
+    "checkpoints": "Event identity, bounded dedupe/retention assumptions, event-time windows, correction/recomputation and denominator consistency.",
+    "mapping": "S13",
+    "source_row": "| Q52 | An event is duplicated or arrives late, after the dashboard aggregate was computed. How do you correct the metric? | Event identity, bounded dedupe/retention assumptions, event-time windows, correction/recomputation and denominator consistency. | S13 |"
+  },
+  {
+    "id": "Q53",
+    "question": "Explain your consistent-hashing load balancer: why that policy, and what did your benchmark actually establish?",
+    "checkpoints": "Ring lookup/virtual nodes, failure detection, placement vs load balance, remapping denominator, workload and reproducible metrics.",
+    "mapping": "Resume M27-M28; S10",
+    "source_row": "| Q53 | Explain your consistent-hashing load balancer: why that policy, and what did your benchmark actually establish? | Ring lookup/virtual nodes, failure detection, placement vs load balance, remapping denominator, workload and reproducible metrics. | Resume M27-M28; S10 |"
+  },
+  {
+    "id": "Q54",
+    "question": "Trace authentication from Next.js through the BFF to FastAPI in your AI research platform.",
+    "checkpoints": "Trust boundaries, credentials, server-side verification, session/JWE handling where documented, authorization and token exposure.",
+    "mapping": "Resume M7-M8/M28; S11",
+    "source_row": "| Q54 | Trace authentication from Next.js through the BFF to FastAPI in your AI research platform. | Trust boundaries, credentials, server-side verification, session/JWE handling where documented, authorization and token exposure. | Resume M7-M8/M28; S11 |"
+  },
+  {
+    "id": "Q55",
+    "question": "How would you design signed, expiring and revocable candidate invitations with scoped rate limits?",
+    "checkpoints": "Token creation/verification, expiry/revocation source of truth, audience/scope, replay/abuse handling and ownership checks.",
+    "mapping": "Resume M7-M8/M28; S1/S11",
+    "source_row": "| Q55 | How would you design signed, expiring and revocable candidate invitations with scoped rate limits? | Token creation/verification, expiry/revocation source of truth, audience/scope, replay/abuse handling and ownership checks. | Resume M7-M8/M28; S1/S11 |"
+  },
+  {
+    "id": "Q56",
+    "question": "How would you make external spreadsheet ingestion recover from partial batches, timezone ambiguity and nested-record loss?",
+    "checkpoints": "Input contracts, UTC semantics, stable matching/upserts, transaction/batch policy, validation, checkpoints and reconciliation.",
+    "mapping": "Resume M15/M28; S7/S13",
+    "source_row": "| Q56 | How would you make external spreadsheet ingestion recover from partial batches, timezone ambiguity and nested-record loss? | Input contracts, UTC semantics, stable matching/upserts, transaction/batch policy, validation, checkpoints and reconciliation. | Resume M15/M28; S7/S13 |"
+  },
+  {
+    "id": "Q57",
+    "question": "How would you build an SLA engine with working-day deadlines and tiered escalation?",
+    "checkpoints": "Calendar/timezone model, task state machine, scheduled scan vs events, idempotent alerts, audit log and restart behavior.",
+    "mapping": "Resume M15/M28; S2/S7",
+    "source_row": "| Q57 | How would you build an SLA engine with working-day deadlines and tiered escalation? | Calendar/timezone model, task state machine, scheduled scan vs events, idempotent alerts, audit log and restart behavior. | Resume M15/M28; S2/S7 |"
+  },
+  {
+    "id": "Q58",
+    "question": "How would you meter several AI providers and debit credits without charging twice?",
+    "checkpoints": "Provider usage normalization, pricing versions, integer/decimal accounting, reservations/settlement, idempotent ledger and failed-call policy.",
+    "mapping": "Resume M9/M22/M28; S8",
+    "source_row": "| Q58 | How would you meter several AI providers and debit credits without charging twice? | Provider usage normalization, pricing versions, integer/decimal accounting, reservations/settlement, idempotent ledger and failed-call policy. | Resume M9/M22/M28; S8 |"
+  },
+  {
+    "id": "Q59",
+    "question": "How would you isolate each tenant's uploaded research, vector retrieval and graph reads?",
+    "checkpoints": "Tenant identity across storage/jobs/retrieval/graphs, access model, index strategy, revocation and cross-tenant tests.",
+    "mapping": "Resume M8/M23-M26/M28; S11/S12",
+    "source_row": "| Q59 | How would you isolate each tenant's uploaded research, vector retrieval and graph reads? | Tenant identity across storage/jobs/retrieval/graphs, access model, index strategy, revocation and cross-tenant tests. | Resume M8/M23-M26/M28; S11/S12 |"
+  },
+  {
+    "id": "Q60",
+    "question": "How would you defend the traffic, performance and availability claims for the fest website?",
+    "checkpoints": "Define users vs sessions vs concurrent requests, measurement window, workload, p95/error rate, monitoring and source evidence.",
+    "mapping": "Resume M19/M28; A0/A4",
+    "source_row": "| Q60 | How would you defend the traffic, performance and availability claims for the fest website? | Define users vs sessions vs concurrent requests, measurement window, workload, p95/error rate, monitoring and source evidence. | Resume M19/M28; A0/A4 |"
+  }
+]

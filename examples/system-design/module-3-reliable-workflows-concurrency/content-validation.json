@@ -1,0 +1,27 @@
+{
+  "label": "A3",
+  "chapter": "system-design-handbook-part-5-module-3-reliable-workflows-concurrency.md",
+  "words": 8154,
+  "lines": 1009,
+  "questions": 30,
+  "practice_tasks": 10,
+  "unchecked_learning_items": 12,
+  "source_fidelity": [
+    "retry.py",
+    "workflow.py",
+    "consumer.py"
+  ],
+  "output_fidelity": [
+    "retry",
+    "deadline",
+    "atomic_create",
+    "redelivery",
+    "delivery_bounds",
+    "last_unit",
+    "concurrent_retry",
+    "compensation"
+  ],
+  "mock_minutes": 45,
+  "verified_checks": 90,
+  "next": "A4: Operating a secure and observable system"
+}

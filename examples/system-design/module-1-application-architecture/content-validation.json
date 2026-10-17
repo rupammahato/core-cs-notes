@@ -1,0 +1,25 @@
+{
+  "label": "A1",
+  "chapter": "system-design-handbook-part-3-module-1-application-architecture-service-boundaries.md",
+  "words": 9110,
+  "lines": 965,
+  "questions": 30,
+  "practice_tasks": 10,
+  "unchecked_learning_items": 12,
+  "source_fidelity": [
+    "src/notes.ts",
+    "src/sqlite.ts",
+    "src/http.ts",
+    "src/composition.ts"
+  ],
+  "output_fidelity": [
+    "create",
+    "createTrace",
+    "persistence",
+    "rollback",
+    "contracts"
+  ],
+  "mock_minutes": 45,
+  "verified_checks": 67,
+  "next": "A2: Data, caching and scaling"
+}

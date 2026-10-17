@@ -1,0 +1,158 @@
+{
+  "label": "A3",
+  "module": 3,
+  "verified_date": "2026-10-16",
+  "runtime": {
+    "python": "3.12.10",
+    "sqlite": "3.49.1",
+    "os": "Windows 11"
+  },
+  "checks": {
+    "counts": {
+      "retry_policy": 19,
+      "atomic_operations": 14,
+      "leases": 10,
+      "consumer_atomicity": 12,
+      "delivery_bounds": 11,
+      "concurrency": 10,
+      "compensation": 12,
+      "cleanup": 2
+    },
+    "total": 90,
+    "all_passed": true
+  },
+  "roadmap_document_checks": 17,
+  "content": {
+    "label": "A3",
+    "chapter": "system-design-handbook-part-5-module-3-reliable-workflows-concurrency.md",
+    "words": 8151,
+    "lines": 1009,
+    "questions": 30,
+    "practice_tasks": 10,
+    "unchecked_learning_items": 12,
+    "source_fidelity": [
+      "retry.py",
+      "workflow.py",
+      "consumer.py"
+    ],
+    "output_fidelity": [
+      "retry",
+      "deadline",
+      "atomic_create",
+      "redelivery",
+      "delivery_bounds",
+      "last_unit",
+      "concurrent_retry",
+      "compensation"
+    ],
+    "mock_minutes": 45,
+    "verified_checks": 90,
+    "next": "A4: Operating a secure and observable system",
+    "result_fidelity": {
+      "retry": true,
+      "deadline": true,
+      "atomic_create": true,
+      "redelivery": true,
+      "delivery_bounds": true,
+      "last_unit": true,
+      "concurrent_retry": true,
+      "compensation": true,
+      "versions": true
+    },
+    "authored_internal_links": 7
+  },
+  "cleanup": {
+    "sqlite_connections_closed": true,
+    "temporary_database_directory_removed": true,
+    "concurrent_worker_calls_completed": 6,
+    "persistent_listener_started": false
+  },
+  "website": {
+    "build_passed": true,
+    "static_pages": 110,
+    "routes_checked": 42,
+    "all_routes_200": true,
+    "assertions": {
+      "title": true,
+      "q30": true,
+      "verifiedChecks": true,
+      "exactCode": true,
+      "evidence": true,
+      "architecture": true,
+      "scope": true,
+      "next": true,
+      "foundationGroup": true,
+      "roadmapLink": true,
+      "predecessor": true,
+      "homeCard": true,
+      "bankRetained": true
+    },
+    "search": {
+      "system-design": {
+        "status": 200,
+        "results": 15,
+        "indexed": true,
+        "scoped": true
+      },
+      "resume-skills": {
+        "status": 200,
+        "results": 18,
+        "indexed": true,
+        "scoped": true
+      }
+    },
+    "next_route_status": 404,
+    "temporary_server_closed": true,
+    "cached_font_fixture_used": true
+  },
+  "ports_stopped": {
+    "3000": true,
+    "59417": true
+  },
+  "existing_handbooks": [
+    {
+      "subject": "DSA Notes",
+      "files": 17,
+      "lines": 17589
+    },
+    {
+      "subject": "OOP Notes",
+      "files": 13,
+      "lines": 8806
+    },
+    {
+      "subject": "OS Notes",
+      "files": 13,
+      "lines": 6341
+    },
+    {
+      "subject": "DBMS Notes",
+      "files": 13,
+      "lines": 9613
+    },
+    {
+      "subject": "CN Notes",
+      "files": 13,
+      "lines": 9322
+    },
+    {
+      "subject": "Resume Skills Notes",
+      "files": 31,
+      "lines": 37575
+    }
+  ],
+  "system_design": {
+    "files": 5,
+    "lines": 4245,
+    "published_foundations": [
+      "A0",
+      "A1",
+      "A2",
+      "A3"
+    ]
+  },
+  "git_diff_check_passed": true,
+  "trailing_whitespace_files": [],
+  "next": "A4: Operating a secure and observable system",
+  "scope": "Real SQLite operation replay, atomic note/outbox creation, separate consumer inbox/effect transactions, close/reopen recovery, lease generations, attempt bounds, two-connection races and idempotent local compensation. Retry transport/time and lease time are injected; crash boundaries omit steps or raise controlled exceptions. No process-kill/power-loss, broker/provider/network, PostgreSQL isolation, distributed lease target, full saga coordinator or production throughput verified."
+}

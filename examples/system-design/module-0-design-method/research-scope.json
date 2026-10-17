@@ -1,0 +1,12 @@
+{
+  "checked_date": "2026-10-16",
+  "primary_references": [
+    "https://sre.google/sre-book/service-level-objectives/",
+    "https://sre.google/workbook/implementing-slos/",
+    "https://pubsonline.informs.org/doi/10.1287/opre.9.3.383",
+    "https://www.rfc-editor.org/rfc/rfc9110.html",
+    "https://aws.amazon.com/builders-library/making-retries-safe-with-idempotent-APIs/",
+    "https://docs.python.org/3.12/library/sqlite3.html"
+  ],
+  "scope": "Original teaching assumptions, arithmetic and hand-authored SLI samples, with actual local SQLite persistence/concurrency. Proposed API/ETag/status/authentication/deployment behavior is not exercised. No production benchmark, original resume metric, hosted service or learner mastery is verified."
+}

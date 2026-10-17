@@ -1,0 +1,16 @@
+{
+  "label": "A0",
+  "module": 0,
+  "chapter": "system-design-handbook-part-2-module-0-design-method-estimation.md",
+  "words": 7165,
+  "lines": 864,
+  "interview_questions": 30,
+  "practice_tasks": 10,
+  "unchecked_learning_items": 12,
+  "source_fidelity": [
+    "estimates.py",
+    "objectives.py",
+    "baseline.py"
+  ],
+  "mock_minutes": 45
+}

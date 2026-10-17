@@ -1,0 +1,146 @@
+{
+  "total": 91,
+  "counts": {
+    "queries": 12,
+    "pagination": 16,
+    "cache_basics": 23,
+    "single_flight": 10,
+    "invalidation": 11,
+    "multi_cache": 4,
+    "cleanup": 2,
+    "scaling_models": 13
+  },
+  "observations": {
+    "index": {
+      "seed_rows": 12000,
+      "matching_owner_rows": 300,
+      "before": {
+        "plan": [
+          "SEARCH notes USING INDEX sqlite_autoindex_notes_1 (tenant=?)",
+          "USE TEMP B-TREE FOR ORDER BY"
+        ],
+        "sqlite_vm_instructions": 18427
+      },
+      "after": {
+        "plan": [
+          "SEARCH notes USING INDEX notes_owner_recent (tenant=? AND owner=?)"
+        ],
+        "sqlite_vm_instructions": 224
+      },
+      "same_results": true,
+      "page_size": 20
+    },
+    "pagination": {
+      "notes_visited": 300,
+      "unique_ids": 300,
+      "cursor": [
+        33,
+        "n00_0100"
+      ],
+      "offset_rows_skipped": 200,
+      "same_deep_page": true,
+      "offset_vm_instructions": 1024,
+      "keyset_vm_instructions": 334
+    },
+    "pagination_drift": {
+      "inserted_between_pages": "n00_new",
+      "offset_duplicate_ids": [
+        "n00_0280"
+      ],
+      "keyset_duplicate_ids": [],
+      "continuation_includes_newer_insert": false,
+      "snapshot_guarantee": false
+    },
+    "ttl_and_scope": {
+      "database_calls_for_cold_warm_before_expiry_after_expiry": 2,
+      "ttl_seconds": 10,
+      "expires_at_equal_time": true,
+      "owner_miss_not_cached": true,
+      "bounded_cache_entries": 2,
+      "evictions": 1
+    },
+    "single_flight": {
+      "callers": 10,
+      "database_reads": 1,
+      "coalesced": 9,
+      "stats": {
+        "hits": 0,
+        "misses": 10,
+        "loads": 1,
+        "coalesced": 9,
+        "expired": 0,
+        "evictions": 0,
+        "fenced": 0,
+        "invalidations": 0
+      }
+    },
+    "naive_refill": {
+      "committed_revision": 2,
+      "old_reader_revision": 1,
+      "next_cached_revision": 1,
+      "timeline": [
+        "reader captures revision 1",
+        "writer commits revision 2",
+        "writer deletes cache entry",
+        "reader fills revision 1 after invalidation"
+      ]
+    },
+    "fenced_refill": {
+      "post_invalidation_reader": 2,
+      "overlapping_reader": 2,
+      "database_loads": 2,
+      "stats": {
+        "hits": 2,
+        "misses": 2,
+        "loads": 2,
+        "coalesced": 0,
+        "expired": 0,
+        "evictions": 0,
+        "fenced": 1,
+        "invalidations": 1
+      }
+    },
+    "two_caches": {
+      "writer_cache_revision": 2,
+      "other_cache_before_expiry": 1,
+      "other_cache_after_expiry": 2,
+      "invalidation_broadcast": false
+    },
+    "scaling": {
+      "warm_assumption": {
+        "read_qps": 10000,
+        "assumed_hit_fraction": 0.95,
+        "estimated_db_read_qps": 500.0,
+        "maximum_application_connections": 400,
+        "application_connection_budget": 140
+      },
+      "cold_assumption": {
+        "read_qps": 10000,
+        "assumed_hit_fraction": 0,
+        "estimated_db_read_qps": 10000,
+        "maximum_application_connections": 400,
+        "application_connection_budget": 140
+      },
+      "cold_to_warm_db_demand_ratio": 20.0,
+      "placement": {
+        "tenants": 100,
+        "synthetic_requests": 1000,
+        "hot_tenant_requests": 901,
+        "requests_by_shard": {
+          "0": 24,
+          "1": 924,
+          "2": 25,
+          "3": 27
+        },
+        "tenants_remapped_on_modulo_resize": 83,
+        "remap_denominator_tenants": 100
+      }
+    }
+  },
+  "cleanup": {
+    "sqlite_connections_closed": true,
+    "temporary_database_directory_removed": true,
+    "async_cache_tasks_closed": true,
+    "persistent_listener_started": false
+  }
+}

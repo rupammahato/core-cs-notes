@@ -1,0 +1,14 @@
+{
+  "checked_date": "2026-10-16",
+  "references": [
+    "https://amazon.jobs/content/en/how-we-hire/sde-ii-interview-prep",
+    "https://www.hellointerview.com/learn/system-design/in-a-hurry/problem-breakdowns",
+    "https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/",
+    "https://aws.amazon.com/builders-library/making-retries-safe-with-idempotent-APIs/",
+    "https://builder.aws.com/content/3EumjoZascWd1oZiEgL8ORlv3qE/timeouts-retries-and-backoff-with-jitter",
+    "https://www.postgresql.org/docs/18/explicit-locking.html",
+    "https://learn.microsoft.com/en-us/azure/architecture/patterns/cache-aside",
+    "https://docs.aws.amazon.com/AmazonS3/latest/userguide/mpuoverview.html"
+  ],
+  "scope": "Employer guidance is role-specific context; a practice catalog supports its own selection, not unbiased interview frequencies. Technical references are primary documentation for future implementation. The 60 bank rows are preserved from the existing workspace synthesis; no worked architecture service or production guarantee is verified at roadmap stage."
+}

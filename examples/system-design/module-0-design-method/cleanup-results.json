@@ -1,0 +1,6 @@
+{
+  "temporary_database_directory_removed": true,
+  "sqlite_connections_closed": true,
+  "concurrent_worker_calls_completed": 4,
+  "persistent_listener_started": false
+}

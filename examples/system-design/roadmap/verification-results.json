@@ -1,0 +1,117 @@
+{
+  "checked_date": "2026-10-18",
+  "python": "3.12.10",
+  "total": 17,
+  "checks": [
+    {
+      "name": "Five foundations, fourteen worked designs, one consolidation",
+      "passed": true
+    },
+    {
+      "name": "Teaching modules and part mapping cover 0-18 and 2-20",
+      "passed": true
+    },
+    {
+      "name": "Planned filenames and slugs are unique",
+      "passed": true
+    },
+    {
+      "name": "Planned filenames match sync-compatible numeric convention",
+      "passed": true
+    },
+    {
+      "name": "Every prerequisite exists and precedes its section",
+      "passed": true
+    },
+    {
+      "name": "Dependency graph is acyclic and all sections reachable",
+      "passed": true
+    },
+    {
+      "name": "Estimated hour arithmetic and range ordering agree",
+      "passed": true
+    },
+    {
+      "name": "Published sources match availability; future sections remain planned",
+      "passed": true
+    },
+    {
+      "name": "All 60 question IDs appear once and in order",
+      "passed": true
+    },
+    {
+      "name": "Question source checksum and exact rows preserved",
+      "passed": true
+    },
+    {
+      "name": "System prompts Q25-Q38 map to S0-S13",
+      "passed": true
+    },
+    {
+      "name": "Failure prompts Q39-Q52 map to S0-S13",
+      "passed": true
+    },
+    {
+      "name": "Every question architecture target exists",
+      "passed": true
+    },
+    {
+      "name": "All resume prerequisites reference existing modules",
+      "passed": true
+    },
+    {
+      "name": "Internal links point only to available content",
+      "passed": true
+    },
+    {
+      "name": "Twenty learning items remain unchecked",
+      "passed": true
+    },
+    {
+      "name": "Content footprint and completed/planned boundaries agree",
+      "passed": true
+    }
+  ],
+  "observations": {
+    "foundations": 5,
+    "worked_systems": 14,
+    "consolidation": 1,
+    "planned_files": 21,
+    "available_files": 21,
+    "question_groups": [
+      24,
+      14,
+      14,
+      8
+    ],
+    "questions": 60,
+    "prerequisite_order": [
+      "A0",
+      "A1",
+      "A2",
+      "A3",
+      "A4",
+      "S0",
+      "S1",
+      "S3",
+      "S4",
+      "S5",
+      "S7",
+      "S10",
+      "S2",
+      "S6",
+      "S8",
+      "S9",
+      "S11",
+      "S12",
+      "S13",
+      "Revision"
+    ],
+    "estimated_active_hours": [
+      77,
+      105
+    ],
+    "existing_content_links": 46
+  },
+  "scope": "Roadmap/document consistency only. No architecture implementation, runtime guarantee, production metric or learner mastery verified by this roadmap audit; each available chapter retains its own scope."
+}

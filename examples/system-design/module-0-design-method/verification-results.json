@@ -1,0 +1,488 @@
+{
+  "module": 0,
+  "label": "A0",
+  "verified_date": "2026-10-16",
+  "python": "3.12.10",
+  "sqlite": "3.49.1",
+  "os": "Windows-11-10.0.26300-SP0",
+  "total": 62,
+  "counts": {
+    "estimates": 23,
+    "objectives": 12,
+    "baseline": 23,
+    "concurrency": 4
+  },
+  "checks": [
+    {
+      "group": "estimates",
+      "name": "Daily reads and writes use independent action counts",
+      "passed": true
+    },
+    {
+      "group": "estimates",
+      "name": "Average QPS uses the full stated day",
+      "passed": true
+    },
+    {
+      "group": "estimates",
+      "name": "Peak multiplier applies to aggregate request rate",
+      "passed": true
+    },
+    {
+      "group": "estimates",
+      "name": "Milliseconds convert to seconds for mean inflight",
+      "passed": true
+    },
+    {
+      "group": "estimates",
+      "name": "Updates are not all treated as new retained records",
+      "passed": true
+    },
+    {
+      "group": "estimates",
+      "name": "Logical storage follows created record count",
+      "passed": true
+    },
+    {
+      "group": "estimates",
+      "name": "Physical copy/overhead arithmetic explicit",
+      "passed": true
+    },
+    {
+      "group": "estimates",
+      "name": "Decimal GB and binary GiB remain distinct",
+      "passed": true
+    },
+    {
+      "group": "estimates",
+      "name": "Response bandwidth includes read/write payload assumptions",
+      "passed": true
+    },
+    {
+      "group": "estimates",
+      "name": "Capacity target leaves assumed utilization headroom",
+      "passed": true
+    },
+    {
+      "group": "estimates",
+      "name": "Round up healthy capacity then add one failure reserve",
+      "passed": true
+    },
+    {
+      "group": "estimates",
+      "name": "Twice users doubles rate, inflight and storage",
+      "passed": true
+    },
+    {
+      "group": "estimates",
+      "name": "Twice mean time doubles inflight without changing rate",
+      "passed": true
+    },
+    {
+      "group": "estimates",
+      "name": "Twice record size changes storage without changing requests",
+      "passed": true
+    },
+    {
+      "group": "estimates",
+      "name": "Read-only scenario has no new retained notes",
+      "passed": true
+    },
+    {
+      "group": "estimates",
+      "name": "Zero active users rejected",
+      "passed": true
+    },
+    {
+      "group": "estimates",
+      "name": "Zero total workload rejected",
+      "passed": true
+    },
+    {
+      "group": "estimates",
+      "name": "Invalid creation fraction rejected",
+      "passed": true
+    },
+    {
+      "group": "estimates",
+      "name": "Full utilization target rejected",
+      "passed": true
+    },
+    {
+      "group": "estimates",
+      "name": "NaN assumption rejected",
+      "passed": true
+    },
+    {
+      "group": "estimates",
+      "name": "Fractional physical copy count rejected",
+      "passed": true
+    },
+    {
+      "group": "estimates",
+      "name": "Boolean user count rejected",
+      "passed": true
+    },
+    {
+      "group": "estimates",
+      "name": "Peak below average rejected",
+      "passed": true
+    },
+    {
+      "group": "objectives",
+      "name": "Inclusive deadline boundary succeeds",
+      "passed": true
+    },
+    {
+      "group": "objectives",
+      "name": "Slow event consumes one good-event failure",
+      "passed": true
+    },
+    {
+      "group": "objectives",
+      "name": "Goal met exactly at declared fraction",
+      "passed": true
+    },
+    {
+      "group": "objectives",
+      "name": "Fast incorrect response is not good",
+      "passed": true
+    },
+    {
+      "group": "objectives",
+      "name": "Timeout missing duration is not good",
+      "passed": true
+    },
+    {
+      "group": "objectives",
+      "name": "Ineligible event does not dilute denominator",
+      "passed": true
+    },
+    {
+      "group": "objectives",
+      "name": "No eligible events produces no fabricated success",
+      "passed": true
+    },
+    {
+      "group": "objectives",
+      "name": "Aggregate goal cannot excuse a critical invariant violation",
+      "passed": true
+    },
+    {
+      "group": "objectives",
+      "name": "Invariant violations counted even outside eligible latency traffic",
+      "passed": true
+    },
+    {
+      "group": "objectives",
+      "name": "Negative sample duration rejected",
+      "passed": true
+    },
+    {
+      "group": "objectives",
+      "name": "Implicit truthy classification rejected",
+      "passed": true
+    },
+    {
+      "group": "objectives",
+      "name": "Impossible goal rejected",
+      "passed": true
+    },
+    {
+      "group": "baseline",
+      "name": "Create persists revision one",
+      "passed": true
+    },
+    {
+      "group": "baseline",
+      "name": "Owner reads the persisted representation",
+      "passed": true
+    },
+    {
+      "group": "baseline",
+      "name": "Same scoped operation returns stored outcome",
+      "passed": true
+    },
+    {
+      "group": "baseline",
+      "name": "Replay creates no extra physical note",
+      "passed": true
+    },
+    {
+      "group": "baseline",
+      "name": "Same operation with different input conflicts",
+      "passed": true
+    },
+    {
+      "group": "baseline",
+      "name": "Other owner cannot read",
+      "passed": true
+    },
+    {
+      "group": "baseline",
+      "name": "Other tenant cannot read",
+      "passed": true
+    },
+    {
+      "group": "baseline",
+      "name": "Absent and invisible reads share failure class",
+      "passed": true
+    },
+    {
+      "group": "baseline",
+      "name": "Other owner cannot edit",
+      "passed": true
+    },
+    {
+      "group": "baseline",
+      "name": "Matching expected revision updates exactly once",
+      "passed": true
+    },
+    {
+      "group": "baseline",
+      "name": "Old expected revision rejects overwrite",
+      "passed": true
+    },
+    {
+      "group": "baseline",
+      "name": "Rejected stale edit preserves current content",
+      "passed": true
+    },
+    {
+      "group": "baseline",
+      "name": "Create replay retains original result after later edit",
+      "passed": true
+    },
+    {
+      "group": "baseline",
+      "name": "Operation identity is scoped by tenant and owner",
+      "passed": true
+    },
+    {
+      "group": "baseline",
+      "name": "Injected failure rejects create transaction",
+      "passed": true
+    },
+    {
+      "group": "baseline",
+      "name": "Failure rolls back note and operation together",
+      "passed": true
+    },
+    {
+      "group": "baseline",
+      "name": "Retry after rolled-back create can succeed",
+      "passed": true
+    },
+    {
+      "group": "baseline",
+      "name": "Oversized UTF-8 content rejected by bytes",
+      "passed": true
+    },
+    {
+      "group": "baseline",
+      "name": "Whitespace-only title rejected",
+      "passed": true
+    },
+    {
+      "group": "baseline",
+      "name": "Boolean revision rejected",
+      "passed": true
+    },
+    {
+      "group": "baseline",
+      "name": "Malformed identity rejected",
+      "passed": true
+    },
+    {
+      "group": "baseline",
+      "name": "Storage itself rejects nonpositive revision",
+      "passed": true
+    },
+    {
+      "group": "baseline",
+      "name": "Fresh connection retains committed edit",
+      "passed": true
+    },
+    {
+      "group": "concurrency",
+      "name": "Concurrent duplicate creates yield one new result and one replay",
+      "passed": true
+    },
+    {
+      "group": "concurrency",
+      "name": "Concurrent duplicate creates persist one note and operation",
+      "passed": true
+    },
+    {
+      "group": "concurrency",
+      "name": "Two edits of revision one yield one accepted and one stale",
+      "passed": true
+    },
+    {
+      "group": "concurrency",
+      "name": "Concurrent edits increment revision once",
+      "passed": true
+    }
+  ],
+  "observations": {
+    "estimates": {
+      "assumptions": {
+        "users": 100000,
+        "reads_per_user_day": 30,
+        "writes_per_user_day": 3,
+        "seconds_per_day": 86400,
+        "peak_factor": 8,
+        "mean_request_ms": 150,
+        "creation_fraction_of_writes": 0.4,
+        "record_bytes": 2048,
+        "retention_days": 365,
+        "physical_copies": 3,
+        "storage_overhead_factor": 1.5,
+        "read_response_bytes": 4096,
+        "write_response_bytes": 512,
+        "assumed_instance_qps": 100,
+        "target_utilization": 0.65
+      },
+      "reads_per_day": 3000000,
+      "writes_per_day": 300000,
+      "average_qps": 38.19444444444444,
+      "assumed_peak_qps": 305.55555555555554,
+      "mean_in_flight_at_assumed_peak": 45.83333333333333,
+      "new_records_per_day": 120000.0,
+      "retained_records": 43800000.0,
+      "logical_storage_bytes": 89702400000.0,
+      "planned_physical_storage_bytes": 403660800000.0,
+      "planned_physical_storage_decimal_gb": 403.6608,
+      "planned_physical_storage_gib": 375.93841552734375,
+      "peak_response_payload_bytes_per_second": 1152000.0,
+      "target_qps_per_instance": 65.0,
+      "healthy_instances": 5,
+      "fleet_for_one_failed_instance": 6,
+      "scope": "Calculated scenario only. Per-instance capacity, peak multiplier, copies/overhead and retained-creation rate are assumptions; no benchmark or actual replication."
+    },
+    "sensitivity": {
+      "baseline": {
+        "assumed_peak_qps": 305.55555555555554,
+        "mean_in_flight_at_assumed_peak": 45.83333333333333,
+        "planned_physical_storage_bytes": 403660800000.0,
+        "healthy_instances": 5
+      },
+      "double_users": {
+        "assumed_peak_qps": 611.1111111111111,
+        "mean_in_flight_at_assumed_peak": 91.66666666666666,
+        "planned_physical_storage_bytes": 807321600000.0,
+        "healthy_instances": 10
+      },
+      "double_mean_time": {
+        "assumed_peak_qps": 305.55555555555554,
+        "mean_in_flight_at_assumed_peak": 91.66666666666666,
+        "planned_physical_storage_bytes": 403660800000.0,
+        "healthy_instances": 5
+      },
+      "double_record_size": {
+        "assumed_peak_qps": 305.55555555555554,
+        "mean_in_flight_at_assumed_peak": 45.83333333333333,
+        "planned_physical_storage_bytes": 807321600000.0,
+        "healthy_instances": 5
+      }
+    },
+    "objectives": {
+      "slow_sample": {
+        "eligible_events": 100,
+        "good_events": 99,
+        "bad_events": 1,
+        "good_fraction": 0.99,
+        "goal": 0.99,
+        "deadline_ms": 200,
+        "objective_met": true,
+        "invariant_violations": 0,
+        "design_gate_passed": true,
+        "scope": "Offline classifier over hand-authored samples, not measured service availability, latency or production monitoring."
+      },
+      "critical_sample": {
+        "eligible_events": 100,
+        "good_events": 99,
+        "bad_events": 1,
+        "good_fraction": 0.99,
+        "goal": 0.99,
+        "deadline_ms": 200,
+        "objective_met": true,
+        "invariant_violations": 1,
+        "design_gate_passed": false,
+        "scope": "Offline classifier over hand-authored samples, not measured service availability, latency or production monitoring."
+      }
+    },
+    "baseline": {
+      "created": {
+        "replayed": false,
+        "note": {
+          "id": "note-1",
+          "title": "HTTP",
+          "content": "request trace",
+          "revision": 1
+        }
+      },
+      "replayed": {
+        "replayed": true,
+        "note": {
+          "id": "note-1",
+          "title": "HTTP",
+          "content": "request trace",
+          "revision": 1
+        }
+      },
+      "edited": {
+        "id": "note-1",
+        "title": "HTTP v2",
+        "content": "current trace",
+        "revision": 2
+      },
+      "replayed_create_after_edit": {
+        "replayed": true,
+        "note": {
+          "id": "note-1",
+          "title": "HTTP",
+          "content": "request trace",
+          "revision": 1
+        }
+      },
+      "rollback_retry": {
+        "replayed": false,
+        "note": {
+          "id": "note-after-fault",
+          "title": "Fail",
+          "content": "rollback",
+          "revision": 1
+        }
+      },
+      "concurrent_creates": [
+        {
+          "replayed": false,
+          "id": "parallel-note"
+        },
+        {
+          "replayed": true,
+          "id": "parallel-note"
+        }
+      ],
+      "concurrent_edits": [
+        {
+          "outcome": "accepted",
+          "revision": 2
+        },
+        {
+          "outcome": "stale"
+        }
+      ],
+      "final_concurrent_revision": 2,
+      "scope": "Real SQLite file transactions, reopen persistence and two independent connections per concurrent pair. Direct repository calls with supplied identities; no HTTP/authentication/TLS, production throughput or full service deployment."
+    }
+  },
+  "cleanup": {
+    "temporary_database_directory_removed": true,
+    "sqlite_connections_closed": true,
+    "concurrent_worker_calls_completed": 4,
+    "persistent_listener_started": false
+  },
+  "scope": "Planning arithmetic, hand-authored SLI classification and a real SQLite repository probe. No HTTP service, authentication implementation, hosted resources, model/provider calls or production benchmark."
+}

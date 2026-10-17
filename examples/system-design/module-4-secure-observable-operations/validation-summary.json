@@ -1,0 +1,174 @@
+{
+  "label": "A4",
+  "module": 4,
+  "verified_date": "2026-10-16",
+  "runtime": {
+    "python": "3.12.10",
+    "sqlite": "3.49.1",
+    "os": "Windows 11"
+  },
+  "checks": {
+    "counts": {
+      "http_policy": 17,
+      "uploads": 24,
+      "quotas": 7,
+      "lifecycle": 11,
+      "saturation": 5,
+      "telemetry": 9,
+      "cleanup": 2,
+      "indicators": 13,
+      "planning": 5
+    },
+    "total": 93,
+    "all_passed": true
+  },
+  "roadmap_document_checks": 17,
+  "content": {
+    "label": "A4",
+    "chapter": "system-design-handbook-part-6-module-4-secure-observable-operations.md",
+    "words": 8724,
+    "lines": 1099,
+    "questions": 30,
+    "practice_tasks": 10,
+    "unchecked_learning_items": 12,
+    "source_fidelity": [
+      "policy.py",
+      "server.py",
+      "indicators.py"
+    ],
+    "output_fidelity": [
+      "authorization",
+      "uploads",
+      "quota_window",
+      "quota_race",
+      "drain",
+      "saturation",
+      "telemetry",
+      "objectives",
+      "planning"
+    ],
+    "mock_minutes": 45,
+    "verified_checks": 93,
+    "next": "S0: URL shortener",
+    "result_fidelity": {
+      "authorization": true,
+      "uploads": true,
+      "quota_window": true,
+      "quota_race": true,
+      "drain": true,
+      "saturation": true,
+      "telemetry": true,
+      "objectives": true,
+      "planning": true,
+      "versions": true
+    },
+    "authored_internal_links": 9
+  },
+  "cleanup": {
+    "sqlite_connections_closed": true,
+    "temporary_database_directory_removed": true,
+    "temporary_http_servers_closed": true,
+    "fixture_ports": [
+      55830,
+      55862,
+      55869,
+      55881
+    ],
+    "concurrent_quota_worker_calls_completed": 2,
+    "port_3000_used": false
+  },
+  "website": {
+    "build_passed": true,
+    "static_pages": 111,
+    "routes_checked": 43,
+    "all_routes_200": true,
+    "assertions": {
+      "title": true,
+      "q30": true,
+      "verifiedChecks": true,
+      "exactCode": true,
+      "evidence": true,
+      "architecture": true,
+      "scope": true,
+      "next": true,
+      "foundationGroup": true,
+      "roadmapLink": true,
+      "allFoundations": true,
+      "predecessor": true,
+      "homeCard": true,
+      "bankRetained": true
+    },
+    "search": {
+      "system-design": {
+        "status": 200,
+        "results": 14,
+        "indexed": true,
+        "scoped": true
+      },
+      "resume-skills": {
+        "status": 200,
+        "results": 18,
+        "indexed": true,
+        "scoped": true
+      }
+    },
+    "next_route_status": 404,
+    "temporary_server_closed": true,
+    "cached_font_fixture_used": true
+  },
+  "ports_stopped": {
+    "3000": true,
+    "61089": true,
+    "55830": true,
+    "55862": true,
+    "55869": true,
+    "55881": true
+  },
+  "existing_handbooks": [
+    {
+      "subject": "DSA Notes",
+      "files": 17,
+      "lines": 17589
+    },
+    {
+      "subject": "OOP Notes",
+      "files": 13,
+      "lines": 8806
+    },
+    {
+      "subject": "OS Notes",
+      "files": 13,
+      "lines": 6341
+    },
+    {
+      "subject": "DBMS Notes",
+      "files": 13,
+      "lines": 9613
+    },
+    {
+      "subject": "CN Notes",
+      "files": 13,
+      "lines": 9322
+    },
+    {
+      "subject": "Resume Skills Notes",
+      "files": 31,
+      "lines": 37575
+    }
+  ],
+  "system_design": {
+    "files": 6,
+    "lines": 5344,
+    "published_foundations": [
+      "A0",
+      "A1",
+      "A2",
+      "A3",
+      "A4"
+    ]
+  },
+  "git_diff_check_passed": true,
+  "trailing_whitespace_files": [],
+  "next": "S0: URL shortener",
+  "scope": "Real loopback HTTP authorization with published lesson tokens, current SQLite membership/scoped reads, two-connection atomic fixed-window quotas, private text-upload quarantine, application readiness/drain/admission and bounded diagnostic records. Dependency failure and held work are controlled flags/barriers. SLI samples and capacity/cost inputs are authored offline exercises. No production authentication/TLS, antivirus/object storage, Kubernetes/signal rollout, OTel/Prometheus backend, production SLO or throughput capacity verified."
+}

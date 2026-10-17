@@ -1,0 +1,159 @@
+{
+  "label": "A2",
+  "module": 2,
+  "verified_date": "2026-10-16",
+  "runtime": {
+    "python": "3.12.10",
+    "sqlite": "3.49.1",
+    "os": "Windows 11"
+  },
+  "checks": {
+    "counts": {
+      "queries": 12,
+      "pagination": 16,
+      "cache_basics": 23,
+      "single_flight": 10,
+      "invalidation": 11,
+      "multi_cache": 4,
+      "cleanup": 2,
+      "scaling_models": 13
+    },
+    "total": 91,
+    "all_passed": true
+  },
+  "roadmap_document_checks": 17,
+  "content": {
+    "label": "A2",
+    "chapter": "system-design-handbook-part-4-module-2-data-caching-scaling.md",
+    "words": 8806,
+    "lines": 1005,
+    "questions": 30,
+    "practice_tasks": 10,
+    "unchecked_learning_items": 12,
+    "source_fidelity": [
+      "data.py",
+      "cache.py",
+      "scaling.py"
+    ],
+    "output_fidelity": [
+      "index",
+      "pagination",
+      "pagination_drift",
+      "ttl_and_scope",
+      "single_flight",
+      "naive_refill",
+      "fenced_refill",
+      "two_caches",
+      "scaling"
+    ],
+    "mock_minutes": 45,
+    "verified_checks": 91,
+    "next": "A3: Reliable workflows and concurrency",
+    "result_fidelity": {
+      "index": true,
+      "pagination": true,
+      "pagination_drift": true,
+      "ttl_and_scope": true,
+      "single_flight": true,
+      "naive_refill": true,
+      "fenced_refill": true,
+      "two_caches": true,
+      "scaling": true,
+      "versions": true
+    },
+    "authored_internal_links": 8
+  },
+  "cleanup": {
+    "sqlite_connections_closed": true,
+    "temporary_database_directory_removed": true,
+    "async_cache_tasks_closed": true,
+    "persistent_listener_started": false
+  },
+  "website": {
+    "build_passed": true,
+    "static_pages": 109,
+    "routes_checked": 41,
+    "all_routes_200": true,
+    "assertions": {
+      "title": true,
+      "q30": true,
+      "verifiedChecks": true,
+      "exactCode": true,
+      "evidence": true,
+      "architecture": true,
+      "scope": true,
+      "next": true,
+      "foundationGroup": true,
+      "roadmapLink": true,
+      "predecessor": true,
+      "homeCard": true,
+      "bankRetained": true
+    },
+    "search": {
+      "system-design": {
+        "status": 200,
+        "results": 15,
+        "indexed": true,
+        "scoped": true
+      },
+      "resume-skills": {
+        "status": 200,
+        "results": 18,
+        "indexed": true,
+        "scoped": true
+      }
+    },
+    "next_route_status": 404,
+    "temporary_server_closed": true,
+    "cached_font_fixture_used": true
+  },
+  "ports_stopped": {
+    "3000": true,
+    "49907": true
+  },
+  "existing_handbooks": [
+    {
+      "subject": "DSA Notes",
+      "files": 17,
+      "lines": 17589
+    },
+    {
+      "subject": "OOP Notes",
+      "files": 13,
+      "lines": 8806
+    },
+    {
+      "subject": "OS Notes",
+      "files": 13,
+      "lines": 6341
+    },
+    {
+      "subject": "DBMS Notes",
+      "files": 13,
+      "lines": 9613
+    },
+    {
+      "subject": "CN Notes",
+      "files": 13,
+      "lines": 9322
+    },
+    {
+      "subject": "Resume Skills Notes",
+      "files": 31,
+      "lines": 37575
+    }
+  ],
+  "system_design": {
+    "files": 4,
+    "lines": 3236,
+    "published_foundations": [
+      "A0",
+      "A1",
+      "A2"
+    ]
+  },
+  "git_diff_check_passed": true,
+  "trailing_whitespace_files": [],
+  "next": "A3: Reliable workflows and concurrency",
+  "scope": "Real local SQLite index plans, VM instruction counts, scoped keyset queries and conditional writes. Deterministic asyncio interleavings over process-local caches and two SQLite connections. TTL uses an injected clock; scaling/placement are hypothetical arithmetic. No Redis, HTTP/authentication, replicated database, sharded deployment, network partition or production throughput verified."
+}

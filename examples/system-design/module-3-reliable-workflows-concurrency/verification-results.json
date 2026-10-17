@@ -1,0 +1,565 @@
+{
+  "label": "A3",
+  "verified_date": "2026-10-16",
+  "python": "3.12.10",
+  "sqlite": "3.49.1",
+  "os": "Windows 11",
+  "total": 90,
+  "counts": {
+    "retry_policy": 19,
+    "atomic_operations": 14,
+    "leases": 10,
+    "consumer_atomicity": 12,
+    "delivery_bounds": 11,
+    "concurrency": 10,
+    "compensation": 12,
+    "cleanup": 2
+  },
+  "checks": [
+    {
+      "group": "retry_policy",
+      "name": "transient safe operation succeeds within three attempts",
+      "passed": true
+    },
+    {
+      "group": "retry_policy",
+      "name": "each attempt receives bounded timeout budget",
+      "passed": true
+    },
+    {
+      "group": "retry_policy",
+      "name": "full jitter uses capped exponential bounds",
+      "passed": true
+    },
+    {
+      "group": "retry_policy",
+      "name": "elapsed fake time includes calls and sleeps",
+      "passed": true
+    },
+    {
+      "group": "retry_policy",
+      "name": "unsafe operation is not retried",
+      "passed": true
+    },
+    {
+      "group": "retry_policy",
+      "name": "unsafe operation is not retried calls once",
+      "passed": true
+    },
+    {
+      "group": "retry_policy",
+      "name": "permanent failure is not retried",
+      "passed": true
+    },
+    {
+      "group": "retry_policy",
+      "name": "permanent failure is not retried calls once",
+      "passed": true
+    },
+    {
+      "group": "retry_policy",
+      "name": "delay cannot exceed remaining caller deadline",
+      "passed": true
+    },
+    {
+      "group": "retry_policy",
+      "name": "deadline stops before another attempt",
+      "passed": true
+    },
+    {
+      "group": "retry_policy",
+      "name": "result at caller deadline is rejected",
+      "passed": true
+    },
+    {
+      "group": "retry_policy",
+      "name": "attempt exhaustion returns final transient failure",
+      "passed": true
+    },
+    {
+      "group": "retry_policy",
+      "name": "attempt bound respected",
+      "passed": true
+    },
+    {
+      "group": "retry_policy",
+      "name": "invalid retry configuration {'total': 0}",
+      "passed": true
+    },
+    {
+      "group": "retry_policy",
+      "name": "invalid retry configuration {'cap': inf}",
+      "passed": true
+    },
+    {
+      "group": "retry_policy",
+      "name": "invalid retry configuration {'attempts': True}",
+      "passed": true
+    },
+    {
+      "group": "retry_policy",
+      "name": "invalid retry configuration {'attempts': 11}",
+      "passed": true
+    },
+    {
+      "group": "retry_policy",
+      "name": "invalid jitter fraction rejected",
+      "passed": true
+    },
+    {
+      "group": "retry_policy",
+      "name": "independent retry layers multiply attempts",
+      "passed": true
+    },
+    {
+      "group": "atomic_operations",
+      "name": "fault between note and outbox rolls back",
+      "passed": true
+    },
+    {
+      "group": "atomic_operations",
+      "name": "fault leaves no canonical note",
+      "passed": true
+    },
+    {
+      "group": "atomic_operations",
+      "name": "fault leaves no operation outcome",
+      "passed": true
+    },
+    {
+      "group": "atomic_operations",
+      "name": "fault leaves no outbox intent",
+      "passed": true
+    },
+    {
+      "group": "atomic_operations",
+      "name": "new create returns non-replay result",
+      "passed": true
+    },
+    {
+      "group": "atomic_operations",
+      "name": "note operation and event commit together",
+      "passed": true
+    },
+    {
+      "group": "atomic_operations",
+      "name": "outbox payload has stable event and note identities",
+      "passed": true
+    },
+    {
+      "group": "atomic_operations",
+      "name": "lost response replay survives reopen",
+      "passed": true
+    },
+    {
+      "group": "atomic_operations",
+      "name": "replay creates no extra note or event",
+      "passed": true
+    },
+    {
+      "group": "atomic_operations",
+      "name": "same operation different input conflicts",
+      "passed": true
+    },
+    {
+      "group": "atomic_operations",
+      "name": "conflicting replay leaves canonical title intact",
+      "passed": true
+    },
+    {
+      "group": "atomic_operations",
+      "name": "invalid operation key rejected",
+      "passed": true
+    },
+    {
+      "group": "atomic_operations",
+      "name": "invalid title rejected",
+      "passed": true
+    },
+    {
+      "group": "leases",
+      "name": "ready outbox row receives first claim",
+      "passed": true
+    },
+    {
+      "group": "leases",
+      "name": "active lease prevents competing claim",
+      "passed": true
+    },
+    {
+      "group": "consumer_atomicity",
+      "name": "consumer fault after effect rolls back",
+      "passed": true
+    },
+    {
+      "group": "consumer_atomicity",
+      "name": "consumer rollback removes inbox record",
+      "passed": true
+    },
+    {
+      "group": "consumer_atomicity",
+      "name": "consumer rollback removes effect",
+      "passed": true
+    },
+    {
+      "group": "consumer_atomicity",
+      "name": "first successful consumer commit is non-replay",
+      "passed": true
+    },
+    {
+      "group": "consumer_atomicity",
+      "name": "effect and inbox commit together",
+      "passed": true
+    },
+    {
+      "group": "leases",
+      "name": "claim recovers exactly at lease expiry",
+      "passed": true
+    },
+    {
+      "group": "leases",
+      "name": "recovery increments durable attempt count",
+      "passed": true
+    },
+    {
+      "group": "consumer_atomicity",
+      "name": "redelivery deduplicates after consumer reopen",
+      "passed": true
+    },
+    {
+      "group": "consumer_atomicity",
+      "name": "redelivery does not repeat projection effect",
+      "passed": true
+    },
+    {
+      "group": "leases",
+      "name": "old claim cannot acknowledge new generation",
+      "passed": true
+    },
+    {
+      "group": "leases",
+      "name": "old claim cannot reschedule new generation",
+      "passed": true
+    },
+    {
+      "group": "leases",
+      "name": "wrong worker cannot acknowledge",
+      "passed": true
+    },
+    {
+      "group": "leases",
+      "name": "current claim acknowledges after durable consumer result",
+      "passed": true
+    },
+    {
+      "group": "leases",
+      "name": "acknowledged event is no longer claimable",
+      "passed": true
+    },
+    {
+      "group": "leases",
+      "name": "duplicate acknowledgement reports no transition",
+      "passed": true
+    },
+    {
+      "group": "consumer_atomicity",
+      "name": "event ID reuse with changed payload conflicts",
+      "passed": true
+    },
+    {
+      "group": "consumer_atomicity",
+      "name": "conflict leaves one original effect",
+      "passed": true
+    },
+    {
+      "group": "consumer_atomicity",
+      "name": "unsupported event schema rejected before effect",
+      "passed": true
+    },
+    {
+      "group": "consumer_atomicity",
+      "name": "boolean schema is not version one",
+      "passed": true
+    },
+    {
+      "group": "consumer_atomicity",
+      "name": "unknown event fields rejected",
+      "passed": true
+    },
+    {
+      "group": "atomic_operations",
+      "name": "operation key scope includes owner and tenant",
+      "passed": true
+    },
+    {
+      "group": "delivery_bounds",
+      "name": "first failure schedules delayed retry",
+      "passed": true
+    },
+    {
+      "group": "delivery_bounds",
+      "name": "retry is not visible before due time",
+      "passed": true
+    },
+    {
+      "group": "delivery_bounds",
+      "name": "due time allows second claim",
+      "passed": true
+    },
+    {
+      "group": "delivery_bounds",
+      "name": "acknowledgement at expiry is rejected",
+      "passed": true
+    },
+    {
+      "group": "delivery_bounds",
+      "name": "expired lease reclaims third attempt",
+      "passed": true
+    },
+    {
+      "group": "delivery_bounds",
+      "name": "final failure transitions to dead",
+      "passed": true
+    },
+    {
+      "group": "delivery_bounds",
+      "name": "dead item does not retry forever",
+      "passed": true
+    },
+    {
+      "group": "delivery_bounds",
+      "name": "dead state persists in database",
+      "passed": true
+    },
+    {
+      "group": "delivery_bounds",
+      "name": "final crashed attempt expires into dead state",
+      "passed": true
+    },
+    {
+      "group": "delivery_bounds",
+      "name": "nonpositive lease rejected",
+      "passed": true
+    },
+    {
+      "group": "delivery_bounds",
+      "name": "negative retry delay rejected",
+      "passed": true
+    },
+    {
+      "group": "concurrency",
+      "name": "last-unit race has one accepted reservation",
+      "passed": true
+    },
+    {
+      "group": "concurrency",
+      "name": "last-unit race has one unavailable outcome",
+      "passed": true
+    },
+    {
+      "group": "concurrency",
+      "name": "last-unit race cannot oversell",
+      "passed": true
+    },
+    {
+      "group": "concurrency",
+      "name": "last-unit race persists one reservation",
+      "passed": true
+    },
+    {
+      "group": "concurrency",
+      "name": "concurrent operation retry returns same reservation",
+      "passed": true
+    },
+    {
+      "group": "concurrency",
+      "name": "concurrent operation retry has one replay",
+      "passed": true
+    },
+    {
+      "group": "concurrency",
+      "name": "concurrent retry decrements stock once",
+      "passed": true
+    },
+    {
+      "group": "concurrency",
+      "name": "concurrent retry stores one outcome",
+      "passed": true
+    },
+    {
+      "group": "concurrency",
+      "name": "competing claimers have one current owner",
+      "passed": true
+    },
+    {
+      "group": "concurrency",
+      "name": "competing claimers create one lease generation",
+      "passed": true
+    },
+    {
+      "group": "compensation",
+      "name": "failure after stock decrement rolls back",
+      "passed": true
+    },
+    {
+      "group": "compensation",
+      "name": "failed reservation restores stock atomically",
+      "passed": true
+    },
+    {
+      "group": "compensation",
+      "name": "failed reservation stores no operation or reservation",
+      "passed": true
+    },
+    {
+      "group": "compensation",
+      "name": "other owner cannot release reservation",
+      "passed": true
+    },
+    {
+      "group": "compensation",
+      "name": "other tenant cannot release reservation",
+      "passed": true
+    },
+    {
+      "group": "compensation",
+      "name": "operation key cannot change action kind",
+      "passed": true
+    },
+    {
+      "group": "compensation",
+      "name": "compensation records released state",
+      "passed": true
+    },
+    {
+      "group": "compensation",
+      "name": "compensation response replay survives reopen",
+      "passed": true
+    },
+    {
+      "group": "compensation",
+      "name": "different release operation cannot restore stock twice",
+      "passed": true
+    },
+    {
+      "group": "compensation",
+      "name": "released reservation remains recorded",
+      "passed": true
+    },
+    {
+      "group": "compensation",
+      "name": "zero reservation quantity rejected",
+      "passed": true
+    },
+    {
+      "group": "compensation",
+      "name": "boolean reservation quantity rejected",
+      "passed": true
+    },
+    {
+      "group": "cleanup",
+      "name": "all six competing worker calls completed",
+      "passed": true
+    },
+    {
+      "group": "cleanup",
+      "name": "temporary directory removed after connections close",
+      "passed": true
+    }
+  ],
+  "observations": {
+    "retry": {
+      "outcome": {
+        "result": "accepted",
+        "trace": [
+          {
+            "attempt": 1,
+            "budget": 0.4,
+            "backoff": 0.05
+          },
+          {
+            "attempt": 2,
+            "budget": 0.4,
+            "backoff": 0.1
+          },
+          {
+            "attempt": 3,
+            "budget": 0.4
+          }
+        ]
+      },
+      "fake_elapsed_seconds": 0.45,
+      "network_calls_made": false
+    },
+    "deadline": {
+      "caller_deadline_seconds": 0.25,
+      "first_call_seconds": 0.2,
+      "proposed_delay_seconds": 0.1,
+      "next_attempt_started": false,
+      "retry_layers": 5,
+      "attempts_per_layer": 3,
+      "maximum_leaf_attempts": 243
+    },
+    "atomic_create": {
+      "replayed_after_reopen": true,
+      "original_result": {
+        "id": "id_3",
+        "title": "Atomic note",
+        "revision": 1
+      },
+      "notes": 1,
+      "operation_outcomes": 1,
+      "outbox_events": 1,
+      "event_type": "NoteCreated"
+    },
+    "redelivery": {
+      "first_generation": 1,
+      "recovered_generation": 2,
+      "same_event_id": true,
+      "consumer_replayed": true,
+      "inbox_records": 1,
+      "projection_effects": 1,
+      "source_state": "done",
+      "crash_boundary": "consumer committed; source acknowledgement omitted"
+    },
+    "delivery_bounds": {
+      "attempts": 3,
+      "retry_due": 4,
+      "ack_at_expiry_accepted": false,
+      "terminal_state": "dead",
+      "automatic_retry_after_dead": false
+    },
+    "last_unit": {
+      "accepted": 1,
+      "unavailable": 1,
+      "remaining": 0,
+      "reservations": 1,
+      "independent_sqlite_connections": 2
+    },
+    "concurrent_retry": {
+      "same_result": true,
+      "replay_flags": [
+        false,
+        true
+      ],
+      "remaining": 1,
+      "reservations": 1,
+      "independent_sqlite_connections": 2
+    },
+    "compensation": {
+      "original_stock": 2,
+      "after_reserve": 1,
+      "after_repeated_release": 2,
+      "reservation_state": "released",
+      "same_key_replayed_after_reopen": true,
+      "external_payment_refund_executed": false
+    }
+  },
+  "cleanup": {
+    "sqlite_connections_closed": true,
+    "temporary_database_directory_removed": true,
+    "concurrent_worker_calls_completed": 6,
+    "persistent_listener_started": false
+  },
+  "scope": "Real SQLite operation replay, atomic note/outbox creation, separate consumer inbox/effect transactions, close/reopen recovery, lease generations, attempt bounds, two-connection races and idempotent local compensation. Retry transport/time and lease time are injected; crash boundaries omit steps or raise controlled exceptions. No process-kill/power-loss, broker/provider/network, PostgreSQL isolation, distributed lease target, full saga coordinator or production throughput verified."
+}

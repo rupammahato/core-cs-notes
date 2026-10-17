@@ -1,0 +1,609 @@
+{
+  "label": "A2",
+  "verified_date": "2026-10-16",
+  "python": "3.12.10",
+  "sqlite": "3.49.1",
+  "os": "Windows 11",
+  "total": 91,
+  "counts": {
+    "queries": 12,
+    "pagination": 16,
+    "cache_basics": 23,
+    "single_flight": 10,
+    "invalidation": 11,
+    "multi_cache": 4,
+    "cleanup": 2,
+    "scaling_models": 13
+  },
+  "checks": [
+    {
+      "group": "queries",
+      "name": "seed exact workload rows",
+      "passed": true
+    },
+    {
+      "group": "queries",
+      "name": "index preserves listing result",
+      "passed": true
+    },
+    {
+      "group": "queries",
+      "name": "listing returns bounded page",
+      "passed": true
+    },
+    {
+      "group": "queries",
+      "name": "pre-index plan needs temporary ordering",
+      "passed": true
+    },
+    {
+      "group": "queries",
+      "name": "new plan selects owner/recent index",
+      "passed": true
+    },
+    {
+      "group": "queries",
+      "name": "new plan avoids temporary ordering",
+      "passed": true
+    },
+    {
+      "group": "queries",
+      "name": "indexed fixture uses fewer SQLite VM instructions",
+      "passed": true
+    },
+    {
+      "group": "queries",
+      "name": "descending timestamp and ID order stable",
+      "passed": true
+    },
+    {
+      "group": "pagination",
+      "name": "keyset visits all 300 scoped notes",
+      "passed": true
+    },
+    {
+      "group": "pagination",
+      "name": "keyset has no duplicate identities with timestamp ties",
+      "passed": true
+    },
+    {
+      "group": "pagination",
+      "name": "keyset order equals authoritative full scoped order",
+      "passed": true
+    },
+    {
+      "group": "pagination",
+      "name": "deep offset and keyset return identical rows",
+      "passed": true
+    },
+    {
+      "group": "pagination",
+      "name": "keyset skips less VM work for deep page",
+      "passed": true
+    },
+    {
+      "group": "pagination",
+      "name": "other owner listing stays in its namespace",
+      "passed": true
+    },
+    {
+      "group": "pagination",
+      "name": "unknown tenant listing is empty",
+      "passed": true
+    },
+    {
+      "group": "pagination",
+      "name": "zero page limit rejected",
+      "passed": true
+    },
+    {
+      "group": "pagination",
+      "name": "oversized page limit rejected",
+      "passed": true
+    },
+    {
+      "group": "pagination",
+      "name": "boolean page limit rejected",
+      "passed": true
+    },
+    {
+      "group": "pagination",
+      "name": "negative offset rejected",
+      "passed": true
+    },
+    {
+      "group": "pagination",
+      "name": "cursor and offset combination rejected",
+      "passed": true
+    },
+    {
+      "group": "pagination",
+      "name": "malformed cursor rejected",
+      "passed": true
+    },
+    {
+      "group": "pagination",
+      "name": "new insert shifts offset into an already visited row",
+      "passed": true
+    },
+    {
+      "group": "pagination",
+      "name": "immutable-order keyset avoids that duplicate",
+      "passed": true
+    },
+    {
+      "group": "pagination",
+      "name": "newer insert is outside continuation cursor",
+      "passed": true
+    },
+    {
+      "group": "queries",
+      "name": "cross-owner canonical read is missing",
+      "passed": true
+    },
+    {
+      "group": "queries",
+      "name": "cross-owner replacement is missing",
+      "passed": true
+    },
+    {
+      "group": "queries",
+      "name": "stale replacement is rejected by SQL predicate",
+      "passed": true
+    },
+    {
+      "group": "queries",
+      "name": "second SQLite connection sees committed edit",
+      "passed": true
+    },
+    {
+      "group": "cache_basics",
+      "name": "cold read loads authoritative row",
+      "passed": true
+    },
+    {
+      "group": "cache_basics",
+      "name": "cold read makes one database call",
+      "passed": true
+    },
+    {
+      "group": "cache_basics",
+      "name": "warm result equals cold result",
+      "passed": true
+    },
+    {
+      "group": "cache_basics",
+      "name": "warm read avoids database call",
+      "passed": true
+    },
+    {
+      "group": "cache_basics",
+      "name": "hit counted",
+      "passed": true
+    },
+    {
+      "group": "cache_basics",
+      "name": "entry valid just before TTL boundary",
+      "passed": true
+    },
+    {
+      "group": "cache_basics",
+      "name": "entry expires exactly at TTL boundary",
+      "passed": true
+    },
+    {
+      "group": "cache_basics",
+      "name": "expiration counted",
+      "passed": true
+    },
+    {
+      "group": "cache_basics",
+      "name": "scoped keys include tenant and owner",
+      "passed": true
+    },
+    {
+      "group": "cache_basics",
+      "name": "same ID in another tenant causes separate load",
+      "passed": true
+    },
+    {
+      "group": "cache_basics",
+      "name": "cached Alice-like scope cannot satisfy different owner",
+      "passed": true
+    },
+    {
+      "group": "cache_basics",
+      "name": "missing result is not cached",
+      "passed": true
+    },
+    {
+      "group": "cache_basics",
+      "name": "failure releases in-flight task",
+      "passed": true
+    },
+    {
+      "group": "cache_basics",
+      "name": "immutable values cannot be changed by a caller",
+      "passed": true
+    },
+    {
+      "group": "cache_basics",
+      "name": "entry capacity enforced",
+      "passed": true
+    },
+    {
+      "group": "cache_basics",
+      "name": "least recently used entry evicted",
+      "passed": true
+    },
+    {
+      "group": "cache_basics",
+      "name": "recently touched entry retained",
+      "passed": true
+    },
+    {
+      "group": "cache_basics",
+      "name": "eviction counted",
+      "passed": true
+    },
+    {
+      "group": "single_flight",
+      "name": "ten simultaneous misses return equal values",
+      "passed": true
+    },
+    {
+      "group": "single_flight",
+      "name": "ten misses perform one database load",
+      "passed": true
+    },
+    {
+      "group": "single_flight",
+      "name": "nine callers coalesce",
+      "passed": true
+    },
+    {
+      "group": "single_flight",
+      "name": "shared task removed after success",
+      "passed": true
+    },
+    {
+      "group": "invalidation",
+      "name": "naive writer commits revision 2",
+      "passed": true
+    },
+    {
+      "group": "invalidation",
+      "name": "naive old reader installs revision 1 after deletion",
+      "passed": true
+    },
+    {
+      "group": "invalidation",
+      "name": "authoritative state differs from stale cache",
+      "passed": true
+    },
+    {
+      "group": "invalidation",
+      "name": "post-invalidation caller does not join old pending load",
+      "passed": true
+    },
+    {
+      "group": "invalidation",
+      "name": "old in-flight value cannot refill local cache",
+      "passed": true
+    },
+    {
+      "group": "invalidation",
+      "name": "overlapping reader retries to current cached revision",
+      "passed": true
+    },
+    {
+      "group": "invalidation",
+      "name": "next local cache read remains revision 2",
+      "passed": true
+    },
+    {
+      "group": "invalidation",
+      "name": "generation is one scalar not per-key tombstones",
+      "passed": true
+    },
+    {
+      "group": "multi_cache",
+      "name": "writing instance observes its invalidated key freshly",
+      "passed": true
+    },
+    {
+      "group": "multi_cache",
+      "name": "other instance cache stays stale without broadcast",
+      "passed": true
+    },
+    {
+      "group": "multi_cache",
+      "name": "second connection sees committed state when bypassing cache",
+      "passed": true
+    },
+    {
+      "group": "multi_cache",
+      "name": "other cache refreshes at TTL expiry",
+      "passed": true
+    },
+    {
+      "group": "single_flight",
+      "name": "cancelled caller does not cancel shared loader",
+      "passed": true
+    },
+    {
+      "group": "single_flight",
+      "name": "another caller receives result after first cancels",
+      "passed": true
+    },
+    {
+      "group": "single_flight",
+      "name": "one load despite waiter cancellation",
+      "passed": true
+    },
+    {
+      "group": "single_flight",
+      "name": "loader failure propagates instead of cached success",
+      "passed": true
+    },
+    {
+      "group": "single_flight",
+      "name": "failed load removes pending task and cache entry",
+      "passed": true
+    },
+    {
+      "group": "single_flight",
+      "name": "next attempt succeeds after load failure",
+      "passed": true
+    },
+    {
+      "group": "invalidation",
+      "name": "repeated invalidation ends with bounded churn outcome",
+      "passed": true
+    },
+    {
+      "group": "invalidation",
+      "name": "churn retry bound is two loads",
+      "passed": true
+    },
+    {
+      "group": "invalidation",
+      "name": "churn does not install invalidated data",
+      "passed": true
+    },
+    {
+      "group": "cache_basics",
+      "name": "invalid TTL 0 rejected",
+      "passed": true
+    },
+    {
+      "group": "cache_basics",
+      "name": "invalid TTL -1 rejected",
+      "passed": true
+    },
+    {
+      "group": "cache_basics",
+      "name": "invalid TTL inf rejected",
+      "passed": true
+    },
+    {
+      "group": "cache_basics",
+      "name": "invalid TTL nan rejected",
+      "passed": true
+    },
+    {
+      "group": "cache_basics",
+      "name": "zero capacity rejected",
+      "passed": true
+    },
+    {
+      "group": "cleanup",
+      "name": "all async cache tasks and entries cleared",
+      "passed": true
+    },
+    {
+      "group": "cleanup",
+      "name": "temporary database directory removed after closing connections",
+      "passed": true
+    },
+    {
+      "group": "scaling_models",
+      "name": "assumed 95 percent hits leave 500 database reads per second",
+      "passed": true
+    },
+    {
+      "group": "scaling_models",
+      "name": "cold cache drives all reads to database",
+      "passed": true
+    },
+    {
+      "group": "scaling_models",
+      "name": "horizontal replicas multiply connection ceilings",
+      "passed": true
+    },
+    {
+      "group": "scaling_models",
+      "name": "headroom budget computed explicitly",
+      "passed": true
+    },
+    {
+      "group": "scaling_models",
+      "name": "example pool ceiling exceeds selected budget",
+      "passed": true
+    },
+    {
+      "group": "scaling_models",
+      "name": "hit fraction outside bounds rejected",
+      "passed": true
+    },
+    {
+      "group": "scaling_models",
+      "name": "negative request count rejected",
+      "passed": true
+    },
+    {
+      "group": "scaling_models",
+      "name": "zero instances rejected",
+      "passed": true
+    },
+    {
+      "group": "scaling_models",
+      "name": "zero shards rejected",
+      "passed": true
+    },
+    {
+      "group": "scaling_models",
+      "name": "synthetic shard load sums to request count",
+      "passed": true
+    },
+    {
+      "group": "scaling_models",
+      "name": "one hot tenant stays on one shard",
+      "passed": true
+    },
+    {
+      "group": "scaling_models",
+      "name": "modulo resize remaps a nonzero proper subset",
+      "passed": true
+    },
+    {
+      "group": "scaling_models",
+      "name": "hash placement is deterministic",
+      "passed": true
+    }
+  ],
+  "observations": {
+    "index": {
+      "seed_rows": 12000,
+      "matching_owner_rows": 300,
+      "before": {
+        "plan": [
+          "SEARCH notes USING INDEX sqlite_autoindex_notes_1 (tenant=?)",
+          "USE TEMP B-TREE FOR ORDER BY"
+        ],
+        "sqlite_vm_instructions": 18427
+      },
+      "after": {
+        "plan": [
+          "SEARCH notes USING INDEX notes_owner_recent (tenant=? AND owner=?)"
+        ],
+        "sqlite_vm_instructions": 224
+      },
+      "same_results": true,
+      "page_size": 20
+    },
+    "pagination": {
+      "notes_visited": 300,
+      "unique_ids": 300,
+      "cursor": [
+        33,
+        "n00_0100"
+      ],
+      "offset_rows_skipped": 200,
+      "same_deep_page": true,
+      "offset_vm_instructions": 1024,
+      "keyset_vm_instructions": 334
+    },
+    "pagination_drift": {
+      "inserted_between_pages": "n00_new",
+      "offset_duplicate_ids": [
+        "n00_0280"
+      ],
+      "keyset_duplicate_ids": [],
+      "continuation_includes_newer_insert": false,
+      "snapshot_guarantee": false
+    },
+    "ttl_and_scope": {
+      "database_calls_for_cold_warm_before_expiry_after_expiry": 2,
+      "ttl_seconds": 10,
+      "expires_at_equal_time": true,
+      "owner_miss_not_cached": true,
+      "bounded_cache_entries": 2,
+      "evictions": 1
+    },
+    "single_flight": {
+      "callers": 10,
+      "database_reads": 1,
+      "coalesced": 9,
+      "stats": {
+        "hits": 0,
+        "misses": 10,
+        "loads": 1,
+        "coalesced": 9,
+        "expired": 0,
+        "evictions": 0,
+        "fenced": 0,
+        "invalidations": 0
+      }
+    },
+    "naive_refill": {
+      "committed_revision": 2,
+      "old_reader_revision": 1,
+      "next_cached_revision": 1,
+      "timeline": [
+        "reader captures revision 1",
+        "writer commits revision 2",
+        "writer deletes cache entry",
+        "reader fills revision 1 after invalidation"
+      ]
+    },
+    "fenced_refill": {
+      "post_invalidation_reader": 2,
+      "overlapping_reader": 2,
+      "database_loads": 2,
+      "stats": {
+        "hits": 2,
+        "misses": 2,
+        "loads": 2,
+        "coalesced": 0,
+        "expired": 0,
+        "evictions": 0,
+        "fenced": 1,
+        "invalidations": 1
+      }
+    },
+    "two_caches": {
+      "writer_cache_revision": 2,
+      "other_cache_before_expiry": 1,
+      "other_cache_after_expiry": 2,
+      "invalidation_broadcast": false
+    },
+    "scaling": {
+      "warm_assumption": {
+        "read_qps": 10000,
+        "assumed_hit_fraction": 0.95,
+        "estimated_db_read_qps": 500.0,
+        "maximum_application_connections": 400,
+        "application_connection_budget": 140
+      },
+      "cold_assumption": {
+        "read_qps": 10000,
+        "assumed_hit_fraction": 0,
+        "estimated_db_read_qps": 10000,
+        "maximum_application_connections": 400,
+        "application_connection_budget": 140
+      },
+      "cold_to_warm_db_demand_ratio": 20.0,
+      "placement": {
+        "tenants": 100,
+        "synthetic_requests": 1000,
+        "hot_tenant_requests": 901,
+        "requests_by_shard": {
+          "0": 24,
+          "1": 924,
+          "2": 25,
+          "3": 27
+        },
+        "tenants_remapped_on_modulo_resize": 83,
+        "remap_denominator_tenants": 100
+      }
+    }
+  },
+  "cleanup": {
+    "sqlite_connections_closed": true,
+    "temporary_database_directory_removed": true,
+    "async_cache_tasks_closed": true,
+    "persistent_listener_started": false
+  },
+  "scope": "Real local SQLite index plans, VM instruction counts, scoped keyset queries and conditional writes. Deterministic asyncio interleavings over process-local caches and two SQLite connections. TTL uses an injected clock; scaling/placement are hypothetical arithmetic. No Redis, HTTP/authentication, replicated database, sharded deployment, network partition or production throughput verified."
+}

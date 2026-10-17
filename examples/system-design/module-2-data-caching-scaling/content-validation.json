@@ -1,0 +1,28 @@
+{
+  "label": "A2",
+  "chapter": "system-design-handbook-part-4-module-2-data-caching-scaling.md",
+  "words": 8807,
+  "lines": 1005,
+  "questions": 30,
+  "practice_tasks": 10,
+  "unchecked_learning_items": 12,
+  "source_fidelity": [
+    "data.py",
+    "cache.py",
+    "scaling.py"
+  ],
+  "output_fidelity": [
+    "index",
+    "pagination",
+    "pagination_drift",
+    "ttl_and_scope",
+    "single_flight",
+    "naive_refill",
+    "fenced_refill",
+    "two_caches",
+    "scaling"
+  ],
+  "mock_minutes": 45,
+  "verified_checks": 91,
+  "next": "A3: Reliable workflows and concurrency"
+}
