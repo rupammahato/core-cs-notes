@@ -1,0 +1,38 @@
+[
+  {
+    "id": "P0",
+    "route": "/docs/product-analytics/product-thinking-requirements-design",
+    "chapter": "Product Analytics Notes/product-analytics-handbook-part-2-module-0-product-thinking-requirements-design.md",
+    "title": "Product Thinking, Requirements and Design Communication"
+  },
+  {
+    "id": "P1",
+    "route": "/docs/product-analytics/pricing-unit-economics",
+    "chapter": "Product Analytics Notes/product-analytics-handbook-part-3-module-1-pricing-unit-economics.md",
+    "title": "Pricing and Unit Economics"
+  },
+  {
+    "id": "P2",
+    "route": "/docs/product-analytics/product-analytics-experiments",
+    "chapter": "Product Analytics Notes/product-analytics-handbook-part-4-module-2-product-analytics-experiments.md",
+    "title": "Product Analytics and Experiments"
+  },
+  {
+    "id": "P3",
+    "route": "/docs/product-analytics/python-excel-analysis",
+    "chapter": "Product Analytics Notes/product-analytics-handbook-part-5-module-3-python-excel-analysis.md",
+    "title": "Python and Excel for Analysis"
+  },
+  {
+    "id": "P4",
+    "route": "/docs/product-analytics/marketing-measurement-data-visualization",
+    "chapter": "Product Analytics Notes/product-analytics-handbook-part-6-module-4-marketing-measurement-data-visualization.md",
+    "title": "Marketing Measurement and Data Visualization"
+  },
+  {
+    "id": "P5",
+    "route": "/docs/product-analytics/consolidation-resume-drills",
+    "chapter": "Product Analytics Notes/product-analytics-handbook-part-7-module-5-consolidation-resume-drills.md",
+    "title": "Product and Analytics Resume Drills and Revision"
+  }
+]

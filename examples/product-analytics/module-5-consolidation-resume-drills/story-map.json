@@ -1,0 +1,44 @@
+[
+  {
+    "project_id": "neosophical",
+    "anchor": "Neosophical Labs",
+    "evidence_class": "resume-reported",
+    "original_impact_verified": false
+  },
+  {
+    "project_id": "datsol",
+    "anchor": "Datsol Solutions",
+    "evidence_class": "resume-reported",
+    "original_impact_verified": false
+  },
+  {
+    "project_id": "10x",
+    "anchor": "10X Analysts",
+    "evidence_class": "resume-reported",
+    "original_impact_verified": false
+  },
+  {
+    "project_id": "zyke",
+    "anchor": "Zyke",
+    "evidence_class": "resume-reported",
+    "original_impact_verified": false
+  },
+  {
+    "project_id": "load-balancer",
+    "anchor": "Consistent Hashing Load Balancer",
+    "evidence_class": "resume-reported",
+    "original_impact_verified": false
+  },
+  {
+    "project_id": "megalith",
+    "anchor": "Megalith",
+    "evidence_class": "resume-reported",
+    "original_impact_verified": false
+  },
+  {
+    "project_id": "membition",
+    "anchor": "Membition",
+    "evidence_class": "resume-reported",
+    "original_impact_verified": false
+  }
+]

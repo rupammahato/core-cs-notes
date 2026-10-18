@@ -1,0 +1,322 @@
+{
+  "verified_date": "2026-10-18",
+  "python": "3.13.15",
+  "sqlite": "3.50.4",
+  "total": 27,
+  "isolated_output_checks": 12,
+  "source_and_coverage_checks": 15,
+  "checks": [
+    {
+      "group": "isolated-output",
+      "name": "D01 matches independent expected answer",
+      "passed": true
+    },
+    {
+      "group": "isolated-output",
+      "name": "D02 matches independent expected answer",
+      "passed": true
+    },
+    {
+      "group": "isolated-output",
+      "name": "D03 matches independent expected answer",
+      "passed": true
+    },
+    {
+      "group": "isolated-output",
+      "name": "D04 matches independent expected answer",
+      "passed": true
+    },
+    {
+      "group": "isolated-output",
+      "name": "D05 matches independent expected answer",
+      "passed": true
+    },
+    {
+      "group": "isolated-output",
+      "name": "D06 matches independent expected answer",
+      "passed": true
+    },
+    {
+      "group": "isolated-output",
+      "name": "D07 matches independent expected answer",
+      "passed": true
+    },
+    {
+      "group": "isolated-output",
+      "name": "D08 matches independent expected answer",
+      "passed": true
+    },
+    {
+      "group": "isolated-output",
+      "name": "D09 matches independent expected answer",
+      "passed": true
+    },
+    {
+      "group": "isolated-output",
+      "name": "D10 matches independent expected answer",
+      "passed": true
+    },
+    {
+      "group": "isolated-output",
+      "name": "D11 matches independent expected answer",
+      "passed": true
+    },
+    {
+      "group": "isolated-output",
+      "name": "D12 matches independent expected answer",
+      "passed": true
+    },
+    {
+      "group": "coverage",
+      "name": "P0 canonical chapter and syllabus mapping",
+      "passed": true
+    },
+    {
+      "group": "coverage",
+      "name": "P1 canonical chapter and syllabus mapping",
+      "passed": true
+    },
+    {
+      "group": "coverage",
+      "name": "P2 canonical chapter and syllabus mapping",
+      "passed": true
+    },
+    {
+      "group": "coverage",
+      "name": "P3 canonical chapter and syllabus mapping",
+      "passed": true
+    },
+    {
+      "group": "coverage",
+      "name": "P4 canonical chapter and syllabus mapping",
+      "passed": true
+    },
+    {
+      "group": "coverage",
+      "name": "P5 canonical chapter and syllabus mapping",
+      "passed": true
+    },
+    {
+      "group": "catalogue",
+      "name": "neosophical appears in both resume sources as an unverified self-report",
+      "passed": true
+    },
+    {
+      "group": "catalogue",
+      "name": "datsol appears in both resume sources as an unverified self-report",
+      "passed": true
+    },
+    {
+      "group": "catalogue",
+      "name": "10x appears in both resume sources as an unverified self-report",
+      "passed": true
+    },
+    {
+      "group": "catalogue",
+      "name": "zyke appears in both resume sources as an unverified self-report",
+      "passed": true
+    },
+    {
+      "group": "catalogue",
+      "name": "load-balancer appears in both resume sources as an unverified self-report",
+      "passed": true
+    },
+    {
+      "group": "catalogue",
+      "name": "megalith appears in both resume sources as an unverified self-report",
+      "passed": true
+    },
+    {
+      "group": "catalogue",
+      "name": "membition appears in both resume sources as an unverified self-report",
+      "passed": true
+    },
+    {
+      "group": "source-fingerprint",
+      "name": "Rupam_Resume_Updated.pdf matches the existing evidence catalogue",
+      "passed": true
+    },
+    {
+      "group": "source-fingerprint",
+      "name": "Rupam_Resume_Product.pdf matches the existing evidence catalogue",
+      "passed": true
+    }
+  ],
+  "observations": {
+    "D01": {
+      "baseline": "96.0",
+      "lower_confidence": "48.0"
+    },
+    "D02": {
+      "criteria": 8,
+      "supplied_passes": 5,
+      "passed_fraction": "0.625",
+      "worksheet_ready": false
+    },
+    "D03": {
+      "gross_margin_pct": "60.000000",
+      "contribution_margin_pct": "50.000000",
+      "price_for_60pct_margin_usd": "100.00"
+    },
+    "D04": {
+      "all_cost_cents": 300,
+      "successes": 3,
+      "cost_per_success_cents": 100.0,
+      "wrong_success_only_cents": 60.0
+    },
+    "D05": {
+      "control_pct": "20.0",
+      "treatment_pct": "24.00",
+      "absolute_lift_pp": "4.00",
+      "relative_lift_pct": "20.0"
+    },
+    "D06": {
+      "mature_users": 2,
+      "returned_mature_users": 1,
+      "rate_pct": "50.000000",
+      "wrong_all_users_pct": "33.333333"
+    },
+    "D07": {
+      "job_rows": 5,
+      "joined_rows": 6,
+      "known_bill_cents": 290,
+      "wrong_bill_cents": 490,
+      "cost_cents": 110,
+      "missing_bills": 2
+    },
+    "D08": {
+      "known_cents": 200,
+      "missing": 1,
+      "complete": null,
+      "all_missing_known": null
+    },
+    "D09": {
+      "included": [
+        "middle"
+      ],
+      "offset_utc": "2026-09-30T19:00:00+00:00",
+      "end_excluded": true
+    },
+    "D10": {
+      "ctr_pct": 1.333333,
+      "wrong_mean_pct": 1.5,
+      "reported_roas": 2.666667
+    },
+    "D11": {
+      "click_only": {
+        "A": 5000,
+        "B": 10000,
+        "Unattributed": 27000
+      },
+      "view_fallback": {
+        "A": 20000,
+        "B": 10000,
+        "Unattributed": 12000
+      },
+      "summed_claim_cents": 40000,
+      "unique_claimed_cents": 30000,
+      "ledger_net_cents": 42000
+    },
+    "D12": {
+      "keys": 10,
+      "moved_keys": 1,
+      "requests": 1000,
+      "moved_requests": 900,
+      "moved_key_pct": 10.0,
+      "moved_traffic_pct": 90.0
+    }
+  },
+  "workers": [
+    {
+      "id": "D01",
+      "source": "drills/d01-rice.py",
+      "exit_code": 0,
+      "source_sha256": "33393b960751abe0a4a1829b5400bf91066f041252077c4baaf1fedf3f6aa874"
+    },
+    {
+      "id": "D02",
+      "source": "drills/d02-evidence.py",
+      "exit_code": 0,
+      "source_sha256": "31a1a4132e67658c1f4ed8e4117e792f16ce3bf4997fa0e3d5caa909863fc24b"
+    },
+    {
+      "id": "D03",
+      "source": "drills/d03-margin.py",
+      "exit_code": 0,
+      "source_sha256": "0331d2808d434b491c5c1d66838a296f363d60176659367cd499a4396d6b5c71"
+    },
+    {
+      "id": "D04",
+      "source": "drills/d04-failed-work.py",
+      "exit_code": 0,
+      "source_sha256": "21fe3a2790c7f258fe6ba4aaa40f021b94072306bf4d138ba0c1311885432fa7"
+    },
+    {
+      "id": "D05",
+      "source": "drills/d05-lift.py",
+      "exit_code": 0,
+      "source_sha256": "1580ff5b1e38ffa11eb2aa7f394274081d54a7c9e00d62fa17c9db9e1395ddaa"
+    },
+    {
+      "id": "D06",
+      "source": "drills/d06-maturity.py",
+      "exit_code": 0,
+      "source_sha256": "7f5c7b91c4188c4bc278b44947b3f107aad487d75e306e60a49d2c81112bedda"
+    },
+    {
+      "id": "D07",
+      "source": "drills/d07-join.py",
+      "exit_code": 0,
+      "source_sha256": "65e278489f51ca1c41f683349804deaaa3d58d0c932aaf634ba4d14c990202f6"
+    },
+    {
+      "id": "D08",
+      "source": "drills/d08-missing.py",
+      "exit_code": 0,
+      "source_sha256": "d2d3d1e56097e122b8c52380f07d59e64ac31b4628c89cbbc503f79fd1f320d4"
+    },
+    {
+      "id": "D09",
+      "source": "drills/d09-time.py",
+      "exit_code": 0,
+      "source_sha256": "88fd4f32420f0f003d38194def214f07a04ec8768e2dcdac134f9b3557cc59da"
+    },
+    {
+      "id": "D10",
+      "source": "drills/d10-weighted-rates.py",
+      "exit_code": 0,
+      "source_sha256": "2949ec87629fe61cd326b786cfa80ab91e643e2e693e1317752d0ad469d4d546"
+    },
+    {
+      "id": "D11",
+      "source": "drills/d11-credit-versus-ledger.py",
+      "exit_code": 0,
+      "source_sha256": "6d56b2546e78b6224202d8aab233290ced2201032596290865d4cfe6b6f77cdf"
+    },
+    {
+      "id": "D12",
+      "source": "drills/d12-weighted-traffic.py",
+      "exit_code": 0,
+      "source_sha256": "23fba156db0a57190d9a6cfa35d359925d95a7fb2837e12be5f21907e561f53c"
+    }
+  ],
+  "all_workers_exited": true,
+  "source_fingerprints": {
+    "Rupam_Resume_Updated.pdf": "a22b4d64d808b865c40648dacba6ba429ded8796579c15a984475479e9ed7344",
+    "Rupam_Resume_Product.pdf": "9befe4ae513f5ef6ce1797a8733f1ef727a68d5dfc076e857119a59d50b9ef8a"
+  },
+  "catalogue_sha256": "04153249d4854886c0cf105f95872cc6e864d9f39b6c1246200f21a7f2ca260f",
+  "input_and_dependency_sources_unchanged": true,
+  "dependency_sha256": {
+    "examples/product-analytics/module-0-product-thinking/case.json": "f4d77c96abc86f6f2049b5075f5292e2de27a8a5d0e4825d176525c44cbb26cd",
+    "examples/product-analytics/module-0-product-thinking/workshop.py": "23c6041bc384c61522f248d0304aa5949b1be494c88538dc27021d64b4769ddd",
+    "examples/product-analytics/module-1-pricing-unit-economics/economics.py": "be43d07e6312c94753fe3bcc581c690f9d7156dcdf44b2d87f36a63d53dbe249",
+    "examples/product-analytics/module-4-marketing-measurement-data-visualization/case.json": "78350c167f1dce4ebb5165cccab1dba4aa6738df8271f18c33ddf0518df97014",
+    "examples/product-analytics/module-4-marketing-measurement-data-visualization/measurement.py": "fcf8c5371a1945c4275be8a03a04b6ffcced8cdd0ff906d30aaa960b24f8cde4"
+  },
+  "external_services_called": false,
+  "persistent_listener_started": false,
+  "sqlite_scope": "D07 uses a real in-memory database and closes it before its worker exits",
+  "historical_suites_rerun": false,
+  "scope": "Fresh synthetic output drills plus curriculum/source provenance checks; not original resume impact, full historical suites or learner interview assessment."
+}

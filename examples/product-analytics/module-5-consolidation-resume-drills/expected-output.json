@@ -1,0 +1,84 @@
+{
+  "D01": {
+    "baseline": "96.0",
+    "lower_confidence": "48.0"
+  },
+  "D02": {
+    "criteria": 8,
+    "supplied_passes": 5,
+    "passed_fraction": "0.625",
+    "worksheet_ready": false
+  },
+  "D03": {
+    "gross_margin_pct": "60.000000",
+    "contribution_margin_pct": "50.000000",
+    "price_for_60pct_margin_usd": "100.00"
+  },
+  "D04": {
+    "all_cost_cents": 300,
+    "successes": 3,
+    "cost_per_success_cents": 100.0,
+    "wrong_success_only_cents": 60.0
+  },
+  "D05": {
+    "control_pct": "20.0",
+    "treatment_pct": "24.00",
+    "absolute_lift_pp": "4.00",
+    "relative_lift_pct": "20.0"
+  },
+  "D06": {
+    "mature_users": 2,
+    "returned_mature_users": 1,
+    "rate_pct": "50.000000",
+    "wrong_all_users_pct": "33.333333"
+  },
+  "D07": {
+    "job_rows": 5,
+    "joined_rows": 6,
+    "known_bill_cents": 290,
+    "wrong_bill_cents": 490,
+    "cost_cents": 110,
+    "missing_bills": 2
+  },
+  "D08": {
+    "known_cents": 200,
+    "missing": 1,
+    "complete": null,
+    "all_missing_known": null
+  },
+  "D09": {
+    "included": [
+      "middle"
+    ],
+    "offset_utc": "2026-09-30T19:00:00+00:00",
+    "end_excluded": true
+  },
+  "D10": {
+    "ctr_pct": 1.333333,
+    "wrong_mean_pct": 1.5,
+    "reported_roas": 2.666667
+  },
+  "D11": {
+    "click_only": {
+      "A": 5000,
+      "B": 10000,
+      "Unattributed": 27000
+    },
+    "view_fallback": {
+      "A": 20000,
+      "B": 10000,
+      "Unattributed": 12000
+    },
+    "summed_claim_cents": 40000,
+    "unique_claimed_cents": 30000,
+    "ledger_net_cents": 42000
+  },
+  "D12": {
+    "keys": 10,
+    "moved_keys": 1,
+    "requests": 1000,
+    "moved_requests": 900,
+    "moved_key_pct": 10.0,
+    "moved_traffic_pct": 90.0
+  }
+}

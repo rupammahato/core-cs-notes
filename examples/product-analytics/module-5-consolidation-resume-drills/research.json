@@ -1,0 +1,40 @@
+{
+  "checked_date": "2026-10-18",
+  "scope": "Primary interview-preparation guidance and consolidation of locally preserved P0-P4 and M28 sources; no company interview-frequency study or original business-impact verification",
+  "sources": [
+    {
+      "url": "https://capd.mit.edu/resources/the-star-method-for-behavioral-interviews/",
+      "supports": "Specific actual experiences, personal actions, structured STAR answers and adaptable practice outlines"
+    },
+    {
+      "url": "https://www.amazon.jobs/content/en/how-we-hire/bie-interview-prep",
+      "supports": "One role-specific primary example of concrete experiences, applicable metrics and learning from success/failure"
+    }
+  ],
+  "internal_sources": [
+    "examples/resume-skills/module-28-resume-deep-dives/resume-evidence.json",
+    "examples/product-analytics/roadmap/research.json",
+    "examples/product-analytics/module-1-pricing-unit-economics/research.json",
+    "examples/product-analytics/module-2-analytics-experiments/research.json",
+    "examples/product-analytics/module-3-python-excel-analysis/research.json",
+    "examples/product-analytics/module-4-marketing-measurement-data-visualization/research.json"
+  ],
+  "source_boundary": "PDF fingerprints and catalogue references establish source correspondence, not independent corroboration of claims",
+  "editorial_work": [
+    "Seven story cards",
+    "Thirty confusable pairs",
+    "Sixteen diagnosis cards",
+    "Sixty Q&As",
+    "Two 45-minute mocks",
+    "Twelve practice tasks",
+    "Twenty-four-question self-test",
+    "Revision schedules"
+  ],
+  "executed_scope": "12 isolated synthetic output drills and 15 curriculum/source audits; historical suites retain prior scopes/versions",
+  "manual_work_remaining": [
+    "Corroborate original project claims",
+    "Complete PivotTable, prototype, accessibility and other reader exercises",
+    "Rehearse and assess spoken answers and both mocks"
+  ],
+  "remaining_authoring_sections": []
+}

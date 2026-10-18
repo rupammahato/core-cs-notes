@@ -1,0 +1,138 @@
+{
+  "verified_date": "2026-10-18",
+  "section_completed": "P5",
+  "authoring_complete": true,
+  "authored_track_files": 7,
+  "available_sections": [
+    "P0",
+    "P1",
+    "P2",
+    "P3",
+    "P4",
+    "P5"
+  ],
+  "remaining_sections": [],
+  "note_lines": 4620,
+  "section_content": {
+    "story_cards": 7,
+    "confusable_pairs": 30,
+    "diagnosis_cards": 16,
+    "questions": 60,
+    "output_drills": 12,
+    "practice_tasks": 12,
+    "self_test_questions": 24,
+    "final_mocks": 2,
+    "mock_minutes_each": 45
+  },
+  "track_content": {
+    "questions": 210,
+    "practice_tasks": 72,
+    "unchecked_learning_items": 88
+  },
+  "fresh_checks": 27,
+  "fresh_check_breakdown": {
+    "isolated_output_drills": 12,
+    "source_and_coverage_audits": 15
+  },
+  "recorded_track_checks": 488,
+  "recorded_check_breakdown": {
+    "P0_P4_python_sqlite": 387,
+    "P3_native_excel": 38,
+    "P4_browser": 36,
+    "P5_isolated_outputs": 12,
+    "P5_source_audits": 15
+  },
+  "historical_runtime_suites_freshly_rerun": false,
+  "runtime": {
+    "python": "3.13.15",
+    "sqlite": "3.50.4"
+  },
+  "all_drill_workers_exited": true,
+  "content_validation": "passed",
+  "all_product_internal_links_resolve": 15,
+  "original_handbook_files_unchanged": 121,
+  "P0_P1_P2_P3_unchanged_this_section": true,
+  "P4_only_continuation_changed": true,
+  "chapter_sha256": "07c7cee5230e617a35e20f3e050da97e48fe8f1f07df5cc9a7a87db074be7efa",
+  "website": {
+    "build_passed": true,
+    "compiler": "webpack",
+    "typescript_passed": true,
+    "static_pages": 133,
+    "routes_checked": 129,
+    "all_routes_200": true,
+    "all_six_product_sections_linked": true,
+    "all_six_product_sections_searchable": true,
+    "search": {
+      "product-analytics:Confusable": {
+        "query": "Confusable",
+        "status": 200,
+        "results": 8,
+        "indexed": true,
+        "scoped": true
+      },
+      "product-analytics:Treemap": {
+        "query": "Treemap",
+        "status": 200,
+        "results": 22,
+        "indexed": true,
+        "scoped": true
+      },
+      "product-analytics:Python": {
+        "query": "Python",
+        "status": 200,
+        "results": 38,
+        "indexed": true,
+        "scoped": true
+      },
+      "product-analytics:Retention": {
+        "query": "Retention",
+        "status": 200,
+        "results": 34,
+        "indexed": true,
+        "scoped": true
+      },
+      "product-analytics:Pricing": {
+        "query": "Pricing",
+        "status": 200,
+        "results": 24,
+        "indexed": true,
+        "scoped": true
+      },
+      "product-analytics:RICE": {
+        "query": "RICE",
+        "status": 200,
+        "results": 18,
+        "indexed": true,
+        "scoped": true
+      },
+      "system-design:Analytics": {
+        "query": "Analytics",
+        "status": 200,
+        "results": 43,
+        "indexed": true,
+        "scoped": true
+      },
+      "resume-skills:Consolidation": {
+        "query": "Consolidation",
+        "status": 200,
+        "results": 18,
+        "indexed": true,
+        "scoped": true
+      }
+    },
+    "unknown_chapter_status": 404,
+    "temporary_preview_port": 58898,
+    "temporary_preview_closed": true,
+    "cached_font_fixture_used": true
+  },
+  "port_3000_stopped": true,
+  "source_resumes_remain_ignored_and_local": true,
+  "external_messages_sent": false,
+  "manual_work_remaining": [
+    "Reader exercises, prototype/PivotTable/accessibility work where labelled",
+    "Original resume claim corroboration and reconciliation",
+    "Spoken practice, peer feedback and mock assessment"
+  ],
+  "scope": "All planned product authoring and website integration completed. Fresh P5 synthetic drills and source audits; prior runtime results remain recorded evidence. No original business-impact verification or learner mastery claim."
+}
