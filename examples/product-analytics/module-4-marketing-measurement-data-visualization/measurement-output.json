@@ -1,0 +1,173 @@
+{
+  "scope": "Invented same-currency, UTC teaching case; not actual ad-platform exports",
+  "contract": {
+    "account": "demo",
+    "currency": "USD",
+    "timezone": "UTC",
+    "report_date": "2026-10-11",
+    "conversion_definition": "purchase credit",
+    "attribution_label": "supplied platform-reported credit; no vendor parity",
+    "report_time_basis": "supplied report date",
+    "as_of": "2026-10-12T12:00:00Z"
+  },
+  "platform_report": {
+    "campaigns": [
+      {
+        "campaign_id": "A",
+        "channel": "Search",
+        "name": "Intent search",
+        "spend_cents": 10000,
+        "impressions": 10000,
+        "clicks": 100,
+        "conversion_credits": 2.0,
+        "attributed_value_cents": 15000,
+        "metrics": {
+          "ctr_pct": 1.0,
+          "cpm_cents": 1000.0,
+          "cpc_cents": 100.0,
+          "purchase_credit_rate_pct": 2.0,
+          "cost_per_purchase_credit_cents": 5000.0,
+          "reported_roas": 1.5
+        }
+      },
+      {
+        "campaign_id": "B",
+        "channel": "Social",
+        "name": "Prospecting social",
+        "spend_cents": 5000,
+        "impressions": 5000,
+        "clicks": 100,
+        "conversion_credits": 2.0,
+        "attributed_value_cents": 25000,
+        "metrics": {
+          "ctr_pct": 2.0,
+          "cpm_cents": 1000.0,
+          "cpc_cents": 50.0,
+          "purchase_credit_rate_pct": 2.0,
+          "cost_per_purchase_credit_cents": 2500.0,
+          "reported_roas": 5.0
+        }
+      }
+    ],
+    "totals": {
+      "spend_cents": {
+        "known": 15000,
+        "missing_rows": 0,
+        "complete": 15000
+      },
+      "impressions": {
+        "known": 15000,
+        "missing_rows": 0,
+        "complete": 15000
+      },
+      "clicks": {
+        "known": 200,
+        "missing_rows": 0,
+        "complete": 200
+      },
+      "attributed_value_cents": {
+        "known": 40000,
+        "missing_rows": 0,
+        "complete": 40000
+      },
+      "conversion_credits": {
+        "known": 4.0,
+        "missing_rows": 0,
+        "complete": 4.0
+      }
+    },
+    "blended_metrics": {
+      "ctr_pct": 1.333333,
+      "cpm_cents": 1000.0,
+      "cpc_cents": 75.0,
+      "purchase_credit_rate_pct": 2.0,
+      "cost_per_purchase_credit_cents": 3750.0,
+      "reported_roas": 2.666667
+    },
+    "wrong_unweighted_ctr_pct": 1.5
+  },
+  "ledger": {
+    "orders": 4,
+    "new_customers_supplied": 3,
+    "gross_cents": 47000,
+    "refund_cents": 5000,
+    "net_cents": 42000,
+    "blended_net_revenue_per_media_spend": 2.8,
+    "media_spend_per_supplied_new_customer_cents": 5000.0
+  },
+  "last_eligible_click_7d": {
+    "assignments": [
+      {
+        "order_id": "o1",
+        "campaign_id": "B",
+        "touch_id": "t2",
+        "net_cents": 10000
+      },
+      {
+        "order_id": "o2",
+        "campaign_id": "Unattributed",
+        "touch_id": null,
+        "net_cents": 15000
+      },
+      {
+        "order_id": "o3",
+        "campaign_id": "A",
+        "touch_id": "t6",
+        "net_cents": 5000
+      },
+      {
+        "order_id": "o4",
+        "campaign_id": "Unattributed",
+        "touch_id": null,
+        "net_cents": 12000
+      }
+    ],
+    "by_campaign_net_cents": {
+      "A": 5000,
+      "B": 10000,
+      "Unattributed": 27000
+    },
+    "total_net_cents": 42000
+  },
+  "click_7d_else_view_1d": {
+    "assignments": [
+      {
+        "order_id": "o1",
+        "campaign_id": "B",
+        "touch_id": "t2",
+        "net_cents": 10000
+      },
+      {
+        "order_id": "o2",
+        "campaign_id": "A",
+        "touch_id": "t4",
+        "net_cents": 15000
+      },
+      {
+        "order_id": "o3",
+        "campaign_id": "A",
+        "touch_id": "t6",
+        "net_cents": 5000
+      },
+      {
+        "order_id": "o4",
+        "campaign_id": "Unattributed",
+        "touch_id": null,
+        "net_cents": 12000
+      }
+    ],
+    "by_campaign_net_cents": {
+      "A": 20000,
+      "B": 10000,
+      "Unattributed": 12000
+    },
+    "total_net_cents": 42000
+  },
+  "independent_claim_overlap": {
+    "claim_rows": 4,
+    "unique_claimed_orders": 3,
+    "summed_claim_value_cents": 40000,
+    "unique_claimed_net_cents": 30000,
+    "overlap_cents": 10000
+  }
+}

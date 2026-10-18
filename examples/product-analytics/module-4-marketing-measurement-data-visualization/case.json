@@ -1,0 +1,148 @@
+{
+  "scope": "Invented same-currency, UTC teaching case; not actual ad-platform exports",
+  "contract": {
+    "account": "demo",
+    "currency": "USD",
+    "timezone": "UTC",
+    "report_date": "2026-10-11",
+    "conversion_definition": "purchase credit",
+    "attribution_label": "supplied platform-reported credit; no vendor parity",
+    "report_time_basis": "supplied report date",
+    "as_of": "2026-10-12T12:00:00Z"
+  },
+  "campaigns": [
+    {
+      "campaign_id": "A",
+      "channel": "Search",
+      "name": "Intent search",
+      "spend_cents": 10000,
+      "impressions": 10000,
+      "clicks": 100,
+      "conversion_credits": "2",
+      "attributed_value_cents": 15000
+    },
+    {
+      "campaign_id": "B",
+      "channel": "Social",
+      "name": "Prospecting social",
+      "spend_cents": 5000,
+      "impressions": 5000,
+      "clicks": 100,
+      "conversion_credits": "2",
+      "attributed_value_cents": 25000
+    },
+    {
+      "campaign_id": "A",
+      "channel": "Search",
+      "name": "Intent search",
+      "spend_cents": 10000,
+      "impressions": 10000,
+      "clicks": 100,
+      "conversion_credits": "2",
+      "attributed_value_cents": 15000
+    }
+  ],
+  "orders": [
+    {
+      "order_id": "o1",
+      "customer_id": "u1",
+      "at": "2026-10-10T12:00:00Z",
+      "gross_cents": 10000,
+      "refund_cents": 0,
+      "is_first_purchase": true
+    },
+    {
+      "order_id": "o2",
+      "customer_id": "u2",
+      "at": "2026-10-10T12:00:00Z",
+      "gross_cents": 20000,
+      "refund_cents": 5000,
+      "is_first_purchase": true
+    },
+    {
+      "order_id": "o3",
+      "customer_id": "u1",
+      "at": "2026-10-10T14:00:00Z",
+      "gross_cents": 5000,
+      "refund_cents": 0,
+      "is_first_purchase": false
+    },
+    {
+      "order_id": "o4",
+      "customer_id": "u3",
+      "at": "2026-10-11T12:00:00Z",
+      "gross_cents": 12000,
+      "refund_cents": 0,
+      "is_first_purchase": true
+    }
+  ],
+  "touches": [
+    {
+      "touch_id": "t1",
+      "customer_id": "u1",
+      "campaign_id": "A",
+      "kind": "click",
+      "at": "2026-10-03T12:00:00Z"
+    },
+    {
+      "touch_id": "t2",
+      "customer_id": "u1",
+      "campaign_id": "B",
+      "kind": "click",
+      "at": "2026-10-09T12:00:00Z"
+    },
+    {
+      "touch_id": "t3",
+      "customer_id": "u2",
+      "campaign_id": "A",
+      "kind": "click",
+      "at": "2026-10-02T12:00:00Z"
+    },
+    {
+      "touch_id": "t4",
+      "customer_id": "u2",
+      "campaign_id": "A",
+      "kind": "view",
+      "at": "2026-10-10T11:00:00Z"
+    },
+    {
+      "touch_id": "t5",
+      "customer_id": "u2",
+      "campaign_id": "B",
+      "kind": "click",
+      "at": "2026-10-10T13:00:00Z"
+    },
+    {
+      "touch_id": "t6",
+      "customer_id": "u1",
+      "campaign_id": "A",
+      "kind": "click",
+      "at": "2026-10-10T13:00:00Z"
+    },
+    {
+      "touch_id": "t7",
+      "customer_id": "u1",
+      "campaign_id": "B",
+      "kind": "view",
+      "at": "2026-10-10T13:30:00Z"
+    }
+  ],
+  "independent_claims": [
+    {
+      "campaign_id": "A",
+      "order_id": "o1"
+    },
+    {
+      "campaign_id": "A",
+      "order_id": "o3"
+    },
+    {
+      "campaign_id": "B",
+      "order_id": "o1"
+    },
+    {
+      "campaign_id": "B",
+      "order_id": "o2"
+    }
+  ]
+}

@@ -1,0 +1,163 @@
+{
+  "verified_date": "2026-10-18",
+  "node": "v22.14.0",
+  "playwright": "1.62.1",
+  "browser": "155.0.8059.84",
+  "d3": "7.9.0",
+  "total": 36,
+  "checks": [
+    {
+      "name": "Real D3 version",
+      "passed": true
+    },
+    {
+      "name": "Initial keyed bars",
+      "passed": true
+    },
+    {
+      "name": "Initial table rows",
+      "passed": true
+    },
+    {
+      "name": "Initial treemap leaves",
+      "passed": true
+    },
+    {
+      "name": "Known spend label",
+      "passed": true
+    },
+    {
+      "name": "Bar input values",
+      "passed": true
+    },
+    {
+      "name": "Spend width ratio",
+      "passed": true
+    },
+    {
+      "name": "Hierarchy sum counts leaves once",
+      "passed": true
+    },
+    {
+      "name": "Unpadded treemap conserves area",
+      "passed": true
+    },
+    {
+      "name": "Keyed join retains A DOM identity",
+      "passed": true
+    },
+    {
+      "name": "Reorder changes data order",
+      "passed": true
+    },
+    {
+      "name": "ROAS title has units",
+      "passed": true
+    },
+    {
+      "name": "ROAS uses ratios rather than cents",
+      "passed": true
+    },
+    {
+      "name": "Filter removes exited bar",
+      "passed": true
+    },
+    {
+      "name": "Filter removes exited tile",
+      "passed": true
+    },
+    {
+      "name": "Filter updates table",
+      "passed": true
+    },
+    {
+      "name": "SVG has an accessible name",
+      "passed": true
+    },
+    {
+      "name": "Table retains exact ROAS",
+      "passed": true
+    },
+    {
+      "name": "Native controls remain focusable",
+      "passed": true
+    },
+    {
+      "name": "Missing spend not drawn as zero bar",
+      "passed": true
+    },
+    {
+      "name": "Missing values remain in table",
+      "passed": true
+    },
+    {
+      "name": "Missing spend audit visible",
+      "passed": true
+    },
+    {
+      "name": "Zero spend has no positive area",
+      "passed": true
+    },
+    {
+      "name": "Zero widths remain finite",
+      "passed": true
+    },
+    {
+      "name": "Empty bars removed",
+      "passed": true
+    },
+    {
+      "name": "Empty table removed",
+      "passed": true
+    },
+    {
+      "name": "Empty state explains absence",
+      "passed": true
+    },
+    {
+      "name": "Duplicate key rejected",
+      "passed": true
+    },
+    {
+      "name": "Negative spend rejected",
+      "passed": true
+    },
+    {
+      "name": "NaN metric rejected",
+      "passed": true
+    },
+    {
+      "name": "Responsive SVG uses available width",
+      "passed": true
+    },
+    {
+      "name": "Mobile chart text keeps fourteen pixel type",
+      "passed": true
+    },
+    {
+      "name": "Mobile document fits viewport",
+      "passed": true
+    },
+    {
+      "name": "No script errors",
+      "passed": true
+    },
+    {
+      "name": "No external network requests",
+      "passed": true
+    },
+    {
+      "name": "Temporary server closed",
+      "passed": true
+    }
+  ],
+  "port": 64902,
+  "server_closed": true,
+  "browser_closed": true,
+  "external_requests": [],
+  "screenshots": [
+    "outputs/qa/desktop.png",
+    "outputs/qa/mobile.png"
+  ],
+  "scope": "Real local Chromium/D3 keyed joins, scales, hierarchy, filters, missing/empty states and mobile overflow; not a full accessibility audit or vendor dashboard parity."
+}

@@ -1,0 +1,112 @@
+{
+  "verified_date": "2026-10-18",
+  "section_completed": "P4",
+  "next": "P5: Product and Analytics Resume Drills and Revision",
+  "authored_track_files": 6,
+  "remaining_sections": [
+    "P5"
+  ],
+  "note_lines": 3831,
+  "questions": 30,
+  "practice_tasks": 12,
+  "mock_minutes": 30,
+  "runtime": {
+    "python": "3.13.15",
+    "sqlite": "3.50.4"
+  },
+  "fresh_python_checks": 79,
+  "fresh_browser_checks": 36,
+  "browser_runtime": {
+    "node": "v22.14.0",
+    "playwright": "1.62.1",
+    "browser": "155.0.8059.84",
+    "d3": "7.9.0"
+  },
+  "previous_P0_P1_P2_P3_recorded_python_checks": 308,
+  "previous_native_excel_recorded_checks": 38,
+  "previous_runtime_suites_freshly_rerun": false,
+  "exact_output_blocks": 5,
+  "research_sources": 14,
+  "content_validation": "passed",
+  "P0_P1_P2_unchanged_this_section": true,
+  "P3_only_continuation_changed": true,
+  "original_handbook_files_unchanged": 121,
+  "chapter_sha256": "0445b6da85a7ad7e628e4b0ee84b4268673106cf62c055c57a57a4016d11624b",
+  "desktop_and_mobile_visual_review": "passed after correcting chart label sizing",
+  "website": {
+    "build_passed": true,
+    "compiler": "webpack",
+    "typescript_passed": true,
+    "static_pages": 132,
+    "routes_checked": 128,
+    "all_routes_200": true,
+    "planned_P5_status": 404,
+    "search": {
+      "product-analytics:Treemap": {
+        "query": "Treemap",
+        "status": 200,
+        "results": 13,
+        "indexed": true,
+        "scoped": true
+      },
+      "product-analytics:Python": {
+        "query": "Python",
+        "status": 200,
+        "results": 31,
+        "indexed": true,
+        "scoped": true
+      },
+      "product-analytics:Retention": {
+        "query": "Retention",
+        "status": 200,
+        "results": 25,
+        "indexed": true,
+        "scoped": true
+      },
+      "product-analytics:Pricing": {
+        "query": "Pricing",
+        "status": 200,
+        "results": 20,
+        "indexed": true,
+        "scoped": true
+      },
+      "product-analytics:RICE": {
+        "query": "RICE",
+        "status": 200,
+        "results": 11,
+        "indexed": true,
+        "scoped": true
+      },
+      "system-design:Analytics": {
+        "query": "Analytics",
+        "status": 200,
+        "results": 43,
+        "indexed": true,
+        "scoped": true
+      },
+      "resume-skills:Consolidation": {
+        "query": "Consolidation",
+        "status": 200,
+        "results": 18,
+        "indexed": true,
+        "scoped": true
+      }
+    },
+    "temporary_preview_port": 63814,
+    "temporary_preview_closed": true,
+    "cached_font_fixture_used": true
+  },
+  "browser_example_port": 64902,
+  "browser_example_closed": true,
+  "port_3000_stopped": true,
+  "source_resumes_remain_local": true,
+  "external_accounts_accessed": false,
+  "external_notification_sent": false,
+  "advertising_budget_changed": false,
+  "manual_work_remaining": [
+    "Incrementality study design/execution",
+    "Full accessibility review",
+    "Personal mock/resume explanation"
+  ],
+  "scope": "Actual synthetic arithmetic, hand-defined attribution, in-memory SQLite publication and real local D3/browser behavior; production-site routes/search. No vendor attribution parity, causal lift, production digest delivery or personal mastery verified."
+}

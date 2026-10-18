@@ -1,0 +1,31 @@
+{
+  "verified_date": "2026-10-18",
+  "fresh_python_checks": 79,
+  "fresh_browser_checks": 36,
+  "questions": 30,
+  "practice_tasks": 12,
+  "mock_minutes": 30,
+  "unchecked_learning_items": 14,
+  "exact_output_blocks": 5,
+  "research_sources": 14,
+  "internal_links_resolve": 6,
+  "authored_track_files": 7,
+  "remaining_sections": [],
+  "original_handbooks_unchanged": 121,
+  "P0_P1_P2_unchanged_this_section": true,
+  "P3_only_continuation_changed": true,
+  "historical_runtime_suites_rerun": false,
+  "note_lines": 4620,
+  "chapter_sha256": "930710424ace3fcac161e269781348e4e2b2ab0777af3a6c6b840305acfa129d",
+  "example_source_sha256": {
+    "case.json": "78350c167f1dce4ebb5165cccab1dba4aa6738df8271f18c33ddf0518df97014",
+    "measurement.py": "fcf8c5371a1945c4275be8a03a04b6ffcced8cdd0ff906d30aaa960b24f8cde4",
+    "verify.py": "5332c8cdf8a141713b58bd6e4bfaf0f23586b566c5c882d4fccde1f9d11d2847",
+    "chart.js": "f3a95c117b5e76a1d03ae173dd3519545d68937e01f9cb7c77577688b341cf02",
+    "index.html": "5ede58ef241d474766961839db4267971f2ed56dd9e0d65240ed9176fc5abd34",
+    "verify-browser.mjs": "20813eab3226e1de1cd292a8df82365286beb997b85078cd3e43868ff2c9173a",
+    "package.json": "22370c4f781d0ea03564cb105c4e39db3c3e8f1f1cfd94e2affc3db3e7f2529c",
+    "package-lock.json": "42009b8d43f50d726a9d77729e3a9b0e9bbb2eb3316dc3d531b59a14132df7f1"
+  },
+  "scope": "P4 source/output/browser and prior-note audit; no vendor output parity, causal lift or personal practice verification."
+}

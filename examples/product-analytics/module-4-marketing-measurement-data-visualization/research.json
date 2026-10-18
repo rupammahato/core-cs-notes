@@ -1,0 +1,82 @@
+{
+  "checked_date": "2026-10-18",
+  "scope": "Public primary documentation plus synthetic local numerical/SQLite and real Chrome/D3 behavior; no advertising accounts, live API reports, causal study or Telegram delivery",
+  "sources": [
+    {
+      "url": "https://support.google.com/google-ads/answer/2615875",
+      "supports": "CTR definition"
+    },
+    {
+      "url": "https://support.google.com/google-ads/answer/14074/average-cost-per-click-avg-cpc-definition?hl=en-GB",
+      "supports": "Average CPC"
+    },
+    {
+      "url": "https://support.google.com/google-ads/answer/2684489",
+      "supports": "Conversion rate and interaction denominator"
+    },
+    {
+      "url": "https://support.google.com/analytics/answer/10597962",
+      "supports": "Attribution model, fractional credit, lookback and dimension scope"
+    },
+    {
+      "url": "https://support.google.com/google-ads/answer/12005564?hl=en",
+      "supports": "Conversion Lift purpose and eligibility"
+    },
+    {
+      "url": "https://support.google.com/analytics/answer/10917952",
+      "supports": "Campaign URL metadata"
+    },
+    {
+      "url": "https://developers.google.com/google-ads/api/docs/reporting/overview",
+      "supports": "GAQL, Search and SearchStream"
+    },
+    {
+      "url": "https://developers.google.com/google-ads/api/docs/reporting/segmentation",
+      "supports": "Segmentation changes grain and has compatibility rules"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/facebook/facebook-python-business-sdk/main/facebook_business/adobjects/adaccount.py",
+      "supports": "Official get_insights request parameters; not defaults or live account output"
+    },
+    {
+      "url": "https://d3js.org/d3-scale/linear",
+      "supports": "Data domains and visual ranges"
+    },
+    {
+      "url": "https://d3js.org/d3-selection/joining",
+      "supports": "Keyed enter/update/exit data joins"
+    },
+    {
+      "url": "https://d3js.org/d3-hierarchy/hierarchy",
+      "supports": "Hierarchy sum visits internal nodes as well as leaves"
+    },
+    {
+      "url": "https://d3js.org/d3-hierarchy/treemap",
+      "supports": "Rectangle layout, values, padding and sort"
+    },
+    {
+      "url": "https://www.w3.org/WAI/tutorials/images/complex/",
+      "supports": "Text descriptions and data alternatives for complex graphics"
+    }
+  ],
+  "unavailable_reference": {
+    "url": "https://developers.facebook.com/docs/marketing-api/insights/",
+    "result": "Browser tool could not retrieve contents; parameter claims use the official SDK source instead"
+  },
+  "runtime": {
+    "python": "3.13.15",
+    "sqlite": "3.50.4",
+    "node": "v22.14.0",
+    "d3": "7.9.0",
+    "playwright": "1.62.1",
+    "chrome": "155.0.8059.84"
+  },
+  "definition_boundary": "Hand-defined seven-day click and click-then-one-day-view policies, not platform defaults or vendor parity",
+  "resume_boundary": "Marketing digest is resume-reported in M28; the new source dataset, architecture proposal and computed results are synthetic teaching evidence",
+  "manual_work": [
+    "Design and execute a suitable incrementality study",
+    "Complete screen-reader/keyboard/contrast review",
+    "Defend actual resume contribution"
+  ],
+  "next_research": "P5 Product and Analytics Resume Drills and Revision"
+}

@@ -1,0 +1,581 @@
+{
+  "verified_date": "2026-10-18",
+  "python": "3.13.15",
+  "sqlite": "3.50.4",
+  "total": 79,
+  "checks": [
+    {
+      "group": "metrics",
+      "name": "ctr_pct",
+      "passed": true
+    },
+    {
+      "group": "metrics",
+      "name": "cpm_cents",
+      "passed": true
+    },
+    {
+      "group": "metrics",
+      "name": "cpc_cents",
+      "passed": true
+    },
+    {
+      "group": "metrics",
+      "name": "purchase_credit_rate_pct",
+      "passed": true
+    },
+    {
+      "group": "metrics",
+      "name": "cost_per_purchase_credit_cents",
+      "passed": true
+    },
+    {
+      "group": "metrics",
+      "name": "reported_roas",
+      "passed": true
+    },
+    {
+      "group": "totals",
+      "name": "spend_cents",
+      "passed": true
+    },
+    {
+      "group": "totals",
+      "name": "impressions",
+      "passed": true
+    },
+    {
+      "group": "totals",
+      "name": "clicks",
+      "passed": true
+    },
+    {
+      "group": "totals",
+      "name": "conversion_credits",
+      "passed": true
+    },
+    {
+      "group": "totals",
+      "name": "attributed_value_cents",
+      "passed": true
+    },
+    {
+      "group": "metrics",
+      "name": "Wrong mean of CTR percentages",
+      "passed": true
+    },
+    {
+      "group": "dedupe",
+      "name": "Exact repeated campaign removed",
+      "passed": true
+    },
+    {
+      "group": "ledger",
+      "name": "orders",
+      "passed": true
+    },
+    {
+      "group": "ledger",
+      "name": "new_customers_supplied",
+      "passed": true
+    },
+    {
+      "group": "ledger",
+      "name": "gross_cents",
+      "passed": true
+    },
+    {
+      "group": "ledger",
+      "name": "refund_cents",
+      "passed": true
+    },
+    {
+      "group": "ledger",
+      "name": "net_cents",
+      "passed": true
+    },
+    {
+      "group": "ledger",
+      "name": "blended_net_revenue_per_media_spend",
+      "passed": true
+    },
+    {
+      "group": "ledger",
+      "name": "media_spend_per_supplied_new_customer_cents",
+      "passed": true
+    },
+    {
+      "group": "attribution",
+      "name": "Click-only allocation",
+      "passed": true
+    },
+    {
+      "group": "attribution",
+      "name": "Click then view fallback allocation",
+      "passed": true
+    },
+    {
+      "group": "attribution",
+      "name": "Post-order touch not used",
+      "passed": true
+    },
+    {
+      "group": "attribution",
+      "name": "Click takes priority over later view",
+      "passed": true
+    },
+    {
+      "group": "attribution",
+      "name": "last_eligible_click_7d conserves net ledger",
+      "passed": true
+    },
+    {
+      "group": "attribution",
+      "name": "last_eligible_click_7d one assignment per order",
+      "passed": true
+    },
+    {
+      "group": "attribution",
+      "name": "click_7d_else_view_1d conserves net ledger",
+      "passed": true
+    },
+    {
+      "group": "attribution",
+      "name": "click_7d_else_view_1d one assignment per order",
+      "passed": true
+    },
+    {
+      "group": "claims",
+      "name": "claim_rows",
+      "passed": true
+    },
+    {
+      "group": "claims",
+      "name": "unique_claimed_orders",
+      "passed": true
+    },
+    {
+      "group": "claims",
+      "name": "summed_claim_value_cents",
+      "passed": true
+    },
+    {
+      "group": "claims",
+      "name": "unique_claimed_net_cents",
+      "passed": true
+    },
+    {
+      "group": "claims",
+      "name": "overlap_cents",
+      "passed": true
+    },
+    {
+      "group": "boundary",
+      "name": "Exactly seven days included",
+      "passed": true
+    },
+    {
+      "group": "boundary",
+      "name": "One second outside window excluded",
+      "passed": true
+    },
+    {
+      "group": "boundary",
+      "name": "Future click excluded",
+      "passed": true
+    },
+    {
+      "group": "boundary",
+      "name": "Same instant click included",
+      "passed": true
+    },
+    {
+      "group": "boundary",
+      "name": "Exactly one-day view included",
+      "passed": true
+    },
+    {
+      "group": "boundary",
+      "name": "Outside one-day view excluded",
+      "passed": true
+    },
+    {
+      "group": "dedupe",
+      "name": "Repeated touch does not double credit",
+      "passed": true
+    },
+    {
+      "group": "dedupe",
+      "name": "Repeated order does not double money",
+      "passed": true
+    },
+    {
+      "group": "missing",
+      "name": "Known spend subtotal remains",
+      "passed": true
+    },
+    {
+      "group": "missing",
+      "name": "Missing spend row visible",
+      "passed": true
+    },
+    {
+      "group": "missing",
+      "name": "Incomplete spend withheld",
+      "passed": true
+    },
+    {
+      "group": "missing",
+      "name": "Incomplete spend withholds ROAS",
+      "passed": true
+    },
+    {
+      "group": "missing",
+      "name": "Incomplete spend withholds acquisition ratio",
+      "passed": true
+    },
+    {
+      "group": "missing",
+      "name": "All-missing known subtotal remains unknown",
+      "passed": true
+    },
+    {
+      "group": "metrics",
+      "name": "Fractional conversion credit preserved",
+      "passed": true
+    },
+    {
+      "group": "metrics",
+      "name": "Zero denominator is undefined",
+      "passed": true
+    },
+    {
+      "group": "metrics",
+      "name": "Known zero numerator is zero",
+      "passed": true
+    },
+    {
+      "group": "metrics",
+      "name": "Missing numerator is unknown",
+      "passed": true
+    },
+    {
+      "group": "metrics",
+      "name": "Empty report is not known zero spend",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "Reject spend_cents -1",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "Reject clicks True",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "Reject impressions 1.5",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "Reject conversion_credits NaN",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "Reject conversion_credits bad",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "Conflicting campaign_id",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "Conflicting order_id",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "Conflicting touch_id",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "Explicit normalization required for currency",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "Explicit normalization required for timezone",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "Refund cannot exceed gross under this schema",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "Unknown campaign",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "Naive timestamp",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "Nonpositive attribution window",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "Duplicate claim",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "Claim without canonical order",
+      "passed": true
+    },
+    {
+      "group": "publication",
+      "name": "Initial publish",
+      "passed": true
+    },
+    {
+      "group": "publication",
+      "name": "Retry is duplicate",
+      "passed": true
+    },
+    {
+      "group": "publication",
+      "name": "One row after retry",
+      "passed": true
+    },
+    {
+      "group": "publication",
+      "name": "Conflicting same revision",
+      "passed": true
+    },
+    {
+      "group": "publication",
+      "name": "Conflict preserves published body",
+      "passed": true
+    },
+    {
+      "group": "publication",
+      "name": "New revision replaces snapshot",
+      "passed": true
+    },
+    {
+      "group": "publication",
+      "name": "Stale revision rejected",
+      "passed": true
+    },
+    {
+      "group": "publication",
+      "name": "Revision remains latest",
+      "passed": true
+    },
+    {
+      "group": "publication",
+      "name": "Invalid revision",
+      "passed": true
+    },
+    {
+      "group": "preservation",
+      "name": "Input objects unchanged",
+      "passed": true
+    },
+    {
+      "group": "preservation",
+      "name": "Input file unchanged",
+      "passed": true
+    }
+  ],
+  "observations": {
+    "scope": "Invented same-currency, UTC teaching case; not actual ad-platform exports",
+    "contract": {
+      "account": "demo",
+      "currency": "USD",
+      "timezone": "UTC",
+      "report_date": "2026-10-11",
+      "conversion_definition": "purchase credit",
+      "attribution_label": "supplied platform-reported credit; no vendor parity",
+      "report_time_basis": "supplied report date",
+      "as_of": "2026-10-12T12:00:00Z"
+    },
+    "platform_report": {
+      "campaigns": [
+        {
+          "campaign_id": "A",
+          "channel": "Search",
+          "name": "Intent search",
+          "spend_cents": 10000,
+          "impressions": 10000,
+          "clicks": 100,
+          "conversion_credits": 2.0,
+          "attributed_value_cents": 15000,
+          "metrics": {
+            "ctr_pct": 1.0,
+            "cpm_cents": 1000.0,
+            "cpc_cents": 100.0,
+            "purchase_credit_rate_pct": 2.0,
+            "cost_per_purchase_credit_cents": 5000.0,
+            "reported_roas": 1.5
+          }
+        },
+        {
+          "campaign_id": "B",
+          "channel": "Social",
+          "name": "Prospecting social",
+          "spend_cents": 5000,
+          "impressions": 5000,
+          "clicks": 100,
+          "conversion_credits": 2.0,
+          "attributed_value_cents": 25000,
+          "metrics": {
+            "ctr_pct": 2.0,
+            "cpm_cents": 1000.0,
+            "cpc_cents": 50.0,
+            "purchase_credit_rate_pct": 2.0,
+            "cost_per_purchase_credit_cents": 2500.0,
+            "reported_roas": 5.0
+          }
+        }
+      ],
+      "totals": {
+        "spend_cents": {
+          "known": 15000,
+          "missing_rows": 0,
+          "complete": 15000
+        },
+        "impressions": {
+          "known": 15000,
+          "missing_rows": 0,
+          "complete": 15000
+        },
+        "clicks": {
+          "known": 200,
+          "missing_rows": 0,
+          "complete": 200
+        },
+        "attributed_value_cents": {
+          "known": 40000,
+          "missing_rows": 0,
+          "complete": 40000
+        },
+        "conversion_credits": {
+          "known": 4.0,
+          "missing_rows": 0,
+          "complete": 4.0
+        }
+      },
+      "blended_metrics": {
+        "ctr_pct": 1.333333,
+        "cpm_cents": 1000.0,
+        "cpc_cents": 75.0,
+        "purchase_credit_rate_pct": 2.0,
+        "cost_per_purchase_credit_cents": 3750.0,
+        "reported_roas": 2.666667
+      },
+      "wrong_unweighted_ctr_pct": 1.5
+    },
+    "ledger": {
+      "orders": 4,
+      "new_customers_supplied": 3,
+      "gross_cents": 47000,
+      "refund_cents": 5000,
+      "net_cents": 42000,
+      "blended_net_revenue_per_media_spend": 2.8,
+      "media_spend_per_supplied_new_customer_cents": 5000.0
+    },
+    "last_eligible_click_7d": {
+      "assignments": [
+        {
+          "order_id": "o1",
+          "campaign_id": "B",
+          "touch_id": "t2",
+          "net_cents": 10000
+        },
+        {
+          "order_id": "o2",
+          "campaign_id": "Unattributed",
+          "touch_id": null,
+          "net_cents": 15000
+        },
+        {
+          "order_id": "o3",
+          "campaign_id": "A",
+          "touch_id": "t6",
+          "net_cents": 5000
+        },
+        {
+          "order_id": "o4",
+          "campaign_id": "Unattributed",
+          "touch_id": null,
+          "net_cents": 12000
+        }
+      ],
+      "by_campaign_net_cents": {
+        "A": 5000,
+        "B": 10000,
+        "Unattributed": 27000
+      },
+      "total_net_cents": 42000
+    },
+    "click_7d_else_view_1d": {
+      "assignments": [
+        {
+          "order_id": "o1",
+          "campaign_id": "B",
+          "touch_id": "t2",
+          "net_cents": 10000
+        },
+        {
+          "order_id": "o2",
+          "campaign_id": "A",
+          "touch_id": "t4",
+          "net_cents": 15000
+        },
+        {
+          "order_id": "o3",
+          "campaign_id": "A",
+          "touch_id": "t6",
+          "net_cents": 5000
+        },
+        {
+          "order_id": "o4",
+          "campaign_id": "Unattributed",
+          "touch_id": null,
+          "net_cents": 12000
+        }
+      ],
+      "by_campaign_net_cents": {
+        "A": 20000,
+        "B": 10000,
+        "Unattributed": 12000
+      },
+      "total_net_cents": 42000
+    },
+    "independent_claim_overlap": {
+      "claim_rows": 4,
+      "unique_claimed_orders": 3,
+      "summed_claim_value_cents": 40000,
+      "unique_claimed_net_cents": 30000,
+      "overlap_cents": 10000
+    }
+  },
+  "source_sha256": "78350c167f1dce4ebb5165cccab1dba4aa6738df8271f18c33ddf0518df97014",
+  "external_services_called": false,
+  "persistent_listener_started": false,
+  "database_closed": true,
+  "scope": "Actual synthetic arithmetic, hand-defined attribution, overlap and in-memory SQLite publication; no vendor parity, causal lift or delivery claim."
+}
