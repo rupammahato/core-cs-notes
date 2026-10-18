@@ -28,6 +28,7 @@ const subjects = [
   { name: 'CN', value: 'cn' },
   { name: 'Resume Skills', value: 'resume-skills' },
   { name: 'System Design', value: 'system-design' },
+  { name: 'Product & Analytics', value: 'product-analytics' },
 ];
 
 export default function SubjectSearchDialog(props: SharedProps) {

@@ -207,15 +207,17 @@ The architecture and blocking topics are grounded in the [Node.js introduction](
 | Neo4j | M26 |
 | Consistent hashing, health checks, throughput/remapping claims | M27-M28 |
 | Org hierarchy/BFS, SLA state machine, payroll rules, ingestion defects | M28, cross-referencing DSA/OOP/DBMS and M8/M15 |
-| Product, analytics and business tools | Later track below |
+| Product, analytics and business tools | Completed P0-P5 track below |
 
 A resume bullet is evidence of what the resume says, not proof of a specific implementation or benchmark. Project deep-dives must distinguish documented claims, confirmed code behavior and hypothetical improvements.
 
 ---
 
-## 5. Product and analytics track: later
+## 5. Product and analytics track: fully authored
 
-This track follows the main backend/SDE sequence as requested. It covers the second resume's remaining skills.
+This track follows the completed main backend/SDE and architecture sequences as requested. It covers the second resume's remaining skills.
+
+**Started 18 October 2026:** the dedicated [Product and Analytics roadmap](/docs/product-analytics) and [P0: Product Thinking, Requirements and Design Communication](/docs/product-analytics/product-thinking-requirements-design) are authored in Product Analytics Notes/. P0 includes 53 executed local worksheet checks; manual design/research exercises remain manual. P1 is now authored with 88 executed local pricing/evidence checks. P2 is now authored with 95 executed SQLite/analytics/experiment-arithmetic checks. P3 is now authored with 72 Python checks, 38 native Excel checks and six workbook mutation scenarios. P4 is now authored with 79 Python/SQLite and 36 real Chrome/D3 checks. P5 is now authored with 12 isolated output drills and 15 source/coverage audits, seven resume story cards, 60 Q&As, revision schedules and two final 45-minute mocks. All seven Product and Analytics handbook files are authored; manual practice and original claim corroboration remain separate.
 
 | ID | Section | Coverage |
 | --- | --- | --- |
@@ -303,7 +305,7 @@ Dependencies are conceptual, not a demand to reread every older chapter. Short r
 - Roadmap: resume-skills-handbook-part-1-master-roadmap.md
 - Teaching: resume-skills-handbook-part-N-module-X-topic.md
 - M0 starts at Part 2; M28 is Part 30; M29 consolidation is Part 31.
-- Product/analytics gets its own folder and roadmap later.
+- Product/analytics has its own Product Analytics Notes/ folder and roadmap; P0-P5 and the roadmap are fully authored.
 
 ### Site integration
 
@@ -318,7 +320,7 @@ When teaching chapters begin, add one Resume Skills subject using the existing s
 
 ### Next concrete section
 
-Authored: the master roadmap and **M0-M29**, including consolidation and interview drills: **31 files**. The [architecture companion roadmap](/docs/system-design) is available. The architecture companion is fully authored: all 21 files, including A0-A4, S0-S13 and consolidation. Continue with revision; product/analytics P0-P5 remains a separate later track and learning mastery is assessed separately.
+Authored: the master roadmap and **M0-M29**, including consolidation and interview drills: **31 files**. The [architecture companion roadmap](/docs/system-design) is available. The architecture companion is fully authored: all 21 files, including A0-A4, S0-S13 and consolidation. The separate product/analytics track now has its roadmap and all P0-P5 authored: **seven files, no planned authoring sections remaining**. Learning mastery is assessed separately.
 
 ---
 
@@ -337,7 +339,7 @@ Sources checked for the initial plan; chapter authors must revisit version-sensi
 | Containers/cloud/payments | [Docker image building](https://docs.docker.com/get-started/docker-concepts/building-images/), [AWS ALB](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/introduction.html), [Cloud Tasks limitations](https://docs.cloud.google.com/tasks/docs/common-pitfalls), [Razorpay webhooks](https://razorpay.com/docs/webhooks/validate-test/) |
 | React and Next.js | [React render and commit](https://react.dev/learn/render-and-commit), [Next.js 14 Server Components](https://nextjs.org/docs/14/app/building-your-application/rendering/server-components), [Next.js 14 caching](https://nextjs.org/docs/14/app/building-your-application/caching) |
 | AI applications | [OpenAI function calling](https://developers.openai.com/api/docs/guides/function-calling), [OpenAI embeddings](https://developers.openai.com/api/reference/resources/embeddings/methods/create), [LangGraph overview](https://docs.langchain.com/oss/python/langgraph/overview), [LlamaIndex RAG](https://developers.llamaindex.ai/python/framework/understanding/rag/), [Pinecone overview](https://docs.pinecone.io/guides/get-started/overview), [OpenRouter prompt caching](https://openrouter.ai/docs/guides/best-practices/prompt-caching) |
-| Later analytics | [PostHog funnels](https://posthog.com/docs/product-analytics/funnels), [PostHog retention](https://posthog.com/docs/product-analytics/retention), [GA4 key events](https://support.google.com/analytics/answer/9267568?hl=en), [pandas tutorials](https://pandas.pydata.org/docs/getting_started/intro_tutorials/) |
+| Analytics references | [PostHog funnels](https://posthog.com/docs/product-analytics/funnels), [PostHog retention](https://posthog.com/docs/product-analytics/retention), [GA4 key events](https://support.google.com/analytics/answer/9267568?hl=en), [pandas tutorials](https://pandas.pydata.org/docs/getting_started/intro_tutorials/) |
 
 ---
 
@@ -378,9 +380,9 @@ Sources checked for the initial plan; chapter authors must revisit version-sensi
 - [x] M26 teaching chapter and 76 real-engine checks authored: Neo4j Community 2026.09.0 over loopback Bolt, Cypher 5 patterns/nulls/constraints/MERGE, bounded tenant-scoped paths, rollback/concurrent correctness, actual index plans/deletion and source-revision/tombstone acceptance. Thirty Q&As and ten exercises. Hand-authored graph; application authorization only, no Enterprise RBAC/APOC/GDS/model/Aura/performance claim. Portable vendor archives hash-verified; owned Java process, listener and temporary data cleaned.
 - [x] M27 teaching chapter and 95 local checks authored: 21 deterministic ring, 17 pool-policy, eight capacity-arithmetic, 11 in-process cache-model and 38 real HTTP checks. Thirty Q&As and ten exercises. Actual forwarding/readiness/failure/drain/admission/cancellation/deadline over owned loopback sockets; no original-project throughput/latency reproduction, distributed cache or production authentication claim. All fixture listeners/agents/timers cleaned.
 - [x] M28 teaching chapter authored for all seven resume experiences/projects: seven short pitches, seven two-minute outlines, seven five-minute walkthroughs, 30 Q&As and ten exercises. Eighty-one checks passed: 68 teaching-model/arithmetic and 13 PDF-provenance checks. Actual SQLite audit rollback, reopen alert dedupe and batch rollback; original project code/metrics/revenue/compliance remain explicitly unverified. Temporary databases removed; no persistent model listener.
-- [x] M29 consolidation authored: 29-module map, 36 confusable pairs, 14 executed output drills, 16 debug cards, 60 rapid-fire Q&As, two 45-minute mocks, revision schedules and 24-question self-test. Forty-three checks passed: 14 isolated Node/Python/SQLite outputs and 29 canonical chapter-reference audits. All 14 workers exited; SQLite in-memory connections closed. Editorial drills are not production/user-assessment evidence; architecture/product extensions remain planned.
+- [x] M29 consolidation authored: 29-module map, 36 confusable pairs, 14 executed output drills, 16 debug cards, 60 rapid-fire Q&As, two 45-minute mocks, revision schedules and 24-question self-test. Forty-three checks passed: 14 isolated Node/Python/SQLite outputs and 29 canonical chapter-reference audits. All 14 workers exited; SQLite in-memory connections closed. Editorial drills are not production/user-assessment evidence; the architecture/product extensions were subsequently authored in their separate companion tracks.
 - [x] Resume Skills subject registered in website navigation and search.
-- [ ] Later product/analytics track written.
+- [x] Product/analytics track fully authored: roadmap, P0-P4 and P5 consolidation; source examples, verification records, navigation and search integrated.
 
 ---
 
@@ -398,7 +400,7 @@ Each case starts with a small buildable system, APIs, data model and request tra
 
 Resume M27 is the bridge to that track, not the entirety of architecture coverage. Resume M28 uses the relevant worked designs and the bank's eight resume-specific prompts. The existing OOP LLD examples remain useful foundations, especially BookMyShow before distributed reservation design.
 
-Interleave architecture after its prerequisites: A0/A1 and URL shortening after API/data basics; rate limiting and SaaS permissions after auth; queues/booking/payments after transactions and jobs; AI architecture after RAG. Product/analytics remains later.
+Interleave architecture after its prerequisites: A0/A1 and URL shortening after API/data basics; rate limiting and SaaS permissions after auth; queues/booking/payments after transactions and jobs; AI architecture after RAG. Product/analytics follows those completed sequences and is now fully authored; continue with manual exercises, evidence recovery and interview practice.
 
 - [x] Architecture research and syllabus compiled.
 - [x] Sixty architecture/design/failure/resume questions compiled.

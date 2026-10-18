@@ -1,0 +1,57 @@
+{
+  "checked_date": "2026-10-18",
+  "scope": "Public primary documentation for the roadmap and P0; no account consoles, customer studies or measured interview-frequency research",
+  "sources": [
+    {
+      "url": "https://www.gov.uk/service-manual/user-research/start-by-learning-user-needs",
+      "supports": "Evidence-based needs before solution selection"
+    },
+    {
+      "url": "https://www.gov.uk/service-manual/user-research/plan-user-research-for-your-service",
+      "supports": "Research questions, groups, methods and decisions"
+    },
+    {
+      "url": "https://www.gov.uk/service-manual/agile-delivery/how-the-discovery-phase-works",
+      "supports": "Discovery before committing to an intervention"
+    },
+    {
+      "url": "https://www.atlassian.com/agile/product-management/requirements/",
+      "supports": "PRD purpose and shared product understanding"
+    },
+    {
+      "url": "https://www.atlassian.com/software/confluence/resources/guides/how-to/business-requirements",
+      "supports": "Business requirements and scope vocabulary"
+    },
+    {
+      "url": "https://www.intercom.com/blog/rice-simple-prioritization-for-product-managers",
+      "supports": "Original RICE factors and formula"
+    },
+    {
+      "url": "https://help.figma.com/hc/en-us/articles/360039823894-Create-and-manage-prototype-flows",
+      "supports": "Frames, interactions and flow starting points"
+    },
+    {
+      "url": "https://www.notion.com/help/relations-and-rollups",
+      "supports": "Relations and rollups for linked documentation"
+    },
+    {
+      "url": "https://www.w3.org/WAI/tutorials/forms/notifications/",
+      "supports": "Understandable form outcomes and error feedback"
+    },
+    {
+      "url": "https://scrumguides.org/scrum-guide.html",
+      "supports": "Definition of Done terminology"
+    }
+  ],
+  "teaching_estimates": "Invented monthly reach, impact, confidence and person-month estimates; not taken from a resume or live product",
+  "resume_boundary": "Hiring/candidate-portal context is resume-reported in earlier M28; the P0 draft feature, decisions and research examples are hypothetical practice",
+  "manual_work": [
+    "Figma prototype",
+    "Notion workspace",
+    "user research",
+    "keyboard walkthrough",
+    "task-based usability session"
+  ],
+  "next_research": "No planned authoring sections remain; all P0-P5 research manifests are preserved with their examples",
+  "authoring_complete": true
+}

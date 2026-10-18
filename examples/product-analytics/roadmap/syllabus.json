@@ -1,0 +1,44 @@
+[
+  {
+    "label": "P0",
+    "part": 2,
+    "slug": "product-thinking-requirements-design",
+    "title": "Product Thinking, Requirements and Design Communication",
+    "status": "Available"
+  },
+  {
+    "label": "P1",
+    "part": 3,
+    "slug": "pricing-unit-economics",
+    "title": "Pricing and Unit Economics",
+    "status": "Available"
+  },
+  {
+    "label": "P2",
+    "part": 4,
+    "slug": "product-analytics-experiments",
+    "title": "Product Analytics and Experiments",
+    "status": "Available"
+  },
+  {
+    "label": "P3",
+    "part": 5,
+    "slug": "python-excel-analysis",
+    "title": "Python and Excel for Analysis",
+    "status": "Available"
+  },
+  {
+    "label": "P4",
+    "part": 6,
+    "slug": "marketing-measurement-data-visualization",
+    "title": "Marketing Measurement and Data Visualization",
+    "status": "Available"
+  },
+  {
+    "label": "P5",
+    "part": 7,
+    "slug": "consolidation-resume-drills",
+    "title": "Product and Analytics Resume Drills and Revision",
+    "status": "Available"
+  }
+]

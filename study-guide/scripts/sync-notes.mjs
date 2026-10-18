@@ -118,6 +118,22 @@ const SUBJECTS = [
       { slug: 'revision', title: 'Revision', icon: 'ListChecks', pages: ['consolidation'] },
     ],
   },
+  {
+    slug: 'product-analytics',
+    title: 'Product & Analytics',
+    dir: '../Product Analytics Notes',
+    description: 'Product decisions, requirements, economics and analytics for interviews',
+    icon: 'Compass',
+    index: 'master-roadmap',
+    groups: [
+      { slug: 'product-foundations', title: 'Product Foundations', icon: 'Lightbulb', pages: ['product-thinking-requirements-design'] },
+      { slug: 'economics', title: 'Pricing & Economics', icon: 'Coins', pages: ['pricing-unit-economics'] },
+      { slug: 'analytics', title: 'Analytics & Experiments', icon: 'ChartLine', pages: ['product-analytics-experiments'] },
+      { slug: 'analysis', title: 'Python & Excel', icon: 'Table', pages: ['python-excel-analysis'] },
+      { slug: 'marketing', title: 'Marketing & Visualization', icon: 'ChartColumn', pages: ['marketing-measurement-data-visualization'] },
+      { slug: 'revision', title: 'Revision & Resume Drills', icon: 'ListChecks', pages: ['consolidation-resume-drills'] },
+    ],
+  },
 ];
 
 // A bad icon name is only a build-time warning, so fail here instead.

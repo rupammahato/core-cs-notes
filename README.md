@@ -1,6 +1,6 @@
 # Core CS Notes
 
-Five core-CS handbooks, a 31-part resume-skills handbook and a completed 21-part architecture companion,
+Five core-CS handbooks, a 31-part resume-skills handbook, a completed 21-part architecture companion and a completed seven-part product/analytics handbook,
 written for technical interviews and readable as a website.
 
 | Subject | Parts | Lines | Covers |
@@ -12,10 +12,11 @@ written for technical interviews and readable as a website.
 | **CN** | 13 | 9,322 | Layering, framing and error control, Ethernet and ARP, IP and subnetting, routing, TCP and UDP, congestion control, DNS, HTTP, TLS, and the end-to-end URL walkthrough |
 | **Resume Skills** | 31 | 37,575 | Roadmap, backend, JavaScript, async, TypeScript, Node.js, Express, APIs, authentication, security, webhooks, payments, Python, Flask/FastAPI, Django/DRF, PostgreSQL, MongoDB, caching, background jobs, ingestion, Docker, Linux deployment, Nginx, PM2, AWS/GCP, Git, CI/CD, testing, observability, performance, React, Next.js, API routes, Tailwind, LLM/AI APIs, RAG, document ingestion, embeddings, Pinecone, pgvector, LangChain, LangGraph, LlamaIndex, Neo4j, system design, resume project deep-dives and consolidation; verified examples, architecture reasoning and interview drills |
 | **System Design** | 21 | 19,277 | Complete roadmap, A0-A4 foundations, S0-S13 worked systems and consolidation; 570 teaching Q&As, all 60 bank drills, six final mocks, scoped runnable examples and recorded verification evidence |
+| **Product & Analytics** | 7 | 4,620 | Complete roadmap and P0-P5: product, pricing, analytics, Python/Excel, marketing, D3 and final revision; 488 recorded checks across Python/SQLite, source audits, native Excel and browser; 210 Q&As, 72 practice tasks and two final mocks |
 
 **Core handbooks: 69 files, 51,671 lines. Resume Skills: 31 files, 37,575 lines.** The roadmaps provide syllabuses, dependencies, priorities and study routes. OOP, OS, DBMS, CN, Resume Skills
 and System Design include dedicated consolidation files. The Resume Skills main sequence M0-M29 is authored;
-the complete System Design track is authored and published. Product/analytics P0-P5 remains a separate later track.
+the complete System Design track is authored and published. The Product and Analytics track is fully authored: roadmap, P0-P4 and P5 consolidation.
 
 **System Design: 21 files, 19,277 lines.** All planned architecture chapters are authored; continue with consolidation and manual practice.
 
@@ -45,7 +46,7 @@ what was about to be written down.
 ## Reading them
 
 The handbooks are plain Markdown in `DSA Notes/`, `OOP Notes/`, `OS Notes/`, `DBMS Notes/` and
-`CN Notes/`, plus `Resume Skills Notes/` and `System Design Notes/` — readable directly on GitHub,
+`CN Notes/`, plus `Resume Skills Notes/`, `System Design Notes/` and `Product Analytics Notes/` — readable directly on GitHub,
 in any editor, or as a website:
 
     cd study-guide
@@ -61,6 +62,8 @@ See [`study-guide/README.md`](study-guide/README.md) for the details, including 
     DSA Notes/ OOP Notes/ OS Notes/ DBMS Notes/ CN Notes/   the handbooks
     Resume Skills Notes/                                    applied skills (main sequence authored)
     System Design Notes/                                    completed architecture companion (roadmap, A0-A4, S0-S13 and consolidation)
+    Product Analytics Notes/                               complete roadmap, P0-P4 and P5 revision
+    examples/product-analytics/                             product worksheets and verification
     examples/resume-skills/                                 runnable examples and verification
     examples/system-design/                                 architecture validation and future fixtures
     *-Notes-Plan.md                                         the plan each was written against
