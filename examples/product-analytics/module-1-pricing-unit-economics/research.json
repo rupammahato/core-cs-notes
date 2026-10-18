@@ -1,0 +1,48 @@
+{
+  "checked_date": "2026-10-18",
+  "scope": "Primary documentation for P1 concepts and mechanisms; no provider-price recommendation, account use or financial-reporting compliance assessment",
+  "sources": [
+    {
+      "url": "https://docs.stripe.com/products-prices/pricing-models",
+      "supports": "Pricing-model vocabulary"
+    },
+    {
+      "url": "https://docs.stripe.com/billing/subscriptions/usage-based/billing-credits",
+      "supports": "Paid/promotional billing credits; distinct from request-time internal wallet enforcement"
+    },
+    {
+      "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "supports": "Provider/model/category-specific pricing units; no live prices copied"
+    },
+    {
+      "url": "https://ai.google.dev/gemini-api/docs/pricing",
+      "supports": "Model/modality/usage distinctions; no live prices copied"
+    },
+    {
+      "url": "https://www.sec.gov/about/reports-publications/beginners-guide-financial-statements",
+      "supports": "Revenue, gross profit, operating expenses and cash-flow distinctions"
+    },
+    {
+      "url": "https://stripe.com/resources/more/how-to-calculate-the-break-even-point",
+      "supports": "Contribution and linear break-even explanation"
+    },
+    {
+      "url": "https://docs.python.org/3.13/library/decimal.html",
+      "supports": "Decimal precision and rounding"
+    },
+    {
+      "url": "https://razorpay.com/docs/webhooks/validate-test/",
+      "supports": "Webhook signature and duplicate-event handling"
+    }
+  ],
+  "fixture_prices": "Entirely invented USD teaching-v1 rates; not current vendor quotes",
+  "resume_source": "Earlier M28 chapter, section 10, records Zyke claims as resume-reported. No new original usage, invoices, customers or payment evidence inspected.",
+  "not_verified": [
+    "Historical USD 0.05 figure",
+    "Seven original provider adapters",
+    "Customer willingness to pay",
+    "Actual cash/revenue",
+    "Real ledger or payment integration"
+  ],
+  "next_research": "P2 tracking plans, analytics platform documentation and experiments"
+}

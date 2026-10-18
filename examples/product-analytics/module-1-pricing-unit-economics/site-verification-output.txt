@@ -1,0 +1,63 @@
+Owned preview ready on loopback port 50521
+Routes checked: 16/125
+Routes checked: 32/125
+Routes checked: 48/125
+Routes checked: 64/125
+Routes checked: 80/125
+Routes checked: 96/125
+Routes checked: 112/125
+Routes checked: 125/125
+Scoped search passed: product-analytics
+Scoped search passed: product-analytics
+Scoped search passed: system-design
+Scoped search passed: resume-skills
+Owned preview process closed
+{
+  "routesChecked": 125,
+  "assertions": {
+    "chapterTitle": true,
+    "chapterEvidence": true,
+    "questionBank": true,
+    "interviewMock": true,
+    "computedCosts": true,
+    "marginEvidence": true,
+    "evidenceBoundaries": true,
+    "sidebarGroup": true,
+    "roadmapLink": true,
+    "predecessorLink": true,
+    "remainingPlanned": true,
+    "homeCard": true,
+    "sourceContainsSearchFilter": true
+  },
+  "search": {
+    "product-analytics:Pricing": {
+      "query": "Pricing",
+      "status": 200,
+      "results": 16,
+      "indexed": true,
+      "scoped": true
+    },
+    "product-analytics:RICE": {
+      "query": "RICE",
+      "status": 200,
+      "results": 11,
+      "indexed": true,
+      "scoped": true
+    },
+    "system-design:Analytics": {
+      "query": "Analytics",
+      "status": 200,
+      "results": 43,
+      "indexed": true,
+      "scoped": true
+    },
+    "resume-skills:Consolidation": {
+      "query": "Consolidation",
+      "status": 200,
+      "results": 18,
+      "indexed": true,
+      "scoped": true
+    }
+  },
+  "temporaryServerClosed": true
+}

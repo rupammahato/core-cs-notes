@@ -1,0 +1,335 @@
+{
+  "verified_date": "2026-10-18",
+  "python": "3.13.15",
+  "os": "Windows-11-10.0.26300-SP0",
+  "total": 53,
+  "checks": [
+    {
+      "group": "arithmetic",
+      "name": "draft score",
+      "passed": true
+    },
+    {
+      "group": "arithmetic",
+      "name": "status score ties draft",
+      "passed": true
+    },
+    {
+      "group": "arithmetic",
+      "name": "AI score",
+      "passed": true
+    },
+    {
+      "group": "arithmetic",
+      "name": "zero reach",
+      "passed": true
+    },
+    {
+      "group": "arithmetic",
+      "name": "zero confidence",
+      "passed": true
+    },
+    {
+      "group": "arithmetic",
+      "name": "full confidence",
+      "passed": true
+    },
+    {
+      "group": "arithmetic",
+      "name": "confidence sensitivity",
+      "passed": true
+    },
+    {
+      "group": "arithmetic",
+      "name": "effort sensitivity",
+      "passed": true
+    },
+    {
+      "group": "input",
+      "name": "negative reach",
+      "passed": true
+    },
+    {
+      "group": "input",
+      "name": "zero impact",
+      "passed": true
+    },
+    {
+      "group": "input",
+      "name": "negative impact",
+      "passed": true
+    },
+    {
+      "group": "input",
+      "name": "negative confidence",
+      "passed": true
+    },
+    {
+      "group": "input",
+      "name": "confidence over one",
+      "passed": true
+    },
+    {
+      "group": "input",
+      "name": "zero effort",
+      "passed": true
+    },
+    {
+      "group": "input",
+      "name": "negative effort",
+      "passed": true
+    },
+    {
+      "group": "input",
+      "name": "boolean estimate",
+      "passed": true
+    },
+    {
+      "group": "input",
+      "name": "NaN",
+      "passed": true
+    },
+    {
+      "group": "input",
+      "name": "infinity",
+      "passed": true
+    },
+    {
+      "group": "input",
+      "name": "non-numeric input",
+      "passed": true
+    },
+    {
+      "group": "ranking",
+      "name": "mandatory is separate",
+      "passed": true
+    },
+    {
+      "group": "ranking",
+      "name": "stable equal-score tie",
+      "passed": true
+    },
+    {
+      "group": "ranking",
+      "name": "input order cannot break ties",
+      "passed": true
+    },
+    {
+      "group": "ranking",
+      "name": "lower confidence changes ordering",
+      "passed": true
+    },
+    {
+      "group": "ranking",
+      "name": "zero-score protection stays mandatory",
+      "passed": true
+    },
+    {
+      "group": "ranking",
+      "name": "duplicate feature ID",
+      "passed": true
+    },
+    {
+      "group": "ranking",
+      "name": "string is not a mandatory flag",
+      "passed": true
+    },
+    {
+      "group": "traceability",
+      "name": "eight acceptance criteria",
+      "passed": true
+    },
+    {
+      "group": "traceability",
+      "name": "five supplied passes",
+      "passed": true
+    },
+    {
+      "group": "traceability",
+      "name": "exact supplied pass fraction",
+      "passed": true
+    },
+    {
+      "group": "traceability",
+      "name": "pending IDs remain visible",
+      "passed": true
+    },
+    {
+      "group": "traceability",
+      "name": "pending is not ready",
+      "passed": true
+    },
+    {
+      "group": "traceability",
+      "name": "all supplied states passed",
+      "passed": true
+    },
+    {
+      "group": "traceability",
+      "name": "one failed criterion blocks readiness",
+      "passed": true
+    },
+    {
+      "group": "traceability",
+      "name": "failed criterion stays visible",
+      "passed": true
+    },
+    {
+      "group": "traceability",
+      "name": "empty scope is not success",
+      "passed": true
+    },
+    {
+      "group": "traceability",
+      "name": "duplicate requirement ID",
+      "passed": true
+    },
+    {
+      "group": "traceability",
+      "name": "missing check link",
+      "passed": true
+    },
+    {
+      "group": "traceability",
+      "name": "duplicate check ID",
+      "passed": true
+    },
+    {
+      "group": "traceability",
+      "name": "unmapped check cannot inflate coverage",
+      "passed": true
+    },
+    {
+      "group": "traceability",
+      "name": "duplicate criterion ID",
+      "passed": true
+    },
+    {
+      "group": "traceability",
+      "name": "empty acceptance criteria",
+      "passed": true
+    },
+    {
+      "group": "traceability",
+      "name": "missing flow link",
+      "passed": true
+    },
+    {
+      "group": "traceability",
+      "name": "missing metric link",
+      "passed": true
+    },
+    {
+      "group": "traceability",
+      "name": "unknown check status",
+      "passed": true
+    },
+    {
+      "group": "traceability",
+      "name": "unknown check method",
+      "passed": true
+    },
+    {
+      "group": "change",
+      "name": "draft criteria",
+      "passed": true
+    },
+    {
+      "group": "change",
+      "name": "draft checks",
+      "passed": true
+    },
+    {
+      "group": "change",
+      "name": "draft frames",
+      "passed": true
+    },
+    {
+      "group": "change",
+      "name": "draft metric",
+      "passed": true
+    },
+    {
+      "group": "change",
+      "name": "unknown requirement",
+      "passed": true
+    },
+    {
+      "group": "boundaries",
+      "name": "worksheet does not mutate source evidence",
+      "passed": true
+    },
+    {
+      "group": "boundaries",
+      "name": "synthetic input label retained",
+      "passed": true
+    },
+    {
+      "group": "boundaries",
+      "name": "scope does not claim application validation",
+      "passed": true
+    }
+  ],
+  "observations": {
+    "evidence_kind": "Entirely synthetic worksheet inputs, including reported check states; not resume evidence or product test results",
+    "ranking": {
+      "mandatory": [
+        {
+          "id": "secure-entry",
+          "score": "120.0",
+          "mandatory": true
+        }
+      ],
+      "discretionary": [
+        {
+          "id": "resume-draft",
+          "score": "96.0",
+          "mandatory": false
+        },
+        {
+          "id": "status-page",
+          "score": "96.0",
+          "mandatory": false
+        },
+        {
+          "id": "ai-summary",
+          "score": "20.0",
+          "mandatory": false
+        }
+      ]
+    },
+    "traceability": {
+      "criteria": 8,
+      "supplied_passes": 5,
+      "passed_fraction": "0.625",
+      "unresolved": [
+        "AC06",
+        "AC07",
+        "AC08"
+      ],
+      "worksheet_ready": false,
+      "scope": "Supplied synthetic evidence states; no application was tested or approved."
+    },
+    "draft_change": {
+      "requirement": "R02",
+      "criteria": [
+        "AC03",
+        "AC04"
+      ],
+      "checks": [
+        "T03",
+        "T04"
+      ],
+      "frames": [
+        "F03-draft",
+        "F04-saved"
+      ],
+      "metrics": [
+        "draft_restore_success"
+      ]
+    }
+  },
+  "persistent_listener_started": false,
+  "external_services_called": false,
+  "scope": "Executed offline arithmetic, ranking, input validation, supplied-evidence traceability and change-impact checks. No real product, users, Figma account or Notion workspace tested."
+}

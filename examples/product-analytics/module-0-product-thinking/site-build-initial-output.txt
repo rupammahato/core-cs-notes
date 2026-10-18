@@ -1,0 +1,72 @@
+node.exe : npm warn Unknown cli config "--webpack". This will stop working in the next major version of npm.
+At C:\Program Files\nodejs\npm.ps1:29 char:3
++   & $NODE_EXE $NPM_CLI_JS $args
++   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (npm warn Unknow...version of npm.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+
+> core-cs-notes@0.0.41 prebuild
+> npm run sync
+
+npm warn Unknown env config "webpack". This will stop working in the next major version of npm.
+
+> core-cs-notes@0.0.41 sync
+> node scripts/sync-notes.mjs
+
+synced dsa: 5 groups, 17 chapters
+synced oop: 5 groups, 13 chapters
+synced os: 5 groups, 13 chapters
+synced dbms: 6 groups, 13 chapters
+synced cn: 6 groups, 13 chapters
+synced resume-skills: 11 groups, 31 chapters
+synced system-design: 3 groups, 21 chapters
+synced product-analytics: 1 groups, 2 chapters
+
+> core-cs-notes@0.0.41 build
+> next build
+
+▲ Next.js 16.3.8 (Turbopack)
+✓ Running next.config.mjs took 136ms
+
+  Creating an optimized production build ...
+
+thread 'tokio-rt-worker' (8064) panicked at turbopack\crates\turbo-tasks-fetch\src\client.rs:188:55:
+request should be cloneable
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+thread 'tokio-rt-worker' (26932) panicked at turbopack\crates\turbo-tasks-fetch\src\client.rs:188:55:
+request should be cloneable
+
+thread 'tokio-rt-worker' (12996) panicked at turbopack\crates\turbo-tasks-fetch\src\client.rs:188:55:
+request should be cloneable
+
+thread 'tokio-rt-worker' (34868) panicked at turbopack\crates\turbo-tasks-fetch\src\client.rs:188:55:
+request should be cloneable
+
+thread 'tokio-rt-worker' (12344) panicked at turbopack\crates\turbo-tasks-fetch\src\client.rs:188:55:
+request should be cloneable
+
+thread 'tokio-rt-worker' (9688) panicked at turbopack\crates\turbo-tasks-fetch\src\client.rs:188:55:
+request should be cloneable
+
+thread 'tokio-rt-worker' (34688) panicked at turbopack\crates\turbo-tasks-fetch\src\client.rs:188:55:
+request should be cloneable
+
+thread 'tokio-rt-worker' (29864) panicked at turbopack\crates\turbo-tasks-fetch\src\client.rs:188:55:
+request should be cloneable
+
+thread 'tokio-rt-worker' (2524) panicked at turbopack\crates\turbo-tasks-fetch\src\client.rs:188:55:
+request should be cloneable
+
+thread 'tokio-rt-worker' (34392) panicked at turbopack\crates\turbo-tasks-fetch\src\client.rs:188:55:
+request should be cloneable
+
+thread 'tokio-rt-worker' (1420) panicked at turbopack\crates\turbo-tasks-fetch\src\client.rs:188:55:
+request should be cloneable
+
+thread 'tokio-rt-worker' (29660) panicked at turbopack\crates\turbo-tasks-fetch\src\client.rs:188:55:
+request should be cloneable
+
+thread 'tokio-rt-worker' (34392) panicked at turbopack\crates\turbo-tasks-fetch\src\client.rs:188:55:
+request should be cloneable

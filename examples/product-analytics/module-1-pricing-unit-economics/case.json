@@ -1,0 +1,244 @@
+{
+  "scope": "Invented USD tariffs and closed five-job cohort; no live provider prices, production usage, original Zyke metrics or actual revenue recognition",
+  "rates": [
+    {
+      "provider": "text-demo",
+      "model": "text-small",
+      "version": "teaching-v1",
+      "unit": "input_tokens",
+      "currency": "USD",
+      "price": "2",
+      "per": 1000000
+    },
+    {
+      "provider": "text-demo",
+      "model": "text-small",
+      "version": "teaching-v1",
+      "unit": "output_tokens",
+      "currency": "USD",
+      "price": "8",
+      "per": 1000000
+    },
+    {
+      "provider": "image-demo",
+      "model": "image-basic",
+      "version": "teaching-v1",
+      "unit": "images",
+      "currency": "USD",
+      "price": "0.04",
+      "per": 1
+    }
+  ],
+  "jobs": [
+    {
+      "id": "g1",
+      "status": "success"
+    },
+    {
+      "id": "g2",
+      "status": "success"
+    },
+    {
+      "id": "g3",
+      "status": "failed"
+    },
+    {
+      "id": "g4",
+      "status": "success"
+    },
+    {
+      "id": "g5",
+      "status": "failed"
+    }
+  ],
+  "attempts": [
+    {
+      "id": "a01",
+      "job": "g1",
+      "status": "success",
+      "provider": "text-demo",
+      "model": "text-small",
+      "rate_version": "teaching-v1",
+      "usage": [
+        {
+          "unit": "input_tokens",
+          "quantity": 1000
+        },
+        {
+          "unit": "output_tokens",
+          "quantity": 500
+        }
+      ]
+    },
+    {
+      "id": "a02",
+      "job": "g1",
+      "status": "success",
+      "provider": "image-demo",
+      "model": "image-basic",
+      "rate_version": "teaching-v1",
+      "usage": [
+        {
+          "unit": "images",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "a03",
+      "job": "g2",
+      "status": "failed",
+      "provider": "text-demo",
+      "model": "text-small",
+      "rate_version": "teaching-v1",
+      "usage": [
+        {
+          "unit": "input_tokens",
+          "quantity": 500
+        },
+        {
+          "unit": "output_tokens",
+          "quantity": 100
+        }
+      ]
+    },
+    {
+      "id": "a04",
+      "job": "g2",
+      "status": "success",
+      "provider": "text-demo",
+      "model": "text-small",
+      "rate_version": "teaching-v1",
+      "usage": [
+        {
+          "unit": "input_tokens",
+          "quantity": 1000
+        },
+        {
+          "unit": "output_tokens",
+          "quantity": 500
+        }
+      ]
+    },
+    {
+      "id": "a05",
+      "job": "g2",
+      "status": "success",
+      "provider": "image-demo",
+      "model": "image-basic",
+      "rate_version": "teaching-v1",
+      "usage": [
+        {
+          "unit": "images",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "a06",
+      "job": "g3",
+      "status": "success",
+      "provider": "text-demo",
+      "model": "text-small",
+      "rate_version": "teaching-v1",
+      "usage": [
+        {
+          "unit": "input_tokens",
+          "quantity": 1000
+        },
+        {
+          "unit": "output_tokens",
+          "quantity": 500
+        }
+      ]
+    },
+    {
+      "id": "a07",
+      "job": "g3",
+      "status": "failed",
+      "provider": "image-demo",
+      "model": "image-basic",
+      "rate_version": "teaching-v1",
+      "usage": [
+        {
+          "unit": "images",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "a08",
+      "job": "g4",
+      "status": "success",
+      "provider": "text-demo",
+      "model": "text-small",
+      "rate_version": "teaching-v1",
+      "usage": [
+        {
+          "unit": "input_tokens",
+          "quantity": 2000
+        },
+        {
+          "unit": "output_tokens",
+          "quantity": 1000
+        }
+      ]
+    },
+    {
+      "id": "a09",
+      "job": "g4",
+      "status": "success",
+      "provider": "image-demo",
+      "model": "image-basic",
+      "rate_version": "teaching-v1",
+      "usage": [
+        {
+          "unit": "images",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "id": "a10",
+      "job": "g5",
+      "status": "timeout",
+      "provider": "text-demo",
+      "model": "text-small",
+      "rate_version": "teaching-v1",
+      "usage": null
+    },
+    {
+      "id": "a04",
+      "job": "g2",
+      "status": "success",
+      "provider": "text-demo",
+      "model": "text-small",
+      "rate_version": "teaching-v1",
+      "usage": [
+        {
+          "unit": "input_tokens",
+          "quantity": 1000
+        },
+        {
+          "unit": "output_tokens",
+          "quantity": 500
+        }
+      ]
+    }
+  ],
+  "reconciled_usage": {
+    "a10": [
+      {
+        "unit": "input_tokens",
+        "quantity": 1000
+      },
+      {
+        "unit": "output_tokens",
+        "quantity": 0
+      }
+    ]
+  },
+  "price_per_success_usd": "0.20",
+  "other_delivery_cost_usd": "0.015",
+  "allocated_payment_fees_usd": "0.05"
+}

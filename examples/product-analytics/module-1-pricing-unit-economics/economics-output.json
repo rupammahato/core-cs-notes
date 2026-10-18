@@ -1,0 +1,130 @@
+{
+  "scope": "Invented USD tariffs and closed five-job cohort; no live provider prices, production usage, original Zyke metrics or actual revenue recognition",
+  "before_reconciliation": {
+    "jobs": 5,
+    "successful_jobs": 3,
+    "unique_attempts": 10,
+    "duplicate_reports_ignored": 1,
+    "known_cost_usd": "0.231800",
+    "total_cost_usd": null,
+    "cost_per_success_usd": null,
+    "unknown_attempts": [
+      "a10"
+    ],
+    "provider_known_cost_usd": {
+      "image-demo": "0.200000",
+      "text-demo": "0.031800"
+    },
+    "job_costs": [
+      {
+        "id": "g1",
+        "status": "success",
+        "known_cost_usd": "0.046000",
+        "total_cost_usd": "0.046000",
+        "unknown_attempts": []
+      },
+      {
+        "id": "g2",
+        "status": "success",
+        "known_cost_usd": "0.047800",
+        "total_cost_usd": "0.047800",
+        "unknown_attempts": []
+      },
+      {
+        "id": "g3",
+        "status": "failed",
+        "known_cost_usd": "0.046000",
+        "total_cost_usd": "0.046000",
+        "unknown_attempts": []
+      },
+      {
+        "id": "g4",
+        "status": "success",
+        "known_cost_usd": "0.092000",
+        "total_cost_usd": "0.092000",
+        "unknown_attempts": []
+      },
+      {
+        "id": "g5",
+        "status": "failed",
+        "known_cost_usd": "0.000000",
+        "total_cost_usd": null,
+        "unknown_attempts": [
+          "a10"
+        ]
+      }
+    ]
+  },
+  "after_reconciliation": {
+    "jobs": 5,
+    "successful_jobs": 3,
+    "unique_attempts": 10,
+    "duplicate_reports_ignored": 1,
+    "known_cost_usd": "0.233800",
+    "total_cost_usd": "0.233800",
+    "cost_per_success_usd": "0.077933",
+    "unknown_attempts": [],
+    "provider_known_cost_usd": {
+      "image-demo": "0.200000",
+      "text-demo": "0.033800"
+    },
+    "job_costs": [
+      {
+        "id": "g1",
+        "status": "success",
+        "known_cost_usd": "0.046000",
+        "total_cost_usd": "0.046000",
+        "unknown_attempts": []
+      },
+      {
+        "id": "g2",
+        "status": "success",
+        "known_cost_usd": "0.047800",
+        "total_cost_usd": "0.047800",
+        "unknown_attempts": []
+      },
+      {
+        "id": "g3",
+        "status": "failed",
+        "known_cost_usd": "0.046000",
+        "total_cost_usd": "0.046000",
+        "unknown_attempts": []
+      },
+      {
+        "id": "g4",
+        "status": "success",
+        "known_cost_usd": "0.092000",
+        "total_cost_usd": "0.092000",
+        "unknown_attempts": []
+      },
+      {
+        "id": "g5",
+        "status": "failed",
+        "known_cost_usd": "0.002000",
+        "total_cost_usd": "0.002000",
+        "unknown_attempts": []
+      }
+    ]
+  },
+  "cohort_margin": {
+    "revenue_usd": "0.600000",
+    "cogs_usd": "0.248800",
+    "gross_profit_usd": "0.351200",
+    "gross_margin_pct": "58.533333",
+    "other_variable_usd": "0.050000",
+    "contribution_usd": "0.301200",
+    "contribution_margin_pct": "50.200000",
+    "scenario_after_fixed_usd": "0.301200"
+  },
+  "target_price": {
+    "unrounded_usd": "0.15",
+    "cent_price_usd": "0.15"
+  },
+  "break_even_successes": 7693,
+  "ideal_retry_cost_usd": "0.050000",
+  "credit_values": {
+    "standard_20_credits_usd": "0.200000",
+    "discounted_20_credits_usd": "0.160000",
+    "promotional_20_credits_usd": "0.000000"
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "verified_date": "2026-10-18",
+  "authored_track_files": 2,
+  "section_completed": "P0",
+  "next": "P1: Pricing and Unit Economics",
+  "remaining_sections": [
+    "P1",
+    "P2",
+    "P3",
+    "P4",
+    "P5"
+  ],
+  "note_lines": 962,
+  "questions": 30,
+  "practice_tasks": 12,
+  "mock_minutes": 30,
+  "runtime": {
+    "python": "3.13.15",
+    "node": "v22.14.0"
+  },
+  "runtime_checks": 53,
+  "content_validation": "passed",
+  "exact_output_blocks": 3,
+  "existing_handbook_files_unchanged": 121,
+  "historical_runtime_suites_rerun": false,
+  "manual_research_design_exercises_completed": false,
+  "website": {
+    "build_passed": true,
+    "compiler": "webpack",
+    "typescript_passed": true,
+    "static_pages": 128,
+    "routes_checked": 124,
+    "all_routes_200": true,
+    "planned_P1_status": 404,
+    "search": {
+      "product-analytics": {
+        "query": "RICE",
+        "status": 200,
+        "results": 11,
+        "indexed": true,
+        "scoped": true
+      },
+      "system-design": {
+        "query": "Analytics",
+        "status": 200,
+        "results": 43,
+        "indexed": true,
+        "scoped": true
+      },
+      "resume-skills": {
+        "query": "Consolidation",
+        "status": 200,
+        "results": 18,
+        "indexed": true,
+        "scoped": true
+      }
+    },
+    "temporary_preview_port": 59721,
+    "temporary_preview_closed": true,
+    "cached_font_fixture_used": true
+  },
+  "initial_build_attempt": {
+    "command": "npm run build -- --webpack through PowerShell npm.ps1",
+    "outcome": "PowerShell argument handling omitted the intended webpack CLI flag; Turbopack panicked while fetching mocked fonts; owned build stopped",
+    "resolved_command": "node node_modules/next/dist/bin/next build --webpack",
+    "diagnostic_log": "site-build-initial-output.txt"
+  },
+  "scope": "Offline worksheet, content/provenance checks and real local production-site routes. Synthetic product criterion states are inputs, not product test results."
+}

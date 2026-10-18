@@ -1,0 +1,53 @@
+Owned preview ready on loopback port 59721
+Routes checked: 16/124
+Routes checked: 32/124
+Routes checked: 48/124
+Routes checked: 64/124
+Routes checked: 80/124
+Routes checked: 96/124
+Routes checked: 112/124
+Routes checked: 124/124
+Scoped search passed: product-analytics
+Scoped search passed: system-design
+Scoped search passed: resume-skills
+Owned preview process closed
+{
+  "routesChecked": 124,
+  "assertions": {
+    "chapterTitle": true,
+    "chapterEvidence": true,
+    "questionBank": true,
+    "interviewMock": true,
+    "evidenceBoundaries": true,
+    "manualExercises": true,
+    "sidebarGroup": true,
+    "roadmapLink": true,
+    "remainingPlanned": true,
+    "homeCard": true,
+    "sourceContainsSearchFilter": true
+  },
+  "search": {
+    "product-analytics": {
+      "query": "RICE",
+      "status": 200,
+      "results": 11,
+      "indexed": true,
+      "scoped": true
+    },
+    "system-design": {
+      "query": "Analytics",
+      "status": 200,
+      "results": 43,
+      "indexed": true,
+      "scoped": true
+    },
+    "resume-skills": {
+      "query": "Consolidation",
+      "status": 200,
+      "results": 18,
+      "indexed": true,
+      "scoped": true
+    }
+  },
+  "temporaryServerClosed": true
+}

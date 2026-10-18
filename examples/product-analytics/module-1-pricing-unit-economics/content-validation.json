@@ -1,0 +1,19 @@
+{
+  "verified_date": "2026-10-18",
+  "runtime_checks": 88,
+  "questions": 30,
+  "practice_tasks": 12,
+  "mock_minutes": 30,
+  "unchecked_learning_items": 14,
+  "exact_output_blocks": 4,
+  "research_sources": 8,
+  "internal_links_resolve": 6,
+  "authored_track_files": 7,
+  "remaining_sections": [],
+  "existing_handbooks_unchanged": 121,
+  "P0_only_continuation_changed": true,
+  "historical_runtime_suites_rerun": false,
+  "note_lines": 4620,
+  "chapter_sha256": "6a885c4a06e4154b93badd4fdbdd8753f417563bf3c9697e5444eaa25334982d",
+  "scope": "P1 output/content/source audit and current P0 teaching-content preservation; not a production billing or accounting validation."
+}

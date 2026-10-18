@@ -1,0 +1,581 @@
+{
+  "verified_date": "2026-10-18",
+  "python": "3.13.15",
+  "os": "Windows-11-10.0.26300-SP0",
+  "total": 88,
+  "checks": [
+    {
+      "group": "normalization",
+      "name": "text input/output",
+      "passed": true
+    },
+    {
+      "group": "normalization",
+      "name": "one image",
+      "passed": true
+    },
+    {
+      "group": "normalization",
+      "name": "failed attempt still costs",
+      "passed": true
+    },
+    {
+      "group": "normalization",
+      "name": "two images",
+      "passed": true
+    },
+    {
+      "group": "normalization",
+      "name": "missing usage stays unknown",
+      "passed": true
+    },
+    {
+      "group": "normalization",
+      "name": "explicit empty usage is zero",
+      "passed": true
+    },
+    {
+      "group": "normalization",
+      "name": "micro-cost is not rounded to cents",
+      "passed": true
+    },
+    {
+      "group": "normalization",
+      "name": "round-half-up display",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "invalid amount '-1'",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "invalid amount 'NaN'",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "invalid amount 'Infinity'",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "invalid amount 'bad'",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "invalid amount '1000000000001'",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "invalid amount '0.0000000000001'",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "invalid amount 0.1",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "invalid amount True",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "invalid quantity -1",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "invalid quantity True",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "invalid quantity 1.5",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "invalid quantity '1'",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "invalid quantity 1000000000001",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "zero tariff basis",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "allowed upper amount",
+      "passed": true
+    },
+    {
+      "group": "tariff",
+      "name": "mixed currency",
+      "passed": true
+    },
+    {
+      "group": "tariff",
+      "name": "invalid denominator",
+      "passed": true
+    },
+    {
+      "group": "tariff",
+      "name": "negative price",
+      "passed": true
+    },
+    {
+      "group": "tariff",
+      "name": "duplicate identity",
+      "passed": true
+    },
+    {
+      "group": "tariff",
+      "name": "unknown model",
+      "passed": true
+    },
+    {
+      "group": "tariff",
+      "name": "unknown pricing version",
+      "passed": true
+    },
+    {
+      "group": "tariff",
+      "name": "wrong unit",
+      "passed": true
+    },
+    {
+      "group": "tariff",
+      "name": "duplicate usage category",
+      "passed": true
+    },
+    {
+      "group": "cohort",
+      "name": "closed cohort size",
+      "passed": true
+    },
+    {
+      "group": "cohort",
+      "name": "product successes",
+      "passed": true
+    },
+    {
+      "group": "cohort",
+      "name": "deduplicated attempts",
+      "passed": true
+    },
+    {
+      "group": "cohort",
+      "name": "duplicate reports",
+      "passed": true
+    },
+    {
+      "group": "cohort",
+      "name": "known subtotal",
+      "passed": true
+    },
+    {
+      "group": "cohort",
+      "name": "total withheld",
+      "passed": true
+    },
+    {
+      "group": "cohort",
+      "name": "unit cost withheld",
+      "passed": true
+    },
+    {
+      "group": "cohort",
+      "name": "missing evidence visible",
+      "passed": true
+    },
+    {
+      "group": "cohort",
+      "name": "reconciled provider cost",
+      "passed": true
+    },
+    {
+      "group": "cohort",
+      "name": "cost per successful customer action includes failures",
+      "passed": true
+    },
+    {
+      "group": "cohort",
+      "name": "partial failed job cost retained",
+      "passed": true
+    },
+    {
+      "group": "cohort",
+      "name": "timeout cost retained after reconciliation",
+      "passed": true
+    },
+    {
+      "group": "cohort",
+      "name": "provider aggregation",
+      "passed": true
+    },
+    {
+      "group": "cohort",
+      "name": "zero jobs has no unit cost",
+      "passed": true
+    },
+    {
+      "group": "cohort",
+      "name": "zero successes has no unit cost",
+      "passed": true
+    },
+    {
+      "group": "evidence",
+      "name": "conflicting replay rejected",
+      "passed": true
+    },
+    {
+      "group": "evidence",
+      "name": "orphan attempt rejected",
+      "passed": true
+    },
+    {
+      "group": "evidence",
+      "name": "unclosed cohort rejected",
+      "passed": true
+    },
+    {
+      "group": "evidence",
+      "name": "duplicate job ID rejected",
+      "passed": true
+    },
+    {
+      "group": "evidence",
+      "name": "missing job evidence rejected",
+      "passed": true
+    },
+    {
+      "group": "evidence",
+      "name": "unknown attempt state rejected",
+      "passed": true
+    },
+    {
+      "group": "evidence",
+      "name": "unsupported success rejected",
+      "passed": true
+    },
+    {
+      "group": "margin",
+      "name": "revenue assumption",
+      "passed": true
+    },
+    {
+      "group": "margin",
+      "name": "delivery includes infrastructure",
+      "passed": true
+    },
+    {
+      "group": "margin",
+      "name": "gross profit",
+      "passed": true
+    },
+    {
+      "group": "margin",
+      "name": "gross margin",
+      "passed": true
+    },
+    {
+      "group": "margin",
+      "name": "payment fee allocation",
+      "passed": true
+    },
+    {
+      "group": "margin",
+      "name": "contribution",
+      "passed": true
+    },
+    {
+      "group": "margin",
+      "name": "contribution ratio",
+      "passed": true
+    },
+    {
+      "group": "margin",
+      "name": "zero revenue gives undefined percentage",
+      "passed": true
+    },
+    {
+      "group": "margin",
+      "name": "loss stays negative",
+      "passed": true
+    },
+    {
+      "group": "margin",
+      "name": "100 percent markup is 50 percent margin",
+      "passed": true
+    },
+    {
+      "group": "margin",
+      "name": "use ratio of totals, not mean percentages",
+      "passed": true
+    },
+    {
+      "group": "margin",
+      "name": "fixed cost reduces scenario result",
+      "passed": true
+    },
+    {
+      "group": "pricing",
+      "name": "60 percent gross margin floor",
+      "passed": true
+    },
+    {
+      "group": "pricing",
+      "name": "round price floor upwards",
+      "passed": true
+    },
+    {
+      "group": "pricing",
+      "name": "zero target margin",
+      "passed": true
+    },
+    {
+      "group": "pricing",
+      "name": "100 percent target rejected",
+      "passed": true
+    },
+    {
+      "group": "pricing",
+      "name": "negative target rejected",
+      "passed": true
+    },
+    {
+      "group": "pricing",
+      "name": "break-even rounds up",
+      "passed": true
+    },
+    {
+      "group": "pricing",
+      "name": "zero contribution has no finite break-even",
+      "passed": true
+    },
+    {
+      "group": "pricing",
+      "name": "negative contribution has no finite break-even",
+      "passed": true
+    },
+    {
+      "group": "pricing",
+      "name": "zero fixed positive contribution",
+      "passed": true
+    },
+    {
+      "group": "credits",
+      "name": "standard pack allocation",
+      "passed": true
+    },
+    {
+      "group": "credits",
+      "name": "discount affects realized unit value",
+      "passed": true
+    },
+    {
+      "group": "credits",
+      "name": "promotion has zero paid-pack value",
+      "passed": true
+    },
+    {
+      "group": "credits",
+      "name": "zero consumption",
+      "passed": true
+    },
+    {
+      "group": "credits",
+      "name": "zero pack size rejected",
+      "passed": true
+    },
+    {
+      "group": "retry",
+      "name": "80 percent success changes effective cost",
+      "passed": true
+    },
+    {
+      "group": "retry",
+      "name": "50 percent success doubles effective cost",
+      "passed": true
+    },
+    {
+      "group": "retry",
+      "name": "certain success",
+      "passed": true
+    },
+    {
+      "group": "retry",
+      "name": "zero success probability",
+      "passed": true
+    },
+    {
+      "group": "retry",
+      "name": "probability above one",
+      "passed": true
+    },
+    {
+      "group": "pricing",
+      "name": "one fewer success does not cover fixed costs",
+      "passed": true
+    },
+    {
+      "group": "pricing",
+      "name": "break-even count covers fixed costs",
+      "passed": true
+    },
+    {
+      "group": "boundary",
+      "name": "input evidence remains unchanged",
+      "passed": true
+    },
+    {
+      "group": "boundary",
+      "name": "invented scope retained",
+      "passed": true
+    }
+  ],
+  "observations": {
+    "scope": "Invented USD tariffs and closed five-job cohort; no live provider prices, production usage, original Zyke metrics or actual revenue recognition",
+    "before_reconciliation": {
+      "jobs": 5,
+      "successful_jobs": 3,
+      "unique_attempts": 10,
+      "duplicate_reports_ignored": 1,
+      "known_cost_usd": "0.231800",
+      "total_cost_usd": null,
+      "cost_per_success_usd": null,
+      "unknown_attempts": [
+        "a10"
+      ],
+      "provider_known_cost_usd": {
+        "image-demo": "0.200000",
+        "text-demo": "0.031800"
+      },
+      "job_costs": [
+        {
+          "id": "g1",
+          "status": "success",
+          "known_cost_usd": "0.046000",
+          "total_cost_usd": "0.046000",
+          "unknown_attempts": []
+        },
+        {
+          "id": "g2",
+          "status": "success",
+          "known_cost_usd": "0.047800",
+          "total_cost_usd": "0.047800",
+          "unknown_attempts": []
+        },
+        {
+          "id": "g3",
+          "status": "failed",
+          "known_cost_usd": "0.046000",
+          "total_cost_usd": "0.046000",
+          "unknown_attempts": []
+        },
+        {
+          "id": "g4",
+          "status": "success",
+          "known_cost_usd": "0.092000",
+          "total_cost_usd": "0.092000",
+          "unknown_attempts": []
+        },
+        {
+          "id": "g5",
+          "status": "failed",
+          "known_cost_usd": "0.000000",
+          "total_cost_usd": null,
+          "unknown_attempts": [
+            "a10"
+          ]
+        }
+      ]
+    },
+    "after_reconciliation": {
+      "jobs": 5,
+      "successful_jobs": 3,
+      "unique_attempts": 10,
+      "duplicate_reports_ignored": 1,
+      "known_cost_usd": "0.233800",
+      "total_cost_usd": "0.233800",
+      "cost_per_success_usd": "0.077933",
+      "unknown_attempts": [],
+      "provider_known_cost_usd": {
+        "image-demo": "0.200000",
+        "text-demo": "0.033800"
+      },
+      "job_costs": [
+        {
+          "id": "g1",
+          "status": "success",
+          "known_cost_usd": "0.046000",
+          "total_cost_usd": "0.046000",
+          "unknown_attempts": []
+        },
+        {
+          "id": "g2",
+          "status": "success",
+          "known_cost_usd": "0.047800",
+          "total_cost_usd": "0.047800",
+          "unknown_attempts": []
+        },
+        {
+          "id": "g3",
+          "status": "failed",
+          "known_cost_usd": "0.046000",
+          "total_cost_usd": "0.046000",
+          "unknown_attempts": []
+        },
+        {
+          "id": "g4",
+          "status": "success",
+          "known_cost_usd": "0.092000",
+          "total_cost_usd": "0.092000",
+          "unknown_attempts": []
+        },
+        {
+          "id": "g5",
+          "status": "failed",
+          "known_cost_usd": "0.002000",
+          "total_cost_usd": "0.002000",
+          "unknown_attempts": []
+        }
+      ]
+    },
+    "cohort_margin": {
+      "revenue_usd": "0.600000",
+      "cogs_usd": "0.248800",
+      "gross_profit_usd": "0.351200",
+      "gross_margin_pct": "58.533333",
+      "other_variable_usd": "0.050000",
+      "contribution_usd": "0.301200",
+      "contribution_margin_pct": "50.200000",
+      "scenario_after_fixed_usd": "0.301200"
+    },
+    "target_price": {
+      "unrounded_usd": "0.15",
+      "cent_price_usd": "0.15"
+    },
+    "break_even_successes": 7693,
+    "ideal_retry_cost_usd": "0.050000",
+    "credit_values": {
+      "standard_20_credits_usd": "0.200000",
+      "discounted_20_credits_usd": "0.160000",
+      "promotional_20_credits_usd": "0.000000"
+    }
+  },
+  "external_services_called": false,
+  "persistent_listener_started": false,
+  "scope": "Offline synthetic USD cost arithmetic, evidence deduplication, missing-usage handling, margin, pricing and single-pack credit allocation. No production providers, ledger, payment integration or accounting reconciliation."
+}

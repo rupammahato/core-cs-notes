@@ -1,0 +1,27 @@
+{
+  "evidence_kind": "Entirely synthetic worksheet inputs, including reported check states; not resume evidence or product test results",
+  "reach_period": "one month",
+  "effort_unit": "person-month",
+  "features": [
+    {"id":"secure-entry","mandatory":true,"reach":120,"impact":1,"confidence":"1.0","effort":1},
+    {"id":"resume-draft","mandatory":false,"reach":120,"impact":2,"confidence":"0.8","effort":2},
+    {"id":"status-page","mandatory":false,"reach":120,"impact":1,"confidence":"0.8","effort":1},
+    {"id":"ai-summary","mandatory":false,"reach":80,"impact":2,"confidence":"0.5","effort":4}
+  ],
+  "requirements": [
+    {"id":"R01","need":"Only an eligible invite holder can enter the intended application","frames":["F01-entry","F02-unavailable"],"metrics":["denied_invalid_access"],"criteria":[{"id":"AC01","check":"T01"},{"id":"AC02","check":"T02"}]},
+    {"id":"R02","need":"An interrupted candidate can resume a saved draft","frames":["F03-draft","F04-saved"],"metrics":["draft_restore_success"],"criteria":[{"id":"AC03","check":"T03"},{"id":"AC04","check":"T04"}]},
+    {"id":"R03","need":"A candidate can submit a complete application once","frames":["F05-review","F06-confirmation","F07-errors"],"metrics":["eligible_completion","duplicate_submission_effects"],"criteria":[{"id":"AC05","check":"T05"},{"id":"AC06","check":"T06"}]},
+    {"id":"R04","need":"A candidate can understand and operate the flow","frames":["F03-draft","F07-errors"],"metrics":["unassisted_task_completion"],"criteria":[{"id":"AC07","check":"T07"},{"id":"AC08","check":"T08"}]}
+  ],
+  "checks": [
+    {"id":"T01","method":"automated","status":"passed"},
+    {"id":"T02","method":"automated","status":"passed"},
+    {"id":"T03","method":"automated","status":"passed"},
+    {"id":"T04","method":"automated","status":"passed"},
+    {"id":"T05","method":"automated","status":"passed"},
+    {"id":"T06","method":"automated","status":"pending"},
+    {"id":"T07","method":"manual","status":"pending"},
+    {"id":"T08","method":"manual","status":"pending"}
+  ]
+}

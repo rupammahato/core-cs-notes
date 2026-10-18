@@ -1,0 +1,59 @@
+{
+  "evidence_kind": "Entirely synthetic worksheet inputs, including reported check states; not resume evidence or product test results",
+  "ranking": {
+    "mandatory": [
+      {
+        "id": "secure-entry",
+        "score": "120.0",
+        "mandatory": true
+      }
+    ],
+    "discretionary": [
+      {
+        "id": "resume-draft",
+        "score": "96.0",
+        "mandatory": false
+      },
+      {
+        "id": "status-page",
+        "score": "96.0",
+        "mandatory": false
+      },
+      {
+        "id": "ai-summary",
+        "score": "20.0",
+        "mandatory": false
+      }
+    ]
+  },
+  "traceability": {
+    "criteria": 8,
+    "supplied_passes": 5,
+    "passed_fraction": "0.625",
+    "unresolved": [
+      "AC06",
+      "AC07",
+      "AC08"
+    ],
+    "worksheet_ready": false,
+    "scope": "Supplied synthetic evidence states; no application was tested or approved."
+  },
+  "draft_change": {
+    "requirement": "R02",
+    "criteria": [
+      "AC03",
+      "AC04"
+    ],
+    "checks": [
+      "T03",
+      "T04"
+    ],
+    "frames": [
+      "F03-draft",
+      "F04-saved"
+    ],
+    "metrics": [
+      "draft_restore_success"
+    ]
+  }
+}

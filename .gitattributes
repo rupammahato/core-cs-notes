@@ -2,6 +2,7 @@
 # Preserve their authored line endings on every platform.
 "/Resume Skills Notes/**" -text
 "/System Design Notes/**" -text
+"/Product Analytics Notes/**" -text
 /examples/** -text
 /Resume-Skills-Notes-Plan.md -text
 /Architecture-System-Design-Notes-Plan.md -text

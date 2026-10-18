@@ -1,0 +1,73 @@
+{
+  "verified_date": "2026-10-18",
+  "section_completed": "P1",
+  "next": "P2: Product Analytics and Experiments",
+  "authored_track_files": 3,
+  "remaining_sections": [
+    "P2",
+    "P3",
+    "P4",
+    "P5"
+  ],
+  "note_lines": 1761,
+  "questions": 30,
+  "practice_tasks": 12,
+  "mock_minutes": 30,
+  "runtime": {
+    "python": "3.13.15",
+    "node": "v22.14.0"
+  },
+  "fresh_runtime_checks": 88,
+  "previous_P0_recorded_checks": 53,
+  "previous_runtime_suites_freshly_rerun": false,
+  "exact_output_blocks": 4,
+  "content_validation": "passed",
+  "P0_teaching_content_preserved_except_continuation": true,
+  "original_handbook_files_unchanged": 121,
+  "website": {
+    "build_passed": true,
+    "compiler": "webpack",
+    "typescript_passed": true,
+    "static_pages": 129,
+    "routes_checked": 125,
+    "all_routes_200": true,
+    "planned_P2_status": 404,
+    "search": {
+      "product-analytics:Pricing": {
+        "query": "Pricing",
+        "status": 200,
+        "results": 16,
+        "indexed": true,
+        "scoped": true
+      },
+      "product-analytics:RICE": {
+        "query": "RICE",
+        "status": 200,
+        "results": 11,
+        "indexed": true,
+        "scoped": true
+      },
+      "system-design:Analytics": {
+        "query": "Analytics",
+        "status": 200,
+        "results": 43,
+        "indexed": true,
+        "scoped": true
+      },
+      "resume-skills:Consolidation": {
+        "query": "Consolidation",
+        "status": 200,
+        "results": 18,
+        "indexed": true,
+        "scoped": true
+      }
+    },
+    "temporary_preview_port": 50521,
+    "temporary_preview_closed": true,
+    "cached_font_fixture_used": true
+  },
+  "port_3000_stopped": true,
+  "teaching_rates_synthetic": true,
+  "historical_Zyke_cost_or_revenue_verified": false,
+  "scope": "Executed offline economics and evidence checks plus production-site HTML/navigation/search. No AI provider, gateway, durable ledger, customer study or accounting integration."
+}
