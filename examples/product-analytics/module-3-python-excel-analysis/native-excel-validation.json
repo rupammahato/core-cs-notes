@@ -1,0 +1,167 @@
+﻿{
+    "verified_date":  "2026-10-18",
+    "excel_version":  "16.0",
+    "excel_build":  20430,
+    "total":  38,
+    "checks":  [
+                   {
+                       "name":  "Baseline row 8",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "Baseline row 9",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "Baseline row 10",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "Baseline row 11",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "Baseline row 12",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "Baseline row 13",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "Baseline row 14",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "Baseline row 15",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "Baseline row 16",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "Text ID preserves leading zeros",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "Original offset timestamp remains text",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "UTC date is numeric and normalized",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "Orphan provider amount retained",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "Orphan attempt count",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "Date issues visible",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "Unmapped job visible",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "Billed amount edit recalculates",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "Blank differs from numeric zero",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "One missing bill remains",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "One prerequisite does not complete total",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "All billed values enable complete total",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "Partial missing cost retains known subtotal",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "Missing cost job visible",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "Incomplete provider total withheld",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "Changed report endpoint excludes later jobs",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "Complete total for changed population",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "Provider cost follows report interval",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "Ambiguous lookup is not silently first-matched",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "Matched blank lookup value remains missing",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "Restored row 8",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "Restored row 9",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "Restored row 10",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "Restored row 11",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "Restored row 12",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "Restored row 13",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "Restored row 14",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "Restored row 15",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "Restored row 16",
+                       "passed":  true
+                   }
+               ],
+    "formula_errors":  [
+
+                       ],
+    "original_file_unchanged":  true,
+    "disposable_copy_used":  true,
+    "native_pivottable_created":  false,
+    "scope":  "Native Excel recalculation on a disposable copy; source input mutations restored; no workbook or account outside this task changed."
+}

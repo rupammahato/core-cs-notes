@@ -1,0 +1,112 @@
+{
+  "verified_date": "2026-10-18",
+  "section_completed": "P3",
+  "next": "P4: Marketing Measurement and Data Visualization",
+  "authored_track_files": 5,
+  "remaining_sections": [
+    "P4",
+    "P5"
+  ],
+  "note_lines": 3222,
+  "questions": 30,
+  "practice_tasks": 12,
+  "mock_minutes": 30,
+  "runtime": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "3.0.1"
+  },
+  "fresh_python_checks": 72,
+  "native_excel": {
+    "version": "16.0",
+    "build": 20430,
+    "fresh_checks": 38,
+    "formula_errors": [],
+    "disposable_copy_used": true,
+    "original_file_unchanged": true
+  },
+  "artifact_tool_version": "2.8.99",
+  "artifact_mutation_scenarios": 6,
+  "native_pivottable_created": false,
+  "manual_work_remaining": [
+    "Create and refresh a PivotTable",
+    "Practice the mock and personal resume explanation"
+  ],
+  "previous_P0_P1_P2_recorded_checks": 236,
+  "previous_runtime_suites_freshly_rerun": false,
+  "content_validation": "passed",
+  "exact_output_blocks": 4,
+  "research_sources": 13,
+  "P0_P1_unchanged_this_section": true,
+  "P2_only_continuation_changed": true,
+  "original_handbook_files_unchanged": 121,
+  "chapter_sha256": "2cf9d3dd5b6bbd94359ee0b14b1e82cd13c2c15f6cdb5476010cea7d25d292e0",
+  "workbook_sha256": "9e7e8b13b1af88afc1b54e35f07537e7260c67e1cc93d85c5649a27c8db2194e",
+  "visual_review": {
+    "sheets": [
+      "Analysis",
+      "Sources"
+    ],
+    "previews_reviewed": 3,
+    "literal_timestamps_and_id_display_corrected": true
+  },
+  "website": {
+    "build_passed": true,
+    "compiler": "webpack",
+    "typescript_passed": true,
+    "static_pages": 131,
+    "routes_checked": 127,
+    "all_routes_200": true,
+    "planned_P4_status": 404,
+    "search": {
+      "product-analytics:Python": {
+        "query": "Python",
+        "status": 200,
+        "results": 23,
+        "indexed": true,
+        "scoped": true
+      },
+      "product-analytics:Retention": {
+        "query": "Retention",
+        "status": 200,
+        "results": 23,
+        "indexed": true,
+        "scoped": true
+      },
+      "product-analytics:Pricing": {
+        "query": "Pricing",
+        "status": 200,
+        "results": 18,
+        "indexed": true,
+        "scoped": true
+      },
+      "product-analytics:RICE": {
+        "query": "RICE",
+        "status": 200,
+        "results": 11,
+        "indexed": true,
+        "scoped": true
+      },
+      "system-design:Analytics": {
+        "query": "Analytics",
+        "status": 200,
+        "results": 43,
+        "indexed": true,
+        "scoped": true
+      },
+      "resume-skills:Consolidation": {
+        "query": "Consolidation",
+        "status": 200,
+        "results": 18,
+        "indexed": true,
+        "scoped": true
+      }
+    },
+    "temporary_preview_port": 59865,
+    "temporary_preview_closed": true,
+    "cached_font_fixture_used": true
+  },
+  "port_3000_stopped": true,
+  "source_resumes_remain_local": true,
+  "scope": "Synthetic reconciliation and actual local numerical/native Excel behavior plus website routes/search; no production invoice, external account or personal learning mastery validated."
+}

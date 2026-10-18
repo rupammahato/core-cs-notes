@@ -1,0 +1,101 @@
+{
+  "scope": "Invented local event data and aggregate experiment counts; no live analytics account, real customers or randomized feature deployment",
+  "intake": {
+    "duplicate_reports_ignored": 1,
+    "stored_events": 28
+  },
+  "initial": {
+    "activation": {
+      "eligible": 5,
+      "immature_excluded": 2,
+      "started": 5,
+      "completed": 2,
+      "rate_pct": "40.000000",
+      "start_to_complete_pct": "40.000000"
+    },
+    "retention": {
+      "day": 7,
+      "eligible": 5,
+      "returned": 2,
+      "rate_pct": "40.000000",
+      "cohorts": {
+        "2026-10-01": {
+          "eligible": 3,
+          "returned": 1,
+          "rate_pct": "33.333333"
+        },
+        "2026-10-02": {
+          "eligible": 2,
+          "returned": 1,
+          "rate_pct": "50.000000"
+        }
+      }
+    }
+  },
+  "revised": {
+    "activation": {
+      "eligible": 5,
+      "immature_excluded": 2,
+      "started": 5,
+      "completed": 2,
+      "rate_pct": "40.000000",
+      "start_to_complete_pct": "40.000000"
+    },
+    "retention": {
+      "day": 7,
+      "eligible": 5,
+      "returned": 3,
+      "rate_pct": "60.000000",
+      "cohorts": {
+        "2026-10-01": {
+          "eligible": 3,
+          "returned": 1,
+          "rate_pct": "33.333333"
+        },
+        "2026-10-02": {
+          "eligible": 2,
+          "returned": 2,
+          "rate_pct": "100.000000"
+        }
+      }
+    }
+  },
+  "activity_oct_8": {
+    "events": 2,
+    "active_users": 1
+  },
+  "experiment": {
+    "control_rate_pct": "20.000000",
+    "treatment_rate_pct": "24.000000",
+    "absolute_lift_pp": "4.000000",
+    "relative_lift_pct": "20.000000",
+    "normal_approximation_adequate_for_fixture": true,
+    "approx_95_ci_pp": [
+      "0.373272",
+      "7.626728"
+    ],
+    "two_sided_p_value": 0.030837167828904336,
+    "srm_chi_square": 0.0,
+    "srm_p_value": 1.0,
+    "srm_flag_at_0_001": false,
+    "assignment_verified": false,
+    "scope": "Aggregate synthetic counts; no randomized deployment, power plan or causal effect verified."
+  },
+  "imbalanced_assignment": {
+    "control_rate_pct": "20.000000",
+    "treatment_rate_pct": "24.000000",
+    "absolute_lift_pp": "4.000000",
+    "relative_lift_pct": "20.000000",
+    "normal_approximation_adequate_for_fixture": true,
+    "approx_95_ci_pp": [
+      "-0.221892",
+      "8.221892"
+    ],
+    "two_sided_p_value": 0.059365274843947956,
+    "srm_chi_square": 100.0,
+    "srm_p_value": 1.5239706048320992e-23,
+    "srm_flag_at_0_001": true,
+    "assignment_verified": false,
+    "scope": "Aggregate synthetic counts; no randomized deployment, power plan or causal effect verified."
+  }
+}

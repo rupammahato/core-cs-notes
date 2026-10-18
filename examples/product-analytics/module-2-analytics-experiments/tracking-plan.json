@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "events": {
+    "signup_completed": {
+      "emitter": "backend after signup commit",
+      "purpose": "Cohort anchor"
+    },
+    "generation_started": {
+      "emitter": "backend after operation acceptance",
+      "purpose": "Attempted product action"
+    },
+    "generation_succeeded": {
+      "emitter": "worker after usable output persistence",
+      "purpose": "Activation/return action; authoritative outcome"
+    }
+  },
+  "allowed_properties": {
+    "device": [
+      "mobile",
+      "desktop"
+    ],
+    "plan": [
+      "free",
+      "paid"
+    ]
+  },
+  "identity_policy": "Explicit declared alias-to-canonical mapping only; no IP/email guessing",
+  "timestamp_policy": "Aware whole-second timestamps normalized to UTC; receipt-before-occurrence rejected for this fixture",
+  "exclusions": "Internal users are retained in stored data but excluded in analytical queries"
+}

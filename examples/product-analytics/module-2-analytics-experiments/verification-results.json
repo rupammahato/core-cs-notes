@@ -1,0 +1,589 @@
+{
+  "verified_date": "2026-10-18",
+  "python": "3.13.15",
+  "sqlite": "3.50.4",
+  "os": "Windows-11-10.0.26300-SP0",
+  "total": 95,
+  "checks": [
+    {
+      "group": "time",
+      "name": "equivalent timezone normalization",
+      "passed": true
+    },
+    {
+      "group": "time",
+      "name": "invalid timestamp '2026-10-01T00:00:00'",
+      "passed": true
+    },
+    {
+      "group": "time",
+      "name": "invalid timestamp 'not-a-date'",
+      "passed": true
+    },
+    {
+      "group": "time",
+      "name": "invalid timestamp '2026-10-01T00:00:00.1Z'",
+      "passed": true
+    },
+    {
+      "group": "time",
+      "name": "invalid timestamp None",
+      "passed": true
+    },
+    {
+      "group": "denominator",
+      "name": "empty ratio is undefined",
+      "passed": true
+    },
+    {
+      "group": "denominator",
+      "name": "two of five",
+      "passed": true
+    },
+    {
+      "group": "intake",
+      "name": "exact duplicate report ignored",
+      "passed": true
+    },
+    {
+      "group": "intake",
+      "name": "unique stored events",
+      "passed": true
+    },
+    {
+      "group": "funnel",
+      "name": "mature activation denominator",
+      "passed": true
+    },
+    {
+      "group": "funnel",
+      "name": "immature users excluded",
+      "passed": true
+    },
+    {
+      "group": "funnel",
+      "name": "users with starts",
+      "passed": true
+    },
+    {
+      "group": "funnel",
+      "name": "ordered complete users",
+      "passed": true
+    },
+    {
+      "group": "funnel",
+      "name": "activation rate",
+      "passed": true
+    },
+    {
+      "group": "funnel",
+      "name": "conditional last-step rate",
+      "passed": true
+    },
+    {
+      "group": "late-data",
+      "name": "activation remains fixed after late D7 return",
+      "passed": true
+    },
+    {
+      "group": "retention",
+      "name": "mature retention denominator",
+      "passed": true
+    },
+    {
+      "group": "retention",
+      "name": "initial returns",
+      "passed": true
+    },
+    {
+      "group": "retention",
+      "name": "initial retention",
+      "passed": true
+    },
+    {
+      "group": "late-data",
+      "name": "late return changes numerator",
+      "passed": true
+    },
+    {
+      "group": "late-data",
+      "name": "revised exact D7 retention",
+      "passed": true
+    },
+    {
+      "group": "retention",
+      "name": "first cohort counts",
+      "passed": true
+    },
+    {
+      "group": "retention",
+      "name": "second cohort counts",
+      "passed": true
+    },
+    {
+      "group": "activity",
+      "name": "two events are one active user",
+      "passed": true
+    },
+    {
+      "group": "identity",
+      "name": "alias does not add signup users",
+      "passed": true
+    },
+    {
+      "group": "funnel",
+      "name": "per-user completion truth table",
+      "passed": true
+    },
+    {
+      "group": "maturity",
+      "name": "converted immature user still excluded",
+      "passed": true
+    },
+    {
+      "group": "retention",
+      "name": "D1 measures another interval",
+      "passed": true
+    },
+    {
+      "group": "activity",
+      "name": "late event absent in initial day",
+      "passed": true
+    },
+    {
+      "group": "activity",
+      "name": "late event included in revised day",
+      "passed": true
+    },
+    {
+      "group": "time",
+      "name": "incomplete activity day",
+      "passed": true
+    },
+    {
+      "group": "time",
+      "name": "knowledge cannot precede event cutoff",
+      "passed": true
+    },
+    {
+      "group": "time",
+      "name": "invalid retention day -1",
+      "passed": true
+    },
+    {
+      "group": "time",
+      "name": "invalid retention day True",
+      "passed": true
+    },
+    {
+      "group": "time",
+      "name": "invalid retention day 1.5",
+      "passed": true
+    },
+    {
+      "group": "time",
+      "name": "invalid retention day 366",
+      "passed": true
+    },
+    {
+      "group": "cleanup",
+      "name": "in-memory database closed",
+      "passed": true
+    },
+    {
+      "group": "boundaries",
+      "name": "one second before conversion-window end counts",
+      "passed": true
+    },
+    {
+      "group": "boundaries",
+      "name": "orphan early success does not complete funnel",
+      "passed": true
+    },
+    {
+      "group": "boundaries",
+      "name": "same operation before start still does not complete",
+      "passed": true
+    },
+    {
+      "group": "boundaries",
+      "name": "equal whole-second timestamps use nondecreasing order",
+      "passed": true
+    },
+    {
+      "group": "exclusion",
+      "name": "internal flag changes denominator intentionally",
+      "passed": true
+    },
+    {
+      "group": "empty",
+      "name": "no signup cohort has undefined activation",
+      "passed": true
+    },
+    {
+      "group": "empty",
+      "name": "no cohort has undefined retention",
+      "passed": true
+    },
+    {
+      "group": "ordering",
+      "name": "arrival list order does not change report 1",
+      "passed": true
+    },
+    {
+      "group": "ordering",
+      "name": "arrival list order does not change report 17",
+      "passed": true
+    },
+    {
+      "group": "ordering",
+      "name": "arrival list order does not change report 42",
+      "passed": true
+    },
+    {
+      "group": "ingest",
+      "name": "unknown event",
+      "passed": true
+    },
+    {
+      "group": "ingest",
+      "name": "unknown user",
+      "passed": true
+    },
+    {
+      "group": "ingest",
+      "name": "bad schema",
+      "passed": true
+    },
+    {
+      "group": "ingest",
+      "name": "boolean schema",
+      "passed": true
+    },
+    {
+      "group": "ingest",
+      "name": "missing ID",
+      "passed": true
+    },
+    {
+      "group": "ingest",
+      "name": "signup operation",
+      "passed": true
+    },
+    {
+      "group": "ingest",
+      "name": "generation requires operation",
+      "passed": true
+    },
+    {
+      "group": "ingest",
+      "name": "receipt-before-occurrence rejected by fixture",
+      "passed": true
+    },
+    {
+      "group": "ingest",
+      "name": "unapproved property rejected",
+      "passed": true
+    },
+    {
+      "group": "ingest",
+      "name": "unapproved property value rejected",
+      "passed": true
+    },
+    {
+      "group": "ingest",
+      "name": "conflicting duplicate not silently dropped",
+      "passed": true
+    },
+    {
+      "group": "identity",
+      "name": "duplicate canonical user",
+      "passed": true
+    },
+    {
+      "group": "identity",
+      "name": "alias to missing canonical user",
+      "passed": true
+    },
+    {
+      "group": "identity",
+      "name": "canonical user cannot be an alias",
+      "passed": true
+    },
+    {
+      "group": "experiment",
+      "name": "control rate",
+      "passed": true
+    },
+    {
+      "group": "experiment",
+      "name": "treatment rate",
+      "passed": true
+    },
+    {
+      "group": "experiment",
+      "name": "absolute percentage points",
+      "passed": true
+    },
+    {
+      "group": "experiment",
+      "name": "relative percentage",
+      "passed": true
+    },
+    {
+      "group": "experiment",
+      "name": "normal count rule",
+      "passed": true
+    },
+    {
+      "group": "experiment",
+      "name": "approximate interval",
+      "passed": true
+    },
+    {
+      "group": "experiment",
+      "name": "balanced assignment statistic",
+      "passed": true
+    },
+    {
+      "group": "experiment",
+      "name": "balanced assignment p",
+      "passed": true
+    },
+    {
+      "group": "experiment",
+      "name": "no assignment proof",
+      "passed": true
+    },
+    {
+      "group": "experiment",
+      "name": "pooled two-sided p reference",
+      "passed": true
+    },
+    {
+      "group": "experiment",
+      "name": "equal rates give p one",
+      "passed": true
+    },
+    {
+      "group": "experiment",
+      "name": "swapping groups reverses lift",
+      "passed": true
+    },
+    {
+      "group": "experiment",
+      "name": "swapping groups preserves two-sided p",
+      "passed": true
+    },
+    {
+      "group": "experiment",
+      "name": "small-count interval withheld",
+      "passed": true
+    },
+    {
+      "group": "experiment",
+      "name": "small-count p withheld",
+      "passed": true
+    },
+    {
+      "group": "experiment",
+      "name": "zero baseline has undefined relative lift",
+      "passed": true
+    },
+    {
+      "group": "experiment",
+      "name": "all successes do not create zero-width normal interval",
+      "passed": true
+    },
+    {
+      "group": "srm",
+      "name": "imbalance statistic",
+      "passed": true
+    },
+    {
+      "group": "srm",
+      "name": "imbalance triggers declared guard",
+      "passed": true
+    },
+    {
+      "group": "srm",
+      "name": "imbalanced p is tiny not silently rounded zero",
+      "passed": true
+    },
+    {
+      "group": "srm",
+      "name": "allocation follows expected share",
+      "passed": true
+    },
+    {
+      "group": "srm",
+      "name": "tiny expected counts withhold approximation",
+      "passed": true
+    },
+    {
+      "group": "experiment-input",
+      "name": "(0, 0, 100, 20)",
+      "passed": true
+    },
+    {
+      "group": "experiment-input",
+      "name": "(100, 101, 100, 20)",
+      "passed": true
+    },
+    {
+      "group": "experiment-input",
+      "name": "(True, 0, 100, 20)",
+      "passed": true
+    },
+    {
+      "group": "experiment-input",
+      "name": "(100, -1, 100, 20)",
+      "passed": true
+    },
+    {
+      "group": "experiment-input",
+      "name": "(100, 20, 100.5, 20)",
+      "passed": true
+    },
+    {
+      "group": "experiment-input",
+      "name": "invalid allocation 0",
+      "passed": true
+    },
+    {
+      "group": "experiment-input",
+      "name": "invalid allocation 1",
+      "passed": true
+    },
+    {
+      "group": "experiment-input",
+      "name": "invalid allocation True",
+      "passed": true
+    },
+    {
+      "group": "experiment-input",
+      "name": "invalid allocation nan",
+      "passed": true
+    },
+    {
+      "group": "experiment-input",
+      "name": "invalid allocation inf",
+      "passed": true
+    },
+    {
+      "group": "boundary",
+      "name": "input event evidence unchanged",
+      "passed": true
+    },
+    {
+      "group": "boundary",
+      "name": "synthetic scope retained",
+      "passed": true
+    }
+  ],
+  "observations": {
+    "scope": "Invented local event data and aggregate experiment counts; no live analytics account, real customers or randomized feature deployment",
+    "intake": {
+      "duplicate_reports_ignored": 1,
+      "stored_events": 28
+    },
+    "initial": {
+      "activation": {
+        "eligible": 5,
+        "immature_excluded": 2,
+        "started": 5,
+        "completed": 2,
+        "rate_pct": "40.000000",
+        "start_to_complete_pct": "40.000000"
+      },
+      "retention": {
+        "day": 7,
+        "eligible": 5,
+        "returned": 2,
+        "rate_pct": "40.000000",
+        "cohorts": {
+          "2026-10-01": {
+            "eligible": 3,
+            "returned": 1,
+            "rate_pct": "33.333333"
+          },
+          "2026-10-02": {
+            "eligible": 2,
+            "returned": 1,
+            "rate_pct": "50.000000"
+          }
+        }
+      }
+    },
+    "revised": {
+      "activation": {
+        "eligible": 5,
+        "immature_excluded": 2,
+        "started": 5,
+        "completed": 2,
+        "rate_pct": "40.000000",
+        "start_to_complete_pct": "40.000000"
+      },
+      "retention": {
+        "day": 7,
+        "eligible": 5,
+        "returned": 3,
+        "rate_pct": "60.000000",
+        "cohorts": {
+          "2026-10-01": {
+            "eligible": 3,
+            "returned": 1,
+            "rate_pct": "33.333333"
+          },
+          "2026-10-02": {
+            "eligible": 2,
+            "returned": 2,
+            "rate_pct": "100.000000"
+          }
+        }
+      }
+    },
+    "activity_oct_8": {
+      "events": 2,
+      "active_users": 1
+    },
+    "experiment": {
+      "control_rate_pct": "20.000000",
+      "treatment_rate_pct": "24.000000",
+      "absolute_lift_pp": "4.000000",
+      "relative_lift_pct": "20.000000",
+      "normal_approximation_adequate_for_fixture": true,
+      "approx_95_ci_pp": [
+        "0.373272",
+        "7.626728"
+      ],
+      "two_sided_p_value": 0.030837167828904336,
+      "srm_chi_square": 0.0,
+      "srm_p_value": 1.0,
+      "srm_flag_at_0_001": false,
+      "assignment_verified": false,
+      "scope": "Aggregate synthetic counts; no randomized deployment, power plan or causal effect verified."
+    },
+    "imbalanced_assignment": {
+      "control_rate_pct": "20.000000",
+      "treatment_rate_pct": "24.000000",
+      "absolute_lift_pp": "4.000000",
+      "relative_lift_pct": "20.000000",
+      "normal_approximation_adequate_for_fixture": true,
+      "approx_95_ci_pp": [
+        "-0.221892",
+        "8.221892"
+      ],
+      "two_sided_p_value": 0.059365274843947956,
+      "srm_chi_square": 100.0,
+      "srm_p_value": 1.5239706048320992e-23,
+      "srm_flag_at_0_001": true,
+      "assignment_verified": false,
+      "scope": "Aggregate synthetic counts; no randomized deployment, power plan or causal effect verified."
+    }
+  },
+  "external_services_called": false,
+  "persistent_listener_started": false,
+  "database_closed": true,
+  "scope": "Real local SQLite on synthetic events, input/time/identity/cohort checks and aggregate normal-approximation/SRM arithmetic. No vendor account, customer telemetry or real experiment."
+}

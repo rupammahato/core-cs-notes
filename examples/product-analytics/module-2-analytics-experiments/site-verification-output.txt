@@ -1,0 +1,71 @@
+Owned preview ready on loopback port 60929
+Routes checked: 16/126
+Routes checked: 32/126
+Routes checked: 48/126
+Routes checked: 64/126
+Routes checked: 80/126
+Routes checked: 96/126
+Routes checked: 112/126
+Routes checked: 126/126
+Scoped search passed: product-analytics
+Scoped search passed: product-analytics
+Scoped search passed: product-analytics
+Scoped search passed: system-design
+Scoped search passed: resume-skills
+Owned preview process closed
+{
+  "routesChecked": 126,
+  "assertions": {
+    "chapterTitle": true,
+    "chapterEvidence": true,
+    "questionBank": true,
+    "interviewMock": true,
+    "computedMetrics": true,
+    "experimentEvidence": true,
+    "evidenceBoundaries": true,
+    "sidebarGroup": true,
+    "roadmapLink": true,
+    "predecessorLink": true,
+    "remainingPlanned": true,
+    "homeCard": true,
+    "sourceContainsSearchFilter": true
+  },
+  "search": {
+    "product-analytics:Retention": {
+      "query": "Retention",
+      "status": 200,
+      "results": 19,
+      "indexed": true,
+      "scoped": true
+    },
+    "product-analytics:Pricing": {
+      "query": "Pricing",
+      "status": 200,
+      "results": 18,
+      "indexed": true,
+      "scoped": true
+    },
+    "product-analytics:RICE": {
+      "query": "RICE",
+      "status": 200,
+      "results": 11,
+      "indexed": true,
+      "scoped": true
+    },
+    "system-design:Analytics": {
+      "query": "Analytics",
+      "status": 200,
+      "results": 43,
+      "indexed": true,
+      "scoped": true
+    },
+    "resume-skills:Consolidation": {
+      "query": "Consolidation",
+      "status": 200,
+      "results": 18,
+      "indexed": true,
+      "scoped": true
+    }
+  },
+  "temporaryServerClosed": true
+}

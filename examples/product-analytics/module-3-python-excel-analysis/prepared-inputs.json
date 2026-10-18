@@ -1,0 +1,139 @@
+{
+  "jobs": [
+    {
+      "job_id": "0001",
+      "workspace_id": "wsA",
+      "occurred_at": "2026-10-01T00:30:00+05:30",
+      "occurred_utc": "2026-09-30T19:00:00+00:00",
+      "status": "completed",
+      "billed_cents": 100
+    },
+    {
+      "job_id": "0002",
+      "workspace_id": "wsA",
+      "occurred_at": "2026-10-01T00:30:00Z",
+      "occurred_utc": "2026-10-01T00:30:00+00:00",
+      "status": "completed",
+      "billed_cents": 200
+    },
+    {
+      "job_id": "0003",
+      "workspace_id": "wsB",
+      "occurred_at": "2026-10-15T12:00:00Z",
+      "occurred_utc": "2026-10-15T12:00:00+00:00",
+      "status": "completed",
+      "billed_cents": 0
+    },
+    {
+      "job_id": "0004",
+      "workspace_id": "wsB",
+      "occurred_at": "2026-10-20T12:00:00Z",
+      "occurred_utc": "2026-10-20T12:00:00+00:00",
+      "status": "failed",
+      "billed_cents": null
+    },
+    {
+      "job_id": "0005",
+      "workspace_id": "wsC",
+      "occurred_at": "2026-10-31T23:30:00Z",
+      "occurred_utc": "2026-10-31T23:30:00+00:00",
+      "status": "completed",
+      "billed_cents": null
+    },
+    {
+      "job_id": "0006",
+      "workspace_id": "wsA",
+      "occurred_at": "2026-11-01T00:00:00Z",
+      "occurred_utc": "2026-11-01T00:00:00+00:00",
+      "status": "completed",
+      "billed_cents": 400
+    },
+    {
+      "job_id": "0007",
+      "workspace_id": "wsA",
+      "occurred_at": "",
+      "occurred_utc": null,
+      "status": "completed",
+      "billed_cents": 50
+    },
+    {
+      "job_id": "0008",
+      "workspace_id": "wsA",
+      "occurred_at": "not-a-date",
+      "occurred_utc": null,
+      "status": "completed",
+      "billed_cents": 80
+    },
+    {
+      "job_id": "0009",
+      "workspace_id": "wsUnknown",
+      "occurred_at": "2026-10-10T00:00:00Z",
+      "occurred_utc": "2026-10-10T00:00:00+00:00",
+      "status": "completed",
+      "billed_cents": 90
+    }
+  ],
+  "attempts": [
+    {
+      "attempt_id": "a01",
+      "job_id": "0002",
+      "cost_cents": 30
+    },
+    {
+      "attempt_id": "a02",
+      "job_id": "0002",
+      "cost_cents": 10
+    },
+    {
+      "attempt_id": "a03",
+      "job_id": "0003",
+      "cost_cents": 20
+    },
+    {
+      "attempt_id": "a04",
+      "job_id": "0004",
+      "cost_cents": 15
+    },
+    {
+      "attempt_id": "a05",
+      "job_id": "0005",
+      "cost_cents": 25
+    },
+    {
+      "attempt_id": "a06",
+      "job_id": "0009",
+      "cost_cents": 10
+    },
+    {
+      "attempt_id": "a07",
+      "job_id": "0001",
+      "cost_cents": 10
+    },
+    {
+      "attempt_id": "a08",
+      "job_id": "0006",
+      "cost_cents": 50
+    },
+    {
+      "attempt_id": "a09",
+      "job_id": "0999",
+      "cost_cents": 7
+    }
+  ],
+  "workspaces": [
+    {
+      "workspace_id": "wsA",
+      "plan": "paid"
+    },
+    {
+      "workspace_id": "wsB",
+      "plan": "free"
+    },
+    {
+      "workspace_id": "wsC",
+      "plan": "paid"
+    }
+  ],
+  "start": "2026-10-01T00:00:00+00:00",
+  "end": "2026-11-01T00:00:00+00:00"
+}

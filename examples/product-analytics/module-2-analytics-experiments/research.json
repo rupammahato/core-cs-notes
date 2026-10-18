@@ -1,0 +1,54 @@
+{
+  "checked_date": "2026-10-18",
+  "scope": "Public primary documentation and real local SQLite/statistical arithmetic on invented data; no account controls, legal compliance certification, customer study or experiment deployment",
+  "sources": [
+    {
+      "url": "https://posthog.com/docs/product-analytics/funnels",
+      "supports": "Funnel order, conversion windows and incomplete periods"
+    },
+    {
+      "url": "https://posthog.com/docs/product-analytics/retention",
+      "supports": "Retention modes, cohort settings and aggregation definitions"
+    },
+    {
+      "url": "https://posthog.com/docs/getting-started/identify-users",
+      "supports": "Explicit anonymous-to-identified user linking"
+    },
+    {
+      "url": "https://support.google.com/analytics/answer/9356037?hl=en",
+      "supports": "GA4 event vocabulary"
+    },
+    {
+      "url": "https://support.google.com/analytics/answer/13965727?hl=en",
+      "supports": "GA4 key events and Google Ads conversion terminology"
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/clarity/session-recordings/recordings-overview",
+      "supports": "Session recordings for interaction investigation"
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/clarity/heatmaps/heatmaps-overview",
+      "supports": "Aggregated heatmap behavior"
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/clarity/setup-and-installation/clarity-masking",
+      "supports": "Masking controls"
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/clarity/setup-and-installation/consent-mode",
+      "supports": "Collection consent controls"
+    },
+    {
+      "url": "https://www.itl.nist.gov/div898/software/dataplot/refman2/auxillar/diffprop.htm",
+      "supports": "Large-sample two-proportion equality test"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/research/articles/diagnosing-sample-ratio-mismatch-in-a-b-testing/",
+      "supports": "SRM as a diagnostic for trustworthy experimentation"
+    }
+  ],
+  "access_note": "PostHog pages returned text/markdown unsupported by the web viewer; their public HTTPS Markdown was read directly with HTTP 200. Other sources were read through the web tool.",
+  "fixture_definitions": "Elapsed half-open UTC windows, mature cohorts, same-operation ordered activation and exact-period retention; no vendor-default output parity claimed",
+  "statistical_limits": "Normal approximation and two-group SRM only; aggregate counts do not prove assignment, independence, power, fixed stopping or causal effect",
+  "next_research": "P3 Python/NumPy/pandas and Excel analysis documentation"
+}

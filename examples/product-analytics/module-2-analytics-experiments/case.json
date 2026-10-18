@@ -1,0 +1,422 @@
+{
+  "scope": "Invented local event data and aggregate experiment counts; no live analytics account, real customers or randomized feature deployment",
+  "users": [
+    {
+      "id": "u1",
+      "internal": false
+    },
+    {
+      "id": "u2",
+      "internal": false
+    },
+    {
+      "id": "u3",
+      "internal": false
+    },
+    {
+      "id": "u4",
+      "internal": false
+    },
+    {
+      "id": "u5",
+      "internal": false
+    },
+    {
+      "id": "u6",
+      "internal": false
+    },
+    {
+      "id": "u7",
+      "internal": false
+    },
+    {
+      "id": "staff",
+      "internal": true
+    }
+  ],
+  "aliases": {
+    "anon-1": "u1"
+  },
+  "events": [
+    {
+      "id": "s1",
+      "subject": "anon-1",
+      "name": "signup_completed",
+      "occurred_at": "2026-10-01T00:00:00Z",
+      "received_at": "2026-10-01T00:00:00Z",
+      "operation": null,
+      "version": 1,
+      "properties": {
+        "device": "mobile",
+        "plan": "free"
+      }
+    },
+    {
+      "id": "s2",
+      "subject": "u2",
+      "name": "signup_completed",
+      "occurred_at": "2026-10-01T00:00:00Z",
+      "received_at": "2026-10-01T00:00:00Z",
+      "operation": null,
+      "version": 1,
+      "properties": {
+        "device": "mobile",
+        "plan": "free"
+      }
+    },
+    {
+      "id": "s3",
+      "subject": "u3",
+      "name": "signup_completed",
+      "occurred_at": "2026-10-01T00:00:00Z",
+      "received_at": "2026-10-01T00:00:00Z",
+      "operation": null,
+      "version": 1,
+      "properties": {
+        "device": "mobile",
+        "plan": "free"
+      }
+    },
+    {
+      "id": "s4",
+      "subject": "u4",
+      "name": "signup_completed",
+      "occurred_at": "2026-10-02T00:00:00Z",
+      "received_at": "2026-10-02T00:00:00Z",
+      "operation": null,
+      "version": 1,
+      "properties": {
+        "device": "mobile",
+        "plan": "free"
+      }
+    },
+    {
+      "id": "s5",
+      "subject": "u5",
+      "name": "signup_completed",
+      "occurred_at": "2026-10-02T00:00:00Z",
+      "received_at": "2026-10-02T00:00:00Z",
+      "operation": null,
+      "version": 1,
+      "properties": {
+        "device": "mobile",
+        "plan": "free"
+      }
+    },
+    {
+      "id": "s6",
+      "subject": "u6",
+      "name": "signup_completed",
+      "occurred_at": "2026-10-10T12:00:00Z",
+      "received_at": "2026-10-10T12:00:00Z",
+      "operation": null,
+      "version": 1,
+      "properties": {
+        "device": "mobile",
+        "plan": "free"
+      }
+    },
+    {
+      "id": "s7",
+      "subject": "u7",
+      "name": "signup_completed",
+      "occurred_at": "2026-10-10T12:00:00Z",
+      "received_at": "2026-10-10T12:00:00Z",
+      "operation": null,
+      "version": 1,
+      "properties": {
+        "device": "mobile",
+        "plan": "free"
+      }
+    },
+    {
+      "id": "g1",
+      "subject": "u1",
+      "name": "generation_started",
+      "occurred_at": "2026-10-01T01:00:00Z",
+      "received_at": "2026-10-01T01:00:00Z",
+      "operation": "op1",
+      "version": 1,
+      "properties": {
+        "device": "mobile",
+        "plan": "free"
+      }
+    },
+    {
+      "id": "g2",
+      "subject": "u2",
+      "name": "generation_started",
+      "occurred_at": "2026-10-01T01:00:00Z",
+      "received_at": "2026-10-01T01:00:00Z",
+      "operation": "op2",
+      "version": 1,
+      "properties": {
+        "device": "mobile",
+        "plan": "free"
+      }
+    },
+    {
+      "id": "g3",
+      "subject": "u3",
+      "name": "generation_started",
+      "occurred_at": "2026-10-01T01:00:00Z",
+      "received_at": "2026-10-01T01:00:00Z",
+      "operation": "op3",
+      "version": 1,
+      "properties": {
+        "device": "mobile",
+        "plan": "free"
+      }
+    },
+    {
+      "id": "g4",
+      "subject": "u4",
+      "name": "generation_started",
+      "occurred_at": "2026-10-02T01:00:00Z",
+      "received_at": "2026-10-02T01:00:00Z",
+      "operation": "op4",
+      "version": 1,
+      "properties": {
+        "device": "mobile",
+        "plan": "free"
+      }
+    },
+    {
+      "id": "g5",
+      "subject": "u5",
+      "name": "generation_started",
+      "occurred_at": "2026-10-02T01:00:00Z",
+      "received_at": "2026-10-02T01:00:00Z",
+      "operation": "op5",
+      "version": 1,
+      "properties": {
+        "device": "mobile",
+        "plan": "free"
+      }
+    },
+    {
+      "id": "g6",
+      "subject": "u6",
+      "name": "generation_started",
+      "occurred_at": "2026-10-10T13:00:00Z",
+      "received_at": "2026-10-10T13:00:00Z",
+      "operation": "op6",
+      "version": 1,
+      "properties": {
+        "device": "mobile",
+        "plan": "free"
+      }
+    },
+    {
+      "id": "c1",
+      "subject": "u1",
+      "name": "generation_succeeded",
+      "occurred_at": "2026-10-01T02:00:00Z",
+      "received_at": "2026-10-01T02:00:00Z",
+      "operation": "op1",
+      "version": 1,
+      "properties": {
+        "device": "mobile",
+        "plan": "free"
+      }
+    },
+    {
+      "id": "c2",
+      "subject": "u2",
+      "name": "generation_succeeded",
+      "occurred_at": "2026-10-02T01:00:00Z",
+      "received_at": "2026-10-02T01:00:00Z",
+      "operation": "op2",
+      "version": 1,
+      "properties": {
+        "device": "mobile",
+        "plan": "free"
+      }
+    },
+    {
+      "id": "c4",
+      "subject": "u4",
+      "name": "generation_succeeded",
+      "occurred_at": "2026-10-03T00:00:00Z",
+      "received_at": "2026-10-03T00:00:00Z",
+      "operation": "op4",
+      "version": 1,
+      "properties": {
+        "device": "mobile",
+        "plan": "free"
+      }
+    },
+    {
+      "id": "c5",
+      "subject": "u5",
+      "name": "generation_succeeded",
+      "occurred_at": "2026-10-02T02:00:00Z",
+      "received_at": "2026-10-02T02:00:00Z",
+      "operation": "op5",
+      "version": 1,
+      "properties": {
+        "device": "mobile",
+        "plan": "free"
+      }
+    },
+    {
+      "id": "c6",
+      "subject": "u6",
+      "name": "generation_succeeded",
+      "occurred_at": "2026-10-10T14:00:00Z",
+      "received_at": "2026-10-10T14:00:00Z",
+      "operation": "op6",
+      "version": 1,
+      "properties": {
+        "device": "mobile",
+        "plan": "free"
+      }
+    },
+    {
+      "id": "early5",
+      "subject": "u5",
+      "name": "generation_succeeded",
+      "occurred_at": "2026-10-02T00:30:00Z",
+      "received_at": "2026-10-02T00:30:00Z",
+      "operation": "orphan-op",
+      "version": 1,
+      "properties": {
+        "device": "mobile",
+        "plan": "free"
+      }
+    },
+    {
+      "id": "r1",
+      "subject": "u1",
+      "name": "generation_succeeded",
+      "occurred_at": "2026-10-08T01:00:00Z",
+      "received_at": "2026-10-08T01:00:00Z",
+      "operation": "return-r1",
+      "version": 1,
+      "properties": {
+        "device": "mobile",
+        "plan": "free"
+      }
+    },
+    {
+      "id": "r1b",
+      "subject": "u1",
+      "name": "generation_succeeded",
+      "occurred_at": "2026-10-08T02:00:00Z",
+      "received_at": "2026-10-08T02:00:00Z",
+      "operation": "return-r1b",
+      "version": 1,
+      "properties": {
+        "device": "mobile",
+        "plan": "free"
+      }
+    },
+    {
+      "id": "r2",
+      "subject": "u2",
+      "name": "generation_succeeded",
+      "occurred_at": "2026-10-10T01:00:00Z",
+      "received_at": "2026-10-10T01:00:00Z",
+      "operation": "return-r2",
+      "version": 1,
+      "properties": {
+        "device": "mobile",
+        "plan": "free"
+      }
+    },
+    {
+      "id": "r4",
+      "subject": "u4",
+      "name": "generation_succeeded",
+      "occurred_at": "2026-10-09T01:00:00Z",
+      "received_at": "2026-10-09T01:00:00Z",
+      "operation": "return-r4",
+      "version": 1,
+      "properties": {
+        "device": "mobile",
+        "plan": "free"
+      }
+    },
+    {
+      "id": "r5",
+      "subject": "u5",
+      "name": "generation_succeeded",
+      "occurred_at": "2026-10-09T10:00:00Z",
+      "received_at": "2026-10-12T00:00:00Z",
+      "operation": "return-r5",
+      "version": 1,
+      "properties": {
+        "device": "mobile",
+        "plan": "free"
+      }
+    },
+    {
+      "id": "internal-signup",
+      "subject": "staff",
+      "name": "signup_completed",
+      "occurred_at": "2026-10-01T00:00:00Z",
+      "received_at": "2026-10-01T00:00:00Z",
+      "operation": null,
+      "version": 1,
+      "properties": {
+        "device": "mobile",
+        "plan": "free"
+      }
+    },
+    {
+      "id": "internal-start",
+      "subject": "staff",
+      "name": "generation_started",
+      "occurred_at": "2026-10-01T01:00:00Z",
+      "received_at": "2026-10-01T01:00:00Z",
+      "operation": "staff-op",
+      "version": 1,
+      "properties": {
+        "device": "mobile",
+        "plan": "free"
+      }
+    },
+    {
+      "id": "internal-success",
+      "subject": "staff",
+      "name": "generation_succeeded",
+      "occurred_at": "2026-10-01T02:00:00Z",
+      "received_at": "2026-10-01T02:00:00Z",
+      "operation": "staff-op",
+      "version": 1,
+      "properties": {
+        "device": "mobile",
+        "plan": "free"
+      }
+    },
+    {
+      "id": "future1",
+      "subject": "u1",
+      "name": "generation_succeeded",
+      "occurred_at": "2026-10-20T00:00:00Z",
+      "received_at": "2026-10-20T00:00:00Z",
+      "operation": "future-op",
+      "version": 1,
+      "properties": {
+        "device": "mobile",
+        "plan": "free"
+      }
+    },
+    {
+      "id": "c1",
+      "subject": "u1",
+      "name": "generation_succeeded",
+      "occurred_at": "2026-10-01T02:00:00Z",
+      "received_at": "2026-10-02T00:00:00Z",
+      "operation": "op1",
+      "version": 1,
+      "properties": {
+        "device": "mobile",
+        "plan": "free"
+      }
+    }
+  ],
+  "event_cutoff": "2026-10-11T00:00:00Z",
+  "initial_knowledge_cutoff": "2026-10-11T00:00:00Z",
+  "revised_knowledge_cutoff": "2026-10-13T00:00:00Z"
+}

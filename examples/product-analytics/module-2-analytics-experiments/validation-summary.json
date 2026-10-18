@@ -1,0 +1,83 @@
+{
+  "verified_date": "2026-10-18",
+  "section_completed": "P2",
+  "next": "P3: Python and Excel for Analysis",
+  "authored_track_files": 4,
+  "remaining_sections": [
+    "P3",
+    "P4",
+    "P5"
+  ],
+  "note_lines": 2594,
+  "questions": 30,
+  "practice_tasks": 12,
+  "mock_minutes": 30,
+  "runtime": {
+    "python": "3.13.15",
+    "sqlite": "3.50.4",
+    "node": "v22.14.0"
+  },
+  "fresh_runtime_checks": 95,
+  "previous_P0_P1_recorded_checks": 141,
+  "previous_runtime_suites_freshly_rerun": false,
+  "exact_output_blocks": 4,
+  "content_validation": "passed",
+  "P0_unchanged_this_section": true,
+  "P1_only_continuation_changed": true,
+  "original_handbook_files_unchanged": 121,
+  "website": {
+    "build_passed": true,
+    "compiler": "webpack",
+    "typescript_passed": true,
+    "static_pages": 130,
+    "routes_checked": 126,
+    "all_routes_200": true,
+    "planned_P3_status": 404,
+    "search": {
+      "product-analytics:Retention": {
+        "query": "Retention",
+        "status": 200,
+        "results": 19,
+        "indexed": true,
+        "scoped": true
+      },
+      "product-analytics:Pricing": {
+        "query": "Pricing",
+        "status": 200,
+        "results": 18,
+        "indexed": true,
+        "scoped": true
+      },
+      "product-analytics:RICE": {
+        "query": "RICE",
+        "status": 200,
+        "results": 11,
+        "indexed": true,
+        "scoped": true
+      },
+      "system-design:Analytics": {
+        "query": "Analytics",
+        "status": 200,
+        "results": 43,
+        "indexed": true,
+        "scoped": true
+      },
+      "resume-skills:Consolidation": {
+        "query": "Consolidation",
+        "status": 200,
+        "results": 18,
+        "indexed": true,
+        "scoped": true
+      }
+    },
+    "temporary_preview_port": 60929,
+    "temporary_preview_closed": true,
+    "cached_font_fixture_used": true
+  },
+  "port_3000_stopped": true,
+  "database_closed": true,
+  "telemetry_synthetic": true,
+  "real_assignment_or_causal_effect_verified": false,
+  "vendor_account_accessed": false,
+  "scope": "Real local SQLite and statistical arithmetic on invented data plus production-site HTML/navigation/search. No real customer telemetry, vendor-output parity, account setup or randomized deployment."
+}

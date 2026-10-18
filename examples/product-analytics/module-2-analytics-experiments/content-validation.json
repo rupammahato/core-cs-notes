@@ -1,0 +1,27 @@
+{
+  "verified_date": "2026-10-18",
+  "fresh_runtime_checks": 95,
+  "questions": 30,
+  "practice_tasks": 12,
+  "mock_minutes": 30,
+  "unchecked_learning_items": 14,
+  "exact_output_blocks": 4,
+  "research_sources": 11,
+  "internal_links_resolve": 5,
+  "authored_track_files": 7,
+  "remaining_sections": [],
+  "original_handbooks_unchanged": 121,
+  "P0_unchanged_this_section": true,
+  "P1_only_continuation_changed": true,
+  "historical_runtime_suites_rerun": false,
+  "note_lines": 4620,
+  "chapter_sha256": "01a53f6d4e71f7953147c434655331f04498ec110237facb7c6f6cdb68cbada4",
+  "example_source_sha256": {
+    "analytics.py": "840c8eadd42dbaf45aaa92b8d797990958012ca5a3cfc6fe672692fb1966dc4c",
+    "metrics.sql": "6d11cbac9823bbe0667d65c41921ea3b5f29d2a5602464659ea6af23e25aca3e",
+    "tracking-plan.json": "b3e971d015d049d2d110bd3bb11dbe4fd9395812fa9771d8238be80812355fe2",
+    "case.json": "4a7e4293a6685194ac9319b302417dbf81bb18214b598f66bc0a647df1de216d",
+    "verify.py": "9f360cbf4060dbd6160110cbaac8e1438909e606b99c9dc4d066e7bd6c4d21e6"
+  },
+  "scope": "P2 content/output/source and prior-teaching preservation audit, not vendor output parity or a real experiment validation."
+}

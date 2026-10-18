@@ -1,0 +1,576 @@
+{
+  "verified_date": "2026-10-18",
+  "node": "v22.14.0",
+  "port": 59865,
+  "routes": [
+    {
+      "route": "/",
+      "status": 200
+    },
+    {
+      "route": "/docs/cn/dns",
+      "status": 200
+    },
+    {
+      "route": "/docs/cn/http-web",
+      "status": 200
+    },
+    {
+      "route": "/docs/cn/consolidation",
+      "status": 200
+    },
+    {
+      "route": "/docs/cn/url-walkthrough",
+      "status": 200
+    },
+    {
+      "route": "/docs/cn/framing-errors",
+      "status": 200
+    },
+    {
+      "route": "/docs/cn/fundamentals-layering",
+      "status": 200
+    },
+    {
+      "route": "/docs/cn",
+      "status": 200
+    },
+    {
+      "route": "/docs/cn/ip-addressing-subnetting",
+      "status": 200
+    },
+    {
+      "route": "/docs/cn/medium-access-lan",
+      "status": 200
+    },
+    {
+      "route": "/docs/cn/routing",
+      "status": 200
+    },
+    {
+      "route": "/docs/cn/network-security",
+      "status": 200
+    },
+    {
+      "route": "/docs/cn/tcp-reliability-congestion",
+      "status": 200
+    },
+    {
+      "route": "/docs/cn/udp-tcp-connections",
+      "status": 200
+    },
+    {
+      "route": "/docs/dbms/er-model-schema-design",
+      "status": 200
+    },
+    {
+      "route": "/docs/dbms/normalization",
+      "status": 200
+    },
+    {
+      "route": "/docs/dbms/dbms-fundamentals",
+      "status": 200
+    },
+    {
+      "route": "/docs/dbms/relational-model-keys",
+      "status": 200
+    },
+    {
+      "route": "/docs/dbms",
+      "status": 200
+    },
+    {
+      "route": "/docs/dbms/indexing-storage",
+      "status": 200
+    },
+    {
+      "route": "/docs/dbms/consolidation",
+      "status": 200
+    },
+    {
+      "route": "/docs/dbms/nosql-scaling",
+      "status": 200
+    },
+    {
+      "route": "/docs/dbms/sql-ddl-views-programmability",
+      "status": 200
+    },
+    {
+      "route": "/docs/dbms/sql-joins-subqueries-windows",
+      "status": 200
+    },
+    {
+      "route": "/docs/dbms/sql-querying",
+      "status": 200
+    },
+    {
+      "route": "/docs/dbms/recovery-relational-algebra",
+      "status": 200
+    },
+    {
+      "route": "/docs/dbms/transactions-concurrency",
+      "status": 200
+    },
+    {
+      "route": "/docs/dsa/dynamic-programming",
+      "status": 200
+    },
+    {
+      "route": "/docs/dsa/graphs",
+      "status": 200
+    },
+    {
+      "route": "/docs/dsa/greedy-intervals",
+      "status": 200
+    },
+    {
+      "route": "/docs/dsa/bit-manipulation",
+      "status": 200
+    },
+    {
+      "route": "/docs/dsa/complexity",
+      "status": 200
+    },
+    {
+      "route": "/docs/dsa/cpp-stl",
+      "status": 200
+    },
+    {
+      "route": "/docs/dsa",
+      "status": 200
+    },
+    {
+      "route": "/docs/dsa/arrays-strings",
+      "status": 200
+    },
+    {
+      "route": "/docs/dsa/hashing",
+      "status": 200
+    },
+    {
+      "route": "/docs/dsa/linked-lists",
+      "status": 200
+    },
+    {
+      "route": "/docs/dsa/stacks-queues",
+      "status": 200
+    },
+    {
+      "route": "/docs/dsa/backtracking",
+      "status": 200
+    },
+    {
+      "route": "/docs/dsa/recursion",
+      "status": 200
+    },
+    {
+      "route": "/docs/dsa/searching-sorting",
+      "status": 200
+    },
+    {
+      "route": "/docs/dsa/heaps",
+      "status": 200
+    },
+    {
+      "route": "/docs/dsa/trees",
+      "status": 200
+    },
+    {
+      "route": "/docs/dsa/trie",
+      "status": 200
+    },
+    {
+      "route": "/docs/oop/classes-objects",
+      "status": 200
+    },
+    {
+      "route": "/docs/oop/constructors-destructors-copying",
+      "status": 200
+    },
+    {
+      "route": "/docs/oop/encapsulation-abstraction",
+      "status": 200
+    },
+    {
+      "route": "/docs/oop/inheritance",
+      "status": 200
+    },
+    {
+      "route": "/docs/oop/polymorphism",
+      "status": 200
+    },
+    {
+      "route": "/docs/oop/design-patterns",
+      "status": 200
+    },
+    {
+      "route": "/docs/oop/solid-principles",
+      "status": 200
+    },
+    {
+      "route": "/docs/oop",
+      "status": 200
+    },
+    {
+      "route": "/docs/oop/lld-method-parking-lru-splitwise",
+      "status": 200
+    },
+    {
+      "route": "/docs/oop/lld-snake-elevator-bookmyshow",
+      "status": 200
+    },
+    {
+      "route": "/docs/oop/modern-cpp-object-model",
+      "status": 200
+    },
+    {
+      "route": "/docs/oop/relationships-uml",
+      "status": 200
+    },
+    {
+      "route": "/docs/oop/consolidation",
+      "status": 200
+    },
+    {
+      "route": "/docs/os/deadlocks",
+      "status": 200
+    },
+    {
+      "route": "/docs/os/synchronization",
+      "status": 200
+    },
+    {
+      "route": "/docs/os",
+      "status": 200
+    },
+    {
+      "route": "/docs/os/memory-management",
+      "status": 200
+    },
+    {
+      "route": "/docs/os/virtual-memory",
+      "status": 200
+    },
+    {
+      "route": "/docs/os/cpu-scheduling",
+      "status": 200
+    },
+    {
+      "route": "/docs/os/os-fundamentals",
+      "status": 200
+    },
+    {
+      "route": "/docs/os/processes",
+      "status": 200
+    },
+    {
+      "route": "/docs/os/threads",
+      "status": 200
+    },
+    {
+      "route": "/docs/os/consolidation",
+      "status": 200
+    },
+    {
+      "route": "/docs/os/putting-it-together",
+      "status": 200
+    },
+    {
+      "route": "/docs/os/ipc-io",
+      "status": 200
+    },
+    {
+      "route": "/docs/os/storage-file-systems",
+      "status": 200
+    },
+    {
+      "route": "/docs/product-analytics/python-excel-analysis",
+      "status": 200
+    },
+    {
+      "route": "/docs/product-analytics/product-analytics-experiments",
+      "status": 200
+    },
+    {
+      "route": "/docs/product-analytics/pricing-unit-economics",
+      "status": 200
+    },
+    {
+      "route": "/docs/product-analytics",
+      "status": 200
+    },
+    {
+      "route": "/docs/product-analytics/product-thinking-requirements-design",
+      "status": 200
+    },
+    {
+      "route": "/docs/resume-skills/embeddings-pinecone-pgvector",
+      "status": 200
+    },
+    {
+      "route": "/docs/resume-skills/langchain-langgraph-llamaindex",
+      "status": 200
+    },
+    {
+      "route": "/docs/resume-skills/llm-ai-api-fundamentals",
+      "status": 200
+    },
+    {
+      "route": "/docs/resume-skills/rag-document-ingestion",
+      "status": 200
+    },
+    {
+      "route": "/docs/resume-skills/api-security-authorization-multi-tenancy",
+      "status": 200
+    },
+    {
+      "route": "/docs/resume-skills/authentication-sessions-jwt-oauth",
+      "status": 200
+    },
+    {
+      "route": "/docs/resume-skills/express-backend-structure",
+      "status": 200
+    },
+    {
+      "route": "/docs/resume-skills/rest-apis-http",
+      "status": 200
+    },
+    {
+      "route": "/docs/resume-skills/webhooks-payments-reliable-integrations",
+      "status": 200
+    },
+    {
+      "route": "/docs/resume-skills/caching-background-jobs-data-ingestion",
+      "status": 200
+    },
+    {
+      "route": "/docs/resume-skills/mongodb-backend",
+      "status": 200
+    },
+    {
+      "route": "/docs/resume-skills/neo4j-graph-backed-applications",
+      "status": 200
+    },
+    {
+      "route": "/docs/resume-skills/postgresql-backend",
+      "status": 200
+    },
+    {
+      "route": "/docs/resume-skills/aws-gcp-fundamentals",
+      "status": 200
+    },
+    {
+      "route": "/docs/resume-skills/docker-fundamentals",
+      "status": 200
+    },
+    {
+      "route": "/docs/resume-skills/git-ci-cd-testing-observability-performance",
+      "status": 200
+    },
+    {
+      "route": "/docs/resume-skills/linux-deployment-nginx-pm2",
+      "status": 200
+    },
+    {
+      "route": "/docs/resume-skills/asynchronous-javascript",
+      "status": 200
+    },
+    {
+      "route": "/docs/resume-skills/how-backend-works",
+      "status": 200
+    },
+    {
+      "route": "/docs/resume-skills/javascript-fundamentals",
+      "status": 200
+    },
+    {
+      "route": "/docs/resume-skills/nodejs",
+      "status": 200
+    },
+    {
+      "route": "/docs/resume-skills/typescript-fundamentals",
+      "status": 200
+    },
+    {
+      "route": "/docs/resume-skills/nextjs-api-routes-tailwind",
+      "status": 200
+    },
+    {
+      "route": "/docs/resume-skills/react-fundamentals",
+      "status": 200
+    },
+    {
+      "route": "/docs/resume-skills",
+      "status": 200
+    },
+    {
+      "route": "/docs/resume-skills/django-django-rest-framework",
+      "status": 200
+    },
+    {
+      "route": "/docs/resume-skills/flask-fastapi-python-request-handling",
+      "status": 200
+    },
+    {
+      "route": "/docs/resume-skills/python-fundamentals",
+      "status": 200
+    },
+    {
+      "route": "/docs/resume-skills/resume-project-experience-deep-dives",
+      "status": 200
+    },
+    {
+      "route": "/docs/resume-skills/consolidation-interview-drills",
+      "status": 200
+    },
+    {
+      "route": "/docs/resume-skills/system-design-load-balancer",
+      "status": 200
+    },
+    {
+      "route": "/docs/system-design/application-architecture-service-boundaries",
+      "status": 200
+    },
+    {
+      "route": "/docs/system-design/data-caching-scaling",
+      "status": 200
+    },
+    {
+      "route": "/docs/system-design/design-method-estimation",
+      "status": 200
+    },
+    {
+      "route": "/docs/system-design/reliable-workflows-concurrency",
+      "status": 200
+    },
+    {
+      "route": "/docs/system-design/secure-observable-operations",
+      "status": 200
+    },
+    {
+      "route": "/docs/system-design",
+      "status": 200
+    },
+    {
+      "route": "/docs/system-design/consolidation",
+      "status": 200
+    },
+    {
+      "route": "/docs/system-design/analytics-event-pipeline",
+      "status": 200
+    },
+    {
+      "route": "/docs/system-design/booking-reservations",
+      "status": 200
+    },
+    {
+      "route": "/docs/system-design/chat-messaging",
+      "status": 200
+    },
+    {
+      "route": "/docs/system-design/checkout-payments-credit-ledger",
+      "status": 200
+    },
+    {
+      "route": "/docs/system-design/file-upload-processing",
+      "status": 200
+    },
+    {
+      "route": "/docs/system-design/job-scheduler-workers",
+      "status": 200
+    },
+    {
+      "route": "/docs/system-design/load-balancer-distributed-cache",
+      "status": 200
+    },
+    {
+      "route": "/docs/system-design/multi-tenant-rag",
+      "status": 200
+    },
+    {
+      "route": "/docs/system-design/multi-tenant-saas",
+      "status": 200
+    },
+    {
+      "route": "/docs/system-design/notifications-webhooks",
+      "status": 200
+    },
+    {
+      "route": "/docs/system-design/rate-limiter",
+      "status": 200
+    },
+    {
+      "route": "/docs/system-design/search-autocomplete",
+      "status": 200
+    },
+    {
+      "route": "/docs/system-design/social-feed-photo-sharing",
+      "status": 200
+    },
+    {
+      "route": "/docs/system-design/url-shortener",
+      "status": 200
+    }
+  ],
+  "assertions": {
+    "chapterTitle": true,
+    "chapterEvidence": true,
+    "questionBank": true,
+    "interviewMock": true,
+    "computedMetrics": true,
+    "workbookEvidence": true,
+    "evidenceBoundaries": true,
+    "sidebarGroup": true,
+    "roadmapLink": true,
+    "predecessorLink": true,
+    "remainingPlanned": true,
+    "homeCard": true,
+    "sourceContainsSearchFilter": true
+  },
+  "plannedChapterStatus": 404,
+  "search": {
+    "product-analytics:Python": {
+      "query": "Python",
+      "status": 200,
+      "results": 23,
+      "indexed": true,
+      "scoped": true
+    },
+    "product-analytics:Retention": {
+      "query": "Retention",
+      "status": 200,
+      "results": 23,
+      "indexed": true,
+      "scoped": true
+    },
+    "product-analytics:Pricing": {
+      "query": "Pricing",
+      "status": 200,
+      "results": 18,
+      "indexed": true,
+      "scoped": true
+    },
+    "product-analytics:RICE": {
+      "query": "RICE",
+      "status": 200,
+      "results": 11,
+      "indexed": true,
+      "scoped": true
+    },
+    "system-design:Analytics": {
+      "query": "Analytics",
+      "status": 200,
+      "results": 43,
+      "indexed": true,
+      "scoped": true
+    },
+    "resume-skills:Consolidation": {
+      "query": "Consolidation",
+      "status": 200,
+      "results": 18,
+      "indexed": true,
+      "scoped": true
+    }
+  },
+  "temporaryServerClosed": true
+}

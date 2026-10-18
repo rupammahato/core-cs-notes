@@ -1,0 +1,78 @@
+{
+  "checked_date": "2026-10-18",
+  "scope": "Public primary documentation and actual synthetic NumPy/pandas and Excel calculations; no accounts or production billing data",
+  "sources": [
+    {
+      "url": "https://numpy.org/doc/stable/user/absolute_beginners",
+      "supports": "Arrays, shape, dtype and axes"
+    },
+    {
+      "url": "https://numpy.org/doc/stable/user/basics.broadcasting.html",
+      "supports": "Trailing dimensions and broadcasting"
+    },
+    {
+      "url": "https://numpy.org/doc/stable/user/basics.copies.html",
+      "supports": "Slicing views and indexing copies"
+    },
+    {
+      "url": "https://pandas.pydata.org/docs/reference/api/pandas.merge.html",
+      "supports": "Cardinality, indicator and null-key matching"
+    },
+    {
+      "url": "https://pandas.pydata.org/docs/user_guide/missing_data.html",
+      "supports": "Missing values and nullable types"
+    },
+    {
+      "url": "https://pandas.pydata.org/docs/reference/api/pandas.to_datetime.html",
+      "supports": "UTC and coercion"
+    },
+    {
+      "url": "https://pandas.pydata.org/docs/user_guide/copy_on_write.html",
+      "supports": "pandas 3 Copy-on-Write"
+    },
+    {
+      "url": "https://pandas.pydata.org/docs/user_guide/merging.html",
+      "supports": "Joining tables"
+    },
+    {
+      "url": "https://support.microsoft.com/en-us/excel/keeping-leading-zeros-and-large-numbers",
+      "supports": "Identifier representation"
+    },
+    {
+      "url": "https://support.microsoft.com/en-us/excel/sum-values-based-on-multiple-conditions",
+      "supports": "SUMIFS"
+    },
+    {
+      "url": "https://support.microsoft.com/en-us/excel/functions/xlookup-function",
+      "supports": "Exact default and first matching value"
+    },
+    {
+      "url": "https://support.microsoft.com/en-us/excel/get-started/create-a-pivottable-to-analyze-worksheet-data",
+      "supports": "Manual PivotTable workflow"
+    },
+    {
+      "url": "https://support.microsoft.com/en-us/excel/refresh-pivottable-data",
+      "supports": "Refresh behavior"
+    }
+  ],
+  "executed_runtime": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "3.0.1",
+    "artifact_tool": "2.8.99",
+    "excel_version": "16.0",
+    "excel_build": 20430
+  },
+  "documentation_boundary": "Current documentation may describe newer versions; outputs are anchored to recorded runtimes",
+  "synthetic_inputs": [
+    "jobs.csv",
+    "attempts.csv",
+    "workspaces.csv"
+  ],
+  "native_pivottable_created": false,
+  "manual_work": [
+    "Create and refresh a PivotTable",
+    "Present a personal resume example"
+  ],
+  "next_research": "P4 Marketing Measurement and Data Visualization"
+}

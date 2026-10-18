@@ -1,0 +1,507 @@
+{
+  "verified_date": "2026-10-18",
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "pandas": "3.0.1",
+  "total": 72,
+  "checks": [
+    {
+      "group": "numpy",
+      "name": "shape",
+      "passed": true
+    },
+    {
+      "group": "numpy",
+      "name": "fixed dtype",
+      "passed": true
+    },
+    {
+      "group": "numpy",
+      "name": "broadcasting",
+      "passed": true
+    },
+    {
+      "group": "numpy",
+      "name": "column reduction",
+      "passed": true
+    },
+    {
+      "group": "numpy",
+      "name": "row reduction",
+      "passed": true
+    },
+    {
+      "group": "numpy",
+      "name": "weighted rows",
+      "passed": true
+    },
+    {
+      "group": "numpy",
+      "name": "matrix-vector product",
+      "passed": true
+    },
+    {
+      "group": "numpy",
+      "name": "basic slice changes original",
+      "passed": true
+    },
+    {
+      "group": "numpy",
+      "name": "advanced indexing copy",
+      "passed": true
+    },
+    {
+      "group": "numpy",
+      "name": "incompatible trailing shapes",
+      "passed": true
+    },
+    {
+      "group": "numpy",
+      "name": "slice shares memory",
+      "passed": true
+    },
+    {
+      "group": "numpy",
+      "name": "fancy indexing does not share memory",
+      "passed": true
+    },
+    {
+      "group": "reconciliation",
+      "name": "raw rows",
+      "passed": true
+    },
+    {
+      "group": "reconciliation",
+      "name": "job deduplication",
+      "passed": true
+    },
+    {
+      "group": "reconciliation",
+      "name": "raw attempt rows",
+      "passed": true
+    },
+    {
+      "group": "reconciliation",
+      "name": "attempt deduplication",
+      "passed": true
+    },
+    {
+      "group": "reconciliation",
+      "name": "date issues retained",
+      "passed": true
+    },
+    {
+      "group": "reconciliation",
+      "name": "known boundary exclusions",
+      "passed": true
+    },
+    {
+      "group": "reconciliation",
+      "name": "cohort keys",
+      "passed": true
+    },
+    {
+      "group": "reconciliation",
+      "name": "selected count",
+      "passed": true
+    },
+    {
+      "group": "reconciliation",
+      "name": "completed count",
+      "passed": true
+    },
+    {
+      "group": "reconciliation",
+      "name": "completed share",
+      "passed": true
+    },
+    {
+      "group": "reconciliation",
+      "name": "known billing subtotal",
+      "passed": true
+    },
+    {
+      "group": "reconciliation",
+      "name": "missing billing count",
+      "passed": true
+    },
+    {
+      "group": "reconciliation",
+      "name": "complete bill withheld",
+      "passed": true
+    },
+    {
+      "group": "reconciliation",
+      "name": "provider subtotal",
+      "passed": true
+    },
+    {
+      "group": "reconciliation",
+      "name": "complete provider amount",
+      "passed": true
+    },
+    {
+      "group": "reconciliation",
+      "name": "unknown dimension retained",
+      "passed": true
+    },
+    {
+      "group": "reconciliation",
+      "name": "orphan source identity",
+      "passed": true
+    },
+    {
+      "group": "reconciliation",
+      "name": "unassigned known amount",
+      "passed": true
+    },
+    {
+      "group": "reconciliation",
+      "name": "bad join row inflation",
+      "passed": true
+    },
+    {
+      "group": "reconciliation",
+      "name": "bad join amount inflation",
+      "passed": true
+    },
+    {
+      "group": "grain",
+      "name": "job IDs keep leading zeros",
+      "passed": true
+    },
+    {
+      "group": "time",
+      "name": "offset timestamp normalized before month filter",
+      "passed": true
+    },
+    {
+      "group": "time",
+      "name": "unparseable timestamp remains unavailable",
+      "passed": true
+    },
+    {
+      "group": "zero",
+      "name": "explicit zero remains a numeric zero",
+      "passed": true
+    },
+    {
+      "group": "zero",
+      "name": "blank remains missing",
+      "passed": true
+    },
+    {
+      "group": "group",
+      "name": "free plan zero with missing count",
+      "passed": true
+    },
+    {
+      "group": "pivot",
+      "name": "plan/status count matrix",
+      "passed": true
+    },
+    {
+      "group": "alignment",
+      "name": "labels pair the right values",
+      "passed": true
+    },
+    {
+      "group": "alignment",
+      "name": "discarding labels changes pairing",
+      "passed": true
+    },
+    {
+      "group": "missing",
+      "name": "default sum can look like zero",
+      "passed": true
+    },
+    {
+      "group": "missing",
+      "name": "min_count preserves all-missing state",
+      "passed": true
+    },
+    {
+      "group": "missing",
+      "name": "pd.NA has no boolean truth",
+      "passed": true
+    },
+    {
+      "group": "join",
+      "name": "pandas matches null keys if not rejected",
+      "passed": true
+    },
+    {
+      "group": "copy",
+      "name": "pandas 3 shallow copy protects original",
+      "passed": true
+    },
+    {
+      "group": "copy",
+      "name": "pandas 3 shallow copy receives change",
+      "passed": true
+    },
+    {
+      "group": "mutation",
+      "name": "zero to missing increases missing count",
+      "passed": true
+    },
+    {
+      "group": "mutation",
+      "name": "zero to missing keeps known subtotal",
+      "passed": true
+    },
+    {
+      "group": "mutation",
+      "name": "filling both missing bills enables complete total",
+      "passed": true
+    },
+    {
+      "group": "mutation",
+      "name": "all-missing paid subtotal is unavailable",
+      "passed": true
+    },
+    {
+      "group": "mutation",
+      "name": "partial cost keeps known lines",
+      "passed": true
+    },
+    {
+      "group": "mutation",
+      "name": "partial cost exposes incomplete job",
+      "passed": true
+    },
+    {
+      "group": "mutation",
+      "name": "partial cost withholds complete total",
+      "passed": true
+    },
+    {
+      "group": "mutation",
+      "name": "no matching attempt is not a known zero",
+      "passed": true
+    },
+    {
+      "group": "mutation",
+      "name": "unknown orphan amount remains visible",
+      "passed": true
+    },
+    {
+      "group": "time",
+      "name": "exclusive changed endpoint",
+      "passed": true
+    },
+    {
+      "group": "time",
+      "name": "reduced period can have complete bill",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "negative amount",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "non-numeric amount",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "fractional cent",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "excessive amount",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "missing key",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "unknown state",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "conflicting duplicate job",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "conflicting duplicate attempt",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "duplicate dimension key",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "blank dimension value",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "naive report boundary",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "reversed report interval",
+      "passed": true
+    },
+    {
+      "group": "validation",
+      "name": "naive source timestamp is audited, not guessed",
+      "passed": true
+    },
+    {
+      "group": "preservation",
+      "name": "raw CSV-derived frames remain unchanged",
+      "passed": true
+    }
+  ],
+  "observations": {
+    "scope": "Synthetic source reconciliation; cents are integer amounts, not a revenue or causal-impact claim",
+    "numpy": {
+      "shape": [
+        2,
+        3
+      ],
+      "dtype": "int64",
+      "broadcast_product": [
+        [
+          20,
+          60,
+          120
+        ],
+        [
+          2,
+          6,
+          12
+        ]
+      ],
+      "column_sums": [
+        11,
+        22,
+        33
+      ],
+      "row_sums": [
+        60,
+        6
+      ],
+      "weighted_rows": [
+        200,
+        20
+      ],
+      "matrix_vector": [
+        200,
+        20
+      ],
+      "original_after_slice_edit": [
+        1,
+        99,
+        3,
+        4
+      ],
+      "fancy_copy_after_edit": [
+        -1,
+        3
+      ]
+    },
+    "analysis": {
+      "raw_job_rows": 10,
+      "deduplicated_jobs": 9,
+      "raw_attempt_rows": 10,
+      "deduplicated_attempts": 9,
+      "date_issue_jobs": [
+        "0007",
+        "0008"
+      ],
+      "excluded_known_date_jobs": [
+        "0001",
+        "0006"
+      ],
+      "selected_job_ids": [
+        "0002",
+        "0003",
+        "0004",
+        "0005",
+        "0009"
+      ],
+      "selected_jobs": 5,
+      "completed_jobs": 4,
+      "completion_share": 0.8,
+      "known_billed_cents": 290,
+      "missing_billed_jobs": 2,
+      "complete_billed_cents": null,
+      "known_provider_cents": 110,
+      "missing_cost_jobs": 0,
+      "complete_provider_cents": 110,
+      "unmapped_selected_jobs": [
+        "0009"
+      ],
+      "orphan_attempts": [
+        "a09"
+      ],
+      "orphan_cost_cents": 7,
+      "orphan_missing_cost_lines": 0,
+      "wrong_direct_join_rows": 6,
+      "wrong_direct_join_billed_cents": 490,
+      "by_plan": [
+        {
+          "plan": "Unmapped",
+          "jobs": 1,
+          "known_billed_cents": 90,
+          "missing_billed_jobs": 0,
+          "known_provider_cents": 10
+        },
+        {
+          "plan": "free",
+          "jobs": 2,
+          "known_billed_cents": 0,
+          "missing_billed_jobs": 1,
+          "known_provider_cents": 35
+        },
+        {
+          "plan": "paid",
+          "jobs": 2,
+          "known_billed_cents": 200,
+          "missing_billed_jobs": 1,
+          "known_provider_cents": 65
+        }
+      ],
+      "pivot_counts": {
+        "Unmapped": {
+          "completed": 1,
+          "failed": 0
+        },
+        "free": {
+          "completed": 1,
+          "failed": 1
+        },
+        "paid": {
+          "completed": 2,
+          "failed": 0
+        }
+      },
+      "index_alignment": {
+        "label_sum": {
+          "a": 11,
+          "b": 22
+        },
+        "positional_sum": [
+          21,
+          12
+        ]
+      }
+    }
+  },
+  "external_services_called": false,
+  "scope": "Actual NumPy/pandas source reconciliation and mutated data cases; Excel engine checks are separate."
+}

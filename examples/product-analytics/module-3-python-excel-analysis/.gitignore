@@ -1,0 +1,5 @@
+node_modules/
+__pycache__/
+*.py[cod]
+outputs/qa/
+outputs/p3-analysis/*.inspect.ndjson

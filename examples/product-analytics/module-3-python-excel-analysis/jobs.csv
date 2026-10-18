@@ -1,0 +1,11 @@
+job_id,workspace_id,occurred_at,status,billed_cents
+0001,wsA,2026-10-01T00:30:00+05:30,completed,100
+0002,wsA,2026-10-01T00:30:00Z,completed,200
+0003,wsB,2026-10-15T12:00:00Z,completed,0
+0004,wsB,2026-10-20T12:00:00Z,failed,
+0005,wsC,2026-10-31T23:30:00Z,completed,
+0006,wsA,2026-11-01T00:00:00Z,completed,400
+0007,wsA,,completed,50
+0008,wsA,not-a-date,completed,80
+0009,wsUnknown,2026-10-10T00:00:00Z,completed,90
+0002,wsA,2026-10-01T00:30:00Z,completed,200

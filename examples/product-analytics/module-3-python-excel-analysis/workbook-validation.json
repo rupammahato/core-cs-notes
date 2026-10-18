@@ -1,0 +1,26 @@
+{
+  "artifact_formula_checks": "passed",
+  "baseline_summary": [
+    5,
+    4,
+    290,
+    2,
+    "n.a.",
+    110,
+    0,
+    110,
+    0.8
+  ],
+  "mutations": [
+    "Billed amount edit updates subtotal",
+    "Blank differs from a valid zero",
+    "One completed prerequisite leaves other missing input visible",
+    "All billed amounts enable a complete total",
+    "Partial missing cost preserves known subtotal and withholds complete cost",
+    "Exclusive report boundary changes included jobs"
+  ],
+  "restored_original_inputs": true,
+  "workbook": "outputs/p3-analysis/analysis-practice.xlsx",
+  "scope": "Artifact Tool recalculation/export; native engine checked separately",
+  "native_excel_verification": "See native-excel-validation.json; this builder does not execute Excel"
+}
