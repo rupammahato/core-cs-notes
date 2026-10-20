@@ -1,0 +1,666 @@
+{
+  "verified_date": "2026-10-21",
+  "total": 163,
+  "checks": [
+    {
+      "name": "Nine sequential authored chapters",
+      "passed": true
+    },
+    {
+      "name": "Thirty-five sequential case specifications",
+      "passed": true
+    },
+    {
+      "name": "Five worked cases per module",
+      "passed": true
+    },
+    {
+      "name": "All 71 runtime checks passed",
+      "passed": true
+    },
+    {
+      "name": "Runtime breakdown accurate",
+      "passed": true
+    },
+    {
+      "name": "Fresh calculations match recorded raw output",
+      "passed": true
+    },
+    {
+      "name": "Verified calculation sources still match",
+      "passed": true
+    },
+    {
+      "name": "No simulation or service execution claimed",
+      "passed": true
+    },
+    {
+      "name": "F1: case IDs once in order",
+      "passed": true
+    },
+    {
+      "name": "F1: eight interview Q&As",
+      "passed": true
+    },
+    {
+      "name": "F1: four practice tasks",
+      "passed": true
+    },
+    {
+      "name": "F1: one generated-example marker pair",
+      "passed": true
+    },
+    {
+      "name": "E01: exact prompt, hint, derivation, trap and follow-up",
+      "passed": true
+    },
+    {
+      "name": "E01: displayed JSON equals actual calculation",
+      "passed": true
+    },
+    {
+      "name": "E01: generated example matches authored source and verified output",
+      "passed": true
+    },
+    {
+      "name": "E02: exact prompt, hint, derivation, trap and follow-up",
+      "passed": true
+    },
+    {
+      "name": "E02: displayed JSON equals actual calculation",
+      "passed": true
+    },
+    {
+      "name": "E02: generated example matches authored source and verified output",
+      "passed": true
+    },
+    {
+      "name": "E03: exact prompt, hint, derivation, trap and follow-up",
+      "passed": true
+    },
+    {
+      "name": "E03: displayed JSON equals actual calculation",
+      "passed": true
+    },
+    {
+      "name": "E03: generated example matches authored source and verified output",
+      "passed": true
+    },
+    {
+      "name": "E04: exact prompt, hint, derivation, trap and follow-up",
+      "passed": true
+    },
+    {
+      "name": "E04: displayed JSON equals actual calculation",
+      "passed": true
+    },
+    {
+      "name": "E04: generated example matches authored source and verified output",
+      "passed": true
+    },
+    {
+      "name": "E05: exact prompt, hint, derivation, trap and follow-up",
+      "passed": true
+    },
+    {
+      "name": "E05: displayed JSON equals actual calculation",
+      "passed": true
+    },
+    {
+      "name": "E05: generated example matches authored source and verified output",
+      "passed": true
+    },
+    {
+      "name": "F2: case IDs once in order",
+      "passed": true
+    },
+    {
+      "name": "F2: eight interview Q&As",
+      "passed": true
+    },
+    {
+      "name": "F2: four practice tasks",
+      "passed": true
+    },
+    {
+      "name": "F2: one generated-example marker pair",
+      "passed": true
+    },
+    {
+      "name": "E06: exact prompt, hint, derivation, trap and follow-up",
+      "passed": true
+    },
+    {
+      "name": "E06: displayed JSON equals actual calculation",
+      "passed": true
+    },
+    {
+      "name": "E06: generated example matches authored source and verified output",
+      "passed": true
+    },
+    {
+      "name": "E07: exact prompt, hint, derivation, trap and follow-up",
+      "passed": true
+    },
+    {
+      "name": "E07: displayed JSON equals actual calculation",
+      "passed": true
+    },
+    {
+      "name": "E07: generated example matches authored source and verified output",
+      "passed": true
+    },
+    {
+      "name": "E08: exact prompt, hint, derivation, trap and follow-up",
+      "passed": true
+    },
+    {
+      "name": "E08: displayed JSON equals actual calculation",
+      "passed": true
+    },
+    {
+      "name": "E08: generated example matches authored source and verified output",
+      "passed": true
+    },
+    {
+      "name": "E09: exact prompt, hint, derivation, trap and follow-up",
+      "passed": true
+    },
+    {
+      "name": "E09: displayed JSON equals actual calculation",
+      "passed": true
+    },
+    {
+      "name": "E09: generated example matches authored source and verified output",
+      "passed": true
+    },
+    {
+      "name": "E10: exact prompt, hint, derivation, trap and follow-up",
+      "passed": true
+    },
+    {
+      "name": "E10: displayed JSON equals actual calculation",
+      "passed": true
+    },
+    {
+      "name": "E10: generated example matches authored source and verified output",
+      "passed": true
+    },
+    {
+      "name": "F3: case IDs once in order",
+      "passed": true
+    },
+    {
+      "name": "F3: eight interview Q&As",
+      "passed": true
+    },
+    {
+      "name": "F3: four practice tasks",
+      "passed": true
+    },
+    {
+      "name": "F3: one generated-example marker pair",
+      "passed": true
+    },
+    {
+      "name": "E11: exact prompt, hint, derivation, trap and follow-up",
+      "passed": true
+    },
+    {
+      "name": "E11: displayed JSON equals actual calculation",
+      "passed": true
+    },
+    {
+      "name": "E11: generated example matches authored source and verified output",
+      "passed": true
+    },
+    {
+      "name": "E12: exact prompt, hint, derivation, trap and follow-up",
+      "passed": true
+    },
+    {
+      "name": "E12: displayed JSON equals actual calculation",
+      "passed": true
+    },
+    {
+      "name": "E12: generated example matches authored source and verified output",
+      "passed": true
+    },
+    {
+      "name": "E13: exact prompt, hint, derivation, trap and follow-up",
+      "passed": true
+    },
+    {
+      "name": "E13: displayed JSON equals actual calculation",
+      "passed": true
+    },
+    {
+      "name": "E13: generated example matches authored source and verified output",
+      "passed": true
+    },
+    {
+      "name": "E14: exact prompt, hint, derivation, trap and follow-up",
+      "passed": true
+    },
+    {
+      "name": "E14: displayed JSON equals actual calculation",
+      "passed": true
+    },
+    {
+      "name": "E14: generated example matches authored source and verified output",
+      "passed": true
+    },
+    {
+      "name": "E15: exact prompt, hint, derivation, trap and follow-up",
+      "passed": true
+    },
+    {
+      "name": "E15: displayed JSON equals actual calculation",
+      "passed": true
+    },
+    {
+      "name": "E15: generated example matches authored source and verified output",
+      "passed": true
+    },
+    {
+      "name": "F4: case IDs once in order",
+      "passed": true
+    },
+    {
+      "name": "F4: eight interview Q&As",
+      "passed": true
+    },
+    {
+      "name": "F4: four practice tasks",
+      "passed": true
+    },
+    {
+      "name": "F4: one generated-example marker pair",
+      "passed": true
+    },
+    {
+      "name": "E16: exact prompt, hint, derivation, trap and follow-up",
+      "passed": true
+    },
+    {
+      "name": "E16: displayed JSON equals actual calculation",
+      "passed": true
+    },
+    {
+      "name": "E16: generated example matches authored source and verified output",
+      "passed": true
+    },
+    {
+      "name": "E17: exact prompt, hint, derivation, trap and follow-up",
+      "passed": true
+    },
+    {
+      "name": "E17: displayed JSON equals actual calculation",
+      "passed": true
+    },
+    {
+      "name": "E17: generated example matches authored source and verified output",
+      "passed": true
+    },
+    {
+      "name": "E18: exact prompt, hint, derivation, trap and follow-up",
+      "passed": true
+    },
+    {
+      "name": "E18: displayed JSON equals actual calculation",
+      "passed": true
+    },
+    {
+      "name": "E18: generated example matches authored source and verified output",
+      "passed": true
+    },
+    {
+      "name": "E19: exact prompt, hint, derivation, trap and follow-up",
+      "passed": true
+    },
+    {
+      "name": "E19: displayed JSON equals actual calculation",
+      "passed": true
+    },
+    {
+      "name": "E19: generated example matches authored source and verified output",
+      "passed": true
+    },
+    {
+      "name": "E20: exact prompt, hint, derivation, trap and follow-up",
+      "passed": true
+    },
+    {
+      "name": "E20: displayed JSON equals actual calculation",
+      "passed": true
+    },
+    {
+      "name": "E20: generated example matches authored source and verified output",
+      "passed": true
+    },
+    {
+      "name": "F5: case IDs once in order",
+      "passed": true
+    },
+    {
+      "name": "F5: eight interview Q&As",
+      "passed": true
+    },
+    {
+      "name": "F5: four practice tasks",
+      "passed": true
+    },
+    {
+      "name": "F5: one generated-example marker pair",
+      "passed": true
+    },
+    {
+      "name": "E21: exact prompt, hint, derivation, trap and follow-up",
+      "passed": true
+    },
+    {
+      "name": "E21: displayed JSON equals actual calculation",
+      "passed": true
+    },
+    {
+      "name": "E21: generated example matches authored source and verified output",
+      "passed": true
+    },
+    {
+      "name": "E22: exact prompt, hint, derivation, trap and follow-up",
+      "passed": true
+    },
+    {
+      "name": "E22: displayed JSON equals actual calculation",
+      "passed": true
+    },
+    {
+      "name": "E22: generated example matches authored source and verified output",
+      "passed": true
+    },
+    {
+      "name": "E23: exact prompt, hint, derivation, trap and follow-up",
+      "passed": true
+    },
+    {
+      "name": "E23: displayed JSON equals actual calculation",
+      "passed": true
+    },
+    {
+      "name": "E23: generated example matches authored source and verified output",
+      "passed": true
+    },
+    {
+      "name": "E24: exact prompt, hint, derivation, trap and follow-up",
+      "passed": true
+    },
+    {
+      "name": "E24: displayed JSON equals actual calculation",
+      "passed": true
+    },
+    {
+      "name": "E24: generated example matches authored source and verified output",
+      "passed": true
+    },
+    {
+      "name": "E25: exact prompt, hint, derivation, trap and follow-up",
+      "passed": true
+    },
+    {
+      "name": "E25: displayed JSON equals actual calculation",
+      "passed": true
+    },
+    {
+      "name": "E25: generated example matches authored source and verified output",
+      "passed": true
+    },
+    {
+      "name": "F6: case IDs once in order",
+      "passed": true
+    },
+    {
+      "name": "F6: eight interview Q&As",
+      "passed": true
+    },
+    {
+      "name": "F6: four practice tasks",
+      "passed": true
+    },
+    {
+      "name": "F6: one generated-example marker pair",
+      "passed": true
+    },
+    {
+      "name": "E26: exact prompt, hint, derivation, trap and follow-up",
+      "passed": true
+    },
+    {
+      "name": "E26: displayed JSON equals actual calculation",
+      "passed": true
+    },
+    {
+      "name": "E26: generated example matches authored source and verified output",
+      "passed": true
+    },
+    {
+      "name": "E27: exact prompt, hint, derivation, trap and follow-up",
+      "passed": true
+    },
+    {
+      "name": "E27: displayed JSON equals actual calculation",
+      "passed": true
+    },
+    {
+      "name": "E27: generated example matches authored source and verified output",
+      "passed": true
+    },
+    {
+      "name": "E28: exact prompt, hint, derivation, trap and follow-up",
+      "passed": true
+    },
+    {
+      "name": "E28: displayed JSON equals actual calculation",
+      "passed": true
+    },
+    {
+      "name": "E28: generated example matches authored source and verified output",
+      "passed": true
+    },
+    {
+      "name": "E29: exact prompt, hint, derivation, trap and follow-up",
+      "passed": true
+    },
+    {
+      "name": "E29: displayed JSON equals actual calculation",
+      "passed": true
+    },
+    {
+      "name": "E29: generated example matches authored source and verified output",
+      "passed": true
+    },
+    {
+      "name": "E30: exact prompt, hint, derivation, trap and follow-up",
+      "passed": true
+    },
+    {
+      "name": "E30: displayed JSON equals actual calculation",
+      "passed": true
+    },
+    {
+      "name": "E30: generated example matches authored source and verified output",
+      "passed": true
+    },
+    {
+      "name": "F7: case IDs once in order",
+      "passed": true
+    },
+    {
+      "name": "F7: eight interview Q&As",
+      "passed": true
+    },
+    {
+      "name": "F7: four practice tasks",
+      "passed": true
+    },
+    {
+      "name": "F7: one generated-example marker pair",
+      "passed": true
+    },
+    {
+      "name": "E31: exact prompt, hint, derivation, trap and follow-up",
+      "passed": true
+    },
+    {
+      "name": "E31: displayed JSON equals actual calculation",
+      "passed": true
+    },
+    {
+      "name": "E31: generated example matches authored source and verified output",
+      "passed": true
+    },
+    {
+      "name": "E32: exact prompt, hint, derivation, trap and follow-up",
+      "passed": true
+    },
+    {
+      "name": "E32: displayed JSON equals actual calculation",
+      "passed": true
+    },
+    {
+      "name": "E32: generated example matches authored source and verified output",
+      "passed": true
+    },
+    {
+      "name": "E33: exact prompt, hint, derivation, trap and follow-up",
+      "passed": true
+    },
+    {
+      "name": "E33: displayed JSON equals actual calculation",
+      "passed": true
+    },
+    {
+      "name": "E33: generated example matches authored source and verified output",
+      "passed": true
+    },
+    {
+      "name": "E34: exact prompt, hint, derivation, trap and follow-up",
+      "passed": true
+    },
+    {
+      "name": "E34: displayed JSON equals actual calculation",
+      "passed": true
+    },
+    {
+      "name": "E34: generated example matches authored source and verified output",
+      "passed": true
+    },
+    {
+      "name": "E35: exact prompt, hint, derivation, trap and follow-up",
+      "passed": true
+    },
+    {
+      "name": "E35: displayed JSON equals actual calculation",
+      "passed": true
+    },
+    {
+      "name": "E35: generated example matches authored source and verified output",
+      "passed": true
+    },
+    {
+      "name": "135 earlier handbooks remain byte-identical",
+      "passed": true
+    },
+    {
+      "name": "All 144 handbook routes generated",
+      "passed": true
+    },
+    {
+      "name": "probability-statistics-handbook-part-1-master-roadmap: generated body matches authored note",
+      "passed": true
+    },
+    {
+      "name": "probability-statistics-handbook-part-2-probability-and-counting: generated body matches authored note",
+      "passed": true
+    },
+    {
+      "name": "probability-statistics-handbook-part-3-conditional-probability-and-bayes: generated body matches authored note",
+      "passed": true
+    },
+    {
+      "name": "probability-statistics-handbook-part-4-random-variables-and-distributions: generated body matches authored note",
+      "passed": true
+    },
+    {
+      "name": "probability-statistics-handbook-part-5-descriptive-statistics-and-sampling: generated body matches authored note",
+      "passed": true
+    },
+    {
+      "name": "probability-statistics-handbook-part-6-estimation-and-confidence-intervals: generated body matches authored note",
+      "passed": true
+    },
+    {
+      "name": "probability-statistics-handbook-part-7-hypothesis-tests-and-experiments: generated body matches authored note",
+      "passed": true
+    },
+    {
+      "name": "probability-statistics-handbook-part-8-correlation-and-regression: generated body matches authored note",
+      "passed": true
+    },
+    {
+      "name": "probability-statistics-handbook-part-9-consolidation-and-mocks: generated body matches authored note",
+      "passed": true
+    },
+    {
+      "name": "New-book documentation links resolve",
+      "passed": true
+    },
+    {
+      "name": "Twenty primary chapter sources recorded and linked",
+      "passed": true
+    },
+    {
+      "name": "Thirty final oral checks",
+      "passed": true
+    },
+    {
+      "name": "Ten diagnosis cards",
+      "passed": true
+    },
+    {
+      "name": "Twenty confusable pairs",
+      "passed": true
+    },
+    {
+      "name": "Two 45-minute mocks",
+      "passed": true
+    },
+    {
+      "name": "Learner checklists not marked completed",
+      "passed": true
+    },
+    {
+      "name": "Empirical bootstrap boundary explicit",
+      "passed": true
+    },
+    {
+      "name": "Sequential and causal boundaries explicit",
+      "passed": true
+    },
+    {
+      "name": "No replacement characters or trailing whitespace",
+      "passed": true
+    },
+    {
+      "name": "Root catalogue matches actual counts",
+      "passed": true
+    }
+  ],
+  "chapters": 9,
+  "lines": 2000,
+  "worked_examples": 35,
+  "module_interview_qas": 56,
+  "practice_tasks": 28,
+  "oral_checks": 30,
+  "prior_handbooks_unchanged": 135,
+  "scope": "Documentation fidelity, source preservation and coverage audits, separate from 71 runtime checks."
+}

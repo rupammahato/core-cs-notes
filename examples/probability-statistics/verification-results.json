@@ -1,0 +1,379 @@
+{
+  "verified_date": "2026-10-21",
+  "python": "3.13.15",
+  "total": 71,
+  "breakdown": {
+    "worked-example": 35,
+    "numerical-reference": 9,
+    "published-table": 3,
+    "boundary": 12,
+    "invalid-input": 10,
+    "preservation": 2
+  },
+  "checks": [
+    {
+      "group": "worked-example",
+      "name": "E01 independent reference projection",
+      "passed": true
+    },
+    {
+      "group": "worked-example",
+      "name": "E02 independent reference projection",
+      "passed": true
+    },
+    {
+      "group": "worked-example",
+      "name": "E03 independent reference projection",
+      "passed": true
+    },
+    {
+      "group": "worked-example",
+      "name": "E04 independent reference projection",
+      "passed": true
+    },
+    {
+      "group": "worked-example",
+      "name": "E05 independent reference projection",
+      "passed": true
+    },
+    {
+      "group": "worked-example",
+      "name": "E06 independent reference projection",
+      "passed": true
+    },
+    {
+      "group": "worked-example",
+      "name": "E07 independent reference projection",
+      "passed": true
+    },
+    {
+      "group": "worked-example",
+      "name": "E08 independent reference projection",
+      "passed": true
+    },
+    {
+      "group": "worked-example",
+      "name": "E09 independent reference projection",
+      "passed": true
+    },
+    {
+      "group": "worked-example",
+      "name": "E10 independent reference projection",
+      "passed": true
+    },
+    {
+      "group": "worked-example",
+      "name": "E11 independent reference projection",
+      "passed": true
+    },
+    {
+      "group": "worked-example",
+      "name": "E12 independent reference projection",
+      "passed": true
+    },
+    {
+      "group": "worked-example",
+      "name": "E13 independent reference projection",
+      "passed": true
+    },
+    {
+      "group": "worked-example",
+      "name": "E14 independent reference projection",
+      "passed": true
+    },
+    {
+      "group": "worked-example",
+      "name": "E15 independent reference projection",
+      "passed": true
+    },
+    {
+      "group": "worked-example",
+      "name": "E16 independent reference projection",
+      "passed": true
+    },
+    {
+      "group": "worked-example",
+      "name": "E17 independent reference projection",
+      "passed": true
+    },
+    {
+      "group": "worked-example",
+      "name": "E18 independent reference projection",
+      "passed": true
+    },
+    {
+      "group": "worked-example",
+      "name": "E19 independent reference projection",
+      "passed": true
+    },
+    {
+      "group": "worked-example",
+      "name": "E20 independent reference projection",
+      "passed": true
+    },
+    {
+      "group": "worked-example",
+      "name": "E21 independent reference projection",
+      "passed": true
+    },
+    {
+      "group": "worked-example",
+      "name": "E22 independent reference projection",
+      "passed": true
+    },
+    {
+      "group": "worked-example",
+      "name": "E23 independent reference projection",
+      "passed": true
+    },
+    {
+      "group": "worked-example",
+      "name": "E24 independent reference projection",
+      "passed": true
+    },
+    {
+      "group": "worked-example",
+      "name": "E25 independent reference projection",
+      "passed": true
+    },
+    {
+      "group": "worked-example",
+      "name": "E26 independent reference projection",
+      "passed": true
+    },
+    {
+      "group": "worked-example",
+      "name": "E27 independent reference projection",
+      "passed": true
+    },
+    {
+      "group": "worked-example",
+      "name": "E28 independent reference projection",
+      "passed": true
+    },
+    {
+      "group": "worked-example",
+      "name": "E29 independent reference projection",
+      "passed": true
+    },
+    {
+      "group": "worked-example",
+      "name": "E30 independent reference projection",
+      "passed": true
+    },
+    {
+      "group": "worked-example",
+      "name": "E31 independent reference projection",
+      "passed": true
+    },
+    {
+      "group": "worked-example",
+      "name": "E32 independent reference projection",
+      "passed": true
+    },
+    {
+      "group": "worked-example",
+      "name": "E33 independent reference projection",
+      "passed": true
+    },
+    {
+      "group": "worked-example",
+      "name": "E34 independent reference projection",
+      "passed": true
+    },
+    {
+      "group": "worked-example",
+      "name": "E35 independent reference projection",
+      "passed": true
+    },
+    {
+      "group": "numerical-reference",
+      "name": "t CDF df=1 t=-3.0",
+      "passed": true
+    },
+    {
+      "group": "numerical-reference",
+      "name": "t CDF df=1 t=0.0",
+      "passed": true
+    },
+    {
+      "group": "numerical-reference",
+      "name": "t CDF df=1 t=2.0",
+      "passed": true
+    },
+    {
+      "group": "numerical-reference",
+      "name": "t CDF df=2 t=-3.0",
+      "passed": true
+    },
+    {
+      "group": "numerical-reference",
+      "name": "t CDF df=2 t=0.0",
+      "passed": true
+    },
+    {
+      "group": "numerical-reference",
+      "name": "t CDF df=2 t=2.0",
+      "passed": true
+    },
+    {
+      "group": "numerical-reference",
+      "name": "t CDF df=4 t=-3.0",
+      "passed": true
+    },
+    {
+      "group": "numerical-reference",
+      "name": "t CDF df=4 t=0.0",
+      "passed": true
+    },
+    {
+      "group": "numerical-reference",
+      "name": "t CDF df=4 t=2.0",
+      "passed": true
+    },
+    {
+      "group": "published-table",
+      "name": "NIST 0.975 quantile df=4",
+      "passed": true
+    },
+    {
+      "group": "published-table",
+      "name": "NIST 0.975 quantile df=9",
+      "passed": true
+    },
+    {
+      "group": "published-table",
+      "name": "NIST 0.975 quantile df=11",
+      "passed": true
+    },
+    {
+      "group": "boundary",
+      "name": "Binomial PMF sums to one n=1",
+      "passed": true
+    },
+    {
+      "group": "boundary",
+      "name": "Wilson all-success/zero symmetry n=1",
+      "passed": true
+    },
+    {
+      "group": "boundary",
+      "name": "Binomial PMF sums to one n=5",
+      "passed": true
+    },
+    {
+      "group": "boundary",
+      "name": "Wilson all-success/zero symmetry n=5",
+      "passed": true
+    },
+    {
+      "group": "boundary",
+      "name": "Binomial PMF sums to one n=20",
+      "passed": true
+    },
+    {
+      "group": "boundary",
+      "name": "Wilson all-success/zero symmetry n=20",
+      "passed": true
+    },
+    {
+      "group": "boundary",
+      "name": "Bayes prior sensitivity scenario",
+      "passed": true
+    },
+    {
+      "group": "boundary",
+      "name": "Zero-prior alert remains zero posterior",
+      "passed": true
+    },
+    {
+      "group": "boundary",
+      "name": "Quantile endpoints",
+      "passed": true
+    },
+    {
+      "group": "boundary",
+      "name": "Welch swaps direction and preserves two-sided p",
+      "passed": true
+    },
+    {
+      "group": "boundary",
+      "name": "Regression response shift changes only intercept",
+      "passed": true
+    },
+    {
+      "group": "boundary",
+      "name": "Regression normal equations",
+      "passed": true
+    },
+    {
+      "group": "invalid-input",
+      "name": "Out-of-range probability",
+      "passed": true
+    },
+    {
+      "group": "invalid-input",
+      "name": "Impossible conditioning event",
+      "passed": true
+    },
+    {
+      "group": "invalid-input",
+      "name": "Empty quantile input",
+      "passed": true
+    },
+    {
+      "group": "invalid-input",
+      "name": "Invalid Wilson counts",
+      "passed": true
+    },
+    {
+      "group": "invalid-input",
+      "name": "Invalid confidence level",
+      "passed": true
+    },
+    {
+      "group": "invalid-input",
+      "name": "Insufficient mean sample",
+      "passed": true
+    },
+    {
+      "group": "invalid-input",
+      "name": "Degenerate mean sample",
+      "passed": true
+    },
+    {
+      "group": "invalid-input",
+      "name": "Degenerate regression predictor",
+      "passed": true
+    },
+    {
+      "group": "invalid-input",
+      "name": "Invalid t degrees of freedom",
+      "passed": true
+    },
+    {
+      "group": "invalid-input",
+      "name": "Invalid binomial trial count",
+      "passed": true
+    },
+    {
+      "group": "preservation",
+      "name": "All 135 previous handbooks remain byte-identical",
+      "passed": true
+    },
+    {
+      "group": "preservation",
+      "name": "Calculation and verifier sources unchanged during run",
+      "passed": true
+    }
+  ],
+  "source_sha256": {
+    "compute.py": "c2930f20924605357076693d99ae2f8befec52fe010dafe0e64c4616a387a6de",
+    "verify.py": "a92c79ec2b6bb304472ff8562038ee4d4a5009e49e3058f3a4d6fe3c4393565d"
+  },
+  "examples": 35,
+  "numerical_tolerance": "1e-8 default; published three-decimal t table 5e-4",
+  "scope": "Synthetic finite examples, independent reference projections, closed-form CDFs, alternative quadrature, published critical values and selected boundaries. Not production statistical software certification or real experiment evidence.",
+  "random_simulation_used": false,
+  "external_services_called": false
+}

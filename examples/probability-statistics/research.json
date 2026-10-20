@@ -1,0 +1,94 @@
+{
+  "checked_date": "2026-10-21",
+  "scope": "Primary educational, standards and software-author documentation; examples and problem selection are original synthetic practice.",
+  "sources": [
+    {
+      "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.bootstrap.html",
+      "use": "Conceptual reference linked at the relevant chapter paragraph; documentation is not a claim that its software was executed."
+    },
+    {
+      "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.permutation_test.html",
+      "use": "Conceptual reference linked at the relevant chapter paragraph; documentation is not a claim that its software was executed."
+    },
+    {
+      "url": "https://online.stat.psu.edu/stat414/Lesson06",
+      "use": "Conceptual reference linked at the relevant chapter paragraph; documentation is not a claim that its software was executed."
+    },
+    {
+      "url": "https://openstax.org/books/introductory-statistics-2e/pages/12-3-the-regression-equation",
+      "use": "Conceptual reference linked at the relevant chapter paragraph; documentation is not a claim that its software was executed."
+    },
+    {
+      "url": "https://openstax.org/books/introductory-statistics-2e/pages/2-7-measures-of-the-spread-of-the-data",
+      "use": "Conceptual reference linked at the relevant chapter paragraph; documentation is not a claim that its software was executed."
+    },
+    {
+      "url": "https://openstax.org/books/introductory-statistics-2e/pages/3-1-terminology",
+      "use": "Conceptual reference linked at the relevant chapter paragraph; documentation is not a claim that its software was executed."
+    },
+    {
+      "url": "https://openstax.org/books/introductory-statistics-2e/pages/3-2-independent-and-mutually-exclusive-events",
+      "use": "Conceptual reference linked at the relevant chapter paragraph; documentation is not a claim that its software was executed."
+    },
+    {
+      "url": "https://openstax.org/books/introductory-statistics-2e/pages/4-3-binomial-distribution",
+      "use": "Conceptual reference linked at the relevant chapter paragraph; documentation is not a claim that its software was executed."
+    },
+    {
+      "url": "https://openstax.org/books/introductory-statistics-2e/pages/7-1-the-central-limit-theorem-for-sample-means-averages",
+      "use": "Conceptual reference linked at the relevant chapter paragraph; documentation is not a claim that its software was executed."
+    },
+    {
+      "url": "https://www.amstat.org/asa/files/pdfs/p-valuestatement.pdf",
+      "use": "Conceptual reference linked at the relevant chapter paragraph; documentation is not a claim that its software was executed."
+    },
+    {
+      "url": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda352.htm",
+      "use": "Conceptual reference linked at the relevant chapter paragraph; documentation is not a claim that its software was executed."
+    },
+    {
+      "url": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda353.htm",
+      "use": "Conceptual reference linked at the relevant chapter paragraph; documentation is not a claim that its software was executed."
+    },
+    {
+      "url": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda366.htm",
+      "use": "Conceptual reference linked at the relevant chapter paragraph; documentation is not a claim that its software was executed."
+    },
+    {
+      "url": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda3664.htm",
+      "use": "Conceptual reference linked at the relevant chapter paragraph; documentation is not a claim that its software was executed."
+    },
+    {
+      "url": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda3667.htm",
+      "use": "Conceptual reference linked at the relevant chapter paragraph; documentation is not a claim that its software was executed."
+    },
+    {
+      "url": "https://www.itl.nist.gov/div898/handbook/pmd/section4/pmd44.htm",
+      "use": "Conceptual reference linked at the relevant chapter paragraph; documentation is not a claim that its software was executed."
+    },
+    {
+      "url": "https://www.itl.nist.gov/div898/handbook/prc/section2/prc241.htm",
+      "use": "Conceptual reference linked at the relevant chapter paragraph; documentation is not a claim that its software was executed."
+    },
+    {
+      "url": "https://www.itl.nist.gov/div898/handbook/prc/section3/prc33.htm",
+      "use": "Conceptual reference linked at the relevant chapter paragraph; documentation is not a claim that its software was executed."
+    },
+    {
+      "url": "https://www.medcalc.org/en/manual/sample-size-comparison-of-proportions.php",
+      "use": "Conceptual reference linked at the relevant chapter paragraph; documentation is not a claim that its software was executed."
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/research/articles/deep-dive-into-variance-reduction/",
+      "use": "Conceptual reference linked at the relevant chapter paragraph; documentation is not a claim that its software was executed."
+    }
+  ],
+  "numerical_reference": {
+    "url": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda3672.htm",
+    "use": "Published three-decimal 0.975 t critical values for df 4, 9 and 11."
+  },
+  "runtime_documentation": {
+    "url": "https://docs.python.org/3.13/library/statistics.html",
+    "use": "Local standard-library statistics routines; actual runtime version is recorded separately."
+  }
+}
