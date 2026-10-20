@@ -1,0 +1,550 @@
+{
+  "verified_date": "2026-10-21",
+  "total": 134,
+  "checks": [
+    {
+      "name": "Nine sequential authored chapters",
+      "passed": true
+    },
+    {
+      "name": "Eighteen sequential case definitions",
+      "passed": true
+    },
+    {
+      "name": "Three cases per worked chapter",
+      "passed": true
+    },
+    {
+      "name": "All 41 runtime checks passed",
+      "passed": true
+    },
+    {
+      "name": "Runtime breakdown matches claims",
+      "passed": true
+    },
+    {
+      "name": "Fresh calculation equals recorded output",
+      "passed": true
+    },
+    {
+      "name": "Verified input and calculation sources unchanged",
+      "passed": true
+    },
+    {
+      "name": "No real external operation claimed",
+      "passed": true
+    },
+    {
+      "name": "Part 3: case coverage in order",
+      "passed": true
+    },
+    {
+      "name": "Part 3: one marker pair",
+      "passed": true
+    },
+    {
+      "name": "C01: complete authored reasoning rendered",
+      "passed": true
+    },
+    {
+      "name": "C01: clarifications, options and four answered follow-ups",
+      "passed": true
+    },
+    {
+      "name": "C01: complete fixture input shown",
+      "passed": true
+    },
+    {
+      "name": "C01: actual output shown",
+      "passed": true
+    },
+    {
+      "name": "C01: generated block agrees with authored source and proof",
+      "passed": true
+    },
+    {
+      "name": "C02: complete authored reasoning rendered",
+      "passed": true
+    },
+    {
+      "name": "C02: clarifications, options and four answered follow-ups",
+      "passed": true
+    },
+    {
+      "name": "C02: complete fixture input shown",
+      "passed": true
+    },
+    {
+      "name": "C02: actual output shown",
+      "passed": true
+    },
+    {
+      "name": "C02: generated block agrees with authored source and proof",
+      "passed": true
+    },
+    {
+      "name": "C03: complete authored reasoning rendered",
+      "passed": true
+    },
+    {
+      "name": "C03: clarifications, options and four answered follow-ups",
+      "passed": true
+    },
+    {
+      "name": "C03: complete fixture input shown",
+      "passed": true
+    },
+    {
+      "name": "C03: actual output shown",
+      "passed": true
+    },
+    {
+      "name": "C03: generated block agrees with authored source and proof",
+      "passed": true
+    },
+    {
+      "name": "Part 4: case coverage in order",
+      "passed": true
+    },
+    {
+      "name": "Part 4: one marker pair",
+      "passed": true
+    },
+    {
+      "name": "C04: complete authored reasoning rendered",
+      "passed": true
+    },
+    {
+      "name": "C04: clarifications, options and four answered follow-ups",
+      "passed": true
+    },
+    {
+      "name": "C04: complete fixture input shown",
+      "passed": true
+    },
+    {
+      "name": "C04: actual output shown",
+      "passed": true
+    },
+    {
+      "name": "C04: generated block agrees with authored source and proof",
+      "passed": true
+    },
+    {
+      "name": "C05: complete authored reasoning rendered",
+      "passed": true
+    },
+    {
+      "name": "C05: clarifications, options and four answered follow-ups",
+      "passed": true
+    },
+    {
+      "name": "C05: complete fixture input shown",
+      "passed": true
+    },
+    {
+      "name": "C05: actual output shown",
+      "passed": true
+    },
+    {
+      "name": "C05: generated block agrees with authored source and proof",
+      "passed": true
+    },
+    {
+      "name": "C06: complete authored reasoning rendered",
+      "passed": true
+    },
+    {
+      "name": "C06: clarifications, options and four answered follow-ups",
+      "passed": true
+    },
+    {
+      "name": "C06: complete fixture input shown",
+      "passed": true
+    },
+    {
+      "name": "C06: actual output shown",
+      "passed": true
+    },
+    {
+      "name": "C06: generated block agrees with authored source and proof",
+      "passed": true
+    },
+    {
+      "name": "Part 5: case coverage in order",
+      "passed": true
+    },
+    {
+      "name": "Part 5: one marker pair",
+      "passed": true
+    },
+    {
+      "name": "C07: complete authored reasoning rendered",
+      "passed": true
+    },
+    {
+      "name": "C07: clarifications, options and four answered follow-ups",
+      "passed": true
+    },
+    {
+      "name": "C07: complete fixture input shown",
+      "passed": true
+    },
+    {
+      "name": "C07: actual output shown",
+      "passed": true
+    },
+    {
+      "name": "C07: generated block agrees with authored source and proof",
+      "passed": true
+    },
+    {
+      "name": "C08: complete authored reasoning rendered",
+      "passed": true
+    },
+    {
+      "name": "C08: clarifications, options and four answered follow-ups",
+      "passed": true
+    },
+    {
+      "name": "C08: complete fixture input shown",
+      "passed": true
+    },
+    {
+      "name": "C08: actual output shown",
+      "passed": true
+    },
+    {
+      "name": "C08: generated block agrees with authored source and proof",
+      "passed": true
+    },
+    {
+      "name": "C09: complete authored reasoning rendered",
+      "passed": true
+    },
+    {
+      "name": "C09: clarifications, options and four answered follow-ups",
+      "passed": true
+    },
+    {
+      "name": "C09: complete fixture input shown",
+      "passed": true
+    },
+    {
+      "name": "C09: actual output shown",
+      "passed": true
+    },
+    {
+      "name": "C09: generated block agrees with authored source and proof",
+      "passed": true
+    },
+    {
+      "name": "Part 6: case coverage in order",
+      "passed": true
+    },
+    {
+      "name": "Part 6: one marker pair",
+      "passed": true
+    },
+    {
+      "name": "C10: complete authored reasoning rendered",
+      "passed": true
+    },
+    {
+      "name": "C10: clarifications, options and four answered follow-ups",
+      "passed": true
+    },
+    {
+      "name": "C10: complete fixture input shown",
+      "passed": true
+    },
+    {
+      "name": "C10: actual output shown",
+      "passed": true
+    },
+    {
+      "name": "C10: generated block agrees with authored source and proof",
+      "passed": true
+    },
+    {
+      "name": "C11: complete authored reasoning rendered",
+      "passed": true
+    },
+    {
+      "name": "C11: clarifications, options and four answered follow-ups",
+      "passed": true
+    },
+    {
+      "name": "C11: complete fixture input shown",
+      "passed": true
+    },
+    {
+      "name": "C11: actual output shown",
+      "passed": true
+    },
+    {
+      "name": "C11: generated block agrees with authored source and proof",
+      "passed": true
+    },
+    {
+      "name": "C12: complete authored reasoning rendered",
+      "passed": true
+    },
+    {
+      "name": "C12: clarifications, options and four answered follow-ups",
+      "passed": true
+    },
+    {
+      "name": "C12: complete fixture input shown",
+      "passed": true
+    },
+    {
+      "name": "C12: actual output shown",
+      "passed": true
+    },
+    {
+      "name": "C12: generated block agrees with authored source and proof",
+      "passed": true
+    },
+    {
+      "name": "Part 7: case coverage in order",
+      "passed": true
+    },
+    {
+      "name": "Part 7: one marker pair",
+      "passed": true
+    },
+    {
+      "name": "C13: complete authored reasoning rendered",
+      "passed": true
+    },
+    {
+      "name": "C13: clarifications, options and four answered follow-ups",
+      "passed": true
+    },
+    {
+      "name": "C13: complete fixture input shown",
+      "passed": true
+    },
+    {
+      "name": "C13: actual output shown",
+      "passed": true
+    },
+    {
+      "name": "C13: generated block agrees with authored source and proof",
+      "passed": true
+    },
+    {
+      "name": "C14: complete authored reasoning rendered",
+      "passed": true
+    },
+    {
+      "name": "C14: clarifications, options and four answered follow-ups",
+      "passed": true
+    },
+    {
+      "name": "C14: complete fixture input shown",
+      "passed": true
+    },
+    {
+      "name": "C14: actual output shown",
+      "passed": true
+    },
+    {
+      "name": "C14: generated block agrees with authored source and proof",
+      "passed": true
+    },
+    {
+      "name": "C15: complete authored reasoning rendered",
+      "passed": true
+    },
+    {
+      "name": "C15: clarifications, options and four answered follow-ups",
+      "passed": true
+    },
+    {
+      "name": "C15: complete fixture input shown",
+      "passed": true
+    },
+    {
+      "name": "C15: actual output shown",
+      "passed": true
+    },
+    {
+      "name": "C15: generated block agrees with authored source and proof",
+      "passed": true
+    },
+    {
+      "name": "Part 8: case coverage in order",
+      "passed": true
+    },
+    {
+      "name": "Part 8: one marker pair",
+      "passed": true
+    },
+    {
+      "name": "C16: complete authored reasoning rendered",
+      "passed": true
+    },
+    {
+      "name": "C16: clarifications, options and four answered follow-ups",
+      "passed": true
+    },
+    {
+      "name": "C16: complete fixture input shown",
+      "passed": true
+    },
+    {
+      "name": "C16: actual output shown",
+      "passed": true
+    },
+    {
+      "name": "C16: generated block agrees with authored source and proof",
+      "passed": true
+    },
+    {
+      "name": "C17: complete authored reasoning rendered",
+      "passed": true
+    },
+    {
+      "name": "C17: clarifications, options and four answered follow-ups",
+      "passed": true
+    },
+    {
+      "name": "C17: complete fixture input shown",
+      "passed": true
+    },
+    {
+      "name": "C17: actual output shown",
+      "passed": true
+    },
+    {
+      "name": "C17: generated block agrees with authored source and proof",
+      "passed": true
+    },
+    {
+      "name": "C18: complete authored reasoning rendered",
+      "passed": true
+    },
+    {
+      "name": "C18: clarifications, options and four answered follow-ups",
+      "passed": true
+    },
+    {
+      "name": "C18: complete fixture input shown",
+      "passed": true
+    },
+    {
+      "name": "C18: actual output shown",
+      "passed": true
+    },
+    {
+      "name": "C18: generated block agrees with authored source and proof",
+      "passed": true
+    },
+    {
+      "name": "All 144 earlier handbooks byte-identical",
+      "passed": true
+    },
+    {
+      "name": "All 153 handbook routes generated",
+      "passed": true
+    },
+    {
+      "name": "product-casebook-handbook-part-1-master-roadmap: generated body equals source",
+      "passed": true
+    },
+    {
+      "name": "product-casebook-handbook-part-2-case-method-and-evidence: generated body equals source",
+      "passed": true
+    },
+    {
+      "name": "product-casebook-handbook-part-3-product-sense-and-prioritization: generated body equals source",
+      "passed": true
+    },
+    {
+      "name": "product-casebook-handbook-part-4-metrics-and-root-cause-analysis: generated body equals source",
+      "passed": true
+    },
+    {
+      "name": "product-casebook-handbook-part-5-growth-activation-and-retention: generated body equals source",
+      "passed": true
+    },
+    {
+      "name": "product-casebook-handbook-part-6-pricing-and-business-models: generated body equals source",
+      "passed": true
+    },
+    {
+      "name": "product-casebook-handbook-part-7-marketplaces-and-operations: generated body equals source",
+      "passed": true
+    },
+    {
+      "name": "product-casebook-handbook-part-8-experiments-ai-and-launch-decisions: generated body equals source",
+      "passed": true
+    },
+    {
+      "name": "product-casebook-handbook-part-9-consolidation-and-mocks: generated body equals source",
+      "passed": true
+    },
+    {
+      "name": "Every new handbook documentation link resolves",
+      "passed": true
+    },
+    {
+      "name": "Thirteen primary chapter sources recorded",
+      "passed": true
+    },
+    {
+      "name": "Thirty final oral checks",
+      "passed": true
+    },
+    {
+      "name": "Twelve diagnosis cards",
+      "passed": true
+    },
+    {
+      "name": "Twenty confusable pairs",
+      "passed": true
+    },
+    {
+      "name": "Two 45-minute mocks",
+      "passed": true
+    },
+    {
+      "name": "Seventy-two rendered interviewer questions",
+      "passed": true
+    },
+    {
+      "name": "Eighteen rendered case practice tasks",
+      "passed": true
+    },
+    {
+      "name": "Authoring checked, learner practice unchecked",
+      "passed": true
+    },
+    {
+      "name": "Judgment is not claimed to be automatically verified",
+      "passed": true
+    },
+    {
+      "name": "Unavailable future value stays unknown",
+      "passed": true
+    },
+    {
+      "name": "No replacement characters or trailing whitespace",
+      "passed": true
+    },
+    {
+      "name": "Root catalogue matches actual counts",
+      "passed": true
+    }
+  ],
+  "chapters": 9,
+  "lines": 2277,
+  "worked_cases": 18,
+  "answered_follow_ups": 72,
+  "case_practice_tasks": 18,
+  "final_oral_checks": 30,
+  "earlier_handbooks_byte_identical": 144,
+  "scope": "Content/source/coverage audits, separate from runtime arithmetic checks and manual product judgment."
+}

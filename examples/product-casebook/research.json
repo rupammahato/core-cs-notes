@@ -1,0 +1,62 @@
+{
+  "checked_date": "2026-10-21",
+  "scope": "Public primary educational, researcher, employer and software-author references. Cases, inputs, recommendations and mock formats are original hypothetical practice, not measured company question frequencies.",
+  "sources": [
+    {
+      "url": "https://docs.stripe.com/products-prices/pricing-models",
+      "use": "Supports the nearby chapter principle; not the synthetic case outcome, provider price or local decision threshold."
+    },
+    {
+      "url": "https://ocw.mit.edu/courses/15-768-management-of-services-concepts-design-and-delivery-fall-2010/eadc63624af3de30d642f9463a1ed612_MIT15_768F10_lec09-10.pdf",
+      "use": "Supports the nearby chapter principle; not the synthetic case outcome, provider price or local decision threshold."
+    },
+    {
+      "url": "https://research.google/pubs/measuring-the-user-experience-on-a-large-scale-user-centered-metrics-for-web-applications/",
+      "use": "Supports the nearby chapter principle; not the synthetic case outcome, provider price or local decision threshold."
+    },
+    {
+      "url": "https://sre.google/workbook/canarying-releases/",
+      "use": "Supports the nearby chapter principle; not the synthetic case outcome, provider price or local decision threshold."
+    },
+    {
+      "url": "https://sre.google/workbook/error-budget-policy/",
+      "use": "Supports the nearby chapter principle; not the synthetic case outcome, provider price or local decision threshold."
+    },
+    {
+      "url": "https://stripe.com/blog/introducing-credits-for-usage-based-billing",
+      "use": "Supports the nearby chapter principle; not the synthetic case outcome, provider price or local decision threshold."
+    },
+    {
+      "url": "https://www.atlassian.com/company/careers/resources/career-growth/product-managers",
+      "use": "Supports the nearby chapter principle; not the synthetic case outcome, provider price or local decision threshold."
+    },
+    {
+      "url": "https://www.gov.uk/service-manual/agile-delivery/how-the-discovery-phase-works",
+      "use": "Supports the nearby chapter principle; not the synthetic case outcome, provider price or local decision threshold."
+    },
+    {
+      "url": "https://www.gov.uk/service-manual/user-research/start-by-learning-user-needs",
+      "use": "Supports the nearby chapter principle; not the synthetic case outcome, provider price or local decision threshold."
+    },
+    {
+      "url": "https://www.intercom.com/blog/rice-simple-prioritization-for-product-managers/",
+      "use": "Supports the nearby chapter principle; not the synthetic case outcome, provider price or local decision threshold."
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/research/articles/diagnosing-sample-ratio-mismatch-in-a-b-testing/",
+      "use": "Supports the nearby chapter principle; not the synthetic case outcome, provider price or local decision threshold."
+    },
+    {
+      "url": "https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence",
+      "use": "Supports the nearby chapter principle; not the synthetic case outcome, provider price or local decision threshold."
+    },
+    {
+      "url": "https://www.w3.org/WAI/tutorials/forms/labels/",
+      "use": "Supports the nearby chapter principle; not the synthetic case outcome, provider price or local decision threshold."
+    }
+  ],
+  "boundaries": [
+    "No real product data, research interviews, experiments, model calls or deployments performed.",
+    "Runtime verification covers aggregate arithmetic and declared fixture gates, not optimal product judgment."
+  ]
+}

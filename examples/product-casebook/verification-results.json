@@ -1,0 +1,227 @@
+{
+  "verified_date": "2026-10-21",
+  "python": "3.13.15",
+  "total": 41,
+  "breakdown": {
+    "reference": 18,
+    "changed-scenario": 13,
+    "invalid-input": 8,
+    "preservation": 2
+  },
+  "checks": [
+    {
+      "group": "reference",
+      "name": "C01 independent arithmetic projection",
+      "passed": true
+    },
+    {
+      "group": "reference",
+      "name": "C02 independent arithmetic projection",
+      "passed": true
+    },
+    {
+      "group": "reference",
+      "name": "C03 independent arithmetic projection",
+      "passed": true
+    },
+    {
+      "group": "reference",
+      "name": "C04 independent arithmetic projection",
+      "passed": true
+    },
+    {
+      "group": "reference",
+      "name": "C05 independent arithmetic projection",
+      "passed": true
+    },
+    {
+      "group": "reference",
+      "name": "C06 independent arithmetic projection",
+      "passed": true
+    },
+    {
+      "group": "reference",
+      "name": "C07 independent arithmetic projection",
+      "passed": true
+    },
+    {
+      "group": "reference",
+      "name": "C08 independent arithmetic projection",
+      "passed": true
+    },
+    {
+      "group": "reference",
+      "name": "C09 independent arithmetic projection",
+      "passed": true
+    },
+    {
+      "group": "reference",
+      "name": "C10 independent arithmetic projection",
+      "passed": true
+    },
+    {
+      "group": "reference",
+      "name": "C11 independent arithmetic projection",
+      "passed": true
+    },
+    {
+      "group": "reference",
+      "name": "C12 independent arithmetic projection",
+      "passed": true
+    },
+    {
+      "group": "reference",
+      "name": "C13 independent arithmetic projection",
+      "passed": true
+    },
+    {
+      "group": "reference",
+      "name": "C14 independent arithmetic projection",
+      "passed": true
+    },
+    {
+      "group": "reference",
+      "name": "C15 independent arithmetic projection",
+      "passed": true
+    },
+    {
+      "group": "reference",
+      "name": "C16 independent arithmetic projection",
+      "passed": true
+    },
+    {
+      "group": "reference",
+      "name": "C17 independent arithmetic projection",
+      "passed": true
+    },
+    {
+      "group": "reference",
+      "name": "C18 independent arithmetic projection",
+      "passed": true
+    },
+    {
+      "group": "changed-scenario",
+      "name": "No assumed draft recovery creates no forecast lift",
+      "passed": true
+    },
+    {
+      "group": "changed-scenario",
+      "name": "Low onboarding confidence changes ranking",
+      "passed": true
+    },
+    {
+      "group": "changed-scenario",
+      "name": "Repairing the supplied critical failure changes only that gate",
+      "passed": true
+    },
+    {
+      "group": "changed-scenario",
+      "name": "Same device mix restores same pooled rate",
+      "passed": true
+    },
+    {
+      "group": "changed-scenario",
+      "name": "All missing client identities arrive consistently",
+      "passed": true
+    },
+    {
+      "group": "changed-scenario",
+      "name": "Empty funnel has no invented activation rate",
+      "passed": true
+    },
+    {
+      "group": "changed-scenario",
+      "name": "Fully mature new cohort removes denominator discrepancy",
+      "passed": true
+    },
+    {
+      "group": "changed-scenario",
+      "name": "Exact declared unsubscribe boundary passes",
+      "passed": true
+    },
+    {
+      "group": "changed-scenario",
+      "name": "Failed attempts remain an explicit cost sensitivity",
+      "passed": true
+    },
+    {
+      "group": "changed-scenario",
+      "name": "Zero discounted contribution has no finite volume remedy",
+      "passed": true
+    },
+    {
+      "group": "changed-scenario",
+      "name": "No spare capacity leaves clearance time undefined",
+      "passed": true
+    },
+    {
+      "group": "changed-scenario",
+      "name": "Configured allocation explains the supplied assignment counts",
+      "passed": true
+    },
+    {
+      "group": "changed-scenario",
+      "name": "Overlap changes union without changing marginal error counts",
+      "passed": true
+    },
+    {
+      "group": "invalid-input",
+      "name": "Interrupted population exceeds eligible users",
+      "passed": true
+    },
+    {
+      "group": "invalid-input",
+      "name": "Pass/fail criterion states overlap their total",
+      "passed": true
+    },
+    {
+      "group": "invalid-input",
+      "name": "Client receipt partitions exceed the server set",
+      "passed": true
+    },
+    {
+      "group": "invalid-input",
+      "name": "Useful sessions exceed clicked sessions",
+      "passed": true
+    },
+    {
+      "group": "invalid-input",
+      "name": "Funnel stages increase",
+      "passed": true
+    },
+    {
+      "group": "invalid-input",
+      "name": "Retention returns exceed mature users",
+      "passed": true
+    },
+    {
+      "group": "invalid-input",
+      "name": "Unit margin target is impossible",
+      "passed": true
+    },
+    {
+      "group": "invalid-input",
+      "name": "Bad-request overlap exceeds its marginal set",
+      "passed": true
+    },
+    {
+      "group": "preservation",
+      "name": "All 144 earlier handbook bytes preserved",
+      "passed": true
+    },
+    {
+      "group": "preservation",
+      "name": "Input/calculation/verifier sources unchanged during run",
+      "passed": true
+    }
+  ],
+  "source_sha256": {
+    "fixture.json": "da54ebfc6fac53da6b1be1efe8b65134bc5c1140e5f1ebc23d292cebae62b50b",
+    "compute.py": "4e36ab88f9269b14f19fa2b8ef0edbbdbaf0355344a5fd4a526fa2f7b7c77ac3",
+    "verify.py": "f89900e0234a008efa2d8f0e1775bf3a4adb03b6b979574c07c43fff64a8d39b"
+  },
+  "scope": "Synthetic aggregate arithmetic and declared gate rules, selected scenario changes and contradictions. Does not verify actual users, assignment, model labels, causal effects or whether an authored product recommendation is optimal.",
+  "external_services_called": false,
+  "real_experiments_run": false,
+  "deployments_performed": false
+}

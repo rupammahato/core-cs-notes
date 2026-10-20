@@ -1,0 +1,20 @@
+{
+  "C01": {"eligible":1000,"interrupted":400,"interrupted_completed":240,"uninterrupted_completed":540,"assumed_recovery_share":0.5},
+  "C02": {"candidates":[{"id":"onboarding","reach":800,"impact":2,"confidence":0.75,"effort":3},{"id":"notifications","reach":2000,"impact":0.5,"confidence":0.5,"effort":2},{"id":"admin","reach":100,"impact":3,"confidence":0.9,"effort":1}],"lower_onboarding_confidence":0.3},
+  "C03": {"mobile_users":700,"mobile_completed":420,"desktop_users":300,"desktop_completed":240,"assumed_mobile_lift":0.1,"criteria":6,"verified_passes":4,"critical_failures":1},
+  "C04": {"before_mobile_users":400,"before_mobile_completed":240,"before_desktop_users":600,"before_desktop_completed":540,"after_mobile_users":800,"after_mobile_completed":480,"after_desktop_users":200,"after_desktop_completed":180},
+  "C05": {"server_paid_orders":1000,"client_unique_received":700,"late_unique":200,"raw_server_events":1300,"order_price_cents":5000},
+  "C06": {"sessions_per_period":1000,"before_clicks":300,"before_useful":200,"after_clicks":450,"after_useful":180},
+  "C07": {"eligible_mature":1000,"started":700,"uploaded":400,"answered":300,"useful":180,"assumed_extra_uploads":100},
+  "C08": {"previous_signups":1000,"previous_mature":1000,"previous_returns":300,"new_signups":1000,"new_mature":600,"new_returns":180,"late_valid_returns":30},
+  "C09": {"control_users":1000,"control_converted":200,"control_unsubscribed":20,"treatment_users":1000,"treatment_converted":240,"treatment_unsubscribed":50,"delivery_cost_cents":5000,"contribution_per_conversion_cents":500,"allowed_unsubscribe_increase_pp":1},
+  "C10": {"price_cents":2000,"refund_cents":200,"useful_jobs":80,"failed_attempts":20,"cost_per_attempt_cents":12,"payment_cost_cents":90,"storage_cost_cents":100,"target_contribution_margin":0.5},
+  "C11": {"price_cents":10000,"variable_cost_cents":6000,"discount_share":0.2,"baseline_units":100,"scenario_units":180},
+  "C12": {"spend_cents":60000,"platform_claimed_acquisitions":150,"deduplicated_new_customers":120,"activated_new_customers":80,"assumed_monthly_contribution_cents":500},
+  "C13": {"zones":[{"id":"A","requests":50,"slots":40,"matches":35},{"id":"B","requests":30,"slots":15,"matches":8},{"id":"C","requests":20,"slots":5,"matches":2}],"completed":40,"assumed_added_slots":20},
+  "C14": {"agents":3,"service_per_agent_per_hour":15,"arrivals_per_hour":60,"busy_hours":4,"target_utilization":0.8,"later_arrivals_per_hour":30},
+  "C15": {"actual_fraud":200,"old_alerts":1000,"old_true_alerts":100,"new_alerts":500,"new_true_alerts":90,"review_cost_cents":20,"assumed_prevented_loss_per_caught_cents":10000},
+  "C16": {"control_assigned":1100,"control_converted":220,"treatment_assigned":900,"treatment_converted":225,"planned_treatment_share":0.5,"srm_threshold":0.001},
+  "C17": {"questions":100,"old_answered":90,"old_grounded_correct":72,"new_answered":95,"new_grounded_correct":76,"old_permission_failures":0,"new_permission_failures":1,"new_total_cost_cents":1800},
+  "C18": {"previous_requests":10000,"previous_bad":80,"canary_requests":1000,"canary_error":20,"canary_slow":15,"canary_both":5,"slo_good_share":0.99,"canary_burn_stop_above":2}
+}
