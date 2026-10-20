@@ -1,0 +1,32 @@
+{
+  "researched_date": "2026-10-21",
+  "selection": "Eight editorial practice exercises selected to complement the existing six OOP LLD implementations. No company-frequency ranking or universal interview format is claimed.",
+  "sources": [
+    {
+      "title": "Atlassian engineering interview guide",
+      "url": "https://www.atlassian.com/company/careers/resources/interviewing/engineering",
+      "use": "One employer example of coding interviews including code design and discussion of trade-offs; not a universal format."
+    },
+    {
+      "title": "C++ Core Guidelines, error handling",
+      "url": "https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#S-errors",
+      "use": "Invariants, preconditions and scope-owned resource cleanup; living guidance, not proof of every program's exception guarantee."
+    },
+    {
+      "title": "GCC 12.2 warning options",
+      "url": "https://gcc.gnu.org/onlinedocs/gcc-12.2.0/gcc/Warning-Options.html",
+      "use": "Diagnostic flags matching the installed compiler version. Actual C++17 builds and outputs are separately recorded."
+    },
+    {
+      "title": "C++ working draft, priority_queue",
+      "url": "https://eel.is/c++draft/priority.queue",
+      "use": "Priority queue ordering contract; live draft may contain facilities beyond C++17. The exercise uses and compiles only its C++17 subset."
+    },
+    {
+      "title": "RFC 9923: The FNV Non-Cryptographic Hash Algorithm",
+      "url": "https://www.rfc-editor.org/rfc/rfc9923.html#section-2",
+      "use": "32-bit FNV-1a arithmetic and constants. Informational independent-stream RFC, not an Internet Standard; not suitable as an authorization mechanism."
+    }
+  ],
+  "authored_contracts": "All exercise scopes, adapter protocols, fixture inventories, version policies, timings and scoring rubrics are local educational choices, not copied employer questions."
+}

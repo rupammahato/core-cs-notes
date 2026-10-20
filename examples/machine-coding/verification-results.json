@@ -1,0 +1,315 @@
+{
+  "verified_date": "2026-10-21",
+  "python": "3.13.15",
+  "compiler": "g++.EXE (x86_64-posix-seh-rev1, Built by MinGW-W64 project) 12.2.0",
+  "flags": [
+    "-std=c++17",
+    "-Wall",
+    "-Wextra",
+    "-Wpedantic",
+    "-Werror",
+    "-O2"
+  ],
+  "checks": [
+    {
+      "name": "both C++17 targets compile with warnings as errors",
+      "passed": true
+    },
+    {
+      "name": "direct callback lifecycle, nonstandard exceptions and reentrancy",
+      "passed": true,
+      "assertions": 14
+    },
+    {
+      "name": "T01: A nested commit is still inside its parent",
+      "passed": true,
+      "commands": 9
+    },
+    {
+      "name": "T02: Empty value and missing key differ",
+      "passed": true,
+      "commands": 5
+    },
+    {
+      "name": "T03: Rollback restores deletion and insertion",
+      "passed": true,
+      "commands": 6
+    },
+    {
+      "name": "T04: Invalid commands preserve the map",
+      "passed": true,
+      "commands": 5
+    },
+    {
+      "name": "T05: The oldest accepted request expires exactly at the boundary",
+      "passed": true,
+      "commands": 6
+    },
+    {
+      "name": "T06: Users have separate quotas",
+      "passed": true,
+      "commands": 5
+    },
+    {
+      "name": "T07: A regressing clock is rejected",
+      "passed": true,
+      "commands": 6
+    },
+    {
+      "name": "T08: Failed initialization can be retried",
+      "passed": true,
+      "commands": 5
+    },
+    {
+      "name": "T09: One callback failure does not stop delivery",
+      "passed": true,
+      "commands": 5
+    },
+    {
+      "name": "T10: Unsubscribe changes the next dispatch",
+      "passed": true,
+      "commands": 5
+    },
+    {
+      "name": "T11: New subscriptions wait until the next publish",
+      "passed": true,
+      "commands": 4
+    },
+    {
+      "name": "T12: Recursive publish is isolated and the guard resets",
+      "passed": true,
+      "commands": 4
+    },
+    {
+      "name": "T13: Time, priority, then insertion order",
+      "passed": true,
+      "commands": 5
+    },
+    {
+      "name": "T14: Cancelled heap entries are skipped",
+      "passed": true,
+      "commands": 6
+    },
+    {
+      "name": "T15: A throwing action does not block later tasks",
+      "passed": true,
+      "commands": 5
+    },
+    {
+      "name": "T16: Time validation precedes queue mutation",
+      "passed": true,
+      "commands": 5
+    },
+    {
+      "name": "T17: Bounded exact change defeats a greedy choice",
+      "passed": true,
+      "commands": 4
+    },
+    {
+      "name": "T18: Impossible change leaves the whole session intact",
+      "passed": true,
+      "commands": 6
+    },
+    {
+      "name": "T19: Cancel refunds only customer escrow",
+      "passed": true,
+      "commands": 6
+    },
+    {
+      "name": "T20: Validation, insufficient funds and stockout",
+      "passed": true,
+      "commands": 9
+    },
+    {
+      "name": "T21: Adjacent meetings share a room",
+      "passed": true,
+      "commands": 4
+    },
+    {
+      "name": "T22: Best fit has a deterministic tie break",
+      "passed": true,
+      "commands": 5
+    },
+    {
+      "name": "T23: A failed move preserves the original reservation",
+      "passed": true,
+      "commands": 5
+    },
+    {
+      "name": "T24: A move ignores its own old interval",
+      "passed": true,
+      "commands": 5
+    },
+    {
+      "name": "T25: AND, OR and deterministic ranking",
+      "passed": true,
+      "commands": 5
+    },
+    {
+      "name": "T26: Replacement removes stale postings",
+      "passed": true,
+      "commands": 7
+    },
+    {
+      "name": "T27: Tokenization is an explicit ASCII contract",
+      "passed": true,
+      "commands": 5
+    },
+    {
+      "name": "T28: Missing terms and invalid modes",
+      "passed": true,
+      "commands": 5
+    },
+    {
+      "name": "T29: Undefined flags fail closed; percentage endpoints are exact",
+      "passed": true,
+      "commands": 5
+    },
+    {
+      "name": "T30: Retries and conflicting versions differ",
+      "passed": true,
+      "commands": 5
+    },
+    {
+      "name": "T31: Tenant configurations stay separate",
+      "passed": true,
+      "commands": 5
+    },
+    {
+      "name": "T32: Invalid policy changes preserve the last valid policy",
+      "passed": true,
+      "commands": 6
+    },
+    {
+      "name": "parser rejects malformed input in kv",
+      "passed": true,
+      "commands": 8
+    },
+    {
+      "name": "parser rejects malformed input in limiter",
+      "passed": true,
+      "commands": 8
+    },
+    {
+      "name": "parser rejects malformed input in bus",
+      "passed": true,
+      "commands": 8
+    },
+    {
+      "name": "parser rejects malformed input in scheduler",
+      "passed": true,
+      "commands": 8
+    },
+    {
+      "name": "parser rejects malformed input in vending",
+      "passed": true,
+      "commands": 8
+    },
+    {
+      "name": "parser rejects malformed input in booking",
+      "passed": true,
+      "commands": 8
+    },
+    {
+      "name": "parser rejects malformed input in search",
+      "passed": true,
+      "commands": 8
+    },
+    {
+      "name": "parser rejects malformed input in flags",
+      "passed": true,
+      "commands": 8
+    },
+    {
+      "name": "integer overflow and partial integers do not mutate",
+      "passed": true,
+      "commands": 4
+    },
+    {
+      "name": "vending credit bound and unsupported coin preserve escrow",
+      "passed": true,
+      "commands": 104
+    },
+    {
+      "name": "time range and negative priority validation",
+      "passed": true,
+      "commands": 4
+    },
+    {
+      "name": "quoted spaces escaped quotes and backslashes round-trip",
+      "passed": true,
+      "commands": 4
+    },
+    {
+      "name": "random KV histories against snapshot model",
+      "passed": true,
+      "commands": 739
+    },
+    {
+      "name": "random limiter against full accepted log",
+      "passed": true,
+      "commands": 501
+    },
+    {
+      "name": "random event lifecycle against list snapshot model",
+      "passed": true,
+      "commands": 600
+    },
+    {
+      "name": "random scheduler against sorted pending jobs",
+      "passed": true,
+      "commands": 700
+    },
+    {
+      "name": "random room allocation against occupied slots",
+      "passed": true,
+      "commands": 700
+    },
+    {
+      "name": "random inverted index against full document scan",
+      "passed": true,
+      "commands": 400
+    },
+    {
+      "name": "random flags against fixed-width reference hash and versions",
+      "passed": true,
+      "commands": 400
+    },
+    {
+      "name": "stable flag cohorts over five increasing percentages",
+      "passed": true,
+      "commands": 1005
+    },
+    {
+      "name": "length-prefix flag bucket separation",
+      "passed": true,
+      "commands": 2
+    },
+    {
+      "name": "random vending transitions against exhaustive bounded change",
+      "passed": true,
+      "commands": 500
+    },
+    {
+      "name": "invalid runner invocation exits with status 2",
+      "passed": true
+    }
+  ],
+  "total": 57,
+  "commands_checked": 5900,
+  "direct_api_assertions": 14,
+  "worked_traces": 32,
+  "source_sha256": {
+    "common.hpp": "b902a0149b2e650d0f2419783fa9527c0595550c43f87dd2c9dbd7b0b412f305",
+    "machines.hpp": "bf946bd203db4b8f611984de4f5e10504b0f9efa4d90f082ff0e7b617fe8ae47",
+    "main.cpp": "5a390ceaa59adb7adc2b048f9a2c0e78f09e78ddb74e0f154aba6f446d24ef97",
+    "api_tests.cpp": "9be957f53c010e7b44d28006fc1fd7eaf3b04d3c32db1b90917aa6363e0dacfe",
+    "fixtures.py": "1e91e46f2888e25311c0b157c2a95854e0c0df8bda669e4003ac9ba98b8a07ba",
+    "verify.py": "3c88a80450b62e0450625a81329073c8e8f7219916ae8a468f7e4a67546ae8a7"
+  },
+  "boundaries": [
+    "Single-threaded in-memory exercises; no durability or distributed guarantees.",
+    "No performance benchmark, sanitizer run, allocation-failure injection or real hardware experiment.",
+    "Randomized tests use one recorded seed and finite histories; not a proof for all inputs."
+  ]
+}

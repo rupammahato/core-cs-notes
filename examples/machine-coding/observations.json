@@ -1,0 +1,975 @@
+{
+  "T01": [
+    {
+      "ok": true,
+      "result": null
+    },
+    {
+      "ok": true,
+      "result": null
+    },
+    {
+      "ok": true,
+      "result": null
+    },
+    {
+      "ok": true,
+      "result": null
+    },
+    {
+      "ok": true,
+      "result": null
+    },
+    {
+      "ok": true,
+      "result": null
+    },
+    {
+      "ok": true,
+      "result": "inner"
+    },
+    {
+      "ok": true,
+      "result": null
+    },
+    {
+      "ok": true,
+      "result": {
+        "data": {
+          "name": "original"
+        },
+        "depth": 0
+      }
+    }
+  ],
+  "T02": [
+    {
+      "ok": true,
+      "result": null
+    },
+    {
+      "ok": true,
+      "result": ""
+    },
+    {
+      "ok": true,
+      "result": null
+    },
+    {
+      "ok": true,
+      "result": true
+    },
+    {
+      "ok": true,
+      "result": false
+    }
+  ],
+  "T03": [
+    {
+      "ok": true,
+      "result": null
+    },
+    {
+      "ok": true,
+      "result": null
+    },
+    {
+      "ok": true,
+      "result": true
+    },
+    {
+      "ok": true,
+      "result": null
+    },
+    {
+      "ok": true,
+      "result": null
+    },
+    {
+      "ok": true,
+      "result": {
+        "data": {
+          "a": "one"
+        },
+        "depth": 0
+      }
+    }
+  ],
+  "T04": [
+    {
+      "ok": true,
+      "result": null
+    },
+    {
+      "ok": false,
+      "error": "no transaction"
+    },
+    {
+      "ok": false,
+      "error": "no transaction"
+    },
+    {
+      "ok": false,
+      "error": "wrong arity"
+    },
+    {
+      "ok": true,
+      "result": {
+        "data": {
+          "a": "safe"
+        },
+        "depth": 0
+      }
+    }
+  ],
+  "T05": [
+    {
+      "ok": true,
+      "result": null
+    },
+    {
+      "ok": true,
+      "result": true
+    },
+    {
+      "ok": true,
+      "result": true
+    },
+    {
+      "ok": true,
+      "result": false
+    },
+    {
+      "ok": true,
+      "result": true
+    },
+    {
+      "ok": true,
+      "result": false
+    }
+  ],
+  "T06": [
+    {
+      "ok": true,
+      "result": null
+    },
+    {
+      "ok": true,
+      "result": true
+    },
+    {
+      "ok": true,
+      "result": false
+    },
+    {
+      "ok": true,
+      "result": true
+    },
+    {
+      "ok": true,
+      "result": true
+    }
+  ],
+  "T07": [
+    {
+      "ok": true,
+      "result": null
+    },
+    {
+      "ok": true,
+      "result": true
+    },
+    {
+      "ok": false,
+      "error": "time regressed"
+    },
+    {
+      "ok": true,
+      "result": true
+    },
+    {
+      "ok": true,
+      "result": false
+    },
+    {
+      "ok": true,
+      "result": true
+    }
+  ],
+  "T08": [
+    {
+      "ok": false,
+      "error": "initialize first"
+    },
+    {
+      "ok": false,
+      "error": "invalid limit"
+    },
+    {
+      "ok": true,
+      "result": null
+    },
+    {
+      "ok": false,
+      "error": "already initialized"
+    },
+    {
+      "ok": true,
+      "result": true
+    }
+  ],
+  "T09": [
+    {
+      "ok": true,
+      "result": null
+    },
+    {
+      "ok": true,
+      "result": null
+    },
+    {
+      "ok": true,
+      "result": null
+    },
+    {
+      "ok": true,
+      "result": null
+    },
+    {
+      "ok": true,
+      "result": {
+        "callbacks": [
+          "a:ok",
+          "b:error",
+          "d:ok"
+        ],
+        "events": [
+          "a:paid",
+          "b:paid",
+          "d:paid"
+        ]
+      }
+    }
+  ],
+  "T10": [
+    {
+      "ok": true,
+      "result": null
+    },
+    {
+      "ok": true,
+      "result": null
+    },
+    {
+      "ok": true,
+      "result": {
+        "callbacks": [
+          "a:ok",
+          "b:ok"
+        ],
+        "events": [
+          "a:one",
+          "b:one"
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "result": {
+        "callbacks": [
+          "a:ok"
+        ],
+        "events": [
+          "a:two"
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "result": [
+        "a"
+      ]
+    }
+  ],
+  "T11": [
+    {
+      "ok": true,
+      "result": null
+    },
+    {
+      "ok": true,
+      "result": {
+        "callbacks": [
+          "a:ok"
+        ],
+        "events": [
+          "a:one"
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "result": {
+        "callbacks": [
+          "a:error",
+          "c:ok"
+        ],
+        "events": [
+          "a:two",
+          "c:two"
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "result": [
+        "a",
+        "c"
+      ]
+    }
+  ],
+  "T12": [
+    {
+      "ok": true,
+      "result": null
+    },
+    {
+      "ok": true,
+      "result": null
+    },
+    {
+      "ok": true,
+      "result": {
+        "callbacks": [
+          "a:error",
+          "b:ok"
+        ],
+        "events": [
+          "a:one",
+          "b:one"
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "result": {
+        "callbacks": [
+          "a:error",
+          "b:ok"
+        ],
+        "events": [
+          "a:two",
+          "b:two"
+        ]
+      }
+    }
+  ],
+  "T13": [
+    {
+      "ok": true,
+      "result": null
+    },
+    {
+      "ok": true,
+      "result": null
+    },
+    {
+      "ok": true,
+      "result": null
+    },
+    {
+      "ok": true,
+      "result": null
+    },
+    {
+      "ok": true,
+      "result": [
+        "early:succeeded",
+        "high:succeeded",
+        "tie:succeeded",
+        "low:succeeded"
+      ]
+    }
+  ],
+  "T14": [
+    {
+      "ok": true,
+      "result": null
+    },
+    {
+      "ok": true,
+      "result": true
+    },
+    {
+      "ok": true,
+      "result": false
+    },
+    {
+      "ok": true,
+      "result": []
+    },
+    {
+      "ok": false,
+      "error": "duplicate task"
+    },
+    {
+      "ok": true,
+      "result": {
+        "a": "cancelled"
+      }
+    }
+  ],
+  "T15": [
+    {
+      "ok": true,
+      "result": null
+    },
+    {
+      "ok": true,
+      "result": null
+    },
+    {
+      "ok": true,
+      "result": [
+        "bad:failed",
+        "good:succeeded"
+      ]
+    },
+    {
+      "ok": true,
+      "result": []
+    },
+    {
+      "ok": true,
+      "result": {
+        "bad": "failed",
+        "good": "succeeded"
+      }
+    }
+  ],
+  "T16": [
+    {
+      "ok": true,
+      "result": []
+    },
+    {
+      "ok": false,
+      "error": "task in past"
+    },
+    {
+      "ok": false,
+      "error": "time regressed"
+    },
+    {
+      "ok": true,
+      "result": null
+    },
+    {
+      "ok": true,
+      "result": [
+        "now:succeeded"
+      ]
+    }
+  ],
+  "T17": [
+    {
+      "ok": true,
+      "result": null
+    },
+    {
+      "ok": true,
+      "result": null
+    },
+    {
+      "ok": true,
+      "result": [
+        3,
+        3
+      ]
+    },
+    {
+      "ok": true,
+      "result": {
+        "stock": {
+          "snack": 1,
+          "tea": 1
+        },
+        "cash": 14,
+        "credit": 0,
+        "selected": null
+      }
+    }
+  ],
+  "T18": [
+    {
+      "ok": true,
+      "result": null
+    },
+    {
+      "ok": true,
+      "result": null
+    },
+    {
+      "ok": true,
+      "result": null
+    },
+    {
+      "ok": false,
+      "error": "exact change unavailable"
+    },
+    {
+      "ok": true,
+      "result": {
+        "stock": {
+          "snack": 1,
+          "tea": 2
+        },
+        "cash": 10,
+        "credit": 6,
+        "selected": "tea"
+      }
+    },
+    {
+      "ok": true,
+      "result": [
+        3,
+        3
+      ]
+    }
+  ],
+  "T19": [
+    {
+      "ok": true,
+      "result": null
+    },
+    {
+      "ok": true,
+      "result": null
+    },
+    {
+      "ok": true,
+      "result": null
+    },
+    {
+      "ok": true,
+      "result": [
+        1,
+        4
+      ]
+    },
+    {
+      "ok": true,
+      "result": []
+    },
+    {
+      "ok": true,
+      "result": {
+        "stock": {
+          "snack": 1,
+          "tea": 2
+        },
+        "cash": 10,
+        "credit": 0,
+        "selected": null
+      }
+    }
+  ],
+  "T20": [
+    {
+      "ok": true,
+      "result": null
+    },
+    {
+      "ok": false,
+      "error": "unsupported coin"
+    },
+    {
+      "ok": false,
+      "error": "insufficient credit"
+    },
+    {
+      "ok": true,
+      "result": null
+    },
+    {
+      "ok": true,
+      "result": []
+    },
+    {
+      "ok": true,
+      "result": null
+    },
+    {
+      "ok": true,
+      "result": null
+    },
+    {
+      "ok": true,
+      "result": []
+    },
+    {
+      "ok": false,
+      "error": "out of stock"
+    }
+  ],
+  "T21": [
+    {
+      "ok": true,
+      "result": "A"
+    },
+    {
+      "ok": true,
+      "result": "A"
+    },
+    {
+      "ok": true,
+      "result": "B"
+    },
+    {
+      "ok": true,
+      "result": {
+        "first": [
+          "A",
+          10,
+          20,
+          2
+        ],
+        "next": [
+          "A",
+          20,
+          30,
+          2
+        ],
+        "overlap": [
+          "B",
+          19,
+          21,
+          2
+        ]
+      }
+    }
+  ],
+  "T22": [
+    {
+      "ok": true,
+      "result": "B"
+    },
+    {
+      "ok": true,
+      "result": "C"
+    },
+    {
+      "ok": false,
+      "error": "no room"
+    },
+    {
+      "ok": true,
+      "result": true
+    },
+    {
+      "ok": true,
+      "result": "B"
+    }
+  ],
+  "T23": [
+    {
+      "ok": true,
+      "result": "B"
+    },
+    {
+      "ok": true,
+      "result": "B"
+    },
+    {
+      "ok": true,
+      "result": "C"
+    },
+    {
+      "ok": false,
+      "error": "no room"
+    },
+    {
+      "ok": true,
+      "result": {
+        "x": [
+          "B",
+          0,
+          10,
+          4
+        ],
+        "y": [
+          "B",
+          10,
+          20,
+          4
+        ],
+        "z": [
+          "C",
+          10,
+          20,
+          4
+        ]
+      }
+    }
+  ],
+  "T24": [
+    {
+      "ok": true,
+      "result": "A"
+    },
+    {
+      "ok": true,
+      "result": "A"
+    },
+    {
+      "ok": false,
+      "error": "duplicate booking"
+    },
+    {
+      "ok": false,
+      "error": "invalid interval"
+    },
+    {
+      "ok": true,
+      "result": {
+        "x": [
+          "A",
+          2,
+          8,
+          2
+        ]
+      }
+    }
+  ],
+  "T25": [
+    {
+      "ok": true,
+      "result": null
+    },
+    {
+      "ok": true,
+      "result": null
+    },
+    {
+      "ok": true,
+      "result": null
+    },
+    {
+      "ok": true,
+      "result": [
+        [
+          "b",
+          2
+        ]
+      ]
+    },
+    {
+      "ok": true,
+      "result": [
+        [
+          "a",
+          2
+        ],
+        [
+          "b",
+          2
+        ],
+        [
+          "c",
+          1
+        ]
+      ]
+    }
+  ],
+  "T26": [
+    {
+      "ok": true,
+      "result": null
+    },
+    {
+      "ok": true,
+      "result": null
+    },
+    {
+      "ok": true,
+      "result": []
+    },
+    {
+      "ok": true,
+      "result": [
+        [
+          "a",
+          1
+        ]
+      ]
+    },
+    {
+      "ok": true,
+      "result": true
+    },
+    {
+      "ok": true,
+      "result": false
+    },
+    {
+      "ok": true,
+      "result": []
+    }
+  ],
+  "T27": [
+    {
+      "ok": true,
+      "result": null
+    },
+    {
+      "ok": true,
+      "result": [
+        [
+          "a",
+          2
+        ]
+      ]
+    },
+    {
+      "ok": true,
+      "result": [
+        [
+          "a",
+          1
+        ]
+      ]
+    },
+    {
+      "ok": true,
+      "result": []
+    },
+    {
+      "ok": true,
+      "result": []
+    }
+  ],
+  "T28": [
+    {
+      "ok": true,
+      "result": null
+    },
+    {
+      "ok": true,
+      "result": []
+    },
+    {
+      "ok": true,
+      "result": [
+        [
+          "a",
+          1
+        ]
+      ]
+    },
+    {
+      "ok": false,
+      "error": "invalid search mode"
+    },
+    {
+      "ok": true,
+      "result": [
+        [
+          "a",
+          1
+        ]
+      ]
+    }
+  ],
+  "T29": [
+    {
+      "ok": true,
+      "result": false
+    },
+    {
+      "ok": true,
+      "result": true
+    },
+    {
+      "ok": true,
+      "result": false
+    },
+    {
+      "ok": true,
+      "result": true
+    },
+    {
+      "ok": true,
+      "result": true
+    }
+  ],
+  "T30": [
+    {
+      "ok": true,
+      "result": true
+    },
+    {
+      "ok": true,
+      "result": false
+    },
+    {
+      "ok": false,
+      "error": "version conflict"
+    },
+    {
+      "ok": false,
+      "error": "stale version"
+    },
+    {
+      "ok": true,
+      "result": true
+    }
+  ],
+  "T31": [
+    {
+      "ok": true,
+      "result": true
+    },
+    {
+      "ok": true,
+      "result": true
+    },
+    {
+      "ok": true,
+      "result": true
+    },
+    {
+      "ok": true,
+      "result": false
+    },
+    {
+      "ok": true,
+      "result": false
+    }
+  ],
+  "T32": [
+    {
+      "ok": true,
+      "result": true
+    },
+    {
+      "ok": false,
+      "error": "invalid percentage"
+    },
+    {
+      "ok": false,
+      "error": "invalid version"
+    },
+    {
+      "ok": true,
+      "result": false
+    },
+    {
+      "ok": true,
+      "result": true
+    },
+    {
+      "ok": true,
+      "result": true
+    }
+  ]
+}

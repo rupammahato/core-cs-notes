@@ -1,0 +1,72 @@
+{
+  "verified_date": "2026-10-21",
+  "status": "passed",
+  "book": {
+    "chapters": 11,
+    "lines": 2411,
+    "implementations": 8,
+    "worked_traces": 32,
+    "interview_answers": 64,
+    "practice_tasks": 32,
+    "oral_checks": 30,
+    "mocks": 2
+  },
+  "runtime": {
+    "groups": 57,
+    "commands_checked": 5900,
+    "direct_api_assertions": 14,
+    "compiler": "g++.EXE (x86_64-posix-seh-rev1, Built by MinGW-W64 project) 12.2.0",
+    "flags": [
+      "-std=c++17",
+      "-Wall",
+      "-Wextra",
+      "-Wpedantic",
+      "-Werror",
+      "-O2"
+    ]
+  },
+  "content": {
+    "audit_groups": 58,
+    "protected_prior_notes_unchanged": 163
+  },
+  "website": {
+    "production_build": "passed; exec exit code 0 observed",
+    "static_pages_generated": 179,
+    "page_routes_200": 175,
+    "content_assertions": 23,
+    "scoped_search_queries": 17,
+    "missing_chapter_status": 404,
+    "temporary_preview_port": 59426,
+    "temporary_preview_closed": true,
+    "port_3000_listening": false,
+    "font_fixture": "Existing local Google-font response fixture used through NEXT_FONT_GOOGLE_MOCKED_RESPONSES; normal site font configuration unchanged.",
+    "visual_browser_review": false
+  },
+  "git_diff_whitespace_check": "passed",
+  "scope_boundaries": [
+    "Single-threaded in-memory exercises; no durability or distributed guarantees.",
+    "No performance benchmark, sanitizer run, allocation-failure injection or real hardware experiment.",
+    "Randomized tests use one recorded seed and finite histories; not a proof for all inputs."
+  ],
+  "evidence_sha256": {
+    "verification-results.json": "c3bafd21285b0bb0fb62875ad9e207d7de2b0edc1ef33abc4283a9e733ae61fb",
+    "observations.json": "004d0c7bea1ed2a3aa29ca87b53cc8037c0bbd1b57a979461ad175905357c56d",
+    "compile-output.json": "c5762b8014ee782d64605742e9d236b90425d33000d0684d618a892771abe3e7",
+    "content-validation.json": "60dcd1c932d09f4be6c7af661eade462f960e6a99475bd449b59c7879747670e",
+    "site-validation.json": "c2dad1d9f46608b325a6a03fa3557712ce889b14abaaf152f634f9ffbf433de3",
+    "site-build-output.txt": "bd89fd8382220d0113105a18bf6dd51d6b31ede940ba9b3f239b0952e2c296df",
+    "research.json": "c1047a385a4b1925bda0a1fb61a7736cfd91d89f5473a1fcc2eeb5dc497ffe95"
+  },
+  "tool_source_sha256": {
+    "api_tests.cpp": "9be957f53c010e7b44d28006fc1fd7eaf3b04d3c32db1b90917aa6363e0dacfe",
+    "build_book.py": "2e35d06816550d432443a45bf867d1b22a36cf2de08cc06b04048effc8260265",
+    "common.hpp": "b902a0149b2e650d0f2419783fa9527c0595550c43f87dd2c9dbd7b0b412f305",
+    "finish_validation.py": "c7bfbb743cbc5cc6c3cf4e6b58a99bfb1e453831dc82fa9d48e03afcec966a58",
+    "fixtures.py": "1e91e46f2888e25311c0b157c2a95854e0c0df8bda669e4003ac9ba98b8a07ba",
+    "machines.hpp": "bf946bd203db4b8f611984de4f5e10504b0f9efa4d90f082ff0e7b617fe8ae47",
+    "main.cpp": "5a390ceaa59adb7adc2b048f9a2c0e78f09e78ddb74e0f154aba6f446d24ef97",
+    "site-smoke.mjs": "6908ca303e12eec9dcd7636beeded67fce0d27175306a9cce046d95566dc1f89",
+    "validate_content.py": "fe73d3ad37744f3f1f8cf6cbdd210882325909aa445569797696fcddd70b037e",
+    "verify.py": "3c88a80450b62e0450625a81329073c8e8f7219916ae8a468f7e4a67546ae8a7"
+  }
+}

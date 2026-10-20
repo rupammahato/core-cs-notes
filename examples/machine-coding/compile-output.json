@@ -1,0 +1,38 @@
+[
+  {
+    "source": "main.cpp",
+    "command": [
+      "C:\\mingw64\\bin\\g++.EXE",
+      "-std=c++17",
+      "-Wall",
+      "-Wextra",
+      "-Wpedantic",
+      "-Werror",
+      "-O2",
+      "C:\\Development\\Placement\\examples\\machine-coding\\main.cpp",
+      "-o",
+      "C:\\Development\\Placement\\examples\\machine-coding\\.build\\machines.exe"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "source": "api_tests.cpp",
+    "command": [
+      "C:\\mingw64\\bin\\g++.EXE",
+      "-std=c++17",
+      "-Wall",
+      "-Wextra",
+      "-Wpedantic",
+      "-Werror",
+      "-O2",
+      "C:\\Development\\Placement\\examples\\machine-coding\\api_tests.cpp",
+      "-o",
+      "C:\\Development\\Placement\\examples\\machine-coding\\.build\\api-tests.exe"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  }
+]

@@ -1,0 +1,290 @@
+{
+  "verified_date": "2026-10-21",
+  "total": 58,
+  "checks": [
+    {
+      "name": "runtime proof and complete trace inventory",
+      "passed": true
+    },
+    {
+      "name": "all tested sources unchanged",
+      "passed": true
+    },
+    {
+      "name": "eleven ordered chapters",
+      "passed": true
+    },
+    {
+      "name": "kv: exact compiled class",
+      "passed": true
+    },
+    {
+      "name": "kv: four exact recorded transcripts",
+      "passed": true
+    },
+    {
+      "name": "kv: eight answered questions",
+      "passed": true
+    },
+    {
+      "name": "kv: four learner practice tasks",
+      "passed": true
+    },
+    {
+      "name": "kv: reasoning and architecture",
+      "passed": true
+    },
+    {
+      "name": "limiter: exact compiled class",
+      "passed": true
+    },
+    {
+      "name": "limiter: four exact recorded transcripts",
+      "passed": true
+    },
+    {
+      "name": "limiter: eight answered questions",
+      "passed": true
+    },
+    {
+      "name": "limiter: four learner practice tasks",
+      "passed": true
+    },
+    {
+      "name": "limiter: reasoning and architecture",
+      "passed": true
+    },
+    {
+      "name": "bus: exact compiled class",
+      "passed": true
+    },
+    {
+      "name": "bus: four exact recorded transcripts",
+      "passed": true
+    },
+    {
+      "name": "bus: eight answered questions",
+      "passed": true
+    },
+    {
+      "name": "bus: four learner practice tasks",
+      "passed": true
+    },
+    {
+      "name": "bus: reasoning and architecture",
+      "passed": true
+    },
+    {
+      "name": "scheduler: exact compiled class",
+      "passed": true
+    },
+    {
+      "name": "scheduler: four exact recorded transcripts",
+      "passed": true
+    },
+    {
+      "name": "scheduler: eight answered questions",
+      "passed": true
+    },
+    {
+      "name": "scheduler: four learner practice tasks",
+      "passed": true
+    },
+    {
+      "name": "scheduler: reasoning and architecture",
+      "passed": true
+    },
+    {
+      "name": "vending: exact compiled class",
+      "passed": true
+    },
+    {
+      "name": "vending: four exact recorded transcripts",
+      "passed": true
+    },
+    {
+      "name": "vending: eight answered questions",
+      "passed": true
+    },
+    {
+      "name": "vending: four learner practice tasks",
+      "passed": true
+    },
+    {
+      "name": "vending: reasoning and architecture",
+      "passed": true
+    },
+    {
+      "name": "booking: exact compiled class",
+      "passed": true
+    },
+    {
+      "name": "booking: four exact recorded transcripts",
+      "passed": true
+    },
+    {
+      "name": "booking: eight answered questions",
+      "passed": true
+    },
+    {
+      "name": "booking: four learner practice tasks",
+      "passed": true
+    },
+    {
+      "name": "booking: reasoning and architecture",
+      "passed": true
+    },
+    {
+      "name": "search: exact compiled class",
+      "passed": true
+    },
+    {
+      "name": "search: four exact recorded transcripts",
+      "passed": true
+    },
+    {
+      "name": "search: eight answered questions",
+      "passed": true
+    },
+    {
+      "name": "search: four learner practice tasks",
+      "passed": true
+    },
+    {
+      "name": "search: reasoning and architecture",
+      "passed": true
+    },
+    {
+      "name": "flags: exact compiled class",
+      "passed": true
+    },
+    {
+      "name": "flags: four exact recorded transcripts",
+      "passed": true
+    },
+    {
+      "name": "flags: eight answered questions",
+      "passed": true
+    },
+    {
+      "name": "flags: four learner practice tasks",
+      "passed": true
+    },
+    {
+      "name": "flags: reasoning and architecture",
+      "passed": true
+    },
+    {
+      "name": "complete compiled support header in method chapter",
+      "passed": true
+    },
+    {
+      "name": "thirty answered oral checks",
+      "passed": true
+    },
+    {
+      "name": "two complete timed mocks with rubric",
+      "passed": true
+    },
+    {
+      "name": "learner tasks remain unchecked",
+      "passed": true
+    },
+    {
+      "name": "balanced code fences and no replacement characters",
+      "passed": true
+    },
+    {
+      "name": "no trailing whitespace",
+      "passed": true
+    },
+    {
+      "name": "all 163 prior handbook files byte-identical",
+      "passed": true
+    },
+    {
+      "name": "174 unique generated handbook routes",
+      "passed": true
+    },
+    {
+      "name": "eleven generated machine-coding pages",
+      "passed": true
+    },
+    {
+      "name": "every handbook bridge resolves",
+      "passed": true
+    },
+    {
+      "name": "machine-coding subject and four groups",
+      "passed": true
+    },
+    {
+      "name": "search subject filter registered",
+      "passed": true
+    },
+    {
+      "name": "README catalogue matches actual chapter/line counts",
+      "passed": true
+    },
+    {
+      "name": "five primary-source references appear in book",
+      "passed": true
+    },
+    {
+      "name": "scope and evidence boundaries stated",
+      "passed": true
+    }
+  ],
+  "chapters": 11,
+  "lines": 2411,
+  "implementations": 8,
+  "worked_traces": 32,
+  "interview_answers": 64,
+  "practice_tasks": 32,
+  "oral_checks": 30,
+  "mocks": 2,
+  "protected_prior_files": 163,
+  "internal_bridge_routes": [
+    "/docs/dbms/recovery-relational-algebra",
+    "/docs/dbms/transactions-concurrency",
+    "/docs/dsa/complexity",
+    "/docs/machine-coding",
+    "/docs/machine-coding/consolidation-and-mocks",
+    "/docs/machine-coding/event-bus-and-callback-lifecycle",
+    "/docs/machine-coding/feature-flag-evaluator",
+    "/docs/machine-coding/in-memory-document-search",
+    "/docs/machine-coding/meeting-room-booking",
+    "/docs/machine-coding/sliding-window-rate-limiter",
+    "/docs/machine-coding/solving-method-and-test-harness",
+    "/docs/machine-coding/transactional-key-value-store",
+    "/docs/machine-coding/vending-machine-and-exact-change",
+    "/docs/machine-coding/virtual-time-task-scheduler",
+    "/docs/oop/constructors-destructors-copying",
+    "/docs/oop/lld-method-parking-lru-splitwise",
+    "/docs/oop/lld-snake-elevator-bookmyshow",
+    "/docs/oop/modern-cpp-object-model",
+    "/docs/probability-statistics/hypothesis-tests-and-experiments",
+    "/docs/system-design/booking-reservations",
+    "/docs/system-design/checkout-payments-credit-ledger",
+    "/docs/system-design/job-scheduler-workers",
+    "/docs/system-design/multi-tenant-rag",
+    "/docs/system-design/notifications-webhooks",
+    "/docs/system-design/rate-limiter",
+    "/docs/system-design/reliable-workflows-concurrency",
+    "/docs/system-design/search-autocomplete",
+    "/docs/system-design/secure-observable-operations"
+  ],
+  "source_sha256": {
+    "Machine Coding Notes\\machine-coding-handbook-part-1-master-roadmap.md": "39ffc9d40736bc2cf296c4c05c66ebe6216e7092647379c8f3c9fb3b81f87ef6",
+    "Machine Coding Notes\\machine-coding-handbook-part-10-feature-flag-evaluator.md": "51a7af0075f253001319ec7d70bea5f8960c447279d5aef967ea3773f06b0a05",
+    "Machine Coding Notes\\machine-coding-handbook-part-11-consolidation-and-mocks.md": "50624b606fd98de7acdfba2f2f5b873b0623e257c34c6aa1bb13c2eefec671bd",
+    "Machine Coding Notes\\machine-coding-handbook-part-2-solving-method-and-test-harness.md": "dfdce44fa8a9f11170122f8d691e8f19786dae8b49c2497300cce520bb537d3f",
+    "Machine Coding Notes\\machine-coding-handbook-part-3-transactional-key-value-store.md": "2383266061dab1d4544a961c505aa39f1abc46051321746250634091a001563f",
+    "Machine Coding Notes\\machine-coding-handbook-part-4-sliding-window-rate-limiter.md": "640cfb6750b6cbb55cf4e16c2ee9cdb23505eee01ef9410e549863bd0eb780f5",
+    "Machine Coding Notes\\machine-coding-handbook-part-5-event-bus-and-callback-lifecycle.md": "b7dc5944a573015b243333fd70036df21454f4468c726d47b4f1199cd6907208",
+    "Machine Coding Notes\\machine-coding-handbook-part-6-virtual-time-task-scheduler.md": "34aa6ae88005d78f31efcb489155369eb2e35a33443ce2f16e49ff4ee3cd54db",
+    "Machine Coding Notes\\machine-coding-handbook-part-7-vending-machine-and-exact-change.md": "dbadae3846815e99128c75c9baa4cf17f893bbd07a0e82a7051435249107e316",
+    "Machine Coding Notes\\machine-coding-handbook-part-8-meeting-room-booking.md": "b009ef5a5474a6f5a7427ffffbc2ff4072270739c20ac76c441339ea44dc598f",
+    "Machine Coding Notes\\machine-coding-handbook-part-9-in-memory-document-search.md": "56cc78d585c09ee2f5f2bcb6667086a2eba74a5a108545e0fd715120bca27fc9"
+  }
+}
