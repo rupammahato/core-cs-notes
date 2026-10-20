@@ -1,0 +1,49 @@
+{
+  "additional_historical_rows": 10000,
+  "before": [
+    {
+      "id": 6,
+      "parent": 0,
+      "notused": 47,
+      "detail": "SEARCH c USING INDEX sqlite_autoindex_customers_1 (customer_id=?)"
+    },
+    {
+      "id": 14,
+      "parent": 0,
+      "notused": 215,
+      "detail": "SCAN o USING INDEX sqlite_autoindex_orders_1"
+    },
+    {
+      "id": 28,
+      "parent": 0,
+      "notused": 0,
+      "detail": "USE TEMP B-TREE FOR ORDER BY"
+    }
+  ],
+  "after": [
+    {
+      "id": 5,
+      "parent": 0,
+      "notused": 47,
+      "detail": "SEARCH c USING INDEX sqlite_autoindex_customers_1 (customer_id=?)"
+    },
+    {
+      "id": 13,
+      "parent": 0,
+      "notused": 46,
+      "detail": "SEARCH o USING COVERING INDEX orders_customer_time (customer_id=? AND ordered_ts>? AND ordered_ts<?)"
+    }
+  ],
+  "result": [
+    {
+      "order_id": "o01"
+    },
+    {
+      "order_id": "o02"
+    },
+    {
+      "order_id": "o03"
+    }
+  ],
+  "scope": "Actual local SQLite plan evidence; no production timing or cross-engine plan claim"
+}

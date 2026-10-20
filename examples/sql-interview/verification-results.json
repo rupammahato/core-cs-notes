@@ -1,0 +1,1184 @@
+{
+  "verified_date": "2026-10-20",
+  "python": "3.13.15",
+  "sqlite": "3.50.4",
+  "total": 86,
+  "checks": [
+    {
+      "group": "query-output",
+      "name": "Q01 baseline",
+      "passed": true
+    },
+    {
+      "group": "query-output",
+      "name": "Q02 baseline",
+      "passed": true
+    },
+    {
+      "group": "query-output",
+      "name": "Q03 baseline",
+      "passed": true
+    },
+    {
+      "group": "query-output",
+      "name": "Q04 baseline",
+      "passed": true
+    },
+    {
+      "group": "query-output",
+      "name": "Q05 baseline",
+      "passed": true
+    },
+    {
+      "group": "query-output",
+      "name": "Q06 baseline",
+      "passed": true
+    },
+    {
+      "group": "query-output",
+      "name": "Q07 baseline",
+      "passed": true
+    },
+    {
+      "group": "query-output",
+      "name": "Q08 baseline",
+      "passed": true
+    },
+    {
+      "group": "query-output",
+      "name": "Q09 baseline",
+      "passed": true
+    },
+    {
+      "group": "query-output",
+      "name": "Q10 baseline",
+      "passed": true
+    },
+    {
+      "group": "query-output",
+      "name": "Q11 baseline",
+      "passed": true
+    },
+    {
+      "group": "query-output",
+      "name": "Q12 baseline",
+      "passed": true
+    },
+    {
+      "group": "query-output",
+      "name": "Q13 baseline",
+      "passed": true
+    },
+    {
+      "group": "query-output",
+      "name": "Q14 baseline",
+      "passed": true
+    },
+    {
+      "group": "query-output",
+      "name": "Q15 baseline",
+      "passed": true
+    },
+    {
+      "group": "query-output",
+      "name": "Q16 baseline",
+      "passed": true
+    },
+    {
+      "group": "query-output",
+      "name": "Q17 baseline",
+      "passed": true
+    },
+    {
+      "group": "query-output",
+      "name": "Q18 baseline",
+      "passed": true
+    },
+    {
+      "group": "query-output",
+      "name": "Q19 baseline",
+      "passed": true
+    },
+    {
+      "group": "query-output",
+      "name": "Q20 baseline",
+      "passed": true
+    },
+    {
+      "group": "query-output",
+      "name": "Q21 baseline",
+      "passed": true
+    },
+    {
+      "group": "query-output",
+      "name": "Q22 baseline",
+      "passed": true
+    },
+    {
+      "group": "query-output",
+      "name": "Q23 baseline",
+      "passed": true
+    },
+    {
+      "group": "query-output",
+      "name": "Q24 baseline",
+      "passed": true
+    },
+    {
+      "group": "query-output",
+      "name": "Q25 baseline",
+      "passed": true
+    },
+    {
+      "group": "query-output",
+      "name": "Q26 baseline",
+      "passed": true
+    },
+    {
+      "group": "query-output",
+      "name": "Q27 baseline",
+      "passed": true
+    },
+    {
+      "group": "query-output",
+      "name": "Q28 baseline",
+      "passed": true
+    },
+    {
+      "group": "query-output",
+      "name": "Q29 baseline",
+      "passed": true
+    },
+    {
+      "group": "query-output",
+      "name": "Q30 baseline",
+      "passed": true
+    },
+    {
+      "group": "insertion-order",
+      "name": "Q01 reversed insertion",
+      "passed": true
+    },
+    {
+      "group": "insertion-order",
+      "name": "Q02 reversed insertion",
+      "passed": true
+    },
+    {
+      "group": "insertion-order",
+      "name": "Q03 reversed insertion",
+      "passed": true
+    },
+    {
+      "group": "insertion-order",
+      "name": "Q04 reversed insertion",
+      "passed": true
+    },
+    {
+      "group": "insertion-order",
+      "name": "Q05 reversed insertion",
+      "passed": true
+    },
+    {
+      "group": "insertion-order",
+      "name": "Q06 reversed insertion",
+      "passed": true
+    },
+    {
+      "group": "insertion-order",
+      "name": "Q07 reversed insertion",
+      "passed": true
+    },
+    {
+      "group": "insertion-order",
+      "name": "Q08 reversed insertion",
+      "passed": true
+    },
+    {
+      "group": "insertion-order",
+      "name": "Q09 reversed insertion",
+      "passed": true
+    },
+    {
+      "group": "insertion-order",
+      "name": "Q10 reversed insertion",
+      "passed": true
+    },
+    {
+      "group": "insertion-order",
+      "name": "Q11 reversed insertion",
+      "passed": true
+    },
+    {
+      "group": "insertion-order",
+      "name": "Q12 reversed insertion",
+      "passed": true
+    },
+    {
+      "group": "insertion-order",
+      "name": "Q13 reversed insertion",
+      "passed": true
+    },
+    {
+      "group": "insertion-order",
+      "name": "Q14 reversed insertion",
+      "passed": true
+    },
+    {
+      "group": "insertion-order",
+      "name": "Q15 reversed insertion",
+      "passed": true
+    },
+    {
+      "group": "insertion-order",
+      "name": "Q16 reversed insertion",
+      "passed": true
+    },
+    {
+      "group": "insertion-order",
+      "name": "Q17 reversed insertion",
+      "passed": true
+    },
+    {
+      "group": "insertion-order",
+      "name": "Q18 reversed insertion",
+      "passed": true
+    },
+    {
+      "group": "insertion-order",
+      "name": "Q19 reversed insertion",
+      "passed": true
+    },
+    {
+      "group": "insertion-order",
+      "name": "Q20 reversed insertion",
+      "passed": true
+    },
+    {
+      "group": "insertion-order",
+      "name": "Q21 reversed insertion",
+      "passed": true
+    },
+    {
+      "group": "insertion-order",
+      "name": "Q22 reversed insertion",
+      "passed": true
+    },
+    {
+      "group": "insertion-order",
+      "name": "Q23 reversed insertion",
+      "passed": true
+    },
+    {
+      "group": "insertion-order",
+      "name": "Q24 reversed insertion",
+      "passed": true
+    },
+    {
+      "group": "insertion-order",
+      "name": "Q25 reversed insertion",
+      "passed": true
+    },
+    {
+      "group": "insertion-order",
+      "name": "Q26 reversed insertion",
+      "passed": true
+    },
+    {
+      "group": "insertion-order",
+      "name": "Q27 reversed insertion",
+      "passed": true
+    },
+    {
+      "group": "insertion-order",
+      "name": "Q28 reversed insertion",
+      "passed": true
+    },
+    {
+      "group": "insertion-order",
+      "name": "Q29 reversed insertion",
+      "passed": true
+    },
+    {
+      "group": "insertion-order",
+      "name": "Q30 reversed insertion",
+      "passed": true
+    },
+    {
+      "group": "mutation",
+      "name": "New no-order customer remains visible",
+      "passed": true
+    },
+    {
+      "group": "mutation",
+      "name": "Additional NULL exclusion does not poison anti-join",
+      "passed": true
+    },
+    {
+      "group": "mutation",
+      "name": "Duplicate delivery does not add sessions or users",
+      "passed": true
+    },
+    {
+      "group": "mutation",
+      "name": "A tied top revenue tier retains every tied customer",
+      "passed": true
+    },
+    {
+      "group": "mutation",
+      "name": "Unknown billing changed to known zero restores completeness",
+      "passed": true
+    },
+    {
+      "group": "mutation",
+      "name": "Exactly 1800 seconds does not start a session",
+      "passed": true
+    },
+    {
+      "group": "mutation",
+      "name": "One second before exclusive funnel end becomes eligible",
+      "passed": true
+    },
+    {
+      "group": "mutation",
+      "name": "Late knowledge revises historical retention",
+      "passed": true
+    },
+    {
+      "group": "mutation",
+      "name": "Exactly completed cart horizon is mature",
+      "passed": true
+    },
+    {
+      "group": "mutation",
+      "name": "Repairing a line mismatch removes only that exception",
+      "passed": true
+    },
+    {
+      "group": "mutation",
+      "name": "Other tenant receives only its own aggregate population",
+      "passed": true
+    },
+    {
+      "group": "mutation",
+      "name": "Empty tenant has no users and no fabricated conversion rate",
+      "passed": true
+    },
+    {
+      "group": "counterexample",
+      "name": "WHERE filter drops preserved zero-order customers",
+      "passed": true
+    },
+    {
+      "group": "counterexample",
+      "name": "COUNT star counts an unmatched customer row",
+      "passed": true
+    },
+    {
+      "group": "counterexample",
+      "name": "SUM DISTINCT loses legitimate equal-value orders",
+      "passed": true
+    },
+    {
+      "group": "counterexample",
+      "name": "NOT IN NULL produces no included customers",
+      "passed": true
+    },
+    {
+      "group": "counterexample",
+      "name": "Two child facts multiply payments and refunds",
+      "passed": true
+    },
+    {
+      "group": "counterexample",
+      "name": "Seven sparse revenue rows differ from seven calendar days",
+      "passed": true
+    },
+    {
+      "group": "constraint",
+      "name": "Foreign-key enforcement is enabled",
+      "passed": true
+    },
+    {
+      "group": "constraint",
+      "name": "Orphan order rejected",
+      "passed": true
+    },
+    {
+      "group": "constraint",
+      "name": "Negative billed amount rejected",
+      "passed": true
+    },
+    {
+      "group": "constraint",
+      "name": "Duplicate order identity rejected",
+      "passed": true
+    },
+    {
+      "group": "query-plan",
+      "name": "Unindexed selective order lookup scans orders",
+      "passed": true
+    },
+    {
+      "group": "query-plan",
+      "name": "Composite covering index supports selective lookup",
+      "passed": true
+    },
+    {
+      "group": "query-plan",
+      "name": "Index preserves ordered results",
+      "passed": true
+    },
+    {
+      "group": "preservation",
+      "name": "Fixture, parameters, query and reference sources unchanged",
+      "passed": true
+    }
+  ],
+  "observations": {
+    "Q01": [
+      {
+        "customer_id": "c1",
+        "paid_orders": 3
+      },
+      {
+        "customer_id": "c2",
+        "paid_orders": 2
+      },
+      {
+        "customer_id": "c3",
+        "paid_orders": 1
+      },
+      {
+        "customer_id": "c4",
+        "paid_orders": 1
+      },
+      {
+        "customer_id": "c5",
+        "paid_orders": 1
+      },
+      {
+        "customer_id": "c6",
+        "paid_orders": 0
+      },
+      {
+        "customer_id": "c7",
+        "paid_orders": 0
+      },
+      {
+        "customer_id": "c8",
+        "paid_orders": 1
+      }
+    ],
+    "Q02": [
+      {
+        "customer_id": "c6"
+      },
+      {
+        "customer_id": "c7"
+      }
+    ],
+    "Q03": [
+      {
+        "customer_id": "c1",
+        "known_bill_cents": 4000,
+        "missing_bills": 0,
+        "complete_bill_cents": 4000
+      },
+      {
+        "customer_id": "c2",
+        "known_bill_cents": 3000,
+        "missing_bills": 0,
+        "complete_bill_cents": 3000
+      },
+      {
+        "customer_id": "c3",
+        "known_bill_cents": 3000,
+        "missing_bills": 0,
+        "complete_bill_cents": 3000
+      },
+      {
+        "customer_id": "c4",
+        "known_bill_cents": 0,
+        "missing_bills": 0,
+        "complete_bill_cents": 0
+      },
+      {
+        "customer_id": "c5",
+        "known_bill_cents": null,
+        "missing_bills": 1,
+        "complete_bill_cents": null
+      },
+      {
+        "customer_id": "c8",
+        "known_bill_cents": 400,
+        "missing_bills": 0,
+        "complete_bill_cents": 400
+      }
+    ],
+    "Q04": [
+      {
+        "customer_id": "c1",
+        "known_bill_cents": 4000,
+        "item_count": 5
+      },
+      {
+        "customer_id": "c2",
+        "known_bill_cents": 3000,
+        "item_count": 2
+      },
+      {
+        "customer_id": "c3",
+        "known_bill_cents": 3000,
+        "item_count": 1
+      },
+      {
+        "customer_id": "c4",
+        "known_bill_cents": 0,
+        "item_count": 1
+      },
+      {
+        "customer_id": "c5",
+        "known_bill_cents": null,
+        "item_count": 1
+      },
+      {
+        "customer_id": "c8",
+        "known_bill_cents": 400,
+        "item_count": 0
+      }
+    ],
+    "Q05": [
+      {
+        "order_id": "o01",
+        "confirmed_payments": 2,
+        "confirmed_cents": 1000,
+        "bill_gap_cents": 0
+      },
+      {
+        "order_id": "o02",
+        "confirmed_payments": 1,
+        "confirmed_cents": 1000,
+        "bill_gap_cents": 1000
+      },
+      {
+        "order_id": "o03",
+        "confirmed_payments": 1,
+        "confirmed_cents": 1000,
+        "bill_gap_cents": 0
+      },
+      {
+        "order_id": "o04",
+        "confirmed_payments": 1,
+        "confirmed_cents": 1500,
+        "bill_gap_cents": 0
+      },
+      {
+        "order_id": "o05",
+        "confirmed_payments": 1,
+        "confirmed_cents": 1500,
+        "bill_gap_cents": 0
+      },
+      {
+        "order_id": "o06",
+        "confirmed_payments": 1,
+        "confirmed_cents": 3000,
+        "bill_gap_cents": 0
+      },
+      {
+        "order_id": "o07",
+        "confirmed_payments": 1,
+        "confirmed_cents": 0,
+        "bill_gap_cents": 0
+      },
+      {
+        "order_id": "o08",
+        "confirmed_payments": 0,
+        "confirmed_cents": 0,
+        "bill_gap_cents": null
+      },
+      {
+        "order_id": "o09",
+        "confirmed_payments": 1,
+        "confirmed_cents": 400,
+        "bill_gap_cents": 0
+      }
+    ],
+    "Q06": [
+      {
+        "category": "books",
+        "line_cents": 4900
+      },
+      {
+        "category": "software",
+        "line_cents": 5800
+      }
+    ],
+    "Q07": [
+      {
+        "customer_id": "c1"
+      },
+      {
+        "customer_id": "c2"
+      }
+    ],
+    "Q08": [
+      {
+        "customer_id": "c1"
+      },
+      {
+        "customer_id": "c3"
+      },
+      {
+        "customer_id": "c4"
+      },
+      {
+        "customer_id": "c5"
+      },
+      {
+        "customer_id": "c6"
+      },
+      {
+        "customer_id": "c7"
+      },
+      {
+        "customer_id": "c8"
+      }
+    ],
+    "Q09": [
+      {
+        "customer_id": "c1",
+        "bill_cents": 4000,
+        "revenue_rank": 1
+      },
+      {
+        "customer_id": "c2",
+        "bill_cents": 3000,
+        "revenue_rank": 2
+      },
+      {
+        "customer_id": "c3",
+        "bill_cents": 3000,
+        "revenue_rank": 2
+      }
+    ],
+    "Q10": [
+      {
+        "customer_id": "c1",
+        "order_id": "o03",
+        "billed_cents": 1000
+      },
+      {
+        "customer_id": "c2",
+        "order_id": "o05",
+        "billed_cents": 1500
+      },
+      {
+        "customer_id": "c3",
+        "order_id": "o06",
+        "billed_cents": 3000
+      },
+      {
+        "customer_id": "c4",
+        "order_id": "o07",
+        "billed_cents": 0
+      },
+      {
+        "customer_id": "c5",
+        "order_id": "o08",
+        "billed_cents": null
+      },
+      {
+        "customer_id": "c8",
+        "order_id": "o09",
+        "billed_cents": 400
+      }
+    ],
+    "Q11": [
+      {
+        "day": "2026-10-01",
+        "known_contribution": 2500,
+        "running_known": 2500,
+        "running_missing": 0,
+        "complete_running": 2500
+      },
+      {
+        "day": "2026-10-02",
+        "known_contribution": 3000,
+        "running_known": 5500,
+        "running_missing": 0,
+        "complete_running": 5500
+      },
+      {
+        "day": "2026-10-03",
+        "known_contribution": 3000,
+        "running_known": 8500,
+        "running_missing": 0,
+        "complete_running": 8500
+      },
+      {
+        "day": "2026-10-04",
+        "known_contribution": 0,
+        "running_known": 8500,
+        "running_missing": 0,
+        "complete_running": 8500
+      },
+      {
+        "day": "2026-10-05",
+        "known_contribution": 1500,
+        "running_known": 10000,
+        "running_missing": 0,
+        "complete_running": 10000
+      },
+      {
+        "day": "2026-10-06",
+        "known_contribution": 0,
+        "running_known": 10000,
+        "running_missing": 1,
+        "complete_running": null
+      },
+      {
+        "day": "2026-10-07",
+        "known_contribution": 0,
+        "running_known": 10000,
+        "running_missing": 1,
+        "complete_running": null
+      },
+      {
+        "day": "2026-10-08",
+        "known_contribution": 0,
+        "running_known": 10000,
+        "running_missing": 1,
+        "complete_running": null
+      },
+      {
+        "day": "2026-10-09",
+        "known_contribution": 0,
+        "running_known": 10000,
+        "running_missing": 1,
+        "complete_running": null
+      },
+      {
+        "day": "2026-10-10",
+        "known_contribution": 0,
+        "running_known": 10000,
+        "running_missing": 1,
+        "complete_running": null
+      }
+    ],
+    "Q12": [
+      {
+        "day": "2026-10-01",
+        "rolling_known": 3200,
+        "rolling_missing": 0
+      },
+      {
+        "day": "2026-10-02",
+        "rolling_known": 6200,
+        "rolling_missing": 0
+      },
+      {
+        "day": "2026-10-03",
+        "rolling_known": 9200,
+        "rolling_missing": 0
+      },
+      {
+        "day": "2026-10-04",
+        "rolling_known": 9200,
+        "rolling_missing": 0
+      },
+      {
+        "day": "2026-10-05",
+        "rolling_known": 10700,
+        "rolling_missing": 0
+      },
+      {
+        "day": "2026-10-06",
+        "rolling_known": 10700,
+        "rolling_missing": 1
+      },
+      {
+        "day": "2026-10-07",
+        "rolling_known": 10000,
+        "rolling_missing": 1
+      },
+      {
+        "day": "2026-10-08",
+        "rolling_known": 7500,
+        "rolling_missing": 1
+      },
+      {
+        "day": "2026-10-09",
+        "rolling_known": 4500,
+        "rolling_missing": 1
+      },
+      {
+        "day": "2026-10-10",
+        "rolling_known": 1500,
+        "rolling_missing": 1
+      }
+    ],
+    "Q13": [
+      {
+        "month": "2026-08-01",
+        "paid_orders": 0,
+        "previous_count": null,
+        "change_pct": null
+      },
+      {
+        "month": "2026-09-01",
+        "paid_orders": 1,
+        "previous_count": 0,
+        "change_pct": null
+      },
+      {
+        "month": "2026-10-01",
+        "paid_orders": 9,
+        "previous_count": 1,
+        "change_pct": 800.0
+      }
+    ],
+    "Q14": [
+      {
+        "customer_id": "c1",
+        "start_day": "2026-10-01",
+        "end_day": "2026-10-02",
+        "days": 2
+      },
+      {
+        "customer_id": "c2",
+        "start_day": "2026-10-03",
+        "end_day": "2026-10-04",
+        "days": 2
+      }
+    ],
+    "Q15": [
+      {
+        "session_id": 1,
+        "start_utc": "2026-10-01 10:00:00",
+        "events": 2
+      },
+      {
+        "session_id": 2,
+        "start_utc": "2026-10-01 11:00:01",
+        "events": 1
+      },
+      {
+        "session_id": 3,
+        "start_utc": "2026-10-02 10:00:00",
+        "events": 1
+      },
+      {
+        "session_id": 4,
+        "start_utc": "2026-10-08 10:00:00",
+        "events": 1
+      }
+    ],
+    "Q16": [
+      {
+        "order_id": "o01",
+        "plan": "free"
+      },
+      {
+        "order_id": "o02",
+        "plan": "paid"
+      },
+      {
+        "order_id": "o03",
+        "plan": "paid"
+      },
+      {
+        "order_id": "o04",
+        "plan": "free"
+      },
+      {
+        "order_id": "o05",
+        "plan": "free"
+      },
+      {
+        "order_id": "o06",
+        "plan": "paid"
+      },
+      {
+        "order_id": "o07",
+        "plan": "free"
+      },
+      {
+        "order_id": "o08",
+        "plan": "Unmapped"
+      },
+      {
+        "order_id": "o09",
+        "plan": "Unmapped"
+      }
+    ],
+    "Q17": [
+      {
+        "eligible_users": 6,
+        "started_users": 5,
+        "completed_users": 2,
+        "completion_pct": 33.333333
+      }
+    ],
+    "Q18": [
+      {
+        "cohort": "2026-10-01",
+        "eligible_users": 2,
+        "returned_users": 1,
+        "retention_pct": 50.0
+      },
+      {
+        "cohort": "2026-10-02",
+        "eligible_users": 2,
+        "returned_users": 2,
+        "retention_pct": 100.0
+      },
+      {
+        "cohort": "2026-10-03",
+        "eligible_users": 1,
+        "returned_users": 1,
+        "retention_pct": 100.0
+      },
+      {
+        "cohort": "2026-10-04",
+        "eligible_users": 1,
+        "returned_users": 1,
+        "retention_pct": 100.0
+      },
+      {
+        "cohort": "2026-10-10",
+        "eligible_users": 1,
+        "returned_users": 1,
+        "retention_pct": 100.0
+      }
+    ],
+    "Q19": [
+      {
+        "label": "initial",
+        "eligible_users": 6,
+        "returned_users": 2,
+        "retention_pct": 33.333333
+      },
+      {
+        "label": "revised",
+        "eligible_users": 6,
+        "returned_users": 3,
+        "retention_pct": 50.0
+      }
+    ],
+    "Q20": [
+      {
+        "eligible_users": 6,
+        "returned_users": 6,
+        "retention_pct": 100.0
+      }
+    ],
+    "Q21": [
+      {
+        "dau": 2,
+        "active_7d": 6
+      }
+    ],
+    "Q22": [
+      {
+        "mature_first_purchasers": 4,
+        "repeat_purchasers": 2,
+        "repeat_pct": 50.0
+      }
+    ],
+    "Q23": [
+      {
+        "mature_carts": 4,
+        "converted_carts": 2,
+        "abandoned_carts": 2,
+        "abandonment_pct": 50.0
+      }
+    ],
+    "Q24": [
+      {
+        "plan": "Unmapped",
+        "eligible_users": 2,
+        "completed_users": 1,
+        "completion_pct": 50.0
+      },
+      {
+        "plan": "free",
+        "eligible_users": 3,
+        "completed_users": 1,
+        "completion_pct": 33.333333
+      },
+      {
+        "plan": "paid",
+        "eligible_users": 1,
+        "completed_users": 0,
+        "completion_pct": 0.0
+      }
+    ],
+    "Q25": [
+      {
+        "event_id": "a1",
+        "deliveries": 2,
+        "payloads": 1,
+        "kind": "exact-repeat"
+      },
+      {
+        "event_id": "conflict",
+        "deliveries": 2,
+        "payloads": 2,
+        "kind": "conflict"
+      }
+    ],
+    "Q26": [
+      {
+        "delivery_id": "bad-tenant",
+        "issue": "tenant-mismatch"
+      },
+      {
+        "delivery_id": "unknown-user",
+        "issue": "unknown-customer"
+      }
+    ],
+    "Q27": [
+      {
+        "order_id": "o01",
+        "confirmed_cents": 1000,
+        "refund_cents": 100,
+        "confirmed_net_cents": 900,
+        "bill_gap_cents": 0
+      },
+      {
+        "order_id": "o02",
+        "confirmed_cents": 1000,
+        "refund_cents": 0,
+        "confirmed_net_cents": 1000,
+        "bill_gap_cents": 1000
+      },
+      {
+        "order_id": "o03",
+        "confirmed_cents": 1000,
+        "refund_cents": 200,
+        "confirmed_net_cents": 800,
+        "bill_gap_cents": 0
+      },
+      {
+        "order_id": "o04",
+        "confirmed_cents": 1500,
+        "refund_cents": 0,
+        "confirmed_net_cents": 1500,
+        "bill_gap_cents": 0
+      },
+      {
+        "order_id": "o05",
+        "confirmed_cents": 1500,
+        "refund_cents": 1500,
+        "confirmed_net_cents": 0,
+        "bill_gap_cents": 0
+      },
+      {
+        "order_id": "o06",
+        "confirmed_cents": 3000,
+        "refund_cents": 0,
+        "confirmed_net_cents": 3000,
+        "bill_gap_cents": 0
+      },
+      {
+        "order_id": "o07",
+        "confirmed_cents": 0,
+        "refund_cents": 0,
+        "confirmed_net_cents": 0,
+        "bill_gap_cents": 0
+      },
+      {
+        "order_id": "o08",
+        "confirmed_cents": 0,
+        "refund_cents": 0,
+        "confirmed_net_cents": 0,
+        "bill_gap_cents": null
+      },
+      {
+        "order_id": "o09",
+        "confirmed_cents": 400,
+        "refund_cents": 0,
+        "confirmed_net_cents": 400,
+        "bill_gap_cents": 0
+      }
+    ],
+    "Q28": [
+      {
+        "paid_orders": 9,
+        "confirmed_cents": 9400,
+        "refund_cents": 1800,
+        "confirmed_net_cents": 7600,
+        "missing_bills": 1
+      }
+    ],
+    "Q29": [
+      {
+        "order_id": "o05",
+        "issue": "line-bill-mismatch"
+      },
+      {
+        "order_id": "o08",
+        "issue": "missing-bill"
+      },
+      {
+        "order_id": "o09",
+        "issue": "missing-items"
+      }
+    ],
+    "Q30": [
+      {
+        "order_id": "o01"
+      },
+      {
+        "order_id": "o02"
+      },
+      {
+        "order_id": "o03"
+      }
+    ]
+  },
+  "source_sha256": {
+    "fixture.json": "2644d8b503d306818bba6bc1dbd1c6d418df196256b1390499ec47fb28349c6d",
+    "parameters.json": "35085452939277f19f7a114ef4b9b2db5558ccffc83bde4543bde0c8074d3b1d",
+    "schema.sql": "b5662071938fd3cddca0a9e050e7a794ce941aa408ed8ef5fd4c8a21a28ef4dc",
+    "lab.py": "02cb94658a6e3513a383925306f3bfdfcafd3d9b597683ffdcf9e512255bc840",
+    "reference.py": "3ffe61cc5fca67eaa7e15a93c8944e88ae23920184ab198b066d8cb17a7851f2",
+    "queries\\q01.sql": "bd342d77b77b44ca626eb758bee26ab2b544fbe7d4f75556be251d061e8be875",
+    "queries\\q02.sql": "59ddcc5b48e29dc6bcb03f923fa734c20d865f18f5f02725c270c8df57591188",
+    "queries\\q03.sql": "7d8817003fd8e9d29f4423ace364761c7e01b9d5c8f373e605410e43c6ec9260",
+    "queries\\q04.sql": "b2aac3ffc87e1513435278972f5a9e5bd5bff1bbb5552e40cb4b014a1ae737aa",
+    "queries\\q05.sql": "c89e4b111cd4e4af5ed4a4dcbb1e4284a9688320cf3227b002a9ebf084347ac0",
+    "queries\\q06.sql": "2a04fdcdcaf27328a1c1a44fbfd533236e0b1911222f4519143347108e136f9e",
+    "queries\\q07.sql": "281f673b8782a7670187af1445b4c259488cf53567b71f9f4cbbb80a1eb6378e",
+    "queries\\q08.sql": "469795310038b4acb7f863554e5bb7f3b08c21ff4f9b5f8f871d54a1bbf1be28",
+    "queries\\q09.sql": "41b1e39a407fc1e31b2b95bb1480542118375f2428cf4c876efd2ab99837221a",
+    "queries\\q10.sql": "d3ecc3e9b77d85cb0d50a0be90d859879e2f403bc686ef0d81b032fbd107f71b",
+    "queries\\q11.sql": "c24a83c0d3927872806fe25bf284e71b6bbc70b83e321242f53d2714111402f9",
+    "queries\\q12.sql": "3027e172b5b7ec48113ceb1dfa84223f5ec2823707aeea86bb234c246e9de8bb",
+    "queries\\q13.sql": "0882314302d7fd0b97a66eec9b6fc926a8e0890da7ce6bc5a8c252f9941280f2",
+    "queries\\q14.sql": "a9f8be3ef8e8c441c3d0808d8893870f0024245211d605b20b1e3680111bb1b9",
+    "queries\\q15.sql": "c9d20af1346dc841adf50e91ab011dcd4eb77b227f5d73ed948a9b36f04d61be",
+    "queries\\q16.sql": "bdc21a07a31146435b18d4247982f358e9742063b95088e3ad010d548d8f3878",
+    "queries\\q17.sql": "e6198ccfb05f4bfdfcabfc691c8b60ce272e476e35c5244c376bf865957a54ef",
+    "queries\\q18.sql": "5d11d00a5357722f33dd39fdc8e6c42f4def1a5150b0e91b3c9ea25a565051bc",
+    "queries\\q19.sql": "6458ab94f8e4b3e1539715bd4b05c6d80af20dde5bba9652e8bf9a2ee9684719",
+    "queries\\q20.sql": "a8ae9245169ce8d839ec4cd14b794333d520c15c04a3d0a943300281d903dd4b",
+    "queries\\q21.sql": "dc4743bf39496f8396dbc908f8894d8b67e3875e572e16aaf831fde1f41b024e",
+    "queries\\q22.sql": "c0a941feb21f0bc5481bfc8d223361a83e111a96fabdeefad0e4afd7988a8e79",
+    "queries\\q23.sql": "f351afcfead0c4dc9878d4781f52d3a9f366d8db57b0dfffcdf2e7172f12e343",
+    "queries\\q24.sql": "57ebf20058933c98dedb7d001c19b4bfa03084a8de09c5b1facb99b0ef3a71c6",
+    "queries\\q25.sql": "2a71e1d53315501821da8e8c309608d82dbefc8e859487b6634f0210c853661c",
+    "queries\\q26.sql": "209f3fbe88f05f202e8c8f41eee4a4d6ca1785191f6da3ecc03ceba85d32edc1",
+    "queries\\q27.sql": "ebbedacb1230a963650a35299666258adea600f3981ffc5325eeb8c25ab92ae1",
+    "queries\\q28.sql": "8a5b47568de58470e2f615223ff9a8850475e4067a0d19eef559291c52da8948",
+    "queries\\q29.sql": "a735b4547f63282cbbac284f18b474af4b0362c16ebdd5843973fc8fe8fef116",
+    "queries\\q30.sql": "a9bc3e878e370ff6335c210545fefbd4ba91cbe365c4adc5e94f2851a7115446"
+  },
+  "connections_closed": 16,
+  "persistent_database_created": false,
+  "persistent_listener_started": false,
+  "external_services_called": false,
+  "postgresql_executed": false,
+  "scope": "30 actual SQLite queries against synthetic data, independent Python reference, reversed insertion, changed-input cases, constraints and local plan evidence; not company question-frequency or production performance verification."
+}

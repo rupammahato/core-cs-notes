@@ -3,6 +3,11 @@
 "/Resume Skills Notes/**" -text
 "/System Design Notes/**" -text
 "/Product Analytics Notes/**" -text
+"/SQL Interview Notes/**" -text
+"/Probability Statistics Notes/**" -text
+"/Product Casebook Notes/**" -text
+"/Analytics Engineering Notes/**" -text
+"/Machine Coding Notes/**" -text
 /examples/** -text
 /Resume-Skills-Notes-Plan.md -text
 /Architecture-System-Design-Notes-Plan.md -text

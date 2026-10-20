@@ -1,0 +1,28 @@
+{
+  "outer_join_where": {
+    "wrong_customers": 6,
+    "correct_customers": 8
+  },
+  "count_star": {
+    "wrong_count": 1,
+    "correct_paid_orders": 0
+  },
+  "sum_distinct": {
+    "wrong_cents": 3000,
+    "correct_cents": 4000
+  },
+  "not_in_null": {
+    "wrong_customers": 0,
+    "correct_customers": 7
+  },
+  "two_fact_join": {
+    "wrong_confirmed_cents": 2000,
+    "wrong_refund_cents": 200,
+    "correct_confirmed_cents": 1000,
+    "correct_refund_cents": 100
+  },
+  "sparse_window": {
+    "wrong_seven_rows_cents": 11100,
+    "correct_seven_days_cents": 1900
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "checked_date": "2026-10-20",
+  "scope": "Public primary documentation and locally executed synthetic SQLite exercises",
+  "sources": [
+    {
+      "url": "https://www.sqlite.org/windowfunctions.html",
+      "supports": "Window placement, ranking, frames and final ordering"
+    },
+    {
+      "url": "https://www.sqlite.org/lang_datefunc.html",
+      "supports": "UTC epoch interpretation and date arithmetic"
+    },
+    {
+      "url": "https://www.sqlite.org/lang_aggfunc.html",
+      "supports": "COUNT, SUM and NULL behavior"
+    },
+    {
+      "url": "https://www.sqlite.org/lang_expr.html",
+      "supports": "IN, NOT IN, EXISTS and expressions"
+    },
+    {
+      "url": "https://www.sqlite.org/lang_with.html",
+      "supports": "Common table expressions and recursive date spine"
+    },
+    {
+      "url": "https://www.sqlite.org/eqp.html",
+      "supports": "Reading local EXPLAIN QUERY PLAN and its unstable text format"
+    },
+    {
+      "url": "https://www.sqlite.org/queryplanner.html",
+      "supports": "Composite index access paths and ordering"
+    },
+    {
+      "url": "https://www.postgresql.org/docs/current/tutorial-window.html",
+      "supports": "Window concepts as an adaptation reference; not executed here"
+    },
+    {
+      "url": "https://www.postgresql.org/docs/current/functions-datetime.html",
+      "supports": "Target-engine date/time semantics when adapting SQLite queries"
+    },
+    {
+      "url": "https://www.amazon.jobs/content/en/how-we-hire/bie-interview-prep",
+      "supports": "Role-specific SQL and analytical problem-solving preparation; not question frequency"
+    }
+  ],
+  "runtime": {
+    "python": "3.13.15",
+    "sqlite": "3.50.4"
+  },
+  "postgresql_executed": false,
+  "question_frequency_measured": false,
+  "external_accounts_accessed": false,
+  "original_project_data_used": false,
+  "manual_work": [
+    "Attempt unseen problems",
+    "Explain grain and altered assumptions",
+    "Time and assess both mocks"
+  ],
+  "limitations": [
+    "Independent oracle also embodies authored business definitions",
+    "Canonical conflict quarantine uses the full supplied snapshot",
+    "No cross-engine parity or production performance benchmark"
+  ]
+}

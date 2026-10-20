@@ -1,0 +1,535 @@
+{
+  "verified_date": "2026-10-20",
+  "checks": [
+    {
+      "name": "Seven complete chapters",
+      "passed": true
+    },
+    {
+      "name": "Thirty numbered problem definitions",
+      "passed": true
+    },
+    {
+      "name": "Runtime checks all passed",
+      "passed": true
+    },
+    {
+      "name": "Runtime check breakdown",
+      "passed": true
+    },
+    {
+      "name": "Independent reference agrees with saved actual rows",
+      "passed": true
+    },
+    {
+      "name": "Runtime source hashes still match",
+      "passed": true
+    },
+    {
+      "name": "Runtime resources closed and scope explicit",
+      "passed": true
+    },
+    {
+      "name": "joins: ordered question coverage",
+      "passed": true
+    },
+    {
+      "name": "Q01: exact executed SQL",
+      "passed": true
+    },
+    {
+      "name": "Q01: actual output rendered",
+      "passed": true
+    },
+    {
+      "name": "Q01: complete teaching explanation",
+      "passed": true
+    },
+    {
+      "name": "Q02: exact executed SQL",
+      "passed": true
+    },
+    {
+      "name": "Q02: actual output rendered",
+      "passed": true
+    },
+    {
+      "name": "Q02: complete teaching explanation",
+      "passed": true
+    },
+    {
+      "name": "Q03: exact executed SQL",
+      "passed": true
+    },
+    {
+      "name": "Q03: actual output rendered",
+      "passed": true
+    },
+    {
+      "name": "Q03: complete teaching explanation",
+      "passed": true
+    },
+    {
+      "name": "Q04: exact executed SQL",
+      "passed": true
+    },
+    {
+      "name": "Q04: actual output rendered",
+      "passed": true
+    },
+    {
+      "name": "Q04: complete teaching explanation",
+      "passed": true
+    },
+    {
+      "name": "Q05: exact executed SQL",
+      "passed": true
+    },
+    {
+      "name": "Q05: actual output rendered",
+      "passed": true
+    },
+    {
+      "name": "Q05: complete teaching explanation",
+      "passed": true
+    },
+    {
+      "name": "Q06: exact executed SQL",
+      "passed": true
+    },
+    {
+      "name": "Q06: actual output rendered",
+      "passed": true
+    },
+    {
+      "name": "Q06: complete teaching explanation",
+      "passed": true
+    },
+    {
+      "name": "Q07: exact executed SQL",
+      "passed": true
+    },
+    {
+      "name": "Q07: actual output rendered",
+      "passed": true
+    },
+    {
+      "name": "Q07: complete teaching explanation",
+      "passed": true
+    },
+    {
+      "name": "Q08: exact executed SQL",
+      "passed": true
+    },
+    {
+      "name": "Q08: actual output rendered",
+      "passed": true
+    },
+    {
+      "name": "Q08: complete teaching explanation",
+      "passed": true
+    },
+    {
+      "name": "windows: ordered question coverage",
+      "passed": true
+    },
+    {
+      "name": "Q09: exact executed SQL",
+      "passed": true
+    },
+    {
+      "name": "Q09: actual output rendered",
+      "passed": true
+    },
+    {
+      "name": "Q09: complete teaching explanation",
+      "passed": true
+    },
+    {
+      "name": "Q10: exact executed SQL",
+      "passed": true
+    },
+    {
+      "name": "Q10: actual output rendered",
+      "passed": true
+    },
+    {
+      "name": "Q10: complete teaching explanation",
+      "passed": true
+    },
+    {
+      "name": "Q11: exact executed SQL",
+      "passed": true
+    },
+    {
+      "name": "Q11: actual output rendered",
+      "passed": true
+    },
+    {
+      "name": "Q11: complete teaching explanation",
+      "passed": true
+    },
+    {
+      "name": "Q12: exact executed SQL",
+      "passed": true
+    },
+    {
+      "name": "Q12: actual output rendered",
+      "passed": true
+    },
+    {
+      "name": "Q12: complete teaching explanation",
+      "passed": true
+    },
+    {
+      "name": "Q13: exact executed SQL",
+      "passed": true
+    },
+    {
+      "name": "Q13: actual output rendered",
+      "passed": true
+    },
+    {
+      "name": "Q13: complete teaching explanation",
+      "passed": true
+    },
+    {
+      "name": "Q14: exact executed SQL",
+      "passed": true
+    },
+    {
+      "name": "Q14: actual output rendered",
+      "passed": true
+    },
+    {
+      "name": "Q14: complete teaching explanation",
+      "passed": true
+    },
+    {
+      "name": "Q15: exact executed SQL",
+      "passed": true
+    },
+    {
+      "name": "Q15: actual output rendered",
+      "passed": true
+    },
+    {
+      "name": "Q15: complete teaching explanation",
+      "passed": true
+    },
+    {
+      "name": "Q16: exact executed SQL",
+      "passed": true
+    },
+    {
+      "name": "Q16: actual output rendered",
+      "passed": true
+    },
+    {
+      "name": "Q16: complete teaching explanation",
+      "passed": true
+    },
+    {
+      "name": "analytics: ordered question coverage",
+      "passed": true
+    },
+    {
+      "name": "Q17: exact executed SQL",
+      "passed": true
+    },
+    {
+      "name": "Q17: actual output rendered",
+      "passed": true
+    },
+    {
+      "name": "Q17: complete teaching explanation",
+      "passed": true
+    },
+    {
+      "name": "Q18: exact executed SQL",
+      "passed": true
+    },
+    {
+      "name": "Q18: actual output rendered",
+      "passed": true
+    },
+    {
+      "name": "Q18: complete teaching explanation",
+      "passed": true
+    },
+    {
+      "name": "Q19: exact executed SQL",
+      "passed": true
+    },
+    {
+      "name": "Q19: actual output rendered",
+      "passed": true
+    },
+    {
+      "name": "Q19: complete teaching explanation",
+      "passed": true
+    },
+    {
+      "name": "Q20: exact executed SQL",
+      "passed": true
+    },
+    {
+      "name": "Q20: actual output rendered",
+      "passed": true
+    },
+    {
+      "name": "Q20: complete teaching explanation",
+      "passed": true
+    },
+    {
+      "name": "Q21: exact executed SQL",
+      "passed": true
+    },
+    {
+      "name": "Q21: actual output rendered",
+      "passed": true
+    },
+    {
+      "name": "Q21: complete teaching explanation",
+      "passed": true
+    },
+    {
+      "name": "Q22: exact executed SQL",
+      "passed": true
+    },
+    {
+      "name": "Q22: actual output rendered",
+      "passed": true
+    },
+    {
+      "name": "Q22: complete teaching explanation",
+      "passed": true
+    },
+    {
+      "name": "Q23: exact executed SQL",
+      "passed": true
+    },
+    {
+      "name": "Q23: actual output rendered",
+      "passed": true
+    },
+    {
+      "name": "Q23: complete teaching explanation",
+      "passed": true
+    },
+    {
+      "name": "Q24: exact executed SQL",
+      "passed": true
+    },
+    {
+      "name": "Q24: actual output rendered",
+      "passed": true
+    },
+    {
+      "name": "Q24: complete teaching explanation",
+      "passed": true
+    },
+    {
+      "name": "quality: ordered question coverage",
+      "passed": true
+    },
+    {
+      "name": "Q25: exact executed SQL",
+      "passed": true
+    },
+    {
+      "name": "Q25: actual output rendered",
+      "passed": true
+    },
+    {
+      "name": "Q25: complete teaching explanation",
+      "passed": true
+    },
+    {
+      "name": "Q26: exact executed SQL",
+      "passed": true
+    },
+    {
+      "name": "Q26: actual output rendered",
+      "passed": true
+    },
+    {
+      "name": "Q26: complete teaching explanation",
+      "passed": true
+    },
+    {
+      "name": "Q27: exact executed SQL",
+      "passed": true
+    },
+    {
+      "name": "Q27: actual output rendered",
+      "passed": true
+    },
+    {
+      "name": "Q27: complete teaching explanation",
+      "passed": true
+    },
+    {
+      "name": "Q28: exact executed SQL",
+      "passed": true
+    },
+    {
+      "name": "Q28: actual output rendered",
+      "passed": true
+    },
+    {
+      "name": "Q28: complete teaching explanation",
+      "passed": true
+    },
+    {
+      "name": "Q29: exact executed SQL",
+      "passed": true
+    },
+    {
+      "name": "Q29: actual output rendered",
+      "passed": true
+    },
+    {
+      "name": "Q29: complete teaching explanation",
+      "passed": true
+    },
+    {
+      "name": "Q30: exact executed SQL",
+      "passed": true
+    },
+    {
+      "name": "Q30: actual output rendered",
+      "passed": true
+    },
+    {
+      "name": "Q30: complete teaching explanation",
+      "passed": true
+    },
+    {
+      "name": "customers: complete fixture shown",
+      "passed": true
+    },
+    {
+      "name": "carts: complete fixture shown",
+      "passed": true
+    },
+    {
+      "name": "orders: complete fixture shown",
+      "passed": true
+    },
+    {
+      "name": "items: complete fixture shown",
+      "passed": true
+    },
+    {
+      "name": "payments: complete fixture shown",
+      "passed": true
+    },
+    {
+      "name": "refunds: complete fixture shown",
+      "passed": true
+    },
+    {
+      "name": "plan_history: complete fixture shown",
+      "passed": true
+    },
+    {
+      "name": "exclusions: complete fixture shown",
+      "passed": true
+    },
+    {
+      "name": "raw_events: complete fixture shown",
+      "passed": true
+    },
+    {
+      "name": "All 128 previous handbooks byte-identical",
+      "passed": true
+    },
+    {
+      "name": "All 135 handbook routes generated",
+      "passed": true
+    },
+    {
+      "name": "sql-interview-handbook-part-1-master-roadmap: generated body matches authored note",
+      "passed": true
+    },
+    {
+      "name": "sql-interview-handbook-part-2-dataset-and-solving-method: generated body matches authored note",
+      "passed": true
+    },
+    {
+      "name": "sql-interview-handbook-part-3-joins-grain-and-null-semantics: generated body matches authored note",
+      "passed": true
+    },
+    {
+      "name": "sql-interview-handbook-part-4-windows-and-time-series: generated body matches authored note",
+      "passed": true
+    },
+    {
+      "name": "sql-interview-handbook-part-5-funnels-cohorts-and-retention: generated body matches authored note",
+      "passed": true
+    },
+    {
+      "name": "sql-interview-handbook-part-6-reconciliation-and-query-plans: generated body matches authored note",
+      "passed": true
+    },
+    {
+      "name": "sql-interview-handbook-part-7-consolidation-and-mocks: generated body matches authored note",
+      "passed": true
+    },
+    {
+      "name": "Every new-book documentation link resolves",
+      "passed": true
+    },
+    {
+      "name": "Ten primary research sources linked",
+      "passed": true
+    },
+    {
+      "name": "Learner and authoring checklists kept separate",
+      "passed": true
+    },
+    {
+      "name": "Twenty-four oral checks",
+      "passed": true
+    },
+    {
+      "name": "Twelve diagnosis cards",
+      "passed": true
+    },
+    {
+      "name": "Twelve practice tasks",
+      "passed": true
+    },
+    {
+      "name": "Two 45-minute mocks",
+      "passed": true
+    },
+    {
+      "name": "Eighteen confusable pairs",
+      "passed": true
+    },
+    {
+      "name": "Six actual counterexamples preserved",
+      "passed": true
+    },
+    {
+      "name": "UTC cohort and snapshot boundaries documented",
+      "passed": true
+    },
+    {
+      "name": "No trailing whitespace or replacement characters in new notes",
+      "passed": true
+    },
+    {
+      "name": "Root catalogue matches actual chapter and line counts",
+      "passed": true
+    }
+  ],
+  "total": 131,
+  "chapters": 7,
+  "lines": 1773,
+  "query_problems": 30,
+  "prior_handbooks_unchanged": 128,
+  "scope": "Content fidelity and source audits; not additional runtime query checks or learner completion."
+}

@@ -1,0 +1,703 @@
+{
+  "Q01": [
+    {
+      "customer_id": "c1",
+      "paid_orders": 3
+    },
+    {
+      "customer_id": "c2",
+      "paid_orders": 2
+    },
+    {
+      "customer_id": "c3",
+      "paid_orders": 1
+    },
+    {
+      "customer_id": "c4",
+      "paid_orders": 1
+    },
+    {
+      "customer_id": "c5",
+      "paid_orders": 1
+    },
+    {
+      "customer_id": "c6",
+      "paid_orders": 0
+    },
+    {
+      "customer_id": "c7",
+      "paid_orders": 0
+    },
+    {
+      "customer_id": "c8",
+      "paid_orders": 1
+    }
+  ],
+  "Q02": [
+    {
+      "customer_id": "c6"
+    },
+    {
+      "customer_id": "c7"
+    }
+  ],
+  "Q03": [
+    {
+      "customer_id": "c1",
+      "known_bill_cents": 4000,
+      "missing_bills": 0,
+      "complete_bill_cents": 4000
+    },
+    {
+      "customer_id": "c2",
+      "known_bill_cents": 3000,
+      "missing_bills": 0,
+      "complete_bill_cents": 3000
+    },
+    {
+      "customer_id": "c3",
+      "known_bill_cents": 3000,
+      "missing_bills": 0,
+      "complete_bill_cents": 3000
+    },
+    {
+      "customer_id": "c4",
+      "known_bill_cents": 0,
+      "missing_bills": 0,
+      "complete_bill_cents": 0
+    },
+    {
+      "customer_id": "c5",
+      "known_bill_cents": null,
+      "missing_bills": 1,
+      "complete_bill_cents": null
+    },
+    {
+      "customer_id": "c8",
+      "known_bill_cents": 400,
+      "missing_bills": 0,
+      "complete_bill_cents": 400
+    }
+  ],
+  "Q04": [
+    {
+      "customer_id": "c1",
+      "known_bill_cents": 4000,
+      "item_count": 5
+    },
+    {
+      "customer_id": "c2",
+      "known_bill_cents": 3000,
+      "item_count": 2
+    },
+    {
+      "customer_id": "c3",
+      "known_bill_cents": 3000,
+      "item_count": 1
+    },
+    {
+      "customer_id": "c4",
+      "known_bill_cents": 0,
+      "item_count": 1
+    },
+    {
+      "customer_id": "c5",
+      "known_bill_cents": null,
+      "item_count": 1
+    },
+    {
+      "customer_id": "c8",
+      "known_bill_cents": 400,
+      "item_count": 0
+    }
+  ],
+  "Q05": [
+    {
+      "order_id": "o01",
+      "confirmed_payments": 2,
+      "confirmed_cents": 1000,
+      "bill_gap_cents": 0
+    },
+    {
+      "order_id": "o02",
+      "confirmed_payments": 1,
+      "confirmed_cents": 1000,
+      "bill_gap_cents": 1000
+    },
+    {
+      "order_id": "o03",
+      "confirmed_payments": 1,
+      "confirmed_cents": 1000,
+      "bill_gap_cents": 0
+    },
+    {
+      "order_id": "o04",
+      "confirmed_payments": 1,
+      "confirmed_cents": 1500,
+      "bill_gap_cents": 0
+    },
+    {
+      "order_id": "o05",
+      "confirmed_payments": 1,
+      "confirmed_cents": 1500,
+      "bill_gap_cents": 0
+    },
+    {
+      "order_id": "o06",
+      "confirmed_payments": 1,
+      "confirmed_cents": 3000,
+      "bill_gap_cents": 0
+    },
+    {
+      "order_id": "o07",
+      "confirmed_payments": 1,
+      "confirmed_cents": 0,
+      "bill_gap_cents": 0
+    },
+    {
+      "order_id": "o08",
+      "confirmed_payments": 0,
+      "confirmed_cents": 0,
+      "bill_gap_cents": null
+    },
+    {
+      "order_id": "o09",
+      "confirmed_payments": 1,
+      "confirmed_cents": 400,
+      "bill_gap_cents": 0
+    }
+  ],
+  "Q06": [
+    {
+      "category": "books",
+      "line_cents": 4900
+    },
+    {
+      "category": "software",
+      "line_cents": 5800
+    }
+  ],
+  "Q07": [
+    {
+      "customer_id": "c1"
+    },
+    {
+      "customer_id": "c2"
+    }
+  ],
+  "Q08": [
+    {
+      "customer_id": "c1"
+    },
+    {
+      "customer_id": "c3"
+    },
+    {
+      "customer_id": "c4"
+    },
+    {
+      "customer_id": "c5"
+    },
+    {
+      "customer_id": "c6"
+    },
+    {
+      "customer_id": "c7"
+    },
+    {
+      "customer_id": "c8"
+    }
+  ],
+  "Q09": [
+    {
+      "customer_id": "c1",
+      "bill_cents": 4000,
+      "revenue_rank": 1
+    },
+    {
+      "customer_id": "c2",
+      "bill_cents": 3000,
+      "revenue_rank": 2
+    },
+    {
+      "customer_id": "c3",
+      "bill_cents": 3000,
+      "revenue_rank": 2
+    }
+  ],
+  "Q10": [
+    {
+      "customer_id": "c1",
+      "order_id": "o03",
+      "billed_cents": 1000
+    },
+    {
+      "customer_id": "c2",
+      "order_id": "o05",
+      "billed_cents": 1500
+    },
+    {
+      "customer_id": "c3",
+      "order_id": "o06",
+      "billed_cents": 3000
+    },
+    {
+      "customer_id": "c4",
+      "order_id": "o07",
+      "billed_cents": 0
+    },
+    {
+      "customer_id": "c5",
+      "order_id": "o08",
+      "billed_cents": null
+    },
+    {
+      "customer_id": "c8",
+      "order_id": "o09",
+      "billed_cents": 400
+    }
+  ],
+  "Q11": [
+    {
+      "day": "2026-10-01",
+      "known_contribution": 2500,
+      "running_known": 2500,
+      "running_missing": 0,
+      "complete_running": 2500
+    },
+    {
+      "day": "2026-10-02",
+      "known_contribution": 3000,
+      "running_known": 5500,
+      "running_missing": 0,
+      "complete_running": 5500
+    },
+    {
+      "day": "2026-10-03",
+      "known_contribution": 3000,
+      "running_known": 8500,
+      "running_missing": 0,
+      "complete_running": 8500
+    },
+    {
+      "day": "2026-10-04",
+      "known_contribution": 0,
+      "running_known": 8500,
+      "running_missing": 0,
+      "complete_running": 8500
+    },
+    {
+      "day": "2026-10-05",
+      "known_contribution": 1500,
+      "running_known": 10000,
+      "running_missing": 0,
+      "complete_running": 10000
+    },
+    {
+      "day": "2026-10-06",
+      "known_contribution": 0,
+      "running_known": 10000,
+      "running_missing": 1,
+      "complete_running": null
+    },
+    {
+      "day": "2026-10-07",
+      "known_contribution": 0,
+      "running_known": 10000,
+      "running_missing": 1,
+      "complete_running": null
+    },
+    {
+      "day": "2026-10-08",
+      "known_contribution": 0,
+      "running_known": 10000,
+      "running_missing": 1,
+      "complete_running": null
+    },
+    {
+      "day": "2026-10-09",
+      "known_contribution": 0,
+      "running_known": 10000,
+      "running_missing": 1,
+      "complete_running": null
+    },
+    {
+      "day": "2026-10-10",
+      "known_contribution": 0,
+      "running_known": 10000,
+      "running_missing": 1,
+      "complete_running": null
+    }
+  ],
+  "Q12": [
+    {
+      "day": "2026-10-01",
+      "rolling_known": 3200,
+      "rolling_missing": 0
+    },
+    {
+      "day": "2026-10-02",
+      "rolling_known": 6200,
+      "rolling_missing": 0
+    },
+    {
+      "day": "2026-10-03",
+      "rolling_known": 9200,
+      "rolling_missing": 0
+    },
+    {
+      "day": "2026-10-04",
+      "rolling_known": 9200,
+      "rolling_missing": 0
+    },
+    {
+      "day": "2026-10-05",
+      "rolling_known": 10700,
+      "rolling_missing": 0
+    },
+    {
+      "day": "2026-10-06",
+      "rolling_known": 10700,
+      "rolling_missing": 1
+    },
+    {
+      "day": "2026-10-07",
+      "rolling_known": 10000,
+      "rolling_missing": 1
+    },
+    {
+      "day": "2026-10-08",
+      "rolling_known": 7500,
+      "rolling_missing": 1
+    },
+    {
+      "day": "2026-10-09",
+      "rolling_known": 4500,
+      "rolling_missing": 1
+    },
+    {
+      "day": "2026-10-10",
+      "rolling_known": 1500,
+      "rolling_missing": 1
+    }
+  ],
+  "Q13": [
+    {
+      "month": "2026-08-01",
+      "paid_orders": 0,
+      "previous_count": null,
+      "change_pct": null
+    },
+    {
+      "month": "2026-09-01",
+      "paid_orders": 1,
+      "previous_count": 0,
+      "change_pct": null
+    },
+    {
+      "month": "2026-10-01",
+      "paid_orders": 9,
+      "previous_count": 1,
+      "change_pct": 800.0
+    }
+  ],
+  "Q14": [
+    {
+      "customer_id": "c1",
+      "start_day": "2026-10-01",
+      "end_day": "2026-10-02",
+      "days": 2
+    },
+    {
+      "customer_id": "c2",
+      "start_day": "2026-10-03",
+      "end_day": "2026-10-04",
+      "days": 2
+    }
+  ],
+  "Q15": [
+    {
+      "session_id": 1,
+      "start_utc": "2026-10-01 10:00:00",
+      "events": 2
+    },
+    {
+      "session_id": 2,
+      "start_utc": "2026-10-01 11:00:01",
+      "events": 1
+    },
+    {
+      "session_id": 3,
+      "start_utc": "2026-10-02 10:00:00",
+      "events": 1
+    },
+    {
+      "session_id": 4,
+      "start_utc": "2026-10-08 10:00:00",
+      "events": 1
+    }
+  ],
+  "Q16": [
+    {
+      "order_id": "o01",
+      "plan": "free"
+    },
+    {
+      "order_id": "o02",
+      "plan": "paid"
+    },
+    {
+      "order_id": "o03",
+      "plan": "paid"
+    },
+    {
+      "order_id": "o04",
+      "plan": "free"
+    },
+    {
+      "order_id": "o05",
+      "plan": "free"
+    },
+    {
+      "order_id": "o06",
+      "plan": "paid"
+    },
+    {
+      "order_id": "o07",
+      "plan": "free"
+    },
+    {
+      "order_id": "o08",
+      "plan": "Unmapped"
+    },
+    {
+      "order_id": "o09",
+      "plan": "Unmapped"
+    }
+  ],
+  "Q17": [
+    {
+      "eligible_users": 6,
+      "started_users": 5,
+      "completed_users": 2,
+      "completion_pct": 33.333333
+    }
+  ],
+  "Q18": [
+    {
+      "cohort": "2026-10-01",
+      "eligible_users": 2,
+      "returned_users": 1,
+      "retention_pct": 50.0
+    },
+    {
+      "cohort": "2026-10-02",
+      "eligible_users": 2,
+      "returned_users": 2,
+      "retention_pct": 100.0
+    },
+    {
+      "cohort": "2026-10-03",
+      "eligible_users": 1,
+      "returned_users": 1,
+      "retention_pct": 100.0
+    },
+    {
+      "cohort": "2026-10-04",
+      "eligible_users": 1,
+      "returned_users": 1,
+      "retention_pct": 100.0
+    },
+    {
+      "cohort": "2026-10-10",
+      "eligible_users": 1,
+      "returned_users": 1,
+      "retention_pct": 100.0
+    }
+  ],
+  "Q19": [
+    {
+      "label": "initial",
+      "eligible_users": 6,
+      "returned_users": 2,
+      "retention_pct": 33.333333
+    },
+    {
+      "label": "revised",
+      "eligible_users": 6,
+      "returned_users": 3,
+      "retention_pct": 50.0
+    }
+  ],
+  "Q20": [
+    {
+      "eligible_users": 6,
+      "returned_users": 6,
+      "retention_pct": 100.0
+    }
+  ],
+  "Q21": [
+    {
+      "dau": 2,
+      "active_7d": 6
+    }
+  ],
+  "Q22": [
+    {
+      "mature_first_purchasers": 4,
+      "repeat_purchasers": 2,
+      "repeat_pct": 50.0
+    }
+  ],
+  "Q23": [
+    {
+      "mature_carts": 4,
+      "converted_carts": 2,
+      "abandoned_carts": 2,
+      "abandonment_pct": 50.0
+    }
+  ],
+  "Q24": [
+    {
+      "plan": "Unmapped",
+      "eligible_users": 2,
+      "completed_users": 1,
+      "completion_pct": 50.0
+    },
+    {
+      "plan": "free",
+      "eligible_users": 3,
+      "completed_users": 1,
+      "completion_pct": 33.333333
+    },
+    {
+      "plan": "paid",
+      "eligible_users": 1,
+      "completed_users": 0,
+      "completion_pct": 0.0
+    }
+  ],
+  "Q25": [
+    {
+      "event_id": "a1",
+      "deliveries": 2,
+      "payloads": 1,
+      "kind": "exact-repeat"
+    },
+    {
+      "event_id": "conflict",
+      "deliveries": 2,
+      "payloads": 2,
+      "kind": "conflict"
+    }
+  ],
+  "Q26": [
+    {
+      "delivery_id": "bad-tenant",
+      "issue": "tenant-mismatch"
+    },
+    {
+      "delivery_id": "unknown-user",
+      "issue": "unknown-customer"
+    }
+  ],
+  "Q27": [
+    {
+      "order_id": "o01",
+      "confirmed_cents": 1000,
+      "refund_cents": 100,
+      "confirmed_net_cents": 900,
+      "bill_gap_cents": 0
+    },
+    {
+      "order_id": "o02",
+      "confirmed_cents": 1000,
+      "refund_cents": 0,
+      "confirmed_net_cents": 1000,
+      "bill_gap_cents": 1000
+    },
+    {
+      "order_id": "o03",
+      "confirmed_cents": 1000,
+      "refund_cents": 200,
+      "confirmed_net_cents": 800,
+      "bill_gap_cents": 0
+    },
+    {
+      "order_id": "o04",
+      "confirmed_cents": 1500,
+      "refund_cents": 0,
+      "confirmed_net_cents": 1500,
+      "bill_gap_cents": 0
+    },
+    {
+      "order_id": "o05",
+      "confirmed_cents": 1500,
+      "refund_cents": 1500,
+      "confirmed_net_cents": 0,
+      "bill_gap_cents": 0
+    },
+    {
+      "order_id": "o06",
+      "confirmed_cents": 3000,
+      "refund_cents": 0,
+      "confirmed_net_cents": 3000,
+      "bill_gap_cents": 0
+    },
+    {
+      "order_id": "o07",
+      "confirmed_cents": 0,
+      "refund_cents": 0,
+      "confirmed_net_cents": 0,
+      "bill_gap_cents": 0
+    },
+    {
+      "order_id": "o08",
+      "confirmed_cents": 0,
+      "refund_cents": 0,
+      "confirmed_net_cents": 0,
+      "bill_gap_cents": null
+    },
+    {
+      "order_id": "o09",
+      "confirmed_cents": 400,
+      "refund_cents": 0,
+      "confirmed_net_cents": 400,
+      "bill_gap_cents": 0
+    }
+  ],
+  "Q28": [
+    {
+      "paid_orders": 9,
+      "confirmed_cents": 9400,
+      "refund_cents": 1800,
+      "confirmed_net_cents": 7600,
+      "missing_bills": 1
+    }
+  ],
+  "Q29": [
+    {
+      "order_id": "o05",
+      "issue": "line-bill-mismatch"
+    },
+    {
+      "order_id": "o08",
+      "issue": "missing-bill"
+    },
+    {
+      "order_id": "o09",
+      "issue": "missing-items"
+    }
+  ],
+  "Q30": [
+    {
+      "order_id": "o01"
+    },
+    {
+      "order_id": "o02"
+    },
+    {
+      "order_id": "o03"
+    }
+  ]
+}

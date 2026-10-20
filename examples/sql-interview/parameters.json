@@ -1,0 +1,13 @@
+{
+  "tenant": "t1",
+  "start": 1790812800,
+  "end": 1793491200,
+  "event_cutoff": 1791763200,
+  "knowledge_cutoff": 1791763200,
+  "later_knowledge": 1791936000,
+  "customer": "c1",
+  "report_start_day": "2026-10-01",
+  "report_end_day": "2026-10-11",
+  "calendar_start": "2026-09-25",
+  "activity_day": "2026-10-11"
+}
