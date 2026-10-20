@@ -1,6 +1,6 @@
 # Core CS Notes
 
-Five core-CS handbooks, a 31-part resume-skills handbook, a completed 21-part architecture companion and a completed seven-part product/analytics handbook,
+Five core-CS handbooks, a 31-part resume-skills handbook, a completed 21-part architecture companion, a completed seven-part product/analytics handbook, a seven-part SQL interview lab, a nine-part probability/statistics handbook, a nine-part product/analytics casebook, a ten-part analytics engineering handbook and an eleven-part machine coding companion,
 written for technical interviews and readable as a website.
 
 | Subject | Parts | Lines | Covers |
@@ -13,10 +13,15 @@ written for technical interviews and readable as a website.
 | **Resume Skills** | 31 | 37,575 | Roadmap, backend, JavaScript, async, TypeScript, Node.js, Express, APIs, authentication, security, webhooks, payments, Python, Flask/FastAPI, Django/DRF, PostgreSQL, MongoDB, caching, background jobs, ingestion, Docker, Linux deployment, Nginx, PM2, AWS/GCP, Git, CI/CD, testing, observability, performance, React, Next.js, API routes, Tailwind, LLM/AI APIs, RAG, document ingestion, embeddings, Pinecone, pgvector, LangChain, LangGraph, LlamaIndex, Neo4j, system design, resume project deep-dives and consolidation; verified examples, architecture reasoning and interview drills |
 | **System Design** | 21 | 19,277 | Complete roadmap, A0-A4 foundations, S0-S13 worked systems and consolidation; 570 teaching Q&As, all 60 bank drills, six final mocks, scoped runnable examples and recorded verification evidence |
 | **Product & Analytics** | 7 | 4,620 | Complete roadmap and P0-P5: product, pricing, analytics, Python/Excel, marketing, D3 and final revision; 488 recorded checks across Python/SQLite, source audits, native Excel and browser; 210 Q&As, 72 practice tasks and two final mocks |
+| **SQL Interview Lab** | 7 | 1,773 | 30 worked problems: joins, NULLs, windows, sessions, funnels, retention, reconciliation and actual query plans; 86 executable checks, 24 oral checks and two practice mocks |
+| **Probability & Statistics** | 9 | 2,000 | Probability, Bayes, distributions, descriptive statistics, sampling, estimation, intervals, hypothesis tests, experiments and regression; 35 computed examples, 71 runtime checks, 56 module Q&As, 28 practice tasks and two mocks |
+| **Product Casebook** | 9 | 2,277 | 18 complete cases across product sense, diagnosis, growth, pricing, marketplaces, operations, experiments, AI and launch decisions; 41 arithmetic/scenario checks, 72 answered follow-ups, architecture bridges and two mocks |
+| **Analytics Engineering** | 10 | 2,493 | Warehouse foundations, dimensional history, CDC, dbt workflows, refreshes/backfills, quality, metrics and operations; 32 executed traces, 74 runtime checks, 64 interview Q&As, 32 tasks and two mocks |
+| **Machine Coding** | 11 | 2,411 | Eight compiled C++17 exercises: transactions, rate limiting, callbacks, scheduling, vending, room booking, search and feature flags; 32 verified traces, 57 test groups, 64 Q&As, 32 tasks and two mocks |
 
 **Core handbooks: 69 files, 51,671 lines. Resume Skills: 31 files, 37,575 lines.** The roadmaps provide syllabuses, dependencies, priorities and study routes. OOP, OS, DBMS, CN, Resume Skills
 and System Design include dedicated consolidation files. The Resume Skills main sequence M0-M29 is authored;
-the complete System Design track is authored and published. The Product and Analytics track is fully authored: roadmap, P0-P4 and P5 consolidation.
+the complete System Design track is authored and published. The Product and Analytics track is fully authored: roadmap, P0-P4 and P5 consolidation. The SQL interview lab is fully authored with runnable fixtures and verified answers. The Probability and Statistics track is fully authored with F1-F7 foundations and consolidation. The Product Casebook adds a complete method, six worked-case families and final revision. Analytics Engineering is complete with eight modules, a stateful SQLite warehouse lesson and final revision. Machine Coding is complete with eight runnable models, a solving-method chapter and final revision.
 
 **System Design: 21 files, 19,277 lines.** All planned architecture chapters are authored; continue with consolidation and manual practice.
 
@@ -46,7 +51,7 @@ what was about to be written down.
 ## Reading them
 
 The handbooks are plain Markdown in `DSA Notes/`, `OOP Notes/`, `OS Notes/`, `DBMS Notes/` and
-`CN Notes/`, plus `Resume Skills Notes/`, `System Design Notes/` and `Product Analytics Notes/` — readable directly on GitHub,
+`CN Notes/`, plus `Resume Skills Notes/`, `System Design Notes/`, `Product Analytics Notes/`, `SQL Interview Notes/`, `Probability Statistics Notes/`, `Product Casebook Notes/`, `Analytics Engineering Notes/` and `Machine Coding Notes/` — readable directly on GitHub,
 in any editor, or as a website:
 
     cd study-guide
@@ -63,6 +68,16 @@ See [`study-guide/README.md`](study-guide/README.md) for the details, including 
     Resume Skills Notes/                                    applied skills (main sequence authored)
     System Design Notes/                                    completed architecture companion (roadmap, A0-A4, S0-S13 and consolidation)
     Product Analytics Notes/                               complete roadmap, P0-P4 and P5 revision
+    SQL Interview Notes/                                   complete problem book, dataset, worked answers and mocks
+    Probability Statistics Notes/                         complete foundations, verified examples and revision
+    Product Casebook Notes/                               worked product/analytics decisions and mocks
+    Analytics Engineering Notes/                          warehouse models, transformations, metrics and operations
+    Machine Coding Notes/                                 runnable C++17 systems, invariants and timed mocks
+    examples/machine-coding/                               compiled exercises, reference models and verification
+    examples/analytics-engineering/                         stateful SQLite warehouse lesson and verification
+    examples/product-casebook/                              synthetic case inputs and verification
+    examples/probability-statistics/                        reproducible calculations and verification
+    examples/sql-interview/                                 runnable SQL fixtures and verification
     examples/product-analytics/                             product worksheets and verification
     examples/resume-skills/                                 runnable examples and verification
     examples/system-design/                                 architecture validation and future fixtures

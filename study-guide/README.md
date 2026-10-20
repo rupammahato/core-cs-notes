@@ -1,6 +1,6 @@
 # Core CS Notes — study guide
 
-Renders the DSA, OOP, OS, DBMS, CN, Resume Skills, System Design and Product & Analytics handbooks as a chapter/section study site
+Renders the DSA, OOP, OS, DBMS, CN, Resume Skills, System Design, Product & Analytics, SQL Interview Lab, Probability & Statistics, Product Casebook, Analytics Engineering and Machine Coding handbooks as a chapter/section study site
 (Next.js 16 + Fumadocs).
 
     npm run study    # build + serve at http://localhost:3000 (light on RAM; rerun after editing notes)

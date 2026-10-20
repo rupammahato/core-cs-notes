@@ -10,7 +10,7 @@ const mono = JetBrains_Mono({ subsets: ['latin'], variable: '--font-jetbrains' }
 export const metadata: Metadata = {
   title: { template: '%s · Core CS Notes', default: 'Core CS Notes' },
   description:
-    'Core computer science, resume skills, system design, product and analytics — interview handbooks, chapter by chapter.',
+    'Core computer science, resume skills, system design, product, analytics, SQL practice, probability, statistics, worked product cases, analytics engineering and machine coding — interview handbooks, chapter by chapter.',
   applicationName: 'Core CS Notes',
   // app/icon.svg is picked up automatically for the tab icon.
 };
