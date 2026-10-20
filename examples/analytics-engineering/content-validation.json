@@ -1,0 +1,674 @@
+{
+  "verified_date": "2026-10-21",
+  "total": 165,
+  "checks": [
+    {
+      "name": "Ten sequential chapters",
+      "passed": true
+    },
+    {
+      "name": "Thirty-two sequential trace definitions",
+      "passed": true
+    },
+    {
+      "name": "Four traces per teaching module",
+      "passed": true
+    },
+    {
+      "name": "All 74 runtime checks passed",
+      "passed": true
+    },
+    {
+      "name": "Runtime breakdown sum matches total",
+      "passed": true
+    },
+    {
+      "name": "All verified sources still match",
+      "passed": true
+    },
+    {
+      "name": "Four owned connections closed",
+      "passed": true
+    },
+    {
+      "name": "Execution boundaries explicit",
+      "passed": true
+    },
+    {
+      "name": "Part 2: traces in order",
+      "passed": true
+    },
+    {
+      "name": "Part 2: eight interview answers",
+      "passed": true
+    },
+    {
+      "name": "Part 2: four practice tasks",
+      "passed": true
+    },
+    {
+      "name": "Part 2: one marker pair",
+      "passed": true
+    },
+    {
+      "name": "L01: complete teaching text",
+      "passed": true
+    },
+    {
+      "name": "L01: recorded output faithfully displayed",
+      "passed": true
+    },
+    {
+      "name": "L01: exact generated trace",
+      "passed": true
+    },
+    {
+      "name": "L02: complete teaching text",
+      "passed": true
+    },
+    {
+      "name": "L02: recorded output faithfully displayed",
+      "passed": true
+    },
+    {
+      "name": "L02: exact generated trace",
+      "passed": true
+    },
+    {
+      "name": "L03: complete teaching text",
+      "passed": true
+    },
+    {
+      "name": "L03: recorded output faithfully displayed",
+      "passed": true
+    },
+    {
+      "name": "L03: exact generated trace",
+      "passed": true
+    },
+    {
+      "name": "L04: complete teaching text",
+      "passed": true
+    },
+    {
+      "name": "L04: recorded output faithfully displayed",
+      "passed": true
+    },
+    {
+      "name": "L04: exact generated trace",
+      "passed": true
+    },
+    {
+      "name": "Part 3: traces in order",
+      "passed": true
+    },
+    {
+      "name": "Part 3: eight interview answers",
+      "passed": true
+    },
+    {
+      "name": "Part 3: four practice tasks",
+      "passed": true
+    },
+    {
+      "name": "Part 3: one marker pair",
+      "passed": true
+    },
+    {
+      "name": "L05: complete teaching text",
+      "passed": true
+    },
+    {
+      "name": "L05: recorded output faithfully displayed",
+      "passed": true
+    },
+    {
+      "name": "L05: exact generated trace",
+      "passed": true
+    },
+    {
+      "name": "L05: actual SQL source printed unchanged",
+      "passed": true
+    },
+    {
+      "name": "L06: complete teaching text",
+      "passed": true
+    },
+    {
+      "name": "L06: recorded output faithfully displayed",
+      "passed": true
+    },
+    {
+      "name": "L06: exact generated trace",
+      "passed": true
+    },
+    {
+      "name": "L06: actual SQL source printed unchanged",
+      "passed": true
+    },
+    {
+      "name": "L07: complete teaching text",
+      "passed": true
+    },
+    {
+      "name": "L07: recorded output faithfully displayed",
+      "passed": true
+    },
+    {
+      "name": "L07: exact generated trace",
+      "passed": true
+    },
+    {
+      "name": "L08: complete teaching text",
+      "passed": true
+    },
+    {
+      "name": "L08: recorded output faithfully displayed",
+      "passed": true
+    },
+    {
+      "name": "L08: exact generated trace",
+      "passed": true
+    },
+    {
+      "name": "Part 4: traces in order",
+      "passed": true
+    },
+    {
+      "name": "Part 4: eight interview answers",
+      "passed": true
+    },
+    {
+      "name": "Part 4: four practice tasks",
+      "passed": true
+    },
+    {
+      "name": "Part 4: one marker pair",
+      "passed": true
+    },
+    {
+      "name": "L09: complete teaching text",
+      "passed": true
+    },
+    {
+      "name": "L09: recorded output faithfully displayed",
+      "passed": true
+    },
+    {
+      "name": "L09: exact generated trace",
+      "passed": true
+    },
+    {
+      "name": "L10: complete teaching text",
+      "passed": true
+    },
+    {
+      "name": "L10: recorded output faithfully displayed",
+      "passed": true
+    },
+    {
+      "name": "L10: exact generated trace",
+      "passed": true
+    },
+    {
+      "name": "L11: complete teaching text",
+      "passed": true
+    },
+    {
+      "name": "L11: recorded output faithfully displayed",
+      "passed": true
+    },
+    {
+      "name": "L11: exact generated trace",
+      "passed": true
+    },
+    {
+      "name": "L12: complete teaching text",
+      "passed": true
+    },
+    {
+      "name": "L12: recorded output faithfully displayed",
+      "passed": true
+    },
+    {
+      "name": "L12: exact generated trace",
+      "passed": true
+    },
+    {
+      "name": "Part 5: traces in order",
+      "passed": true
+    },
+    {
+      "name": "Part 5: eight interview answers",
+      "passed": true
+    },
+    {
+      "name": "Part 5: four practice tasks",
+      "passed": true
+    },
+    {
+      "name": "Part 5: one marker pair",
+      "passed": true
+    },
+    {
+      "name": "L13: complete teaching text",
+      "passed": true
+    },
+    {
+      "name": "L13: recorded output faithfully displayed",
+      "passed": true
+    },
+    {
+      "name": "L13: exact generated trace",
+      "passed": true
+    },
+    {
+      "name": "L14: complete teaching text",
+      "passed": true
+    },
+    {
+      "name": "L14: recorded output faithfully displayed",
+      "passed": true
+    },
+    {
+      "name": "L14: exact generated trace",
+      "passed": true
+    },
+    {
+      "name": "L15: complete teaching text",
+      "passed": true
+    },
+    {
+      "name": "L15: recorded output faithfully displayed",
+      "passed": true
+    },
+    {
+      "name": "L15: exact generated trace",
+      "passed": true
+    },
+    {
+      "name": "L16: complete teaching text",
+      "passed": true
+    },
+    {
+      "name": "L16: recorded output faithfully displayed",
+      "passed": true
+    },
+    {
+      "name": "L16: exact generated trace",
+      "passed": true
+    },
+    {
+      "name": "Part 6: traces in order",
+      "passed": true
+    },
+    {
+      "name": "Part 6: eight interview answers",
+      "passed": true
+    },
+    {
+      "name": "Part 6: four practice tasks",
+      "passed": true
+    },
+    {
+      "name": "Part 6: one marker pair",
+      "passed": true
+    },
+    {
+      "name": "L17: complete teaching text",
+      "passed": true
+    },
+    {
+      "name": "L17: recorded output faithfully displayed",
+      "passed": true
+    },
+    {
+      "name": "L17: exact generated trace",
+      "passed": true
+    },
+    {
+      "name": "L18: complete teaching text",
+      "passed": true
+    },
+    {
+      "name": "L18: recorded output faithfully displayed",
+      "passed": true
+    },
+    {
+      "name": "L18: exact generated trace",
+      "passed": true
+    },
+    {
+      "name": "L19: complete teaching text",
+      "passed": true
+    },
+    {
+      "name": "L19: recorded output faithfully displayed",
+      "passed": true
+    },
+    {
+      "name": "L19: exact generated trace",
+      "passed": true
+    },
+    {
+      "name": "L20: complete teaching text",
+      "passed": true
+    },
+    {
+      "name": "L20: recorded output faithfully displayed",
+      "passed": true
+    },
+    {
+      "name": "L20: exact generated trace",
+      "passed": true
+    },
+    {
+      "name": "Part 7: traces in order",
+      "passed": true
+    },
+    {
+      "name": "Part 7: eight interview answers",
+      "passed": true
+    },
+    {
+      "name": "Part 7: four practice tasks",
+      "passed": true
+    },
+    {
+      "name": "Part 7: one marker pair",
+      "passed": true
+    },
+    {
+      "name": "L21: complete teaching text",
+      "passed": true
+    },
+    {
+      "name": "L21: recorded output faithfully displayed",
+      "passed": true
+    },
+    {
+      "name": "L21: exact generated trace",
+      "passed": true
+    },
+    {
+      "name": "L22: complete teaching text",
+      "passed": true
+    },
+    {
+      "name": "L22: recorded output faithfully displayed",
+      "passed": true
+    },
+    {
+      "name": "L22: exact generated trace",
+      "passed": true
+    },
+    {
+      "name": "L23: complete teaching text",
+      "passed": true
+    },
+    {
+      "name": "L23: recorded output faithfully displayed",
+      "passed": true
+    },
+    {
+      "name": "L23: exact generated trace",
+      "passed": true
+    },
+    {
+      "name": "L24: complete teaching text",
+      "passed": true
+    },
+    {
+      "name": "L24: recorded output faithfully displayed",
+      "passed": true
+    },
+    {
+      "name": "L24: exact generated trace",
+      "passed": true
+    },
+    {
+      "name": "Part 8: traces in order",
+      "passed": true
+    },
+    {
+      "name": "Part 8: eight interview answers",
+      "passed": true
+    },
+    {
+      "name": "Part 8: four practice tasks",
+      "passed": true
+    },
+    {
+      "name": "Part 8: one marker pair",
+      "passed": true
+    },
+    {
+      "name": "L25: complete teaching text",
+      "passed": true
+    },
+    {
+      "name": "L25: recorded output faithfully displayed",
+      "passed": true
+    },
+    {
+      "name": "L25: exact generated trace",
+      "passed": true
+    },
+    {
+      "name": "L26: complete teaching text",
+      "passed": true
+    },
+    {
+      "name": "L26: recorded output faithfully displayed",
+      "passed": true
+    },
+    {
+      "name": "L26: exact generated trace",
+      "passed": true
+    },
+    {
+      "name": "L27: complete teaching text",
+      "passed": true
+    },
+    {
+      "name": "L27: recorded output faithfully displayed",
+      "passed": true
+    },
+    {
+      "name": "L27: exact generated trace",
+      "passed": true
+    },
+    {
+      "name": "L27: actual SQL source printed unchanged",
+      "passed": true
+    },
+    {
+      "name": "L28: complete teaching text",
+      "passed": true
+    },
+    {
+      "name": "L28: recorded output faithfully displayed",
+      "passed": true
+    },
+    {
+      "name": "L28: exact generated trace",
+      "passed": true
+    },
+    {
+      "name": "Part 9: traces in order",
+      "passed": true
+    },
+    {
+      "name": "Part 9: eight interview answers",
+      "passed": true
+    },
+    {
+      "name": "Part 9: four practice tasks",
+      "passed": true
+    },
+    {
+      "name": "Part 9: one marker pair",
+      "passed": true
+    },
+    {
+      "name": "L29: complete teaching text",
+      "passed": true
+    },
+    {
+      "name": "L29: recorded output faithfully displayed",
+      "passed": true
+    },
+    {
+      "name": "L29: exact generated trace",
+      "passed": true
+    },
+    {
+      "name": "L30: complete teaching text",
+      "passed": true
+    },
+    {
+      "name": "L30: recorded output faithfully displayed",
+      "passed": true
+    },
+    {
+      "name": "L30: exact generated trace",
+      "passed": true
+    },
+    {
+      "name": "L31: complete teaching text",
+      "passed": true
+    },
+    {
+      "name": "L31: recorded output faithfully displayed",
+      "passed": true
+    },
+    {
+      "name": "L31: exact generated trace",
+      "passed": true
+    },
+    {
+      "name": "L32: complete teaching text",
+      "passed": true
+    },
+    {
+      "name": "L32: recorded output faithfully displayed",
+      "passed": true
+    },
+    {
+      "name": "L32: exact generated trace",
+      "passed": true
+    },
+    {
+      "name": "Three executed model SQL listings",
+      "passed": true
+    },
+    {
+      "name": "Complete 25-envelope source fixture shown",
+      "passed": true
+    },
+    {
+      "name": "Complete illustrative line input shown",
+      "passed": true
+    },
+    {
+      "name": "All 153 earlier handbooks byte-identical",
+      "passed": true
+    },
+    {
+      "name": "All 163 handbook routes generated",
+      "passed": true
+    },
+    {
+      "name": "analytics-engineering-handbook-part-1-master-roadmap: generated body equals source",
+      "passed": true
+    },
+    {
+      "name": "analytics-engineering-handbook-part-10-consolidation-and-mocks: generated body equals source",
+      "passed": true
+    },
+    {
+      "name": "analytics-engineering-handbook-part-2-warehouse-foundations-and-dataset: generated body equals source",
+      "passed": true
+    },
+    {
+      "name": "analytics-engineering-handbook-part-3-dimensional-modeling-and-history: generated body equals source",
+      "passed": true
+    },
+    {
+      "name": "analytics-engineering-handbook-part-4-ingestion-cdc-and-canonical-state: generated body equals source",
+      "passed": true
+    },
+    {
+      "name": "analytics-engineering-handbook-part-5-transformations-and-dbt-workflows: generated body equals source",
+      "passed": true
+    },
+    {
+      "name": "analytics-engineering-handbook-part-6-incremental-refreshes-and-backfills: generated body equals source",
+      "passed": true
+    },
+    {
+      "name": "analytics-engineering-handbook-part-7-quality-observability-and-publication: generated body equals source",
+      "passed": true
+    },
+    {
+      "name": "analytics-engineering-handbook-part-8-semantic-metrics-and-consumption: generated body equals source",
+      "passed": true
+    },
+    {
+      "name": "analytics-engineering-handbook-part-9-production-architecture-and-performance: generated body equals source",
+      "passed": true
+    },
+    {
+      "name": "Every documentation bridge resolves",
+      "passed": true
+    },
+    {
+      "name": "Twelve primary sources recorded and linked",
+      "passed": true
+    },
+    {
+      "name": "Thirty final oral checks",
+      "passed": true
+    },
+    {
+      "name": "Twelve diagnosis cards",
+      "passed": true
+    },
+    {
+      "name": "Twenty confusable pairs",
+      "passed": true
+    },
+    {
+      "name": "Two 45-minute mocks",
+      "passed": true
+    },
+    {
+      "name": "Learner checklists remain unchecked",
+      "passed": true
+    },
+    {
+      "name": "Full-recompute and dbt boundaries stated",
+      "passed": true
+    },
+    {
+      "name": "Current-table and failure limits stated",
+      "passed": true
+    },
+    {
+      "name": "No trailing whitespace or replacement characters",
+      "passed": true
+    },
+    {
+      "name": "Root catalogue matches actual lines",
+      "passed": true
+    }
+  ],
+  "chapters": 10,
+  "lines": 2493,
+  "executed_traces": 32,
+  "module_interview_qas": 64,
+  "practice_tasks": 32,
+  "final_oral_checks": 30,
+  "earlier_handbooks_byte_identical": 153,
+  "scope": "Content/source/coverage fidelity, separate from 74 runtime checks and manual learner work."
+}

@@ -1,0 +1,415 @@
+{
+  "verified_date": "2026-10-21",
+  "python": "3.13.15",
+  "sqlite": "3.50.4",
+  "total": 74,
+  "breakdown": {
+    "constraint": 3,
+    "independent-reference": 9,
+    "quality": 24,
+    "counterexample": 3,
+    "orchestration": 2,
+    "recovery": 5,
+    "incremental": 4,
+    "replay": 3,
+    "publication": 1,
+    "tenant-scope": 1,
+    "query-plan": 3,
+    "capacity-arithmetic": 1,
+    "quality-failure": 5,
+    "input-contract": 2,
+    "input-order": 3,
+    "conflict-policy": 2,
+    "resource-cleanup": 1,
+    "preservation": 2
+  },
+  "checks": [
+    {
+      "group": "constraint",
+      "name": "Foreign keys enabled",
+      "passed": true
+    },
+    {
+      "group": "independent-reference",
+      "name": "initial complete fact projection",
+      "passed": true
+    },
+    {
+      "group": "independent-reference",
+      "name": "initial dimension history",
+      "passed": true
+    },
+    {
+      "group": "independent-reference",
+      "name": "initial complete mart",
+      "passed": true
+    },
+    {
+      "group": "quality",
+      "name": "initial duplicate_fact_keys",
+      "passed": true
+    },
+    {
+      "group": "quality",
+      "name": "initial negative_bills",
+      "passed": true
+    },
+    {
+      "group": "quality",
+      "name": "initial missing_dimension_references",
+      "passed": true
+    },
+    {
+      "group": "quality",
+      "name": "initial invalid_dimension_intervals",
+      "passed": true
+    },
+    {
+      "group": "quality",
+      "name": "initial overlapping_dimension_intervals",
+      "passed": true
+    },
+    {
+      "group": "quality",
+      "name": "initial duplicate_dimension_keys",
+      "passed": true
+    },
+    {
+      "group": "quality",
+      "name": "initial paid_count_reconciliation",
+      "passed": true
+    },
+    {
+      "group": "quality",
+      "name": "initial known_amount_reconciliation",
+      "passed": true
+    },
+    {
+      "group": "counterexample",
+      "name": "Line fan-out repeats order bill",
+      "passed": true
+    },
+    {
+      "group": "orchestration",
+      "name": "Topological order satisfies every dependency",
+      "passed": true
+    },
+    {
+      "group": "orchestration",
+      "name": "Cyclic declared lineage is rejected",
+      "passed": true
+    },
+    {
+      "group": "recovery",
+      "name": "Pointer and watermark rolled back",
+      "passed": true
+    },
+    {
+      "group": "recovery",
+      "name": "Fact/dimension replacement rolled back",
+      "passed": true
+    },
+    {
+      "group": "recovery",
+      "name": "Readers retain last-good mart",
+      "passed": true
+    },
+    {
+      "group": "recovery",
+      "name": "Failed run manifest absent",
+      "passed": true
+    },
+    {
+      "group": "recovery",
+      "name": "Raw input remains accepted after publication failure",
+      "passed": true
+    },
+    {
+      "group": "independent-reference",
+      "name": "corrected complete fact projection",
+      "passed": true
+    },
+    {
+      "group": "independent-reference",
+      "name": "corrected dimension history",
+      "passed": true
+    },
+    {
+      "group": "independent-reference",
+      "name": "corrected complete mart",
+      "passed": true
+    },
+    {
+      "group": "quality",
+      "name": "corrected duplicate_fact_keys",
+      "passed": true
+    },
+    {
+      "group": "quality",
+      "name": "corrected negative_bills",
+      "passed": true
+    },
+    {
+      "group": "quality",
+      "name": "corrected missing_dimension_references",
+      "passed": true
+    },
+    {
+      "group": "quality",
+      "name": "corrected invalid_dimension_intervals",
+      "passed": true
+    },
+    {
+      "group": "quality",
+      "name": "corrected overlapping_dimension_intervals",
+      "passed": true
+    },
+    {
+      "group": "quality",
+      "name": "corrected duplicate_dimension_keys",
+      "passed": true
+    },
+    {
+      "group": "quality",
+      "name": "corrected paid_count_reconciliation",
+      "passed": true
+    },
+    {
+      "group": "quality",
+      "name": "corrected known_amount_reconciliation",
+      "passed": true
+    },
+    {
+      "group": "incremental",
+      "name": "Deleted final paid day removed",
+      "passed": true
+    },
+    {
+      "group": "incremental",
+      "name": "Other tenant not in changed partition set",
+      "passed": true
+    },
+    {
+      "group": "replay",
+      "name": "Repeating delivery batch inserts nothing",
+      "passed": true
+    },
+    {
+      "group": "replay",
+      "name": "Repeating successful run id is idempotent",
+      "passed": true
+    },
+    {
+      "group": "independent-reference",
+      "name": "final complete fact projection",
+      "passed": true
+    },
+    {
+      "group": "independent-reference",
+      "name": "final dimension history",
+      "passed": true
+    },
+    {
+      "group": "independent-reference",
+      "name": "final complete mart",
+      "passed": true
+    },
+    {
+      "group": "quality",
+      "name": "final duplicate_fact_keys",
+      "passed": true
+    },
+    {
+      "group": "quality",
+      "name": "final negative_bills",
+      "passed": true
+    },
+    {
+      "group": "quality",
+      "name": "final missing_dimension_references",
+      "passed": true
+    },
+    {
+      "group": "quality",
+      "name": "final invalid_dimension_intervals",
+      "passed": true
+    },
+    {
+      "group": "quality",
+      "name": "final overlapping_dimension_intervals",
+      "passed": true
+    },
+    {
+      "group": "quality",
+      "name": "final duplicate_dimension_keys",
+      "passed": true
+    },
+    {
+      "group": "quality",
+      "name": "final paid_count_reconciliation",
+      "passed": true
+    },
+    {
+      "group": "quality",
+      "name": "final known_amount_reconciliation",
+      "passed": true
+    },
+    {
+      "group": "incremental",
+      "name": "Moving last order removes old partition",
+      "passed": true
+    },
+    {
+      "group": "incremental",
+      "name": "Full refresh equals partition-selected result",
+      "passed": true
+    },
+    {
+      "group": "replay",
+      "name": "No-change rebuild preserves semantic output",
+      "passed": true
+    },
+    {
+      "group": "publication",
+      "name": "Old published mart remains immutable",
+      "passed": true
+    },
+    {
+      "group": "counterexample",
+      "name": "Daily average of averages differs from order-weighted mean",
+      "passed": true
+    },
+    {
+      "group": "tenant-scope",
+      "name": "Same business identity stays separate across tenants",
+      "passed": true
+    },
+    {
+      "group": "query-plan",
+      "name": "Unindexed probe scans",
+      "passed": true
+    },
+    {
+      "group": "query-plan",
+      "name": "Composite probe index supports covering search",
+      "passed": true
+    },
+    {
+      "group": "query-plan",
+      "name": "Index preserves ordered rows",
+      "passed": true
+    },
+    {
+      "group": "capacity-arithmetic",
+      "name": "Declared logical pruning arithmetic",
+      "passed": true
+    },
+    {
+      "group": "quality-failure",
+      "name": "Semantic negative amount fails gate",
+      "passed": true
+    },
+    {
+      "group": "quality-failure",
+      "name": "Negative candidate preserves pointer",
+      "passed": true
+    },
+    {
+      "group": "quality-failure",
+      "name": "Negative candidate preserves data",
+      "passed": true
+    },
+    {
+      "group": "quality-failure",
+      "name": "Higher source version repairs semantic candidate",
+      "passed": true
+    },
+    {
+      "group": "input-contract",
+      "name": "Unsupported schema rolls back whole ingestion batch",
+      "passed": true
+    },
+    {
+      "group": "input-contract",
+      "name": "Delivery identity cannot change its payload",
+      "passed": true
+    },
+    {
+      "group": "quality-failure",
+      "name": "Overlapping effective intervals detected",
+      "passed": true
+    },
+    {
+      "group": "constraint",
+      "name": "Duplicate fact key rejected",
+      "passed": true
+    },
+    {
+      "group": "constraint",
+      "name": "Missing tenant dimension rejected",
+      "passed": true
+    },
+    {
+      "group": "input-order",
+      "name": "Batch 1 arrival order does not choose source truth",
+      "passed": true
+    },
+    {
+      "group": "input-order",
+      "name": "Batch 2 arrival order does not choose source truth",
+      "passed": true
+    },
+    {
+      "group": "input-order",
+      "name": "Batch 3 arrival order does not choose source truth",
+      "passed": true
+    },
+    {
+      "group": "conflict-policy",
+      "name": "Late conflicting identity retracts entire entity",
+      "passed": true
+    },
+    {
+      "group": "conflict-policy",
+      "name": "Conflict retraction agrees with independent oracle",
+      "passed": true
+    },
+    {
+      "group": "counterexample",
+      "name": "Order-date-only cutoff misses correction and late fact",
+      "passed": true
+    },
+    {
+      "group": "resource-cleanup",
+      "name": "All owned in-memory connections closed",
+      "passed": true
+    },
+    {
+      "group": "preservation",
+      "name": "All 153 earlier handbooks unchanged",
+      "passed": true
+    },
+    {
+      "group": "preservation",
+      "name": "Pipeline inputs and implementation unchanged during run",
+      "passed": true
+    }
+  ],
+  "source_sha256": {
+    "schema.sql": "f68585112b056e2cdac9fa0fb985c2e4c9821101dc6ef7e8d1270c5c3aec630e",
+    "fixture.json": "d9c052437128474ecc77aa80d2fa2d3d63b48a83bd9ebe3d86486fda17852b0d",
+    "warehouse.py": "93268adb63675c4912ca754dfe3f4736a85a687ff41ab5e763277408c5e56ed8",
+    "reference.py": "c542dc932a3fcb4d5a5cebe331af366dd9b0a9fad49ca4e0a5f265984c77d27c",
+    "verify.py": "9931c1bb61cb2ff210270057beb73b11c03cb63ed2a848940965dfd9e8769718",
+    "models\\customer_dimension.sql": "71e89ebef9ca11980baae284ba7280f8055a58fb2ff131f285db340da8c0bb75",
+    "models\\daily_mart.sql": "2ed7089848f31d717ce62cfa892fddab1e0c19cd68e3f49fa9b0fa2874cc5317",
+    "models\\order_facts.sql": "cb8cfd0b3e1d6e08554c171f024c4454f3331414c3df1ccaccd1de85f7ccb178"
+  },
+  "connections_opened": 4,
+  "connections_closed": 4,
+  "persistent_database_created": false,
+  "external_services_called": false,
+  "dbt_executed": false,
+  "airflow_executed": false,
+  "scope": "Local SQLite transactions and model queries, independent Python oracle, injected exceptions and selected policy boundaries. No power-loss, concurrent-reader, distributed CDC, cloud warehouse or production performance test."
+}

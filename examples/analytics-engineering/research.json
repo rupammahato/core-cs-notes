@@ -1,0 +1,58 @@
+{
+  "checked_date": "2026-10-21",
+  "scope": "Primary vendor, project and educational documentation. Local execution is Python/SQLite only; other tool examples are conceptual or illustrative.",
+  "sources": [
+    {
+      "url": "https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/dag-run.html",
+      "use": "Supports the nearby chapter mechanism; not a claim that the referenced external engine or service was executed."
+    },
+    {
+      "url": "https://debezium.io/documentation/reference/stable/connectors/postgresql.html",
+      "use": "Supports the nearby chapter mechanism; not a claim that the referenced external engine or service was executed."
+    },
+    {
+      "url": "https://docs.cloud.google.com/bigquery/docs/best-practices-performance-compute",
+      "use": "Supports the nearby chapter mechanism; not a claim that the referenced external engine or service was executed."
+    },
+    {
+      "url": "https://docs.cloud.google.com/bigquery/docs/partitioned-tables",
+      "use": "Supports the nearby chapter mechanism; not a claim that the referenced external engine or service was executed."
+    },
+    {
+      "url": "https://docs.getdbt.com/docs/build/data-tests",
+      "use": "Supports the nearby chapter mechanism; not a claim that the referenced external engine or service was executed."
+    },
+    {
+      "url": "https://docs.getdbt.com/docs/build/incremental-models",
+      "use": "Supports the nearby chapter mechanism; not a claim that the referenced external engine or service was executed."
+    },
+    {
+      "url": "https://docs.getdbt.com/docs/build/snapshots",
+      "use": "Supports the nearby chapter mechanism; not a claim that the referenced external engine or service was executed."
+    },
+    {
+      "url": "https://docs.getdbt.com/docs/mesh/govern/model-contracts",
+      "use": "Supports the nearby chapter mechanism; not a claim that the referenced external engine or service was executed."
+    },
+    {
+      "url": "https://docs.getdbt.com/reference/dbt-jinja-functions/ref",
+      "use": "Supports the nearby chapter mechanism; not a claim that the referenced external engine or service was executed."
+    },
+    {
+      "url": "https://iceberg.apache.org/spec/",
+      "use": "Supports the nearby chapter mechanism; not a claim that the referenced external engine or service was executed."
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/fabric/data-warehouse/dimensional-modeling-dimension-tables",
+      "use": "Supports the nearby chapter mechanism; not a claim that the referenced external engine or service was executed."
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/power-bi/guidance/star-schema",
+      "use": "Supports the nearby chapter mechanism; not a claim that the referenced external engine or service was executed."
+    }
+  ],
+  "boundaries": [
+    "No real CDC connector, dbt adapter, Airflow scheduler, Iceberg table or cloud warehouse executed.",
+    "No production speedup, cloud scan/cost, concurrent-reader or storage-failure result asserted."
+  ]
+}

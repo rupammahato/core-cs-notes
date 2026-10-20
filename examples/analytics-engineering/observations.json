@@ -1,0 +1,746 @@
+{
+  "L01": {
+    "raw_deliveries": 14,
+    "distinct_unblocked_source_versions": 11,
+    "fact_orders": 7,
+    "mart_rows": 6
+  },
+  "L02": [
+    {
+      "tenant_id": "t1",
+      "all_current_orders": 6,
+      "paid_orders": 5
+    },
+    {
+      "tenant_id": "t2",
+      "all_current_orders": 1,
+      "paid_orders": 1
+    }
+  ],
+  "L03": [
+    {
+      "run_id": "run1",
+      "lower_seq": 0,
+      "upper_seq": 14,
+      "mode": "partition_refresh",
+      "metric_version": "paid-billing-v1"
+    }
+  ],
+  "L04": [
+    {
+      "tenant_id": "t1",
+      "paid_orders": 5,
+      "known_cents": 4300,
+      "missing_bills": 1,
+      "complete_cents": null
+    },
+    {
+      "tenant_id": "t2",
+      "paid_orders": 1,
+      "known_cents": 9000,
+      "missing_bills": 0,
+      "complete_cents": 9000
+    }
+  ],
+  "L05": [
+    {
+      "tenant_id": "t1",
+      "customer_id": "c1",
+      "valid_from": "2026-10-01",
+      "valid_to": "2026-10-03",
+      "plan": "free"
+    },
+    {
+      "tenant_id": "t1",
+      "customer_id": "c1",
+      "valid_from": "2026-10-03",
+      "valid_to": null,
+      "plan": "pro"
+    },
+    {
+      "tenant_id": "t1",
+      "customer_id": "c2",
+      "valid_from": "2026-10-01",
+      "valid_to": null,
+      "plan": "free"
+    },
+    {
+      "tenant_id": "t2",
+      "customer_id": "c1",
+      "valid_from": "2026-10-01",
+      "valid_to": null,
+      "plan": "enterprise"
+    }
+  ],
+  "L06": [
+    {
+      "tenant_id": "t1",
+      "order_id": "o1",
+      "order_day": "2026-10-02",
+      "plan": "free"
+    },
+    {
+      "tenant_id": "t1",
+      "order_id": "o2",
+      "order_day": "2026-10-04",
+      "plan": "pro"
+    },
+    {
+      "tenant_id": "t1",
+      "order_id": "o3",
+      "order_day": "2026-10-02",
+      "plan": "Unknown"
+    },
+    {
+      "tenant_id": "t1",
+      "order_id": "o4",
+      "order_day": "2026-10-03",
+      "plan": "free"
+    },
+    {
+      "tenant_id": "t1",
+      "order_id": "o5",
+      "order_day": "2026-10-04",
+      "plan": "free"
+    },
+    {
+      "tenant_id": "t1",
+      "order_id": "o8",
+      "order_day": "2026-10-03",
+      "plan": "pro"
+    },
+    {
+      "tenant_id": "t2",
+      "order_id": "o1",
+      "order_day": "2026-10-02",
+      "plan": "enterprise"
+    }
+  ],
+  "L07": [
+    {
+      "tenant_id": "t1",
+      "order_id": "o3",
+      "customer_id": "cLate",
+      "customer_sk": "unknown"
+    }
+  ],
+  "L08": {
+    "wrong_join_bill_cents": 2000,
+    "correct_bill_cents": 1000,
+    "supplied_line_cents": 1000
+  },
+  "L09": [
+    {
+      "stream": "orders",
+      "tenant_id": "t1",
+      "entity_id": "bad",
+      "source_version": 1,
+      "deliveries": 2,
+      "payloads": 2
+    },
+    {
+      "stream": "orders",
+      "tenant_id": "t1",
+      "entity_id": "o1",
+      "source_version": 1,
+      "deliveries": 2,
+      "payloads": 1
+    }
+  ],
+  "L10": [
+    {
+      "stream": "orders",
+      "tenant_id": "t1",
+      "entity_id": "bad"
+    }
+  ],
+  "L11": {
+    "initial_order_o1": [
+      {
+        "tenant_id": "t1",
+        "order_id": "o1",
+        "customer_id": "c1",
+        "customer_sk": "2:c1:2026-10-01",
+        "order_day": "2026-10-02",
+        "billed_cents": 1000,
+        "status": "paid",
+        "source_version": 1,
+        "plan": "free"
+      }
+    ],
+    "corrected_order_o1": [
+      {
+        "tenant_id": "t1",
+        "order_id": "o1",
+        "customer_id": "c1",
+        "customer_sk": "2:c1:2026-10-01",
+        "order_day": "2026-10-02",
+        "billed_cents": 1200,
+        "status": "paid",
+        "source_version": 2,
+        "plan": "free"
+      }
+    ]
+  },
+  "L12": {
+    "stale_deliveries": [
+      {
+        "delivery_id": "o1-old-again",
+        "entity_id": "o1",
+        "source_version": 1
+      },
+      {
+        "delivery_id": "o2-old-again",
+        "entity_id": "o2",
+        "source_version": 1
+      }
+    ],
+    "o2_current_fact_count": 0
+  },
+  "L13": [
+    {
+      "tenant_id": "t1",
+      "order_id": "o1",
+      "schema_version": 1,
+      "order_day": "2026-10-02"
+    },
+    {
+      "tenant_id": "t2",
+      "order_id": "o1",
+      "schema_version": 1,
+      "order_day": "2026-10-02"
+    }
+  ],
+  "L14": {
+    "declared_dependency_order": [
+      "raw",
+      "canonical",
+      "dimensions",
+      "facts",
+      "mart",
+      "quality",
+      "publication"
+    ],
+    "dbt_or_airflow_executed": false
+  },
+  "L15": {
+    "duplicate_fact_keys": 0,
+    "negative_bills": 0,
+    "missing_dimension_references": 0,
+    "invalid_dimension_intervals": 0,
+    "overlapping_dimension_intervals": 0,
+    "duplicate_dimension_keys": 0,
+    "paid_count_reconciliation": 0,
+    "known_amount_reconciliation": 0
+  },
+  "L16": {
+    "retained_raw_campaign": "autumn",
+    "modeled_order": [
+      {
+        "tenant_id": "t1",
+        "order_id": "o1",
+        "customer_id": "c1",
+        "customer_sk": "2:c1:2026-10-01",
+        "order_day": "2026-10-02",
+        "billed_cents": 1200,
+        "status": "paid",
+        "source_version": 3,
+        "plan": "free"
+      }
+    ]
+  },
+  "L17": {
+    "initial": [
+      {
+        "tenant_id": "t1",
+        "order_day": "2026-10-02",
+        "plan": "Unknown",
+        "paid_orders": 1,
+        "known_bill_cents": 500,
+        "missing_bills": 0,
+        "complete_bill_cents": 500
+      },
+      {
+        "tenant_id": "t1",
+        "order_day": "2026-10-02",
+        "plan": "free",
+        "paid_orders": 1,
+        "known_bill_cents": 1000,
+        "missing_bills": 0,
+        "complete_bill_cents": 1000
+      },
+      {
+        "tenant_id": "t1",
+        "order_day": "2026-10-03",
+        "plan": "free",
+        "paid_orders": 1,
+        "known_bill_cents": 0,
+        "missing_bills": 1,
+        "complete_bill_cents": null
+      },
+      {
+        "tenant_id": "t1",
+        "order_day": "2026-10-03",
+        "plan": "pro",
+        "paid_orders": 1,
+        "known_bill_cents": 800,
+        "missing_bills": 0,
+        "complete_bill_cents": 800
+      },
+      {
+        "tenant_id": "t1",
+        "order_day": "2026-10-04",
+        "plan": "pro",
+        "paid_orders": 1,
+        "known_bill_cents": 2000,
+        "missing_bills": 0,
+        "complete_bill_cents": 2000
+      },
+      {
+        "tenant_id": "t2",
+        "order_day": "2026-10-02",
+        "plan": "enterprise",
+        "paid_orders": 1,
+        "known_bill_cents": 9000,
+        "missing_bills": 0,
+        "complete_bill_cents": 9000
+      }
+    ],
+    "corrected": [
+      {
+        "tenant_id": "t1",
+        "order_day": "2026-10-01",
+        "plan": "free",
+        "paid_orders": 1,
+        "known_bill_cents": 300,
+        "missing_bills": 0,
+        "complete_bill_cents": 300
+      },
+      {
+        "tenant_id": "t1",
+        "order_day": "2026-10-02",
+        "plan": "free",
+        "paid_orders": 1,
+        "known_bill_cents": 1200,
+        "missing_bills": 0,
+        "complete_bill_cents": 1200
+      },
+      {
+        "tenant_id": "t1",
+        "order_day": "2026-10-02",
+        "plan": "partner",
+        "paid_orders": 1,
+        "known_bill_cents": 500,
+        "missing_bills": 0,
+        "complete_bill_cents": 500
+      },
+      {
+        "tenant_id": "t1",
+        "order_day": "2026-10-03",
+        "plan": "business",
+        "paid_orders": 1,
+        "known_bill_cents": 800,
+        "missing_bills": 0,
+        "complete_bill_cents": 800
+      },
+      {
+        "tenant_id": "t1",
+        "order_day": "2026-10-03",
+        "plan": "free",
+        "paid_orders": 1,
+        "known_bill_cents": 0,
+        "missing_bills": 1,
+        "complete_bill_cents": null
+      },
+      {
+        "tenant_id": "t1",
+        "order_day": "2026-10-05",
+        "plan": "free",
+        "paid_orders": 1,
+        "known_bill_cents": 400,
+        "missing_bills": 0,
+        "complete_bill_cents": 400
+      },
+      {
+        "tenant_id": "t2",
+        "order_day": "2026-10-02",
+        "plan": "enterprise",
+        "paid_orders": 1,
+        "known_bill_cents": 9000,
+        "missing_bills": 0,
+        "complete_bill_cents": 9000
+      }
+    ]
+  },
+  "L18": {
+    "run_id": "run2",
+    "lower_seq": 14,
+    "upper_seq": 20,
+    "affected_partitions": [
+      {
+        "tenant_id": "t1",
+        "order_day": "2026-10-01"
+      },
+      {
+        "tenant_id": "t1",
+        "order_day": "2026-10-02"
+      },
+      {
+        "tenant_id": "t1",
+        "order_day": "2026-10-03"
+      },
+      {
+        "tenant_id": "t1",
+        "order_day": "2026-10-04"
+      },
+      {
+        "tenant_id": "t1",
+        "order_day": "2026-10-05"
+      }
+    ],
+    "changed_order_keys": 6,
+    "quality_failures": {
+      "duplicate_fact_keys": 0,
+      "negative_bills": 0,
+      "missing_dimension_references": 0,
+      "invalid_dimension_intervals": 0,
+      "overlapping_dimension_intervals": 0,
+      "duplicate_dimension_keys": 0,
+      "paid_count_reconciliation": 0,
+      "known_amount_reconciliation": 0
+    },
+    "unknown_fact_rows": 0,
+    "quarantined_entities": 1,
+    "incremental_equals_full": true
+  },
+  "L19": {
+    "publication": {
+      "run_id": "run3",
+      "lower_seq": 20,
+      "upper_seq": 25,
+      "affected_partitions": [
+        {
+          "tenant_id": "t1",
+          "order_day": "2026-10-02"
+        },
+        {
+          "tenant_id": "t1",
+          "order_day": "2026-10-03"
+        },
+        {
+          "tenant_id": "t1",
+          "order_day": "2026-10-05"
+        }
+      ],
+      "changed_order_keys": 3,
+      "quality_failures": {
+        "duplicate_fact_keys": 0,
+        "negative_bills": 0,
+        "missing_dimension_references": 0,
+        "invalid_dimension_intervals": 0,
+        "overlapping_dimension_intervals": 0,
+        "duplicate_dimension_keys": 0,
+        "paid_count_reconciliation": 0,
+        "known_amount_reconciliation": 0
+      },
+      "unknown_fact_rows": 0,
+      "quarantined_entities": 1,
+      "incremental_equals_full": true
+    },
+    "final_mart": [
+      {
+        "tenant_id": "t1",
+        "order_day": "2026-10-01",
+        "plan": "free",
+        "paid_orders": 1,
+        "known_bill_cents": 300,
+        "missing_bills": 0,
+        "complete_bill_cents": 300
+      },
+      {
+        "tenant_id": "t1",
+        "order_day": "2026-10-02",
+        "plan": "free",
+        "paid_orders": 2,
+        "known_bill_cents": 1650,
+        "missing_bills": 0,
+        "complete_bill_cents": 1650
+      },
+      {
+        "tenant_id": "t1",
+        "order_day": "2026-10-02",
+        "plan": "partner",
+        "paid_orders": 1,
+        "known_bill_cents": 500,
+        "missing_bills": 0,
+        "complete_bill_cents": 500
+      },
+      {
+        "tenant_id": "t1",
+        "order_day": "2026-10-03",
+        "plan": "business",
+        "paid_orders": 1,
+        "known_bill_cents": 800,
+        "missing_bills": 0,
+        "complete_bill_cents": 800
+      },
+      {
+        "tenant_id": "t1",
+        "order_day": "2026-10-03",
+        "plan": "free",
+        "paid_orders": 1,
+        "known_bill_cents": 0,
+        "missing_bills": 0,
+        "complete_bill_cents": 0
+      },
+      {
+        "tenant_id": "t2",
+        "order_day": "2026-10-02",
+        "plan": "enterprise",
+        "paid_orders": 1,
+        "known_bill_cents": 9000,
+        "missing_bills": 0,
+        "complete_bill_cents": 9000
+      }
+    ]
+  },
+  "L20": {
+    "wrong_event_date_cutoff": "2026-10-03",
+    "skipped_delivery_ids": [
+      "o1-v2",
+      "o6-late"
+    ],
+    "wrong_t1_known_cents": 2700,
+    "correct_t1_known_cents": 3200,
+    "all_three_publications_match_full_candidates": true
+  },
+  "L21": {
+    "failed_row_counts": {
+      "duplicate_fact_keys": 0,
+      "negative_bills": 0,
+      "missing_dimension_references": 0,
+      "invalid_dimension_intervals": 0,
+      "overlapping_dimension_intervals": 0,
+      "duplicate_dimension_keys": 0,
+      "paid_count_reconciliation": 0,
+      "known_amount_reconciliation": 0
+    },
+    "all_eight_gates_passed": true,
+    "quarantine_is_separate_warning": 1
+  },
+  "L22": {
+    "injected_error": "Injected failure after candidate replacement, before pointer/checkpoint commit",
+    "before": {
+      "singleton": 1,
+      "committed_seq": 14,
+      "active_run": "run1"
+    },
+    "after": {
+      "singleton": 1,
+      "committed_seq": 14,
+      "active_run": "run1"
+    },
+    "raw_upper_seq": 20,
+    "last_good_rows_unchanged": true
+  },
+  "L23": {
+    "failure_counts": {
+      "duplicate_dimension_keys": 0,
+      "duplicate_fact_keys": 0,
+      "invalid_dimension_intervals": 0,
+      "known_amount_reconciliation": 0,
+      "missing_dimension_references": 0,
+      "negative_bills": 1,
+      "overlapping_dimension_intervals": 0,
+      "paid_count_reconciliation": 0
+    },
+    "active_publication_unchanged": true,
+    "raw_contains_rejected_candidate": true
+  },
+  "L24": {
+    "unsupported_schema_version": 2,
+    "raw_upper_before": 27,
+    "raw_upper_after": 27,
+    "partial_valid_delivery_present": 0
+  },
+  "L25": [
+    {
+      "run_id": "run1",
+      "tenant_id": "t1",
+      "known_bill_cents": 4300,
+      "paid_orders": 5
+    },
+    {
+      "run_id": "run1",
+      "tenant_id": "t2",
+      "known_bill_cents": 9000,
+      "paid_orders": 1
+    },
+    {
+      "run_id": "run2",
+      "tenant_id": "t1",
+      "known_bill_cents": 3200,
+      "paid_orders": 6
+    },
+    {
+      "run_id": "run2",
+      "tenant_id": "t2",
+      "known_bill_cents": 9000,
+      "paid_orders": 1
+    },
+    {
+      "run_id": "run3",
+      "tenant_id": "t1",
+      "known_bill_cents": 3250,
+      "paid_orders": 6
+    },
+    {
+      "run_id": "run3",
+      "tenant_id": "t2",
+      "known_bill_cents": 9000,
+      "paid_orders": 1
+    }
+  ],
+  "L26": [
+    {
+      "tenant_id": "t1",
+      "paid_orders": 6,
+      "known_cents": 3250,
+      "missing_bills": 0,
+      "complete_cents": 3250,
+      "complete_average_cents": 541.6666666666666
+    },
+    {
+      "tenant_id": "t2",
+      "paid_orders": 1,
+      "known_cents": 9000,
+      "missing_bills": 0,
+      "complete_cents": 9000,
+      "complete_average_cents": 9000.0
+    }
+  ],
+  "L27": [
+    {
+      "tenant_id": "t1",
+      "order_day": "2026-10-01",
+      "plan": "free",
+      "paid_orders": 1,
+      "known_bill_cents": 300,
+      "missing_bills": 0,
+      "complete_bill_cents": 300
+    },
+    {
+      "tenant_id": "t1",
+      "order_day": "2026-10-02",
+      "plan": "free",
+      "paid_orders": 2,
+      "known_bill_cents": 1650,
+      "missing_bills": 0,
+      "complete_bill_cents": 1650
+    },
+    {
+      "tenant_id": "t1",
+      "order_day": "2026-10-02",
+      "plan": "partner",
+      "paid_orders": 1,
+      "known_bill_cents": 500,
+      "missing_bills": 0,
+      "complete_bill_cents": 500
+    },
+    {
+      "tenant_id": "t1",
+      "order_day": "2026-10-03",
+      "plan": "business",
+      "paid_orders": 1,
+      "known_bill_cents": 800,
+      "missing_bills": 0,
+      "complete_bill_cents": 800
+    },
+    {
+      "tenant_id": "t1",
+      "order_day": "2026-10-03",
+      "plan": "free",
+      "paid_orders": 1,
+      "known_bill_cents": 0,
+      "missing_bills": 0,
+      "complete_bill_cents": 0
+    },
+    {
+      "tenant_id": "t2",
+      "order_day": "2026-10-02",
+      "plan": "enterprise",
+      "paid_orders": 1,
+      "known_bill_cents": 9000,
+      "missing_bills": 0,
+      "complete_bill_cents": 9000
+    }
+  ],
+  "L28": [
+    {
+      "unweighted_daily_average": 472.2222222222222,
+      "correct_order_weighted_average": 541.6666666666666
+    }
+  ],
+  "L29": [
+    {
+      "tenant_id": "t1",
+      "order_id": "o1",
+      "plan": "free",
+      "billed_cents": 1200
+    },
+    {
+      "tenant_id": "t2",
+      "order_id": "o1",
+      "plan": "enterprise",
+      "billed_cents": 9000
+    }
+  ],
+  "L30": {
+    "before": [
+      {
+        "id": 3,
+        "parent": 0,
+        "notused": 216,
+        "detail": "SCAN probe_orders"
+      },
+      {
+        "id": 16,
+        "parent": 0,
+        "notused": 0,
+        "detail": "USE TEMP B-TREE FOR ORDER BY"
+      }
+    ],
+    "after": [
+      {
+        "id": 3,
+        "parent": 0,
+        "notused": 47,
+        "detail": "SEARCH probe_orders USING COVERING INDEX probe_tenant_day (tenant_id=? AND order_day>? AND order_day<?)"
+      }
+    ],
+    "result": [
+      {
+        "order_id": "a"
+      },
+      {
+        "order_id": "b"
+      }
+    ],
+    "timing_benchmark": false
+  },
+  "L31": {
+    "local_raw_upper": 25,
+    "committed_upper": 25,
+    "quarantined_entities": 1,
+    "all_source_entities_complete": false
+  },
+  "L32": {
+    "assumed_rows": 1000000,
+    "assumed_logical_bytes_per_row": 1000,
+    "unpruned_logical_bytes": 1000000000,
+    "assumed_partition_share": 0.1,
+    "assumed_column_share": 0.2,
+    "illustrative_remaining_bytes": 20000000,
+    "measured_scan_or_cost": false
+  }
+}

@@ -1,0 +1,395 @@
+{
+  "description": "Synthetic single local append-log; source_version is per business entity, not a real CDC LSN.",
+  "batches": [
+    [
+      {
+        "delivery_id": "c1-free",
+        "stream": "customers",
+        "tenant_id": "t1",
+        "entity_id": "c1",
+        "source_version": 1,
+        "payload": {
+          "schema_version": 1,
+          "effective_from": "2026-10-01",
+          "plan": "free"
+        }
+      },
+      {
+        "delivery_id": "c1-pro",
+        "stream": "customers",
+        "tenant_id": "t1",
+        "entity_id": "c1",
+        "source_version": 2,
+        "payload": {
+          "schema_version": 1,
+          "effective_from": "2026-10-03",
+          "plan": "pro"
+        }
+      },
+      {
+        "delivery_id": "c2-free",
+        "stream": "customers",
+        "tenant_id": "t1",
+        "entity_id": "c2",
+        "source_version": 1,
+        "payload": {
+          "schema_version": 1,
+          "effective_from": "2026-10-01",
+          "plan": "free"
+        }
+      },
+      {
+        "delivery_id": "t2-c1",
+        "stream": "customers",
+        "tenant_id": "t2",
+        "entity_id": "c1",
+        "source_version": 1,
+        "payload": {
+          "schema_version": 1,
+          "effective_from": "2026-10-01",
+          "plan": "enterprise"
+        }
+      },
+      {
+        "delivery_id": "o1-v1",
+        "stream": "orders",
+        "tenant_id": "t1",
+        "entity_id": "o1",
+        "source_version": 1,
+        "payload": {
+          "schema_version": 1,
+          "op": "U",
+          "customer_id": "c1",
+          "order_day": "2026-10-02",
+          "billed_cents": 1000,
+          "status": "paid"
+        }
+      },
+      {
+        "delivery_id": "o2-v1",
+        "stream": "orders",
+        "tenant_id": "t1",
+        "entity_id": "o2",
+        "source_version": 1,
+        "payload": {
+          "schema_version": 1,
+          "op": "U",
+          "customer_id": "c1",
+          "order_day": "2026-10-04",
+          "billed_cents": 2000,
+          "status": "paid"
+        }
+      },
+      {
+        "delivery_id": "o3-v1",
+        "stream": "orders",
+        "tenant_id": "t1",
+        "entity_id": "o3",
+        "source_version": 1,
+        "payload": {
+          "schema_version": 1,
+          "op": "U",
+          "customer_id": "cLate",
+          "order_day": "2026-10-02",
+          "billed_cents": 500,
+          "status": "paid"
+        }
+      },
+      {
+        "delivery_id": "o4-v1",
+        "stream": "orders",
+        "tenant_id": "t1",
+        "entity_id": "o4",
+        "source_version": 1,
+        "payload": {
+          "schema_version": 1,
+          "op": "U",
+          "customer_id": "c2",
+          "order_day": "2026-10-03",
+          "billed_cents": null,
+          "status": "paid"
+        }
+      },
+      {
+        "delivery_id": "o5-v1",
+        "stream": "orders",
+        "tenant_id": "t1",
+        "entity_id": "o5",
+        "source_version": 1,
+        "payload": {
+          "schema_version": 1,
+          "op": "U",
+          "customer_id": "c2",
+          "order_day": "2026-10-04",
+          "billed_cents": 700,
+          "status": "cancelled"
+        }
+      },
+      {
+        "delivery_id": "o8-v1",
+        "stream": "orders",
+        "tenant_id": "t1",
+        "entity_id": "o8",
+        "source_version": 1,
+        "payload": {
+          "schema_version": 1,
+          "op": "U",
+          "customer_id": "c1",
+          "order_day": "2026-10-03",
+          "billed_cents": 800,
+          "status": "paid"
+        }
+      },
+      {
+        "delivery_id": "t2-o1",
+        "stream": "orders",
+        "tenant_id": "t2",
+        "entity_id": "o1",
+        "source_version": 1,
+        "payload": {
+          "schema_version": 1,
+          "op": "U",
+          "customer_id": "c1",
+          "order_day": "2026-10-02",
+          "billed_cents": 9000,
+          "status": "paid"
+        }
+      },
+      {
+        "delivery_id": "o1-repeat",
+        "stream": "orders",
+        "tenant_id": "t1",
+        "entity_id": "o1",
+        "source_version": 1,
+        "payload": {
+          "schema_version": 1,
+          "op": "U",
+          "customer_id": "c1",
+          "order_day": "2026-10-02",
+          "billed_cents": 1000,
+          "status": "paid"
+        }
+      },
+      {
+        "delivery_id": "bad-a",
+        "stream": "orders",
+        "tenant_id": "t1",
+        "entity_id": "bad",
+        "source_version": 1,
+        "payload": {
+          "schema_version": 1,
+          "op": "U",
+          "customer_id": "c1",
+          "order_day": "2026-10-02",
+          "billed_cents": 100,
+          "status": "paid"
+        }
+      },
+      {
+        "delivery_id": "bad-b",
+        "stream": "orders",
+        "tenant_id": "t1",
+        "entity_id": "bad",
+        "source_version": 1,
+        "payload": {
+          "schema_version": 1,
+          "op": "U",
+          "customer_id": "c1",
+          "order_day": "2026-10-02",
+          "billed_cents": 200,
+          "status": "paid"
+        }
+      }
+    ],
+    [
+      {
+        "delivery_id": "o1-v2",
+        "stream": "orders",
+        "tenant_id": "t1",
+        "entity_id": "o1",
+        "source_version": 2,
+        "payload": {
+          "schema_version": 1,
+          "op": "U",
+          "customer_id": "c1",
+          "order_day": "2026-10-02",
+          "billed_cents": 1200,
+          "status": "paid"
+        }
+      },
+      {
+        "delivery_id": "o2-delete",
+        "stream": "orders",
+        "tenant_id": "t1",
+        "entity_id": "o2",
+        "source_version": 2,
+        "payload": {
+          "schema_version": 1,
+          "op": "D",
+          "customer_id": "c1",
+          "order_day": "2026-10-04",
+          "billed_cents": 2000,
+          "status": "paid"
+        }
+      },
+      {
+        "delivery_id": "o6-late",
+        "stream": "orders",
+        "tenant_id": "t1",
+        "entity_id": "o6",
+        "source_version": 1,
+        "payload": {
+          "schema_version": 1,
+          "op": "U",
+          "customer_id": "c2",
+          "order_day": "2026-10-01",
+          "billed_cents": 300,
+          "status": "paid"
+        }
+      },
+      {
+        "delivery_id": "late-dimension",
+        "stream": "customers",
+        "tenant_id": "t1",
+        "entity_id": "cLate",
+        "source_version": 1,
+        "payload": {
+          "schema_version": 1,
+          "effective_from": "2026-10-01",
+          "plan": "partner"
+        }
+      },
+      {
+        "delivery_id": "o7-v1",
+        "stream": "orders",
+        "tenant_id": "t1",
+        "entity_id": "o7",
+        "source_version": 1,
+        "payload": {
+          "schema_version": 1,
+          "op": "U",
+          "customer_id": "c2",
+          "order_day": "2026-10-05",
+          "billed_cents": 400,
+          "status": "paid"
+        }
+      },
+      {
+        "delivery_id": "c1-business",
+        "stream": "customers",
+        "tenant_id": "t1",
+        "entity_id": "c1",
+        "source_version": 3,
+        "payload": {
+          "schema_version": 1,
+          "effective_from": "2026-10-03",
+          "plan": "business"
+        }
+      }
+    ],
+    [
+      {
+        "delivery_id": "o1-old-again",
+        "stream": "orders",
+        "tenant_id": "t1",
+        "entity_id": "o1",
+        "source_version": 1,
+        "payload": {
+          "schema_version": 1,
+          "op": "U",
+          "customer_id": "c1",
+          "order_day": "2026-10-02",
+          "billed_cents": 1000,
+          "status": "paid"
+        }
+      },
+      {
+        "delivery_id": "o2-old-again",
+        "stream": "orders",
+        "tenant_id": "t1",
+        "entity_id": "o2",
+        "source_version": 1,
+        "payload": {
+          "schema_version": 1,
+          "op": "U",
+          "customer_id": "c1",
+          "order_day": "2026-10-04",
+          "billed_cents": 2000,
+          "status": "paid"
+        }
+      },
+      {
+        "delivery_id": "o7-move",
+        "stream": "orders",
+        "tenant_id": "t1",
+        "entity_id": "o7",
+        "source_version": 2,
+        "payload": {
+          "schema_version": 1,
+          "op": "U",
+          "customer_id": "c2",
+          "order_day": "2026-10-02",
+          "billed_cents": 450,
+          "status": "paid"
+        }
+      },
+      {
+        "delivery_id": "o4-zero",
+        "stream": "orders",
+        "tenant_id": "t1",
+        "entity_id": "o4",
+        "source_version": 2,
+        "payload": {
+          "schema_version": 1,
+          "op": "U",
+          "customer_id": "c2",
+          "order_day": "2026-10-03",
+          "billed_cents": 0,
+          "status": "paid"
+        }
+      },
+      {
+        "delivery_id": "o1-extra-field",
+        "stream": "orders",
+        "tenant_id": "t1",
+        "entity_id": "o1",
+        "source_version": 3,
+        "payload": {
+          "schema_version": 1,
+          "op": "U",
+          "customer_id": "c1",
+          "order_day": "2026-10-02",
+          "billed_cents": 1200,
+          "status": "paid",
+          "campaign": "autumn"
+        }
+      }
+    ]
+  ],
+  "illustrative_order_lines": [
+    [
+      "t1",
+      "o1",
+      "l1",
+      600
+    ],
+    [
+      "t1",
+      "o1",
+      "l2",
+      400
+    ],
+    [
+      "t1",
+      "o2",
+      "l3",
+      2000
+    ],
+    [
+      "t2",
+      "o1",
+      "l4",
+      9000
+    ]
+  ]
+}
